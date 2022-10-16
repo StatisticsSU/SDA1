@@ -2,6 +2,10 @@
 title: "R"
 ---
 
+Guider:
+
+- [Läs in data från fil](/tutorials/ReadingDataFromFile.html)
+
 ## Det statistiska programmeringsspråket R
 
 Kursen använder det mycket populära statistiska programmeringsspråket R. Programmet är helt gratis och kan laddas ner på alla datorer. 
