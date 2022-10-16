@@ -1,0 +1,37 @@
+[
+  {
+    "objectID": "DelA.html",
+    "href": "DelA.html",
+    "title": "Del A - Introduktion till dataanalys",
+    "section": "",
+    "text": "Övningar\nÖvning 1 - Beskrivande statistik och korrelation\nUppgifter: SDM 1.1-1.6, osv\nÖvning 2 - Estimering och tolkning av enkel linjär regression\nUppgifter: SDM 1.1-1.6, osv\nÖvning 3 - Prediktion med enkel linjär regression\nUppgifter: SDM 1.1-1.6, osv\n\n\nDatorlaborationer\nDatorlaboration 1 - Intro till R\nUppgifter: Datorlabb 1\nDatorlaboration 2 - Beskrivande statistik och visualisering i R\nUppgifter: Datorlabb 2\nDatorlaboration 3 - Korrelation och enkel linjär regression\nUppgifter: Datorlabb 3\nDatorlaboration 4 - Multipel linjär regression\nUppgifter: Datorlabb 4"
+  },
+  {
+    "objectID": "index.html#datamaterial",
+    "href": "index.html#datamaterial",
+    "title": "Statistisk dataanalys I, 15 hp",
+    "section": "Datamaterial",
+    "text": "Datamaterial\nKursboken kommer med över 500 olika datamaterial som hittas här. Datamaterialen är i ofta i Excel-format, se denna guide om hur man läser in data från Excel i R."
+  },
+  {
+    "objectID": "R.html",
+    "href": "R.html",
+    "title": "R",
+    "section": "",
+    "text": "Kursen använder det mycket populära statistiska programmeringsspråket R. Programmet är helt gratis och kan laddas ner på alla datorer. Du kan ladda ner R här.\nR är lättast att jobba i från programmet RStudio. RStudio är en slags arbetsmiljö byggd kring R. RStudio är gratis och kan ladda ner här. Det finns en massa bra videos och tutorials för R och RStudio. Här är t ex en kort video som ge en rundtur i RStudio.\nKursen har ett eget R paket med några hjälpfunktioner som används på kursen. För att kunna använda paketet behöver du installera det:\n# För att installera kurspaketet sdakurs\ninstall.packages(\"remotes\") # görs bara en gång på din dator\nlibrary(remotes)  \ninstall_github(\"StatisticsSU/sdakurs\") # görs bara en gång på din dator\nlibrary(sdakurs)\n\n# För att installera kursen datamaterial\ninstall_github(\"StatisticsSU/SUdatasets\") # görs bara en gång på din dator\nlibrary(SUdatasets)\n\n# För en lista med alla funktioner i paketet regkurs\nhelp(, \"regkurs\")\n\n# För information om ett specifikt datamaterial eller funktion i kurspaketet\n?namnet_på_datamaterialet\n?namnet_på_funktionen"
+  },
+  {
+    "objectID": "DelB.html",
+    "href": "DelB.html",
+    "title": "Del B - Sannolikheter och statistisk inferens",
+    "section": "",
+    "text": "Övningar\nÖvning 4 - Sannolikheter för händelser\nUppgifter: SDM 1.1-1.6, osv\nÖvning 5 - Kombinatorik, Oberoende händelser\nUppgifter: SDM 1.1-1.6, osv\nÖvning 6 - Betingning och Bayes sats\nUppgifter: SDM 1.1-1.6, osv\nÖvning 7\nUppgifter: SDM 1.1-1.6, osv\nÖvning 8\nUppgifter: SDM 1.1-1.6, osv\nÖvning 9\nUppgifter: SDM 1.1-1.6, osv\nÖvning 10\nUppgifter: SDM 1.1-1.6, osv\nÖvning 11\nUppgifter: SDM 1.1-1.6, osv\nÖvning 12\nUppgifter: SDM 1.1-1.6, osv\nÖvning 13\nUppgifter: SDM 1.1-1.6, osv\nÖvning 14\nUppgifter: SDM 1.1-1.6, osv\n\n\nDatorlaborationer\nDatorlaboration 5 - Simulering från sannolikhetsfördelningar\nUppgifter: Datorlabb 5\nDatorlaboration 6 - Samplingfördelningar, standardfel och konfidensintervall\nUppgifter: Datorlabb 6\nDatorlaboration 7 - Multipel linjär regression\nUppgifter: Datorlabb 7\nDatorlaboration 8 - Multipel linjär regression, forts\nUppgifter: Datorlabb 8"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  }
+]

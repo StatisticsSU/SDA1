@@ -1,0 +1,26 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "SDA1"
+  navbar: 
+    logo: /misc/LogoBlueJustRing.jpg
+    background: primary
+    left:
+      - href: index.qmd
+        text: Översikt
+      - href: DelA.qmd
+        text: Del A - Introduktion till dataanalys
+      - href: DelB.qmd
+        text: Del B - Statistisk inferens
+      - href: R.qmd
+        text: R
+format:
+  html:
+    theme: sandstone
+    css: styles.css
+    toc: true
+
+
+

@@ -1,0 +1,34 @@
+---
+title: "R"
+---
+
+## Det statistiska programmeringsspråket R
+
+Kursen använder det mycket populära statistiska programmeringsspråket R. Programmet är helt gratis och kan laddas ner på alla datorer. 
+Du kan ladda ner R [här](https://ftp.acc.umu.se/mirror/CRAN/).
+
+R är lättast att jobba i från programmet RStudio. RStudio är en slags arbetsmiljö byggd kring R. 
+RStudio är gratis och kan ladda ner [här](https://www.rstudio.com/products/rstudio/download/#download).
+Det finns en massa bra videos och tutorials för R och RStudio. [Här](https://youtu.be/FIrsOBy5k58) är t ex en kort video som ge en rundtur i RStudio.
+
+Kursen har ett eget R paket med några hjälpfunktioner som används på kursen. 
+För att kunna använda paketet behöver du installera det:
+```
+# För att installera kurspaketet sdakurs
+install.packages("remotes") # görs bara en gång på din dator
+library(remotes)  
+install_github("StatisticsSU/sdakurs") # görs bara en gång på din dator
+library(sdakurs)
+
+# För att installera kursen datamaterial
+install_github("StatisticsSU/SUdatasets") # görs bara en gång på din dator
+library(SUdatasets)
+
+# För en lista med alla funktioner i paketet regkurs
+help(, "regkurs")
+
+# För information om ett specifikt datamaterial eller funktion i kurspaketet
+?namnet_på_datamaterialet
+?namnet_på_funktionen
+```
+

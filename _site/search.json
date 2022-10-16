@@ -1,0 +1,72 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Statistisk dataanalys I, 15 hp",
+    "section": "",
+    "text": "Kursens innehåll\nKursen …\n\n\nKurslitteratur\n\nDe Veaux, R., Velleman, P. och Bock, D. (2021). Stats: Data and Models, Pearson Global Edition, Studentlitteratur. Boken förkortas SDM nedan.\nYtterligare kompletterande material som delas ut under kursens gång.\n\nKursens schema på TimeEdit: Schedule."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "index.html#del-a---introduktion-till-dataanalys.-programmering.-sambandsanalys.-sannolikheter.",
+    "href": "index.html#del-a---introduktion-till-dataanalys.-programmering.-sambandsanalys.-sannolikheter.",
+    "title": "Statistisk dataanalys I, 15 hp",
+    "section": "Del A - Introduktion till dataanalys. Programmering. Sambandsanalys. Sannolikheter.",
+    "text": "Del A - Introduktion till dataanalys. Programmering. Sambandsanalys. Sannolikheter."
+  },
+  {
+    "objectID": "index.html#del-b---slumpvariabler-och-fördelningar.-statistisk-inferens.",
+    "href": "index.html#del-b---slumpvariabler-och-fördelningar.-statistisk-inferens.",
+    "title": "Statistisk dataanalys I, 15 hp",
+    "section": "Del B - Slumpvariabler och fördelningar. Statistisk inferens.",
+    "text": "Del B - Slumpvariabler och fördelningar. Statistisk inferens.\n\nFöreläsningar\nFöreläsning 11 - Populationer och stickprov.\nLäs: SDM Kapitel 10 | Slides\nFöreläsning 12 - Slumpvariabler. Väntevärde. Varians. Linjärkombinationer.\nLäs: SDM Kapitel 14 | Slides\nFöreläsning 13 - Diskreta sannolikhetsmodeller\nLäs: SDM Kapitel 15.1, 15.2, 15.3, 15.6 | Slides\nFöreläsning 14 - Kontinuerliga sannolikhetsmodeller\nLäs: SDM Kapitel 5.3, 15.7 | Slides\nFöreläsning 15 - Samplingfördelningar och konfidensintervall för en andel\nLäs: SDM Kapitel 16 | Slides\nFöreläsning 16 - Konfidensintervall för ett väntevärde. Stora talens lag. Centrala gränsvärdessatsen\nLäs: SDM Kapitel 17 | Slides\nFöreläsning 17 - Hypotestest\nLäs: SDM Kapitel 18 | Slides\nFöreläsning 18 - Hypotestest och jämföra grupper\nLäs: SDM Kapitel 19, 20.4, 20.5 | Slides\nFöreläsning 19 - Jämföra grupper och chi-2 test.\nLäs: SDM Kapitel 21.1, 21.2 | Slides\nFöreläsning 20 - Inferens i multipel regression.\nLäs: SDM Kapitel 23 | Slides\nFöreläsning 21 - Residualanalys för multipel regression.\nLäs: SDM Kapitel 23 | Slides\nFöreläsning 22 - Maximum likelihood och Bayesiansk inferens.\nLäs: Kompendium avsnitt X | Slides\nFöreläsning 23 - Sammanfattning.\nLäs: Slides\n\n\nÖvningar\nÖvning 7\nUppgifter: SDM 1.1-1.6, osv\nÖvning 8\nUppgifter: SDM 1.1-1.6, osv\nÖvning 9\nUppgifter: SDM 1.1-1.6, osv\nÖvning 10\nUppgifter: SDM 1.1-1.6, osv\nÖvning 11\nUppgifter: SDM 1.1-1.6, osv\nÖvning 12\nUppgifter: SDM 1.1-1.6, osv\nÖvning 13\nUppgifter: SDM 1.1-1.6, osv\nÖvning 14\nUppgifter: SDM 1.1-1.6, osv\n\n\nDatorlaborationer\nDatorlaboration 5 - Simulering från sannolikhetsfördelningar\nUppgifter: Datorlabb 5\nDatorlaboration 6 - Samplingfördelningar, standardfel och konfidensintervall\nUppgifter: Datorlabb 6\nDatorlaboration 7 - Multipel linjär regression\nUppgifter: Datorlabb 7\nDatorlaboration 8 - Multipel linjär regression, forts\nUppgifter: Datorlabb 8"
+  },
+  {
+    "objectID": "index.html#datamaterial",
+    "href": "index.html#datamaterial",
+    "title": "Statistisk dataanalys I, 15 hp",
+    "section": "Datamaterial",
+    "text": "Datamaterial\nKursboken kommer med över 500 olika datamaterial som hittas här. Datamaterialen är i ofta i Excel-format, se denna guide om hur man läser in data från Excel i R."
+  },
+  {
+    "objectID": "index.html#det-statistiska-programmeringsspråket-r",
+    "href": "index.html#det-statistiska-programmeringsspråket-r",
+    "title": "Statistisk dataanalys I, 15 hp",
+    "section": "Det statistiska programmeringsspråket R",
+    "text": "Det statistiska programmeringsspråket R\nKursen använder det mycket populära statistiska programmeringsspråket R. Programmet är helt gratis och kan laddas ner på alla datorer. Du kan ladda ner R här.\nR är lättast att jobba i från programmet RStudio. RStudio är en slags arbetsmiljö byggd kring R. RStudio är gratis och kan ladda ner här. Det finns en massa bra videos och tutorials för R och RStudio. Här är t ex en kort video som ge en rundtur i RStudio.\nKursen har ett eget R paket med några hjälpfunktioner som används på kursen. För att kunna använda paketet behöver du installera det:\n# För att installera kurspaketet sdakurs\ninstall.packages(\"remotes\") # görs bara en gång på din dator\nlibrary(remotes)  \ninstall_github(\"StatisticsSU/sdakurs\") # görs bara en gång på din dator\nlibrary(sdakurs)\n\n# För att installera kursen datamaterial\ninstall_github(\"StatisticsSU/SUdatasets\") # görs bara en gång på din dator\nlibrary(SUdatasets)\n\n# För en lista med alla funktioner i paketet regkurs\nhelp(, \"regkurs\")\n\n# För information om ett specifikt datamaterial eller funktion i kurspaketet\n?namnet_på_datamaterialet\n?namnet_på_funktionen"
+  },
+  {
+    "objectID": "r.html",
+    "href": "r.html",
+    "title": "R",
+    "section": "",
+    "text": "Some tutorials about R"
+  },
+  {
+    "objectID": "DelA.html",
+    "href": "DelA.html",
+    "title": "Del A - Introduktion till dataanalys",
+    "section": "",
+    "text": "Övningar\nÖvning 1 - Beskrivande statistik och korrelation\nUppgifter: SDM 1.1-1.6, osv\nÖvning 2 - Estimering och tolkning av enkel linjär regression\nUppgifter: SDM 1.1-1.6, osv\nÖvning 3 - Prediktion med enkel linjär regression\nUppgifter: SDM 1.1-1.6, osv\nÖvning 4 - Sannolikheter för händelser\nUppgifter: SDM 1.1-1.6, osv\nÖvning 5 - Kombinatorik, Oberoende händelser\nUppgifter: SDM 1.1-1.6, osv\nÖvning 6 - Betingning och Bayes sats\nUppgifter: SDM 1.1-1.6, osv\n\n\nDatorlaborationer\nDatorlaboration 1 - Intro till R\nUppgifter: Datorlabb 1\nDatorlaboration 2 - Beskrivande statistik och visualisering i R\nUppgifter: Datorlabb 2\nDatorlaboration 3 - Korrelation och enkel linjär regression\nUppgifter: Datorlabb 3\nDatorlaboration 4 - Multipel linjär regression\nUppgifter: Datorlabb 4"
+  },
+  {
+    "objectID": "R.html",
+    "href": "R.html",
+    "title": "R",
+    "section": "",
+    "text": "Kursen använder det mycket populära statistiska programmeringsspråket R. Programmet är helt gratis och kan laddas ner på alla datorer. Du kan ladda ner R här.\nR är lättast att jobba i från programmet RStudio. RStudio är en slags arbetsmiljö byggd kring R. RStudio är gratis och kan ladda ner här. Det finns en massa bra videos och tutorials för R och RStudio. Här är t ex en kort video som ge en rundtur i RStudio.\nKursen har ett eget R paket med några hjälpfunktioner som används på kursen. För att kunna använda paketet behöver du installera det:\n# För att installera kurspaketet sdakurs\ninstall.packages(\"remotes\") # görs bara en gång på din dator\nlibrary(remotes)  \ninstall_github(\"StatisticsSU/sdakurs\") # görs bara en gång på din dator\nlibrary(sdakurs)\n\n# För att installera kursen datamaterial\ninstall_github(\"StatisticsSU/SUdatasets\") # görs bara en gång på din dator\nlibrary(SUdatasets)\n\n# För en lista med alla funktioner i paketet regkurs\nhelp(, \"regkurs\")\n\n# För information om ett specifikt datamaterial eller funktion i kurspaketet\n?namnet_på_datamaterialet\n?namnet_på_funktionen"
+  },
+  {
+    "objectID": "DelB.html",
+    "href": "DelB.html",
+    "title": "Del B - Statistisk inferens",
+    "section": "",
+    "text": "Övningar\nÖvning 7\nUppgifter: SDM 1.1-1.6, osv\nÖvning 8\nUppgifter: SDM 1.1-1.6, osv\nÖvning 9\nUppgifter: SDM 1.1-1.6, osv\nÖvning 10\nUppgifter: SDM 1.1-1.6, osv\nÖvning 11\nUppgifter: SDM 1.1-1.6, osv\nÖvning 12\nUppgifter: SDM 1.1-1.6, osv\nÖvning 13\nUppgifter: SDM 1.1-1.6, osv\nÖvning 14\nUppgifter: SDM 1.1-1.6, osv\n\n\nDatorlaborationer\nDatorlaboration 5 - Simulering från sannolikhetsfördelningar\nUppgifter: Datorlabb 5\nDatorlaboration 6 - Samplingfördelningar, standardfel och konfidensintervall\nUppgifter: Datorlabb 6\nDatorlaboration 7 - Multipel linjär regression\nUppgifter: Datorlabb 7\nDatorlaboration 8 - Multipel linjär regression, forts\nUppgifter: Datorlabb 8"
+  }
+]
