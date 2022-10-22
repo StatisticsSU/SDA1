@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.1.251">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Mattias Villani">
+<meta name="dcterms.date" content="2022-10-22">
+
+<title>SDA1 - Statistik och dataanalys I, 15 hp</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../misc/LogoBlueJustRing.jpg" alt="" class="navbar-logo">
+    </a>
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">SDA1</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html">Översikt</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../DelA.html">Del A - Introduktion till dataanalys</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../DelB.html">Del B - Statistisk inferens</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../R.html">R</a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#använda-r-som-en-miniräknare" id="toc-använda-r-som-en-miniräknare" class="nav-link active" data-scroll-target="#använda-r-som-en-miniräknare">1. Använda R som en miniräknare</a></li>
+  <li><a href="#använda-variabler-i-r" id="toc-använda-variabler-i-r" class="nav-link" data-scroll-target="#använda-variabler-i-r">2. Använda variabler i R</a></li>
+  <li><a href="#organisera-dig-med-filmappar" id="toc-organisera-dig-med-filmappar" class="nav-link" data-scroll-target="#organisera-dig-med-filmappar">3. Organisera dig med filmappar</a></li>
+  <li><a href="#använda-editorn-source-för-att-spara-kod" id="toc-använda-editorn-source-för-att-spara-kod" class="nav-link" data-scroll-target="#använda-editorn-source-för-att-spara-kod">4. Använda Editorn (Source) för att spara kod</a></li>
+  <li><a href="#ställa-in-arbetsmappen-working-directory-i-r" id="toc-ställa-in-arbetsmappen-working-directory-i-r" class="nav-link" data-scroll-target="#ställa-in-arbetsmappen-working-directory-i-r">5. Ställa in arbetsmappen (working directory) i R</a></li>
+  <li><a href="#läsa-in-data-från-fil" id="toc-läsa-in-data-från-fil" class="nav-link" data-scroll-target="#läsa-in-data-från-fil">6. Läsa in data från fil</a></li>
+  <li><a href="#analysera-data" id="toc-analysera-data" class="nav-link" data-scroll-target="#analysera-data">7. Analysera data</a></li>
+  <li><a href="#några-extra-tips" id="toc-några-extra-tips" class="nav-link" data-scroll-target="#några-extra-tips">8. Några extra tips</a></li>
+  <li><a href="#sammanfattning" id="toc-sammanfattning" class="nav-link" data-scroll-target="#sammanfattning">9. Sammanfattning</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Statistik och dataanalys I, 15 hp</h1>
+<p class="subtitle lead">Datorlaboration 1</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Mattias Villani </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">October 22, 2022</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+</header>
+
+<hr>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Instruktioner
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>💪 Avsnitt med den här symbolen är uppgifter där ni ska göra något.</p>
+</div>
+</div>
+<section id="använda-r-som-en-miniräknare" class="level2">
+<h2 class="anchored" data-anchor-id="använda-r-som-en-miniräknare">1. Använda R som en miniräknare</h2>
+<p>Ett bra sätt för att vänja sig vid R är att använda R som en slags miniräknare. I fönstret <strong>Console</strong> i RStudio (vanligtvis nere till vänster) kan man skriva olika typer av <strong>kommandon</strong> som skickas till R för beräkning:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="RStudioConsole.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>Tecknet <code>&gt;</code> kallas för <strong>kommandoprompt</strong> (eller bara <strong>prompt</strong>) och är R’s sätt att tala om att det väntar på att ett nytt kommando ska skrivas in (vid det blinkande strecket). Vi säger att vi ‘skriver in något på prompten’.</p>
+<section id="uppgift-1.1" class="level4">
+<h4 class="anchored" data-anchor-id="uppgift-1.1">💪 Uppgift 1.1</h4>
+<p>Prova att skriva 2+2 efter det nedersta <code>&gt;</code> tecknet i <strong>Console</strong> och sedan trycka på <code>Enter</code>-tangenten. R bör svara (<strong>returnera</strong>) med talet 4.</p>
+</section>
+<section id="uppgift-1.2" class="level4">
+<h4 class="anchored" data-anchor-id="uppgift-1.2">💪 Uppgift 1.2</h4>
+<p>Skriv in talet (2+3)/(2+5) i Console och se att R svarar med 0.7142857.</p>
+</section>
+<section id="uppgift-1.3" class="level4">
+<h4 class="anchored" data-anchor-id="uppgift-1.3">💪 Uppgift 1.3</h4>
+<p>Du köper aktier för 100 kr. Avkastningen första året är 10%. Använd R för att beräkna värdet på ditt aktiekapital efter ditt första år som aktiesparare, dvs skriv in 100*1.1 och se R returnera 110.</p>
+</section>
+</section>
+<section id="använda-variabler-i-r" class="level2">
+<h2 class="anchored" data-anchor-id="använda-variabler-i-r">2. Använda variabler i R</h2>
+<p>Du är nu inne på ditt andra år som aktiesparare. Avkastningen år 2 är 6%. Hur mycket aktiekapital har du efter år 2? Vi kan beräkna detta genom 100*1.1*1.06 i Console och få svaret 116.6 kr. Men finns det något sätt att återanvända vår tidigare beräkning 100*1.1 = 110 kr så vi bara behöver multiplicera detta tal med ökningen 1.06 för år 2?</p>
+<p>Vi kan lösa detta genom att spara undan vår första beräkning i en <strong>variabel</strong>. Vi kan ge denna variabel (nästan) vilket namn vi vill. Jag kommer kalla den för <code>kapital</code> och börjar med att sätta värdet på variabeln <code>kapital</code> till 100, det ursprungliga kapitalet. Vi skriver <code>kapital = 100</code> i Console. Vi kan sen testa att R nu faktiskt minns att kapitalet är 100 genom att bara skriva variabelns namn följt av <code>Enter</code> i kommandoprompten i Console:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="kapital100.png" class="img-fluid figure-img" width="400"></p>
+</figure>
+</div>
+<p>R skriver snällt ut det värde (100) som jag tilldelade variabeln <code>kapital</code>.</p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Språkbruk
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>vi säger att vi <strong>tilldelar</strong> <strong>variabel</strong> <code>kapital</code> <strong>värdet</strong> <code>100</code>. Lite mer slarvigt säger vi: ‘vi sätter <code>kapital</code> till 100’.</p>
+</div>
+</div>
+<div class="callout-warning callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Se upp!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Vi kan återkalla värdet 100 från variabeln <code>kapital</code> när som helst. Men om du stänger ner RStudio och sen startar om programmet (eller om RStudio låser sig) så minns inte R längre värdet på <code>kapital</code> . R minns faktiskt inte ens att det fanns något som hette <code>kapital</code> och kommer att klaga om du skriver <code>kapital</code> på prompten följt av <code>Enter</code>. R och RStudio minns bara variabeln inom en <strong>session</strong>, dvs tills du avslutar RStudio. Om man vill spara data mellan olika sessioner måste man spara ner variablerna på datorns disk (eller på någon lagring på internet). Mer om detta senare.</p>
+</div>
+</div>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Istället för att skriva <code>kapital = 100</code> så kan vi lika gärna skriva <code>kapital &lt;- 100</code> , där symbolen <code>&lt;-</code> skrivs med de två tecknen <code>&lt;</code> (mindre än) som finns långt ner till vänster på tangentbordet och <code>-</code> (bindestreck). Att skriva variabeltilldelningar med <code>&lt;-</code> är egentligen den rekommenderade varianten i R, men jag tycker det är fult och föredrar <code>=</code>. 🤷</p>
+</div>
+</div>
+<p>Vi kan nu beräkna kapitalet år 1 genom att multiplicera variabeln <code>kapital</code> med talet 1.1</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="KapitalYear1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>Vi kan också <strong>skriva över</strong> värdet i variabeln <code>kapital</code> med ett nytt värde. Vi kanske vill att <code>kapital</code> alltid ska innehålla värdet på det aktiekapital som jag har just nu. Låt oss först ändra värdet på <code>kapital</code> till värdet efter år 1:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="kapitaluppdatering.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+<p>Notera speciellt raden <code>kapital = kapital*1.1</code>. R läser detta som:</p>
+<blockquote class="blockquote">
+<p>Jag (R) ska plocka fram värdet 100 ur variabeln <code>kapital</code>. Sen ska jag multiplicera det med 1.1 för att få talet 110. Det talet 110 stoppar jag sen tillbaka i variabeln <code>kapital</code>.</p>
+</blockquote>
+<p>Värdet på variabeln <code>kapital</code> är nu alltså 110.</p>
+<p>Det fina med det här att vi nu kan fortsätta att ändra variabeln kapital efter att ett ytterligare år har gått, dvs värdet på ditt aktiekapital efter år 2:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="kapiteluppdatering2.png" class="img-fluid figure-img" width="400"></p>
+</figure>
+</div>
+<p>Variabel <code>kapital</code> är nu 116.6 och du är redo för din kommande avkastning under år 3.</p>
+<section id="uppgift-2.1" class="level4">
+<h4 class="anchored" data-anchor-id="uppgift-2.1">💪 Uppgift 2.1</h4>
+<p>Avkastningen år 3 blev tyvärr minus 4%. Uppdatera variabeln <code>kapital</code> ovan så att den visar att värdet på kapitalet efter år 3 är 111.936 kr. Notera att en minskning med 4% innebär att vi måste multiplicera med 0.96 (1-0.04). Multiplikation med tal mindre än 1 leder till en minskning av kapitalet.</p>
+</section>
+</section>
+<section id="organisera-dig-med-filmappar" class="level2">
+<h2 class="anchored" data-anchor-id="organisera-dig-med-filmappar">3. Organisera dig med filmappar</h2>
+<p>Det är viktigt att ha ordning på sina filer på datorn och kunna tala om för R var dina filer finns så R kan läsa dem. Vi rekommenderar att du skapar en mapp/folder för varje kurs du läser. Spara inte alla filer på datorn skrivbord eller i mappen <strong>Downloads</strong> eller liknande. Gå till filhanteringsprogrammet på din dator och skapa mappen <strong>SDA1</strong>. Så här:</p>
+<ul>
+<li><p><img src="windows.png" class="img-fluid" width="20"> Windows: Starta programmet <strong>File Explorer</strong> och klicka på mappen <strong>Documents</strong> (eller <strong>Dokument</strong> om du har svenska som språk). Skapa en ny mapp med namnet <strong>SDA1</strong>.</p></li>
+<li><p><img src="../datorlab/mac.png" class="img-fluid" width="20">Mac: Starta programmet <strong>Finder</strong> och klicka på mappen <strong>Documents</strong>. Skapa en ny mapp med namnet <strong>SDA1</strong>.</p></li>
+<li><p><img src="../datorlab/linux.png" class="img-fluid" width="20"> Linux: Starta programmet <strong>Nautilus</strong> (om du använder Ubuntu, annars kan du prova att söka på ordet files om din Linux-distribution använder en annan filhanterare). Klicka på mappen <strong>Documents</strong>. Skapa en ny mapp med namnet <strong>SDA1</strong>.</p></li>
+</ul>
+<section id="uppgift-3.1" class="level4">
+<h4 class="anchored" data-anchor-id="uppgift-3.1">💪 Uppgift 3.1</h4>
+<p>Skapa mappen <strong>SDA1</strong> i <strong>Documents</strong> på din dator.</p>
+</section>
+</section>
+<section id="använda-editorn-source-för-att-spara-kod" class="level2">
+<h2 class="anchored" data-anchor-id="använda-editorn-source-för-att-spara-kod">4. Använda Editorn (Source) för att spara kod</h2>
+<p>Skriva kommandon direkt i Console har en nackdel: R minns inte kommandona vi har skrivit i en tidigare Session (innan vi stängde ner RStudio). Varje gång vi startar upp RStudio måste vi skriva om våra kommandon om vi vill fortsätta våra beräkningar där vi slutade senast. 😤 (Det är inte riktigt sant, fliken <strong>History</strong> i övre högra delen av RStudio minns faktiskt gamla kommandon, men det är opraktiskt att förlita sig på <strong>History</strong>).</p>
+<p>Vi skulle vilja skriva alla våra kommandon i en textfil som vi kan spara på datorns hårddisk och sen bara köra om alla kommandon in en senare Session. Source <strong>Editorn</strong> in övre vänstra delen av RStudio används för just detta.</p>
+<p>Om vi klickar på menyn <u><strong>F</strong></u><strong>ile</strong> och sen under menyn <u><strong>N</strong></u><strong>ew File</strong> och slutligen på <u><strong>R</strong></u> <strong>Script</strong> så öppnas en tom textfil i <strong>Editorn</strong> som heter <em>Untitled1</em> eller något liknande. Här kan vi skriva in kommandon som vi vill spara för framtida sessioner. Vi kan t ex skriva in våra beräkningar av aktiesparandet:</p>
+<p><img src="kapitalsource.png" class="img-fluid"></p>
+<p>Vi kan spara filen genom att klicka på menyn <u><strong>F</strong></u><strong>ile</strong> och sen på <u><strong>S</strong></u><strong>ave</strong> och sen navigera dig till mappen <strong>SDA1</strong> genom att klicka i rutan som kommer upp. Döp filen till <strong>stock</strong> eller något annat namn som talar om vad filen innehåller (aktie heter stock på engelska). Klicka på Save/Spara. Filen kommer automatiskt att få filändelsen .R, dvs filen kommer alltså heta <strong>stock.R</strong> så RStudio vet att det är en fil men R kommandon. Ett samling kommandon kallas också för <strong>kod</strong> och vi säger att vi arbetar med en <strong>kodfil</strong> i editorn.</p>
+<p>Vi kan köra alla kommandon i filen stock.R genom att klicka <code>Source</code> - knappen uppe i högra hörnet av editorn:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="SourceButton.png" class="img-fluid figure-img" width="400"></p>
+</figure>
+</div>
+<p>Vi ser de körda kommandona i Console och efter att koden har körts kan vi skriva <code>kapital</code> i Console för att se svaret 111.936.</p>
+<p>När man arbetar med koden vill man ofta köra ett kommando i taget, och inte alla på en gång. Det kan man göra genom att placera markören (det blinkande strecket) på den rad som vill köra (<strong>exekvera</strong>) och sen klicka på <code>Run</code>-knappen i uppe i högre hörnet av editorn.</p>
+<p>Ofta ställer man markören på den första raden i koden och klickar på <code>Run</code>-knappen om och om igen för att köra varje rad, en efter en. Allt som körs, t ex olika variabler som <code>kapital</code>, finns tillgängligt i Console, om man t ex vill undersöka om variabeln verkligen har fått det värde som det var meningen att det skulle få.</p>
+<p>Man kan också köra flera rader på en gång genom att markera raderna och trycka på <code>Run</code>-knappen.</p>
+<section id="uppgift-4.1" class="level4">
+<h4 class="anchored" data-anchor-id="uppgift-4.1">💪 Uppgift 4.1</h4>
+<p>Kör hela filen stock.R genom att använda <code>Source</code>-knappen. Undersök vilket värde variabeln <code>kapital</code> i Console har efter att filen körts.</p>
+</section>
+<section id="uppgift-4.2" class="level4">
+<h4 class="anchored" data-anchor-id="uppgift-4.2">💪 Uppgift 4.2</h4>
+<p>Kör kommandot på rad 1 i stock.R genom att använda <code>Run</code>-knappen. Undersök vilket värde variabeln <code>kapital</code> i Console. Upprepa detta för de resterande raderna i stock.R.</p>
+</section>
+</section>
+<section id="ställa-in-arbetsmappen-working-directory-i-r" class="level2">
+<h2 class="anchored" data-anchor-id="ställa-in-arbetsmappen-working-directory-i-r">5. Ställa in arbetsmappen (working directory) i R</h2>
+<p>Hittills har vi skrivit alla kommandon och tal (t ex <code>kapital = 100</code>), dvs vi har matat in <strong>data</strong> själva. Det är naturligtvis klumpigt om man har mycket data. Vi vill kunna läsa in hela <strong>datamaterialet</strong> från en fil. Här är en Excel-fil med data från 5 års investingar i aktier:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="ExcelTabellKapital.png" class="img-fluid figure-img" width="400"></p>
+</figure>
+</div>
+<p>Notera att:</p>
+<ul>
+<li><p>Vi använder engelska namn på kolumnerna. Svenska tecken åäö är bäst att undervika när man skriver kod. Det går att arbeta med åäö i kod, men det är lättast att undvika dem genom att skriva på engelska.</p></li>
+<li><p>Avkastningen (<strong>returns</strong>) anges i procent och är satt till noll under 2018 eftersom vi köpte aktierna precis i början av år 2019 (säger vi) och alltså inte fick någon avkastning under år 2018.<br>
+</p></li>
+</ul>
+<p>Excel-filen har jag döpt till stock.xlsx, men den kan döpas till precis vad som helst. Hur kan vi få R att läsa in data från filen stock.xlsx? Det finns två sätt, varav vi endast rekommenderar det första om man är absolut nybörjare. Rätt snart bör du lära dig att använda det andra sättet, som är smidigare i längden.</p>
+<ol type="1">
+<li>Spara/flytta filen stock.xlsx till din kurskatalog som du skapade i del 3 ovan, dvs mappen <strong>SDA1</strong> i <strong>Documents</strong>. Ändra din arbetsmapp (<strong>working directory</strong>) i R till samma mapp <strong>SDA1</strong> i <strong>Documents</strong>. <strong>Working directory</strong> är den mapp som R kommer leta efter filer i. Du kan ändra detta genom att välja menyn <u><strong>S</strong></u><strong>ession</strong> och sen <strong>Set <u>W</u>orking Directory</strong> och slutligen <u><strong>C</strong></u><strong>hoose Directory…</strong> och sedan klicka dig fram till mappen SDA1.</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="setwd_menu.png" class="img-fluid figure-img" width="359"></p>
+</figure>
+</div>
+<ol start="2" type="1">
+<li>För att slippa att klicka sig fram via menyer hela tiden så är det praktiskt att ändra working directory i början av den kodfil som man jobbar med. Då kan man bara köra den kodfilen och working directory ställs in automatiskt. Kommandot <code>setwd</code> gör samma sak som punkten 1 gjorde via menyerna. Här måste vi dock veta <strong>sökvägen</strong> (<strong>path</strong>) till mappen, dvs datorns sätt att hitta till (under)mappen <strong>SDA1</strong> i <strong>Documents</strong>-mappen. Sättet att skriva sökvägar på skiljer sig åt på Windows/Mac/Linux:
+<ul>
+<li><p><img src="mac.png" class="img-fluid" width="20"> På en Mac skriver vi kommandot: <code>setwd('/Users/username/Documents/SDA1')</code> där <code>username</code> ska ersättas med ditt användnamn på din Mac (namnet som kommer upp när du loggar in på datorn). Notera de små ‘blipparna’ kring filvägen i <code>setwd</code> kommandot.</p></li>
+<li><p><img src="linux.png" class="img-fluid" width="20"> På en Linux-dator skriver vi kommandot <code>setwd('/home/username/Documents/SDA1')</code> där <code>username</code> ska ersättas med ditt användnamn som använder när du loggar in.</p></li>
+<li><p><img src="windows.png" class="img-fluid" width="15"> På en Windows-dator är det lite krångligare. Sökvägen till (under)mappen <strong>SDA1</strong> i <strong>Documents</strong>-mappen är egentligen C:\Documents\SDA1, om du jobbar på hårddisken C:, vilket är vanligast. Dvs Windows använder <strong>backslash</strong>-tecken (<strong>\</strong>) istället för <strong>slash</strong> (<strong>/</strong>) i filnamn. R är inte jätteförtjust i det och kräver att man skriver en extra backslash för varje slash in sökvägen. Så kommandot för att byta working directory på Windows är <code>setwd('C:\\Documents\\SDA1')</code>. Notera de små ‘blipparna’ kring filvägen i <code>setwd</code> kommandot.</p></li>
+</ul></li>
+</ol>
+<section id="uppgift-5.1" class="level4">
+<h4 class="anchored" data-anchor-id="uppgift-5.1">💪 Uppgift 5.1</h4>
+<p>Ställ in din <strong>SDA1</strong> mapp som working directory i RStudio. Kontrollera att du lyckades genom att skriva kommandot <code>getwd()</code> i Console, som bör skriva ut sökvägen till din SDA1 mapp. Nu har du talat om för R att den ska leta efter filer i din kursmapp <strong>SDA1</strong>!</p>
+</section>
+</section>
+<section id="läsa-in-data-från-fil" class="level2">
+<h2 class="anchored" data-anchor-id="läsa-in-data-från-fil">6. Läsa in data från fil</h2>
+<p>Vi vill nu läsa in data från Excelfilen stock.xlsx. Du kan ladda ner den filen <a href="https://github.com/StatisticsSU/SDA1/datorlabb/labb1/aktiespar.xlsx">här</a>. Beroende på din dator så kommer en av två saker hända:</p>
+<ol type="1">
+<li><p>filen stock.xlsx hamnar automatiskt i mappen <strong>Downloads</strong> (eller liknande) på din dator. Du får då kopiera eller flytta filen till din working directory (din SDA1 mapp) genom att använda dators filhanterare.</p></li>
+<li><p>du får välja var du vill spara ner filen. Klicka dig fram till din working directory (din SDA1 mapp) och spara filen där.</p></li>
+</ol>
+<p>R kommer nu att hitta filen och vi är redo att skriva kommandot som läser in filen. Eftersom det är första gången du läser in en Excel-fil behöver du göra lite grundjobb. Vi ska göra tre steg:</p>
+<ol type="1">
+<li><p><strong>Installera R-paketet</strong> <code>xlsx</code>. Programmet R kommer med ett antal baskommandon förinstallerat. T ex har vi redan använt <strong>funktionen</strong> <code>setwd()</code> för att tala om för R vilken mapp som är vår working directory. Men många kommandon/funktioner i R måste laddas in via s k R-paket. Det finns R-paket för nästan allt man vill göra: läsa in data, gör olika typer av statistiska analyser etc etc. Paketet <code>xslx</code> är specialiserat på att läsa in Excel-filer i R. För att installera paketet kör vi kommandot <code>install.packages('xlsx')</code> antingen genom att skriv in det i en kodfil och trycka på <code>Run</code> eller genom att skriva det direkt i terminalen. Efter det kommer R att skriva ut en massa mumbo-jumbo i Console som beskriver installationen. Via paket kan ta någon minut eller mer för att installera. Om inga fel uppstår brukar installationsmeddelandet avslutas med något liknande:<br>
+<code>DONE (xlsx)</code><br>
+<code>The downloaded source packages are in</code><br>
+följt av någon kryptisk sökväg till stället på din dator där paketet har blivit installerat.<br>
+<br>
+Installation av paket behövs bara göras en gång på din dator. Du behöver inte installera om nästa gång du startar upp RStudio på nytt.</p></li>
+<li><p>Ladda R-paketet <code>xlsx</code>. Kommandot <code>library(xlsx)</code> laddar funktionerna i paketet xlsx till R’s arbetsminne. Först efter denna kommando kan vi använda funktionerna i paketet. Notera att vi behöver ‘blippar’ kring paketets namn när vi installerar, men inte när vi laddar paketet. Ett paket som laddat in med library finns inte tillgängligt när du start om RStudio. Du måste alltså skriva <code>library(xlsx)</code> för varje ny session där du vill läsa in Excel-filer. Det är därför bra att skriva in <code>library(xlsx)</code> i kodfilen du ska använda för att läsa in Excel-filer.</p></li>
+<li><p>Läs in data från Excel-filen genom kommandot/funktionen <code>read.xlsx()</code>. Här hela kommandot (<strong>funktionsanropet</strong>):<br>
+<code>stockdata = read.xlsx('stock.xlsx', 1, header=TRUE)</code><br>
+Det är några saker att reda ut här. Först, <code>read.xlsx()</code> är en <strong>funktion</strong> vilket betyder att det är ett kommando som <strong>gör något</strong> baserat på funktionens <strong>input-argument</strong>:</p>
+<ul>
+<li>Det första argumentet <code>'stock.xlsx'</code> är en <strong>textsträng</strong> (den har ‘blippar’) som talar om för <code>read.xlsx()</code> <em>vilken</em> Excelfil som ska läsas in. Vi behöver inte säga mer eftersom denna fil ligger i vår working directory, som ju R nu känner till.</li>
+<li>det andra input-argumentet är en enkel etta, <code>1</code>, vilket säger åt <code>read.xlsx()</code> att data ligger i det första kalkylbladet i filen stock.xlsx. En Excelfil kan ju har flera kalkylblad, och vill man läsa det andra bladet ändrar man <code>1</code> till <code>2</code>. (men stock.xlsx har bara ett blad, så prova inte detta för då kommer R att klaga).</li>
+<li>det sista argumentet <code>header=TRUE</code> talar om för <code>read.xlsx()</code> att den första raden i stock.xlsx innehåller namnen på kolumnerna, dvs den första raden är inte data.</li>
+</ul>
+<p>Men vad betyder <code>stockdata =</code> i början av kommandot ovan? Jo, om R ska läsa in data till arbetsminnet så måste den ge denna data ett namn, vilket jag har valt till <code>stockdata</code> , men du får döpa den till (nästan) vad du vill. <code>stockdata</code> är en <strong>variabel</strong>, precis som <code>kapital</code> var en variabel tidigare. Variabeln <code>kapital</code> var en enkel form av en variabel som bara innehöll ett enda <strong>värde</strong>, t ex 100 i början av vårt sparande. Variabeln <code>stockdata</code> är mer komplex. Den innehåller en hel tabell med värden, en s k <code>dataframe</code> på R-språk. Så kommandot</p>
+<p><code>stockdata = read.xlsx('stock.xlsx', 1, header=TRUE)</code></p>
+<p>läses alltså av R som</p>
+<blockquote class="blockquote">
+<p>Läs in första kalkylbladet av Excelfilen stock.xlsx till arbetsminnet och hantera första raden som namn/etiketter på kolumnerna. Spara den inlästa tabellen som en dataframe i variabeln <code>stockdata</code>.</p>
+</blockquote></li>
+</ol>
+<p>När man har läst in ett datamaterial är det bra att ta en snabbtitt på den inlästa tabellen för att se att den blev korrekt inläst. Precis som vi gjorde med variabel <code>kapital</code> för att se dess värde (t ex 100) så kan skriva <code>stockdata</code> i Console för att se dess värde (som ju är en tabell). Om man har en tabell med många rader så blir det fort jobbigt att skriva ut alla rader. Kommandot <code>head()</code> är då praktiskt, som bara skriver ut det första 6 raderna av tabellen. Här har vi alla kommandon som krävs för att ladda in data och skriva ut fint på skärmen (förutom <code>install.packages('xlsx')</code> som jag antar att du redan har kört för att installera paketet).</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(xlsx)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>stockdata <span class="ot">=</span> <span class="fu">read.xlsx</span>(<span class="st">'stock.xlsx'</span>, <span class="dv">1</span>, <span class="at">header=</span><span class="cn">TRUE</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(stockdata)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  year  capital returns
+1 2018 100.0000    0.00
+2 2019 110.0000    0.10
+3 2020 116.6000    0.06
+4 2021 111.9360   -0.04
+5 2022 117.5328    0.05
+6 2023 125.7601    0.07</code></pre>
+</div>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Istället för att placera alla filer i din working directory <strong>SDA1</strong> kan man istället ange sökvägen till filen när man läser in den. Om jag t ex har sparat filen i mappen <strong>Downloads</strong> på en Windows-dator så skriver jag <strong><br>
+</strong><code>stockdata = read.xlsx('C:\\Downloads\\stock.xlsx', 1, header=TRUE)</code>.</p>
+</div>
+</div>
+<section id="uppgift-6.1" class="level4">
+<h4 class="anchored" data-anchor-id="uppgift-6.1">💪 Uppgift 6.1</h4>
+<p>Prova att ladda ner Excelfilen stock.xlsx och spara den i SDA1 mappen. Läs sen in filen i R med kommandot <code>stockdata = read.xlsx('stock.xlsx', 1, header=TRUE)</code> . Skriv sen <code>head(stockdata)</code> i Console för att titta på data.<br>
+Prova nu att läsa in data med kommandot <code>stockdata = read.xlsx('stock.xlsx', 1, header=FALSE)</code> och notera skillnaden genom att återigen skriva <code>head(stockdata)</code> i Console.</p>
+</section>
+</section>
+<section id="analysera-data" class="level2">
+<h2 class="anchored" data-anchor-id="analysera-data">7. Analysera data</h2>
+<p>När du har läst in datamaterialet i minnet så är det dags att analysera det. Låt oss göra en enkel graf av variabeln <code>capital</code> över åren (<code>year</code>):</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(capital <span class="sc">~</span> year, <span class="at">data =</span> stockdata)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="DatorLab1_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>Här har vi använt funktionen <code>plot()</code> med två argument. Argumentet <code>capital ~ year</code> talar om för <code>plot()</code> att den ska göra en graf (‘plotta’) variabeln capital på y-axeln och variabeln year på x-axeln. Vi säger att vi ‘plottar capital <strong>mot</strong> year’. Men <code>capital</code> och <code>year</code> är faktiskt inte variabler i Rs arbetsminne. Där finns bara en tabell (dataframe) som heter <code>stockdata</code> med kolumner som heter <code>capital</code> och <code>year</code>. Så vi måste tala om för <code>plot()</code> att vi vill hämta variablerna <code>capital</code> och <code>year</code> från datamaterialet/tabellen/dataframe <code>stockdata</code>, vilket är precis vad som händer i det andra argumentet <code>data = stockdata</code>. Tecknet <strong>~</strong> brukar läsa som <strong>tilde</strong> och kan skrivas genom tangenterna <code>Alt gr</code> och tangenten till vänster om <code>Enter</code>.<br>
+Så kommandot<br>
+<br>
+<code>plot(capital ~ year, data = stockdata)</code><br>
+<br>
+läses av R som</p>
+<blockquote class="blockquote">
+<p>plotta variabeln <code>capital</code> mot variabeln <code>year</code>, där både dessa variabler är kolumner i datamaterialet <code>stockdata</code>.</p>
+</blockquote>
+<p>Om vi vill beräkna medelvärdet på en variabel kan vi använda funktionen <code>mean()</code>. Men om vi vill beräkna medelvärdet av variabeln <code>capital</code> med kommandot <code>mean(capital)</code> så får vi problemet att R inte har en variabel <code>capital</code> i minnet; <code>capital</code> är ju bara en kolumn i datamaterialet <code>stockdata</code>. Hur säger vi till R: gör om kolumnen <code>capital</code> i datamaterialet <code>stockdata</code> till en egen variabel och beräkna dess medelvärde (mean på engelska). Lösningen att använda <code>$</code>-tecknet för att plocka ut kolumnen <code>returns</code> som en egen variabel: <code>stockdata$capital</code> och sen använda <code>mean()</code> funktionen. Vi kan göra detta på samma kodrad och skriva ut resultatet:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>meancapital <span class="ot">=</span> <span class="fu">mean</span>(stockdata<span class="sc">$</span>capital)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>meancapital</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 113.6381</code></pre>
+</div>
+</div>
+<p>Kodraden mean<code>capital = mean(stockdata$capital)</code> säger alltså till R att</p>
+<blockquote class="blockquote">
+<p>Plocka ut kolumnen <code>capital</code> från datamaterialet <code>stockdata</code> och beräkna dess medelvärde.</p>
+</blockquote>
+<p>Genom att explicit plocka ut kolumner på detta sätt kan vi göra grafen med ett lite annorlunda kommando:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(stockdata<span class="sc">$</span>capital, stockdata<span class="sc">$</span>year)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="DatorLab1_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>där vi inte längre måste använda argumentet <code>data = stockdata</code> för att tala om var dessa variabler kommer från. Men det förra kommandot <code>plot(capital ~ year, data = stockdata)</code> är nog ändå mer lättläst, tycker jag.</p>
+<section id="uppgift-7.1" class="level4">
+<h4 class="anchored" data-anchor-id="uppgift-7.1">💪 Uppgift 7.1</h4>
+<p>Läs återigen in data med <code>stockdata = read.xlsx('stock.xlsx', 1, header=TRUE)</code>. Gör en graf där du plottar variabeln <code>returns</code> mot <code>year</code>.</p>
+</section>
+</section>
+<section id="några-extra-tips" class="level2">
+<h2 class="anchored" data-anchor-id="några-extra-tips">8. Några extra tips</h2>
+<ul>
+<li>Om du trycker på ‘pil-upp’ ⍐ tangenten i Console så kan du stega dig tillbaka till <strong>gamla kommandon</strong> som du har skrivit.</li>
+<li>Om du vill <strong>städa upp i Console</strong> kan du skriva <code>Ctrl + l</code> för att rensa Console från text (dvs ett litet L). Dina variabler blir kvar i arbetsminnet.</li>
+<li><strong>History</strong>-fliken uppe till höger i RStudio visar alla tidigare kommandon.</li>
+<li><strong>Environment</strong>-filken uppe till höger i RStudio ger dig information om de datamaterial och variabler som R har i arbetsminnet. Prova genom att definiera en ny variabel <code>c=100</code> i Console och hur den dyker upp i <strong>Environment</strong>-fliken. Prova att klicka på den blå pilen framför stockdata, du kommer se kolumnerna i det datamaterialet.</li>
+<li><strong>Files</strong>-fliken nere till höger i RStudio är en inbyggd filhanterare. Den visar filerna i ditt working directory och du kan även hantera filer där (ta bort, döpa om osv).</li>
+<li>I <strong>Help</strong>-fliken kan du söka på hjälp på olika kommandon. Prova att skriva in <code>mean</code>. Du kan även få hjälp genom att skriva t ex <code>?mean</code> i Console.</li>
+</ul>
+</section>
+<section id="sammanfattning" class="level2">
+<h2 class="anchored" data-anchor-id="sammanfattning">9. Sammanfattning</h2>
+<p>I den här datorlaborationen har du lärt dig att:</p>
+<ul>
+<li><p>Använda R som en miniräknare.</p></li>
+<li><p>Använda variabler som ett sätt att spara värden i en session.</p></li>
+<li><p>Sätta working directory så R kan hitta dina filer.</p></li>
+<li><p>Skriva kod både i Console och Editorn.</p></li>
+<li><p>Läsa in data från fil och göra inledande grafer och medelvärdeberäkningar för dataanalys.</p></li>
+</ul>
+<p>Här är hela koden i ett stycke:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">'/home/mv/Dropbox/Teaching/SDA1/datorlab'</span>) <span class="co"># I have a Linux computer and my data is in this path</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(xlsx)                         </span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>stockdata <span class="ot">=</span> <span class="fu">read.xlsx</span>(<span class="st">'stock.xlsx'</span>, <span class="dv">1</span>, <span class="at">header=</span><span class="cn">TRUE</span>)</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>meancapital <span class="ot">=</span> <span class="fu">mean</span>(stockdata<span class="sc">$</span>capital)</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(capital <span class="sc">~</span> year, <span class="at">data =</span> stockdata)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="DatorLab1_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>Notera att vi kan skriva <strong>kommentarer</strong> i koden genom tecknet <code>#</code> innan kommentaren. Allt efter tecknet <code>#</code> ignoreras av R när den läser koden. Det kan vara ett bra sätt att förklara en kodrad för användaren.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
