@@ -182,7 +182,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <li><a href="#läsa-in-data-från-fil" id="toc-läsa-in-data-från-fil" class="nav-link" data-scroll-target="#läsa-in-data-från-fil">6. Läsa in data från fil</a></li>
   <li><a href="#analysera-data" id="toc-analysera-data" class="nav-link" data-scroll-target="#analysera-data">7. Analysera data</a></li>
   <li><a href="#några-extra-tips" id="toc-några-extra-tips" class="nav-link" data-scroll-target="#några-extra-tips">8. Några extra tips</a></li>
-  <li><a href="#sammanfattning" id="toc-sammanfattning" class="nav-link" data-scroll-target="#sammanfattning">9. Sammanfattning</a></li>
+  <li><a href="#quarto-skriva-rapporter-med-text-kod-och-figurer" id="toc-quarto-skriva-rapporter-med-text-kod-och-figurer" class="nav-link" data-scroll-target="#quarto-skriva-rapporter-med-text-kod-och-figurer">9. Quarto: skriva rapporter med text, kod och figurer</a></li>
+  <li><a href="#sammanfattning" id="toc-sammanfattning" class="nav-link" data-scroll-target="#sammanfattning">10. Sammanfattning</a></li>
   </ul>
 </nav>
     </div>
@@ -527,8 +528,19 @@ läses av R som</p>
 <li>I <strong>Help</strong>-fliken kan du söka på hjälp på olika kommandon. Prova att skriva in <code>mean</code>. Du kan även få hjälp genom att skriva t ex <code>?mean</code> i Console.</li>
 </ul>
 </section>
+<section id="quarto-skriva-rapporter-med-text-kod-och-figurer" class="level2">
+<h2 class="anchored" data-anchor-id="quarto-skriva-rapporter-med-text-kod-och-figurer">9. Quarto: skriva rapporter med text, kod och figurer</h2>
+<p>Det traditionella sättet att skriva en (statistisk) rapport har varit:</p>
+<ul>
+<li><p>Skriva R-kod i t ex RStudio som gör den statistiska analysen, dvs genererar resultaten och eventuella grafer.</p></li>
+<li><p>Skriva en rapport i ett ordbehandlingsprogram, t ex Word, där resultaten sammanfattas i tabeller och figurer klistras in.</p></li>
+<li><p>Matematiska formler skrivs ofta i en add-on modul i ordbehandlaren.</p></li>
+<li><p>Rapporten skrivs slutligen till en pdf-fil eller i html-format för att visas som en webbsida.</p></li>
+</ul>
+<p>Quarto är ett system som gör det möjligt att göra alla stegen ovan i en integrerad process. Quarto-dokument (filerna heter någotnamn.qmd) låter dig mixa text (markdown), kod, figurer, tabeller och matematiska formler i ett enda dokument. Det dokumentet kan du sen välja att skriva ut som pdf, html, blog, webbsida etc. Eftersom koden är integrerad i dokumentet så är Quarto-filer interaktiva i den meningen att du kan skicka ditt Quarto-dokument till en annan person och den personen kan t ex ändra en variabel eller datamaterial i koden och sen köra om hela Quarto-dokumentet med alla tabeller och figurer uppdaterade utefter de ändringar personen gjort i koden. Det här dokumentet är skrivet i Quarto! <a href="../tutorials/Quarto/Intro2Quarto.html">Här</a> är ett enkelt Quarto-dokument som du kan öppna i RStudio och leka runt med.</p>
+</section>
 <section id="sammanfattning" class="level2">
-<h2 class="anchored" data-anchor-id="sammanfattning">9. Sammanfattning</h2>
+<h2 class="anchored" data-anchor-id="sammanfattning">10. Sammanfattning</h2>
 <p>I den här datorlaborationen har du lärt dig att:</p>
 <ul>
 <li><p>Använda R som en miniräknare.</p></li>

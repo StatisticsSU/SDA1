@@ -56,11 +56,18 @@
     "text": "8. Några extra tips\n\nOm du trycker på ‘pil-upp’ ⍐ tangenten i Console så kan du stega dig tillbaka till gamla kommandon som du har skrivit.\nOm du vill städa upp i Console kan du skriva Ctrl + l för att rensa Console från text (dvs ett litet L). Dina variabler blir kvar i arbetsminnet.\nHistory-fliken uppe till höger i RStudio visar alla tidigare kommandon.\nEnvironment-filken uppe till höger i RStudio ger dig information om de datamaterial och variabler som R har i arbetsminnet. Prova genom att definiera en ny variabel c=100 i Console och hur den dyker upp i Environment-fliken. Prova att klicka på den blå pilen framför stockdata, du kommer se kolumnerna i det datamaterialet.\nFiles-fliken nere till höger i RStudio är en inbyggd filhanterare. Den visar filerna i ditt working directory och du kan även hantera filer där (ta bort, döpa om osv).\nI Help-fliken kan du söka på hjälp på olika kommandon. Prova att skriva in mean. Du kan även få hjälp genom att skriva t ex ?mean i Console."
   },
   {
+    "objectID": "datorlab/DatorLab1.html#quarto-skriva-rapporter-med-text-kod-och-figurer",
+    "href": "datorlab/DatorLab1.html#quarto-skriva-rapporter-med-text-kod-och-figurer",
+    "title": "Statistik och dataanalys I, 15 hp",
+    "section": "9. Quarto: skriva rapporter med text, kod och figurer",
+    "text": "9. Quarto: skriva rapporter med text, kod och figurer\nDet traditionella sättet att skriva en (statistisk) rapport har varit:\n\nSkriva R-kod i t ex RStudio som gör den statistiska analysen, dvs genererar resultaten och eventuella grafer.\nSkriva en rapport i ett ordbehandlingsprogram, t ex Word, där resultaten sammanfattas i tabeller och figurer klistras in.\nMatematiska formler skrivs ofta i en add-on modul i ordbehandlaren.\nRapporten skrivs slutligen till en pdf-fil eller i html-format för att visas som en webbsida.\n\nQuarto är ett system som gör det möjligt att göra alla stegen ovan i en integrerad process. Quarto-dokument (filerna heter någotnamn.qmd) låter dig mixa text (markdown), kod, figurer, tabeller och matematiska formler i ett enda dokument. Det dokumentet kan du sen välja att skriva ut som pdf, html, blog, webbsida etc. Eftersom koden är integrerad i dokumentet så är Quarto-filer interaktiva i den meningen att du kan skicka ditt Quarto-dokument till en annan person och den personen kan t ex ändra en variabel eller datamaterial i koden och sen köra om hela Quarto-dokumentet med alla tabeller och figurer uppdaterade utefter de ändringar personen gjort i koden. Det här dokumentet är skrivet i Quarto! Här är ett enkelt Quarto-dokument som du kan öppna i RStudio och leka runt med."
+  },
+  {
     "objectID": "datorlab/DatorLab1.html#sammanfattning",
     "href": "datorlab/DatorLab1.html#sammanfattning",
     "title": "Statistik och dataanalys I, 15 hp",
-    "section": "9. Sammanfattning",
-    "text": "9. Sammanfattning\nI den här datorlaborationen har du lärt dig att:\n\nAnvända R som en miniräknare.\nAnvända variabler som ett sätt att spara värden i en session.\nSätta working directory så R kan hitta dina filer.\nSkriva kod både i Console och Editorn.\nLäsa in data från fil och göra inledande grafer och medelvärdeberäkningar för dataanalys.\n\nHär är hela koden i ett stycke:\n\nsetwd('/home/mv/Dropbox/Teaching/SDA1/datorlab') # I have a Linux computer and my data is in this path\nlibrary(xlsx)                         \nstockdata = read.xlsx('stock.xlsx', 1, header=TRUE)\nmeancapital = mean(stockdata$capital)\nplot(capital ~ year, data = stockdata)\n\n\n\n\nNotera att vi kan skriva kommentarer i koden genom tecknet # innan kommentaren. Allt efter tecknet # ignoreras av R när den läser koden. Det kan vara ett bra sätt att förklara en kodrad för användaren."
+    "section": "10. Sammanfattning",
+    "text": "10. Sammanfattning\nI den här datorlaborationen har du lärt dig att:\n\nAnvända R som en miniräknare.\nAnvända variabler som ett sätt att spara värden i en session.\nSätta working directory så R kan hitta dina filer.\nSkriva kod både i Console och Editorn.\nLäsa in data från fil och göra inledande grafer och medelvärdeberäkningar för dataanalys.\n\nHär är hela koden i ett stycke:\n\nsetwd('/home/mv/Dropbox/Teaching/SDA1/datorlab') # I have a Linux computer and my data is in this path\nlibrary(xlsx)                         \nstockdata = read.xlsx('stock.xlsx', 1, header=TRUE)\nmeancapital = mean(stockdata$capital)\nplot(capital ~ year, data = stockdata)\n\n\n\n\nNotera att vi kan skriva kommentarer i koden genom tecknet # innan kommentaren. Allt efter tecknet # ignoreras av R när den läser koden. Det kan vara ett bra sätt att förklara en kodrad för användaren."
   },
   {
     "objectID": "datorlab/ComputerLab1.html#använda-r-som-en-miniräknare",
@@ -131,6 +138,55 @@
     "title": "Reading data from an file",
     "section": "Reading data from text (.txt) and .csv files",
     "text": "Reading data from text (.txt) and .csv files\nData often come as a pure text file, often with the file ending .txt. Such files contains a simple table with the data. The first row may or may not contain the names of the variables in the columns. The columns are separated by a separator, typically a comma (,) or a TAB (blank space of a certain width). Here is an example with data from Indy car drivers:\n\n\n\n\n\nNote how the columns are not nice aligned, but clearly separated by blank space (TAB) so that R can understand which numbers belongs to which variable (column). Note also that the first row contain the variable names: Year, Winner, Chassis, Engine, Speed, Time_hrs and Distance.\nLet’s read this text file with data into R using the built-in function read.delim\n\nindy <- read.delim('Indy_500_2018.txt', header = TRUE)\nhead(indy)\n\n  Year        Winner  Chassis   Engine Speed.computed Time_hrs Distance\n1 1911   Ray Harroun   Marmon   Marmon       74.60212 6.702222      500\n2 1912    Joe Dawson National National       78.71950 6.351667      500\n3 1913    Jules Goux  Peugeot  Peugeot       75.93335 6.584722      500\n4 1914   Rene Thomas   Delage   Delage       82.47423 6.062500      500\n5 1915 Ralph DePalma Mercedes Mercedes       89.84049 5.565419      500\n6 1916   Dario Resta  Peugeot  Peugeot       84.00093 3.571389      300\n\n\nFinally, a very common file format are, comma-separated values files, often called csv for short. These are similar to txt files, but are read into R using the built-in read.csv function.\n\n\n\n\n\n\nTip\n\n\n\nBoth the read.delim and read.csv have an argument sep that can be used to specify which delimiter is used in the file. For example, a txt files where the columns are separated by a comma instead of TAB can be read by the command:\nmy_data <- read.delim('myfile.txt', sep = \",\", header = TRUE)"
+  },
+  {
+    "objectID": "tutorials/Quarto/Intro2Quarto.html",
+    "href": "tutorials/Quarto/Intro2Quarto.html",
+    "title": "Introduction to Quarto",
+    "section": "",
+    "text": "Quarto is a way to integrated text (markdown), computer code, figures, tables and mathematical formulas in one document.\nQuarto documents (with file ending .qmd) can easily be turned into pdf format, html, website, blogs and presentations."
+  },
+  {
+    "objectID": "tutorials/Quarto/Intro2Quarto.html#setting-for-the-document---the-yaml",
+    "href": "tutorials/Quarto/Intro2Quarto.html#setting-for-the-document---the-yaml",
+    "title": "Introduction to Quarto",
+    "section": "2. Setting for the document - the YAML",
+    "text": "2. Setting for the document - the YAML\nAt the top of a quarto document is the so called YAML, which tells the Quarto engine how the document should be formatted. This is the YAML for this document:\n\n\n\n\n\nwhich basically only gives the title and author information, everything else is using default settings. This will print (render) the document to html by default. If I instead wanted to render to pdf I would use the YAML:"
+  },
+  {
+    "objectID": "tutorials/Quarto/Intro2Quarto.html#writing-formatted-text-using-markdown",
+    "href": "tutorials/Quarto/Intro2Quarto.html#writing-formatted-text-using-markdown",
+    "title": "Introduction to Quarto",
+    "section": "3. Writing formatted text using markdown",
+    "text": "3. Writing formatted text using markdown\nThe text written in a Quarto document can be formatted using the markdown language. Markdown is a very simple language for formatting text. For example, I can easily make the text bold by writing **bold** or italic using a single * on each side of the text.\n\nbullet\nlist\nare also\neasy\n\njust put a - and space before each bullet point. Numbered lists are also simple, just place numbers and a dot (.) before each list item. Like this:\n\nThis is the first point\nand this is second\nand so on.\n\nImages can be inserted real easy by typing ![sceptic larry](/misc/larry.png){width=\"100\"} which would give the picture below.\n\n\n\nsceptic larry\n\n\nYou can leave out the figure text and the width argument and just write: ![](/misc/larry.png) .\nTables are also pretty easy. The table below is made by writing\n| Name  | Age | Position            |\n|-------|-----|---------------------|\n| Mike  | 49  | Professor           |\n| Sarah | 37  | Assistant professor |\n| Anne  | 26  | PhD student         |\n\nA little table caption.\n\n\nName\nAge\nPosition\n\n\n\n\nMike\n49\nProfessor\n\n\nSarah\n37\nAssistant professor\n\n\nAnne\n26\nPhD student\n\n\n\nWhat if you want the table caption text to be above the tables, not below it like above? No sweat, just put table-cap-location: top in your YAML at the top of the document."
+  },
+  {
+    "objectID": "tutorials/Quarto/Intro2Quarto.html#writing-code",
+    "href": "tutorials/Quarto/Intro2Quarto.html#writing-code",
+    "title": "Introduction to Quarto",
+    "section": "4. Writing code",
+    "text": "4. Writing code\nQuarto document can have executable code in them. It supports several programming languages, most notably: R, Python and Julia. You just need to add a code chunk. A code chunk starts and ends with three so called backticks `. This is a chunk of R code:\n\n\n\n\n\nNote the little green Play-button. By pressing that we can run the code. After running the code in the Quarto-dokument, the variables (in this case a vector x) will be available in the console, just like for any R code. Here is the end result of that code chunk:\n\nx = rnorm(100)\nplot(x, type = \"l\", xlab = \"time\", main = \"time series plot\")\n\n\n\n\nWhat if I want to use the code to produce the plot, but not show the code in my report? Easy, I would just add some YAML information at the beginning of the code chunk itself. YAML inside of a code chunk must begin with the two characters #| . Here is how you hide the code:\n\nThe first character # is called a hash and the second | a pipe. So the recommended way to remember #| is by thinking of the Weezer song: hash pipe. BTW, there I used a hyperlink which you write as [link text](webpage address) where the webpage address is a http-link, but can also be links within a document."
+  },
+  {
+    "objectID": "tutorials/Quarto/Intro2Quarto.html#writing-mathematical-formulas",
+    "href": "tutorials/Quarto/Intro2Quarto.html#writing-mathematical-formulas",
+    "title": "Introduction to Quarto",
+    "section": "5. Writing mathematical formulas",
+    "text": "5. Writing mathematical formulas\nQuarto supports LaTeX, which is a professional typesetting system for mathematical symbols. LaTeX takes a while to master, but you can look it up online to learn the basics. Just enclose LaTeX code between two dollar-signs on each side. Here is a simple example $$\\alpha_1$$ which would come out as \\[\\alpha_1\\] in your document. Here is a more complex example:\n$$\\bar{x} = \\frac{1}{n}\\sum_{i=1}^n x_i$$\nwhich would come out as the formula for the sample mean:\n\\[\\bar{x} = \\frac{1}{n}\\sum_{i=1}^n x_i\\]"
+  },
+  {
+    "objectID": "tutorials/Quarto/Intro2Quarto.html#using-the-visual-editor-in-rstudio",
+    "href": "tutorials/Quarto/Intro2Quarto.html#using-the-visual-editor-in-rstudio",
+    "title": "Introduction to Quarto",
+    "section": "6. Using the Visual editor in RStudio",
+    "text": "6. Using the Visual editor in RStudio\nYou can create (File/New File/Quarto document… menu) and write Quarto documents in RStudio. When you open a Quarto document in the editor the menu bar changes to (may look different for you):\n\n\n\n\n\nClicking on the Render button will render the document to html (default) or pdf (if you choose that in the YAML). Pressing the Run button will re-run all the code chunks in the document. You can write your Quarto document as markdown code if you click the Source -button in the extreme left. If you press the Visual-button you will see the document in a similar way to word processors like Word. You can then insert images and table, change font sizes etc by clicking on the menu. I tend to go spend most time in Visual mode, but will often go over to Source mode when I want absolute control of what I do.´"
+  },
+  {
+    "objectID": "tutorials/Quarto/Intro2Quarto.html#going-fancy---interactivity",
+    "href": "tutorials/Quarto/Intro2Quarto.html#going-fancy---interactivity",
+    "title": "Introduction to Quarto",
+    "section": "7. Going fancy - interactivity",
+    "text": "7. Going fancy - interactivity\nQuarto documents have the basic interactivity that one can change code inside a code chunk, render the document and everything in the document changes according to the changes in the code.\nBut it also possible to make the final html interactive. Below is an an example to wet your appetite. Try moving around the slides to change the plot. Note that you need to view the html file in an external web browser and not using the Viewer inside RStudio.\n\ndata = FileAttachment(\"palmer-penguins.csv\").csv({ typed: true })\n\n\n\n\n\n\n\nviewof bill_length_min = Inputs.range(\n  [32, 50], \n  {value: 35, step: 1, label: \"Bill length (min):\"}\n)\nviewof islands = Inputs.checkbox(\n  [\"Torgersen\", \"Biscoe\", \"Dream\"], \n  { value: [\"Torgersen\", \"Biscoe\"], \n    label: \"Islands:\"\n  }\n)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nfiltered = data.filter(function(penguin) {\n  return bill_length_min < penguin.bill_length_mm &&\n         islands.includes(penguin.island);\n})\n\n\n\n\n\n\n\nPlotData\n\n\n\nPlot.rectY(filtered, \n  Plot.binX(\n    {y: \"count\"}, \n    {x: \"body_mass_g\", fill: \"species\", thresholds: 20}\n  ))\n  .plot({\n    facet: {\n      data: filtered,\n      x: \"sex\",\n      y: \"species\",\n      marginRight: 80\n    },\n    marks: [\n      Plot.frame(),\n    ]\n  }\n)\n\n\n\n\n\n\n\n\n\nInputs.table(filtered)"
   },
   {
     "objectID": "assignments/Inlamningsuppgift1.html",
