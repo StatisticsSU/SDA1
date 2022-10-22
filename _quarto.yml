@@ -1,10 +1,10 @@
 project:
   type: website
-  output-dir: docs
+  #output-dir: docs
 
 website:
   title: "SDA1"
-  navbar: 
+  navbar:
     logo: /misc/LogoBlueJustRing.jpg
     background: primary
     left:

@@ -1,0 +1,13 @@
+Body Mass Index	Physical Activity	Percentage
+Normal	Inactive	23.8
+Normal	Irregularly active	27.8
+Normal	Regular, not intense	31.6
+Normal	Regular, intense	16.8
+Overweight	Inactive	26.0
+Overweight	Irregularly active	28.7
+Overweight	Regular, not intense	31.1
+Overweight	Regular, intense	14.2
+Obese	Inactive	35.6
+Obese	Irregularly active	28.1
+Obese	Regular, not intense	27.2
+Obese	Regular, intense	9.1

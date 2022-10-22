@@ -1,2 +1,6 @@
+.Rhistory
+./Rproj.user
 /.quarto/
 /hidden
+.Rproj.user
+sda1.code-workspace

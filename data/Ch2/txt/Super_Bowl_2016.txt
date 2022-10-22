@@ -1,0 +1,51 @@
+Super Bowl	Date	Winner	Winners Score	Loser	Losers Score	Points	Edge
+I	 Jan. 15, 1967 	Green Bay	35	Kansas City	10	45	25
+II	 Jan. 14, 1968 	Green Bay	33	Oakland	14	47	19
+III	 Jan. 12, 1969 	N.Y. Jets	16	Baltimore	7	23	9
+IV	 Jan. 11, 1970 	Kansas City	23	Minnesota	7	30	16
+V	 Jan. 17, 1971 	Baltimore	16	Dallas	13	29	3
+VI	 Jan. 16, 1972 	Dallas	24	Miami	3	27	21
+VII	 Jan. 14, 1973 	Miami	14	Washington	7	21	7
+VIII	 Jan. 13, 1974 	Miami	24	Minnesota	7	31	17
+IX	 Jan. 12, 1975 	Pittsburgh	16	Minnesota	6	22	10
+X	 Jan. 18, 1976 	Pittsburgh	21	Dallas	17	38	4
+XI	 Jan. 19, 1977 	Oakland	32	Minnesota	14	46	18
+XII	 Jan. 15, 1978 	Dallas	27	Denver	10	37	17
+XIII	 Jan. 21, 1979 	Pittsburgh	35	Dallas	31	66	4
+XIV	 Jan. 20, 1980 	Pittsburgh	31	L.A. Rams	19	50	12
+XV	 Jan. 25, 1981 	Oakland	27	Philadelphia	10	37	17
+XVI	 Jan. 24, 1982 	San Francisco	26	Cincinnati	21	47	5
+XVII	 Jan. 30, 1983 	Washington	27	Miami	17	44	10
+XVIII	 Jan. 22, 1984 	L.A.	38	Washington	9	47	29
+XIX	 Jan. 20, 1985 	San Francisco	38	Miami	16	54	22
+XX	 Jan. 26, 1986 	Chicago	46	New England	10	56	36
+XXI	 Jan. 25, 1987 	N.Y.	39	Denver	20	59	19
+XXII	 Jan. 31, 1988 	Washington	42	Denver	10	52	32
+XXIII	 Jan. 22, 1989 	San Francisco	20	Cincinnati	16	36	4
+XXIV	 Jan. 28, 1990 	San Francisco	55	Denver	10	65	45
+XXV	 Jan. 27, 1991 	N.Y.	20	Buffalo	19	39	1
+XXVI	 Jan. 26, 1992 	Washington	37	Buffalo	24	61	13
+XXVII	 Jan. 31, 1993 	Dallas	52	Buffalo	17	69	35
+XXVIII	 Jan. 30, 1994 	Dallas	30	Buffalo	13	43	17
+XXIX	 Jan. 29, 1995 	San Francisco	49	San Diego	26	75	23
+XXX	 Jan. 28, 1996 	Dallas	27	Pittsburgh	17	44	10
+XXXI	 Jan. 26, 1997 	Green Bay	35	New England	21	56	14
+XXXII	 Jan. 25, 1998 	Denver	31	Green Bay	24	55	7
+XXXIII	 Jan. 31, 1999 	Denver	34	Atlanta	19	53	15
+XXXIV	 Jan. 30, 2000 	St. Louis	23	Tennessee	16	39	7
+XXXV	 Jan. 28, 2001 	Baltimore	34	N.Y. Giants	7	41	27
+XXXVI	 Feb. 3, 2002 	New England	20	St. Louis	17	37	3
+XXXVII	 Jan. 26, 2003 	Tampa Bay	48	Oakland	21	69	27
+XXXVIII	 Feb. 1, 2004 	New England	32	Carolina	29	61	3
+XXXIX	 Feb. 6, 2005 	New England	24	Philadelphia	21	45	3
+XL	 Feb. 5, 2006 	Pittsburgh	21	Seattle	10	31	11
+XLI	 Feb. 4, 2007 	Indianapolis	29	Chicago	17	46	12
+XLII	 Feb. 3, 2008 	N.Y. Giants	17	New England	14	31	3
+XLIII	 Feb. 1, 2009 	Pittsburgh	27	Arizona	23	50	4
+XLIV	 Feb. 7, 2010 	Saints	31	Colts	17	48	14
+XLV	 Feb. 6, 2011 	Packers	31	Steelers	25	56	6
+XLVI	 Feb. 5, 2012 	Giants	21	Patriots	17	38	4
+XLVII	 Feb. 3, 2013 	Ravens	34	49ers	31	65	3
+XLVIII	 Feb. 2, 2014 	Seahawks	43	Broncos	8	51	35
+XLIX	 Feb. 1, 2015 	Patriots	28	Seahawks	24	52	4
+50	 Feb. 7, 2016 	Broncos	24	Panthers	10	34	14

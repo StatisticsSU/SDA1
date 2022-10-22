@@ -1,0 +1,51 @@
+State	 Nest.Egg.Index	 Region
+Alabama	 89.29	 S/W
+Alaska	 103.46	 S/W
+Arizona	 98.49	 S/W
+Arkansas	 87.12	 S/W
+California	 97.86	 S/W
+Colorado	 106.41	 S/W
+Connecticut	 113.98	 NE/MW
+Delaware	 108.73	 NE/MW
+Florida	 97.04	 S/W
+Georgia	 96.81	 S/W
+Hawaii	 102.95	 S/W
+Idaho	 98.71	 S/W
+Illinois	 105.87	 NE/MW
+Indiana	 103.8	 NE/MW
+Iowa	 103.3	 NE/MW
+Kansas	 103.18	 NE/MW
+Kentucky	 92.97	 NE/MW
+Louisiana	 86.94	 S/W
+Maine	 99.71	 NE/MW
+Maryland	 111.4	 NE/MW
+Massachusetts	 111.77	 NE/MW
+Michigan	 107.45	 NE/MW
+Minnesota	 113.7	 NE/MW
+Mississippi	 85.48	 S/W
+Missouri	 100.81	 NE/MW
+Montana	 94.2	 S/W
+Nebraska	 97.24	 NE/MW
+Nevada	 99.04	 S/W
+New Hampshire	 112.19	 NE/MW
+New Jersey	 114.35	 NE/MW
+New Mexico	 91.46	 S/W
+New York	 95.53	 NE/MW
+North Carolina	 97.91	 S/W
+North Dakota	 96.36	 S/W
+Ohio	 101.94	 NE/MW
+Oklahoma	 87.77	 S/W
+Oregon	 100.04	 S/W
+Pennsylvania	 103.44	 NE/MW
+Rhode Island	 102.02	 NE/MW
+South Carolina	 94.37	 S/W
+South Dakota	 97.14	 S/W
+Tennessee	 92.55	 NE/MW
+Texas	 92.02	 S/W
+Utah	 104.71	 S/W
+Vermont	 103.33	 NE/MW
+Virginia	 105.14	 NE/MW
+Washington	 103.55	 S/W
+West Virginia	 90.39	 NE/MW
+Wisconsin	 107.41	 NE/MW
+Wyoming	 97.96	 S/W

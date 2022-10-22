@@ -1,0 +1,51 @@
+State	Score
+Alabama	269
+Alaska	282
+Arizona	280
+Arkansas	278
+California	276
+Colorado	290
+Connecticut	285
+Delaware	282
+Florida	281
+Georgia	279
+Hawaii	281
+Idaho	286
+Illinois	285
+Indiana	288
+Iowa	285
+Kansas	290
+Kentucky	281
+Louisiana	273
+Maine	289
+Maryland	287
+Massachusetts	301
+Michigan	280
+Minnesota	295
+Mississippi	271
+Missouri	283
+Montana	289
+Nebraska	285
+Nevada	278
+New Hampshire	296
+New Jersey	296
+New Mexico	273
+New York	282
+North Carolina	286
+North Dakota	291
+Ohio	290
+Oklahoma	276
+Oregon	284
+Pennsylvania	290
+Rhode Island	284
+South Carolina	280
+South Dakota	287
+Tennessee	278
+Texas	288
+Utah	284
+Vermont	295
+Virginia	288
+Washington	290
+West Virginia	274
+Wisconsin	289
+Wyoming	288

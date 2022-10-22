@@ -1,0 +1,21 @@
+---
+title: Statistik och dataanalys I, 15 hp
+subtitle: Inlämningsuppgift 1
+author: "Student 1 och Student 2"
+date: last-modified
+fig-cap-location: margin
+#title-block-banner: true
+---
+
+------------------------------------------------------------------------
+
+::: callout-note
+### Inlämning
+
+Er grupp förväntas lämna in följande på **Athena**:
+
+-   det här Quarto (qmd) dokumentet med era lösningar på inlämningsuppgiften
+-   en pdf-version av dokumentet.
+
+Byt ut `Student 1` och `Student 2` vid `Author` till era namn.
+:::
