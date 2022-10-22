@@ -81,13 +81,13 @@ Uppgifter: SDM 1.1-1.6, osv
 ### **Datorlaborationer**
 
 **Datorlaboration 5 - Simulering från sannolikhetsfördelningar**\
-Uppgifter: [Datorlabb 5](/misc/larry.png) 
+Uppgifter: [Datorlab 5](/misc/larry.png) 
 
 **Datorlaboration 6 - Samplingfördelningar, standardfel och konfidensintervall**\
-Uppgifter: [Datorlabb 6](/misc/larry.png) 
+Uppgifter: [Datorlab 6](/misc/larry.png) 
 
 **Datorlaboration 7 - Multipel linjär regression**\
-Uppgifter: [Datorlabb 7](/misc/larry.png) 
+Uppgifter: [Datorlab 7](/misc/larry.png) 
 
 **Datorlaboration 8 - Multipel linjär regression, forts**\
-Uppgifter: [Datorlabb 8](/misc/larry.png)
+Uppgifter: [Datorlab 8](/misc/larry.png)

@@ -54,13 +54,13 @@ Uppgifter: SDM 1.1-1.6, osv
 ### **Datorlaborationer**
 
 **Datorlaboration 1 - Intro till R**\
-Uppgifter: [Datorlabb 1](/misc/larry.png) 
+Uppgifter: [Datorlab 1](/datorlab/DatorLab1.html) 
 
 **Datorlaboration 2 - Beskrivande statistik och visualisering i R**\
-Uppgifter: [Datorlabb 2](/misc/larry.png) 
+Uppgifter: [Datorlab 2](/misc/larry.png) 
 
 **Datorlaboration 3 - Korrelation och enkel linjär regression**\
-Uppgifter: [Datorlabb 3](/misc/larry.png) 
+Uppgifter: [Datorlab 3](/misc/larry.png) 
 
 **Datorlaboration 4 - Multipel linjär regression**\
-Uppgifter: [Datorlabb 4](/misc/larry.png)
+Uppgifter: [Datorlab 4](/misc/larry.png)
