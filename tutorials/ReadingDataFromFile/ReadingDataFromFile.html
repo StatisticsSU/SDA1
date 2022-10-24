@@ -226,50 +226,41 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#install.packages("xlsx") # Installs the xlsx package. Do it only once.</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"xlsx"</span>)           <span class="co"># loads the xlsx package. Do it once per R session.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
+<div class="callout-note callout callout-style-simple">
+<div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<div class="callout-body-container">
 <p>I have <em>commented out</em> the installation of the package by putting a <code>#</code> sign in front of the command <code>install.packages("xlsx")</code>. So this command will not be executed/run. I already have that package installed on my computer and don’t want to re-install it. You have to <em>uncomment</em>, that is remove the sign <code>#</code>, before running this on your computer, if you haven’t installed this package already.</p>
+</div>
 </div>
 </div>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>tour_de_france <span class="ot">&lt;-</span> <span class="fu">read.xlsx</span>(<span class="st">'Tour_de_France_2017.xlsx'</span>, <span class="dv">1</span>, <span class="at">header=</span><span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>What does the number <code>1</code> and <code>header=TRUE</code> mean in the above command? Well, the number 1 tells R to read data from the first sheet in the Excel file. If you want to the read data from the third sheet in an Excel file, then just replace 1 with 3 (the tour de france data has only one sheet, however). The <em>argument</em> <code>header=TRUE</code> tells R that the first row in the Excel file contains the name of the variables in each column.</p>
-<div class="callout-important callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
+<div class="callout-important callout callout-style-simple">
+<div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
-Important
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<div class="callout-body-container">
 <p>I placed the file Tour_de_France_2017.xlsx in my working directory. You can (and typically should) keep your data files in a different place on your computer. You then need to include the path to file before the file name. For example, on a computer running Windows, if your data is stored in the Documents folder, then replace the command above with</p>
 <p><code>tour_de_france &lt;- read.xlsx('C:\Documents\Tour_de_France_2017.xlsx', 1, header=TRUE)</code></p>
 </div>
 </div>
-<div class="callout-tip callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
+</div>
+<div class="callout-tip callout callout-style-simple">
+<div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
-Tip
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<div class="callout-body-container">
 <p>Rather than telling R explicitly where you data are stored, you can also use the command</p>
 <p><code>tour_de_france &lt;- read.xlsx(file.choose(), 1)</code></p>
 <p>which will open up a window where you can look up the file in your file explorer and it will then read the first sheet (again the <code>1</code> in the command) of that file. This is convenient, but I don’t recommend it (lousy tip! 🙄) since you then have to click your way to the file everytime you re-run your R code.</p>
+</div>
 </div>
 </div>
 <p>We have now read the dataset into a variable (a <code>dataframe</code>) that I have chosen to call <code>tour_de_france</code>. We can now just type the name of this variable in the Console in R to see the data. However, this will show <em>all</em> the observations in the data, which can be messy for larger datasets. The <code>head</code> command is useful, showing only the first few observations of the dataset:</p>
@@ -332,18 +323,15 @@ Tip
 </div>
 </div>
 <p>Finally, a very common file format are, comma-separated values files, often called <code>csv</code> for short. These are similar to <code>txt</code> files, but are read into R using the built-in <code>read.csv</code> function.</p>
-<div class="callout-tip callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
+<div class="callout-tip callout callout-style-simple">
+<div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
-Tip
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<div class="callout-body-container">
 <p>Both the <code>read.delim</code> and <code>read.csv</code> have an argument <code>sep</code> that can be used to specify which <em>delimiter</em> is used in the file. For example, a <code>txt</code> files where the columns are separated by a comma instead of <code>TAB</code> can be read by the command:</p>
 <p><code>my_data &lt;- read.delim('myfile.txt', sep = ",", header = TRUE)</code></p>
+</div>
 </div>
 </div>
 

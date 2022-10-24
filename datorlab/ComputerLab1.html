@@ -217,7 +217,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </header>
 
 <hr>
-<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-tip callout callout-style-simple callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
@@ -263,43 +263,34 @@ Instruktioner
 </figure>
 </div>
 <p>R skriver snällt ut det värde (100) som jag tilldelade variabeln <code>kapital</code>.</p>
-<div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
+<div class="callout-note callout callout-style-simple">
+<div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<div class="callout-body-container">
 <p>Notera språkbruket: vi säger att vi <strong>tilldelar</strong> <strong>variabel</strong> <code>kapital</code> <strong>värdet</strong> <code>100</code>. Lite mer slarvigt säger vi: ‘vi sätter <code>kapital</code> till 100’.</p>
 </div>
 </div>
-<div class="callout-warning callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
+</div>
+<div class="callout-warning callout callout-style-simple">
+<div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
-Warning
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<div class="callout-body-container">
 <p>Vi kan återkalla värdet 100 från variabeln <code>kapital</code> när som helst. Men om du stänger ner RStudio och sen startar om programmet (eller om RStudio låser sig) så minns inte R längre värdet på <code>kapital</code> . R minns faktiskt inte ens att det fanns något som hette <code>kapital</code> och kommer att klaga om du skriver <code>kapital</code> på prompten följt av <code>Enter</code>. R och RStudio minns bara variabeln inom en <strong>session</strong>, dvs tills du avslutar RStudio. Om man vill spara data mellan olika sessioner måste man spara ner variablerna på datorn hårddisk (eller på någon lagring på internet). Mer om detta senare.</p>
 </div>
 </div>
-<div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
+</div>
+<div class="callout-note callout callout-style-simple">
+<div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<div class="callout-body-container">
 <p>Istället för att skriva <code>kapital = 100</code> så kan vi lika gärna skriva <code>kapital &lt;- 100</code> , där symbolen <code>&lt;-</code> skrivs med de två tecknen <code>&lt;</code> (mindre än) som finns långt ner till vänster på tangentbordet och <code>-</code> (bindestreck). Att skriva variabeltilldelningar med <code>&lt;-</code> är egentligen den rekommenderade varianten i R, men jag tycker det är fult och föredrar <code>=</code>. 🤷</p>
+</div>
 </div>
 </div>
 <p>Vi kan nu beräkna kapitalet år 1 genom att multiplicera variabeln <code>kapital</code> med talet 1.1</p>
@@ -452,18 +443,15 @@ Det är några saker att reda ut här. Först, <code>read.xlsx()</code> är en <
 6 2023 125.7601    0.07</code></pre>
 </div>
 </div>
-<div class="callout-tip callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
+<div class="callout-tip callout callout-style-simple">
+<div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
-Tip
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<div class="callout-body-container">
 <p>Istället för att placera alla filer i din working directory <strong>SDA1</strong> kan man istället ange sökvägen till filen när man läser in den. Om jag t ex har sparat filen i mappen <strong>Downloads</strong> på en Windows-dator så skriver jag <strong><br>
 </strong><code>stockdata = read.xlsx('C:\\Downloads\\stock.xlsx', 1, header=TRUE)</code>.</p>
+</div>
 </div>
 </div>
 <section id="uppgift-6.1" class="level4">
