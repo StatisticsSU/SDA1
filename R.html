@@ -20,6 +20,69 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 
@@ -86,10 +149,10 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="./index.html">Översikt</a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./DelA.html">Dataanalys</a>
+    <a class="nav-link" href="./DelA.html">Dataanalys, 7.5 hp</a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./DelB.html">Statistiska modeller och inferens</a>
+    <a class="nav-link" href="./DelB.html">Statistiska modeller och inferens, 7.5 hp</a>
   </li>  
   <li class="nav-item">
     <a class="nav-link active" href="./R.html" aria-current="page">R</a>
@@ -109,7 +172,11 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#det-statistiska-programmeringsspråket-r" id="toc-det-statistiska-programmeringsspråket-r" class="nav-link active" data-scroll-target="#det-statistiska-programmeringsspråket-r">Det statistiska programmeringsspråket R</a></li>
+  <li><a href="#programmeringsspråket-r" id="toc-programmeringsspråket-r" class="nav-link active" data-scroll-target="#programmeringsspråket-r">Programmeringsspråket R</a></li>
+  <li><a href="#rstudio" id="toc-rstudio" class="nav-link" data-scroll-target="#rstudio">RStudio</a></li>
+  <li><a href="#ladda-ner-r-och-rstudio" id="toc-ladda-ner-r-och-rstudio" class="nav-link" data-scroll-target="#ladda-ner-r-och-rstudio">Ladda ner R och RStudio</a></li>
+  <li><a href="#guidertutorials" id="toc-guidertutorials" class="nav-link" data-scroll-target="#guidertutorials">Guider/Tutorials</a></li>
+  <li><a href="#kursens-r-paket" id="toc-kursens-r-paket" class="nav-link" data-scroll-target="#kursens-r-paket">Kursens R-paket</a></li>
   </ul>
 </nav>
     </div>
@@ -132,33 +199,53 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>Guider:</p>
+<section id="programmeringsspråket-r" class="level2">
+<h2 class="anchored" data-anchor-id="programmeringsspråket-r">Programmeringsspråket R</h2>
+<blockquote class="blockquote">
+<p>Kursen använder det mycket populära statistiska programmeringsspråket R. Programmet är helt gratis och kan laddas ner på alla datorer.</p>
+</blockquote>
+</section>
+<section id="rstudio" class="level2">
+<h2 class="anchored" data-anchor-id="rstudio">RStudio</h2>
+<p>R är lättast att jobba i från programmet RStudio. RStudio är en slags arbetsmiljö byggd kring R. Även RStudio är gratis.</p>
+</section>
+<section id="ladda-ner-r-och-rstudio" class="level2">
+<h2 class="anchored" data-anchor-id="ladda-ner-r-och-rstudio">Ladda ner R och RStudio</h2>
+<p>Du måste först installera R och sen RStudio:</p>
 <ul>
-<li><a href="./tutorials/ReadingDataFromFile.html">Läs in data från fil</a></li>
+<li>R kan laddas ner <a href="https://ftp.acc.umu.se/mirror/CRAN/">här</a>.</li>
+<li>RStudio kan laddas ner <a href="https://www.rstudio.com/products/rstudio/download/#download">här</a>.</li>
 </ul>
-<section id="det-statistiska-programmeringsspråket-r" class="level2">
-<h2 class="anchored" data-anchor-id="det-statistiska-programmeringsspråket-r">Det statistiska programmeringsspråket R</h2>
-<p>Kursen använder det mycket populära statistiska programmeringsspråket R. Programmet är helt gratis och kan laddas ner på alla datorer. Du kan ladda ner R <a href="https://ftp.acc.umu.se/mirror/CRAN/">här</a>.</p>
-<p>R är lättast att jobba i från programmet RStudio. RStudio är en slags arbetsmiljö byggd kring R. RStudio är gratis och kan ladda ner <a href="https://www.rstudio.com/products/rstudio/download/#download">här</a>. Det finns en massa bra videos och tutorials för R och RStudio. <a href="https://youtu.be/FIrsOBy5k58">Här</a> är t ex en kort video som ge en rundtur i RStudio.</p>
-<p>Kursen har ett eget R paket med några hjälpfunktioner som används på kursen. För att kunna använda paketet behöver du installera det:</p>
-<pre><code># För att installera kurspaketet sdakurs
-install.packages("remotes") # görs bara en gång på din dator
-library(remotes)  
-install_github("StatisticsSU/sdakurs") # görs bara en gång på din dator
-library(sdakurs)
+</section>
+<section id="guidertutorials" class="level2">
+<h2 class="anchored" data-anchor-id="guidertutorials">Guider/Tutorials</h2>
+<ul>
+<li>Hur man laddar ner och <strong>installerar R</strong> och RStudio: <a href="">video</a></li>
+<li>En snabbt tur i <strong>RStudio</strong>: <a href="">video</a></li>
+<li><strong>Quarto</strong> för att skriva kompletta rapporter med kod: <a href="./tutorials/Quarto/Intro2Quarto.html">html</a> | <a href="./tutorials/Quarto/Intro2Quarto.pdf">pdf</a> | <a href="">video</a></li>
+</ul>
+</section>
+<section id="kursens-r-paket" class="level2">
+<h2 class="anchored" data-anchor-id="kursens-r-paket">Kursens R-paket</h2>
+<p>Kursen har ett eget R-paket <code>sdakurs</code> med några hjälpfunktioner som används på kursen.</p>
+<section id="installera-kurspaketet-sdakurs" class="level4">
+<h4 class="anchored" data-anchor-id="installera-kurspaketet-sdakurs">Installera kurspaketet <code>sdakurs</code></h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"remotes"</span>) </span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(remotes)  </span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">install_github</span>(<span class="st">"StatisticsSU/sdakurs"</span>)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sdakurs)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="installera-kursens-datamaterial" class="level4">
+<h4 class="anchored" data-anchor-id="installera-kursens-datamaterial">Installera kursens datamaterial</h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install_github</span>(<span class="st">"StatisticsSU/SUdatasets"</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(SUdatasets)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 
-# För att installera kursens datamaterial
-install_github("StatisticsSU/SUdatasets") # görs bara en gång på din dator
-library(SUdatasets)
 
-# För en lista med alla funktioner i paketet regkurs
-help(, "regkurs")
-
-# För information om ett specifikt datamaterial eller funktion i kurspaketet
-?namnet_på_datamaterialet
-?namnet_på_funktionen</code></pre>
-
-
+</section>
 </section>
 
 </main> <!-- /main -->

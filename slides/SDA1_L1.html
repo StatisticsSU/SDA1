@@ -10,7 +10,7 @@
   <meta name="generator" content="quarto-1.1.251">
 
   <meta name="author" content="Mattias Villani">
-  <title>SDA1 - Statistik och dataanalys 1</title>
+  <title>SDA1 - Statistik och dataanalys I</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -324,17 +324,81 @@
     <div class="slides">
 
 <section id="title-slide" class="center">
-  <h1 class="title">Statistik och dataanalys 1</h1>
-  <p class="author">Mattias Villani</p>
+  <h1 class="title">Statistik och dataanalys I</h1>
+  <p class="subtitle">Föreläsning 1 - Introduktion</p>
+  <p class="author"><strong>Mattias Villani</strong></p>
+  <p class="institute">Statistiska institutionen<br>Stockholms universitet</p>
 </section>
 
-<section class="slide level2">
+<section id="översikt" class="slide level2">
+<h2>Översikt</h2>
+<ul>
+<li><p>Motiverande exempel</p></li>
+<li><p>Något mer</p></li>
+<li><p>Något ännu mer</p></li>
+</ul>
+</section>
+<section id="riksbanken-och-styrräntan" class="slide level2">
+<h2>Riksbanken och styrräntan</h2>
+<ul>
+<li><p>Riksbankens mål är att hålla inflationen nära 2% per år.</p></li>
+<li><p>Standardfel och hypotestest måste korrigeras om laggar av <span class="math inline">\(y_t\)</span> fdfd ff</p></li>
+<li><p>Hur beror inflationen på räntan?</p></li>
+<li><p>Riksbankens mål är att hålla inflationen nära 2% per år.</p></li>
+</ul>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="figs/inflreposcatter.png" width="300"></p>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="figs/inflreposcatter.png" width="300"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<p><span class="math display">\[
+y_{t}=\alpha+{\color{orange} {\phi_{1}y_{t-1}}}+\varepsilon_{t}+{\color{blue} {\theta_{1}\varepsilon_{t-1}}}
+\]</span></p>
+</section>
+<section id="stuff" class="slide level2">
+<h2>Stuff</h2>
+
+<ul>
+<li>Green <sup>1</sup></li>
+<li>Brown</li>
+<li>Purple</li>
+</ul>
+<aside><div>
+<p>Some additional commentary of more peripheral interest.</p>
+</div><ol class="aside-footnotes"><li id="fn1"><p>A footnote</p></li></ol></aside></section>
+<section id="tabs" class="slide level2">
+<h2>Tabs</h2>
+<div class="panel-tabset">
+<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">Tab A</a></li><li><a href="#tabset-1-2">Tab B</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1">
+<p>Content for <code>Tab A</code></p>
+</div>
+<div id="tabset-1-2">
+<p>Content for <code>Tab B</code></p>
+</div>
+</div>
+</div>
 
 
-<div class="footer footer-default">
-
+<img src="../misc/SU_logotyp_Liggande_1000px.png" class="slide-logo r-stretch"><div class="footer footer-default">
+<p>Statistik och dataanalys I &nbsp; &nbsp; · &nbsp; &nbsp; Dataanalys, 7.5 hp</p>
 </div>
 </section>
+
     </div>
   </div>
 
@@ -387,7 +451,7 @@
         progress: true,
 
         // Display the page number of the current slide
-        slideNumber: false,
+        slideNumber: 'c/t',
 
         // 'all', 'print', or 'speaker'
         showSlideNumber: 'all',
@@ -495,7 +559,7 @@
         transition: 'none',
 
         // Transition speed (default/fast/slow)
-        transitionSpeed: 'default',
+        transitionSpeed: 'slow',
 
         // Transition style for full page slide backgrounds
         // (none/fade/slide/convex/concave/zoom)

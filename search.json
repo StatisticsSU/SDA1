@@ -189,6 +189,34 @@
     "text": "7. Going fancy - interactivity\nQuarto documents have the basic interactivity that one can change code inside a code chunk, render the document and everything in the document changes according to the changes in the code.\n\nBut it also possible to make the final html interactive. Below is an an example to wet your appetite. Note however that you need to view the html file in an external web browser and not using the Viewer inside RStudio. Try moving around the slides to change the plot.\n\ndata = FileAttachment(\"palmer-penguins.csv\").csv({ typed: true })\n\n\n\n\n\n\n\nviewof bill_length_min = Inputs.range(\n  [32, 50], \n  {value: 35, step: 1, label: \"Bill length (min):\"}\n)\nviewof islands = Inputs.checkbox(\n  [\"Torgersen\", \"Biscoe\", \"Dream\"], \n  { value: [\"Torgersen\", \"Biscoe\"], \n    label: \"Islands:\"\n  }\n)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nfiltered = data.filter(function(penguin) {\n  return bill_length_min < penguin.bill_length_mm &&\n         islands.includes(penguin.island);\n})\n\n\n\n\n\n\n\nPlotData\n\n\n\nPlot.rectY(filtered, \n  Plot.binX(\n    {y: \"count\"}, \n    {x: \"body_mass_g\", fill: \"species\", thresholds: 20}\n  ))\n  .plot({\n    facet: {\n      data: filtered,\n      x: \"sex\",\n      y: \"species\",\n      marginRight: 80\n    },\n    marks: [\n      Plot.frame(),\n    ]\n  }\n)\n\n\n\n\n\n\n\n\n\nInputs.table(filtered)"
   },
   {
+    "objectID": "slides/SDA1_L1.html#översikt",
+    "href": "slides/SDA1_L1.html#översikt",
+    "title": "Statistik och dataanalys I",
+    "section": "Översikt",
+    "text": "Översikt\n\nMotiverande exempel\nNågot mer\nNågot ännu mer"
+  },
+  {
+    "objectID": "slides/SDA1_L1.html#riksbanken-och-styrräntan",
+    "href": "slides/SDA1_L1.html#riksbanken-och-styrräntan",
+    "title": "Statistik och dataanalys I",
+    "section": "Riksbanken och styrräntan",
+    "text": "Riksbanken och styrräntan\n\nRiksbankens mål är att hålla inflationen nära 2% per år.\nStandardfel och hypotestest måste korrigeras om laggar av \\(y_t\\) fdfd ff\nHur beror inflationen på räntan?\nRiksbankens mål är att hålla inflationen nära 2% per år.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\\[\ny_{t}=\\alpha+{\\color{orange} {\\phi_{1}y_{t-1}}}+\\varepsilon_{t}+{\\color{blue} {\\theta_{1}\\varepsilon_{t-1}}}\n\\]"
+  },
+  {
+    "objectID": "slides/SDA1_L1.html#stuff",
+    "href": "slides/SDA1_L1.html#stuff",
+    "title": "Statistik och dataanalys I",
+    "section": "Stuff",
+    "text": "Stuff\n\n\nGreen 1\nBrown\nPurple\n\n\nSome additional commentary of more peripheral interest.\nA footnote"
+  },
+  {
+    "objectID": "slides/SDA1_L1.html#tabs",
+    "href": "slides/SDA1_L1.html#tabs",
+    "title": "Statistik och dataanalys I",
+    "section": "Tabs",
+    "text": "Tabs\n\nTab ATab B\n\n\nContent for Tab A\n\n\nContent for Tab B\n\n\n\n\n\n\nStatistik och dataanalys I     ·     Dataanalys, 7.5 hp"
+  },
+  {
     "objectID": "assignments/Inlamningsuppgift1.html",
     "href": "assignments/Inlamningsuppgift1.html",
     "title": "Statistik och dataanalys I, 15 hp",
@@ -214,14 +242,35 @@
     "href": "R.html",
     "title": "R",
     "section": "",
-    "text": "Guider:"
+    "text": "Kursen använder det mycket populära statistiska programmeringsspråket R. Programmet är helt gratis och kan laddas ner på alla datorer."
   },
   {
-    "objectID": "R.html#det-statistiska-programmeringsspråket-r",
-    "href": "R.html#det-statistiska-programmeringsspråket-r",
+    "objectID": "R.html#rstudio",
+    "href": "R.html#rstudio",
     "title": "R",
-    "section": "Det statistiska programmeringsspråket R",
-    "text": "Det statistiska programmeringsspråket R\nKursen använder det mycket populära statistiska programmeringsspråket R. Programmet är helt gratis och kan laddas ner på alla datorer. Du kan ladda ner R här.\nR är lättast att jobba i från programmet RStudio. RStudio är en slags arbetsmiljö byggd kring R. RStudio är gratis och kan ladda ner här. Det finns en massa bra videos och tutorials för R och RStudio. Här är t ex en kort video som ge en rundtur i RStudio.\nKursen har ett eget R paket med några hjälpfunktioner som används på kursen. För att kunna använda paketet behöver du installera det:\n# För att installera kurspaketet sdakurs\ninstall.packages(\"remotes\") # görs bara en gång på din dator\nlibrary(remotes)  \ninstall_github(\"StatisticsSU/sdakurs\") # görs bara en gång på din dator\nlibrary(sdakurs)\n\n# För att installera kursens datamaterial\ninstall_github(\"StatisticsSU/SUdatasets\") # görs bara en gång på din dator\nlibrary(SUdatasets)\n\n# För en lista med alla funktioner i paketet regkurs\nhelp(, \"regkurs\")\n\n# För information om ett specifikt datamaterial eller funktion i kurspaketet\n?namnet_på_datamaterialet\n?namnet_på_funktionen"
+    "section": "RStudio",
+    "text": "RStudio\nR är lättast att jobba i från programmet RStudio. RStudio är en slags arbetsmiljö byggd kring R. Även RStudio är gratis."
+  },
+  {
+    "objectID": "R.html#ladda-ner-r-och-rstudio",
+    "href": "R.html#ladda-ner-r-och-rstudio",
+    "title": "R",
+    "section": "Ladda ner R och RStudio",
+    "text": "Ladda ner R och RStudio\nDu måste först installera R och sen RStudio:\n\nR kan laddas ner här.\nRStudio kan laddas ner här."
+  },
+  {
+    "objectID": "R.html#guidertutorials",
+    "href": "R.html#guidertutorials",
+    "title": "R",
+    "section": "Guider/Tutorials",
+    "text": "Guider/Tutorials\n\nHur man laddar ner och installerar R och RStudio: video\nEn snabbt tur i RStudio: video\nQuarto för att skriva kompletta rapporter med kod: html | pdf | video"
+  },
+  {
+    "objectID": "R.html#kursens-r-paket",
+    "href": "R.html#kursens-r-paket",
+    "title": "R",
+    "section": "Kursens R-paket",
+    "text": "Kursens R-paket\nKursen har ett eget R-paket sdakurs med några hjälpfunktioner som används på kursen.\n\nInstallera kurspaketet sdakurs\n\ninstall.packages(\"remotes\") \nlibrary(remotes)  \ninstall_github(\"StatisticsSU/sdakurs\")\nlibrary(sdakurs)\n\n\n\nInstallera kursens datamaterial\n\ninstall_github(\"StatisticsSU/SUdatasets\")\nlibrary(SUdatasets)"
   },
   {
     "objectID": "DelB.html",
