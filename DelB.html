@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>SDA1 - Del B - Sannolikheter och statistisk inferens</title>
+<title>SDA1 - Sannolikhetsmodeller och Statistisk inferens</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -35,10 +35,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -71,7 +71,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
     <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./misc/LogoBlueJustRing.jpg" alt="" class="navbar-logo">
+    <img src="./misc/SU_logotyp_Staende_800px.png" alt="" class="navbar-logo">
     </a>
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">SDA1</span>
@@ -86,10 +86,10 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="./index.html">Översikt</a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./DelA.html">Del A - Introduktion till dataanalys</a>
+    <a class="nav-link" href="./DelA.html">Introduktion till dataanalys</a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./DelB.html" aria-current="page">Del B - Statistisk inferens</a>
+    <a class="nav-link active" href="./DelB.html" aria-current="page">Sannolikhetsmodeller och Statistisk inferens</a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./R.html">R</a>
@@ -120,7 +120,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Del B - Sannolikheter och statistisk inferens</h1>
+<h1 class="title">Sannolikhetsmodeller och Statistisk inferens</h1>
 </div>
 
 
@@ -134,6 +134,9 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<blockquote class="blockquote">
+<p>I kursens andra momentet behandlas sannolikheter, slumpvariabler och sannolikhetsfördelningar. En central del i momentet är inferens, dvs. statistiska metoder för att dra slutsatser om olika fenomen från data. Kursen avslutas med en introduktion till beslutsfattade under osäkerhet.</p>
+</blockquote>
 <section id="föreläsningar" class="level3">
 <h3 class="anchored" data-anchor-id="föreläsningar"><strong>Föreläsningar</strong></h3>
 <p><strong>Föreläsning 12 - Sannolikheter och sannolikhetsmodeller.</strong><br>
@@ -165,38 +168,38 @@ Läs: <a href="./misc/larry.png">Slides</a></p>
 </section>
 <section id="övningar" class="level3">
 <h3 class="anchored" data-anchor-id="övningar"><strong>Övningar</strong></h3>
-<p><strong>Övning 4 - Sannolikheter för händelser</strong><br>
-Uppgifter: SDM 1.1-1.6, osv</p>
-<p><strong>Övning 5 - Kombinatorik, Oberoende händelser</strong><br>
-Uppgifter: SDM 1.1-1.6, osv</p>
-<p><strong>Övning 6 - Betingning och Bayes sats</strong><br>
-Uppgifter: SDM 1.1-1.6, osv</p>
-<p><strong>Övning 7</strong><br>
-Uppgifter: SDM 1.1-1.6, osv</p>
-<p><strong>Övning 8</strong><br>
-Uppgifter: SDM 1.1-1.6, osv</p>
-<p><strong>Övning 9</strong><br>
-Uppgifter: SDM 1.1-1.6, osv</p>
-<p><strong>Övning 10</strong><br>
-Uppgifter: SDM 1.1-1.6, osv</p>
-<p><strong>Övning 11</strong><br>
-Uppgifter: SDM 1.1-1.6, osv</p>
-<p><strong>Övning 12</strong><br>
-Uppgifter: SDM 1.1-1.6, osv</p>
-<p><strong>Övning 13</strong><br>
-Uppgifter: SDM 1.1-1.6, osv</p>
-<p><strong>Övning 14</strong><br>
-Uppgifter: SDM 1.1-1.6, osv</p>
+<p><strong>Övning 7 - Sannolikheter för händelser. Kombinatorik.</strong><br>
+Uppgifter: SDM 12-13</p>
+<p><strong>Övning 8 - Oberoende händelser. Betingning och Bayes sats.</strong><br>
+Uppgifter: SDM 13</p>
+<p><strong>Övning 9 - Slumpvariabler, väntevärde och standardavvikelse.</strong><br>
+Uppgifter: SDM 14</p>
+<p><strong>Övning 10 - Diskreta sannolikhetsfördelningar.</strong><br>
+Uppgifter: SDM 15</p>
+<p><strong>Övning 12 - Kontinerliga sannolikhetsfördelningar.</strong><br>
+Uppgifter: SDM 15</p>
+<p><strong>Övning 13 - Samplingfördelningar och konfidensintervall för en andel.</strong><br>
+Uppgifter: SDM 16</p>
+<p><strong>Övning 14 - Konfidensintervall för ett väntevärde.</strong><br>
+Uppgifter: SDM 17</p>
+<p><strong>Övning 13 - Hypotestest.</strong><br>
+Uppgifter: SDM 18</p>
+<p><strong>Övning 14 - Hypotestest och p-värde.</strong><br>
+Uppgifter: SDM 18</p>
+<p><strong>Övning 13 - Jämföra grupper.</strong><br>
+Uppgifter: SDM 20-21.</p>
+<p><strong>Övning 14 - Inferens för regression.</strong><br>
+Uppgifter: SDM 23</p>
 </section>
 <section id="datorlaborationer" class="level3">
 <h3 class="anchored" data-anchor-id="datorlaborationer"><strong>Datorlaborationer</strong></h3>
 <p><strong>Datorlaboration 5 - Simulering från sannolikhetsfördelningar</strong><br>
 Uppgifter: <a href="./misc/larry.png">Datorlab 5</a></p>
-<p><strong>Datorlaboration 6 - Samplingfördelningar, standardfel och konfidensintervall</strong><br>
+<p><strong>Datorlaboration 6 - Samplingfördelningar, standardfel och centrala gränsvärdessatsen.</strong><br>
 Uppgifter: <a href="./misc/larry.png">Datorlab 6</a></p>
-<p><strong>Datorlaboration 7 - Multipel linjär regression</strong><br>
+<p><strong>Datorlaboration 7 - Konfidensintervall och hypotestest.</strong><br>
 Uppgifter: <a href="./misc/larry.png">Datorlab 7</a></p>
-<p><strong>Datorlaboration 8 - Multipel linjär regression, forts</strong><br>
+<p><strong>Datorlaboration 8 - Multipel linjär regression</strong><br>
 Uppgifter: <a href="./misc/larry.png">Datorlab 8</a></p>
 
 

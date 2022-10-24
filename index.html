@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>SDA1 - Statistisk dataanalys I, 15 hp</title>
+<title>SDA1 - Statistik och dataanalys I, 15 hp</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -35,10 +35,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -71,7 +71,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
     <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./misc/LogoBlueJustRing.jpg" alt="" class="navbar-logo">
+    <img src="./misc/SU_logotyp_Staende_800px.png" alt="" class="navbar-logo">
     </a>
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">SDA1</span>
@@ -86,10 +86,10 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link active" href="./index.html" aria-current="page">Översikt</a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./DelA.html">Del A - Introduktion till dataanalys</a>
+    <a class="nav-link" href="./DelA.html">Introduktion till dataanalys</a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./DelB.html">Del B - Statistisk inferens</a>
+    <a class="nav-link" href="./DelB.html">Sannolikhetsmodeller och Statistisk inferens</a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./R.html">R</a>
@@ -111,6 +111,7 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#kursens-innehåll" id="toc-kursens-innehåll" class="nav-link active" data-scroll-target="#kursens-innehåll">Kursens innehåll</a></li>
   <li><a href="#kurslitteratur" id="toc-kurslitteratur" class="nav-link" data-scroll-target="#kurslitteratur">Kurslitteratur</a></li>
+  <li><a href="#kursstruktur-och-schema" id="toc-kursstruktur-och-schema" class="nav-link" data-scroll-target="#kursstruktur-och-schema">Kursstruktur och schema</a></li>
   <li><a href="#lärare" id="toc-lärare" class="nav-link" data-scroll-target="#lärare">Lärare</a></li>
   <li><a href="#datamaterial" id="toc-datamaterial" class="nav-link" data-scroll-target="#datamaterial">Datamaterial</a></li>
   </ul>
@@ -121,7 +122,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Statistisk dataanalys I, 15 hp</h1>
+<h1 class="title">Statistik och dataanalys I, 15 hp</h1>
 </div>
 
 
@@ -138,11 +139,13 @@ ul.task-list li input[type="checkbox"] {
 <p><img src="./images/flashytimeseries.jpg" width="100%" class="center" alt="Flashy time series image"></p>
 <section id="kursens-innehåll" class="level3">
 <h3 class="anchored" data-anchor-id="kursens-innehåll">Kursens innehåll</h3>
-<p>Kursen ger …</p>
+<p>Data finns numera överallt i samhället. Kursen Statistik och dataanalys I ger dig grunderna för att förstå och använda data, både som samhällsmedborgare och som avancerad dataanalytiker.</p>
+<p>Kursen ger dig en översikt av metoder för statistisk dataanalys och dess många tillämpningar. En introduktion till dataanalys följs av praktisk datahantering i det populära statistiska programspråket R. Samband mellan variabler analyseras, och du tränas i hur statistiska modeller kan användas för att förutsäga nya data. Slutsatser från data är alltid osäkra och en viktig del av kursen är därför sannolikhetsberäkningar. Sannolikhetsteorin används sedan i de inferensmetoder som gör det möjligt att dra korrekta slutsatser från data och fatta optimala beslut under osäkerhet.</p>
+<p>Du lär dig att utföra dataanalyser i praktiken, bl a genom datorlaborationer och två inlämningsuppgifter, men kursen ger dig även en kritisk blick på statistik som gör att du kan ifrågasätta, tolka och söka ny information för att bättre svara på olika frågeställningar.</p>
 <p>Kursen består av två delar:</p>
 <ul>
-<li><a href="DelA.html">Introduktion till dataanalys, 7.5 hp</a></li>
-<li><a href="DelB.html">Statistisk inferens, 7.5 hp</a></li>
+<li><a href="DelA.html">Introduktion till dataanalys, 7.5 hp.</a> I det här momentet ingår insamling, bearbetning, visualisering och sammanfattning av data i programspråket R. En stor del av momentet behandlar sambands- och regressionsanalys som utmynnar i metoder för prediktion.</li>
+<li><a href="DelB.html">Sannolikhetsmodeller och statistik inferens, 7.5 hp.</a> I kursens andra momentet behandlas sannolikheter, slumpvariabler och sannolikhetsfördelningar. En central del i momentet är inferens, dvs. statistiska metoder för att dra slutsatser om olika fenomen från data. Kursen avslutas med en introduktion till beslutsfattade under osäkerhet.</li>
 </ul>
 </section>
 <section id="kurslitteratur" class="level3">
@@ -151,15 +154,34 @@ ul.task-list li input[type="checkbox"] {
 <li>De Veaux, R., Velleman, P. och Bock, D. (2021). <a href="https://media.pearsoncmg.com/intl/ge/2021/cws/ge_deveaux_stats_5/statdm5d_cw.html">Stats: Data and Models</a>, Pearson Global Edition, Studentlitteratur. Boken förkortas <strong>SDM</strong> nedan.</li>
 <li>Ytterligare kompletterande material som delas ut under kursens gång.</li>
 </ul>
-<p>Kursens schema på TimeEdit: <a href="">Schedule</a>.</p>
+</section>
+<section id="kursstruktur-och-schema" class="level3">
+<h3 class="anchored" data-anchor-id="kursstruktur-och-schema">Kursstruktur och schema</h3>
+<p>Kursen består av föreläsningar, räkneövningar och datorlaborationer.<br>
+Kursens schema finns på <a href="">TimeEdit</a>.</p>
 </section>
 <section id="lärare" class="level3">
 <h3 class="anchored" data-anchor-id="lärare">Lärare</h3>
-<p><img src="./misc/VillaniLowRes.jpg" width="70"><br>
-<a href="https://mattiasvillani.com">Mattias Villani</a><br>Professor</p>
-<p><img src="./misc/QuirozPhoto.jpg" width="70"><br>
-<a href="https://matiasquiroz.com">Matias Quiroz</a><br>Universitetslektor</p>
-<hr>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 25.0%;justify-content: center;">
+<p><img src="./misc/VillaniLowRes.jpg" width="35%"><br>
+<a href="https://mattiasvillani.com">Mattias Villani</a><br>Kursansvarig och föreläsare<br>Professor</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 25.0%;justify-content: center;">
+<p><img src="./misc/QuirozPhoto.jpg" width="40%"><br>
+<a href="https://matiasquiroz.com">Matias Quiroz</a><br>Föreläsare<br>Universitetslektor</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 25.0%;justify-content: center;">
+<p><img src="./misc/larry.png" width="30%"><br>
+<a href="https://matiasquiroz.com">TBD</a><br>Övningslärare<br>Masterexamen i Statistik</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 25.0%;justify-content: center;">
+<p><img src="./misc/larry.png" width="30%"><br>
+<a href="https://matiasquiroz.com">TBD</a><br>Övningslärare<br>Kandidatexamen i Statistik</p>
+</div>
+</div>
+</div>
 </section>
 <section id="datamaterial" class="level2">
 <h2 class="anchored" data-anchor-id="datamaterial">Datamaterial</h2>

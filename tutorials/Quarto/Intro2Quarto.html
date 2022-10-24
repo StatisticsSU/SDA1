@@ -99,10 +99,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -138,7 +138,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
     <a href="../../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../../misc/LogoBlueJustRing.jpg" alt="" class="navbar-logo">
+    <img src="../../misc/SU_logotyp_Staende_800px.png" alt="" class="navbar-logo">
     </a>
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">SDA1</span>
@@ -153,10 +153,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <a class="nav-link" href="../../index.html">Översikt</a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../DelA.html">Del A - Introduktion till dataanalys</a>
+    <a class="nav-link" href="../../DelA.html">Introduktion till dataanalys</a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../DelB.html">Del B - Statistisk inferens</a>
+    <a class="nav-link" href="../../DelB.html">Sannolikhetsmodeller och Statistisk inferens</a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../R.html">R</a>
@@ -177,7 +177,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
    
   <ul>
   <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">1. Introduction</a></li>
-  <li><a href="#setting-for-the-document---the-yaml" id="toc-setting-for-the-document---the-yaml" class="nav-link" data-scroll-target="#setting-for-the-document---the-yaml">2. Setting for the document - the YAML</a></li>
+  <li><a href="#settings-for-the-document---the-yaml" id="toc-settings-for-the-document---the-yaml" class="nav-link" data-scroll-target="#settings-for-the-document---the-yaml">2. Settings for the document - the YAML</a></li>
   <li><a href="#writing-formatted-text-using-markdown" id="toc-writing-formatted-text-using-markdown" class="nav-link" data-scroll-target="#writing-formatted-text-using-markdown">3. Writing formatted text using markdown</a></li>
   <li><a href="#writing-code" id="toc-writing-code" class="nav-link" data-scroll-target="#writing-code">4. Writing code</a></li>
   <li><a href="#writing-mathematical-formulas" id="toc-writing-mathematical-formulas" class="nav-link" data-scroll-target="#writing-mathematical-formulas">5. Writing mathematical formulas</a></li>
@@ -213,11 +213,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">1. Introduction</h2>
-<p>Quarto is a way to integrated text (markdown), computer code, figures, tables and mathematical formulas in one document.<br>
+<p>Quarto is a way to integrate text (markdown), computer code, figures, tables and mathematical formulas in one document.<br>
 Quarto documents (with file ending .qmd) can easily be turned into pdf format, html, website, blogs and presentations.</p>
 </section>
-<section id="setting-for-the-document---the-yaml" class="level2">
-<h2 class="anchored" data-anchor-id="setting-for-the-document---the-yaml">2. Setting for the document - the YAML</h2>
+<section id="settings-for-the-document---the-yaml" class="level2">
+<h2 class="anchored" data-anchor-id="settings-for-the-document---the-yaml">2. Settings for the document - the YAML</h2>
 <p>At the top of a quarto document is the so called YAML, which tells the Quarto engine how the document should be formatted. This is the YAML for this document:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -233,20 +233,20 @@ Quarto documents (with file ending .qmd) can easily be turned into pdf format, h
 </section>
 <section id="writing-formatted-text-using-markdown" class="level2">
 <h2 class="anchored" data-anchor-id="writing-formatted-text-using-markdown">3. Writing formatted text using markdown</h2>
-<p>The text written in a Quarto document can be formatted using the markdown language. Markdown is a very simple language for formatting text. For example, I can easily make the text <strong>bold</strong> by writing <code>**bold**</code> or <em>italic</em> using a single * on each side of the text.</p>
+<p>The text written in a Quarto document can be formatted using the <strong>markdown</strong> language. Markdown is a very simple language for formatting text. For example, I can easily make the text <strong>bold</strong> by writing <code>**bold**</code> or <em>italic</em> using a single * on each side of the text. A bulleted list:</p>
 <ul>
 <li><p>bullet</p></li>
 <li><p>list</p></li>
 <li><p>are also</p></li>
 <li><p>easy</p></li>
 </ul>
-<p>just put a <code>-</code> and space before each bullet point. Numbered lists are also simple, just place numbers and a dot (.) before each list item. Like this:</p>
+<p>is produced by putting a dash <code>-</code> and space before each bullet point. Numbered lists are also simple, just place numbers and a dot (.) before each list item. Like this:</p>
 <ol type="1">
 <li>This is the first point</li>
 <li>and this is second</li>
 <li>and so on.</li>
 </ol>
-<p>Images can be inserted real easy by typing <code>![sceptic larry](/misc/larry.png){width="100"}</code> which would give the picture below.</p>
+<p>Images can be inserted by typing <code>![sceptic larry](/misc/larry.png){width="100"}</code> which would give the picture below. So the text caption for the image is written between the brackets [] and the search path to the image on your computer is given inside the parentheses ().</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="../../misc/larry.png" class="img-fluid figure-img" width="100"></p>
@@ -287,22 +287,37 @@ Quarto documents (with file ending .qmd) can easily be turned into pdf format, h
 </tr>
 </tbody>
 </table>
-<p>What if you want the table caption text to be above the tables, not below it like above? No sweat, just put <code>table-cap-location: top</code> in your YAML at the top of the document.</p>
+<p>What if you want the table caption text to be below the tables, not below it? No sweat, just put <code>table-cap-location: bottom</code> in your YAML at the top of the document.</p>
 </section>
 <section id="writing-code" class="level2">
 <h2 class="anchored" data-anchor-id="writing-code">4. Writing code</h2>
-<p>Quarto document can have executable code in them. It supports several programming languages, most notably: R, Python and Julia. You just need to add a <strong>code chunk</strong>. A code chunk starts and ends with three so called backticks `. This is a chunk of R code:</p>
+<p>A Quarto document can have executable code in them. It supports several programming languages, most notably: R, Python and Julia. You just need to add a <strong>code chunk</strong>. A code chunk starts and ends with three so called backticks `. The backtick is typed by <code>Shift</code> and the key to the left of <code>Backspace</code> on a Swedish keyboard. This is a chunk of R code:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="codechunk.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
-<p>Note the little green Play-button. By pressing that we can run the code. After running the code in the Quarto-dokument, the variables (in this case a vector <code>x</code>) will be available in the console, just like for any R code. Here is the end result of that code chunk:</p>
+<p>Note the little green Play-button. By pressing that we can run the code chunk. After running the code in the Quarto-document, the variables (in this case a vector <code>x</code>) will be available in the console, just like for any R code. Here is the end result of that code chunk:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">=</span> <span class="fu">rnorm</span>(<span class="dv">100</span>)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(x, <span class="at">type =</span> <span class="st">"l"</span>, <span class="at">xlab =</span> <span class="st">"time"</span>, <span class="at">main =</span> <span class="st">"time series plot"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img src="Intro2Quarto_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Quarto supports other popular programming languages in addtion to <img src="../../misc/R.jpeg" class="img-fluid" width="20">.</p>
+<p>A chunk of Python <img src="../../misc/python.png" class="img-fluid" width="20"> code would start with <code>```{python}</code>.</p>
+<p>A Julia <img src="../../misc/julia.png" width="20" height="19"> code chunk starts with <code>```{julia}</code>. <img src="../../misc/hearteyes.png" class="img-fluid" width="20"></p>
 </div>
 </div>
 <p>What if I want to use the code to produce the plot, but not show the code in my report? Easy, I would just add some YAML information at the beginning of the code chunk itself. YAML inside of a code chunk must begin with the two characters <code>#|</code> . Here is how you hide the code:</p>
@@ -324,14 +339,15 @@ Quarto documents (with file ending .qmd) can easily be turned into pdf format, h
 <p><img src="quarto_menu_bar.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
-<p>Clicking on the <code>Render</code> button will render the document to html (default) or pdf (if you choose that in the YAML). Pressing the <code>Run</code> button will re-run all the code chunks in the document. You can write your Quarto document as markdown code if you click the <code>Source</code> -button in the extreme left. If you press the <code>Visual</code>-button you will see the document in a similar way to word processors like Word. You can then insert images and table, change font sizes etc by clicking on the menu. I tend to go spend most time in Visual mode, but will often go over to Source mode when I want absolute control of what I do.´</p>
+<p>Clicking on the <code>Render</code> button will render the document to html (default) or pdf (if you choose that in the YAML). Pressing the <code>Run</code> button will re-run all the code chunks in the document. You can write your Quarto document as markdown code if you click the <code>Source</code> -button in the extreme left. If you press the <code>Visual</code>-button you will see the document in a similar way to word processors like Word. You can then insert images and table, change font sizes etc by clicking on the menu. I tend to spend most time in Visual mode, but will often go over to Source mode when I want absolute control of what I do.</p>
 </section>
 <section id="going-fancy---interactivity" class="level2">
 <h2 class="anchored" data-anchor-id="going-fancy---interactivity">7. Going fancy - interactivity</h2>
-<p>Quarto documents have the basic interactivity that one can change code inside a code chunk, render the document and everything in the document changes according to the changes in the code.<br>
-But it also possible to make the final html interactive. Below is an an example to wet your appetite. Try moving around the slides to change the plot. Note that you need to view the html file in an external web browser and not using the Viewer inside RStudio.</p>
+<p>Quarto documents have the basic interactivity that one can change code inside a code chunk, render the document and everything in the document changes according to the changes in the code.</p>
+<p><br>
+But it also possible to make the final html interactive. Below is an an example to wet your appetite. Note however that you need to view the html file in an external web browser and not using the Viewer inside RStudio. Try moving around the slides to change the plot.</p>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb2" data-startfrom="112" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 111;"><span id="cb2-112"><a href="#cb2-112" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> <span class="fu">FileAttachment</span>(<span class="st">"palmer-penguins.csv"</span>)<span class="op">.</span><span class="fu">csv</span>({ <span class="dt">typed</span><span class="op">:</span> <span class="kw">true</span> })</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code hidden" id="cb2" data-startfrom="122" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 121;"><span id="cb2-122"><a href="#cb2-122" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> <span class="fu">FileAttachment</span>(<span class="st">"palmer-penguins.csv"</span>)<span class="op">.</span><span class="fu">csv</span>({ <span class="dt">typed</span><span class="op">:</span> <span class="kw">true</span> })</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-1" data-nodetype="declaration">
 
@@ -339,16 +355,16 @@ But it also possible to make the final html interactive. Below is an an example 
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb3" data-startfrom="118" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 117;"><span id="cb3-118"><a href="#cb3-118" aria-hidden="true" tabindex="-1"></a>viewof bill_length_min <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>(</span>
-<span id="cb3-119"><a href="#cb3-119" aria-hidden="true" tabindex="-1"></a>  [<span class="dv">32</span><span class="op">,</span> <span class="dv">50</span>]<span class="op">,</span> </span>
-<span id="cb3-120"><a href="#cb3-120" aria-hidden="true" tabindex="-1"></a>  {<span class="dt">value</span><span class="op">:</span> <span class="dv">35</span><span class="op">,</span> <span class="dt">step</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"Bill length (min):"</span>}</span>
-<span id="cb3-121"><a href="#cb3-121" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb3-122"><a href="#cb3-122" aria-hidden="true" tabindex="-1"></a>viewof islands <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">checkbox</span>(</span>
-<span id="cb3-123"><a href="#cb3-123" aria-hidden="true" tabindex="-1"></a>  [<span class="st">"Torgersen"</span><span class="op">,</span> <span class="st">"Biscoe"</span><span class="op">,</span> <span class="st">"Dream"</span>]<span class="op">,</span> </span>
-<span id="cb3-124"><a href="#cb3-124" aria-hidden="true" tabindex="-1"></a>  { <span class="dt">value</span><span class="op">:</span> [<span class="st">"Torgersen"</span><span class="op">,</span> <span class="st">"Biscoe"</span>]<span class="op">,</span> </span>
-<span id="cb3-125"><a href="#cb3-125" aria-hidden="true" tabindex="-1"></a>    <span class="dt">label</span><span class="op">:</span> <span class="st">"Islands:"</span></span>
-<span id="cb3-126"><a href="#cb3-126" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb3-127"><a href="#cb3-127" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code hidden" id="cb3" data-startfrom="128" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 127;"><span id="cb3-128"><a href="#cb3-128" aria-hidden="true" tabindex="-1"></a>viewof bill_length_min <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>(</span>
+<span id="cb3-129"><a href="#cb3-129" aria-hidden="true" tabindex="-1"></a>  [<span class="dv">32</span><span class="op">,</span> <span class="dv">50</span>]<span class="op">,</span> </span>
+<span id="cb3-130"><a href="#cb3-130" aria-hidden="true" tabindex="-1"></a>  {<span class="dt">value</span><span class="op">:</span> <span class="dv">35</span><span class="op">,</span> <span class="dt">step</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"Bill length (min):"</span>}</span>
+<span id="cb3-131"><a href="#cb3-131" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb3-132"><a href="#cb3-132" aria-hidden="true" tabindex="-1"></a>viewof islands <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">checkbox</span>(</span>
+<span id="cb3-133"><a href="#cb3-133" aria-hidden="true" tabindex="-1"></a>  [<span class="st">"Torgersen"</span><span class="op">,</span> <span class="st">"Biscoe"</span><span class="op">,</span> <span class="st">"Dream"</span>]<span class="op">,</span> </span>
+<span id="cb3-134"><a href="#cb3-134" aria-hidden="true" tabindex="-1"></a>  { <span class="dt">value</span><span class="op">:</span> [<span class="st">"Torgersen"</span><span class="op">,</span> <span class="st">"Biscoe"</span>]<span class="op">,</span> </span>
+<span id="cb3-135"><a href="#cb3-135" aria-hidden="true" tabindex="-1"></a>    <span class="dt">label</span><span class="op">:</span> <span class="st">"Islands:"</span></span>
+<span id="cb3-136"><a href="#cb3-136" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb3-137"><a href="#cb3-137" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <div id="ojs-cell-2-1" data-nodetype="declaration">
@@ -365,10 +381,10 @@ But it also possible to make the final html interactive. Below is an an example 
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb4" data-startfrom="131" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 130;"><span id="cb4-131"><a href="#cb4-131" aria-hidden="true" tabindex="-1"></a>filtered <span class="op">=</span> data<span class="op">.</span><span class="fu">filter</span>(<span class="kw">function</span>(penguin) {</span>
-<span id="cb4-132"><a href="#cb4-132" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> bill_length_min <span class="op">&lt;</span> penguin<span class="op">.</span><span class="at">bill_length_mm</span> <span class="op">&amp;&amp;</span></span>
-<span id="cb4-133"><a href="#cb4-133" aria-hidden="true" tabindex="-1"></a>         islands<span class="op">.</span><span class="fu">includes</span>(penguin<span class="op">.</span><span class="at">island</span>)<span class="op">;</span></span>
-<span id="cb4-134"><a href="#cb4-134" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code hidden" id="cb4" data-startfrom="141" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 140;"><span id="cb4-141"><a href="#cb4-141" aria-hidden="true" tabindex="-1"></a>filtered <span class="op">=</span> data<span class="op">.</span><span class="fu">filter</span>(<span class="kw">function</span>(penguin) {</span>
+<span id="cb4-142"><a href="#cb4-142" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> bill_length_min <span class="op">&lt;</span> penguin<span class="op">.</span><span class="at">bill_length_mm</span> <span class="op">&amp;&amp;</span></span>
+<span id="cb4-143"><a href="#cb4-143" aria-hidden="true" tabindex="-1"></a>         islands<span class="op">.</span><span class="fu">includes</span>(penguin<span class="op">.</span><span class="at">island</span>)<span class="op">;</span></span>
+<span id="cb4-144"><a href="#cb4-144" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-3" data-nodetype="declaration">
 
@@ -380,23 +396,23 @@ But it also possible to make the final html interactive. Below is an an example 
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb5" data-startfrom="142" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 141;"><span id="cb5-142"><a href="#cb5-142" aria-hidden="true" tabindex="-1"></a>Plot<span class="op">.</span><span class="fu">rectY</span>(filtered<span class="op">,</span> </span>
-<span id="cb5-143"><a href="#cb5-143" aria-hidden="true" tabindex="-1"></a>  Plot<span class="op">.</span><span class="fu">binX</span>(</span>
-<span id="cb5-144"><a href="#cb5-144" aria-hidden="true" tabindex="-1"></a>    {<span class="dt">y</span><span class="op">:</span> <span class="st">"count"</span>}<span class="op">,</span> </span>
-<span id="cb5-145"><a href="#cb5-145" aria-hidden="true" tabindex="-1"></a>    {<span class="dt">x</span><span class="op">:</span> <span class="st">"body_mass_g"</span><span class="op">,</span> <span class="dt">fill</span><span class="op">:</span> <span class="st">"species"</span><span class="op">,</span> <span class="dt">thresholds</span><span class="op">:</span> <span class="dv">20</span>}</span>
-<span id="cb5-146"><a href="#cb5-146" aria-hidden="true" tabindex="-1"></a>  ))</span>
-<span id="cb5-147"><a href="#cb5-147" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">plot</span>({</span>
-<span id="cb5-148"><a href="#cb5-148" aria-hidden="true" tabindex="-1"></a>    <span class="dt">facet</span><span class="op">:</span> {</span>
-<span id="cb5-149"><a href="#cb5-149" aria-hidden="true" tabindex="-1"></a>      <span class="dt">data</span><span class="op">:</span> filtered<span class="op">,</span></span>
-<span id="cb5-150"><a href="#cb5-150" aria-hidden="true" tabindex="-1"></a>      <span class="dt">x</span><span class="op">:</span> <span class="st">"sex"</span><span class="op">,</span></span>
-<span id="cb5-151"><a href="#cb5-151" aria-hidden="true" tabindex="-1"></a>      <span class="dt">y</span><span class="op">:</span> <span class="st">"species"</span><span class="op">,</span></span>
-<span id="cb5-152"><a href="#cb5-152" aria-hidden="true" tabindex="-1"></a>      <span class="dt">marginRight</span><span class="op">:</span> <span class="dv">80</span></span>
-<span id="cb5-153"><a href="#cb5-153" aria-hidden="true" tabindex="-1"></a>    }<span class="op">,</span></span>
-<span id="cb5-154"><a href="#cb5-154" aria-hidden="true" tabindex="-1"></a>    <span class="dt">marks</span><span class="op">:</span> [</span>
-<span id="cb5-155"><a href="#cb5-155" aria-hidden="true" tabindex="-1"></a>      Plot<span class="op">.</span><span class="fu">frame</span>()<span class="op">,</span></span>
-<span id="cb5-156"><a href="#cb5-156" aria-hidden="true" tabindex="-1"></a>    ]</span>
-<span id="cb5-157"><a href="#cb5-157" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb5-158"><a href="#cb5-158" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code hidden" id="cb5" data-startfrom="152" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 151;"><span id="cb5-152"><a href="#cb5-152" aria-hidden="true" tabindex="-1"></a>Plot<span class="op">.</span><span class="fu">rectY</span>(filtered<span class="op">,</span> </span>
+<span id="cb5-153"><a href="#cb5-153" aria-hidden="true" tabindex="-1"></a>  Plot<span class="op">.</span><span class="fu">binX</span>(</span>
+<span id="cb5-154"><a href="#cb5-154" aria-hidden="true" tabindex="-1"></a>    {<span class="dt">y</span><span class="op">:</span> <span class="st">"count"</span>}<span class="op">,</span> </span>
+<span id="cb5-155"><a href="#cb5-155" aria-hidden="true" tabindex="-1"></a>    {<span class="dt">x</span><span class="op">:</span> <span class="st">"body_mass_g"</span><span class="op">,</span> <span class="dt">fill</span><span class="op">:</span> <span class="st">"species"</span><span class="op">,</span> <span class="dt">thresholds</span><span class="op">:</span> <span class="dv">20</span>}</span>
+<span id="cb5-156"><a href="#cb5-156" aria-hidden="true" tabindex="-1"></a>  ))</span>
+<span id="cb5-157"><a href="#cb5-157" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">plot</span>({</span>
+<span id="cb5-158"><a href="#cb5-158" aria-hidden="true" tabindex="-1"></a>    <span class="dt">facet</span><span class="op">:</span> {</span>
+<span id="cb5-159"><a href="#cb5-159" aria-hidden="true" tabindex="-1"></a>      <span class="dt">data</span><span class="op">:</span> filtered<span class="op">,</span></span>
+<span id="cb5-160"><a href="#cb5-160" aria-hidden="true" tabindex="-1"></a>      <span class="dt">x</span><span class="op">:</span> <span class="st">"sex"</span><span class="op">,</span></span>
+<span id="cb5-161"><a href="#cb5-161" aria-hidden="true" tabindex="-1"></a>      <span class="dt">y</span><span class="op">:</span> <span class="st">"species"</span><span class="op">,</span></span>
+<span id="cb5-162"><a href="#cb5-162" aria-hidden="true" tabindex="-1"></a>      <span class="dt">marginRight</span><span class="op">:</span> <span class="dv">80</span></span>
+<span id="cb5-163"><a href="#cb5-163" aria-hidden="true" tabindex="-1"></a>    }<span class="op">,</span></span>
+<span id="cb5-164"><a href="#cb5-164" aria-hidden="true" tabindex="-1"></a>    <span class="dt">marks</span><span class="op">:</span> [</span>
+<span id="cb5-165"><a href="#cb5-165" aria-hidden="true" tabindex="-1"></a>      Plot<span class="op">.</span><span class="fu">frame</span>()<span class="op">,</span></span>
+<span id="cb5-166"><a href="#cb5-166" aria-hidden="true" tabindex="-1"></a>    ]</span>
+<span id="cb5-167"><a href="#cb5-167" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb5-168"><a href="#cb5-168" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-4" data-nodetype="expression">
 
@@ -406,7 +422,7 @@ But it also possible to make the final html interactive. Below is an an example 
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb6" data-startfrom="165" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 164;"><span id="cb6-165"><a href="#cb6-165" aria-hidden="true" tabindex="-1"></a>Inputs<span class="op">.</span><span class="fu">table</span>(filtered)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code hidden" id="cb6" data-startfrom="175" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 174;"><span id="cb6-175"><a href="#cb6-175" aria-hidden="true" tabindex="-1"></a>Inputs<span class="op">.</span><span class="fu">table</span>(filtered)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-5" data-nodetype="expression">
 
