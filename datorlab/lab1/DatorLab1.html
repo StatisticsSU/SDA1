@@ -343,7 +343,7 @@ Se upp!
 </section>
 <section id="organisera-dig-med-filmappar" class="level2">
 <h2 class="anchored" data-anchor-id="organisera-dig-med-filmappar">3. Organisera dig med filmappar</h2>
-<p>Det är viktigt att ha ordning på sina filer på datorn och kunna tala om för R var dina filer finns så R kan läsa dem. Vi rekommenderar att du skapar en mapp/folder för varje kurs du läser. Spara inte alla filer på datorn skrivbord eller i mappen <strong>Downloads</strong> eller liknande. Gå till filhanteringsprogrammet på din dator och skapa mappen <strong>SDA1</strong>. Så här:</p>
+<p>Det är viktigt att ha ordning på sina filer på datorn och kunna tala om för R var dina filer finns så R kan läsa dem. Vi rekommenderar att du skapar en mapp/folder för varje kurs du läser. Spara inte alla filer på datorns skrivbord eller i mappen <strong>Downloads</strong> eller liknande. Gå till filhanteringsprogrammet på din dator och skapa mappen <strong>SDA1</strong>. Så här:</p>
 <ul>
 <li><p><img src="windows.png" class="img-fluid" width="20"> Windows: Starta programmet <strong>File Explorer</strong> och klicka på mappen <strong>Documents</strong> (eller <strong>Dokument</strong> om du har svenska som språk). Skapa en ny mapp med namnet <strong>SDA1</strong>.</p></li>
 <li><p><img src="mac.png" class="img-fluid" width="20">Mac: Starta programmet <strong>Finder</strong> och klicka på mappen <strong>Documents</strong>. Skapa en ny mapp med namnet <strong>SDA1</strong>.</p></li>
@@ -361,7 +361,7 @@ Se upp!
 <p>Om vi klickar på menyn <u><strong>F</strong></u><strong>ile</strong> och sen under menyn <u><strong>N</strong></u><strong>ew File</strong> och slutligen på <u><strong>R</strong></u> <strong>Script</strong> så öppnas en tom textfil i <strong>Editorn</strong> som heter <em>Untitled1</em> eller något liknande. Här kan vi skriva in kommandon som vi vill spara för framtida sessioner. Vi kan t ex skriva in våra beräkningar av aktiesparandet:</p>
 <p><img src="kapitalsource.png" class="img-fluid"></p>
 <p>Vi kan spara filen genom att klicka på menyn <u><strong>F</strong></u><strong>ile</strong> och sen på <u><strong>S</strong></u><strong>ave</strong> och sen navigera dig till mappen <strong>SDA1</strong> genom att klicka i rutan som kommer upp. Döp filen till <strong>stock</strong> eller något annat namn som talar om vad filen innehåller (aktie heter stock på engelska). Klicka på Save/Spara. Filen kommer automatiskt att få filändelsen .R, dvs filen kommer alltså heta <strong>stock.R</strong> så RStudio vet att det är en fil men R kommandon. Ett samling kommandon kallas också för <strong>kod</strong> och vi säger att vi arbetar med en <strong>kodfil</strong> i editorn.</p>
-<p>Vi kan köra alla kommandon i filen stock.R genom att klicka <code>Source</code> - knappen uppe i högra hörnet av editorn:</p>
+<p>Vi kan köra alla kommandon i filen stock.R genom att klicka på <code>Source</code> - knappen uppe i högra hörnet av editorn:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="SourceButton.png" class="img-fluid figure-img" width="400"></p>
@@ -390,11 +390,12 @@ Se upp!
 </div>
 <p>Notera att:</p>
 <ul>
-<li><p>Vi använder engelska namn på kolumnerna. Svenska tecken åäö är bäst att undervika när man skriver kod. Det går att arbeta med åäö i kod, men det är lättast att undvika dem genom att skriva på engelska.</p></li>
+<li><p>Vi använder engelska namn på kolumnerna. Svenska tecken åäö är bäst att undervika när man skriver kod. Det går att arbeta med åäö i kod, men det är lättast att undvika dem genom att skriva på engelska. Du kan inte använda mellanslag (space) i variabelnamn. Ofta vill man ha ett variabelnamn som är lätt att förstå vad variabeln innehåller. Använd <code>_</code> (underscore) eller <code>.</code> (punkt) för att dela upp ord om det behövs. T ex <code>my_pretty_little_variable = 100</code>.</p></li>
 <li><p>Avkastningen (<strong>returns</strong>) anges i procent och är satt till noll under 2018 eftersom vi köpte aktierna precis i början av år 2019 (säger vi) och alltså inte fick någon avkastning under år 2018.<br>
 </p></li>
 </ul>
-<p>Excel-filen har jag döpt till stock.xlsx, men den kan döpas till precis vad som helst. Hur kan vi få R att läsa in data från filen stock.xlsx? Det finns två sätt, varav vi endast rekommenderar det första om man är absolut nybörjare. Rätt snart bör du lära dig att använda det andra sättet, som är smidigare i längden.</p>
+<p>Excel-filen har jag döpt till <em>stock.xlsx</em>, men den kan döpas till precis vad som helst.</p>
+<p>Om R ska kunna läsa in data från filen stock.xlsx så måste vi tala om var filen finns på vår dator. Enklast är då att ställa in Rs <strong>working directory</strong>, det standardställe där letar efter filer i den pågående sessionen. Det finns två sätt att göra detta, varav vi endast rekommenderar det första om man är absolut nybörjare. Rätt snart bör du lära dig att använda det andra sättet, som är smidigare i längden.</p>
 <ol type="1">
 <li>Spara/flytta filen stock.xlsx till din kurskatalog som du skapade i del 3 ovan, dvs mappen <strong>SDA1</strong> i <strong>Documents</strong>. <strong>Working directory</strong> är den mapp som R kommer leta efter filer i. Ändra din arbetsmapp (<strong>working directory</strong>) i R till samma mapp <strong>SDA1</strong> i <strong>Documents</strong> genom att välja menyn <u><strong>S</strong></u><strong>ession</strong> och sen <strong>Set <u>W</u>orking Directory</strong> och slutligen <u><strong>C</strong></u><strong>hoose Directory…</strong> och sedan klicka dig fram till mappen SDA1.</li>
 </ol>
