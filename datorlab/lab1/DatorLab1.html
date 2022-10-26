@@ -491,11 +491,11 @@ Prova nu att läsa in data med kommandot <code>stockdata = read.xlsx('stock.xlsx
 <h4 class="anchored" data-anchor-id="uppgift-6.3">💪 Uppgift 6.3</h4>
 <p>Spara den ändrade stockdata-tabellen till disk genom att skriva följande kommando i Console:</p>
 <div class="cell">
-
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">save</span>(stockdata, <span class="at">file=</span><span class="st">"stockdata2.Rdata"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>vilket sparar den ändrade <code>stockdata</code> tabellen till filen <code>stockdata2.Rdata</code> i din working directory (<strong>SDA1</strong>-mappen). Filformatet <code>Rdata</code> är R’s eget filformat. Du kan i en senare session läsa in stockdata enkelt genom kommandot</p>
 <div class="cell">
-
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">"stockdata2.Rdata"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>vilket kommer läsa in tabellen <code>stockdata</code> i R’s arbetsminne.</p>
 </section>
@@ -504,7 +504,7 @@ Prova nu att läsa in data med kommandot <code>stockdata = read.xlsx('stock.xlsx
 <h2 class="anchored" data-anchor-id="analysera-data">7. Analysera data</h2>
 <p>När du har läst in datamaterialet i minnet så är det dags att analysera det. Låt oss göra en enkel graf av variabeln <code>capital</code> över åren (<code>year</code>):</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(capital <span class="sc">~</span> year, <span class="at">data =</span> stockdata)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(capital <span class="sc">~</span> year, <span class="at">data =</span> stockdata)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img src="DatorLab1_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="672"></p>
 </div>
@@ -520,8 +520,8 @@ läses av R som</p>
 </blockquote>
 <p>Om vi vill beräkna medelvärdet på en variabel kan vi använda funktionen <code>mean()</code>. Men om vi vill beräkna medelvärdet av variabeln <code>capital</code> med kommandot <code>mean(capital)</code> så får vi problemet att R inte har en variabel <code>capital</code> i minnet; <code>capital</code> är ju bara en kolumn i datamaterialet <code>stockdata</code>. Hur säger vi till R: gör om kolumnen <code>capital</code> i datamaterialet <code>stockdata</code> till en egen variabel och beräkna dess medelvärde (mean på engelska). Lösningen att använda <code>$</code>-tecknet för att plocka ut kolumnen <code>returns</code> som en egen variabel: <code>stockdata$capital</code> och sen använda <code>mean()</code> funktionen. Vi kan göra detta på samma kodrad och skriva ut resultatet:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>meancapital <span class="ot">=</span> <span class="fu">mean</span>(stockdata<span class="sc">$</span>capital)</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>meancapital</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>meancapital <span class="ot">=</span> <span class="fu">mean</span>(stockdata<span class="sc">$</span>capital)</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>meancapital</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 113.6381</code></pre>
 </div>
@@ -532,7 +532,7 @@ läses av R som</p>
 </blockquote>
 <p>Genom att explicit plocka ut kolumner på detta sätt kan vi göra grafen med ett lite annorlunda kommando:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(stockdata<span class="sc">$</span>capital, stockdata<span class="sc">$</span>year)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(stockdata<span class="sc">$</span>capital, stockdata<span class="sc">$</span>year)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img src="DatorLab1_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="672"></p>
 </div>
@@ -543,11 +543,11 @@ läses av R som</p>
 <p>Läs återigen in data med <code>stockdata = read.xlsx('stock.xlsx', 1, header=TRUE)</code>. Gör en graf där du plottar variabeln <code>returns</code> mot <code>year</code>.</p>
 <p>Här är hela koden i ett stycke:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">'/home/mv/Dropbox/Teaching/SDA1/datorlab/lab1'</span>) <span class="co"># I have a Linux computer and my data is in this path</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(xlsx)                         </span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>stockdata <span class="ot">=</span> <span class="fu">read.xlsx</span>(<span class="st">'stock.xlsx'</span>, <span class="dv">1</span>, <span class="at">header=</span><span class="cn">TRUE</span>)</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>meancapital <span class="ot">=</span> <span class="fu">mean</span>(stockdata<span class="sc">$</span>capital)</span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(capital <span class="sc">~</span> year, <span class="at">data =</span> stockdata)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">'/home/mv/Dropbox/Teaching/SDA1/datorlab/lab1'</span>) <span class="co"># I have a Linux computer and my data is in this path</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(xlsx)                         </span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>stockdata <span class="ot">=</span> <span class="fu">read.xlsx</span>(<span class="st">'stock.xlsx'</span>, <span class="dv">1</span>, <span class="at">header=</span><span class="cn">TRUE</span>)</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>meancapital <span class="ot">=</span> <span class="fu">mean</span>(stockdata<span class="sc">$</span>capital)</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(capital <span class="sc">~</span> year, <span class="at">data =</span> stockdata)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img src="DatorLab1_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid" width="672"></p>
 </div>
@@ -571,18 +571,18 @@ läses av R som</p>
 <p>R kan spara data i olika <strong>datastrukturer</strong>. Vi definerade tidigare variabeln <code>kapital</code> och tilldela denna variabel värdet <code>100</code> genom kommandot <code>kapital = 100</code>.</p>
 <p>Ofta vill man spara mer än ett tal i samma datastruktur. Ett sätt är att skapa en <strong>vektor</strong> med kommandot <code>c()</code></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>capital_all_years <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">100</span>,<span class="dv">110</span>,<span class="fl">116.6</span>,<span class="fl">111.936</span>,<span class="fl">117.532</span>,<span class="fl">125.760</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>capital_all_years <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">100</span>,<span class="dv">110</span>,<span class="fl">116.6</span>,<span class="fl">111.936</span>,<span class="fl">117.532</span>,<span class="fl">125.760</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Den nya variabel <code>capital_all_years</code> innehåller alltså kapitalet för alla år. Men om jag skulle vilja ‘plocka ut’ kapitalets värde vid det tredje året? Då kan man indexera vektorn genom hakparenteser (brackets) <code>[]</code>, så här:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>capital_all_years[<span class="dv">3</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>capital_all_years[<span class="dv">3</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 116.6</code></pre>
 </div>
 </div>
 <p>Man kan också plocka ut flera värden samtidigt, t ex år 3 och 5, med kommandot</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>capital_all_years[<span class="fu">c</span>(<span class="dv">3</span>,<span class="dv">5</span>)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>capital_all_years[<span class="fu">c</span>(<span class="dv">3</span>,<span class="dv">5</span>)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 116.600 117.532</code></pre>
 </div>
@@ -590,7 +590,7 @@ läses av R som</p>
 <p>Notera att vi indexerade med en vektor, dvs vi använde <code>c()</code> kommandot eftersom vi vill tala om för R att plocka ut fler än ett värde.</p>
 <p>Vi har redan sett en av Rs viktigaste datatyper: en s k <strong>dataframe</strong>. En dataframe är en tabell med information om vad kolumnerna heter, och ibland även vad raderna heter. Ett exempel är vår <code>stockdata</code> som är dataframe med tre kolumner: year, capital och stock. Vi kan se att det är en dataframe genom att använda kommandot <code>class()</code>:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(stockdata)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(stockdata)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "data.frame"</code></pre>
 </div>
@@ -598,8 +598,8 @@ läses av R som</p>
 <p>Vi har faktiskt redan använt idéen med att plocka ut värden genom indexing in dataframes tidigare när vi skrev <code>stockdata[6,3]</code> för att plocka ut värdet på rad 6 och kolumn 3 i tabellen/dataframe. Och vi såg att vi också kunde ändra värdena i tabellen genom tilldelning: <code>stockdata[6,3]=0.05</code> . Samma sak kan man göra med en vektor, t ex så gör kommandot <code>capital_all_years[5] = 200</code> att vi ändrar kapitalet år 5 till 200 i vår vektor som innehåller alla års kapital.</p>
 <p>Det finns en annan slags tabell som kan vara bra att känna till i R, en s k <strong>matris</strong> (eng. Matrix). Matriser är som dataframes, men innehåller inte information om namnet på kolumnerna. Å andra sidan kan man göra matematiska beräkningar med hela matriser, men det är inget vi gör på denna kurs. Anledningen till att vi nämner matriser här är att man ibland måste göra om en matris till en dataframe eller tvärtom. Vissa R-program vi bara jobba med dataframes och klagar om man försöker få det att jobba med en matris. Låt oss skapa en matris som jag kallar <code>A</code> :</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>A <span class="ot">=</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">11</span>,<span class="dv">2</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">62</span>,<span class="dv">3</span>), <span class="dv">3</span>, <span class="dv">2</span>)</span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>A</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>A <span class="ot">=</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">11</span>,<span class="dv">2</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">62</span>,<span class="dv">3</span>), <span class="dv">3</span>, <span class="dv">2</span>)</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>A</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>     [,1] [,2]
 [1,]   11    5
@@ -609,15 +609,15 @@ läses av R som</p>
 </div>
 <p>vilket är en matris (tabell) med 3 rader och 2 kolumner (som vi skapar från en vektor med 6 tal). Om vi använder <code>class()</code>-kommandot så ser vi att A mycket riktigt är en matrix, vilket är engelska för matris:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(A)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(A)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "matrix" "array" </code></pre>
 </div>
 </div>
 <p>Om vi vill göra om en matris till en dataframe så använder vi kommandot</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>B <span class="ot">=</span> <span class="fu">as.data.frame</span>(A)</span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>B</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>B <span class="ot">=</span> <span class="fu">as.data.frame</span>(A)</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>B</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  V1 V2
 1 11  5
@@ -627,15 +627,15 @@ läses av R som</p>
 </div>
 <p>där R bestämmer att kolumnerna ska heta V1 och V2 (en dataframe måste ha namn på kolumnerna i tabellen). B är alltså nu en dataframe, vilket man kan testa genom:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(B)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(B)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "data.frame"</code></pre>
 </div>
 </div>
 <p>En annan viktigt datatyp vi vill nämna är en s k <strong>sträng</strong> (eng. string), vilket kallas för <code>character</code> i R och är en variabel som innehåller text. Värdet på en sträng-variabel skriv innanför citattecken:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>mittnamn <span class="ot">=</span> <span class="st">"mattias"</span></span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(mittnamn)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>mittnamn <span class="ot">=</span> <span class="st">"mattias"</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(mittnamn)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "character"</code></pre>
 </div>
@@ -643,15 +643,15 @@ läses av R som</p>
 <p>Man kan även använda enkla ‘blippar’ kring strängens värde, dvs <code>mittnamn = 'mattias'</code>.</p>
 <p>Om vi t ex använder <code>names()</code> kommandot på vår <code>stockdata</code> dataframe så får vi en vektor med strängar (en vektor eftersom det finns fler än ett kolumnnamn i <code>stockdata</code>):</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(stockdata)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(stockdata)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "year"    "capital" "returns"</code></pre>
 </div>
 </div>
 <p>Slutligen finns datatypen <code>list</code> i R. En list (eller lista på svenska) är en vektor på steroider. En vanlig vektor måste innehålla <em>data av samma sort</em>, t ex en vektor med numeriska tal <code>x = c(1,4,5)</code> eller en vektor med strängar (text): <code>c("mattias","adam","elma")</code> . En lista är mer generell och kan innehålla data av olika sort:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>my_list <span class="ot">=</span> <span class="fu">list</span>(<span class="at">a =</span> <span class="dv">2</span>, <span class="at">b =</span> <span class="st">"hej"</span>, <span class="at">d =</span> <span class="fu">c</span>(<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">2</span>))</span>
-<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>my_list</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>my_list <span class="ot">=</span> <span class="fu">list</span>(<span class="at">a =</span> <span class="dv">2</span>, <span class="at">b =</span> <span class="st">"hej"</span>, <span class="at">d =</span> <span class="fu">c</span>(<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">2</span>))</span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>my_list</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$a
 [1] 2
@@ -665,7 +665,7 @@ $d
 </div>
 <p>Jag kan döpa elementen i listan vad jag vill, här kallade jag dem <code>a</code>, <code>b</code> och <code>d</code> (jag vill undvika bokstaven c eftersom det är symbolen för att skapa vektorer). Notera att elementet <code>a</code> innehåller ett enda tal, <code>b</code> en sträng och <code>d</code> en vektor med tre tal. I utskriften ser man också att det olika listelementen med ett $-tecken framför. För att t ex plocka ut listelementet <code>d</code> kan man nämligen skriva</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>my_list<span class="sc">$</span>d</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>my_list<span class="sc">$</span>d</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 4 5 2</code></pre>
 </div>
@@ -688,24 +688,24 @@ $d
 <p>Vi har sett idén med funktioner tidigare: en funktion <em>gör</em> något med data. I matematikens värld är en funktion <span class="math inline">\(f\)</span> en slags maskin som använder en <strong>input</strong> <span class="math inline">\(x\)</span>, gör några matematiska beräkningar, och ger tillbaka en <strong>output</strong> <span class="math inline">\(y\)</span>. Vi brukar skriva funktionen som <span class="math inline">\(y=f(x)\)</span>.</p>
 <p>En funktion i R är en liknande sak: den använder ett eller flera inputs och ger tillbaka ett eller flera outputs. Det kan handla om ren matematisk funktion, som kvadratroten <span class="math inline">\(\sqrt{x}\)</span> av ett tal <span class="math inline">\(x\)</span>, vilket i R beräknas av funktionen <code>sqrt</code>:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">=</span> <span class="dv">4</span></span>
-<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>y <span class="ot">=</span> <span class="fu">sqrt</span>(x)</span>
-<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>y</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">=</span> <span class="dv">4</span></span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>y <span class="ot">=</span> <span class="fu">sqrt</span>(x)</span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>y</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 2</code></pre>
 </div>
 </div>
 <p>men det kan också vara något mer komplicerat som t ex att läsa in data från en Excel-fil:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>stockdata <span class="ot">=</span> <span class="fu">read.xlsx</span>(<span class="st">'stock.xlsx'</span>, <span class="dv">1</span>, <span class="at">header=</span><span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>stockdata <span class="ot">=</span> <span class="fu">read.xlsx</span>(<span class="st">'stock.xlsx'</span>, <span class="dv">1</span>, <span class="at">header=</span><span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>där <code>read.xlsx</code> är en funktion som tre input-argument filnamn (som en sträng!), talet 1 för att vi vill läsa det första bladet och argumentet header sätts till TRUE eftersom första raden i Excelfilen innehåller namnen på kolumnerna. Funktionen <code>read.xlsx</code> ger tillbaka en dataframe som output med data.</p>
 <p>Det fina med programmeringsspråk är att man kan <strong>skapa egna funktioner</strong> som gör just det jobb som man behöver. Om jag t ex vill skapa en funktion som beräknar ränta-på-ränta effekten på ett sparkapital (med samma ränta varje år) så kan jag skriva ihop följande funktion:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>capital_interest <span class="ot">&lt;-</span> <span class="cf">function</span>(capital, interest, years){</span>
-<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>  newcapital <span class="ot">=</span> capital<span class="sc">*</span>interest<span class="sc">^</span>years</span>
-<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(newcapital)</span>
-<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>capital_interest <span class="ot">&lt;-</span> <span class="cf">function</span>(capital, interest, years){</span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>  newcapital <span class="ot">=</span> capital<span class="sc">*</span>interest<span class="sc">^</span>years</span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(newcapital)</span>
+<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Några saker att notera:</p>
 <ul>
@@ -717,22 +717,22 @@ $d
 </ul>
 <p>Om jag sen vill använda min funktion för att se hur min hundring på banken kommer att utvecklas under 20 år med 5% ränta så skriver jag (jag <strong>anropar</strong> funktionen):</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>my_money <span class="ot">=</span> <span class="fu">capital_interest</span>(<span class="dv">100</span>, <span class="fl">1.05</span>, <span class="dv">20</span>)</span>
-<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>my_money</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>my_money <span class="ot">=</span> <span class="fu">capital_interest</span>(<span class="dv">100</span>, <span class="fl">1.05</span>, <span class="dv">20</span>)</span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>my_money</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 265.3298</code></pre>
 </div>
 </div>
 <p>Vi sa ovan att vi tilldelade variabeln <code>capital_interest</code> en funktion. 🤯 Wait, what? Jo, faktiskt, om vi undersöker vilken typ av variabel <code>capital_interest</code> är så är det faktiskt en funktion:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(capital_interest)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(capital_interest)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "function"</code></pre>
 </div>
 </div>
 <p>När vi skrev variabel <code>kapital</code> i Console skrev den ut värdet, t ex 100. Vad händer om vi göra samma sak med vår funktionsvariabel <code>capital_interest</code> ? Hela funktionen skrivs ut som text!</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a> capital_interest </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a> capital_interest </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>function(capital, interest, years){
   newcapital = capital*interest^years
