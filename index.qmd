@@ -1,17 +1,23 @@
 ---
-title: "Statistisk dataanalys I, 15 hp"
+title: "Statistik och dataanalys I, 15 hp"
 ---
 
 <img src="/images/flashytimeseries.jpg" width="100%" class="center" alt = "Flashy time series image">
 
 ### Kursens innehåll
 
-Kursen ger ...
+> Data finns numera överallt i samhället. Kursen Statistik och dataanalys I ger dig grunderna för att förstå och använda data, både som samhällsmedborgare och som avancerad dataanalytiker.
+
+Kursen ger dig en översikt av metoder för statistisk dataanalys och dess många tillämpningar. En introduktion till dataanalys följs av praktisk datahantering i det populära statistiska [programspråket R](R.html). Samband mellan variabler analyseras, och du tränas i hur statistiska modeller kan användas för att förutsäga nya data. Slutsatser från data är alltid osäkra och en viktig del av kursen är därför sannolikhetsberäkningar. Sannolikhetsteorin används sedan i de inferensmetoder som gör det möjligt att dra korrekta slutsatser från data och fatta optimala beslut under osäkerhet.
+
+Du lär dig att utföra dataanalyser i praktiken, bl a genom datorlaborationer och två inlämningsuppgifter, men kursen ger dig även en kritisk blick på statistik som gör att du kan ifrågasätta, tolka och söka ny information för att bättre svara på olika frågeställningar.  
 
 Kursen består av två delar:
 
-- [Introduktion till dataanalys, 7.5 hp](DelA.html)
-- [Statistisk inferens, 7.5 hp](DelB.html)
+- [Dataanalys, 7.5 hp.](DelA.html)
+I det här momentet ingår insamling, bearbetning, visualisering och sammanfattning av data i programspråket R. En stor del av momentet behandlar sambands- och regressionsanalys som utmynnar i metoder för prediktion.
+- [Statistiska modeller och inferens, 7.5 hp.](DelB.html)
+I kursens andra momentet behandlas sannolikheter, slumpvariabler och sannolikhetsfördelningar. En central del i momentet är inferens, dvs. statistiska metoder för att dra slutsatser om olika fenomen från data. Kursen avslutas med en introduktion till beslutsfattade under osäkerhet.
 
 ### Kurslitteratur
 
@@ -19,17 +25,27 @@ Kursen består av två delar:
 [Stats: Data and Models](https://media.pearsoncmg.com/intl/ge/2021/cws/ge_deveaux_stats_5/statdm5d_cw.html), Pearson Global Edition, Studentlitteratur. Boken förkortas **SDM** nedan.
 * Ytterligare kompletterande material som delas ut under kursens gång.  
 
-Kursens schema på TimeEdit: [Schedule]().
+### Kursstruktur och schema
+
+Kursen består av föreläsningar, räkneövningar och datorlaborationer.\
+Kursens schema finns på [TimeEdit]().
+
 
 ### Lärare
+:::{layout="[ [1,1],[1,1] ]"}
+<img src="/misc/VillaniLowRes.jpg" width="35%">\
+[Mattias Villani](https://mattiasvillani.com)<br>Kursansvarig och föreläsare<br>Professor
 
-<img src="/misc/VillaniLowRes.jpg" width="70">\
-[Mattias Villani](https://mattiasvillani.com)<br>Professor
 
-<img src="/misc/QuirozPhoto.jpg" width="70">\
-[Matias Quiroz](https://matiasquiroz.com)<br>Universitetslektor
+<img src="/misc/QuirozPhoto.jpg" width="40%">\
+[Matias Quiroz](https://matiasquiroz.com)<br>Föreläsare<br>Universitetslektor
 
----
+<img src="/misc/female.png" width="30%">\
+[TBD](https://matiasquiroz.com)<br>Övningslärare<br>Masterexamen i Statistik
+
+<img src="/misc/female.png" width="30%">\
+[TBD](https://matiasquiroz.com)<br>Övningslärare<br>Kandidatexamen i Statistik
+:::
 
 ## Datamaterial
 

@@ -1,11 +1,13 @@
 ---
-title: "Del A - Introduktion till dataanalys"
+title: "Dataanalys, 7.5 hp"
 ---
+
+> I det här momentet ingår insamling, bearbetning, visualisering och sammanfattning av data i programspråket R. En stor del av momentet behandlar sambands- och regressionsanalys som utmynnar i metoder för prediktion.
 
 ### **Föreläsningar**
 
 **Föreläsning 1 - Introduktion.**\
-Läs: SDM Kapitel 1 | [Slides](/misc/larry.png) 
+Läs: SDM Kapitel 1 | [Slides](/slides/SDA1_L1.html) 
 
 **Föreläsning 2 - Introduktion till R. **\
 Läs: LITTERATUR | [Slides](/misc/larry.png) 
@@ -42,19 +44,28 @@ Läs: [Slides](/misc/larry.png)
 
 ### **Övningar**
 
-**Övning 1 - Beskrivande statistik och korrelation**\
-Uppgifter: SDM 1.1-1.6, osv 
+**Övning 1 - Beskrivande statistik.**\
+Uppgifter: SDM 2 
 
-**Övning 2 - Estimering och tolkning av enkel linjär regression**\
-Uppgifter: SDM 1.1-1.6, osv 
+**Övning 2 - Samband mellan kategoriska variabler och korstabeller.**\
+Uppgifter: SDM 3
 
-**Övning 3 - Prediktion med enkel linjär regression**\
-Uppgifter: SDM 1.1-1.6, osv 
+**Övning 3 - Standardavvikelse och standardisering. Normalmodellen.**\
+Uppgifter: SDM 5 
+
+**Övning 4 - Korrelation.**\
+Uppgifter: SDM 6 
+
+**Övning 5 - Estimering och tolkning av enkel linjär regression.**\
+Uppgifter: SDM 7
+
+**Övning 6 - Prediktion med enkel linjär regression.**\
+Uppgifter: SDM 7-9 
 
 ### **Datorlaborationer**
 
 **Datorlaboration 1 - Intro till R**\
-Uppgifter: [Datorlab 1](/datorlab/DatorLab1.html) 
+Uppgifter: [html](/datorlab/lab1/DatorLab1.html) eller [pdf](/datorlab/lab1/DatorLab1.pdf) | [Intro till Quarto rapportskrivning](/tutorials/Quarto/Intro2Quarto.html)
 
 **Datorlaboration 2 - Beskrivande statistik och visualisering i R**\
 Uppgifter: [Datorlab 2](/misc/larry.png) 

@@ -2,37 +2,43 @@
 title: "R"
 ---
 
-Guider:
+## Programmeringsspråket R
 
-- [Läs in data från fil](/tutorials/ReadingDataFromFile.html)
+> Kursen använder det mycket populära statistiska programmeringsspråket R. Programmet är helt gratis och kan laddas ner på alla datorer. 
 
-## Det statistiska programmeringsspråket R
+## RStudio
+R är lättast att jobba i från programmet RStudio. RStudio är en slags arbetsmiljö byggd kring R. Även RStudio är gratis.
 
-Kursen använder det mycket populära statistiska programmeringsspråket R. Programmet är helt gratis och kan laddas ner på alla datorer. 
-Du kan ladda ner R [här](https://ftp.acc.umu.se/mirror/CRAN/).
+## Ladda ner R och RStudio
 
-R är lättast att jobba i från programmet RStudio. RStudio är en slags arbetsmiljö byggd kring R. 
-RStudio är gratis och kan ladda ner [här](https://www.rstudio.com/products/rstudio/download/#download).
-Det finns en massa bra videos och tutorials för R och RStudio. [Här](https://youtu.be/FIrsOBy5k58) är t ex en kort video som ge en rundtur i RStudio.
+Du måste först installera R och sen RStudio:
 
-Kursen har ett eget R paket med några hjälpfunktioner som används på kursen. 
-För att kunna använda paketet behöver du installera det:
-```
-# För att installera kurspaketet sdakurs
-install.packages("remotes") # görs bara en gång på din dator
+- R kan laddas ner [här](https://ftp.acc.umu.se/mirror/CRAN/).
+- RStudio kan laddas ner [här](https://www.rstudio.com/products/rstudio/download/#download).
+
+## Guider/Tutorials
+
+- Hur man laddar ner och **installerar R** och RStudio: [video]()
+- En snabbt tur i **RStudio**: [video]()
+- **Quarto** för att skriva kompletta rapporter med kod: [html](/tutorials/Quarto/Intro2Quarto.html) | [pdf](/tutorials/Quarto/Intro2Quarto.pdf) | [video]()
+
+## Kursens R-paket
+
+Kursen har ett eget R-paket `sdakurs` med några hjälpfunktioner som används på kursen.
+
+#### Installera kurspaketet `sdakurs`
+```{r}
+#| eval = FALSE
+install.packages("remotes") 
 library(remotes)  
-install_github("StatisticsSU/sdakurs") # görs bara en gång på din dator
+install_github("StatisticsSU/sdakurs")
 library(sdakurs)
+```
 
-# För att installera kursen datamaterial
-install_github("StatisticsSU/SUdatasets") # görs bara en gång på din dator
+#### Installera kursens datamaterial
+```{r}
+#| eval = FALSE
+install_github("StatisticsSU/SUdatasets")
 library(SUdatasets)
-
-# För en lista med alla funktioner i paketet regkurs
-help(, "regkurs")
-
-# För information om ett specifikt datamaterial eller funktion i kurspaketet
-?namnet_på_datamaterialet
-?namnet_på_funktionen
 ```
 

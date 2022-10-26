@@ -5,22 +5,25 @@ project:
 website:
   title: "SDA1"
   navbar:
-    logo: /misc/LogoBlueJustRing.jpg
+    logo: /misc/SU_logotyp_Staende_800px.png
     background: primary
     left:
       - href: index.qmd
         text: Översikt
       - href: DelA.qmd
-        text: Del A - Introduktion till dataanalys
+        text: Dataanalys, 7.5 hp
       - href: DelB.qmd
-        text: Del B - Statistisk inferens
+        text: Statistiska modeller och inferens, 7.5 hp
       - href: R.qmd
         text: R
 format:
   html:
-    theme: sandstone
+    theme: superhero # litera, lumen, superhero, united
     css: styles.css
     toc: true
+    #monobackgroundcolor: #c3d0e6
+callout-appearance: simple
+
 
 
 

@@ -1,6 +1,8 @@
 ---
-title: "Del B - Sannolikheter och statistisk inferens"
+title: "Statistiska modeller och inferens, 7.5 hp"
 ---
+
+> I kursens andra momentet behandlas sannolikheter, slumpvariabler och sannolikhetsfördelningar. En central del i momentet är inferens, dvs. statistiska metoder för att dra slutsatser om olika fenomen från data. Kursen avslutas med en introduktion till beslutsfattade under osäkerhet.
 
 ### **Föreläsningar**
 
@@ -45,49 +47,49 @@ Läs: [Slides](/misc/larry.png)
 
 ### **Övningar**
 
-**Övning 4 - Sannolikheter för händelser**\
-Uppgifter: SDM 1.1-1.6, osv 
+**Övning 7 - Sannolikheter för händelser. Kombinatorik.**\
+Uppgifter: SDM 12-13
 
-**Övning 5 - Kombinatorik, Oberoende händelser**\
-Uppgifter: SDM 1.1-1.6, osv 
+**Övning 8 - Oberoende händelser. Betingning och Bayes sats.**\
+Uppgifter: SDM 13 
 
-**Övning 6 - Betingning och Bayes sats**\
-Uppgifter: SDM 1.1-1.6, osv 
+**Övning 9 - Slumpvariabler, väntevärde och standardavvikelse.**\
+Uppgifter: SDM 14
 
-**Övning 7**\
-Uppgifter: SDM 1.1-1.6, osv 
+**Övning 10 - Diskreta sannolikhetsfördelningar.**\
+Uppgifter: SDM 15 
 
-**Övning 8**\
-Uppgifter: SDM 1.1-1.6, osv 
+**Övning 12 - Kontinerliga sannolikhetsfördelningar.**\
+Uppgifter: SDM 15 
 
-**Övning 9**\
-Uppgifter: SDM 1.1-1.6, osv 
+**Övning 13 - Samplingfördelningar och konfidensintervall för en andel.**\
+Uppgifter: SDM 16 
 
-**Övning 10**\
-Uppgifter: SDM 1.1-1.6, osv 
+**Övning 14 - Konfidensintervall för ett väntevärde.**\
+Uppgifter: SDM 17 
 
-**Övning 11**\
-Uppgifter: SDM 1.1-1.6, osv 
+**Övning 13 - Hypotestest.**\
+Uppgifter: SDM 18 
 
-**Övning 12**\
-Uppgifter: SDM 1.1-1.6, osv 
+**Övning 14 - Hypotestest och p-värde.**\
+Uppgifter: SDM 18 
 
-**Övning 13**\
-Uppgifter: SDM 1.1-1.6, osv 
+**Övning 13 - Jämföra grupper.**\
+Uppgifter: SDM 20-21. 
 
-**Övning 14**\
-Uppgifter: SDM 1.1-1.6, osv 
+**Övning 14 - Inferens för regression.**\
+Uppgifter: SDM 23 
 
 ### **Datorlaborationer**
 
 **Datorlaboration 5 - Simulering från sannolikhetsfördelningar**\
 Uppgifter: [Datorlab 5](/misc/larry.png) 
 
-**Datorlaboration 6 - Samplingfördelningar, standardfel och konfidensintervall**\
+**Datorlaboration 6 - Samplingfördelningar, standardfel och centrala gränsvärdessatsen.**\
 Uppgifter: [Datorlab 6](/misc/larry.png) 
 
-**Datorlaboration 7 - Multipel linjär regression**\
+**Datorlaboration 7 - Konfidensintervall och hypotestest.**\
 Uppgifter: [Datorlab 7](/misc/larry.png) 
 
-**Datorlaboration 8 - Multipel linjär regression, forts**\
+**Datorlaboration 8 - Multipel linjär regression**\
 Uppgifter: [Datorlab 8](/misc/larry.png)

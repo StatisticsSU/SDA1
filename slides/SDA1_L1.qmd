@@ -1,0 +1,67 @@
+---
+title: "Statistik och dataanalys I"
+subtitle: Föreläsning 1 - Introduktion
+author: "**Mattias Villani**"
+logo: ../misc/SU_logotyp_Liggande_1000px.png
+institute: Statistiska institutionen<br>Stockholms universitet
+format: 
+  revealjs:
+    theme: [default, custom.scss]
+    slide-number: true
+    transition: none #convex
+    transition-speed: slow
+footer: "Statistik och dataanalys I &nbsp; &nbsp; · &nbsp; &nbsp; Dataanalys, 7.5 hp"
+editor: visual
+---
+
+## Översikt
+
+-   Motiverande exempel
+
+-   Något mer
+
+-   Något ännu mer
+
+## Riksbanken och styrräntan
+
+-   Riksbankens mål är att hålla inflationen nära 2% per år.
+
+-   Standardfel och hypotestest måste korrigeras om laggar av $y_t$ fdfd ff
+
+-   Hur beror inflationen på räntan?
+
+-   Riksbankens mål är att hålla inflationen nära 2% per år.
+
+::: {layout="[ [1,1]]"}
+![](figs/inflreposcatter.png){fig-align="center" width="300"}
+
+![](figs/inflreposcatter.png){fig-align="center" width="300"}
+:::
+
+$$
+y_{t}=\alpha+{\color{orange} {\phi_{1}y_{t-1}}}+\varepsilon_{t}+{\color{blue} {\theta_{1}\varepsilon_{t-1}}}
+$$
+
+## Stuff
+
+::: aside
+Some additional commentary of more peripheral interest.
+:::
+
+-   Green [^1]
+-   Brown
+-   Purple
+
+[^1]: A footnote
+
+## Tabs
+
+::: panel-tabset
+### Tab A
+
+Content for `Tab A`
+
+### Tab B
+
+Content for `Tab B`
+:::

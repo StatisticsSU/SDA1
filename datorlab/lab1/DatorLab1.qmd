@@ -3,16 +3,35 @@ title: Statistik och dataanalys I, 15 hp
 subtitle: Datorlaboration 1
 author: "Mattias Villani"
 date: last-modified
+format:
+  html: default
+  pdf: default
 #title-block-banner: true
 ---
 
 ------------------------------------------------------------------------
+
+## Introduktion
+
+> I den här första datorlabben kommer ni bekanta er med programmeringsspråket **R** och dess arbetsmiljö **RStudio**.
 
 ::: callout-tip
 ### Instruktioner
 
 💪 Avsnitt med den här symbolen är uppgifter där ni ska göra något.
 :::
+
+::: callout-warning
+### Jobba med R på egen dator
+
+Om du inte sitter i en datorsal på Campus måste du först installera R och sen RStudio. Se videon [installera R och Rstudio]() för instruktioner.
+:::
+
+För att starta RStudio letar du bara upp programmet på din dator och klickar på startikonen. När RStudio startas upp kommer det att se ut så här (kan se olika ut på olika datorer):
+
+![](RstudioPanes.png)
+
+De olika delarna av RStudio kallas ofta för **Panes**. Vi kommer gå igenom dessa delar vartefter, men vi börjar med att utforska **Console**, även kallad **terminalen**.
 
 ## 1. Använda R som en miniräknare
 
@@ -86,13 +105,13 @@ Avkastningen år 3 blev tyvärr minus 4%. Uppdatera variabeln `kapital` ovan så
 
 ## 3. Organisera dig med filmappar
 
-Det är viktigt att ha ordning på sina filer på datorn och kunna tala om för R var dina filer finns så R kan läsa dem. Vi rekommenderar att du skapar en mapp/folder för varje kurs du läser. Spara inte alla filer på datorn skrivbord eller i mappen **Downloads** eller liknande. Gå till filhanteringsprogrammet på din dator och skapa mappen **SDA1**. Så här:
+Det är viktigt att ha ordning på sina filer på datorn och kunna tala om för R var dina filer finns så R kan läsa dem. Vi rekommenderar att du skapar en mapp/folder för varje kurs du läser. Spara inte alla filer på datorns skrivbord eller i mappen **Downloads** eller liknande. Gå till filhanteringsprogrammet på din dator och skapa mappen **SDA1**. Så här:
 
 -   ![](windows.png){width="20"} Windows: Starta programmet **File Explorer** och klicka på mappen **Documents** (eller **Dokument** om du har svenska som språk). Skapa en ny mapp med namnet **SDA1**.
 
--   ![](/datorlab/mac.png){width="20"}Mac: Starta programmet **Finder** och klicka på mappen **Documents**. Skapa en ny mapp med namnet **SDA1**.
+-   ![](mac.png){width="20"}Mac: Starta programmet **Finder** och klicka på mappen **Documents**. Skapa en ny mapp med namnet **SDA1**.
 
--   ![](/datorlab/linux.png){width="20"} Linux: Starta programmet **Nautilus** (om du använder Ubuntu, annars kan du prova att söka på ordet files om din Linux-distribution använder en annan filhanterare). Klicka på mappen **Documents**. Skapa en ny mapp med namnet **SDA1**.
+-   ![](linux.png){width="20"} Linux: Starta programmet **Nautilus** (om du använder Ubuntu, annars kan du prova att söka på ordet files om din Linux-distribution använder en annan filhanterare). Klicka på mappen **Documents**. Skapa en ny mapp med namnet **SDA1**.
 
 #### 💪 Uppgift 3.1
 
@@ -110,7 +129,7 @@ Om vi klickar på menyn [**F**]{.underline}**ile** och sen under menyn [**N**]{.
 
 Vi kan spara filen genom att klicka på menyn [**F**]{.underline}**ile** och sen på [**S**]{.underline}**ave** och sen navigera dig till mappen **SDA1** genom att klicka i rutan som kommer upp. Döp filen till **stock** eller något annat namn som talar om vad filen innehåller (aktie heter stock på engelska). Klicka på Save/Spara. Filen kommer automatiskt att få filändelsen .R, dvs filen kommer alltså heta **stock.R** så RStudio vet att det är en fil men R kommandon. Ett samling kommandon kallas också för **kod** och vi säger att vi arbetar med en **kodfil** i editorn.
 
-Vi kan köra alla kommandon i filen stock.R genom att klicka `Source` - knappen uppe i högra hörnet av editorn:
+Vi kan köra alla kommandon i filen stock.R genom att klicka på `Source` - knappen uppe i högra hörnet av editorn:
 
 ![](SourceButton.png){fig-align="center" width="400"}
 
@@ -138,22 +157,24 @@ Hittills har vi skrivit alla kommandon och tal (t ex `kapital = 100`), dvs vi ha
 
 Notera att:
 
--   Vi använder engelska namn på kolumnerna. Svenska tecken åäö är bäst att undervika när man skriver kod. Det går att arbeta med åäö i kod, men det är lättast att undvika dem genom att skriva på engelska.
+-   Vi använder engelska namn på kolumnerna. Svenska tecken åäö är bäst att undervika när man skriver kod. Det går att arbeta med åäö i kod, men det är lättast att undvika dem genom att skriva på engelska. Du kan inte använda mellanslag (space) i variabelnamn. Ofta vill man ha ett variabelnamn som är lätt att förstå vad variabeln innehåller. Använd `_` (underscore) eller `.` (punkt) för att dela upp ord om det behövs. T ex `my_pretty_little_variable = 100`.
 
 -   Avkastningen (**returns**) anges i procent och är satt till noll under 2018 eftersom vi köpte aktierna precis i början av år 2019 (säger vi) och alltså inte fick någon avkastning under år 2018.\
 
-Excel-filen har jag döpt till stock.xlsx, men den kan döpas till precis vad som helst. Hur kan vi få R att läsa in data från filen stock.xlsx? Det finns två sätt, varav vi endast rekommenderar det första om man är absolut nybörjare. Rätt snart bör du lära dig att använda det andra sättet, som är smidigare i längden.
+Excel-filen har jag döpt till *stock.xlsx*, men den kan döpas till precis vad som helst.
 
-1.  Spara/flytta filen stock.xlsx till din kurskatalog som du skapade i del 3 ovan, dvs mappen **SDA1** i **Documents**. Ändra din arbetsmapp (**working directory**) i R till samma mapp **SDA1** i **Documents**. **Working directory** är den mapp som R kommer leta efter filer i. Du kan ändra detta genom att välja menyn [**S**]{.underline}**ession** och sen **Set [W]{.underline}orking Directory** och slutligen [**C**]{.underline}**hoose Directory...** och sedan klicka dig fram till mappen SDA1.
+Om R ska kunna läsa in data från filen stock.xlsx så måste vi tala om *var* filen finns på vår dator. Enklast är då att ställa in Rs **working directory**, dvs det standardställe där R letar efter filer i den pågående sessionen. Det finns två sätt att göra detta, varav vi endast rekommenderar det första om man är absolut nybörjare. Rätt snart bör du lära dig att använda det andra sättet, som är smidigare i längden.
+
+1.  Spara/flytta filen stock.xlsx till din kurskatalog som du skapade i del 3 ovan, dvs mappen **SDA1** i **Documents**. **Working directory** är den mapp som R kommer leta efter filer i. Ändra din arbetsmapp (**working directory**) i R till samma mapp **SDA1** i **Documents** genom att välja menyn [**S**]{.underline}**ession** och sen **Set [W]{.underline}orking Directory** och slutligen [**C**]{.underline}**hoose Directory...** och sedan klicka dig fram till mappen SDA1.
 
 ![](setwd_menu.png){fig-align="center" width="359"}
 
 2.  För att slippa att klicka sig fram via menyer hela tiden så är det praktiskt att ändra working directory i början av den kodfil som man jobbar med. Då kan man bara köra den kodfilen och working directory ställs in automatiskt. Kommandot `setwd` gör samma sak som punkten 1 gjorde via menyerna. Här måste vi dock veta **sökvägen** (**path**) till mappen, dvs datorns sätt att hitta till (under)mappen **SDA1** i **Documents**-mappen. Sättet att skriva sökvägar på skiljer sig åt på Windows/Mac/Linux:
     -   ![](mac.png){width="20"} På en Mac skriver vi kommandot: `setwd('/Users/username/Documents/SDA1')` där `username` ska ersättas med ditt användnamn på din Mac (namnet som kommer upp när du loggar in på datorn). Notera de små 'blipparna' kring filvägen i `setwd` kommandot.
 
-    -   ![](linux.png){width="20"} På en Linux-dator skriver vi kommandot `setwd('/home/username/Documents/SDA1')` där `username` ska ersättas med ditt användnamn som använder när du loggar in.
+    -   ![](windows.png){width="15"} På en Windows-dator skriver kommandot `setwd('C:/Documents/SDA1')`. Notera de små 'blipparna' kring filvägen i `setwd` kommandot. \[Windows-sökvägar skrivs vanligtvis med backslash `\`. I RStudio skriver man ändå `/` för att matcha med Mac och Linux\].
 
-    -   ![](windows.png){width="15"} På en Windows-dator är det lite krångligare. Sökvägen till (under)mappen **SDA1** i **Documents**-mappen är egentligen C:\\Documents\\SDA1, om du jobbar på hårddisken C:, vilket är vanligast. Dvs Windows använder **backslash**-tecken (**\\**) istället för **slash** (**/**) i filnamn. R är inte jätteförtjust i det och kräver att man skriver en extra backslash för varje slash in sökvägen. Så kommandot för att byta working directory på Windows är `setwd('C:\\Documents\\SDA1')`. Notera de små 'blipparna' kring filvägen i `setwd` kommandot.
+    -   ![](linux.png){width="20"} På en Linux-dator skriver vi kommandot `setwd('/home/username/Documents/SDA1')` där `username` ska ersättas med ditt användnamn som använder när du loggar in.
 
 #### 💪 Uppgift 5.1
 
@@ -163,22 +184,22 @@ Ställ in din **SDA1** mapp som working directory i RStudio. Kontrollera att du 
 
 Vi vill nu läsa in data från Excelfilen stock.xlsx. Du kan ladda ner den filen [här](https://github.com/StatisticsSU/SDA1/datorlabb/labb1/aktiespar.xlsx). Beroende på din dator så kommer en av två saker hända:
 
-1.  filen stock.xlsx hamnar automatiskt i mappen **Downloads** (eller liknande) på din dator. Du får då kopiera eller flytta filen till din working directory (din SDA1 mapp) genom att använda dators filhanterare.
+1.  filen stock.xlsx hamnar automatiskt i mappen **Downloads** (eller liknande) på din dator. Du får då kopiera eller flytta filen till din working directory (din SDA1 mapp) genom att använda datorns filhanterare.
 
 2.  du får välja var du vill spara ner filen. Klicka dig fram till din working directory (din SDA1 mapp) och spara filen där.
 
 R kommer nu att hitta filen och vi är redo att skriva kommandot som läser in filen. Eftersom det är första gången du läser in en Excel-fil behöver du göra lite grundjobb. Vi ska göra tre steg:
 
-1.  **Installera R-paketet** `xlsx`. Programmet R kommer med ett antal baskommandon förinstallerat. T ex har vi redan använt **funktionen** `setwd()` för att tala om för R vilken mapp som är vår working directory. Men många kommandon/funktioner i R måste laddas in via s k R-paket. Det finns R-paket för nästan allt man vill göra: läsa in data, gör olika typer av statistiska analyser etc etc. Paketet `xslx` är specialiserat på att läsa in Excel-filer i R. För att installera paketet kör vi kommandot `install.packages('xlsx')` antingen genom att skriv in det i en kodfil och trycka på `Run` eller genom att skriva det direkt i terminalen. Efter det kommer R att skriva ut en massa mumbo-jumbo i Console som beskriver installationen. Via paket kan ta någon minut eller mer för att installera. Om inga fel uppstår brukar installationsmeddelandet avslutas med något liknande:\
+1.  **Installera R-paketet** `xlsx`. Programmet R kommer med ett antal baskommandon förinstallerat. T ex har vi redan använt **funktionen** `setwd()` för att tala om för R vilken mapp som är vår working directory. Men många kommandon/funktioner i R måste laddas in via s k **R-paket**. Det finns R-paket för nästan allt man vill göra: läsa in data, gör olika typer av statistiska analyser etc etc. Paketet `xslx` är specialiserat på att läsa in Excel-filer i R. För att installera paketet kör vi kommandot `install.packages('xlsx')` antingen genom att skriv in det i en kodfil och trycka på `Run` eller genom att skriva det direkt i terminalen. Efter det kommer R att skriva ut en massa mumbo-jumbo i Console som beskriver installationen. Paket kan ta någon minut eller mer för att installera. Om inga fel uppstår brukar installationsmeddelandet avslutas med något liknande:\
     `DONE (xlsx)`\
     `The downloaded source packages are in`\
     följt av någon kryptisk sökväg till stället på din dator där paketet har blivit installerat.\
     \
     Installation av paket behövs bara göras en gång på din dator. Du behöver inte installera om nästa gång du startar upp RStudio på nytt.
 
-2.  Ladda R-paketet `xlsx`. Kommandot `library(xlsx)` laddar funktionerna i paketet xlsx till R's arbetsminne. Först efter denna kommando kan vi använda funktionerna i paketet. Notera att vi behöver 'blippar' kring paketets namn när vi installerar, men inte när vi laddar paketet. Ett paket som laddat in med library finns inte tillgängligt när du start om RStudio. Du måste alltså skriva `library(xlsx)` för varje ny session där du vill läsa in Excel-filer. Det är därför bra att skriva in `library(xlsx)` i kodfilen du ska använda för att läsa in Excel-filer.
+2.  **Ladda R-paketet** `xlsx`. Kommandot `library(xlsx)` laddar funktionerna i paketet xlsx till R's arbetsminne. Först efter denna kommando kan vi använda funktionerna i paketet. Notera att vi behöver 'blippar' kring paketets namn när vi installerar, men inte när vi laddar paketet. Ett paket som laddat in med library finns inte tillgängligt när du start om RStudio. Du måste alltså skriva `library(xlsx)` för varje ny session där du vill läsa in Excel-filer. Det är därför bra att skriva in `library(xlsx)` i kodfilen du ska använda för att läsa in Excel-filer.
 
-3.  Läs in data från Excel-filen genom kommandot/funktionen `read.xlsx()`. Här hela kommandot (**funktionsanropet**):\
+3.  Läs in data från Excel-filen genom kommandot/**funktionen** `read.xlsx()`. Här hela kommandot (**funktionsanropet**):\
     `stockdata = read.xlsx('stock.xlsx', 1, header=TRUE)`\
     Det är några saker att reda ut här. Först, `read.xlsx()` är en **funktion** vilket betyder att det är ett kommando som **gör något** baserat på funktionens **input-argument**:
 
@@ -212,6 +233,30 @@ Istället för att placera alla filer i din working directory **SDA1** kan man i
 
 Prova att ladda ner Excelfilen stock.xlsx och spara den i SDA1 mappen. Läs sen in filen i R med kommandot `stockdata = read.xlsx('stock.xlsx', 1, header=TRUE)` . Skriv sen `head(stockdata)` i Console för att titta på data.\
 Prova nu att läsa in data med kommandot `stockdata = read.xlsx('stock.xlsx', 1, header=FALSE)` och notera skillnaden genom att återigen skriva `head(stockdata)` i Console.
+
+#### 💪 Uppgift 6.2
+
+Ändra värdet på variabeln `returns` år 2023 till 0.05 i stockdata tabellen genom att skriva `stockdata[6,3] = 0.05` i Console. Det här kommandot läser R som:
+
+> Värdet i tabellen `stockdata` på rad 6 och kolumn 3 ska ändras till (tilldelas) värdet 0.05.
+
+Prova att skriva `stockdata` i Console för att kontrollera att värdet faktiskt ändrades.
+
+#### 💪 Uppgift 6.3
+
+Spara den ändrade stockdata-tabellen till disk genom att skriva följande kommando i Console:
+
+```{r}
+save(stockdata, file="stockdata2.Rdata")
+```
+
+vilket sparar den ändrade `stockdata` tabellen till filen `stockdata2.Rdata` i din working directory (**SDA1**-mappen). Filformatet `Rdata` är R's eget filformat. Du kan i en senare session läsa in stockdata enkelt genom kommandot
+
+```{r}
+load("stockdata2.Rdata")
+```
+
+vilket kommer läsa in tabellen `stockdata` i R's arbetsminne.
 
 ## 7. Analysera data
 
@@ -253,6 +298,19 @@ där vi inte längre måste använda argumentet `data = stockdata` för att tala
 
 Läs återigen in data med `stockdata = read.xlsx('stock.xlsx', 1, header=TRUE)`. Gör en graf där du plottar variabeln `returns` mot `year`.
 
+Här är hela koden i ett stycke:
+
+```{r}
+#| echo: true
+setwd('/home/mv/Dropbox/Teaching/SDA1/datorlab/lab1') # I have a Linux computer and my data is in this path
+library(xlsx)                         
+stockdata = read.xlsx('stock.xlsx', 1, header=TRUE)
+meancapital = mean(stockdata$capital)
+plot(capital ~ year, data = stockdata)
+```
+
+Notera att vi kan skriva **kommentarer** i koden genom tecknet `#` innan kommentaren. Allt efter tecknet `#` ignoreras av R när den läser koden. Det kan vara ett bra sätt att förklara en kodrad för användaren.
+
 ## 8. Några extra tips
 
 -   Om du trycker på 'pil-upp' ⍐ tangenten i Console så kan du stega dig tillbaka till **gamla kommandon** som du har skrivit.
@@ -262,7 +320,165 @@ Läs återigen in data med `stockdata = read.xlsx('stock.xlsx', 1, header=TRUE)`
 -   **Files**-fliken nere till höger i RStudio är en inbyggd filhanterare. Den visar filerna i ditt working directory och du kan även hantera filer där (ta bort, döpa om osv).
 -   I **Help**-fliken kan du söka på hjälp på olika kommandon. Prova att skriva in `mean`. Du kan även få hjälp genom att skriva t ex `?mean` i Console.
 
-## 9. Quarto: skriva rapporter med text, kod och figurer
+## 9. Datastrukturer
+
+R kan spara data i olika **datastrukturer**. Vi definerade tidigare variabeln `kapital` och tilldela denna variabel värdet `100` genom kommandot `kapital = 100`.
+
+Ofta vill man spara mer än ett tal i samma datastruktur. Ett sätt är att skapa en **vektor** med kommandot `c()`
+
+```{r}
+capital_all_years = c(100,110,116.6,111.936,117.532,125.760)
+```
+
+Den nya variabel `capital_all_years` innehåller alltså kapitalet för alla år. Men om jag skulle vilja 'plocka ut' kapitalets värde vid det tredje året? Då kan man indexera vektorn genom hakparenteser (brackets) `[]`, så här:
+
+```{r}
+capital_all_years[3]
+```
+
+Man kan också plocka ut flera värden samtidigt, t ex år 3 och 5, med kommandot
+
+```{r}
+capital_all_years[c(3,5)]
+```
+
+Notera att vi indexerade med en vektor, dvs vi använde `c()` kommandot eftersom vi vill tala om för R att plocka ut fler än ett värde.
+
+Vi har redan sett en av Rs viktigaste datatyper: en s k **dataframe**. En dataframe är en tabell med information om vad kolumnerna heter, och ibland även vad raderna heter. Ett exempel är vår `stockdata` som är dataframe med tre kolumner: year, capital och stock. Vi kan se att det är en dataframe genom att använda kommandot `class()`:
+
+```{r}
+class(stockdata)
+```
+
+Vi har faktiskt redan använt idéen med att plocka ut värden genom indexing in dataframes tidigare när vi skrev `stockdata[6,3]` för att plocka ut värdet på rad 6 och kolumn 3 i tabellen/dataframe. Och vi såg att vi också kunde ändra värdena i tabellen genom tilldelning: `stockdata[6,3]=0.05` . Samma sak kan man göra med en vektor, t ex så gör kommandot `capital_all_years[5] = 200` att vi ändrar kapitalet år 5 till 200 i vår vektor som innehåller alla års kapital.
+
+Det finns en annan slags tabell som kan vara bra att känna till i R, en s k **matris** (eng. Matrix). Matriser är som dataframes, men innehåller inte information om namnet på kolumnerna. Å andra sidan kan man göra matematiska beräkningar med hela matriser, men det är inget vi gör på denna kurs. Anledningen till att vi nämner matriser här är att man ibland måste göra om en matris till en dataframe eller tvärtom. Vissa R-program vi bara jobba med dataframes och klagar om man försöker få det att jobba med en matris. Låt oss skapa en matris som jag kallar `A` :
+
+```{r}
+A = matrix(c(11,2,4,5,62,3), 3, 2)
+A
+```
+
+vilket är en matris (tabell) med 3 rader och 2 kolumner (som vi skapar från en vektor med 6 tal). Om vi använder `class()`-kommandot så ser vi att A mycket riktigt är en matrix, vilket är engelska för matris:
+
+```{r}
+class(A)
+```
+
+Om vi vill göra om en matris till en dataframe så använder vi kommandot
+
+```{r}
+B = as.data.frame(A)
+B
+```
+
+där R bestämmer att kolumnerna ska heta V1 och V2 (en dataframe måste ha namn på kolumnerna i tabellen). B är alltså nu en dataframe, vilket man kan testa genom:
+
+```{r}
+class(B)
+```
+
+En annan viktigt datatyp vi vill nämna är en s k **sträng** (eng. string), vilket kallas för `character` i R och är en variabel som innehåller text. Värdet på en sträng-variabel skriv innanför citattecken:
+
+```{r}
+mittnamn = "mattias"
+class(mittnamn)
+```
+
+Man kan även använda enkla 'blippar' kring strängens värde, dvs `mittnamn = 'mattias'`.
+
+Om vi t ex använder `names()` kommandot på vår `stockdata` dataframe så får vi en vektor med strängar (en vektor eftersom det finns fler än ett kolumnnamn i `stockdata`):
+
+```{r}
+names(stockdata)
+```
+
+Slutligen finns datatypen `list` i R. En list (eller lista på svenska) är en vektor på steroider. En vanlig vektor måste innehålla *data av samma sort*, t ex en vektor med numeriska tal `x = c(1,4,5)` eller en vektor med strängar (text): `c("mattias","adam","elma")` . En lista är mer generell och kan innehålla data av olika sort:
+
+```{r}
+my_list = list(a = 2, b = "hej", d = c(4,5,2))
+my_list
+```
+
+Jag kan döpa elementen i listan vad jag vill, här kallade jag dem `a`, `b` och `d` (jag vill undvika bokstaven c eftersom det är symbolen för att skapa vektorer). Notera att elementet `a` innehåller ett enda tal, `b` en sträng och `d` en vektor med tre tal. I utskriften ser man också att det olika listelementen med ett \$-tecken framför. För att t ex plocka ut listelementet `d` kan man nämligen skriva
+
+```{r}
+my_list$d
+```
+
+Känns det bekant med \$-tecken för att plocka ut saker? Vi har redan sett att man kan plocka ut en kolumn i en dataframe (tabell) genom att skriva t ex `stockdata$returns` . En dataframe är nämligen egentligen en slags lista.
+
+::: callout-tip
+Du kan skriva `my_list` i Console och sedan trycka på `tab`-tangenten i övre vänstra hörnet av tangentbordet för att se alla element som finns i listan `my_list`. Klicka på det element du vill visa. 🤩
+:::
+
+I nästa datorlab kommer vi introducera ännu en viktig datatyp i R: `factor`. Men låt oss spara något till dess.
+
+## 10. Funktioner
+
+Vi har sett idén med funktioner tidigare: en funktion *gör* något med data. I matematikens värld är en funktion $f$ en slags maskin som använder en **input** $x$, gör några matematiska beräkningar, och ger tillbaka en **output** $y$. Vi brukar skriva funktionen som $y=f(x)$.
+
+En funktion i R är en liknande sak: den använder ett eller flera inputs och ger tillbaka ett eller flera outputs. Det kan handla om ren matematisk funktion, som kvadratroten $\sqrt{x}$ av ett tal $x$, vilket i R beräknas av funktionen `sqrt`:
+
+```{r}
+x = 4
+y = sqrt(x)
+y
+```
+
+men det kan också vara något mer komplicerat som t ex att läsa in data från en Excel-fil:
+
+```{r}
+stockdata = read.xlsx('stock.xlsx', 1, header=TRUE)
+```
+
+där `read.xlsx` är en funktion som tre input-argument filnamn (som en sträng!), talet 1 för att vi vill läsa det första bladet och argumentet header sätts till TRUE eftersom första raden i Excelfilen innehåller namnen på kolumnerna. Funktionen `read.xlsx` ger tillbaka en dataframe som output med data.
+
+Det fina med programmeringsspråk är att man kan **skapa egna funktioner** som gör just det jobb som man behöver. Om jag t ex vill skapa en funktion som beräknar ränta-på-ränta effekten på ett sparkapital (med samma ränta varje år) så kan jag skriva ihop följande funktion:
+
+```{r}
+capital_interest <- function(capital, interest, years){
+  newcapital = capital*interest^years
+  return(newcapital)
+}
+```
+
+Några saker att notera:
+
+-   Man använder alltid ordet `function` där att definiera en funktion.
+
+-   Funktionens input-argument skrivs inom parenteser. Vilka namn du väljer är helt fritt, men det måste vara samma variabelnamn som du sedan använder innanför de s k måsvingarna `{}` som innehåller den faktiska koden som gör jobbet.
+
+-   Funktionen tilldelas en variabel som jag gett namnet `capital_interest` , vilket är ett namn du väljer helt själv.
+
+-   Koden använder ränta-på-ränta formeln $capital\cdot interest^{years}$ , dvs räntan, angett som 1.1 om du får 10% ränta, upphöjs i antal sparandeår. Upphöjt skrivs som `^` i R.
+
+-   Funktionen avslutar med ordet `return` och den variabel du vill att funktionen ska ge tillbaka som output.
+
+Om jag sen vill använda min funktion för att se hur min hundring på banken kommer att utvecklas under 20 år med 5% ränta så skriver jag (jag **anropar** funktionen):
+
+```{r}
+my_money = capital_interest(100, 1.05, 20)
+my_money
+```
+
+Vi sa ovan att vi tilldelade variabeln `capital_interest` en funktion. 🤯 Wait, what? Jo, faktiskt, om vi undersöker vilken typ av variabel `capital_interest` är så är det faktiskt en funktion:
+
+```{r}
+class(capital_interest)
+```
+
+När vi skrev variabel `kapital` i Console skrev den ut värdet, t ex 100. Vad händer om vi göra samma sak med vår funktionsvariabel `capital_interest` ? Hela funktionen skrivs ut som text!
+
+```{r}
+ capital_interest 
+```
+
+Vi kommer inte att skriva egna funktioner på kursen. Men du kommer att använda funktioner. Och då kan det vara bra att veta att någon har skrivit dessa funktioner på precis det sätt som vi skapade funktionen `capital_interest` ovan.
+
+En sista sak: vissa funktioner har inga inputargument och ibland inte heller några outputs. Det betyder inte att funktionen inte gör något, utan den har istället vissa sido-effekter som inte alltid syns. `setwd` är t ex funktion som har sökvägen som input, men har inga output, men däremot sidoeffekten att ändra working directory. Funktionen `getwd()` har inga input-argument men ger tillbaka din nuvarande working directory som output.
+
+## 11. Quarto: skriva rapporter med text, kod och figurer
 
 Det traditionella sättet att skriva en (statistisk) rapport har varit:
 
@@ -274,9 +490,9 @@ Det traditionella sättet att skriva en (statistisk) rapport har varit:
 
 -   Rapporten skrivs slutligen till en pdf-fil eller i html-format för att visas som en webbsida.
 
-Quarto är ett system som gör det möjligt att göra alla stegen ovan i en integrerad process. Quarto-dokument (filerna heter någotnamn.qmd) låter dig mixa text (markdown), kod, figurer, tabeller och matematiska formler i ett enda dokument. Det dokumentet kan du sen välja att skriva ut som pdf, html, blog, webbsida etc. Eftersom koden är integrerad i dokumentet så är Quarto-filer interaktiva i den meningen att du kan skicka ditt Quarto-dokument till en annan person och den personen kan t ex ändra en variabel eller datamaterial i koden och sen köra om hela Quarto-dokumentet med alla tabeller och figurer uppdaterade utefter de ändringar personen gjort i koden. Det här dokumentet är skrivet i Quarto! [Här](../tutorials/Quarto/Intro2Quarto.html) är ett enkelt Quarto-dokument som du kan öppna i RStudio och leka runt med.
+Quarto är ett system som gör det möjligt att göra alla stegen ovan i en integrerad process. Quarto-dokument (filerna heter någotnamn.qmd) låter dig mixa text (markdown), kod, figurer, tabeller och matematiska formler i ett enda dokument. Det dokumentet kan du sen välja att skriva ut som pdf, html, blog, webbsida etc. Eftersom koden är integrerad i dokumentet så är Quarto-filer interaktiva i den meningen att du kan skicka ditt Quarto-dokument till en annan person och den personen kan t ex ändra en variabel eller datamaterial i koden och sen köra om hela Quarto-dokumentet med alla tabeller och figurer uppdaterade utefter de ändringar personen gjort i koden. Det här dokumentet är skrivet i Quarto! [Här](../../tutorials/Quarto/Intro2Quarto.qmd) är ett enkelt Quarto-dokument som du kan ladda ner och öppna i RStudio och leka runt med. En [html](../../tutorials/Quarto/Intro2Quarto.html) version finns här om du vill se slutresultatet av Quarto-dokumentet.
 
-## 10. Sammanfattning
+## 12. Sammanfattning
 
 I den här datorlaborationen har du lärt dig att:
 
@@ -289,16 +505,3 @@ I den här datorlaborationen har du lärt dig att:
 -   Skriva kod både i Console och Editorn.
 
 -   Läsa in data från fil och göra inledande grafer och medelvärdeberäkningar för dataanalys.
-
-Här är hela koden i ett stycke:
-
-```{r}
-#| echo: true
-setwd('/home/mv/Dropbox/Teaching/SDA1/datorlab') # I have a Linux computer and my data is in this path
-library(xlsx)                         
-stockdata = read.xlsx('stock.xlsx', 1, header=TRUE)
-meancapital = mean(stockdata$capital)
-plot(capital ~ year, data = stockdata)
-```
-
-Notera att vi kan skriva **kommentarer** i koden genom tecknet `#` innan kommentaren. Allt efter tecknet `#` ignoreras av R när den läser koden. Det kan vara ett bra sätt att förklara en kodrad för användaren.
