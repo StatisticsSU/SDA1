@@ -91,13 +91,6 @@
     "text": "12. Sammanfattning\nI den här datorlaborationen har du lärt dig att:\n\nAnvända R som en miniräknare.\nAnvända variabler som ett sätt att spara värden i en session.\nSätta working directory så R kan hitta dina filer.\nSkriva kod både i Console och Editorn.\nLäsa in data från fil och göra inledande grafer och medelvärdeberäkningar för dataanalys."
   },
   {
-    "objectID": "index (pop-os's conflicted copy 2022-10-25).html#datamaterial",
-    "href": "index (pop-os's conflicted copy 2022-10-25).html#datamaterial",
-    "title": "Statistisk dataanalys I, 15 hp",
-    "section": "Datamaterial",
-    "text": "Datamaterial\nKursboken kommer med över 500 olika datamaterial som hittas här. Datamaterialen är i ofta i Excel-format, se denna guide om hur man läser in data från Excel i R."
-  },
-  {
     "objectID": "tutorials/ReadingDataFromFile/ReadingDataFromFile.html",
     "href": "tutorials/ReadingDataFromFile/ReadingDataFromFile.html",
     "title": "Reading data from an file",
@@ -194,6 +187,13 @@
     "title": "Statistik och dataanalys I",
     "section": "Tabs",
     "text": "Tabs\n\nTab ATab B\n\n\nContent for Tab A\n\n\nContent for Tab B\n\n\n\n\n\n\nStatistik och dataanalys I     ·     Dataanalys, 7.5 hp"
+  },
+  {
+    "objectID": "stealourcourse.html",
+    "href": "stealourcourse.html",
+    "title": "Stjäl vår kurs",
+    "section": "",
+    "text": "Vi undersöker hur vi kan ge kursen en slags copyleft licens som gör att den som använder kursmaterialet här på en ny kurs måste se till att även göra den kursens material tillgängligt för alla. Vi vill inte att kursens material och eventuella förbättringar ska bli inlåsta bakom olika universitets undervisningplattformar. Tanken är istället att materialet förädlas av andra, som i sin tur delar vidare till allmänheten.\n\nKunskap mår bäst ute i friska luften så alla kan ta del av den. Det ger kurserna en transparens som hjälper till att hålla dem aktuella, korrekta och relevanta.\n\n\n\n\n\n\n\nDen som klonar materialet ansvarar själv för eventuella fel och skador som kan uppstå. Vi som skapat kursen tar inget som helst ansvar för detta.\n\n\n\n\n\n\n\n\n\nNågra bilder här har köpts in från bildbanker och får endast användas om användaren själv betalar för dem. Tanken är att det ska finnas en lista på vilka bilder det handlar om, men ännu har vi inte tagit oss tid att skriva ner detta.\n\n\n\nMer info kommer att komma här när kursmaterialet blir mer komplett."
   },
   {
     "objectID": "assignments/Inlamningsuppgift1.html",
