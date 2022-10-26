@@ -4,7 +4,7 @@
     "href": "datorlab/lab1/DatorLab1.html#introduktion",
     "title": "Statistik och dataanalys I, 15 hp",
     "section": "Introduktion",
-    "text": "Introduktion\nDen här första datorlabben bekantar er med programmeringsspråket R och dess arbetsmiljö RStudio. Om du inte sitter på en dator på Campus måste du först installera R och sen RStudio. Se videon installera R och Rstudio för instruktioner.\nFör att starta RStudio letar du bara upp programmet på din dator och klickar på startikonen. När RStudio startas upp kommer det att se ut så här (kan se olika ut på olika datorer):\n\nDe olika delarna av RStudio kallas ofta för Panes. Vi kommer gå igenom dessa delar vartefter, men vi börjar med att utforska Console, även kallad terminalen."
+    "text": "Introduktion\n\nI den här första datorlabben kommer ni bekanta er med programmeringsspråket R och dess arbetsmiljö RStudio.\n\n\n\n\n\n\n\nInstruktioner\n\n\n\n💪 Avsnitt med den här symbolen är uppgifter där ni ska göra något.\n\n\n\n\n\n\n\n\nJobba med R på egen dator\n\n\n\nOm du inte sitter i en datorsal på Campus måste du först installera R och sen RStudio. Se videon installera R och Rstudio för instruktioner.\n\n\nFör att starta RStudio letar du bara upp programmet på din dator och klickar på startikonen. När RStudio startas upp kommer det att se ut så här (kan se olika ut på olika datorer):\n\nDe olika delarna av RStudio kallas ofta för Panes. Vi kommer gå igenom dessa delar vartefter, men vi börjar med att utforska Console, även kallad terminalen."
   },
   {
     "objectID": "datorlab/lab1/DatorLab1.html#använda-r-som-en-miniräknare",
