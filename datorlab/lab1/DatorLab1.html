@@ -410,7 +410,7 @@ Se upp!
 </p></li>
 </ul>
 <p>Excel-filen har jag döpt till <em>stock.xlsx</em>, men den kan döpas till precis vad som helst.</p>
-<p>Om R ska kunna läsa in data från filen stock.xlsx så måste vi tala om var filen finns på vår dator. Enklast är då att ställa in Rs <strong>working directory</strong>, det standardställe där letar efter filer i den pågående sessionen. Det finns två sätt att göra detta, varav vi endast rekommenderar det första om man är absolut nybörjare. Rätt snart bör du lära dig att använda det andra sättet, som är smidigare i längden.</p>
+<p>Om R ska kunna läsa in data från filen stock.xlsx så måste vi tala om <em>var</em> filen finns på vår dator. Enklast är då att ställa in Rs <strong>working directory</strong>, dvs det standardställe där R letar efter filer i den pågående sessionen. Det finns två sätt att göra detta, varav vi endast rekommenderar det första om man är absolut nybörjare. Rätt snart bör du lära dig att använda det andra sättet, som är smidigare i längden.</p>
 <ol type="1">
 <li>Spara/flytta filen stock.xlsx till din kurskatalog som du skapade i del 3 ovan, dvs mappen <strong>SDA1</strong> i <strong>Documents</strong>. <strong>Working directory</strong> är den mapp som R kommer leta efter filer i. Ändra din arbetsmapp (<strong>working directory</strong>) i R till samma mapp <strong>SDA1</strong> i <strong>Documents</strong> genom att välja menyn <u><strong>S</strong></u><strong>ession</strong> och sen <strong>Set <u>W</u>orking Directory</strong> och slutligen <u><strong>C</strong></u><strong>hoose Directory…</strong> och sedan klicka dig fram till mappen SDA1.</li>
 </ol>
@@ -436,7 +436,7 @@ Se upp!
 <h2 class="anchored" data-anchor-id="läsa-in-data-från-fil">6. Läsa in data från fil</h2>
 <p>Vi vill nu läsa in data från Excelfilen stock.xlsx. Du kan ladda ner den filen <a href="https://github.com/StatisticsSU/SDA1/datorlabb/labb1/aktiespar.xlsx">här</a>. Beroende på din dator så kommer en av två saker hända:</p>
 <ol type="1">
-<li><p>filen stock.xlsx hamnar automatiskt i mappen <strong>Downloads</strong> (eller liknande) på din dator. Du får då kopiera eller flytta filen till din working directory (din SDA1 mapp) genom att använda dators filhanterare.</p></li>
+<li><p>filen stock.xlsx hamnar automatiskt i mappen <strong>Downloads</strong> (eller liknande) på din dator. Du får då kopiera eller flytta filen till din working directory (din SDA1 mapp) genom att använda datorns filhanterare.</p></li>
 <li><p>du får välja var du vill spara ner filen. Klicka dig fram till din working directory (din SDA1 mapp) och spara filen där.</p></li>
 </ol>
 <p>R kommer nu att hitta filen och vi är redo att skriva kommandot som läser in filen. Eftersom det är första gången du läser in en Excel-fil behöver du göra lite grundjobb. Vi ska göra tre steg:</p>
