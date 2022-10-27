@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Mattias Villani">
-<meta name="dcterms.date" content="2022-10-26">
+<meta name="dcterms.date" content="2022-10-27">
 
 <title>SDA1 - Statistik och dataanalys I, 15 hp</title>
 <style>
@@ -217,7 +217,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">October 26, 2022</p>
+      <p class="date">October 27, 2022</p>
     </div>
   </div>
     
@@ -415,7 +415,7 @@ Se upp!
 <p>Excel-filen har jag döpt till <em>stock.xlsx</em>, men den kan döpas till precis vad som helst.</p>
 <p>Om R ska kunna läsa in data från filen stock.xlsx så måste vi tala om <em>var</em> filen finns på vår dator. Enklast är då att ställa in Rs <strong>working directory</strong>, dvs det standardställe där R letar efter filer i den pågående sessionen. Det finns två sätt att göra detta, varav vi endast rekommenderar det första om man är absolut nybörjare. Rätt snart bör du lära dig att använda det andra sättet, som är smidigare i längden.</p>
 <ol type="1">
-<li>Spara/flytta filen stock.xlsx till din kurskatalog som du skapade i del 3 ovan, dvs mappen <strong>SDA1</strong> i <strong>Documents</strong>. <strong>Working directory</strong> är den mapp som R kommer leta efter filer i. Ändra din arbetsmapp (<strong>working directory</strong>) i R till samma mapp <strong>SDA1</strong> i <strong>Documents</strong> genom att välja menyn <u><strong>S</strong></u><strong>ession</strong> och sen <strong>Set <u>W</u>orking Directory</strong> och slutligen <u><strong>C</strong></u><strong>hoose Directory…</strong> och sedan klicka dig fram till mappen SDA1.</li>
+<li><strong>Working directory</strong> är den mapp som R kommer leta efter filer i. Ändra din arbetsmapp (<strong>working directory</strong>) i R till samma mapp <strong>SDA1</strong> i <strong>Documents</strong> genom att välja menyn <u><strong>S</strong></u><strong>ession</strong> och sen <strong>Set <u>W</u>orking Directory</strong> och slutligen <u><strong>C</strong></u><strong>hoose Directory…</strong> och sedan klicka dig fram till mappen SDA1.</li>
 </ol>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -426,7 +426,7 @@ Se upp!
 <li>För att slippa att klicka sig fram via menyer hela tiden så är det praktiskt att ändra working directory i början av den kodfil som man jobbar med. Då kan man bara köra den kodfilen och working directory ställs in automatiskt. Kommandot <code>setwd</code> gör samma sak som punkten 1 gjorde via menyerna. Här måste vi dock veta <strong>sökvägen</strong> (<strong>path</strong>) till mappen, dvs datorns sätt att hitta till (under)mappen <strong>SDA1</strong> i <strong>Documents</strong>-mappen. Sättet att skriva sökvägar på skiljer sig åt på Windows/Mac/Linux:
 <ul>
 <li><p><img src="mac.png" class="img-fluid" width="20"> På en Mac skriver vi kommandot: <code>setwd('/Users/username/Documents/SDA1')</code> där <code>username</code> ska ersättas med ditt användnamn på din Mac (namnet som kommer upp när du loggar in på datorn). Notera de små ‘blipparna’ kring filvägen i <code>setwd</code> kommandot.</p></li>
-<li><p><img src="windows.png" class="img-fluid" width="15"> På en Windows-dator skriver kommandot <code>setwd('C:/Documents/SDA1')</code>. Notera de små ‘blipparna’ kring filvägen i <code>setwd</code> kommandot. [Windows-sökvägar skrivs vanligtvis med backslash <code>\</code>. I RStudio skriver man ändå <code>/</code> för att matcha med Mac och Linux].</p></li>
+<li><p><img src="windows.png" class="img-fluid" width="15"> På en Windows-dator skriver vi kommandot <code>setwd('C:/Documents/SDA1')</code>. Notera de små ‘blipparna’ kring filvägen i <code>setwd</code> kommandot. [Windows-sökvägar skrivs vanligtvis med backslash <code>\</code>. I RStudio skriver man ändå <code>/</code> för att matcha med Mac och Linux].</p></li>
 <li><p><img src="linux.png" class="img-fluid" width="20"> På en Linux-dator skriver vi kommandot <code>setwd('/home/username/Documents/SDA1')</code> där <code>username</code> ska ersättas med ditt användnamn som använder när du loggar in.</p></li>
 </ul></li>
 </ol>
@@ -437,7 +437,7 @@ Se upp!
 </section>
 <section id="läsa-in-data-från-fil" class="level2">
 <h2 class="anchored" data-anchor-id="läsa-in-data-från-fil">6. Läsa in data från fil</h2>
-<p>Vi vill nu läsa in data från Excelfilen stock.xlsx. Du kan ladda ner den filen <a href="https://github.com/StatisticsSU/SDA1/datorlabb/labb1/aktiespar.xlsx">här</a>. Beroende på din dator så kommer en av två saker hända:</p>
+<p>Vi vill nu läsa in data från Excelfilen stock.xlsx. Du kan ladda ner den filen <a href="https://github.com/StatisticsSU/SDA1/datorlabb/lab1/stock.xlsx">här</a>. Beroende på din dator så kommer en av två saker hända:</p>
 <ol type="1">
 <li><p>filen stock.xlsx hamnar automatiskt i mappen <strong>Downloads</strong> (eller liknande) på din dator. Du får då kopiera eller flytta filen till din working directory (din SDA1 mapp) genom att använda datorns filhanterare.</p></li>
 <li><p>du får välja var du vill spara ner filen. Klicka dig fram till din working directory (din SDA1 mapp) och spara filen där.</p></li>
@@ -488,7 +488,7 @@ Det är några saker att reda ut här. Först, <code>read.xlsx()</code> är en <
 </div>
 <div class="callout-body-container">
 <p>Istället för att placera alla filer i din working directory <strong>SDA1</strong> kan man istället ange sökvägen till filen när man läser in den. Om jag t ex har sparat filen i mappen <strong>Downloads</strong> på en Windows-dator så skriver jag <strong><br>
-</strong><code>stockdata = read.xlsx('C:\\Downloads\\stock.xlsx', 1, header=TRUE)</code>.</p>
+</strong><code>stockdata = read.xlsx('C:/Downloads/stock.xlsx', 1, header=TRUE)</code>.</p>
 </div>
 </div>
 </div>
