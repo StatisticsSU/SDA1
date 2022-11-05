@@ -2,46 +2,66 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://StatisticsSU.github.io/SDA1/datorlab/lab1/DatorLab1.html</loc>
-    <lastmod>2022-10-26T17:34:15.236Z</lastmod>
+    <lastmod>2022-11-05T19:05:53.478Z</lastmod>
+  </url>
+  <url>
+    <loc>https://StatisticsSU.github.io/SDA1/datorlab/lab2/DatorLab2.html</loc>
+    <lastmod>2022-11-05T19:05:38.066Z</lastmod>
   </url>
   <url>
     <loc>https://StatisticsSU.github.io/SDA1/tutorials/ReadingDataFromFile/ReadingDataFromFile.html</loc>
-    <lastmod>2022-10-26T17:34:29.216Z</lastmod>
+    <lastmod>2022-11-05T19:05:40.630Z</lastmod>
   </url>
   <url>
     <loc>https://StatisticsSU.github.io/SDA1/tutorials/Quarto/Intro2Quarto.html</loc>
-    <lastmod>2022-10-26T17:34:30.612Z</lastmod>
+    <lastmod>2022-11-05T19:05:42.358Z</lastmod>
+  </url>
+  <url>
+    <loc>https://StatisticsSU.github.io/SDA1/R/TidyverseSyntax.html</loc>
+    <lastmod>2022-11-05T19:05:44.034Z</lastmod>
+  </url>
+  <url>
+    <loc>https://StatisticsSU.github.io/SDA1/R/BaseRSyntax.html</loc>
+    <lastmod>2022-11-05T19:05:45.098Z</lastmod>
+  </url>
+  <url>
+    <loc>https://StatisticsSU.github.io/SDA1/R/Rcommands.html</loc>
+    <lastmod>2022-11-05T19:05:52.650Z</lastmod>
+  </url>
+  <url>
+    <loc>https://StatisticsSU.github.io/SDA1/R/FormulaSyntax.html</loc>
+    <lastmod>2022-11-05T19:05:54.934Z</lastmod>
   </url>
   <url>
     <loc>https://StatisticsSU.github.io/SDA1/slides/SDA1_L1.html</loc>
-    <lastmod>2022-10-26T17:34:30.888Z</lastmod>
+    <lastmod>2022-11-05T19:05:55.530Z</lastmod>
   </url>
   <url>
     <loc>https://StatisticsSU.github.io/SDA1/stealourcourse.html</loc>
-    <lastmod>2022-10-26T17:34:31.172Z</lastmod>
+    <lastmod>2022-11-05T19:05:55.854Z</lastmod>
   </url>
   <url>
     <loc>https://StatisticsSU.github.io/SDA1/assignments/Inlamningsuppgift1.html</loc>
-    <lastmod>2022-10-26T17:34:31.440Z</lastmod>
+    <lastmod>2022-11-05T19:05:56.154Z</lastmod>
   </url>
   <url>
     <loc>https://StatisticsSU.github.io/SDA1/DelA.html</loc>
-    <lastmod>2022-10-26T17:34:31.724Z</lastmod>
+    <lastmod>2022-11-05T19:05:56.478Z</lastmod>
   </url>
   <url>
     <loc>https://StatisticsSU.github.io/SDA1/index.html</loc>
-    <lastmod>2022-10-26T17:34:32.012Z</lastmod>
+    <lastmod>2022-11-05T19:05:56.762Z</lastmod>
   </url>
   <url>
     <loc>https://StatisticsSU.github.io/SDA1/R.html</loc>
-    <lastmod>2022-10-26T17:34:33.068Z</lastmod>
+    <lastmod>2022-11-05T19:05:57.938Z</lastmod>
   </url>
   <url>
     <loc>https://StatisticsSU.github.io/SDA1/DelB.html</loc>
-    <lastmod>2022-10-26T17:34:33.324Z</lastmod>
+    <lastmod>2022-11-05T19:05:58.238Z</lastmod>
   </url>
   <url>
     <loc>https://StatisticsSU.github.io/SDA1/about.html</loc>
-    <lastmod>2022-10-26T17:34:33.564Z</lastmod>
+    <lastmod>2022-11-05T19:05:58.486Z</lastmod>
   </url>
 </urlset>
