@@ -1,0 +1,20 @@
+---
+title: "Formula syntax"
+author: "Mattias Villani"
+editor: visual
+---
+
+## Scatter plot 
+
+En vanlig scatter plot fås genom:
+
+```{r}
+plot(mpg ~ hp, data = mtcars, main = "Cars fuel usage")
+```
+
+Med ggformula paketet kan man använda formel-syntax, men få plottar som liknar Tidyverse:
+
+```{r}
+library(ggformula)
+gf_point(mpg ~ hp, data = mtcars, title = "Cars fuel usage")
+```

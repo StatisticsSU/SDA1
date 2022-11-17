@@ -65,7 +65,7 @@ Uppgifter: SDM 7-9
 ### **Datorlaborationer**
 
 **Datorlaboration 1 - Intro till R**\
-Uppgifter: [html](/datorlab/lab1/DatorLab1.html) eller [pdf](/datorlab/lab1/DatorLab1.pdf) | [Intro till Quarto rapportskrivning](/tutorials/Quarto/Intro2Quarto.html)
+Uppgifter: [html](/datorlab/lab1/DatorLab1.html) eller [pdf](/datorlab/lab1/DatorLab1.pdf)
 
 **Datorlaboration 2 - Beskrivande statistik och visualisering i R**\
 Uppgifter: [Datorlab 2](/misc/larry.png) 

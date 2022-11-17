@@ -1,0 +1,27 @@
+---
+title: Statistik och dataanalys I, 15 hp
+subtitle: Datorlaboration 2
+author: "Mattias Villani"
+date: last-modified
+format:
+  html: default
+  pdf: default
+#title-block-banner: true
+---
+
+------------------------------------------------------------------------
+
+
+## Quarto: skriva rapporter med text, kod och figurer
+
+Det traditionella sättet att skriva en (statistisk) rapport har varit:
+
+-   Skriva R-kod i t ex RStudio som gör den statistiska analysen, dvs genererar resultaten och eventuella grafer.
+
+-   Skriva en rapport i ett ordbehandlingsprogram, t ex Word, där resultaten sammanfattas i tabeller och figurer klistras in.
+
+-   Matematiska formler skrivs ofta i en add-on modul i ordbehandlaren.
+
+-   Rapporten skrivs slutligen till en pdf-fil eller i html-format för att visas som en webbsida.
+
+Quarto är ett system som gör det möjligt att göra alla stegen ovan i en integrerad process. Quarto-dokument (filerna heter någotnamn.qmd) låter dig mixa text (markdown), kod, figurer, tabeller och matematiska formler i ett enda dokument. Det dokumentet kan du sen välja att skriva ut som pdf, html, blog, webbsida etc. Eftersom koden är integrerad i dokumentet så är Quarto-filer interaktiva i den meningen att du kan skicka ditt Quarto-dokument till en annan person och den personen kan t ex ändra en variabel eller datamaterial i koden och sen köra om hela Quarto-dokumentet med alla tabeller och figurer uppdaterade utefter de ändringar personen gjort i koden. Det här dokumentet är skrivet i Quarto! [Här](../../tutorials/Quarto/Intro2Quarto.qmd) är ett enkelt Quarto-dokument som du kan ladda ner och öppna i RStudio och leka runt med. En [html](../../tutorials/Quarto/Intro2Quarto.html) version finns här om du vill se slutresultatet av Quarto-dokumentet.

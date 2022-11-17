@@ -1,0 +1,16 @@
+---
+title: "Tidyverse syntax"
+author: "Mattias Villani"
+editor: visual
+---
+
+## Scatter plot
+
+```{r}
+library(ggplot2)
+ggplot(data = mtcars, aes(x = hp, y = mpg)) +
+  geom_point() + 
+  ggtitle("Cars fuel usage") 
+```
+
+Se [ggplot2 cheat sheet](https://posit.co/wp-content/uploads/2022/10/data-visualization-1.pdf) för fler kommandon.

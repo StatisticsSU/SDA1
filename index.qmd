@@ -2,7 +2,7 @@
 title: "Statistik och dataanalys I, 15 hp"
 ---
 
-<img src="/images/flashytimeseries.jpg" width="100%" class="center" alt = "Flashy time series image">
+<img src="/images/flashytimeseries.jpg" alt="Flashy time series image" class="center" width="100%"/>
 
 ### Kursens innehåll
 
@@ -10,40 +10,36 @@ title: "Statistik och dataanalys I, 15 hp"
 
 Kursen ger dig en översikt av metoder för statistisk dataanalys och dess många tillämpningar. En introduktion till dataanalys följs av praktisk datahantering i det populära statistiska [programspråket R](R.html). Samband mellan variabler analyseras, och du tränas i hur statistiska modeller kan användas för att förutsäga nya data. Slutsatser från data är alltid osäkra och en viktig del av kursen är därför sannolikhetsberäkningar. Sannolikhetsteorin används sedan i de inferensmetoder som gör det möjligt att dra korrekta slutsatser från data och fatta optimala beslut under osäkerhet.
 
-Du lär dig att utföra dataanalyser i praktiken, bl a genom datorlaborationer och två inlämningsuppgifter, men kursen ger dig även en kritisk blick på statistik som gör att du kan ifrågasätta, tolka och söka ny information för att bättre svara på olika frågeställningar.  
+Du lär dig att utföra dataanalyser i praktiken, bl a genom datorlaborationer och två inlämningsuppgifter, men kursen ger dig även en kritisk blick på statistik som gör att du kan ifrågasätta, tolka och söka ny information för att bättre svara på olika frågeställningar.
 
 Kursen består av två delar:
 
-- [Dataanalys, 7.5 hp.](DelA.html)
-I det här momentet ingår insamling, bearbetning, visualisering och sammanfattning av data i programspråket R. En stor del av momentet behandlar sambands- och regressionsanalys som utmynnar i metoder för prediktion.
-- [Statistiska modeller och inferens, 7.5 hp.](DelB.html)
-I kursens andra momentet behandlas sannolikheter, slumpvariabler och sannolikhetsfördelningar. En central del i momentet är inferens, dvs. statistiska metoder för att dra slutsatser om olika fenomen från data. Kursen avslutas med en introduktion till beslutsfattade under osäkerhet.
+-   [Dataanalys, 7.5 hp.](DelA.html) I det här momentet ingår insamling, bearbetning, visualisering och sammanfattning av data i programspråket R. En stor del av momentet behandlar sambands- och regressionsanalys som utmynnar i metoder för prediktion.
+-   [Statistiska modeller och inferens, 7.5 hp.](DelB.html) I kursens andra momentet behandlas sannolikheter, slumpvariabler och sannolikhetsfördelningar. En central del i momentet är inferens, dvs. statistiska metoder för att dra slutsatser om olika fenomen från data. Kursen avslutas med en introduktion till beslutsfattade under osäkerhet.
 
 ### Kurslitteratur
 
-* De Veaux, R., Velleman, P. och Bock, D. (2021). 
-[Stats: Data and Models](https://media.pearsoncmg.com/intl/ge/2021/cws/ge_deveaux_stats_5/statdm5d_cw.html), Pearson Global Edition, Studentlitteratur. Boken förkortas **SDM** nedan.
-* Ytterligare kompletterande material som delas ut under kursens gång.  
+-   De Veaux, R., Velleman, P. och Bock, D. (2021). [Stats: Data and Models](https://media.pearsoncmg.com/intl/ge/2021/cws/ge_deveaux_stats_5/statdm5d_cw.html), Pearson Global Edition, Studentlitteratur. Boken förkortas **SDM** nedan.
+-   Ytterligare kompletterande material som delas ut under kursens gång.
 
 ### Kursstruktur och schema
 
 Kursen består av föreläsningar, räkneövningar och datorlaborationer.\
 Kursens schema finns på [TimeEdit]().
 
-
 ### Lärare
-:::{layout="[ [1,1],[1,1] ]"}
-<img src="/misc/VillaniLowRes.jpg" width="35%">\
+
+::: {layout="[ [1,1],[1,1] ]"}
+<img src="/misc/VillaniLowRes.jpg" width="35%"/>\
 [Mattias Villani](https://mattiasvillani.com)<br>Kursansvarig och föreläsare<br>Professor
 
-
-<img src="/misc/QuirozPhoto.jpg" width="40%">\
+<img src="/misc/QuirozPhoto.jpg" width="40%"/>\
 [Matias Quiroz](https://matiasquiroz.com)<br>Föreläsare<br>Universitetslektor
 
-<img src="/misc/female.png" width="30%">\
+<img src="/misc/female.png" width="30%"/>\
 [TBD](https://matiasquiroz.com)<br>Övningslärare<br>Masterexamen i Statistik
 
-<img src="/misc/female.png" width="30%">\
+<img src="/misc/female.png" width="30%"/>\
 [TBD](https://matiasquiroz.com)<br>Övningslärare<br>Kandidatexamen i Statistik
 :::
 
@@ -51,4 +47,4 @@ Kursens schema finns på [TimeEdit]().
 
 Kursboken kommer med över 500 olika datamaterial som hittas [här](https://media.pearsoncmg.com/intl/ge/2021/cws/ge_deveaux_stats_5/statdm5d_datasets.html). Datamaterialen är i ofta i Excel-format, se denna [guide](/tutorials/ReadingExcelData/ReadingExcelData.html) om hur man läser in data från Excel i R.
 
----
+------------------------------------------------------------------------

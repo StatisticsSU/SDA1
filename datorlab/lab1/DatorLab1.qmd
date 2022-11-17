@@ -41,6 +41,12 @@ Ett bra sätt för att vänja sig vid R är att använda R som en slags miniräk
 
 Tecknet `>` kallas för **kommandoprompt** (eller bara **prompt**) och är R's sätt att tala om att det väntar på att ett nytt kommando ska skrivas in (vid det blinkande strecket). Vi säger att vi 'skriver in något på prompten'.
 
+::: callout-note
+## Multiplikation och division
+
+R använder `*` för multiplikation och `/` för division. Potenser (upphöjt till) skrivs med tecknet `^` (`Shift` + tangent till vänster om `Enter`). Så 3\^2 är 9.
+:::
+
 #### 💪 Uppgift 1.1
 
 Prova att skriva 2+2 efter det nedersta `>` tecknet i **Console** och sedan trycka på `Enter`-tangenten. R bör svara (**returnera**) med talet 4.
@@ -113,6 +119,12 @@ Det är viktigt att ha ordning på sina filer på datorn och kunna tala om för 
 
 -   ![](linux.png){width="20"} Linux: Starta programmet **Nautilus** (om du använder Ubuntu, annars kan du prova att söka på ordet files om din Linux-distribution använder en annan filhanterare). Klicka på mappen **Documents**. Skapa en ny mapp med namnet **SDA1**.
 
+::: callout-warning
+    Inga åäö!
+    Använd inte åäö i namn på filmappar eller filer.
+    Stor risk att du får problem då.
+:::
+
 #### 💪 Uppgift 3.1
 
 Skapa mappen **SDA1** i **Documents** på din dator.
@@ -165,14 +177,14 @@ Excel-filen har jag döpt till *stock.xlsx*, men den kan döpas till precis vad 
 
 Om R ska kunna läsa in data från filen stock.xlsx så måste vi tala om *var* filen finns på vår dator. Enklast är då att ställa in Rs **working directory**, dvs det standardställe där R letar efter filer i den pågående sessionen. Det finns två sätt att göra detta, varav vi endast rekommenderar det första om man är absolut nybörjare. Rätt snart bör du lära dig att använda det andra sättet, som är smidigare i längden.
 
-1.  Spara/flytta filen stock.xlsx till din kurskatalog som du skapade i del 3 ovan, dvs mappen **SDA1** i **Documents**. **Working directory** är den mapp som R kommer leta efter filer i. Ändra din arbetsmapp (**working directory**) i R till samma mapp **SDA1** i **Documents** genom att välja menyn [**S**]{.underline}**ession** och sen **Set [W]{.underline}orking Directory** och slutligen [**C**]{.underline}**hoose Directory...** och sedan klicka dig fram till mappen SDA1.
+1.  **Working directory** är den mapp som R kommer leta efter filer i. Ändra din arbetsmapp (**working directory**) i R till samma mapp **SDA1** i **Documents** genom att välja menyn [**S**]{.underline}**ession** och sen **Set [W]{.underline}orking Directory** och slutligen [**C**]{.underline}**hoose Directory...** och sedan klicka dig fram till mappen SDA1.
 
 ![](setwd_menu.png){fig-align="center" width="359"}
 
 2.  För att slippa att klicka sig fram via menyer hela tiden så är det praktiskt att ändra working directory i början av den kodfil som man jobbar med. Då kan man bara köra den kodfilen och working directory ställs in automatiskt. Kommandot `setwd` gör samma sak som punkten 1 gjorde via menyerna. Här måste vi dock veta **sökvägen** (**path**) till mappen, dvs datorns sätt att hitta till (under)mappen **SDA1** i **Documents**-mappen. Sättet att skriva sökvägar på skiljer sig åt på Windows/Mac/Linux:
     -   ![](mac.png){width="20"} På en Mac skriver vi kommandot: `setwd('/Users/username/Documents/SDA1')` där `username` ska ersättas med ditt användnamn på din Mac (namnet som kommer upp när du loggar in på datorn). Notera de små 'blipparna' kring filvägen i `setwd` kommandot.
 
-    -   ![](windows.png){width="15"} På en Windows-dator skriver kommandot `setwd('C:/Documents/SDA1')`. Notera de små 'blipparna' kring filvägen i `setwd` kommandot. \[Windows-sökvägar skrivs vanligtvis med backslash `\`. I RStudio skriver man ändå `/` för att matcha med Mac och Linux\].
+    -   ![](windows.png){width="15"} På en Windows-dator skriver vi kommandot `setwd('C:/Documents/SDA1')`. Notera de små 'blipparna' kring filvägen i `setwd` kommandot. \[Windows-sökvägar skrivs vanligtvis med backslash `\`. I RStudio skriver man ändå `/` för att matcha med Mac och Linux\].
 
     -   ![](linux.png){width="20"} På en Linux-dator skriver vi kommandot `setwd('/home/username/Documents/SDA1')` där `username` ska ersättas med ditt användnamn som använder när du loggar in.
 
@@ -182,7 +194,7 @@ Ställ in din **SDA1** mapp som working directory i RStudio. Kontrollera att du 
 
 ## 6. Läsa in data från fil
 
-Vi vill nu läsa in data från Excelfilen stock.xlsx. Du kan ladda ner den filen [här](https://github.com/StatisticsSU/SDA1/datorlabb/labb1/aktiespar.xlsx). Beroende på din dator så kommer en av två saker hända:
+Vi vill nu läsa in data från Excelfilen stock.xlsx. Du kan ladda ner den filen [här](https://github.com/StatisticsSU/SDA1/datorlabb/lab1/stock.xlsx). Beroende på din dator så kommer en av två saker hända:
 
 1.  filen stock.xlsx hamnar automatiskt i mappen **Downloads** (eller liknande) på din dator. Du får då kopiera eller flytta filen till din working directory (din SDA1 mapp) genom att använda datorns filhanterare.
 
@@ -226,7 +238,7 @@ head(stockdata)
 
 ::: callout-tip
 Istället för att placera alla filer i din working directory **SDA1** kan man istället ange sökvägen till filen när man läser in den. Om jag t ex har sparat filen i mappen **Downloads** på en Windows-dator så skriver jag **\
-**`stockdata = read.xlsx('C:\\Downloads\\stock.xlsx', 1, header=TRUE)`.
+**`stockdata = read.xlsx('C:/Downloads/stock.xlsx', 1, header=TRUE)`.
 :::
 
 #### 💪 Uppgift 6.1
@@ -478,19 +490,33 @@ Vi kommer inte att skriva egna funktioner på kursen. Men du kommer att använda
 
 En sista sak: vissa funktioner har inga inputargument och ibland inte heller några outputs. Det betyder inte att funktionen inte gör något, utan den har istället vissa sido-effekter som inte alltid syns. `setwd` är t ex funktion som har sökvägen som input, men har inga output, men däremot sidoeffekten att ändra working directory. Funktionen `getwd()` har inga input-argument men ger tillbaka din nuvarande working directory som output.
 
-## 11. Quarto: skriva rapporter med text, kod och figurer
+## 11. Tre dialekter av R
 
-Det traditionella sättet att skriva en (statistisk) rapport har varit:
+Man kan dela upp R's språk i tre slags dialekter, dvs tre olika kommandon (syntax) för att göra ungefär samma sak:
 
--   Skriva R-kod i t ex RStudio som gör den statistiska analysen, dvs genererar resultaten och eventuella grafer.
+-   **Base-R** - den ursprungliga syntaxen in R
+-   **Formula syntax** - syntax som via paketet `Mosaic` har utvecklats undervisning i statistik
+-   **Tidyverse** - en modern syntax utvecklat av personerna bakom RStudio.
 
--   Skriva en rapport i ett ordbehandlingsprogram, t ex Word, där resultaten sammanfattas i tabeller och figurer klistras in.
+I SDA1 kommer vi försöka använda Formula syntax som mycket som möjligt, med inslag av Base-R. Tidyverse-kod kan ofta vara extremt effektiv, men tar för lång tid att lära sig på en grundkurs i statistik. Vi kommer dock då och då att visa hur man gör samma sak i de olika dialekterna, men på ett sätt som inte stör flödet för den student som helst vill hålla sig till ett sätt. Vi använder ikoner som du som student kan klicka på för att se ett kommando i olika dialekter. Här är ett exempel (prova att klicka ikonerna i höger-marginalen):
 
--   Matematiska formler skrivs ofta i en add-on modul i ordbehandlaren.
+I Formula syntax har vi redan sett att vi kan göra en scatter plot med kommandot
 
--   Rapporten skrivs slutligen till en pdf-fil eller i html-format för att visas som en webbsida.
+```{r}
+plot(mpg ~ hp, data = mtcars, main = "Cars fuel usage")
+```
 
-Quarto är ett system som gör det möjligt att göra alla stegen ovan i en integrerad process. Quarto-dokument (filerna heter någotnamn.qmd) låter dig mixa text (markdown), kod, figurer, tabeller och matematiska formler i ett enda dokument. Det dokumentet kan du sen välja att skriva ut som pdf, html, blog, webbsida etc. Eftersom koden är integrerad i dokumentet så är Quarto-filer interaktiva i den meningen att du kan skicka ditt Quarto-dokument till en annan person och den personen kan t ex ändra en variabel eller datamaterial i koden och sen köra om hela Quarto-dokumentet med alla tabeller och figurer uppdaterade utefter de ändringar personen gjort i koden. Det här dokumentet är skrivet i Quarto! [Här](../../tutorials/Quarto/Intro2Quarto.qmd) är ett enkelt Quarto-dokument som du kan ladda ner och öppna i RStudio och leka runt med. En [html](../../tutorials/Quarto/Intro2Quarto.html) version finns här om du vill se slutresultatet av Quarto-dokumentet.
+::: column-margin
+[![](../../misc/BaseRIcon.png){width="47" height="48"}](../../R/BaseRSyntax.qmd#scatter-plot) [![](../../misc/TidyIcon.png){width="47" height="48"}](../../R/TidyverseSyntax.qmd#scatter-plot)
+:::
+
+Om man vill ha plottar som liknar de fina plottarna i Tidyverse, men fortsätta att skriva den enklare formula-syntaxen så kan man använda paketet `ggformula`:
+
+```{r}
+#| message: false
+library(ggformula)
+gf_point(mpg ~ hp, data = mtcars, title = "Cars fuel usage")
+```
 
 ## 12. Sammanfattning
 

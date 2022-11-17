@@ -1,0 +1,20 @@
+---
+title: "Stjäl vår kurs"
+editor: visual
+---
+
+Vi som utvecklat den här kursen hoppas att andra lärare kan bli inspirerade av den, och vilja använda delar av den själva. Allt kursmaterial ligger därför öppet på GitHub [här](https://github.com/StatisticsSU/SDA1) och kan laddas ner eller klonas.
+
+Vi undersöker hur vi kan ge kursen en slags [copyleft licens](https://en.wikipedia.org/wiki/Copyleft) som gör att den som använder kursmaterialet här på en ny kurs måste se till att även göra den kursens material tillgängligt för alla. Vi vill inte att kursens material och eventuella förbättringar ska bli inlåsta bakom olika universitets undervisningplattformar. Tanken är istället att materialet förädlas av andra, som i sin tur delar vidare till allmänheten.
+
+> Kunskap mår bäst ute i friska luften så alla kan ta del av den. Öppet kursmaterial ger också en transparens som hjälper till att hålla kurserna aktuella, korrekta och relevanta.
+
+::: callout-warning
+Den som klonar materialet ansvarar själv för eventuella fel och skador som kan uppstå. Vi som skapat kursen tar inget som helst ansvar för detta.
+:::
+
+::: callout-warning
+Några bilder här har köpts in från bildbanker och får endast användas om användaren själv betalar för dem. Tanken är att det ska finnas en lista på vilka bilder det handlar om, men ännu har vi inte tagit oss tid att skriva ner detta.
+:::
+
+Mer info kommer att komma här när kursmaterialet blir mer komplett.

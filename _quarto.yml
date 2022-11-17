@@ -16,13 +16,17 @@ website:
         text: Statistiska modeller och inferens, 7.5 hp
       - href: R.qmd
         text: R
+      - href: stealourcourse.qmd
+        text: Stjäl vår kurs
 format:
   html:
-    theme: superhero # litera, lumen, superhero, united
+    theme:
+      dark: superhero # litera, lumen, superhero, united
+      light: lumen
     css: styles.css
     toc: true
     #monobackgroundcolor: #c3d0e6
-callout-appearance: simple
+callout-appearance: default
 
 
 

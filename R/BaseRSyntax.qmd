@@ -1,0 +1,11 @@
+---
+title: "Base-R"
+author: "Mattias Villani"
+editor: visual
+---
+
+## Scatter plot
+
+```{r}
+plot(mtcars$hp, mtcars$mpg, xlab = "hp", ylab = "mpg", main = "Cars fuel usage")
+```
