@@ -1,0 +1,16 @@
+{
+  "hash": "1791fdec32b3a8e5cdfb925a18f8f13b",
+  "result": {
+    "markdown": "---\ntitle: \"Tidyverse syntax\"\nauthor: \"Mattias Villani\"\neditor: visual\n---\n\n\n## Scatter plot\n\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(ggplot2)\nggplot(data = mtcars, aes(x = hp, y = mpg)) +\n  geom_point() + \n  ggtitle(\"Cars fuel usage\") \n```\n\n::: {.cell-output-display}\n![](TidyverseSyntax_files/figure-html/unnamed-chunk-1-1.png){width=672}\n:::\n:::\n\n\nSe [ggplot2 cheat sheet](https://posit.co/wp-content/uploads/2022/10/data-visualization-1.pdf) för fler kommandon.\n",
+    "supporting": [
+      "TidyverseSyntax_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Mattias Villani">
-<meta name="dcterms.date" content="2022-11-05">
+<meta name="dcterms.date" content="2022-11-17">
 
 <title>SDA1 - Statistik och dataanalys I, 15 hp</title>
 <style>
@@ -100,10 +100,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -164,6 +166,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <a class="nav-link" href="../../stealourcourse.html">Stjäl vår kurs</a>
   </li>  
 </ul>
+              <div class="quarto-toggle-container">
+                  <a href="" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+              </div>
               <div id="quarto-search" class="" title="Search"></div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
@@ -217,7 +222,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">November 5, 2022</p>
+      <p class="date">November 17, 2022</p>
     </div>
   </div>
     
@@ -232,7 +237,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <blockquote class="blockquote">
 <p>I den här första datorlabben kommer ni bekanta er med programmeringsspråket <strong>R</strong> och dess arbetsmiljö <strong>RStudio</strong>.</p>
 </blockquote>
-<div class="callout-tip callout callout-style-simple callout-captioned">
+<div class="callout-tip callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
@@ -245,7 +250,7 @@ Instruktioner
 <p>💪 Avsnitt med den här symbolen är uppgifter där ni ska göra något.</p>
 </div>
 </div>
-<div class="callout-warning callout callout-style-simple callout-captioned">
+<div class="callout-warning callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
@@ -271,7 +276,7 @@ Jobba med R på egen dator
 </figure>
 </div>
 <p>Tecknet <code>&gt;</code> kallas för <strong>kommandoprompt</strong> (eller bara <strong>prompt</strong>) och är R’s sätt att tala om att det väntar på att ett nytt kommando ska skrivas in (vid det blinkande strecket). Vi säger att vi ‘skriver in något på prompten’.</p>
-<div class="callout-note callout callout-style-simple callout-captioned">
+<div class="callout-note callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
@@ -307,7 +312,7 @@ Multiplikation och division
 </figure>
 </div>
 <p>R skriver snällt ut det värde (100) som jag tilldelade variabeln <code>kapital</code>.</p>
-<div class="callout-note callout callout-style-simple callout-captioned">
+<div class="callout-note callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
@@ -320,7 +325,7 @@ Språkbruk
 <p>vi säger att vi <strong>tilldelar</strong> <strong>variabel</strong> <code>kapital</code> <strong>värdet</strong> <code>100</code>. Lite mer slarvigt säger vi: ‘vi sätter <code>kapital</code> till 100’.</p>
 </div>
 </div>
-<div class="callout-warning callout callout-style-simple callout-captioned">
+<div class="callout-warning callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
@@ -333,14 +338,17 @@ Se upp!
 <p>Vi kan återkalla värdet 100 från variabeln <code>kapital</code> när som helst. Men om du stänger ner RStudio och sen startar om programmet (eller om RStudio låser sig) så minns inte R längre värdet på <code>kapital</code> . R minns faktiskt inte ens att det fanns något som hette <code>kapital</code> och kommer att klaga om du skriver <code>kapital</code> på prompten följt av <code>Enter</code>. R och RStudio minns bara variabeln inom en <strong>session</strong>, dvs tills du avslutar RStudio. Om man vill spara data mellan olika sessioner måste man spara ner variablerna på datorns disk (eller på någon lagring på internet). Mer om detta senare.</p>
 </div>
 </div>
-<div class="callout-note callout callout-style-simple">
-<div class="callout-body d-flex">
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-body-container">
-<p>Istället för att skriva <code>kapital = 100</code> så kan vi lika gärna skriva <code>kapital &lt;- 100</code> , där symbolen <code>&lt;-</code> skrivs med de två tecknen <code>&lt;</code> (mindre än) som finns långt ner till vänster på tangentbordet och <code>-</code> (bindestreck). Att skriva variabeltilldelningar med <code>&lt;-</code> är egentligen den rekommenderade varianten i R, men jag tycker det är fult och föredrar <code>=</code>. 🤷</p>
+<div class="callout-caption-container flex-fill">
+Note
 </div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Istället för att skriva <code>kapital = 100</code> så kan vi lika gärna skriva <code>kapital &lt;- 100</code> , där symbolen <code>&lt;-</code> skrivs med de två tecknen <code>&lt;</code> (mindre än) som finns långt ner till vänster på tangentbordet och <code>-</code> (bindestreck). Att skriva variabeltilldelningar med <code>&lt;-</code> är egentligen den rekommenderade varianten i R, men jag tycker det är fult och föredrar <code>=</code>. 🤷</p>
 </div>
 </div>
 <p>Vi kan nu beräkna kapitalet år 1 genom att multiplicera variabeln <code>kapital</code> med talet 1.1</p>
@@ -380,16 +388,19 @@ Se upp!
 <li><p><img src="mac.png" class="img-fluid" width="20">Mac: Starta programmet <strong>Finder</strong> och klicka på mappen <strong>Documents</strong>. Skapa en ny mapp med namnet <strong>SDA1</strong>.</p></li>
 <li><p><img src="linux.png" class="img-fluid" width="20"> Linux: Starta programmet <strong>Nautilus</strong> (om du använder Ubuntu, annars kan du prova att söka på ordet files om din Linux-distribution använder en annan filhanterare). Klicka på mappen <strong>Documents</strong>. Skapa en ny mapp med namnet <strong>SDA1</strong>.</p></li>
 </ul>
-<div class="callout-warning callout callout-style-simple">
-<div class="callout-body d-flex">
+<div class="callout-warning callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-caption-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <pre><code>Inga åäö!
 Använd inte åäö i namn på filmappar eller filer.
 Stor risk att du får problem då.</code></pre>
-</div>
 </div>
 </div>
 <section id="uppgift-3.1" class="level4">
@@ -469,33 +480,34 @@ Stor risk att du får problem då.</code></pre>
 </ol>
 <p>R kommer nu att hitta filen och vi är redo att skriva kommandot som läser in filen. Eftersom det är första gången du läser in en Excel-fil behöver du göra lite grundjobb. Vi ska göra tre steg:</p>
 <ol type="1">
-<li><p><strong>Installera R-paketet</strong> <code>xlsx</code>. Programmet R kommer med ett antal baskommandon förinstallerat. T ex har vi redan använt <strong>funktionen</strong> <code>setwd()</code> för att tala om för R vilken mapp som är vår working directory. Men många kommandon/funktioner i R måste laddas in via s k <strong>R-paket</strong>. Det finns R-paket för nästan allt man vill göra: läsa in data, gör olika typer av statistiska analyser etc etc. Paketet <code>xslx</code> är specialiserat på att läsa in Excel-filer i R. För att installera paketet kör vi kommandot <code>install.packages('xlsx')</code> antingen genom att skriv in det i en kodfil och trycka på <code>Run</code> eller genom att skriva det direkt i terminalen. Efter det kommer R att skriva ut en massa mumbo-jumbo i Console som beskriver installationen. Paket kan ta någon minut eller mer för att installera. Om inga fel uppstår brukar installationsmeddelandet avslutas med något liknande:<br>
-<code>DONE (xlsx)</code><br>
+<li><p><strong>Installera R-paketet</strong> <code>readxl</code>. Programmet R kommer med ett antal baskommandon förinstallerat. T ex har vi redan använt <strong>funktionen</strong> <code>setwd()</code> för att tala om för R vilken mapp som är vår working directory. Men många kommandon/funktioner i R måste laddas in via s k <strong>R-paket</strong>. Det finns R-paket för nästan allt man vill göra: läsa in data, gör olika typer av statistiska analyser etc etc. Paketet <code>readxl</code> är specialiserat på att läsa in Excel-filer i R. För att installera paketet kör vi kommandot <code>install.packages('readxl')</code> antingen genom att skriv in det i en kodfil och trycka på <code>Run</code> eller genom att skriva det direkt i terminalen. Efter det kommer R att skriva ut en massa mumbo-jumbo i Console som beskriver installationen. Paket kan ta någon minut eller mer för att installera. Om inga fel uppstår brukar installationsmeddelandet avslutas med något liknande:<br>
+<code>DONE (readxl)</code><br>
 <code>The downloaded source packages are in</code><br>
 följt av någon kryptisk sökväg till stället på din dator där paketet har blivit installerat.<br>
 <br>
 Installation av paket behövs bara göras en gång på din dator. Du behöver inte installera om nästa gång du startar upp RStudio på nytt.</p></li>
-<li><p><strong>Ladda R-paketet</strong> <code>xlsx</code>. Kommandot <code>library(xlsx)</code> laddar funktionerna i paketet xlsx till R’s arbetsminne. Först efter denna kommando kan vi använda funktionerna i paketet. Notera att vi behöver ‘blippar’ kring paketets namn när vi installerar, men inte när vi laddar paketet. Ett paket som laddat in med library finns inte tillgängligt när du start om RStudio. Du måste alltså skriva <code>library(xlsx)</code> för varje ny session där du vill läsa in Excel-filer. Det är därför bra att skriva in <code>library(xlsx)</code> i kodfilen du ska använda för att läsa in Excel-filer.</p></li>
-<li><p>Läs in data från Excel-filen genom kommandot/<strong>funktionen</strong> <code>read.xlsx()</code>. Här hela kommandot (<strong>funktionsanropet</strong>):<br>
-<code>stockdata = read.xlsx('stock.xlsx', 1, header=TRUE)</code><br>
-Det är några saker att reda ut här. Först, <code>read.xlsx()</code> är en <strong>funktion</strong> vilket betyder att det är ett kommando som <strong>gör något</strong> baserat på funktionens <strong>input-argument</strong>:</p>
+<li><p><strong>Ladda R-paketet</strong> <code>readxl</code>. Kommandot <code>library(readxl)</code> laddar funktionerna i paketet <code>readxl</code> till R’s arbetsminne. Först efter denna kommando kan vi använda funktionerna i paketet. Notera att vi behöver ‘blippar’ kring paketets namn när vi installerar, men inte när vi laddar paketet. Ett paket som laddat in med library finns inte tillgängligt när du start om RStudio. Du måste alltså skriva <code>library(readxl)</code> för varje ny session där du vill läsa in Excel-filer. Det är därför bra att skriva in <code>library(readxl)</code> i kodfilen du ska använda för att läsa in Excel-filer.</p></li>
+<li><p>Läs in data från Excel-filen genom kommandot/<strong>funktionen</strong> <code>read_excel()</code>. Här hela kommandot (<strong>funktionsanropet</strong>):<br>
+<code>stockdata = read_excel('stock.xlsx', sheet = 1)</code><br>
+Det är några saker att reda ut här. Först, <code>read_excel()</code> är en <strong>funktion</strong> vilket betyder att det är ett kommando som <strong>gör något</strong> baserat på funktionens <strong>input-argument</strong>:</p>
 <ul>
-<li>Det första argumentet <code>'stock.xlsx'</code> är en <strong>textsträng</strong> (den har ‘blippar’) som talar om för <code>read.xlsx()</code> <em>vilken</em> Excelfil som ska läsas in. Vi behöver inte säga mer eftersom denna fil ligger i vår working directory, som ju R nu känner till.</li>
-<li>det andra input-argumentet är en enkel etta, <code>1</code>, vilket säger åt <code>read.xlsx()</code> att data ligger i det första kalkylbladet i filen stock.xlsx. En Excelfil kan ju har flera kalkylblad, och vill man läsa det andra bladet ändrar man <code>1</code> till <code>2</code>. (men stock.xlsx har bara ett blad, så prova inte detta för då kommer R att klaga).</li>
-<li>det sista argumentet <code>header=TRUE</code> talar om för <code>read.xlsx()</code> att den första raden i stock.xlsx innehåller namnen på kolumnerna, dvs den första raden är inte data.</li>
+<li>Det första argumentet <code>'stock.xlsx'</code> är en <strong>textsträng</strong> (den har ‘blippar’) som talar om för <code>read_excel()</code> <em>vilken</em> Excelfil som ska läsas in. Vi behöver inte säga mer eftersom denna fil ligger i vår working directory, som ju R nu känner till.</li>
+<li>det andra input-argumentet är <code>sheet = 1</code>, vilket säger åt <code>read_excel()</code> att data ligger i det första kalkylbladet i filen stock.xlsx. En Excelfil kan ju har flera kalkylblad, och vill man läsa det andra bladet ändrar man <code>1</code> till <code>2</code>. (men stock.xlsx har bara ett blad, så prova inte detta för då kommer R att klaga).</li>
 </ul>
-<p>Men vad betyder <code>stockdata =</code> i början av kommandot ovan? Jo, om R ska läsa in data till arbetsminnet så måste den ge denna data ett namn, vilket jag har valt till <code>stockdata</code> , men du får döpa den till (nästan) vad du vill. <code>stockdata</code> är en <strong>variabel</strong>, precis som <code>kapital</code> var en variabel tidigare. Variabeln <code>kapital</code> var en enkel form av en variabel som bara innehöll ett enda <strong>värde</strong>, t ex 100 i början av vårt sparande. Variabeln <code>stockdata</code> är mer komplex. Den innehåller en hel tabell med värden, en s k <code>dataframe</code> på R-språk. Så kommandot</p>
-<p><code>stockdata = read.xlsx('stock.xlsx', 1, header=TRUE)</code></p>
+<p>Men vad betyder <code>stockdata =</code> i början av kommandot ovan? Jo, om R ska läsa in data till arbetsminnet så måste den ge denna data ett namn, vilket jag har valt till <code>stockdata</code> , men du får döpa den till (nästan) vad du vill. <code>stockdata</code> är en <strong>variabel</strong>, precis som <code>kapital</code> var en variabel tidigare. Variabeln <code>kapital</code> var en enkel form av en variabel som bara innehöll ett enda <strong>värde</strong>, t ex 100 i början av vårt sparande. Variabeln <code>stockdata</code> är mer komplex. Den innehåller en hel tabell med värden. Så kommandot</p>
+<p><code>stockdata = read_excel('stock.xlsx', sheet = 1)</code></p>
 <p>läses alltså av R som</p>
 <blockquote class="blockquote">
-<p>Läs in första kalkylbladet av Excelfilen stock.xlsx till arbetsminnet och hantera första raden som namn/etiketter på kolumnerna. Spara den inlästa tabellen som en dataframe i variabeln <code>stockdata</code>.</p>
+<p>Läs in första kalkylbladet av Excelfilen stock.xlsx till arbetsminnet och spara den inlästa tabellen som en tabell i variabeln <code>stockdata</code>.</p>
 </blockquote></li>
 </ol>
-<p>När man har läst in ett datamaterial är det bra att ta en snabbtitt på den inlästa tabellen för att se att den blev korrekt inläst. Precis som vi gjorde med variabel <code>kapital</code> för att se dess värde (t ex 100) så kan skriva <code>stockdata</code> i Console för att se dess värde (som ju är en tabell). Om man har en tabell med många rader så blir det fort jobbigt att skriva ut alla rader. Kommandot <code>head()</code> är då praktiskt, som bara skriver ut det första 6 raderna av tabellen. Här har vi alla kommandon som krävs för att ladda in data och skriva ut fint på skärmen (förutom <code>install.packages('xlsx')</code> som jag antar att du redan har kört för att installera paketet).</p>
+<p>R har lite olika varianter av tabellvariabler. Den viktigaste för oss på den här kursen är en s k <code>dataframe</code>. Funktionen <code>read_excel()</code> läser dock in data som en s k <code>tibble</code>-tabell. För att göra om en <code>stockdata</code> till en dataframe skriver vi kommandot <code>stockdata = data.frame(stockdata)</code>, där variabeln (tabellen) <code>stockdata</code> skrivs över med resultatet att stockdata nu är en <code>dataframe</code>.</p>
+<p>När man har läst in ett datamaterial är det bra att ta en snabbtitt på den inlästa tabellen för att se att den blev korrekt inläst. Precis som vi gjorde med variabel <code>kapital</code> för att se dess värde (t ex 100) så kan skriva <code>stockdata</code> i Console för att se dess värde (som ju är en tabell). Om man har en tabell med många rader så blir det fort jobbigt att skriva ut alla rader. Kommandot <code>head()</code> är då praktiskt, som bara skriver ut det första 6 raderna av tabellen. Här har vi alla kommandon som krävs för att ladda in data och skriva ut fint på skärmen (förutom <code>install.packages('readxl')</code> som jag antar att du redan har kört för att installera paketet).</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(xlsx)</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>stockdata <span class="ot">=</span> <span class="fu">read.xlsx</span>(<span class="st">'stock.xlsx'</span>, <span class="dv">1</span>, <span class="at">header=</span><span class="cn">TRUE</span>)</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(stockdata)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>stockdata <span class="ot">=</span> <span class="fu">read_excel</span>(<span class="st">'stock.xlsx'</span>, <span class="at">sheet =</span> <span class="dv">1</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>stockdata <span class="ot">=</span> <span class="fu">data.frame</span>(stockdata) <span class="co"># gör om stockdata till en dataframe</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(stockdata)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  year  capital returns
 1 2018 100.0000    0.00
@@ -506,15 +518,18 @@ Det är några saker att reda ut här. Först, <code>read.xlsx()</code> är en <
 6 2023 125.7601    0.07</code></pre>
 </div>
 </div>
-<div class="callout-tip callout callout-style-simple">
-<div class="callout-body d-flex">
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-caption-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p>Istället för att placera alla filer i din working directory <strong>SDA1</strong> kan man istället ange sökvägen till filen när man läser in den. Om jag t ex har sparat filen i mappen <strong>Downloads</strong> på en Windows-dator så skriver jag <strong><br>
 </strong><code>stockdata = read.xlsx('C:/Downloads/stock.xlsx', 1, header=TRUE)</code>.</p>
-</div>
 </div>
 </div>
 <section id="uppgift-6.1" class="level4">
@@ -583,14 +598,15 @@ läses av R som</p>
 <p>där vi inte längre måste använda argumentet <code>data = stockdata</code> för att tala om var dessa variabler kommer från. Men det förra kommandot <code>plot(capital ~ year, data = stockdata)</code> är nog ändå mer lättläst, tycker jag.</p>
 <section id="uppgift-7.1" class="level4">
 <h4 class="anchored" data-anchor-id="uppgift-7.1">💪 Uppgift 7.1</h4>
-<p>Läs återigen in data med <code>stockdata = read.xlsx('stock.xlsx', 1, header=TRUE)</code>. Gör en graf där du plottar variabeln <code>returns</code> mot <code>year</code>.</p>
+<p>Läs återigen in data med <code>stockdata = read_excel('stock.xlsx', sheet = 1)</code>. Gör en graf där du plottar variabeln <code>returns</code> mot <code>year</code>.</p>
 <p>Här är hela koden i ett stycke:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">'/home/mv/Dropbox/Teaching/SDA1/datorlab/lab1'</span>) <span class="co"># I have a Linux computer and my data is in this path</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(xlsx)                         </span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>stockdata <span class="ot">=</span> <span class="fu">read.xlsx</span>(<span class="st">'stock.xlsx'</span>, <span class="dv">1</span>, <span class="at">header=</span><span class="cn">TRUE</span>)</span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>meancapital <span class="ot">=</span> <span class="fu">mean</span>(stockdata<span class="sc">$</span>capital)</span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(capital <span class="sc">~</span> year, <span class="at">data =</span> stockdata)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)                         </span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>stockdata <span class="ot">=</span> <span class="fu">read_excel</span>(<span class="st">'stock.xlsx'</span>, <span class="at">sheet =</span> <span class="dv">1</span>)</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>stockdata <span class="ot">=</span> <span class="fu">data.frame</span>(stockdata)</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>meancapital <span class="ot">=</span> <span class="fu">mean</span>(stockdata<span class="sc">$</span>capital)</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(capital <span class="sc">~</span> year, <span class="at">data =</span> stockdata)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img src="DatorLab1_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid" width="672"></p>
 </div>
@@ -714,14 +730,17 @@ $d
 </div>
 </div>
 <p>Känns det bekant med $-tecken för att plocka ut saker? Vi har redan sett att man kan plocka ut en kolumn i en dataframe (tabell) genom att skriva t ex <code>stockdata$returns</code> . En dataframe är nämligen egentligen en slags lista.</p>
-<div class="callout-tip callout callout-style-simple">
-<div class="callout-body d-flex">
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-body-container">
-<p>Du kan skriva <code>my_list</code> i Console och sedan trycka på <code>tab</code>-tangenten i övre vänstra hörnet av tangentbordet för att se alla element som finns i listan <code>my_list</code>. Klicka på det element du vill visa. 🤩</p>
+<div class="callout-caption-container flex-fill">
+Tip
 </div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Du kan skriva <code>my_list</code> i Console och sedan trycka på <code>tab</code>-tangenten i övre vänstra hörnet av tangentbordet för att se alla element som finns i listan <code>my_list</code>. Klicka på det element du vill visa. 🤩</p>
 </div>
 </div>
 <p>I nästa datorlab kommer vi introducera ännu en viktig datatyp i R: <code>factor</code>. Men låt oss spara något till dess.</p>
@@ -740,9 +759,9 @@ $d
 </div>
 <p>men det kan också vara något mer komplicerat som t ex att läsa in data från en Excel-fil:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>stockdata <span class="ot">=</span> <span class="fu">read.xlsx</span>(<span class="st">'stock.xlsx'</span>, <span class="dv">1</span>, <span class="at">header=</span><span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>stockdata <span class="ot">=</span> <span class="fu">read_excel</span>(<span class="st">'stock.xlsx'</span>, <span class="at">sheet =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>där <code>read.xlsx</code> är en funktion som tre input-argument filnamn (som en sträng!), talet 1 för att vi vill läsa det första bladet och argumentet header sätts till TRUE eftersom första raden i Excelfilen innehåller namnen på kolumnerna. Funktionen <code>read.xlsx</code> ger tillbaka en dataframe som output med data.</p>
+<p>där <code>read_excel</code> är en funktion som tre input-argument filnamn (som en sträng!), talet 1 för att vi vill läsa det första bladet. Funktionen <code>read_excel</code> ger tillbaka en (tibble) dataframe som output med data.</p>
 <p>Det fina med programmeringsspråk är att man kan <strong>skapa egna funktioner</strong> som gör just det jobb som man behöver. Om jag t ex vill skapa en funktion som beräknar ränta-på-ränta effekten på ett sparkapital (med samma ränta varje år) så kan jag skriva ihop följande funktion:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>capital_interest <span class="ot">&lt;-</span> <span class="cf">function</span>(capital, interest, years){</span>
@@ -794,8 +813,8 @@ $d
 <li><strong>Formula syntax</strong> - syntax som via paketet <code>Mosaic</code> har utvecklats undervisning i statistik</li>
 <li><strong>Tidyverse</strong> - en modern syntax utvecklat av personerna bakom RStudio.</li>
 </ul>
-<p>I SDA1 kommer vi försöka använda Formula syntax som mycket som möjligt, med inslag av Base-R. Tidyverse-kod kan ofta vara extremt effektiv, men tar för lång tid att lära sig på en grundkurs i statistik. Vi kommer dock då och då att visa hur man gör samma sak i de olika dialekter, men på ett sätt som inte stör flödet för den student som helst vill hålla sig till ett sätt. Vi använder ikoner som du som student kan klicka på för att se ett kommando i olika dialekter. Här är ett exempel (prova att klicka ikonerna i höger-marginalen):</p>
-<p>För att göra en enkel scatter plot i R kan du använda kommandot</p>
+<p>I SDA1 kommer vi försöka använda Formula syntax som mycket som möjligt, med inslag av Base-R. Tidyverse-kod kan ofta vara extremt effektiv, men tar för lång tid att lära sig på en grundkurs i statistik. Vi kommer dock då och då att visa hur man gör samma sak i de olika dialekterna, men på ett sätt som inte stör flödet för den student som helst vill hålla sig till ett sätt. Vi använder ikoner som du som student kan klicka på för att se ett kommando i olika dialekter. Här är ett exempel (prova att klicka ikonerna i höger-marginalen):</p>
+<p>I Formula syntax har vi redan sett att vi kan göra en scatter plot med kommandot</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(mpg <span class="sc">~</span> hp, <span class="at">data =</span> mtcars, <span class="at">main =</span> <span class="st">"Cars fuel usage"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
@@ -849,6 +868,119 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'alternate';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } 
   const icon = "";
   const anchorJS = new window.AnchorJS();
   anchorJS.options = {

@@ -1,0 +1,16 @@
+{
+  "hash": "be4285d7a795bc02e882a881d3808883",
+  "result": {
+    "markdown": "---\ntitle: \"Formula syntax\"\nauthor: \"Mattias Villani\"\neditor: visual\n---\n\n\n## Scatter plot \n\nEn vanlig scatter plot fås genom:\n\n\n::: {.cell}\n\n```{.r .cell-code}\nplot(mpg ~ hp, data = mtcars, main = \"Cars fuel usage\")\n```\n\n::: {.cell-output-display}\n![](FormulaSyntax_files/figure-html/unnamed-chunk-1-1.png){width=672}\n:::\n:::\n\n\nMed ggformula paketet kan man använda formel-syntax, men få plottar som liknar Tidyverse:\n\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(ggformula)\n```\n\n::: {.cell-output .cell-output-stderr}\n```\nLoading required package: ggplot2\n```\n:::\n\n::: {.cell-output .cell-output-stderr}\n```\nLoading required package: ggstance\n```\n:::\n\n::: {.cell-output .cell-output-stderr}\n```\n\nAttaching package: 'ggstance'\n```\n:::\n\n::: {.cell-output .cell-output-stderr}\n```\nThe following objects are masked from 'package:ggplot2':\n\n    geom_errorbarh, GeomErrorbarh\n```\n:::\n\n::: {.cell-output .cell-output-stderr}\n```\nLoading required package: scales\n```\n:::\n\n::: {.cell-output .cell-output-stderr}\n```\nLoading required package: ggridges\n```\n:::\n\n::: {.cell-output .cell-output-stderr}\n```\n\nNew to ggformula?  Try the tutorials: \n\tlearnr::run_tutorial(\"introduction\", package = \"ggformula\")\n\tlearnr::run_tutorial(\"refining\", package = \"ggformula\")\n```\n:::\n\n```{.r .cell-code}\ngf_point(mpg ~ hp, data = mtcars, title = \"Cars fuel usage\")\n```\n\n::: {.cell-output-display}\n![](FormulaSyntax_files/figure-html/unnamed-chunk-2-1.png){width=672}\n:::\n:::\n",
+    "supporting": [
+      "FormulaSyntax_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
