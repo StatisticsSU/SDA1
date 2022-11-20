@@ -8,7 +8,7 @@
 
 <meta name="author" content="Mattias Villani">
 
-<title>SDA1 - Reading data from an file</title>
+<title>SDA1 - Quarto</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -125,6 +125,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   }
 }</script>
 
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="../../styles.css">
 </head>
@@ -186,9 +187,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#excel-data" id="toc-excel-data" class="nav-link active" data-scroll-target="#excel-data">Excel data</a></li>
-  <li><a href="#reading-data-from-an-excel-file-in-r" id="toc-reading-data-from-an-excel-file-in-r" class="nav-link" data-scroll-target="#reading-data-from-an-excel-file-in-r">Reading data from an Excel file in R</a></li>
-  <li><a href="#reading-data-from-text-.txt-and-.csv-files" id="toc-reading-data-from-text-.txt-and-.csv-files" class="nav-link" data-scroll-target="#reading-data-from-text-.txt-and-.csv-files">Reading data from text (.txt) and .csv files</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">1. Introduction</a></li>
+  <li><a href="#formatted-text-with-markdown" id="toc-formatted-text-with-markdown" class="nav-link" data-scroll-target="#formatted-text-with-markdown">2. Formatted text with markdown</a></li>
+  <li><a href="#header-1" id="toc-header-1" class="nav-link" data-scroll-target="#header-1">Header 1</a>
+  <ul class="collapse">
+  <li><a href="#header-2" id="toc-header-2" class="nav-link" data-scroll-target="#header-2">Header 2</a>
+  <ul class="collapse">
+  <li><a href="#header-3" id="toc-header-3" class="nav-link" data-scroll-target="#header-3">Header 3</a></li>
+  </ul></li>
+  <li><a href="#tables" id="toc-tables" class="nav-link" data-scroll-target="#tables">3. Tables</a></li>
+  <li><a href="#code-and-plots" id="toc-code-and-plots" class="nav-link" data-scroll-target="#code-and-plots">4. Code and Plots</a></li>
+  <li><a href="#mathematical-symbols" id="toc-mathematical-symbols" class="nav-link" data-scroll-target="#mathematical-symbols">5. Mathematical symbols</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -197,7 +207,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Reading data from an file</h1>
+<h1 class="title">Quarto</h1>
+<p class="subtitle lead">a simple example report</p>
 </div>
 
 
@@ -218,180 +229,153 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 </header>
 
-<section id="excel-data" class="level2">
-<h2 class="anchored" data-anchor-id="excel-data">Excel data</h2>
-<p>Data often come in the form of Excel files, usually named <code>SomeData.xls</code> or <code>SomeData.xlsx</code>, where <code>SomeData</code> is the name that you or someone else have given to the file. Excel stores data as tables with rows and columns, like this:</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="ExcelSpreadsheet.png" class="img-fluid figure-img" width="560"></p>
-</figure>
-</div>
-<p>Excel files may contain more than one dataset, organized as Excel <em>sheets</em>. Here is an example (note the multiple sheets at the bottom):</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="ExcelSheets.png" class="img-fluid figure-img" width="291"></p>
-</figure>
-</div>
-</section>
-<section id="reading-data-from-an-excel-file-in-r" class="level2">
-<h2 class="anchored" data-anchor-id="reading-data-from-an-excel-file-in-r">Reading data from an Excel file in R</h2>
-<p>There are many R packages for reading data from Excel. We will be using the <code>readxl</code> package here. This installs and loads the <code>readxl</code> package:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#install.packages("readxl") # Installs the readxl package. Do it only once.</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"readxl"</span>)           <span class="co"># loads the readxl package. Do it once per R session.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>I have <em>commented out</em> the installation of the package by putting a <code>#</code> sign in front of the command <code>install.packages("readxl")</code>. So this command will not be executed/run. I already have that package installed on my computer and don’t want to re-install it. You have to <em>uncomment</em>, that is remove the sign <code>#</code>, before running this on your computer, if you haven’t installed this package already.</p>
-</div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>tour_de_france <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">'Tour_de_France_2017.xlsx'</span>, <span class="at">sheet =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>The argument <code>sheet=1</code> tells R to read data from the first sheet in the Excel file. If you want to the read data from the third sheet in an Excel file, then just replace 1 with 3 (the Tour de France data has only one sheet, however).</p>
-<div class="callout-important callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Important
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>I placed the file Tour_de_France_2017.xlsx in my working directory. If the file with data is at a different place on your computer then you need to include the search <strong>path</strong> to the file before the file name. For example, on a computer running Windows, if your data is stored in the Documents folder, then replace the command above with</p>
-<p><code>tour_de_france &lt;- read_excel('C:\Documents\Tour_de_France_2017.xlsx', sheet = 1)</code></p>
-</div>
-</div>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">1. Introduction</h2>
+<p>This is an example of report from a Quarto document (with file format <code>.qmd</code> ). You can look at the html or pdf version of the document to spot things you like to learn how to do in Quarto and then go to the corresponding place in the .qmd file to see how I did it.</p>
 <div class="callout-tip callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-caption-container flex-fill">
-Tip
+Quarto official help
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Rather than telling R explicitly where your data are stored, you can also use the command</p>
-<p><code>tour_de_france &lt;- read_excel(file.choose(), sheet = 1)</code></p>
-<p>which will open up a window where you can look up the file in your file explorer and it will then read the first sheet (again the <code>1</code> in the command) of that file. This is convenient, but I don’t recommend it (lousy tip! 🙄) since you then have to click your way to the file everytime you re-run your R code.</p>
+<p>The <a href="https://quarto.org/docs/guide/">Quarto website</a> is very helpful for learning about Quarto. You can search (upper right corner) for specific things that you want to do in Quarto. Try for example searching for <code>bold</code> to see how you get <strong>bold</strong> text.</p>
 </div>
 </div>
-<p>We have now read the dataset into a variable that I have chosen to call <code>tour_de_france</code>. We can now just type the name of this variable in the Console in R to see the data.</p>
+<p>At the top of the file is the so called <code>YAML</code>, which contains the settings of the document.</p>
+</section>
+<section id="formatted-text-with-markdown" class="level2">
+<h2 class="anchored" data-anchor-id="formatted-text-with-markdown">2. Formatted text with markdown</h2>
+<p>Quarto documents uses a special language called <strong>markdown</strong> to write formatted (pretty looking) text like <strong>bold text</strong> or <em>italic text</em>.</p>
+<p>You can make lists</p>
+<ul>
+<li>This is an item</li>
+<li>and this is another one</li>
+<li>the this is the last one</li>
+</ul>
+<p>Or numbered lists</p>
+<ol type="1">
+<li>Item one</li>
+<li>Item two</li>
+<li>The last item</li>
+</ol>
+<p>Or even lists like this:</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" checked="">Computer lab 1</li>
+<li><input type="checkbox" disabled="">Computer lab 2</li>
+<li><input type="checkbox" disabled="">Computer lab 3</li>
+</ul>
+<p>You can use footnotes. <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<p>Links to webpages: <a href="https://www.markdownguide.org/cheat-sheet/">markdown cheat sheet</a></p>
+<p>Horizontal lines to be break up paragraphs</p>
+<hr>
+<blockquote class="blockquote">
+<p>and who doesn’t like a little wise quote?</p>
+</blockquote>
+<p>You can also use titles of section of different sizes:</p>
+</section>
+<section id="header-1" class="level1">
+<h1>Header 1</h1>
+<section id="header-2" class="level2">
+<h2 class="anchored" data-anchor-id="header-2">Header 2</h2>
+<section id="header-3" class="level3">
+<h3 class="anchored" data-anchor-id="header-3">Header 3</h3>
+<section id="header-4" class="level4">
+<h4 class="anchored" data-anchor-id="header-4">Header 4</h4>
+</section>
+</section>
+</section>
+<section id="tables" class="level2">
+<h2 class="anchored" data-anchor-id="tables">3. Tables</h2>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Name</th>
+<th>Title</th>
+<th>Parking space</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Mike</td>
+<td>PhD student</td>
+<td>No</td>
+</tr>
+<tr class="even">
+<td>Sarah</td>
+<td>Professor</td>
+<td>Yes</td>
+</tr>
+<tr class="odd">
+<td>Deborah</td>
+<td>Lecturer</td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="code-and-plots" class="level2">
+<h2 class="anchored" data-anchor-id="code-and-plots">4. Code and Plots</h2>
+<p>A Quarto document can mix text and computer code. You can include code that computes statistics in your documents and then have the computed statistics analyzed or plotted in the same document.</p>
+<p>Code is written in <strong>code chunks</strong>. Here is chunk of R code that produces a plot in <span class="citation" data-cites="littlehist">@littlehist</span></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>tour_de_france</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 104 × 12
-    Year Winner             Country   Age Team  `Total Time(h.…` `Total Time(h)`
-   &lt;dbl&gt; &lt;chr&gt;              &lt;chr&gt;   &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;                      &lt;dbl&gt;
- 1  1903 Maurice Garin      France     32 La F… 94.33.00                    94.6
- 2  1904 Henri Cornet       France     20 Cycl… 96.05.56                    96.1
- 3  1905 Louis Trousselier  France     24 Peug… 110.26.58                  110. 
- 4  1906 Ren� Pottier       France     27 Peug… 189.34.00                  190. 
- 5  1907 Lucien Petit-Bret… France     24 Peug… 158.45.05                  159. 
- 6  1908 Lucien Petit-Bret… France     25 Peug… 156.53.29                  157. 
- 7  1909 Fran�ois Faber     Luxemb…    22 Alcy… 157.01.22                  157. 
- 8  1910 Octave Lapize      France     21 Alcy… 162.41.30                  163. 
- 9  1911 Gustave Garrigou   France     27 Alcy… 195.37.00                  196. 
-10  1912 Odile Defraye      Belgium    24 Alcy… 190.30.28                  191. 
-# … with 94 more rows, and 5 more variables: `Average Speed` &lt;dbl&gt;,
-#   Stages &lt;dbl&gt;, `Total Distance Ridden` &lt;dbl&gt;, `Starting Riders` &lt;dbl&gt;,
-#   `Finishing Riders` &lt;dbl&gt;</code></pre>
-</div>
-</div>
-<p>We can see two things: 1) some accented letters like é were replaced by a question mark, 2) the dataset is store in a <code>tibble</code> data structure. A tibble is <code>tidyverse</code>’s (this alternative dialect of R) version of a <code>dataframe</code>. It is best for us to convert this into a <code>dataframe</code>, which can be done with the command (note that we are overwriting the variable <code>tour_de_france</code>):</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>tour_de_france <span class="ot">=</span> <span class="fu">data.frame</span>(tour_de_france)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>To get a quick look at the data, the <code>head</code> command is useful, showing only the first few observations of the dataset:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(tour_de_france)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>  Year              Winner Country Age         Team Total.Time.h.min.sec.
-1 1903       Maurice Garin  France  32 La Fran�aise              94.33.00
-2 1904        Henri Cornet  France  20    Cycles JC              96.05.56
-3 1905   Louis Trousselier  France  24      Peugeot             110.26.58
-4 1906        Ren� Pottier  France  27      Peugeot             189.34.00
-5 1907 Lucien Petit-Breton  France  24      Peugeot             158.45.05
-6 1908 Lucien Petit-Breton  France  25      Peugeot             156.53.29
-  Total.Time.h. Average.Speed Stages Total.Distance.Ridden Starting.Riders
-1      94.55000        25.679      6                  2428              60
-2      96.09889        25.265      6                  2428              88
-3     110.44944        27.107     11                  2994              60
-4     189.56667        24.463     13                  4637              82
-5     158.75139        28.470     14                  4488              93
-6     156.89139        28.740     14                  4488             112
-  Finishing.Riders
-1               21
-2               27
-3               24
-4               14
-5               33
-6               36</code></pre>
-</div>
-</div>
-<p>You can now start analyzing the data in different ways, perhaps plotting the average speed variable over the year that Tour de France has run:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(Average.Speed <span class="sc">~</span> Year, <span class="at">data =</span> tour_de_france)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>n <span class="ot">=</span> <span class="dv">100</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>x <span class="ot">=</span> <span class="fu">rnorm</span>(n)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(x, <span class="at">main =</span> <span class="st">"My little histogram"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="ReadingDataFromFile_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="672"></p>
-</div>
-</div>
-<p>The average speed has increased over the year. Notable exceptions are the years during following the first world war.</p>
-</section>
-<section id="reading-data-from-text-.txt-and-.csv-files" class="level2">
-<h2 class="anchored" data-anchor-id="reading-data-from-text-.txt-and-.csv-files">Reading data from text (.txt) and .csv files</h2>
-<p>Data may also come as a pure text file, often with the file ending <code>.txt</code>. Such files contain a simple table with the data. The first row may or may not contain the names of the variables in the columns. The columns are separated by a <em>separator</em>, typically a comma (<code>,</code>) or a <code>TAB</code> (blank space of a certain width). Here is an example with data from Indy car drivers:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="indydata_txtformat.png" class="img-fluid figure-img" width="483"></p>
+<p><img src="QuartoReportExample_files/figure-html/littlehist-1.png" class="img-fluid figure-img" width="672"></p>
+<p></p><figcaption class="figure-caption">My little fig caption</figcaption><p></p>
 </figure>
 </div>
-<p>Note how the columns are not nice aligned, but clearly separated by blank space (TAB) so that R can understand which numbers belongs to which variable (column). Note also that the first row contain the variable names: <code>Year</code>, <code>Winner</code>, <code>Chassis</code>, <code>Engine</code>, <code>Speed</code>, <code>Time_hrs</code> and <code>Distance</code>.</p>
-<p>Let’s read this text file with data into R using the built-in function <code>read.delim</code></p>
+</div>
+</div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>indy <span class="ot">&lt;-</span> <span class="fu">read.delim</span>(<span class="st">'Indy_500_2018.txt'</span>, <span class="at">header =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(indy)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(cars)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div id="fig-plot" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="QuartoReportExample_files/figure-html/fig-plot-1.png" class="img-fluid figure-img" width="672"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;1: Plot</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p>For example, see <span class="citation" data-cites="littlehist">@littlehist</span>.</p>
+<p>Variables like <code>n</code> defined in a previous chunk can be used in a new chunk, like this:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(x) <span class="co"># note how I use x from the previous code chunk</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>  Year        Winner  Chassis   Engine Speed.computed Time_hrs Distance
-1 1911   Ray Harroun   Marmon   Marmon       74.60212 6.702222      500
-2 1912    Joe Dawson National National       78.71950 6.351667      500
-3 1913    Jules Goux  Peugeot  Peugeot       75.93335 6.584722      500
-4 1914   Rene Thomas   Delage   Delage       82.47423 6.062500      500
-5 1915 Ralph DePalma Mercedes Mercedes       89.84049 5.565419      500
-6 1916   Dario Resta  Peugeot  Peugeot       84.00093 3.571389      300</code></pre>
+<pre><code>[1] 0.1041946</code></pre>
 </div>
 </div>
-<p>where the argument <code>header = TRUE</code> tells R that the first row in the dataset contains the names of the variables in the data.</p>
-<p>Finally, a very common file format are, comma-separated values files, often called <code>csv</code> for short. These are similar to <code>txt</code> files, but are read into R using the built-in <code>read.csv</code> function.</p>
-<div class="callout-tip callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Tip
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Both the <code>read.delim</code> and <code>read.csv</code> have an argument <code>sep</code> that can be used to specify which <em>delimiter</em> is used in the file. For example, a <code>txt</code> files where the columns are separated by a comma instead of <code>TAB</code> can be read by the command:</p>
-<p><code>my_data &lt;- read.delim('myfile.txt', sep = ",", header = TRUE)</code></p>
-</div>
-</div>
+<p>By the way, note how I used backticks ` ` on <code>n</code> above to make the font look like computer code. So I can write <code>plot( x ~ y, data = mydata)</code> to show you the plot command in the text.</p>
+<p>You can also include other images than plots produced by R. Like this:</p>
+<p><img src="../../misc/larry.png" id="larry" class="img-fluid" alt="larry"> see <span class="citation" data-cites="larry">@larry</span> for grumpy dude.</p>
+</section>
+<section id="mathematical-symbols" class="level2">
+<h2 class="anchored" data-anchor-id="mathematical-symbols">5. Mathematical symbols</h2>
+<p>Quarto can be used to write beautiful mathematical symbols using a very powerful typesetting system for maths called LaTeX (Strange name. Watch out, weird stuff may pop up when searching for help about LaTeX commands …). Here is some formulas that you will learn about during this course:</p>
+<p><span class="math display">\[
+y = \beta_0 + \beta_1 x + \varepsilon, \text{ and } \varepsilon \sim N(0,\sigma^2_{\varepsilon})
+\]</span></p>
+<p>You can also write LaTeX math directly in the text: <span class="math inline">\(y=a\cdot b^x\)</span> and then just continue with the text.</p>
 
 
 </section>
+</section>
 
-</main> <!-- /main -->
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>This is the footnote.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

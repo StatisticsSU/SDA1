@@ -1,67 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://StatisticsSU.github.io/SDA1/tutorials/Quarto/Intro2Quarto.html</loc>
-    <lastmod>2022-11-17T09:10:29.132Z</lastmod>
-  </url>
-  <url>
-    <loc>https://StatisticsSU.github.io/SDA1/tutorials/ReadingDataFromFile/ReadingDataFromFile.html</loc>
-    <lastmod>2022-11-17T09:10:30.773Z</lastmod>
-  </url>
-  <url>
-    <loc>https://StatisticsSU.github.io/SDA1/DelB.html</loc>
-    <lastmod>2022-11-17T09:10:31.113Z</lastmod>
-  </url>
-  <url>
-    <loc>https://StatisticsSU.github.io/SDA1/stealourcourse.html</loc>
-    <lastmod>2022-11-17T09:10:31.405Z</lastmod>
+    <loc>https://StatisticsSU.github.io/SDA1/datorlab/lab1/DatorLab1.html</loc>
+    <lastmod>2022-11-20T11:43:16.503Z</lastmod>
   </url>
   <url>
     <loc>https://StatisticsSU.github.io/SDA1/datorlab/lab2/DatorLab2.html</loc>
-    <lastmod>2022-11-17T09:10:31.785Z</lastmod>
+    <lastmod>2022-11-20T11:43:29.131Z</lastmod>
   </url>
   <url>
-    <loc>https://StatisticsSU.github.io/SDA1/datorlab/lab1/DatorLab1.html</loc>
-    <lastmod>2022-11-17T09:10:38.749Z</lastmod>
+    <loc>https://StatisticsSU.github.io/SDA1/tutorials/ReadingDataFromFile/ReadingDataFromFile.html</loc>
+    <lastmod>2022-11-20T11:43:34.691Z</lastmod>
   </url>
   <url>
-    <loc>https://StatisticsSU.github.io/SDA1/slides/SDA1_L1.html</loc>
-    <lastmod>2022-11-17T09:10:53.010Z</lastmod>
+    <loc>https://StatisticsSU.github.io/SDA1/tutorials/Quarto/QuartoReportExample.html</loc>
+    <lastmod>2022-11-20T11:43:36.091Z</lastmod>
   </url>
   <url>
-    <loc>https://StatisticsSU.github.io/SDA1/R/Rcommands.html</loc>
-    <lastmod>2022-11-17T09:11:01.218Z</lastmod>
-  </url>
-  <url>
-    <loc>https://StatisticsSU.github.io/SDA1/R/FormulaSyntax.html</loc>
-    <lastmod>2022-11-17T09:11:03.867Z</lastmod>
+    <loc>https://StatisticsSU.github.io/SDA1/tutorials/Quarto/Intro2Quarto.html</loc>
+    <lastmod>2022-11-20T11:43:37.511Z</lastmod>
   </url>
   <url>
     <loc>https://StatisticsSU.github.io/SDA1/R/TidyverseSyntax.html</loc>
-    <lastmod>2022-11-17T09:11:05.619Z</lastmod>
+    <lastmod>2022-11-20T11:43:39.023Z</lastmod>
   </url>
   <url>
     <loc>https://StatisticsSU.github.io/SDA1/R/BaseRSyntax.html</loc>
-    <lastmod>2022-11-17T09:11:06.823Z</lastmod>
+    <lastmod>2022-11-20T11:43:40.027Z</lastmod>
   </url>
   <url>
-    <loc>https://StatisticsSU.github.io/SDA1/R.html</loc>
-    <lastmod>2022-11-17T09:11:08.075Z</lastmod>
+    <loc>https://StatisticsSU.github.io/SDA1/R/Rcommands.html</loc>
+    <lastmod>2022-11-20T11:43:46.527Z</lastmod>
+  </url>
+  <url>
+    <loc>https://StatisticsSU.github.io/SDA1/R/FormulaSyntax.html</loc>
+    <lastmod>2022-11-20T11:43:48.567Z</lastmod>
+  </url>
+  <url>
+    <loc>https://StatisticsSU.github.io/SDA1/slides/SDA1_L1.html</loc>
+    <lastmod>2022-11-20T11:43:49.127Z</lastmod>
+  </url>
+  <url>
+    <loc>https://StatisticsSU.github.io/SDA1/stealourcourse.html</loc>
+    <lastmod>2022-11-20T11:43:49.419Z</lastmod>
   </url>
   <url>
     <loc>https://StatisticsSU.github.io/SDA1/assignments/Inlamningsuppgift1.html</loc>
-    <lastmod>2022-11-17T09:11:08.399Z</lastmod>
-  </url>
-  <url>
-    <loc>https://StatisticsSU.github.io/SDA1/index.html</loc>
-    <lastmod>2022-11-17T09:11:08.763Z</lastmod>
-  </url>
-  <url>
-    <loc>https://StatisticsSU.github.io/SDA1/about.html</loc>
-    <lastmod>2022-11-17T09:11:09.043Z</lastmod>
+    <lastmod>2022-11-20T11:43:49.715Z</lastmod>
   </url>
   <url>
     <loc>https://StatisticsSU.github.io/SDA1/DelA.html</loc>
-    <lastmod>2022-11-17T09:11:09.403Z</lastmod>
+    <lastmod>2022-11-20T11:43:50.023Z</lastmod>
+  </url>
+  <url>
+    <loc>https://StatisticsSU.github.io/SDA1/index.html</loc>
+    <lastmod>2022-11-20T11:43:50.315Z</lastmod>
+  </url>
+  <url>
+    <loc>https://StatisticsSU.github.io/SDA1/R.html</loc>
+    <lastmod>2022-11-20T11:43:51.407Z</lastmod>
+  </url>
+  <url>
+    <loc>https://StatisticsSU.github.io/SDA1/DelB.html</loc>
+    <lastmod>2022-11-20T11:43:51.699Z</lastmod>
+  </url>
+  <url>
+    <loc>https://StatisticsSU.github.io/SDA1/about.html</loc>
+    <lastmod>2022-11-20T11:43:51.971Z</lastmod>
   </url>
 </urlset>

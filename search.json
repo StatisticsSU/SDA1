@@ -1,96 +1,5 @@
 [
   {
-    "objectID": "tutorials/Quarto/Intro2Quarto.html",
-    "href": "tutorials/Quarto/Intro2Quarto.html",
-    "title": "Introduction to Quarto",
-    "section": "",
-    "text": "The old fashioned way of writing a report with statistical results follow the steps:\n\nWrite R code to produce statistical results and plots.\nWrite the report in Word, copy the numbers from R to make tables and insert the plots as figures.\nWrite mathematical formulas using some add-on in Word.\n\nThis is not very efficient, particularly when you have to re-run the code to update the results. The tables then needs to be updated manually in Word, and the insertion of figures must be done all over again. Would it be nice if we could write everything in a document: the text, the code, the mathematical formulas, the figures and tables? Can we even ask for a way to automatically update the whole report by a simple click of a button? Say hello to Quarto, a system that does just that, all from inside the comfort of RStudio! 🤩\nQuarto is a way to integrate text (markdown), computer code, figures, tables and mathematical formulas in one document.\nQuarto documents (with file ending .qmd) can easily be turned into pdf format, html, website, blogs and presentations."
-  },
-  {
-    "objectID": "tutorials/Quarto/Intro2Quarto.html#settings-for-the-document---the-yaml",
-    "href": "tutorials/Quarto/Intro2Quarto.html#settings-for-the-document---the-yaml",
-    "title": "Introduction to Quarto",
-    "section": "2. Settings for the document - the YAML",
-    "text": "2. Settings for the document - the YAML\nAt the top of a quarto document is the so called YAML, which tells the Quarto engine how the document should be formatted. This is the YAML for this document:\n\n\n\n\n\nwhich basically only gives the title and author information, everything else is using default settings. This will print (render) the document to html by default. To view the rendered file, just click the Render button at the top of the editor (only shown when you have a Quarto file in the editor):\n\n\n\n\n\nThe produced html file can be view in your web browser or inside RStudio in the Viewer tab in the bottom right window (typically). You may need to change the settings for it to show up in the Viewer tab. Click the settings-wheel at the top of the editor and make sure that Preview in Viewer Pane is selected:\n\n\n\n\n\nIf I instead wanted to render to pdf I would use the YAML:"
-  },
-  {
-    "objectID": "tutorials/Quarto/Intro2Quarto.html#writing-formatted-text-using-markdown",
-    "href": "tutorials/Quarto/Intro2Quarto.html#writing-formatted-text-using-markdown",
-    "title": "Introduction to Quarto",
-    "section": "3. Writing formatted text using markdown",
-    "text": "3. Writing formatted text using markdown\nThe text written in a Quarto document can be formatted using the markdown language. Markdown is a very simple language for formatting text. For example, I can easily make the text bold by writing **bold** or italic using a single * on each side of the text. A bulleted list:\n\nbullet\nlist\nare also\neasy\n\nis produced by putting a dash - and space before each bullet point. Numbered lists are also simple, just place numbers and a dot (.) before each list item. Like this:\n\nThis is the first point\nand this is second\nand so on.\n\nImages can be inserted by typing ![sceptic larry](/misc/larry.png){width=\"100\"} which would give the picture below. So the text caption for the image is written between the brackets [] and the search path to the image on your computer is given inside the parentheses ().\n\n\n\nsceptic larry\n\n\nYou can leave out the figure text and the width argument and just write: ![](/misc/larry.png) .\nTables are also pretty easy. The table below is made by writing\n| Name  | Age | Position            |\n|-------|-----|---------------------|\n| Mike  | 49  | Professor           |\n| Sarah | 37  | Assistant professor |\n| Anne  | 26  | PhD student         |\n\nA little table caption.\n\n\nName\nAge\nPosition\n\n\n\n\nMike\n49\nProfessor\n\n\nSarah\n37\nAssistant professor\n\n\nAnne\n26\nPhD student\n\n\n\nWhat if you want the table caption text to be below the tables, not below it? No sweat, just put table-cap-location: bottom in your YAML at the top of the document."
-  },
-  {
-    "objectID": "tutorials/Quarto/Intro2Quarto.html#writing-code",
-    "href": "tutorials/Quarto/Intro2Quarto.html#writing-code",
-    "title": "Introduction to Quarto",
-    "section": "4. Writing code",
-    "text": "4. Writing code\nA Quarto document can have executable code in them. It supports several programming languages, most notably: R, Python and Julia. You just need to add a code chunk. A code chunk starts and ends with three so called backticks `. The backtick is typed by Shift and the key to the left of Backspace on a Swedish keyboard. This is a chunk of R code:\n\n\n\n\n\nNote the little green Play-button. By pressing that we can run the code chunk. After running the code in the Quarto-document, the variables (in this case a vector x) will be available in the console, just like for any R code. Here is the end result of that code chunk:\n\nx = rnorm(100)\nplot(x, type = \"l\", xlab = \"time\", main = \"time series plot\")\n\n\n\n\n\n\n\n\n\n\nTip\n\n\n\nQuarto supports other popular programming languages in addtion to .\nA chunk of Python  code would start with ```{python}.\nA Julia  code chunk starts with ```{julia}. \n\n\nWhat if I want to use the code to produce the plot, but not show the code in my report? Easy, I would just add some YAML information at the beginning of the code chunk itself. YAML inside of a code chunk must begin with the two characters #| . Here is how you hide the code:\n\nThe first character # is called a hash and the second | a pipe. So the recommended way to remember #| is by thinking of the Weezer song: hash pipe. BTW, there I used a hyperlink which you write as [link text](webpage address) where the webpage address is a http-link, but can also be links within a document."
-  },
-  {
-    "objectID": "tutorials/Quarto/Intro2Quarto.html#writing-mathematical-formulas",
-    "href": "tutorials/Quarto/Intro2Quarto.html#writing-mathematical-formulas",
-    "title": "Introduction to Quarto",
-    "section": "5. Writing mathematical formulas",
-    "text": "5. Writing mathematical formulas\nQuarto supports LaTeX, which is a professional typesetting system for mathematical symbols. LaTeX takes a while to master, but you can look it up online to learn the basics. Just enclose LaTeX code between two dollar-signs on each side. Here is a simple example $$\\alpha_1$$ which would come out as \\[\\alpha_1\\] in your document. Here is a more complex example:\n$$\\bar{x} = \\frac{1}{n}\\sum_{i=1}^n x_i$$\nwhich would come out as the formula for the sample mean:\n\\[\\bar{x} = \\frac{1}{n}\\sum_{i=1}^n x_i\\]"
-  },
-  {
-    "objectID": "tutorials/Quarto/Intro2Quarto.html#using-the-visual-editor-in-rstudio",
-    "href": "tutorials/Quarto/Intro2Quarto.html#using-the-visual-editor-in-rstudio",
-    "title": "Introduction to Quarto",
-    "section": "6. Using the Visual editor in RStudio",
-    "text": "6. Using the Visual editor in RStudio\nYou can create (File/New File/Quarto document… menu) and write Quarto documents in RStudio. When you open a Quarto document in the editor the menu bar changes to (may look different for you):\n\n\n\n\n\nClicking on the Render button will render the document to html (default) or pdf (if you choose that in the YAML). Pressing the Run button will re-run all the code chunks in the document. You can write your Quarto document as markdown code if you click the Source -button in the extreme left. If you press the Visual-button you will see the document in a similar way to word processors like Word. You can then insert images and table, change font sizes etc by clicking on the menu. I tend to spend most time in Visual mode, but will often go over to Source mode when I want absolute control of what I do."
-  },
-  {
-    "objectID": "tutorials/Quarto/Intro2Quarto.html#going-fancy---interactivity",
-    "href": "tutorials/Quarto/Intro2Quarto.html#going-fancy---interactivity",
-    "title": "Introduction to Quarto",
-    "section": "7. Going fancy - interactivity",
-    "text": "7. Going fancy - interactivity\nQuarto documents have the basic interactivity that one can change code inside a code chunk, render the document and everything in the document changes according to the changes in the code.\n\nBut it also possible to make the final html interactive. Below is an an example to wet your appetite. Note however that you need to view the html file in an external web browser and not using the Viewer inside RStudio. Try moving around the slides to change the plot.\n\ndata = FileAttachment(\"palmer-penguins.csv\").csv({ typed: true })\n\n\n\n\n\n\n\nviewof bill_length_min = Inputs.range(\n  [32, 50], \n  {value: 35, step: 1, label: \"Bill length (min):\"}\n)\nviewof islands = Inputs.checkbox(\n  [\"Torgersen\", \"Biscoe\", \"Dream\"], \n  { value: [\"Torgersen\", \"Biscoe\"], \n    label: \"Islands:\"\n  }\n)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nfiltered = data.filter(function(penguin) {\n  return bill_length_min < penguin.bill_length_mm &&\n         islands.includes(penguin.island);\n})\n\n\n\n\n\n\n\nPlotData\n\n\n\nPlot.rectY(filtered, \n  Plot.binX(\n    {y: \"count\"}, \n    {x: \"body_mass_g\", fill: \"species\", thresholds: 20}\n  ))\n  .plot({\n    facet: {\n      data: filtered,\n      x: \"sex\",\n      y: \"species\",\n      marginRight: 80\n    },\n    marks: [\n      Plot.frame(),\n    ]\n  }\n)\n\n\n\n\n\n\n\n\n\nInputs.table(filtered)"
-  },
-  {
-    "objectID": "tutorials/ReadingDataFromFile/ReadingDataFromFile.html",
-    "href": "tutorials/ReadingDataFromFile/ReadingDataFromFile.html",
-    "title": "Reading data from an file",
-    "section": "",
-    "text": "Data often come in the form of Excel files, usually named SomeData.xls or SomeData.xlsx, where SomeData is the name that you or someone else have given to the file. Excel stores data as tables with rows and columns, like this:\n\n\n\n\n\nExcel files may contain more than one dataset, organized as Excel sheets. Here is an example (note the multiple sheets at the bottom):"
-  },
-  {
-    "objectID": "tutorials/ReadingDataFromFile/ReadingDataFromFile.html#reading-data-from-an-excel-file-in-r",
-    "href": "tutorials/ReadingDataFromFile/ReadingDataFromFile.html#reading-data-from-an-excel-file-in-r",
-    "title": "Reading data from an file",
-    "section": "Reading data from an Excel file in R",
-    "text": "Reading data from an Excel file in R\nThere are many R packages for reading data from Excel. We will be using the readxl package here. This installs and loads the readxl package:\n\n#install.packages(\"readxl\") # Installs the readxl package. Do it only once.\nlibrary(\"readxl\")           # loads the readxl package. Do it once per R session.\n\n\n\n\n\n\n\nNote\n\n\n\nI have commented out the installation of the package by putting a # sign in front of the command install.packages(\"readxl\"). So this command will not be executed/run. I already have that package installed on my computer and don’t want to re-install it. You have to uncomment, that is remove the sign #, before running this on your computer, if you haven’t installed this package already.\n\n\n\ntour_de_france <- read_excel('Tour_de_France_2017.xlsx', sheet = 1)\n\nThe argument sheet=1 tells R to read data from the first sheet in the Excel file. If you want to the read data from the third sheet in an Excel file, then just replace 1 with 3 (the Tour de France data has only one sheet, however).\n\n\n\n\n\n\nImportant\n\n\n\nI placed the file Tour_de_France_2017.xlsx in my working directory. You can (and typically should) keep your data files in a different place on your computer. You then need to include the path to file before the file name. For example, on a computer running Windows, if your data is stored in the Documents folder, then replace the command above with\ntour_de_france <- read_excel('C:\\Documents\\Tour_de_France_2017.xlsx', sheet = 1)\n\n\n\n\n\n\n\n\nTip\n\n\n\nRather than telling R explicitly where your data are stored, you can also use the command\ntour_de_france <- read_excel(file.choose(), sheet = 1)\nwhich will open up a window where you can look up the file in your file explorer and it will then read the first sheet (again the 1 in the command) of that file. This is convenient, but I don’t recommend it (lousy tip! 🙄) since you then have to click your way to the file everytime you re-run your R code.\n\n\nWe have now read the dataset into a variable that I have chosen to call tour_de_france. We can now just type the name of this variable in the Console in R to see the data.\n\ntour_de_france\n\n# A tibble: 104 × 12\n    Year Winner             Country   Age Team  `Total Time(h.…` `Total Time(h)`\n   <dbl> <chr>              <chr>   <dbl> <chr> <chr>                      <dbl>\n 1  1903 Maurice Garin      France     32 La F… 94.33.00                    94.6\n 2  1904 Henri Cornet       France     20 Cycl… 96.05.56                    96.1\n 3  1905 Louis Trousselier  France     24 Peug… 110.26.58                  110. \n 4  1906 Ren� Pottier       France     27 Peug… 189.34.00                  190. \n 5  1907 Lucien Petit-Bret… France     24 Peug… 158.45.05                  159. \n 6  1908 Lucien Petit-Bret… France     25 Peug… 156.53.29                  157. \n 7  1909 Fran�ois Faber     Luxemb…    22 Alcy… 157.01.22                  157. \n 8  1910 Octave Lapize      France     21 Alcy… 162.41.30                  163. \n 9  1911 Gustave Garrigou   France     27 Alcy… 195.37.00                  196. \n10  1912 Odile Defraye      Belgium    24 Alcy… 190.30.28                  191. \n# … with 94 more rows, and 5 more variables: `Average Speed` <dbl>,\n#   Stages <dbl>, `Total Distance Ridden` <dbl>, `Starting Riders` <dbl>,\n#   `Finishing Riders` <dbl>\n\n\nWe can see two things: 1) some accented letters like é were replaced by a question mark, 2) the dataset is store in a tibble data structure. A tibble is tidyverse’s (this alternative dialect of R) version of a dataframe. It is best for us to convert this into a dataframe, which can be done with the command (note that we are overwriting the variable tour_de_france):\n\ntour_de_france = data.frame(tour_de_france)\n\nTo get a quick look at the data, the head command is useful, showing only the first few observations of the dataset:\n\nhead(tour_de_france)\n\n  Year              Winner Country Age         Team Total.Time.h.min.sec.\n1 1903       Maurice Garin  France  32 La Fran�aise              94.33.00\n2 1904        Henri Cornet  France  20    Cycles JC              96.05.56\n3 1905   Louis Trousselier  France  24      Peugeot             110.26.58\n4 1906        Ren� Pottier  France  27      Peugeot             189.34.00\n5 1907 Lucien Petit-Breton  France  24      Peugeot             158.45.05\n6 1908 Lucien Petit-Breton  France  25      Peugeot             156.53.29\n  Total.Time.h. Average.Speed Stages Total.Distance.Ridden Starting.Riders\n1      94.55000        25.679      6                  2428              60\n2      96.09889        25.265      6                  2428              88\n3     110.44944        27.107     11                  2994              60\n4     189.56667        24.463     13                  4637              82\n5     158.75139        28.470     14                  4488              93\n6     156.89139        28.740     14                  4488             112\n  Finishing.Riders\n1               21\n2               27\n3               24\n4               14\n5               33\n6               36\n\n\nYou can now start analyzing the data in different ways, perhaps plotting the average speed variable over the year that Tour de France has run:\n\nplot(Average.Speed ~ Year, data = tour_de_france)\n\n\n\n\nThe average speed has increased over the year. Notable exceptions are the years during following the first world war."
-  },
-  {
-    "objectID": "tutorials/ReadingDataFromFile/ReadingDataFromFile.html#reading-data-from-text-.txt-and-.csv-files",
-    "href": "tutorials/ReadingDataFromFile/ReadingDataFromFile.html#reading-data-from-text-.txt-and-.csv-files",
-    "title": "Reading data from an file",
-    "section": "Reading data from text (.txt) and .csv files",
-    "text": "Reading data from text (.txt) and .csv files\nData may also come as a pure text file, often with the file ending .txt. Such files contain a simple table with the data. The first row may or may not contain the names of the variables in the columns. The columns are separated by a separator, typically a comma (,) or a TAB (blank space of a certain width). Here is an example with data from Indy car drivers:\n\n\n\n\n\nNote how the columns are not nice aligned, but clearly separated by blank space (TAB) so that R can understand which numbers belongs to which variable (column). Note also that the first row contain the variable names: Year, Winner, Chassis, Engine, Speed, Time_hrs and Distance.\nLet’s read this text file with data into R using the built-in function read.delim\n\nindy <- read.delim('Indy_500_2018.txt', header = TRUE)\nhead(indy)\n\n  Year        Winner  Chassis   Engine Speed.computed Time_hrs Distance\n1 1911   Ray Harroun   Marmon   Marmon       74.60212 6.702222      500\n2 1912    Joe Dawson National National       78.71950 6.351667      500\n3 1913    Jules Goux  Peugeot  Peugeot       75.93335 6.584722      500\n4 1914   Rene Thomas   Delage   Delage       82.47423 6.062500      500\n5 1915 Ralph DePalma Mercedes Mercedes       89.84049 5.565419      500\n6 1916   Dario Resta  Peugeot  Peugeot       84.00093 3.571389      300\n\n\nwhere the argument header = TRUE tells R that the first row in the dataset contains the names of the variables in the data.\nFinally, a very common file format are, comma-separated values files, often called csv for short. These are similar to txt files, but are read into R using the built-in read.csv function.\n\n\n\n\n\n\nTip\n\n\n\nBoth the read.delim and read.csv have an argument sep that can be used to specify which delimiter is used in the file. For example, a txt files where the columns are separated by a comma instead of TAB can be read by the command:\nmy_data <- read.delim('myfile.txt', sep = \",\", header = TRUE)"
-  },
-  {
-    "objectID": "DelB.html",
-    "href": "DelB.html",
-    "title": "Statistiska modeller och inferens, 7.5 hp",
-    "section": "",
-    "text": "Föreläsningar\nFöreläsning 12 - Sannolikheter och sannolikhetsmodeller.\nLäs: SDM Kapitel 12 och 13 | Slides\nFöreläsning 13 - Sannolikhetsberäkningar.\nLäs: SDM Kapitel 13 | Slides\nFöreläsning 14 - Slumpvariabler. Väntevärde. Varians. Linjärkombinationer.\nLäs: SDM Kapitel 14 | Slides\nFöreläsning 15 - Diskreta sannolikhetsmodeller.\nLäs: SDM Kapitel 15.1, 15.2, 15.3, 15.6 | Slides\nFöreläsning 16 - Kontinuerliga sannolikhetsmodeller.\nLäs: SDM Kapitel 5.3, 15.7 | Slides\nFöreläsning 17 - Samplingfördelningar och konfidensintervall för en andel.\nLäs: SDM Kapitel 16 | Slides\nFöreläsning 18 - Konfidensintervall för ett väntevärde. Stora talens lag. Centrala gränsvärdessatsen.\nLäs: SDM Kapitel 17 | Slides\nFöreläsning 19 - Hypotestest.\nLäs: SDM Kapitel 18 | Slides\nFöreläsning 20 - Hypotestest och jämföra grupper.\nLäs: SDM Kapitel 19, 20.4, 20.5 | Slides\nFöreläsning 21 - Jämföra grupper och chi-2 test.\nLäs: SDM Kapitel 21.1, 21.2 | Slides\nFöreläsning 22 - Inferens i multipel regression.\nLäs: SDM Kapitel 23 | Slides\nVideoföreläsning - Maximum likelihood och Bayesiansk inferens.\nLäs: Kompendium avsnitt X | Slides\nFöreläsning 23 - Sammanfattning.\nLäs: Slides\n\n\nÖvningar\nÖvning 7 - Sannolikheter för händelser. Kombinatorik.\nUppgifter: SDM 12-13\nÖvning 8 - Oberoende händelser. Betingning och Bayes sats.\nUppgifter: SDM 13\nÖvning 9 - Slumpvariabler, väntevärde och standardavvikelse.\nUppgifter: SDM 14\nÖvning 10 - Diskreta sannolikhetsfördelningar.\nUppgifter: SDM 15\nÖvning 12 - Kontinerliga sannolikhetsfördelningar.\nUppgifter: SDM 15\nÖvning 13 - Samplingfördelningar och konfidensintervall för en andel.\nUppgifter: SDM 16\nÖvning 14 - Konfidensintervall för ett väntevärde.\nUppgifter: SDM 17\nÖvning 13 - Hypotestest.\nUppgifter: SDM 18\nÖvning 14 - Hypotestest och p-värde.\nUppgifter: SDM 18\nÖvning 13 - Jämföra grupper.\nUppgifter: SDM 20-21.\nÖvning 14 - Inferens för regression.\nUppgifter: SDM 23\n\n\nDatorlaborationer\nDatorlaboration 5 - Simulering från sannolikhetsfördelningar\nUppgifter: Datorlab 5\nDatorlaboration 6 - Samplingfördelningar, standardfel och centrala gränsvärdessatsen.\nUppgifter: Datorlab 6\nDatorlaboration 7 - Konfidensintervall och hypotestest.\nUppgifter: Datorlab 7\nDatorlaboration 8 - Multipel linjär regression\nUppgifter: Datorlab 8"
-  },
-  {
-    "objectID": "stealourcourse.html",
-    "href": "stealourcourse.html",
-    "title": "Stjäl vår kurs",
-    "section": "",
-    "text": "Vi undersöker hur vi kan ge kursen en slags copyleft licens som gör att den som använder kursmaterialet här på en ny kurs måste se till att även göra den kursens material tillgängligt för alla. Vi vill inte att kursens material och eventuella förbättringar ska bli inlåsta bakom olika universitets undervisningplattformar. Tanken är istället att materialet förädlas av andra, som i sin tur delar vidare till allmänheten.\n\nKunskap mår bäst ute i friska luften så alla kan ta del av den. Öppet kursmaterial ger också en transparens som hjälper till att hålla kurserna aktuella, korrekta och relevanta.\n\n\n\n\n\n\n\nWarning\n\n\n\nDen som klonar materialet ansvarar själv för eventuella fel och skador som kan uppstå. Vi som skapat kursen tar inget som helst ansvar för detta.\n\n\n\n\n\n\n\n\nWarning\n\n\n\nNågra bilder här har köpts in från bildbanker och får endast användas om användaren själv betalar för dem. Tanken är att det ska finnas en lista på vilka bilder det handlar om, men ännu har vi inte tagit oss tid att skriva ner detta.\n\n\nMer info kommer att komma här när kursmaterialet blir mer komplett."
-  },
-  {
-    "objectID": "datorlab/lab2/DatorLab2.html#quarto-skriva-rapporter-med-text-kod-och-figurer",
-    "href": "datorlab/lab2/DatorLab2.html#quarto-skriva-rapporter-med-text-kod-och-figurer",
-    "title": "Statistik och dataanalys I, 15 hp",
-    "section": "Quarto: skriva rapporter med text, kod och figurer",
-    "text": "Quarto: skriva rapporter med text, kod och figurer\nDet traditionella sättet att skriva en (statistisk) rapport har varit:\n\nSkriva R-kod i t ex RStudio som gör den statistiska analysen, dvs genererar resultaten och eventuella grafer.\nSkriva en rapport i ett ordbehandlingsprogram, t ex Word, där resultaten sammanfattas i tabeller och figurer klistras in.\nMatematiska formler skrivs ofta i en add-on modul i ordbehandlaren.\nRapporten skrivs slutligen till en pdf-fil eller i html-format för att visas som en webbsida.\n\nQuarto är ett system som gör det möjligt att göra alla stegen ovan i en integrerad process. Quarto-dokument (filerna heter någotnamn.qmd) låter dig mixa text (markdown), kod, figurer, tabeller och matematiska formler i ett enda dokument. Det dokumentet kan du sen välja att skriva ut som pdf, html, blog, webbsida etc. Eftersom koden är integrerad i dokumentet så är Quarto-filer interaktiva i den meningen att du kan skicka ditt Quarto-dokument till en annan person och den personen kan t ex ändra en variabel eller datamaterial i koden och sen köra om hela Quarto-dokumentet med alla tabeller och figurer uppdaterade utefter de ändringar personen gjort i koden. Det här dokumentet är skrivet i Quarto! Här är ett enkelt Quarto-dokument som du kan ladda ner och öppna i RStudio och leka runt med. En html version finns här om du vill se slutresultatet av Quarto-dokumentet."
-  },
-  {
     "objectID": "datorlab/lab1/DatorLab1.html#introduktion",
     "href": "datorlab/lab1/DatorLab1.html#introduktion",
     "title": "Statistik och dataanalys I, 15 hp",
@@ -182,6 +91,216 @@
     "text": "12. Sammanfattning\nI den här datorlaborationen har du lärt dig att:\n\nAnvända R som en miniräknare.\nAnvända variabler som ett sätt att spara värden i en session.\nSätta working directory så R kan hitta dina filer.\nSkriva kod både i Console och Editorn.\nLäsa in data från fil och göra inledande grafer och medelvärdeberäkningar för dataanalys."
   },
   {
+    "objectID": "datorlab/lab2/DatorLab2.html#quarto-skriva-rapporter-med-text-kod-och-figurer",
+    "href": "datorlab/lab2/DatorLab2.html#quarto-skriva-rapporter-med-text-kod-och-figurer",
+    "title": "Statistik och dataanalys I, 15 hp",
+    "section": "0. Quarto: skriva rapporter med text, kod och figurer",
+    "text": "0. Quarto: skriva rapporter med text, kod och figurer\nDet traditionella sättet att skriva en (statistisk) rapport har varit:\n\nSkriva R-kod i t ex RStudio som gör den statistiska analysen, dvs genererar resultaten och eventuella grafer.\nSkriva en rapport i ett ordbehandlingsprogram, t ex Word, där resultaten sammanfattas i tabeller och figurer klistras in.\nMatematiska formler skrivs ofta i en add-on modul i ordbehandlaren.\nRapporten skrivs slutligen till en pdf-fil eller i html-format för att visas som en webbsida.\n\nQuarto är ett system som gör det möjligt att göra alla stegen ovan i en integrerad process. Quarto-dokument (filerna heter någotnamn.qmd) låter dig mixa text (markdown), kod, figurer, tabeller och matematiska formler i ett enda dokument. Det dokumentet kan du sen välja att skriva ut som pdf, html, blog, webbsida etc. Eftersom koden är integrerad i dokumentet så är Quarto-filer interaktiva i den meningen att du kan skicka ditt Quarto-dokument till en annan person och den personen kan t ex ändra en variabel eller datamaterial i koden och sen köra om hela Quarto-dokumentet med alla tabeller och figurer uppdaterade utefter de ändringar personen gjort i koden. Det här dokumentet är skrivet i Quarto! Här är ett enkelt Quarto-dokument som du kan ladda ner och öppna i RStudio och leka runt med. En html version finns här om du vill se slutresultatet av Quarto-dokumentet."
+  },
+  {
+    "objectID": "tutorials/ReadingDataFromFile/ReadingDataFromFile.html",
+    "href": "tutorials/ReadingDataFromFile/ReadingDataFromFile.html",
+    "title": "Reading data from an file",
+    "section": "",
+    "text": "Data often come in the form of Excel files, usually named SomeData.xls or SomeData.xlsx, where SomeData is the name that you or someone else have given to the file. Excel stores data as tables with rows and columns, like this:\n\n\n\n\n\nExcel files may contain more than one dataset, organized as Excel sheets. Here is an example (note the multiple sheets at the bottom):"
+  },
+  {
+    "objectID": "tutorials/ReadingDataFromFile/ReadingDataFromFile.html#reading-data-from-an-excel-file-in-r",
+    "href": "tutorials/ReadingDataFromFile/ReadingDataFromFile.html#reading-data-from-an-excel-file-in-r",
+    "title": "Reading data from an file",
+    "section": "Reading data from an Excel file in R",
+    "text": "Reading data from an Excel file in R\nThere are many R packages for reading data from Excel. We will be using the readxl package here. This installs and loads the readxl package:\n\n#install.packages(\"readxl\") # Installs the readxl package. Do it only once.\nlibrary(\"readxl\")           # loads the readxl package. Do it once per R session.\n\n\n\n\n\n\n\nNote\n\n\n\nI have commented out the installation of the package by putting a # sign in front of the command install.packages(\"readxl\"). So this command will not be executed/run. I already have that package installed on my computer and don’t want to re-install it. You have to uncomment, that is remove the sign #, before running this on your computer, if you haven’t installed this package already.\n\n\n\ntour_de_france <- read_excel('Tour_de_France_2017.xlsx', sheet = 1)\n\nThe argument sheet=1 tells R to read data from the first sheet in the Excel file. If you want to the read data from the third sheet in an Excel file, then just replace 1 with 3 (the Tour de France data has only one sheet, however).\n\n\n\n\n\n\nImportant\n\n\n\nI placed the file Tour_de_France_2017.xlsx in my working directory. If the file with data is at a different place on your computer then you need to include the search path to the file before the file name. For example, on a computer running Windows, if your data is stored in the Documents folder, then replace the command above with\ntour_de_france <- read_excel('C:\\Documents\\Tour_de_France_2017.xlsx', sheet = 1)\n\n\n\n\n\n\n\n\nTip\n\n\n\nRather than telling R explicitly where your data are stored, you can also use the command\ntour_de_france <- read_excel(file.choose(), sheet = 1)\nwhich will open up a window where you can look up the file in your file explorer and it will then read the first sheet (again the 1 in the command) of that file. This is convenient, but I don’t recommend it (lousy tip! 🙄) since you then have to click your way to the file everytime you re-run your R code.\n\n\nWe have now read the dataset into a variable that I have chosen to call tour_de_france. We can now just type the name of this variable in the Console in R to see the data.\n\ntour_de_france\n\n# A tibble: 104 × 12\n    Year Winner             Country   Age Team  `Total Time(h.…` `Total Time(h)`\n   <dbl> <chr>              <chr>   <dbl> <chr> <chr>                      <dbl>\n 1  1903 Maurice Garin      France     32 La F… 94.33.00                    94.6\n 2  1904 Henri Cornet       France     20 Cycl… 96.05.56                    96.1\n 3  1905 Louis Trousselier  France     24 Peug… 110.26.58                  110. \n 4  1906 Ren� Pottier       France     27 Peug… 189.34.00                  190. \n 5  1907 Lucien Petit-Bret… France     24 Peug… 158.45.05                  159. \n 6  1908 Lucien Petit-Bret… France     25 Peug… 156.53.29                  157. \n 7  1909 Fran�ois Faber     Luxemb…    22 Alcy… 157.01.22                  157. \n 8  1910 Octave Lapize      France     21 Alcy… 162.41.30                  163. \n 9  1911 Gustave Garrigou   France     27 Alcy… 195.37.00                  196. \n10  1912 Odile Defraye      Belgium    24 Alcy… 190.30.28                  191. \n# … with 94 more rows, and 5 more variables: `Average Speed` <dbl>,\n#   Stages <dbl>, `Total Distance Ridden` <dbl>, `Starting Riders` <dbl>,\n#   `Finishing Riders` <dbl>\n\n\nWe can see two things: 1) some accented letters like é were replaced by a question mark, 2) the dataset is store in a tibble data structure. A tibble is tidyverse’s (this alternative dialect of R) version of a dataframe. It is best for us to convert this into a dataframe, which can be done with the command (note that we are overwriting the variable tour_de_france):\n\ntour_de_france = data.frame(tour_de_france)\n\nTo get a quick look at the data, the head command is useful, showing only the first few observations of the dataset:\n\nhead(tour_de_france)\n\n  Year              Winner Country Age         Team Total.Time.h.min.sec.\n1 1903       Maurice Garin  France  32 La Fran�aise              94.33.00\n2 1904        Henri Cornet  France  20    Cycles JC              96.05.56\n3 1905   Louis Trousselier  France  24      Peugeot             110.26.58\n4 1906        Ren� Pottier  France  27      Peugeot             189.34.00\n5 1907 Lucien Petit-Breton  France  24      Peugeot             158.45.05\n6 1908 Lucien Petit-Breton  France  25      Peugeot             156.53.29\n  Total.Time.h. Average.Speed Stages Total.Distance.Ridden Starting.Riders\n1      94.55000        25.679      6                  2428              60\n2      96.09889        25.265      6                  2428              88\n3     110.44944        27.107     11                  2994              60\n4     189.56667        24.463     13                  4637              82\n5     158.75139        28.470     14                  4488              93\n6     156.89139        28.740     14                  4488             112\n  Finishing.Riders\n1               21\n2               27\n3               24\n4               14\n5               33\n6               36\n\n\nYou can now start analyzing the data in different ways, perhaps plotting the average speed variable over the year that Tour de France has run:\n\nplot(Average.Speed ~ Year, data = tour_de_france)\n\n\n\n\nThe average speed has increased over the year. Notable exceptions are the years during following the first world war."
+  },
+  {
+    "objectID": "tutorials/ReadingDataFromFile/ReadingDataFromFile.html#reading-data-from-text-.txt-and-.csv-files",
+    "href": "tutorials/ReadingDataFromFile/ReadingDataFromFile.html#reading-data-from-text-.txt-and-.csv-files",
+    "title": "Reading data from an file",
+    "section": "Reading data from text (.txt) and .csv files",
+    "text": "Reading data from text (.txt) and .csv files\nData may also come as a pure text file, often with the file ending .txt. Such files contain a simple table with the data. The first row may or may not contain the names of the variables in the columns. The columns are separated by a separator, typically a comma (,) or a TAB (blank space of a certain width). Here is an example with data from Indy car drivers:\n\n\n\n\n\nNote how the columns are not nice aligned, but clearly separated by blank space (TAB) so that R can understand which numbers belongs to which variable (column). Note also that the first row contain the variable names: Year, Winner, Chassis, Engine, Speed, Time_hrs and Distance.\nLet’s read this text file with data into R using the built-in function read.delim\n\nindy <- read.delim('Indy_500_2018.txt', header = TRUE)\nhead(indy)\n\n  Year        Winner  Chassis   Engine Speed.computed Time_hrs Distance\n1 1911   Ray Harroun   Marmon   Marmon       74.60212 6.702222      500\n2 1912    Joe Dawson National National       78.71950 6.351667      500\n3 1913    Jules Goux  Peugeot  Peugeot       75.93335 6.584722      500\n4 1914   Rene Thomas   Delage   Delage       82.47423 6.062500      500\n5 1915 Ralph DePalma Mercedes Mercedes       89.84049 5.565419      500\n6 1916   Dario Resta  Peugeot  Peugeot       84.00093 3.571389      300\n\n\nwhere the argument header = TRUE tells R that the first row in the dataset contains the names of the variables in the data.\nFinally, a very common file format are, comma-separated values files, often called csv for short. These are similar to txt files, but are read into R using the built-in read.csv function.\n\n\n\n\n\n\nTip\n\n\n\nBoth the read.delim and read.csv have an argument sep that can be used to specify which delimiter is used in the file. For example, a txt files where the columns are separated by a comma instead of TAB can be read by the command:\nmy_data <- read.delim('myfile.txt', sep = \",\", header = TRUE)"
+  },
+  {
+    "objectID": "tutorials/Quarto/QuartoReportExample.html",
+    "href": "tutorials/Quarto/QuartoReportExample.html",
+    "title": "Quarto",
+    "section": "",
+    "text": "This is an example of report from a Quarto document (with file format .qmd ). You can look at the html or pdf version of the document to spot things you like to learn how to do in Quarto and then go to the corresponding place in the .qmd file to see how I did it.\n\n\n\n\n\n\nQuarto official help\n\n\n\nThe Quarto website is very helpful for learning about Quarto. You can search (upper right corner) for specific things that you want to do in Quarto. Try for example searching for bold to see how you get bold text.\n\n\nAt the top of the file is the so called YAML, which contains the settings of the document."
+  },
+  {
+    "objectID": "tutorials/Quarto/QuartoReportExample.html#formatted-text-with-markdown",
+    "href": "tutorials/Quarto/QuartoReportExample.html#formatted-text-with-markdown",
+    "title": "Quarto",
+    "section": "2. Formatted text with markdown",
+    "text": "2. Formatted text with markdown\nQuarto documents uses a special language called markdown to write formatted (pretty looking) text like bold text or italic text.\nYou can make lists\n\nThis is an item\nand this is another one\nthe this is the last one\n\nOr numbered lists\n\nItem one\nItem two\nThe last item\n\nOr even lists like this:\n\nComputer lab 1\nComputer lab 2\nComputer lab 3\n\nYou can use footnotes. 1\nLinks to webpages: markdown cheat sheet\nHorizontal lines to be break up paragraphs\n\n\nand who doesn’t like a little wise quote?\n\nYou can also use titles of section of different sizes:"
+  },
+  {
+    "objectID": "tutorials/Quarto/QuartoReportExample.html#header-2",
+    "href": "tutorials/Quarto/QuartoReportExample.html#header-2",
+    "title": "Quarto",
+    "section": "Header 2",
+    "text": "Header 2\n\nHeader 3\n\nHeader 4"
+  },
+  {
+    "objectID": "tutorials/Quarto/QuartoReportExample.html#tables",
+    "href": "tutorials/Quarto/QuartoReportExample.html#tables",
+    "title": "Quarto",
+    "section": "3. Tables",
+    "text": "3. Tables\n\n\n\nName\nTitle\nParking space\n\n\n\n\nMike\nPhD student\nNo\n\n\nSarah\nProfessor\nYes\n\n\nDeborah\nLecturer\nNo"
+  },
+  {
+    "objectID": "tutorials/Quarto/QuartoReportExample.html#code-and-plots",
+    "href": "tutorials/Quarto/QuartoReportExample.html#code-and-plots",
+    "title": "Quarto",
+    "section": "4. Code and Plots",
+    "text": "4. Code and Plots\nA Quarto document can mix text and computer code. You can include code that computes statistics in your documents and then have the computed statistics analyzed or plotted in the same document.\nCode is written in code chunks. Here is chunk of R code that produces a plot in @littlehist\n\nn = 100\nx = rnorm(n)\nhist(x, main = \"My little histogram\")\n\n\n\n\nMy little fig caption\n\n\n\n\n\nplot(cars)\n\n\n\n\nFigure 1: Plot\n\n\n\n\nFor example, see @littlehist.\nVariables like n defined in a previous chunk can be used in a new chunk, like this:\n\nmean(x) # note how I use x from the previous code chunk\n\n[1] 0.1041946\n\n\nBy the way, note how I used backticks ` ` on n above to make the font look like computer code. So I can write plot( x ~ y, data = mydata) to show you the plot command in the text.\nYou can also include other images than plots produced by R. Like this:\n see @larry for grumpy dude."
+  },
+  {
+    "objectID": "tutorials/Quarto/QuartoReportExample.html#mathematical-symbols",
+    "href": "tutorials/Quarto/QuartoReportExample.html#mathematical-symbols",
+    "title": "Quarto",
+    "section": "5. Mathematical symbols",
+    "text": "5. Mathematical symbols\nQuarto can be used to write beautiful mathematical symbols using a very powerful typesetting system for maths called LaTeX (Strange name. Watch out, weird stuff may pop up when searching for help about LaTeX commands …). Here is some formulas that you will learn about during this course:\n\\[\ny = \\beta_0 + \\beta_1 x + \\varepsilon, \\text{ and } \\varepsilon \\sim N(0,\\sigma^2_{\\varepsilon})\n\\]\nYou can also write LaTeX math directly in the text: \\(y=a\\cdot b^x\\) and then just continue with the text."
+  },
+  {
+    "objectID": "tutorials/Quarto/Intro2Quarto.html",
+    "href": "tutorials/Quarto/Intro2Quarto.html",
+    "title": "Introduction to Quarto",
+    "section": "",
+    "text": "The old fashioned way of writing a report with statistical results follow the steps:\n\nWrite R code to produce statistical results and plots.\nWrite the report in Word, copy the numbers from R to make tables and insert the plots as figures.\nWrite mathematical formulas using some add-on in Word.\n\nThis is not very efficient, particularly when you have to re-run the code to update the results. The tables then needs to be updated manually in Word, and the insertion of figures must be done all over again. Would it be nice if we could write everything in a document: the text, the code, the mathematical formulas, the figures and tables? Can we even ask for a way to automatically update the whole report by a simple click of a button? Say hello to Quarto, a system that does just that, all from inside the comfort of RStudio! 🤩\nQuarto is a way to integrate text (markdown), computer code, figures, tables and mathematical formulas in one document.\nQuarto documents (with file ending .qmd) can easily be turned into pdf format, html, website, blogs and presentations."
+  },
+  {
+    "objectID": "tutorials/Quarto/Intro2Quarto.html#settings-for-the-document---the-yaml",
+    "href": "tutorials/Quarto/Intro2Quarto.html#settings-for-the-document---the-yaml",
+    "title": "Introduction to Quarto",
+    "section": "2. Settings for the document - the YAML",
+    "text": "2. Settings for the document - the YAML\nAt the top of a quarto document is the so called YAML, which tells the Quarto engine how the document should be formatted. This is the YAML for this document:\n\n\n\n\n\nwhich basically only gives the title and author information, everything else is using default settings. This will print (render) the document to html by default. To view the rendered file, just click the Render button at the top of the editor (only shown when you have a Quarto file in the editor):\n\n\n\n\n\nThe produced html file can be view in your web browser or inside RStudio in the Viewer tab in the bottom right window (typically). You may need to change the settings for it to show up in the Viewer tab. Click the settings-wheel at the top of the editor and make sure that Preview in Viewer Pane is selected:\n\n\n\n\n\nIf I instead wanted to render to pdf I would use the YAML:"
+  },
+  {
+    "objectID": "tutorials/Quarto/Intro2Quarto.html#writing-formatted-text-using-markdown",
+    "href": "tutorials/Quarto/Intro2Quarto.html#writing-formatted-text-using-markdown",
+    "title": "Introduction to Quarto",
+    "section": "3. Writing formatted text using markdown",
+    "text": "3. Writing formatted text using markdown\nThe text written in a Quarto document can be formatted using the markdown language. Markdown is a very simple language for formatting text. For example, I can easily make the text bold by writing **bold** or italic using a single * on each side of the text. A bulleted list:\n\nbullet\nlist\nare also\neasy\n\nis produced by putting a dash - and space before each bullet point. Numbered lists are also simple, just place numbers and a dot (.) before each list item. Like this:\n\nThis is the first point\nand this is second\nand so on.\n\nImages can be inserted by typing ![sceptic larry](/misc/larry.png){width=\"100\"} which would give the picture below. So the text caption for the image is written between the brackets [] and the search path to the image on your computer is given inside the parentheses ().\n\n\n\nsceptic larry\n\n\nYou can leave out the figure text and the width argument and just write: ![](/misc/larry.png) .\nTables are also pretty easy. The table below is made by writing\n| Name  | Age | Position            |\n|-------|-----|---------------------|\n| Mike  | 49  | Professor           |\n| Sarah | 37  | Assistant professor |\n| Anne  | 26  | PhD student         |\n\nA little table caption.\n\n\nName\nAge\nPosition\n\n\n\n\nMike\n49\nProfessor\n\n\nSarah\n37\nAssistant professor\n\n\nAnne\n26\nPhD student\n\n\n\nWhat if you want the table caption text to be below the tables, not below it? No sweat, just put table-cap-location: bottom in your YAML at the top of the document."
+  },
+  {
+    "objectID": "tutorials/Quarto/Intro2Quarto.html#writing-code",
+    "href": "tutorials/Quarto/Intro2Quarto.html#writing-code",
+    "title": "Introduction to Quarto",
+    "section": "4. Writing code",
+    "text": "4. Writing code\nA Quarto document can have executable code in them. It supports several programming languages, most notably: R, Python and Julia. You just need to add a code chunk. A code chunk starts and ends with three so called backticks `. The backtick is typed by Shift and the key to the left of Backspace on a Swedish keyboard. This is a chunk of R code:\n\n\n\n\n\nNote the little green Play-button. By pressing that we can run the code chunk. After running the code in the Quarto-document, the variables (in this case a vector x) will be available in the console, just like for any R code. Here is the end result of that code chunk:\n\nx = rnorm(100)\nplot(x, type = \"l\", xlab = \"time\", main = \"time series plot\")\n\n\n\n\n\n\n\n\n\n\nTip\n\n\n\nQuarto supports other popular programming languages in addtion to .\nA chunk of Python  code would start with ```{python}.\nA Julia  code chunk starts with ```{julia}. \n\n\nWhat if I want to use the code to produce the plot, but not show the code in my report? Easy, I would just add some YAML information at the beginning of the code chunk itself. YAML inside of a code chunk must begin with the two characters #| . Here is how you hide the code:\n\nThe first character # is called a hash and the second | a pipe. So the recommended way to remember #| is by thinking of the Weezer song: hash pipe. BTW, there I used a hyperlink which you write as [link text](webpage address) where the webpage address is a http-link, but can also be links within a document."
+  },
+  {
+    "objectID": "tutorials/Quarto/Intro2Quarto.html#writing-mathematical-formulas",
+    "href": "tutorials/Quarto/Intro2Quarto.html#writing-mathematical-formulas",
+    "title": "Introduction to Quarto",
+    "section": "5. Writing mathematical formulas",
+    "text": "5. Writing mathematical formulas\nQuarto supports LaTeX, which is a professional typesetting system for mathematical symbols. LaTeX takes a while to master, but you can look it up online to learn the basics. Just enclose LaTeX code between two dollar-signs on each side. Here is a simple example $$\\alpha_1$$ which would come out as \\[\\alpha_1\\] in your document. Here is a more complex example:\n$$\\bar{x} = \\frac{1}{n}\\sum_{i=1}^n x_i$$\nwhich would come out as the formula for the sample mean:\n\\[\\bar{x} = \\frac{1}{n}\\sum_{i=1}^n x_i\\]"
+  },
+  {
+    "objectID": "tutorials/Quarto/Intro2Quarto.html#using-the-visual-editor-in-rstudio",
+    "href": "tutorials/Quarto/Intro2Quarto.html#using-the-visual-editor-in-rstudio",
+    "title": "Introduction to Quarto",
+    "section": "6. Using the Visual editor in RStudio",
+    "text": "6. Using the Visual editor in RStudio\nYou can create (File/New File/Quarto document… menu) and write Quarto documents in RStudio. When you open a Quarto document in the editor the menu bar changes to (may look different for you):\n\n\n\n\n\nClicking on the Render button will render the document to html (default) or pdf (if you choose that in the YAML). Pressing the Run button will re-run all the code chunks in the document. You can write your Quarto document as markdown code if you click the Source -button in the extreme left. If you press the Visual-button you will see the document in a similar way to word processors like Word. You can then insert images and table, change font sizes etc by clicking on the menu. I tend to spend most time in Visual mode, but will often go over to Source mode when I want absolute control of what I do."
+  },
+  {
+    "objectID": "tutorials/Quarto/Intro2Quarto.html#things-to-think-about-when-working-with-quarto",
+    "href": "tutorials/Quarto/Intro2Quarto.html#things-to-think-about-when-working-with-quarto",
+    "title": "Introduction to Quarto",
+    "section": "7. Things to think about when working with Quarto",
+    "text": "7. Things to think about when working with Quarto\nQuarto processes the document code chunk by code chunk, from the beginning of the document until the end. Within a code chunk, Quarto reads the codez line by line. You must therefore make sure that a variable that you use has been defined (assigned a value) before you use the variable in the code. A common mistake is to use a variable in a code chunk which is only defined in a later code chunk. That will give an error."
+  },
+  {
+    "objectID": "tutorials/Quarto/Intro2Quarto.html#going-fancy---interactivity",
+    "href": "tutorials/Quarto/Intro2Quarto.html#going-fancy---interactivity",
+    "title": "Introduction to Quarto",
+    "section": "8. Going fancy - interactivity",
+    "text": "8. Going fancy - interactivity\nQuarto documents have the basic interactivity that one can change code inside a code chunk, render the document and everything in the document changes according to the changes in the code.\n\nBut it also possible to make the final html interactive. Below is an an example to wet your appetite. Note however that you need to view the html file in an external web browser and not using the Viewer inside RStudio. Try moving around the slides to change the plot.\n\ndata = FileAttachment(\"palmer-penguins.csv\").csv({ typed: true })\n\n\n\n\n\n\n\nviewof bill_length_min = Inputs.range(\n  [32, 50], \n  {value: 35, step: 1, label: \"Bill length (min):\"}\n)\nviewof islands = Inputs.checkbox(\n  [\"Torgersen\", \"Biscoe\", \"Dream\"], \n  { value: [\"Torgersen\", \"Biscoe\"], \n    label: \"Islands:\"\n  }\n)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nfiltered = data.filter(function(penguin) {\n  return bill_length_min < penguin.bill_length_mm &&\n         islands.includes(penguin.island);\n})\n\n\n\n\n\n\n\nPlotData\n\n\n\nPlot.rectY(filtered, \n  Plot.binX(\n    {y: \"count\"}, \n    {x: \"body_mass_g\", fill: \"species\", thresholds: 20}\n  ))\n  .plot({\n    facet: {\n      data: filtered,\n      x: \"sex\",\n      y: \"species\",\n      marginRight: 80\n    },\n    marks: [\n      Plot.frame(),\n    ]\n  }\n)\n\n\n\n\n\n\n\n\n\nInputs.table(filtered)"
+  },
+  {
+    "objectID": "R/TidyverseSyntax.html",
+    "href": "R/TidyverseSyntax.html",
+    "title": "Tidyverse syntax",
+    "section": "",
+    "text": "library(ggplot2)\nggplot(data = mtcars, aes(x = hp, y = mpg)) +\n  geom_point() + \n  ggtitle(\"Cars fuel usage\") \n\n\n\n\nSe ggplot2 cheat sheet för fler kommandon."
+  },
+  {
+    "objectID": "R/BaseRSyntax.html",
+    "href": "R/BaseRSyntax.html",
+    "title": "Base-R",
+    "section": "",
+    "text": "plot(mtcars$hp, mtcars$mpg, xlab = \"hp\", ylab = \"mpg\", main = \"Cars fuel usage\")"
+  },
+  {
+    "objectID": "R/Rcommands.html",
+    "href": "R/Rcommands.html",
+    "title": "R commands for SDA1",
+    "section": "",
+    "text": "This document gives some useful R commands for the basic stats course SDA1 using the mosaic and ggformula packages using the R formula syntax."
+  },
+  {
+    "objectID": "R/Rcommands.html#credits",
+    "href": "R/Rcommands.html#credits",
+    "title": "R commands for SDA1",
+    "section": "Credits",
+    "text": "Credits\nThis document is adapted from Professor Mcnamara’s All the R you need for STAT 220 - formula."
+  },
+  {
+    "objectID": "R/Rcommands.html#loading-packages",
+    "href": "R/Rcommands.html#loading-packages",
+    "title": "R commands for SDA1",
+    "section": "Loading packages",
+    "text": "Loading packages\nLoading two packages for formula based basic statistics\n\nlibrary(mosaic)\nlibrary(ggformula)"
+  },
+  {
+    "objectID": "R/Rcommands.html#reading-in-data",
+    "href": "R/Rcommands.html#reading-in-data",
+    "title": "R commands for SDA1",
+    "section": "Reading in data",
+    "text": "Reading in data\n\nGSS <- read.csv(\"GSS_clean.csv\")"
+  },
+  {
+    "objectID": "R/Rcommands.html#plotting",
+    "href": "R/Rcommands.html#plotting",
+    "title": "R commands for SDA1",
+    "section": "Plotting",
+    "text": "Plotting\n\n# one categorical\ngf_bar(~marital_status, data = GSS)\n\n\n\n# two categorical\ngf_bar(~marital_status, fill = ~born_in_us, data = GSS)\n\n\n\ngf_bar(~marital_status, fill = ~born_in_us, data = GSS, position = \"dodge\")\n\n\n\n# one numeric\ngf_histogram(~highest_year_of_school_completed, data = GSS)\n\nWarning: Removed 3 rows containing non-finite values (stat_bin).\n\n\n\n\ngf_boxplot(~highest_year_of_school_completed, data = GSS)\n\nWarning: Removed 3 rows containing non-finite values (stat_boxplot).\n\n\n\n\n# one numeric, one categorical\ngf_boxplot(highest_year_of_school_completed ~ labor_force_status, data = GSS)\n\nWarning: Removed 3 rows containing non-finite values (stat_boxplot).\n\n\n\n\n# two numeric\ngf_point(highest_year_of_school_completed ~ highest_year_school_completed_spouse,\n  data = GSS\n)\n\nWarning: Removed 1361 rows containing missing values (geom_point)."
+  },
+  {
+    "objectID": "R/Rcommands.html#summary-statistics",
+    "href": "R/Rcommands.html#summary-statistics",
+    "title": "R commands for SDA1",
+    "section": "Summary statistics",
+    "text": "Summary statistics\n\n# one categorical\ntally(~marital_status, data = GSS, format = \"proportion\")\n\nmarital_status\n     Divorced       Married Never married     Separated       Widowed \n 0.1716354344  0.4250425894  0.2853492334  0.0319420784  0.0851788756 \n         <NA> \n 0.0008517888 \n\n# two categorical\ntally(~ marital_status | general_happiness, data = GSS, format = \"proportion\")\n\n               general_happiness\nmarital_status  Not too happy Pretty happy   Very happy         <NA>\n  Divorced       0.2500000000 0.1851568477 0.1098430813 0.0000000000\n  Married        0.1815476190 0.3856159143 0.6162624822 0.2500000000\n  Never married  0.4017857143 0.3129303749 0.1768901569 0.5000000000\n  Separated      0.0565476190 0.0306044376 0.0213980029 0.2500000000\n  Widowed        0.1101190476 0.0849273145 0.0741797432 0.0000000000\n  <NA>           0.0000000000 0.0007651109 0.0014265335 0.0000000000\n\n# one numeric\nmean(~highest_year_of_school_completed, data = GSS, na.rm = TRUE)\n\n[1] 13.73177\n\noptions(na.rm = TRUE) # options\nmedian(~highest_year_of_school_completed, data = GSS)\n\n[1] 14\n\nsd(~highest_year_of_school_completed, data = GSS)\n\n[1] 2.974313\n\nrange(~highest_year_of_school_completed, data = GSS)\n\n[1]  0 20\n\nIQR(~highest_year_of_school_completed, data = GSS)\n\n[1] 4\n\nfivenum(~highest_year_of_school_completed, data = GSS)\n\n[1]  0 12 14 16 20\n\nfavstats(~highest_year_of_school_completed, data = GSS) # favorite statistics\n\n min Q1 median Q3 max     mean       sd    n missing\n   0 12     14 16  20 13.73177 2.974313 2345       3\n\ncor(highest_year_of_school_completed ~ highest_year_school_completed_spouse,\n  data = GSS, use = \"complete.obs\"\n) # correlation\n\n[1] 0.5955573"
+  },
+  {
+    "objectID": "R/Rcommands.html#working-with-data",
+    "href": "R/Rcommands.html#working-with-data",
+    "title": "R commands for SDA1",
+    "section": "Working with data",
+    "text": "Working with data\n\n# filtering out NA values\nGSS_prop <- filter(\n  GSS,\n  !is.na(should_marijuana_be_made_legal),\n  !is.na(self_emp_or_works_for_somebody)\n)"
+  },
+  {
+    "objectID": "R/Rcommands.html#modeling-and-inference",
+    "href": "R/Rcommands.html#modeling-and-inference",
+    "title": "R commands for SDA1",
+    "section": "Modeling and inference",
+    "text": "Modeling and inference\n\n# linear model\nm1 <- lm(highest_year_of_school_completed ~ highest_year_school_completed_spouse,\n  data = GSS\n)\nsummary(m1)\n\n\nCall:\nlm(formula = highest_year_of_school_completed ~ highest_year_school_completed_spouse, \n    data = GSS)\n\nResiduals:\n     Min       1Q   Median       3Q      Max \n-16.5400  -1.3519   0.0242   1.4600   7.0242 \n\nCoefficients:\n                                     Estimate Std. Error t value Pr(>|t|)    \n(Intercept)                           5.84740    0.36316   16.10   <2e-16 ***\nhighest_year_school_completed_spouse  0.59403    0.02553   23.27   <2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 2.462 on 985 degrees of freedom\n  (1361 observations deleted due to missingness)\nMultiple R-squared:  0.3547,    Adjusted R-squared:  0.354 \nF-statistic: 541.4 on 1 and 985 DF,  p-value: < 2.2e-16\n\nrsquared(m1)\n\n[1] 0.3546884\n\npredict(m1,\n  newdata = data.frame(highest_year_school_completed_spouse = 11),\n  interval = \"confidence\"\n)\n\n       fit      lwr      upr\n1 12.38178 12.17059 12.59297\n\npredict(m1,\n  newdata = data.frame(highest_year_school_completed_spouse = 11),\n  interval = \"prediction\"\n)\n\n       fit      lwr      upr\n1 12.38178 7.546498 17.21706\n\n# bootstrapping\nbootstrap_sample <- do(1) * resample(GSS)\nboot <- do(1000) * mean(~highest_year_of_school_completed, data = resample(GSS))\nconfint(boot)\n\n  name    lower    upper level     method estimate\n1 mean 13.61059 13.84764  0.95 percentile 13.73177\n\n# one proportion\nprop.test(~self_emp_or_works_for_somebody,\n  data = GSS, success = \"Self-employed\", p = 0.1, alternative = \"less\"\n)\n\n\n    1-sample proportions test with continuity correction\n\ndata:  GSS$self_emp_or_works_for_somebody  [with success = Self-employed]\nX-squared = 0.1433, df = 1, p-value = 0.6475\nalternative hypothesis: true p is less than 0.1\n95 percent confidence interval:\n 0.0000000 0.1138167\nsample estimates:\n        p \n0.1026095 \n\n# two proportions\nprop.test(should_marijuana_be_made_legal ~ self_emp_or_works_for_somebody,\n  data = GSS_prop, success = \"Legal\"\n)\n\n\n    2-sample test for equality of proportions with continuity correction\n\ndata:  tally(should_marijuana_be_made_legal ~ self_emp_or_works_for_somebody)\nX-squared = 0.87754, df = 1, p-value = 0.3489\nalternative hypothesis: two.sided\n95 percent confidence interval:\n -0.04100264  0.12791902\nsample estimates:\n   prop 1    prop 2 \n0.6901408 0.6466827 \n\n# one mean\nt.test(~highest_year_of_school_completed, data = GSS, mu = 12, alternative = \"greater\")\n\n\n    One Sample t-test\n\ndata:  highest_year_of_school_completed\nt = 28.195, df = 2344, p-value < 2.2e-16\nalternative hypothesis: true mean is greater than 12\n95 percent confidence interval:\n 13.6307     Inf\nsample estimates:\nmean of x \n 13.73177 \n\n# two means\nt.test(highest_year_of_school_completed ~ born_in_us, data = GSS)\n\n\n    Welch Two Sample t-test\n\ndata:  highest_year_of_school_completed by born_in_us\nt = -4.8468, df = 337.79, p-value = 1.916e-06\nalternative hypothesis: true difference in means between group No and group Yes is not equal to 0\n95 percent confidence interval:\n -1.7012965 -0.7190416\nsample estimates:\n mean in group No mean in group Yes \n         12.67774          13.88791 \n\n# Chi-square\nchisq.test(tally(marital_status ~ general_happiness, data = GSS)) # independence\n\nWarning in chisq.test(tally(marital_status ~ general_happiness, data = GSS)):\nChi-squared approximation may be incorrect\n\n\n\n    Pearson's Chi-squared test\n\ndata:  tally(marital_status ~ general_happiness, data = GSS)\nX-squared = 210.13, df = 15, p-value < 2.2e-16\n\nchisq.test(tally(~general_happiness, data = GSS), p = c(0.14, 0.55, 0.30, 0.01)) # GoF\n\n\n    Chi-squared test for given probabilities\n\ndata:  tally(~general_happiness, data = GSS)\nX-squared = 16.528, df = 3, p-value = 0.0008838"
+  },
+  {
+    "objectID": "R/Rcommands.html#probability",
+    "href": "R/Rcommands.html#probability",
+    "title": "R commands for SDA1",
+    "section": "Probability",
+    "text": "Probability\n\npnorm(1.96, lower.tail = FALSE) # normal distribution function\n\n[1] 0.0249979\n\nqnorm(0.25, mean = 100, sd = 5) # normal quantile function\n\n[1] 96.62755"
+  },
+  {
+    "objectID": "R/FormulaSyntax.html",
+    "href": "R/FormulaSyntax.html",
+    "title": "Formula syntax",
+    "section": "",
+    "text": "En vanlig scatter plot fås genom:\n\nplot(mpg ~ hp, data = mtcars, main = \"Cars fuel usage\")\n\n\n\n\nMed ggformula paketet kan man använda formel-syntax, men få plottar som liknar Tidyverse:\n\nlibrary(ggformula)\n\nLoading required package: ggplot2\n\n\nLoading required package: ggstance\n\n\n\nAttaching package: 'ggstance'\n\n\nThe following objects are masked from 'package:ggplot2':\n\n    geom_errorbarh, GeomErrorbarh\n\n\nLoading required package: scales\n\n\nLoading required package: ggridges\n\n\n\nNew to ggformula?  Try the tutorials: \n    learnr::run_tutorial(\"introduction\", package = \"ggformula\")\n    learnr::run_tutorial(\"refining\", package = \"ggformula\")\n\ngf_point(mpg ~ hp, data = mtcars, title = \"Cars fuel usage\")"
+  },
+  {
     "objectID": "slides/SDA1_L1.html#översikt",
     "href": "slides/SDA1_L1.html#översikt",
     "title": "Statistik och dataanalys I",
@@ -217,88 +336,32 @@
     "text": "Interactive\n\ndata = FileAttachment(\"palmer-penguins.csv\").csv({ typed: true })\n\n\n\n\n\n\n\nviewof bill_length_min = Inputs.range(\n  [32, 50], \n  {value: 35, step: 1, label: \"Bill length (min):\"}\n)\nviewof islands = Inputs.checkbox(\n  [\"Torgersen\", \"Biscoe\", \"Dream\"], \n  { value: [\"Torgersen\", \"Biscoe\"], \n    label: \"Islands:\"\n  }\n)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nfiltered = data.filter(function(penguin) {\n  return bill_length_min < penguin.bill_length_mm &&\n         islands.includes(penguin.island);\n})\n\n\n\n\n\n\n\nPlotData\n\n\n\nPlot.rectY(filtered, \n  Plot.binX(\n    {y: \"count\"}, \n    {x: \"body_mass_g\", fill: \"species\", thresholds: 20}\n  ))\n  .plot({\n    facet: {\n      data: filtered,\n      x: \"sex\",\n      y: \"species\",\n      marginRight: 80\n    },\n    marks: [\n      Plot.frame(),\n    ]\n  }\n)\n\n\n\n\n\n\n\n\n\nInputs.table(filtered)\n\n\n\n\n\n\n\n\n\n\n\n\nStatistik och dataanalys I     ·     Dataanalys, 7.5 hp"
   },
   {
-    "objectID": "R/Rcommands.html",
-    "href": "R/Rcommands.html",
-    "title": "R commands for SDA1",
+    "objectID": "stealourcourse.html",
+    "href": "stealourcourse.html",
+    "title": "Stjäl vår kurs",
     "section": "",
-    "text": "This document gives some useful R commands for the basic stats course SDA1 using the mosaic and ggformula packages using the R formula syntax."
+    "text": "Vi som utvecklat den här kursen hoppas att andra lärare kan bli inspirerade av den, och vilja använda delar av den själva. Allt kursmaterial ligger därför öppet på GitHub här och kan laddas ner eller klonas.\nVi undersöker hur vi kan ge kursen en slags copyleft licens som gör att den som använder kursmaterialet här på en ny kurs måste se till att även göra den kursens material tillgängligt för alla. Vi vill inte att kursens material och eventuella förbättringar ska bli inlåsta bakom olika universitets undervisningplattformar. Tanken är istället att materialet förädlas av andra, som i sin tur delar vidare till allmänheten.\n\nKunskap mår bäst ute i friska luften så alla kan ta del av den. Öppet kursmaterial ger också en transparens som hjälper till att hålla kurserna aktuella, korrekta och relevanta.\n\n\n\n\n\n\n\nWarning\n\n\n\nDen som klonar materialet ansvarar själv för eventuella fel och skador som kan uppstå. Vi som skapat kursen tar inget som helst ansvar för detta.\n\n\n\n\n\n\n\n\nWarning\n\n\n\nNågra bilder här har köpts in från bildbanker och får endast användas om användaren själv betalar för dem. Tanken är att det ska finnas en lista på vilka bilder det handlar om, men ännu har vi inte tagit oss tid att skriva ner detta.\n\n\nMer info kommer att komma här när kursmaterialet blir mer komplett."
   },
   {
-    "objectID": "R/Rcommands.html#credits",
-    "href": "R/Rcommands.html#credits",
-    "title": "R commands for SDA1",
-    "section": "Credits",
-    "text": "Credits\nThis document is adapted from Professor Mcnamara’s All the R you need for STAT 220 - formula."
-  },
-  {
-    "objectID": "R/Rcommands.html#loading-packages",
-    "href": "R/Rcommands.html#loading-packages",
-    "title": "R commands for SDA1",
-    "section": "Loading packages",
-    "text": "Loading packages\nLoading two packages for formula based basic statistics\n\nlibrary(mosaic)\nlibrary(ggformula)"
-  },
-  {
-    "objectID": "R/Rcommands.html#reading-in-data",
-    "href": "R/Rcommands.html#reading-in-data",
-    "title": "R commands for SDA1",
-    "section": "Reading in data",
-    "text": "Reading in data\n\nGSS <- read.csv(\"GSS_clean.csv\")"
-  },
-  {
-    "objectID": "R/Rcommands.html#plotting",
-    "href": "R/Rcommands.html#plotting",
-    "title": "R commands for SDA1",
-    "section": "Plotting",
-    "text": "Plotting\n\n# one categorical\ngf_bar(~marital_status, data = GSS)\n\n\n\n# two categorical\ngf_bar(~marital_status, fill = ~born_in_us, data = GSS)\n\n\n\ngf_bar(~marital_status, fill = ~born_in_us, data = GSS, position = \"dodge\")\n\n\n\n# one numeric\ngf_histogram(~highest_year_of_school_completed, data = GSS)\n\nWarning: Removed 3 rows containing non-finite values (`stat_bin()`).\n\n\n\n\ngf_boxplot(~highest_year_of_school_completed, data = GSS)\n\nWarning: Removed 3 rows containing non-finite values (`stat_boxplot()`).\n\n\n\n\n# one numeric, one categorical\ngf_boxplot(highest_year_of_school_completed ~ labor_force_status, data = GSS)\n\nWarning: Removed 3 rows containing non-finite values (`stat_boxplot()`).\n\n\n\n\n# two numeric\ngf_point(highest_year_of_school_completed ~ highest_year_school_completed_spouse,\n  data = GSS\n)\n\nWarning: Removed 1361 rows containing missing values (`geom_point()`)."
-  },
-  {
-    "objectID": "R/Rcommands.html#summary-statistics",
-    "href": "R/Rcommands.html#summary-statistics",
-    "title": "R commands for SDA1",
-    "section": "Summary statistics",
-    "text": "Summary statistics\n\n# one categorical\ntally(~marital_status, data = GSS, format = \"proportion\")\n\nmarital_status\n     Divorced       Married Never married     Separated       Widowed \n 0.1716354344  0.4250425894  0.2853492334  0.0319420784  0.0851788756 \n         <NA> \n 0.0008517888 \n\n# two categorical\ntally(~ marital_status | general_happiness, data = GSS, format = \"proportion\")\n\n               general_happiness\nmarital_status  Not too happy Pretty happy   Very happy         <NA>\n  Divorced       0.2500000000 0.1851568477 0.1098430813 0.0000000000\n  Married        0.1815476190 0.3856159143 0.6162624822 0.2500000000\n  Never married  0.4017857143 0.3129303749 0.1768901569 0.5000000000\n  Separated      0.0565476190 0.0306044376 0.0213980029 0.2500000000\n  Widowed        0.1101190476 0.0849273145 0.0741797432 0.0000000000\n  <NA>           0.0000000000 0.0007651109 0.0014265335 0.0000000000\n\n# one numeric\nmean(~highest_year_of_school_completed, data = GSS, na.rm = TRUE)\n\n[1] 13.73177\n\noptions(na.rm = TRUE) # options\nmedian(~highest_year_of_school_completed, data = GSS)\n\n[1] 14\n\nsd(~highest_year_of_school_completed, data = GSS)\n\n[1] 2.974313\n\nrange(~highest_year_of_school_completed, data = GSS)\n\n[1]  0 20\n\nIQR(~highest_year_of_school_completed, data = GSS)\n\n[1] 4\n\nfivenum(~highest_year_of_school_completed, data = GSS)\n\n[1]  0 12 14 16 20\n\nfavstats(~highest_year_of_school_completed, data = GSS) # favorite statistics\n\n min Q1 median Q3 max     mean       sd    n missing\n   0 12     14 16  20 13.73177 2.974313 2345       3\n\ncor(highest_year_of_school_completed ~ highest_year_school_completed_spouse,\n  data = GSS, use = \"complete.obs\"\n) # correlation\n\n[1] 0.5955573"
-  },
-  {
-    "objectID": "R/Rcommands.html#working-with-data",
-    "href": "R/Rcommands.html#working-with-data",
-    "title": "R commands for SDA1",
-    "section": "Working with data",
-    "text": "Working with data\n\n# filtering out NA values\nGSS_prop <- filter(\n  GSS,\n  !is.na(should_marijuana_be_made_legal),\n  !is.na(self_emp_or_works_for_somebody)\n)"
-  },
-  {
-    "objectID": "R/Rcommands.html#modeling-and-inference",
-    "href": "R/Rcommands.html#modeling-and-inference",
-    "title": "R commands for SDA1",
-    "section": "Modeling and inference",
-    "text": "Modeling and inference\n\n# linear model\nm1 <- lm(highest_year_of_school_completed ~ highest_year_school_completed_spouse,\n  data = GSS\n)\nsummary(m1)\n\n\nCall:\nlm(formula = highest_year_of_school_completed ~ highest_year_school_completed_spouse, \n    data = GSS)\n\nResiduals:\n     Min       1Q   Median       3Q      Max \n-16.5400  -1.3519   0.0242   1.4600   7.0242 \n\nCoefficients:\n                                     Estimate Std. Error t value Pr(>|t|)    \n(Intercept)                           5.84740    0.36316   16.10   <2e-16 ***\nhighest_year_school_completed_spouse  0.59403    0.02553   23.27   <2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 2.462 on 985 degrees of freedom\n  (1361 observations deleted due to missingness)\nMultiple R-squared:  0.3547,    Adjusted R-squared:  0.354 \nF-statistic: 541.4 on 1 and 985 DF,  p-value: < 2.2e-16\n\nrsquared(m1)\n\n[1] 0.3546884\n\npredict(m1,\n  newdata = data.frame(highest_year_school_completed_spouse = 11),\n  interval = \"confidence\"\n)\n\n       fit      lwr      upr\n1 12.38178 12.17059 12.59297\n\npredict(m1,\n  newdata = data.frame(highest_year_school_completed_spouse = 11),\n  interval = \"prediction\"\n)\n\n       fit      lwr      upr\n1 12.38178 7.546498 17.21706\n\n# bootstrapping\nbootstrap_sample <- do(1) * resample(GSS)\nboot <- do(1000) * mean(~highest_year_of_school_completed, data = resample(GSS))\nconfint(boot)\n\n  name    lower    upper level     method estimate\n1 mean 13.61091 13.84868  0.95 percentile 13.73177\n\n# one proportion\nprop.test(~self_emp_or_works_for_somebody,\n  data = GSS, success = \"Self-employed\", p = 0.1, alternative = \"less\"\n)\n\n\n    1-sample proportions test with continuity correction\n\ndata:  GSS$self_emp_or_works_for_somebody  [with success = Self-employed]\nX-squared = 0.1433, df = 1, p-value = 0.6475\nalternative hypothesis: true p is less than 0.1\n95 percent confidence interval:\n 0.0000000 0.1138167\nsample estimates:\n        p \n0.1026095 \n\n# two proportions\nprop.test(should_marijuana_be_made_legal ~ self_emp_or_works_for_somebody,\n  data = GSS_prop, success = \"Legal\"\n)\n\n\n    2-sample test for equality of proportions with continuity correction\n\ndata:  tally(should_marijuana_be_made_legal ~ self_emp_or_works_for_somebody)\nX-squared = 0.87754, df = 1, p-value = 0.3489\nalternative hypothesis: two.sided\n95 percent confidence interval:\n -0.04100264  0.12791902\nsample estimates:\n   prop 1    prop 2 \n0.6901408 0.6466827 \n\n# one mean\nt.test(~highest_year_of_school_completed, data = GSS, mu = 12, alternative = \"greater\")\n\n\n    One Sample t-test\n\ndata:  highest_year_of_school_completed\nt = 28.195, df = 2344, p-value < 2.2e-16\nalternative hypothesis: true mean is greater than 12\n95 percent confidence interval:\n 13.6307     Inf\nsample estimates:\nmean of x \n 13.73177 \n\n# two means\nt.test(highest_year_of_school_completed ~ born_in_us, data = GSS)\n\n\n    Welch Two Sample t-test\n\ndata:  highest_year_of_school_completed by born_in_us\nt = -4.8468, df = 337.79, p-value = 1.916e-06\nalternative hypothesis: true difference in means between group No and group Yes is not equal to 0\n95 percent confidence interval:\n -1.7012965 -0.7190416\nsample estimates:\n mean in group No mean in group Yes \n         12.67774          13.88791 \n\n# Chi-square\nchisq.test(tally(marital_status ~ general_happiness, data = GSS)) # independence\n\nWarning in chisq.test(tally(marital_status ~ general_happiness, data = GSS)):\nChi-squared approximation may be incorrect\n\n\n\n    Pearson's Chi-squared test\n\ndata:  tally(marital_status ~ general_happiness, data = GSS)\nX-squared = 210.13, df = 15, p-value < 2.2e-16\n\nchisq.test(tally(~general_happiness, data = GSS), p = c(0.14, 0.55, 0.30, 0.01)) # GoF\n\n\n    Chi-squared test for given probabilities\n\ndata:  tally(~general_happiness, data = GSS)\nX-squared = 16.528, df = 3, p-value = 0.0008838"
-  },
-  {
-    "objectID": "R/Rcommands.html#probability",
-    "href": "R/Rcommands.html#probability",
-    "title": "R commands for SDA1",
-    "section": "Probability",
-    "text": "Probability\n\npnorm(1.96, lower.tail = FALSE) # normal distribution function\n\n[1] 0.0249979\n\nqnorm(0.25, mean = 100, sd = 5) # normal quantile function\n\n[1] 96.62755"
-  },
-  {
-    "objectID": "R/FormulaSyntax.html",
-    "href": "R/FormulaSyntax.html",
-    "title": "Formula syntax",
+    "objectID": "assignments/Inlamningsuppgift1.html",
+    "href": "assignments/Inlamningsuppgift1.html",
+    "title": "Statistik och dataanalys I, 15 hp",
     "section": "",
-    "text": "En vanlig scatter plot fås genom:\n\nplot(mpg ~ hp, data = mtcars, main = \"Cars fuel usage\")\n\n\n\n\nMed ggformula paketet kan man använda formel-syntax, men få plottar som liknar Tidyverse:\n\nlibrary(ggformula)\n\nLoading required package: ggplot2\n\n\nLoading required package: ggstance\n\n\n\nAttaching package: 'ggstance'\n\n\nThe following objects are masked from 'package:ggplot2':\n\n    geom_errorbarh, GeomErrorbarh\n\n\nLoading required package: scales\n\n\nLoading required package: ggridges\n\n\n\nNew to ggformula?  Try the tutorials: \n    learnr::run_tutorial(\"introduction\", package = \"ggformula\")\n    learnr::run_tutorial(\"refining\", package = \"ggformula\")\n\ngf_point(mpg ~ hp, data = mtcars, title = \"Cars fuel usage\")"
+    "text": "Inlämning\n\n\n\nEr grupp förväntas lämna in följande på Athena:\n\ndet här Quarto (qmd) dokumentet med era lösningar på inlämningsuppgiften\nen pdf-version av dokumentet.\n\nByt ut Student 1 och Student 2 vid Author till era namn."
   },
   {
-    "objectID": "R/TidyverseSyntax.html",
-    "href": "R/TidyverseSyntax.html",
-    "title": "Tidyverse syntax",
+    "objectID": "DelA.html",
+    "href": "DelA.html",
+    "title": "Dataanalys, 7.5 hp",
     "section": "",
-    "text": "library(ggplot2)\nggplot(data = mtcars, aes(x = hp, y = mpg)) +\n  geom_point() + \n  ggtitle(\"Cars fuel usage\") \n\n\n\n\nSe ggplot2 cheat sheet för fler kommandon."
+    "text": "I det här momentet ingår insamling, bearbetning, visualisering och sammanfattning av data i programspråket R. En stor del av momentet behandlar sambands- och regressionsanalys som utmynnar i metoder för prediktion.\n\n\nFöreläsningar\nFöreläsning 1 - Introduktion.\nLäs: SDM Kapitel 1 | Slides\nFöreläsning 2 - Introduktion till R. \nLäs: LITTERATUR | Slides\nFöreläsning 3 - Hantera och beskriva data.\nLäs: SDM Kapitel 2 | Slides\nFöreläsning 4 - Samband mellan kategoriska variabler.\nLäs: SDM Kapitel 3 | Slides\nFöreläsning 5 - Jämföra fördelningar. Tidsserier. Transformationer.\nLäs: SDM Kapitel 4 | Slides\nFöreläsning 6 - Standardisering och Normalmodellen.\nLäs: SDM Kapitel 5 | Slides\nFöreläsning 7 - Samband mellan kontinuerliga variabler. Korrelation.\nLäs: SDM Kapitel 6 | Slides\nFöreläsning 8 - Enkel linjär regression.\nLäs: SDM Kapitel 7 | Slides\nFöreläsning 9 - Multipel regression.\nLäs: SDM Kapitel 9 | Slides\nFöreläsning 10 - Populationer och stickprov. Undersökningar och experiment.\nLäs: SDM 10.1-10.3 och 11.1-11.2 | Slides\nFöreläsning 11 - Sammanfattning\nLäs: Slides\nVideoföreläsning - Matematikrepetition.\nLäs: Slides\n\n\nÖvningar\nÖvning 1 - Beskrivande statistik.\nUppgifter: SDM 2\nÖvning 2 - Samband mellan kategoriska variabler och korstabeller.\nUppgifter: SDM 3\nÖvning 3 - Standardavvikelse och standardisering. Normalmodellen.\nUppgifter: SDM 5\nÖvning 4 - Korrelation.\nUppgifter: SDM 6\nÖvning 5 - Estimering och tolkning av enkel linjär regression.\nUppgifter: SDM 7\nÖvning 6 - Prediktion med enkel linjär regression.\nUppgifter: SDM 7-9\n\n\nDatorlaborationer\nDatorlaboration 1 - Intro till R\nUppgifter: html eller pdf\nDatorlaboration 2 - Beskrivande statistik och visualisering i R\nUppgifter: Datorlab 2\nDatorlaboration 3 - Korrelation och enkel linjär regression\nUppgifter: Datorlab 3\nDatorlaboration 4 - Multipel linjär regression\nUppgifter: Datorlab 4"
   },
   {
-    "objectID": "R/BaseRSyntax.html",
-    "href": "R/BaseRSyntax.html",
-    "title": "Base-R",
-    "section": "",
-    "text": "plot(mtcars$hp, mtcars$mpg, xlab = \"hp\", ylab = \"mpg\", main = \"Cars fuel usage\")"
+    "objectID": "index.html#datamaterial",
+    "href": "index.html#datamaterial",
+    "title": "Statistik och dataanalys I, 15 hp",
+    "section": "Datamaterial",
+    "text": "Datamaterial\nKursboken Stats - Data and Models kommer med över 500 olika datamaterial som hittas här. Datamaterialen är i ofta i Excel-format, se denna guide om hur man läser in data från Excel i R."
   },
   {
     "objectID": "R.html",
@@ -336,18 +399,11 @@
     "text": "Kursens R-paket\nKursen har ett eget R-paket sdakurs med några hjälpfunktioner som används på kursen.\n\nInstallera kurspaketet sdakurs\n\ninstall.packages(\"remotes\") \nlibrary(remotes)  \ninstall_github(\"StatisticsSU/sdakurs\")\nlibrary(sdakurs)\n\n\n\nInstallera kursens datamaterial\n\ninstall_github(\"StatisticsSU/SUdatasets\")\nlibrary(SUdatasets)"
   },
   {
-    "objectID": "assignments/Inlamningsuppgift1.html",
-    "href": "assignments/Inlamningsuppgift1.html",
-    "title": "Statistik och dataanalys I, 15 hp",
+    "objectID": "DelB.html",
+    "href": "DelB.html",
+    "title": "Statistiska modeller och inferens, 7.5 hp",
     "section": "",
-    "text": "Inlämning\n\n\n\nEr grupp förväntas lämna in följande på Athena:\n\ndet här Quarto (qmd) dokumentet med era lösningar på inlämningsuppgiften\nen pdf-version av dokumentet.\n\nByt ut Student 1 och Student 2 vid Author till era namn."
-  },
-  {
-    "objectID": "index.html#datamaterial",
-    "href": "index.html#datamaterial",
-    "title": "Statistik och dataanalys I, 15 hp",
-    "section": "Datamaterial",
-    "text": "Datamaterial\nKursboken kommer med över 500 olika datamaterial som hittas här. Datamaterialen är i ofta i Excel-format, se denna guide om hur man läser in data från Excel i R."
+    "text": "I kursens andra momentet behandlas sannolikheter, slumpvariabler och sannolikhetsfördelningar. En central del i momentet är inferens, dvs. statistiska metoder för att dra slutsatser om olika fenomen från data. Kursen avslutas med en introduktion till beslutsfattade under osäkerhet.\n\n\nFöreläsningar\nFöreläsning 12 - Sannolikheter och sannolikhetsmodeller.\nLäs: SDM Kapitel 12 och 13 | Slides\nFöreläsning 13 - Sannolikhetsberäkningar.\nLäs: SDM Kapitel 13 | Slides\nFöreläsning 14 - Slumpvariabler. Väntevärde. Varians. Linjärkombinationer.\nLäs: SDM Kapitel 14 | Slides\nFöreläsning 15 - Diskreta sannolikhetsmodeller.\nLäs: SDM Kapitel 15.1, 15.2, 15.3, 15.6 | Slides\nFöreläsning 16 - Kontinuerliga sannolikhetsmodeller.\nLäs: SDM Kapitel 5.3, 15.7 | Slides\nFöreläsning 17 - Samplingfördelningar och konfidensintervall för en andel.\nLäs: SDM Kapitel 16 | Slides\nFöreläsning 18 - Konfidensintervall för ett väntevärde. Stora talens lag. Centrala gränsvärdessatsen.\nLäs: SDM Kapitel 17 | Slides\nFöreläsning 19 - Hypotestest.\nLäs: SDM Kapitel 18 | Slides\nFöreläsning 20 - Hypotestest och jämföra grupper.\nLäs: SDM Kapitel 19, 20.4, 20.5 | Slides\nFöreläsning 21 - Jämföra grupper och chi-2 test.\nLäs: SDM Kapitel 21.1, 21.2 | Slides\nFöreläsning 22 - Inferens i multipel regression.\nLäs: SDM Kapitel 23 | Slides\nVideoföreläsning - Maximum likelihood och Bayesiansk inferens.\nLäs: Kompendium avsnitt X | Slides\nFöreläsning 23 - Sammanfattning.\nLäs: Slides\n\n\nÖvningar\nÖvning 7 - Sannolikheter för händelser. Kombinatorik.\nUppgifter: SDM 12-13\nÖvning 8 - Oberoende händelser. Betingning och Bayes sats.\nUppgifter: SDM 13\nÖvning 9 - Slumpvariabler, väntevärde och standardavvikelse.\nUppgifter: SDM 14\nÖvning 10 - Diskreta sannolikhetsfördelningar.\nUppgifter: SDM 15\nÖvning 12 - Kontinerliga sannolikhetsfördelningar.\nUppgifter: SDM 15\nÖvning 13 - Samplingfördelningar och konfidensintervall för en andel.\nUppgifter: SDM 16\nÖvning 14 - Konfidensintervall för ett väntevärde.\nUppgifter: SDM 17\nÖvning 13 - Hypotestest.\nUppgifter: SDM 18\nÖvning 14 - Hypotestest och p-värde.\nUppgifter: SDM 18\nÖvning 13 - Jämföra grupper.\nUppgifter: SDM 20-21.\nÖvning 14 - Inferens för regression.\nUppgifter: SDM 23\n\n\nDatorlaborationer\nDatorlaboration 5 - Simulering från sannolikhetsfördelningar\nUppgifter: Datorlab 5\nDatorlaboration 6 - Samplingfördelningar, standardfel och centrala gränsvärdessatsen.\nUppgifter: Datorlab 6\nDatorlaboration 7 - Konfidensintervall och hypotestest.\nUppgifter: Datorlab 7\nDatorlaboration 8 - Multipel linjär regression\nUppgifter: Datorlab 8"
   },
   {
     "objectID": "about.html",
@@ -355,12 +411,5 @@
     "title": "About",
     "section": "",
     "text": "About this site"
-  },
-  {
-    "objectID": "DelA.html",
-    "href": "DelA.html",
-    "title": "Dataanalys, 7.5 hp",
-    "section": "",
-    "text": "Föreläsningar\nFöreläsning 1 - Introduktion.\nLäs: SDM Kapitel 1 | Slides\nFöreläsning 2 - Introduktion till R. \nLäs: LITTERATUR | Slides\nFöreläsning 3 - Hantera och beskriva data.\nLäs: SDM Kapitel 2 | Slides\nFöreläsning 4 - Samband mellan kategoriska variabler.\nLäs: SDM Kapitel 3 | Slides\nFöreläsning 5 - Jämföra fördelningar. Tidsserier. Transformationer.\nLäs: SDM Kapitel 4 | Slides\nFöreläsning 6 - Standardisering och Normalmodellen.\nLäs: SDM Kapitel 5 | Slides\nFöreläsning 7 - Samband mellan kontinuerliga variabler. Korrelation.\nLäs: SDM Kapitel 6 | Slides\nFöreläsning 8 - Enkel linjär regression.\nLäs: SDM Kapitel 7 | Slides\nFöreläsning 9 - Multipel regression.\nLäs: SDM Kapitel 9 | Slides\nFöreläsning 10 - Populationer och stickprov. Undersökningar och experiment.\nLäs: SDM 10.1-10.3 och 11.1-11.2 | Slides\nFöreläsning 11 - Sammanfattning\nLäs: Slides\nVideoföreläsning - Matematikrepetition.\nLäs: Slides\n\n\nÖvningar\nÖvning 1 - Beskrivande statistik.\nUppgifter: SDM 2\nÖvning 2 - Samband mellan kategoriska variabler och korstabeller.\nUppgifter: SDM 3\nÖvning 3 - Standardavvikelse och standardisering. Normalmodellen.\nUppgifter: SDM 5\nÖvning 4 - Korrelation.\nUppgifter: SDM 6\nÖvning 5 - Estimering och tolkning av enkel linjär regression.\nUppgifter: SDM 7\nÖvning 6 - Prediktion med enkel linjär regression.\nUppgifter: SDM 7-9\n\n\nDatorlaborationer\nDatorlaboration 1 - Intro till R\nUppgifter: html eller pdf\nDatorlaboration 2 - Beskrivande statistik och visualisering i R\nUppgifter: Datorlab 2\nDatorlaboration 3 - Korrelation och enkel linjär regression\nUppgifter: Datorlab 3\nDatorlaboration 4 - Multipel linjär regression\nUppgifter: Datorlab 4"
   }
 ]
