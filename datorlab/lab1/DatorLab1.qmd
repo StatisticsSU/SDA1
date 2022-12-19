@@ -202,37 +202,39 @@ Vi vill nu läsa in data från Excelfilen stock.xlsx. Du kan ladda ner den filen
 
 R kommer nu att hitta filen och vi är redo att skriva kommandot som läser in filen. Eftersom det är första gången du läser in en Excel-fil behöver du göra lite grundjobb. Vi ska göra tre steg:
 
-1.  **Installera R-paketet** `xlsx`. Programmet R kommer med ett antal baskommandon förinstallerat. T ex har vi redan använt **funktionen** `setwd()` för att tala om för R vilken mapp som är vår working directory. Men många kommandon/funktioner i R måste laddas in via s k **R-paket**. Det finns R-paket för nästan allt man vill göra: läsa in data, gör olika typer av statistiska analyser etc etc. Paketet `xslx` är specialiserat på att läsa in Excel-filer i R. För att installera paketet kör vi kommandot `install.packages('xlsx')` antingen genom att skriv in det i en kodfil och trycka på `Run` eller genom att skriva det direkt i terminalen. Efter det kommer R att skriva ut en massa mumbo-jumbo i Console som beskriver installationen. Paket kan ta någon minut eller mer för att installera. Om inga fel uppstår brukar installationsmeddelandet avslutas med något liknande:\
-    `DONE (xlsx)`\
+1.  **Installera R-paketet** `readxl`. Programmet R kommer med ett antal baskommandon förinstallerat. T ex har vi redan använt **funktionen** `setwd()` för att tala om för R vilken mapp som är vår working directory. Men många kommandon/funktioner i R måste laddas in via s k **R-paket**. Det finns R-paket för nästan allt man vill göra: läsa in data, gör olika typer av statistiska analyser etc etc. Paketet `readxl` är specialiserat på att läsa in Excel-filer i R. För att installera paketet kör vi kommandot `install.packages('readxl')` antingen genom att skriv in det i en kodfil och trycka på `Run` eller genom att skriva det direkt i terminalen. Efter det kommer R att skriva ut en massa mumbo-jumbo i Console som beskriver installationen. Paket kan ta någon minut eller mer för att installera. Om inga fel uppstår brukar installationsmeddelandet avslutas med något liknande:\
+    `DONE (readxl)`\
     `The downloaded source packages are in`\
     följt av någon kryptisk sökväg till stället på din dator där paketet har blivit installerat.\
     \
     Installation av paket behövs bara göras en gång på din dator. Du behöver inte installera om nästa gång du startar upp RStudio på nytt.
 
-2.  **Ladda R-paketet** `xlsx`. Kommandot `library(xlsx)` laddar funktionerna i paketet xlsx till R's arbetsminne. Först efter denna kommando kan vi använda funktionerna i paketet. Notera att vi behöver 'blippar' kring paketets namn när vi installerar, men inte när vi laddar paketet. Ett paket som laddat in med library finns inte tillgängligt när du start om RStudio. Du måste alltså skriva `library(xlsx)` för varje ny session där du vill läsa in Excel-filer. Det är därför bra att skriva in `library(xlsx)` i kodfilen du ska använda för att läsa in Excel-filer.
+2.  **Ladda R-paketet** `readxl`. Kommandot `library(readxl)` laddar funktionerna i paketet `readxl` till R's arbetsminne. Först efter denna kommando kan vi använda funktionerna i paketet. Notera att vi behöver 'blippar' kring paketets namn när vi installerar, men inte när vi laddar paketet. Ett paket som laddat in med library finns inte tillgängligt när du start om RStudio. Du måste alltså skriva `library(readxl)` för varje ny session där du vill läsa in Excel-filer. Det är därför bra att skriva in `library(readxl)` i kodfilen du ska använda för att läsa in Excel-filer.
 
-3.  Läs in data från Excel-filen genom kommandot/**funktionen** `read.xlsx()`. Här hela kommandot (**funktionsanropet**):\
-    `stockdata = read.xlsx('stock.xlsx', 1, header=TRUE)`\
-    Det är några saker att reda ut här. Först, `read.xlsx()` är en **funktion** vilket betyder att det är ett kommando som **gör något** baserat på funktionens **input-argument**:
+3.  Läs in data från Excel-filen genom kommandot/**funktionen** `read_excel()`. Här hela kommandot (**funktionsanropet**):\
+    `stockdata = read_excel('stock.xlsx', sheet = 1)`\
+    Det är några saker att reda ut här. Först, `read_excel()` är en **funktion** vilket betyder att det är ett kommando som **gör något** baserat på funktionens **input-argument**:
 
-    -   Det första argumentet `'stock.xlsx'` är en **textsträng** (den har 'blippar') som talar om för `read.xlsx()` *vilken* Excelfil som ska läsas in. Vi behöver inte säga mer eftersom denna fil ligger i vår working directory, som ju R nu känner till.
-    -   det andra input-argumentet är en enkel etta, `1`, vilket säger åt `read.xlsx()` att data ligger i det första kalkylbladet i filen stock.xlsx. En Excelfil kan ju har flera kalkylblad, och vill man läsa det andra bladet ändrar man `1` till `2`. (men stock.xlsx har bara ett blad, så prova inte detta för då kommer R att klaga).
-    -   det sista argumentet `header=TRUE` talar om för `read.xlsx()` att den första raden i stock.xlsx innehåller namnen på kolumnerna, dvs den första raden är inte data.
+    -   Det första argumentet `'stock.xlsx'` är en **textsträng** (den har 'blippar') som talar om för `read_excel()` *vilken* Excelfil som ska läsas in. Vi behöver inte säga mer eftersom denna fil ligger i vår working directory, som ju R nu känner till.
+    -   det andra input-argumentet är `sheet = 1`, vilket säger åt `read_excel()` att data ligger i det första kalkylbladet i filen stock.xlsx. En Excelfil kan ju har flera kalkylblad, och vill man läsa det andra bladet ändrar man `1` till `2`. (men stock.xlsx har bara ett blad, så prova inte detta för då kommer R att klaga).
 
-    Men vad betyder `stockdata =` i början av kommandot ovan? Jo, om R ska läsa in data till arbetsminnet så måste den ge denna data ett namn, vilket jag har valt till `stockdata` , men du får döpa den till (nästan) vad du vill. `stockdata` är en **variabel**, precis som `kapital` var en variabel tidigare. Variabeln `kapital` var en enkel form av en variabel som bara innehöll ett enda **värde**, t ex 100 i början av vårt sparande. Variabeln `stockdata` är mer komplex. Den innehåller en hel tabell med värden, en s k `dataframe` på R-språk. Så kommandot
+    Men vad betyder `stockdata =` i början av kommandot ovan? Jo, om R ska läsa in data till arbetsminnet så måste den ge denna data ett namn, vilket jag har valt till `stockdata` , men du får döpa den till (nästan) vad du vill. `stockdata` är en **variabel**, precis som `kapital` var en variabel tidigare. Variabeln `kapital` var en enkel form av en variabel som bara innehöll ett enda **värde**, t ex 100 i början av vårt sparande. Variabeln `stockdata` är mer komplex. Den innehåller en hel tabell med värden. Så kommandot
 
-    `stockdata = read.xlsx('stock.xlsx', 1, header=TRUE)`
+    `stockdata = read_excel('stock.xlsx', sheet = 1)`
 
     läses alltså av R som
 
-    > Läs in första kalkylbladet av Excelfilen stock.xlsx till arbetsminnet och hantera första raden som namn/etiketter på kolumnerna. Spara den inlästa tabellen som en dataframe i variabeln `stockdata`.
+    > Läs in första kalkylbladet av Excelfilen stock.xlsx till arbetsminnet och spara den inlästa tabellen som en tabell i variabeln `stockdata`.
 
-När man har läst in ett datamaterial är det bra att ta en snabbtitt på den inlästa tabellen för att se att den blev korrekt inläst. Precis som vi gjorde med variabel `kapital` för att se dess värde (t ex 100) så kan skriva `stockdata` i Console för att se dess värde (som ju är en tabell). Om man har en tabell med många rader så blir det fort jobbigt att skriva ut alla rader. Kommandot `head()` är då praktiskt, som bara skriver ut det första 6 raderna av tabellen. Här har vi alla kommandon som krävs för att ladda in data och skriva ut fint på skärmen (förutom `install.packages('xlsx')` som jag antar att du redan har kört för att installera paketet).
+R har lite olika varianter av tabellvariabler. Den viktigaste för oss på den här kursen är en s k `dataframe`. Funktionen `read_excel()` läser dock in data som en s k `tibble`-tabell. För att göra om en `stockdata` till en dataframe skriver vi kommandot `stockdata = data.frame(stockdata)`, där variabeln (tabellen) `stockdata` skrivs över med resultatet att stockdata nu är en `dataframe`.
+
+När man har läst in ett datamaterial är det bra att ta en snabbtitt på den inlästa tabellen för att se att den blev korrekt inläst. Precis som vi gjorde med variabel `kapital` för att se dess värde (t ex 100) så kan skriva `stockdata` i Console för att se dess värde (som ju är en tabell). Om man har en tabell med många rader så blir det fort jobbigt att skriva ut alla rader. Kommandot `head()` är då praktiskt, som bara skriver ut det första 6 raderna av tabellen. Här har vi alla kommandon som krävs för att ladda in data och skriva ut fint på skärmen (förutom `install.packages('readxl')` som jag antar att du redan har kört för att installera paketet).
 
 ```{r}
 #| echo: true
-library(xlsx)
-stockdata = read.xlsx('stock.xlsx', 1, header=TRUE)
+library(readxl)
+stockdata = read_excel('stock.xlsx', sheet = 1)
+stockdata = data.frame(stockdata) # gör om stockdata till en dataframe
 head(stockdata)
 ```
 
@@ -308,15 +310,16 @@ där vi inte längre måste använda argumentet `data = stockdata` för att tala
 
 #### 💪 Uppgift 7.1
 
-Läs återigen in data med `stockdata = read.xlsx('stock.xlsx', 1, header=TRUE)`. Gör en graf där du plottar variabeln `returns` mot `year`.
+Läs återigen in data med `stockdata = read_excel('stock.xlsx', sheet = 1)`. Gör en graf där du plottar variabeln `returns` mot `year`.
 
 Här är hela koden i ett stycke:
 
 ```{r}
 #| echo: true
 setwd('/home/mv/Dropbox/Teaching/SDA1/datorlab/lab1') # I have a Linux computer and my data is in this path
-library(xlsx)                         
-stockdata = read.xlsx('stock.xlsx', 1, header=TRUE)
+library(readxl)                         
+stockdata = read_excel('stock.xlsx', sheet = 1)
+stockdata = data.frame(stockdata)
 meancapital = mean(stockdata$capital)
 plot(capital ~ year, data = stockdata)
 ```
@@ -441,10 +444,10 @@ y
 men det kan också vara något mer komplicerat som t ex att läsa in data från en Excel-fil:
 
 ```{r}
-stockdata = read.xlsx('stock.xlsx', 1, header=TRUE)
+stockdata = read_excel('stock.xlsx', sheet = 1)
 ```
 
-där `read.xlsx` är en funktion som tre input-argument filnamn (som en sträng!), talet 1 för att vi vill läsa det första bladet och argumentet header sätts till TRUE eftersom första raden i Excelfilen innehåller namnen på kolumnerna. Funktionen `read.xlsx` ger tillbaka en dataframe som output med data.
+där `read_excel` är en funktion som tre input-argument filnamn (som en sträng!), talet 1 för att vi vill läsa det första bladet. Funktionen `read_excel` ger tillbaka en (tibble) dataframe som output med data.
 
 Det fina med programmeringsspråk är att man kan **skapa egna funktioner** som gör just det jobb som man behöver. Om jag t ex vill skapa en funktion som beräknar ränta-på-ränta effekten på ett sparkapital (med samma ränta varje år) så kan jag skriva ihop följande funktion:
 

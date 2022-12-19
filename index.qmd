@@ -45,6 +45,6 @@ Kursens schema finns på [TimeEdit]().
 
 ## Datamaterial
 
-Kursboken kommer med över 500 olika datamaterial som hittas [här](https://media.pearsoncmg.com/intl/ge/2021/cws/ge_deveaux_stats_5/statdm5d_datasets.html). Datamaterialen är i ofta i Excel-format, se denna [guide](/tutorials/ReadingExcelData/ReadingExcelData.html) om hur man läser in data från Excel i R.
+Kursboken *Stats - Data and Models* kommer med över 500 olika datamaterial som hittas [här](https://media.pearsoncmg.com/intl/ge/2021/cws/ge_deveaux_stats_5/statdm5d_datasets.html). Datamaterialen är i ofta i Excel-format, se denna [guide](/tutorials/ReadingDataFromFile/ReadingDataFromFile.html) om hur man läser in data från Excel i R.
 
 ------------------------------------------------------------------------

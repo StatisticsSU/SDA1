@@ -12,7 +12,7 @@ format:
 ------------------------------------------------------------------------
 
 
-## Quarto: skriva rapporter med text, kod och figurer
+## 0. Quarto: skriva rapporter med text, kod och figurer
 
 Det traditionella sättet att skriva en (statistisk) rapport har varit:
 

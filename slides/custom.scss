@@ -9,12 +9,12 @@ $font-family-sans-serif: Ubuntu, sans-serif !default;
 
 // headings
 $presentation-heading-color: $orangealt;
-$presentation-font-size-root: 1.5em;
+$presentation-font-size-root: 1.75em;
 
 /*-- scss:rules --*/
 
 .reveal section h2 {
-  color: $orangealt;
+  color: $bluealt;
 }
 
 .reveal .footer {

@@ -131,7 +131,11 @@ You can create ([**F**]{.underline}**ile**/**New [F]{.underline}ile**/[**Q**]{.u
 
 Clicking on the `Render` button will render the document to html (default) or pdf (if you choose that in the YAML). Pressing the `Run` button will re-run all the code chunks in the document. You can write your Quarto document as markdown code if you click the `Source` -button in the extreme left. If you press the `Visual`-button you will see the document in a similar way to word processors like Word. You can then insert images and table, change font sizes etc by clicking on the menu. I tend to spend most time in Visual mode, but will often go over to Source mode when I want absolute control of what I do.
 
-## 7. Going fancy - interactivity
+## 7. Things to think about when working with Quarto
+
+Quarto processes the document code chunk by code chunk, from the beginning of the document until the end. Within a code chunk, Quarto reads the codez line by line. You must therefore make sure that a variable that you use has been defined (assigned a value) before you use the variable in the code. A common mistake is to use a variable in a code chunk which is only defined in a later code chunk. That will give an error. 
+
+## 8. Going fancy - interactivity
 
 Quarto documents have the basic interactivity that one can change code inside a code chunk, render the document and everything in the document changes according to the changes in the code.
 

@@ -15,41 +15,53 @@ Excel files may contain more than one dataset, organized as Excel *sheets*. Here
 
 ![](ExcelSheets.png){fig-align="center" width="291"}
 
-## Reading in data from an Excel in R
+## Reading data from an Excel file in R
 
-There are many R packages for reading data from Excel. We will be using the `xlsx` package here. This installs and loads the `xlsx` package:
+There are many R packages for reading data from Excel. We will be using the `readxl` package here. This installs and loads the `readxl` package:
 
 ```{r}
-#install.packages("xlsx") # Installs the xlsx package. Do it only once.
-library("xlsx")           # loads the xlsx package. Do it once per R session.
+#install.packages("readxl") # Installs the readxl package. Do it only once.
+library("readxl")           # loads the readxl package. Do it once per R session.
 
 ```
 
 ::: callout-note
-I have *commented out* the installation of the package by putting a `#` sign in front of the command `install.packages("xlsx")`. So this command will not be executed/run. I already have that package installed on my computer and don't want to re-install it. You have to *uncomment*, that is remove the sign `#`, before running this on your computer, if you haven't installed this package already.
+I have *commented out* the installation of the package by putting a `#` sign in front of the command `install.packages("readxl")`. So this command will not be executed/run. I already have that package installed on my computer and don't want to re-install it. You have to *uncomment*, that is remove the sign `#`, before running this on your computer, if you haven't installed this package already.
 :::
 
 ```{r}
-tour_de_france <- read.xlsx('Tour_de_France_2017.xlsx', 1, header=TRUE)
+tour_de_france <- read_excel('Tour_de_France_2017.xlsx', sheet = 1)
 ```
 
-What does the number `1` and `header=TRUE` mean in the above command? Well, the number 1 tells R to read data from the first sheet in the Excel file. If you want to the read data from the third sheet in an Excel file, then just replace 1 with 3 (the tour de france data has only one sheet, however). The *argument* `header=TRUE` tells R that the first row in the Excel file contains the name of the variables in each column.
+The argument `sheet=1` tells R to read data from the first sheet in the Excel file. If you want to the read data from the third sheet in an Excel file, then just replace 1 with 3 (the Tour de France data has only one sheet, however).
 
 ::: callout-important
-I placed the file Tour_de_France_2017.xlsx in my working directory. You can (and typically should) keep your data files in a different place on your computer. You then need to include the path to file before the file name. For example, on a computer running Windows, if your data is stored in the Documents folder, then replace the command above with
+I placed the file Tour_de_France_2017.xlsx in my working directory. If the file with data is at a different place on your computer then you need to include the search **path** to the file before the file name. For example, on a computer running Windows, if your data is stored in the Documents folder, then replace the command above with
 
-`tour_de_france <- read.xlsx('C:\Documents\Tour_de_France_2017.xlsx', 1, header=TRUE)`
+`tour_de_france <- read_excel('C:\Documents\Tour_de_France_2017.xlsx', sheet = 1)`
 :::
 
 ::: callout-tip
-Rather than telling R explicitly where you data are stored, you can also use the command
+Rather than telling R explicitly where your data are stored, you can also use the command
 
-`tour_de_france <- read.xlsx(file.choose(), 1)`
+`tour_de_france <- read_excel(file.choose(), sheet = 1)`
 
 which will open up a window where you can look up the file in your file explorer and it will then read the first sheet (again the `1` in the command) of that file. This is convenient, but I don't recommend it (lousy tip! 🙄) since you then have to click your way to the file everytime you re-run your R code.
 :::
 
-We have now read the dataset into a variable (a `dataframe`) that I have chosen to call `tour_de_france`. We can now just type the name of this variable in the Console in R to see the data. However, this will show *all* the observations in the data, which can be messy for larger datasets. The `head` command is useful, showing only the first few observations of the dataset:
+We have now read the dataset into a variable that I have chosen to call `tour_de_france`. We can now just type the name of this variable in the Console in R to see the data.
+
+```{r}
+tour_de_france
+```
+
+We can see two things: 1) some accented letters like é were replaced by a question mark, 2) the dataset is store in a `tibble` data structure. A tibble is `tidyverse`'s (this alternative dialect of R) version of a `dataframe`. It is best for us to convert this into a `dataframe`, which can be done with the command (note that we are overwriting the variable `tour_de_france`):
+
+```{r}
+tour_de_france = data.frame(tour_de_france)
+```
+
+To get a quick look at the data, the `head` command is useful, showing only the first few observations of the dataset:
 
 ```{r}
 head(tour_de_france)
@@ -65,7 +77,7 @@ The average speed has increased over the year. Notable exceptions are the years 
 
 ## Reading data from text (.txt) and .csv files
 
-Data often come as a pure text file, often with the file ending `.txt`. Such files contains a simple table with the data. The first row may or may not contain the names of the variables in the columns. The columns are separated by a *separator*, typically a comma (`,`) or a `TAB` (blank space of a certain width). Here is an example with data from Indy car drivers:
+Data may also come as a pure text file, often with the file ending `.txt`. Such files contain a simple table with the data. The first row may or may not contain the names of the variables in the columns. The columns are separated by a *separator*, typically a comma (`,`) or a `TAB` (blank space of a certain width). Here is an example with data from Indy car drivers:
 
 ![](indydata_txtformat.png){fig-align="center" width="483"}
 
@@ -77,6 +89,8 @@ Let's read this text file with data into R using the built-in function `read.del
 indy <- read.delim('Indy_500_2018.txt', header = TRUE)
 head(indy)
 ```
+
+where the argument `header = TRUE` tells R that the first row in the dataset contains the names of the variables in the data.
 
 Finally, a very common file format are, comma-separated values files, often called `csv` for short. These are similar to `txt` files, but are read into R using the built-in `read.csv` function.
 

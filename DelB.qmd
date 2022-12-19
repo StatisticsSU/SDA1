@@ -2,12 +2,12 @@
 title: "Statistiska modeller och inferens, 7.5 hp"
 ---
 
-> I kursens andra momentet behandlas sannolikheter, slumpvariabler och sannolikhetsfördelningar. En central del i momentet är inferens, dvs. statistiska metoder för att dra slutsatser om olika fenomen från data. Kursen avslutas med en introduktion till beslutsfattade under osäkerhet.
+> I kursens andra momentet behandlas inledningsvis sannolikheter, slumpvariabler och sannolikhetsfördelningar. En central del i momentet är inferens, dvs. statistiska metoder för att dra slutsatser om olika fenomen från data. Kursen avslutas med en introduktion till beslutsfattade under osäkerhet.
 
 ### **Föreläsningar**
 
 **Föreläsning 12 - Sannolikheter och sannolikhetsmodeller.**\
-Läs: SDM Kapitel 12 och 13 | [Slides](/misc/larry.png) 
+Läs: SDM Kapitel 12 och 13 | [Slides](/slides/SDAModellerInferens_L1.qmd) 
 
 **Föreläsning 13 - Sannolikhetsberäkningar.**\
 Läs: SDM Kapitel 13 | [Slides](/misc/larry.png)
@@ -33,7 +33,7 @@ Läs: SDM Kapitel 18 | [Slides](/misc/larry.png)
 **Föreläsning 20 - Hypotestest och jämföra grupper.**\
 Läs: SDM Kapitel 19, 20.4, 20.5 | [Slides](/misc/larry.png) 
 
-**Föreläsning 21 - Jämföra grupper och chi-2 test.**\
+**Föreläsning 21 - Jämföra grupper och $\chi^2$-test.**\
 Läs: SDM Kapitel 21.1, 21.2 | [Slides](/misc/larry.png) 
 
 **Föreläsning 22 - Inferens i multipel regression.**\
@@ -42,7 +42,10 @@ Läs: SDM Kapitel 23 | [Slides](/misc/larry.png)
 **Videoföreläsning - Maximum likelihood och Bayesiansk inferens.**\
 Läs: Kompendium avsnitt X | [Slides](/misc/larry.png) 
 
-**Föreläsning 23 - Sammanfattning.**\
+**Föreläsning 23 - Optimala beslut under osäkerhet.**\
+Läs: [Slides](/misc/larry.png) 
+
+**Föreläsning 24 - Sammanfattning.**\
 Läs: [Slides](/misc/larry.png) 
 
 ### **Övningar**

@@ -4,30 +4,38 @@ title: "R"
 
 ## Programmeringsspråket R
 
-> Kursen använder det mycket populära statistiska programmeringsspråket R. Programmet är helt gratis och kan laddas ner på alla datorer. 
+> Kursen använder det mycket populära statistiska programmeringsspråket R. Programmet är helt gratis och kan laddas ner på alla datorer.
 
 ## RStudio
+
 R är lättast att jobba i från programmet RStudio. RStudio är en slags arbetsmiljö byggd kring R. Även RStudio är gratis.
 
 ## Ladda ner R och RStudio
 
 Du måste först installera R och sen RStudio:
 
-- R kan laddas ner [här](https://ftp.acc.umu.se/mirror/CRAN/).
-- RStudio kan laddas ner [här](https://www.rstudio.com/products/rstudio/download/#download).
+-   R kan laddas ner [här](https://ftp.acc.umu.se/mirror/CRAN/).
+-   RStudio kan laddas ner [här](https://www.rstudio.com/products/rstudio/download/#download).
 
 ## Guider/Tutorials
 
-- Hur man laddar ner och **installerar R** och RStudio: [video]()
-- En snabbt tur i **RStudio**: [video]()
-- En sammanfattning av [R funktioner för SDA1](/R/Rcommands.html)
-- **Quarto** för att skriva kompletta rapporter med kod: [html](/tutorials/Quarto/Intro2Quarto.html) | [pdf](/tutorials/Quarto/Intro2Quarto.pdf) | [video]()
+-   Ladda ner och **installera R** och RStudio: [video]()
+
+-   En snabbtur i **RStudio**: [video]()
+
+-   En sammanfattning av [R funktioner för SDA1](/R/Rcommands.html).
+
+-   Tutorial om hur man läser in [data från Excel](/tutorials/ReadingDataFromFile/ReadingDataFromFile.html) och text-filer. 🇬🇧
+
+-   **Quarto** för att skriva kompletta rapporter med kod. 🇬🇧\
+    [html](/tutorials/Quarto/Intro2Quarto.html) \| [pdf](/tutorials/Quarto/Intro2Quarto.pdf) \| [video]()
 
 ## Kursens R-paket
 
 Kursen har ett eget R-paket `sdakurs` med några hjälpfunktioner som används på kursen.
 
 #### Installera kurspaketet `sdakurs`
+
 ```{r}
 #| eval = FALSE
 install.packages("remotes") 
@@ -37,9 +45,9 @@ library(sdakurs)
 ```
 
 #### Installera kursens datamaterial
+
 ```{r}
 #| eval = FALSE
 install_github("StatisticsSU/SUdatasets")
 library(SUdatasets)
 ```
-

@@ -50,7 +50,9 @@ Some additional commentary of more peripheral interest.
 
 -   Green [^1]
 -   Brown
--   Purple
+-   This is [**standard blue**]{style="color:blue"} text
+-   This is [**my alternate blue**]{style="color:#2679b5"} text
+-   This is [**my alternate orange**]{style="color:#ff8000"} text
 
 [^1]: A footnote
 
