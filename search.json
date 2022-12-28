@@ -98,6 +98,13 @@
     "text": "0. Quarto: skriva rapporter med text, kod och figurer\nDet traditionella sättet att skriva en (statistisk) rapport har varit:\n\nSkriva R-kod i t ex RStudio som gör den statistiska analysen, dvs genererar resultaten och eventuella grafer.\nSkriva en rapport i ett ordbehandlingsprogram, t ex Word, där resultaten sammanfattas i tabeller och figurer klistras in.\nMatematiska formler skrivs ofta i en add-on modul i ordbehandlaren.\nRapporten skrivs slutligen till en pdf-fil eller i html-format för att visas som en webbsida.\n\nQuarto är ett system som gör det möjligt att göra alla stegen ovan i en integrerad process. Quarto-dokument (filerna heter någotnamn.qmd) låter dig mixa text (markdown), kod, figurer, tabeller och matematiska formler i ett enda dokument. Det dokumentet kan du sen välja att skriva ut som pdf, html, blog, webbsida etc. Eftersom koden är integrerad i dokumentet så är Quarto-filer interaktiva i den meningen att du kan skicka ditt Quarto-dokument till en annan person och den personen kan t ex ändra en variabel eller datamaterial i koden och sen köra om hela Quarto-dokumentet med alla tabeller och figurer uppdaterade utefter de ändringar personen gjort i koden. Det här dokumentet är skrivet i Quarto! Här är ett enkelt Quarto-dokument som du kan ladda ner och öppna i RStudio och leka runt med. En html version finns här om du vill se slutresultatet av Quarto-dokumentet."
   },
   {
+    "objectID": "Del1.html",
+    "href": "Del1.html",
+    "title": "Del I - Dataanalys och Regression, 7.5 hp",
+    "section": "",
+    "text": "I det här momentet ingår insamling, bearbetning, visualisering och sammanfattning av data i programspråket R. En stor del av momentet behandlar sambands- och regressionsanalys som utmynnar i metoder för prediktion.\n\n\nFöreläsningar\nFöreläsning 1 - Introduktion.\nLäs: SDM Kapitel 1 | Slides\nFöreläsning 2 - Introduktion till R. \nLäs: LITTERATUR | Slides\nFöreläsning 3 - Hantera och beskriva data.\nLäs: SDM Kapitel 2 | Slides\nFöreläsning 4 - Samband mellan kategoriska variabler.\nLäs: SDM Kapitel 3 | Slides\nFöreläsning 5 - Jämföra fördelningar. Tidsserier. Transformationer.\nLäs: SDM Kapitel 4 | Slides\nFöreläsning 6 - Standardisering och Normalmodellen.\nLäs: SDM Kapitel 5 | Slides\nFöreläsning 7 - Samband mellan kontinuerliga variabler. Korrelation.\nLäs: SDM Kapitel 6 | Slides\nFöreläsning 8 - Enkel linjär regression.\nLäs: SDM Kapitel 7 | Slides\nFöreläsning 9 - Multipel regression.\nLäs: SDM Kapitel 9 | Slides\nFöreläsning 10 - Populationer och stickprov. Undersökningar och experiment.\nLäs: SDM 10.1-10.3 och 11.1-11.2 | Slides\nFöreläsning 11 - Sammanfattning\nLäs: Slides\nVideoföreläsning - Matematikrepetition.\nLäs: Slides\n\n\nÖvningar\nÖvning 1 - Beskrivande statistik.\nUppgifter: SDM 2\nÖvning 2 - Samband mellan kategoriska variabler och korstabeller.\nUppgifter: SDM 3\nÖvning 3 - Standardavvikelse och standardisering. Normalmodellen.\nUppgifter: SDM 5\nÖvning 4 - Korrelation.\nUppgifter: SDM 6\nÖvning 5 - Estimering och tolkning av enkel linjär regression.\nUppgifter: SDM 7\nÖvning 6 - Prediktion med enkel linjär regression.\nUppgifter: SDM 7-9\n\n\nDatorlaborationer\nDatorlaboration 1 - Intro till R\nUppgifter: html eller pdf\nDatorlaboration 2 - Beskrivande statistik och visualisering i R\nUppgifter: Datorlab 2\nDatorlaboration 3 - Korrelation och enkel linjär regression\nUppgifter: Datorlab 3\nDatorlaboration 4 - Multipel linjär regression\nUppgifter: Datorlab 4"
+  },
+  {
     "objectID": "tutorials/ReadingDataFromFile/ReadingDataFromFile.html",
     "href": "tutorials/ReadingDataFromFile/ReadingDataFromFile.html",
     "title": "Reading data from an file",
@@ -151,7 +158,7 @@
     "href": "tutorials/Quarto/QuartoReportExample.html#code-and-plots",
     "title": "Quarto",
     "section": "4. Code and Plots",
-    "text": "4. Code and Plots\nA Quarto document can mix text and computer code. You can include code that computes statistics in your documents and then have the computed statistics analyzed or plotted in the same document.\nCode is written in code chunks. Here is chunk of R code that produces a plot in @littlehist\n\nn = 100\nx = rnorm(n)\nhist(x, main = \"My little histogram\")\n\n\n\n\nMy little fig caption\n\n\n\n\n\nplot(cars)\n\n\n\n\nFigure 1: Plot\n\n\n\n\nFor example, see @littlehist.\nVariables like n defined in a previous chunk can be used in a new chunk, like this:\n\nmean(x) # note how I use x from the previous code chunk\n\n[1] 0.1041946\n\n\nBy the way, note how I used backticks ` ` on n above to make the font look like computer code. So I can write plot( x ~ y, data = mydata) to show you the plot command in the text.\nYou can also include other images than plots produced by R. Like this:\n see @larry for grumpy dude."
+    "text": "4. Code and Plots\nA Quarto document can mix text and computer code. You can include code that computes statistics in your documents and then have the computed statistics analyzed or plotted in the same document.\nCode is written in code chunks. Here is chunk of R code that produces a plot in @littlehist\n\nn = 100\nx = rnorm(n)\nhist(x, main = \"My little histogram\")\n\n\n\n\nMy little fig caption\n\n\n\n\n\nplot(cars)\n\n\n\n\nFigure 1: Plot\n\n\n\n\nFor example, see @littlehist.\nVariables like n defined in a previous chunk can be used in a new chunk, like this:\n\nmean(x) # note how I use x from the previous code chunk\n\n[1] -0.01144718\n\n\nBy the way, note how I used backticks ` ` on n above to make the font look like computer code. So I can write plot( x ~ y, data = mydata) to show you the plot command in the text.\nYou can also include other images than plots produced by R. Like this:\n see @larry for grumpy dude."
   },
   {
     "objectID": "tutorials/Quarto/QuartoReportExample.html#mathematical-symbols",
@@ -284,7 +291,7 @@
     "href": "R/Rcommands.html#modeling-and-inference",
     "title": "R commands for SDA1",
     "section": "Modeling and inference",
-    "text": "Modeling and inference\n\n# linear model\nm1 <- lm(highest_year_of_school_completed ~ highest_year_school_completed_spouse,\n  data = GSS\n)\nsummary(m1)\n\n\nCall:\nlm(formula = highest_year_of_school_completed ~ highest_year_school_completed_spouse, \n    data = GSS)\n\nResiduals:\n     Min       1Q   Median       3Q      Max \n-16.5400  -1.3519   0.0242   1.4600   7.0242 \n\nCoefficients:\n                                     Estimate Std. Error t value Pr(>|t|)    \n(Intercept)                           5.84740    0.36316   16.10   <2e-16 ***\nhighest_year_school_completed_spouse  0.59403    0.02553   23.27   <2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 2.462 on 985 degrees of freedom\n  (1361 observations deleted due to missingness)\nMultiple R-squared:  0.3547,    Adjusted R-squared:  0.354 \nF-statistic: 541.4 on 1 and 985 DF,  p-value: < 2.2e-16\n\nrsquared(m1)\n\n[1] 0.3546884\n\npredict(m1,\n  newdata = data.frame(highest_year_school_completed_spouse = 11),\n  interval = \"confidence\"\n)\n\n       fit      lwr      upr\n1 12.38178 12.17059 12.59297\n\npredict(m1,\n  newdata = data.frame(highest_year_school_completed_spouse = 11),\n  interval = \"prediction\"\n)\n\n       fit      lwr      upr\n1 12.38178 7.546498 17.21706\n\n# bootstrapping\nbootstrap_sample <- do(1) * resample(GSS)\nboot <- do(1000) * mean(~highest_year_of_school_completed, data = resample(GSS))\nconfint(boot)\n\n  name    lower    upper level     method estimate\n1 mean 13.61059 13.84764  0.95 percentile 13.73177\n\n# one proportion\nprop.test(~self_emp_or_works_for_somebody,\n  data = GSS, success = \"Self-employed\", p = 0.1, alternative = \"less\"\n)\n\n\n    1-sample proportions test with continuity correction\n\ndata:  GSS$self_emp_or_works_for_somebody  [with success = Self-employed]\nX-squared = 0.1433, df = 1, p-value = 0.6475\nalternative hypothesis: true p is less than 0.1\n95 percent confidence interval:\n 0.0000000 0.1138167\nsample estimates:\n        p \n0.1026095 \n\n# two proportions\nprop.test(should_marijuana_be_made_legal ~ self_emp_or_works_for_somebody,\n  data = GSS_prop, success = \"Legal\"\n)\n\n\n    2-sample test for equality of proportions with continuity correction\n\ndata:  tally(should_marijuana_be_made_legal ~ self_emp_or_works_for_somebody)\nX-squared = 0.87754, df = 1, p-value = 0.3489\nalternative hypothesis: two.sided\n95 percent confidence interval:\n -0.04100264  0.12791902\nsample estimates:\n   prop 1    prop 2 \n0.6901408 0.6466827 \n\n# one mean\nt.test(~highest_year_of_school_completed, data = GSS, mu = 12, alternative = \"greater\")\n\n\n    One Sample t-test\n\ndata:  highest_year_of_school_completed\nt = 28.195, df = 2344, p-value < 2.2e-16\nalternative hypothesis: true mean is greater than 12\n95 percent confidence interval:\n 13.6307     Inf\nsample estimates:\nmean of x \n 13.73177 \n\n# two means\nt.test(highest_year_of_school_completed ~ born_in_us, data = GSS)\n\n\n    Welch Two Sample t-test\n\ndata:  highest_year_of_school_completed by born_in_us\nt = -4.8468, df = 337.79, p-value = 1.916e-06\nalternative hypothesis: true difference in means between group No and group Yes is not equal to 0\n95 percent confidence interval:\n -1.7012965 -0.7190416\nsample estimates:\n mean in group No mean in group Yes \n         12.67774          13.88791 \n\n# Chi-square\nchisq.test(tally(marital_status ~ general_happiness, data = GSS)) # independence\n\nWarning in chisq.test(tally(marital_status ~ general_happiness, data = GSS)):\nChi-squared approximation may be incorrect\n\n\n\n    Pearson's Chi-squared test\n\ndata:  tally(marital_status ~ general_happiness, data = GSS)\nX-squared = 210.13, df = 15, p-value < 2.2e-16\n\nchisq.test(tally(~general_happiness, data = GSS), p = c(0.14, 0.55, 0.30, 0.01)) # GoF\n\n\n    Chi-squared test for given probabilities\n\ndata:  tally(~general_happiness, data = GSS)\nX-squared = 16.528, df = 3, p-value = 0.0008838"
+    "text": "Modeling and inference\n\n# linear model\nm1 <- lm(highest_year_of_school_completed ~ highest_year_school_completed_spouse,\n  data = GSS\n)\nsummary(m1)\n\n\nCall:\nlm(formula = highest_year_of_school_completed ~ highest_year_school_completed_spouse, \n    data = GSS)\n\nResiduals:\n     Min       1Q   Median       3Q      Max \n-16.5400  -1.3519   0.0242   1.4600   7.0242 \n\nCoefficients:\n                                     Estimate Std. Error t value Pr(>|t|)    \n(Intercept)                           5.84740    0.36316   16.10   <2e-16 ***\nhighest_year_school_completed_spouse  0.59403    0.02553   23.27   <2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 2.462 on 985 degrees of freedom\n  (1361 observations deleted due to missingness)\nMultiple R-squared:  0.3547,    Adjusted R-squared:  0.354 \nF-statistic: 541.4 on 1 and 985 DF,  p-value: < 2.2e-16\n\nrsquared(m1)\n\n[1] 0.3546884\n\npredict(m1,\n  newdata = data.frame(highest_year_school_completed_spouse = 11),\n  interval = \"confidence\"\n)\n\n       fit      lwr      upr\n1 12.38178 12.17059 12.59297\n\npredict(m1,\n  newdata = data.frame(highest_year_school_completed_spouse = 11),\n  interval = \"prediction\"\n)\n\n       fit      lwr      upr\n1 12.38178 7.546498 17.21706\n\n# bootstrapping\nbootstrap_sample <- do(1) * resample(GSS)\nboot <- do(1000) * mean(~highest_year_of_school_completed, data = resample(GSS))\nconfint(boot)\n\n  name    lower    upper level     method estimate\n1 mean 13.61822 13.85636  0.95 percentile 13.73177\n\n# one proportion\nprop.test(~self_emp_or_works_for_somebody,\n  data = GSS, success = \"Self-employed\", p = 0.1, alternative = \"less\"\n)\n\n\n    1-sample proportions test with continuity correction\n\ndata:  GSS$self_emp_or_works_for_somebody  [with success = Self-employed]\nX-squared = 0.1433, df = 1, p-value = 0.6475\nalternative hypothesis: true p is less than 0.1\n95 percent confidence interval:\n 0.0000000 0.1138167\nsample estimates:\n        p \n0.1026095 \n\n# two proportions\nprop.test(should_marijuana_be_made_legal ~ self_emp_or_works_for_somebody,\n  data = GSS_prop, success = \"Legal\"\n)\n\n\n    2-sample test for equality of proportions with continuity correction\n\ndata:  tally(should_marijuana_be_made_legal ~ self_emp_or_works_for_somebody)\nX-squared = 0.87754, df = 1, p-value = 0.3489\nalternative hypothesis: two.sided\n95 percent confidence interval:\n -0.04100264  0.12791902\nsample estimates:\n   prop 1    prop 2 \n0.6901408 0.6466827 \n\n# one mean\nt.test(~highest_year_of_school_completed, data = GSS, mu = 12, alternative = \"greater\")\n\n\n    One Sample t-test\n\ndata:  highest_year_of_school_completed\nt = 28.195, df = 2344, p-value < 2.2e-16\nalternative hypothesis: true mean is greater than 12\n95 percent confidence interval:\n 13.6307     Inf\nsample estimates:\nmean of x \n 13.73177 \n\n# two means\nt.test(highest_year_of_school_completed ~ born_in_us, data = GSS)\n\n\n    Welch Two Sample t-test\n\ndata:  highest_year_of_school_completed by born_in_us\nt = -4.8468, df = 337.79, p-value = 1.916e-06\nalternative hypothesis: true difference in means between group No and group Yes is not equal to 0\n95 percent confidence interval:\n -1.7012965 -0.7190416\nsample estimates:\n mean in group No mean in group Yes \n         12.67774          13.88791 \n\n# Chi-square\nchisq.test(tally(marital_status ~ general_happiness, data = GSS)) # independence\n\nWarning in chisq.test(tally(marital_status ~ general_happiness, data = GSS)):\nChi-squared approximation may be incorrect\n\n\n\n    Pearson's Chi-squared test\n\ndata:  tally(marital_status ~ general_happiness, data = GSS)\nX-squared = 210.13, df = 15, p-value < 2.2e-16\n\nchisq.test(tally(~general_happiness, data = GSS), p = c(0.14, 0.55, 0.30, 0.01)) # GoF\n\n\n    Chi-squared test for given probabilities\n\ndata:  tally(~general_happiness, data = GSS)\nX-squared = 16.528, df = 3, p-value = 0.0008838"
   },
   {
     "objectID": "R/Rcommands.html#probability",
@@ -319,7 +326,7 @@
     "href": "slides/SDA1_L1.html#stuff",
     "title": "Statistik och dataanalys I",
     "section": "Stuff",
-    "text": "Stuff\n\n\nGreen 1\nBrown\nPurple\n\n\nSome additional commentary of more peripheral interest.\nA footnote"
+    "text": "Stuff\n\n\nGreen 1\nBrown\nThis is standard blue text\nThis is my alternate blue text\nThis is my alternate orange text\n\n\nSome additional commentary of more peripheral interest.\nA footnote"
   },
   {
     "objectID": "slides/SDA1_L1.html#tabs",
@@ -336,11 +343,123 @@
     "text": "Interactive\n\ndata = FileAttachment(\"palmer-penguins.csv\").csv({ typed: true })\n\n\n\n\n\n\n\nviewof bill_length_min = Inputs.range(\n  [32, 50], \n  {value: 35, step: 1, label: \"Bill length (min):\"}\n)\nviewof islands = Inputs.checkbox(\n  [\"Torgersen\", \"Biscoe\", \"Dream\"], \n  { value: [\"Torgersen\", \"Biscoe\"], \n    label: \"Islands:\"\n  }\n)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nfiltered = data.filter(function(penguin) {\n  return bill_length_min < penguin.bill_length_mm &&\n         islands.includes(penguin.island);\n})\n\n\n\n\n\n\n\nPlotData\n\n\n\nPlot.rectY(filtered, \n  Plot.binX(\n    {y: \"count\"}, \n    {x: \"body_mass_g\", fill: \"species\", thresholds: 20}\n  ))\n  .plot({\n    facet: {\n      data: filtered,\n      x: \"sex\",\n      y: \"species\",\n      marginRight: 80\n    },\n    marks: [\n      Plot.frame(),\n    ]\n  }\n)\n\n\n\n\n\n\n\n\n\nInputs.table(filtered)\n\n\n\n\n\n\n\n\n\n\n\n\nStatistik och dataanalys I     ·     Dataanalys, 7.5 hp"
   },
   {
+    "objectID": "slides/SDA1ModellerInferens_L1.html#översikt",
+    "href": "slides/SDA1ModellerInferens_L1.html#översikt",
+    "title": "Statistik och dataanalys I",
+    "section": "Översikt",
+    "text": "Översikt\n\nTre sorters sannolikheter\nNågot mer\nNågot ännu mer"
+  },
+  {
+    "objectID": "slides/SDA1ModellerInferens_L1.html#utfallsrum",
+    "href": "slides/SDA1ModellerInferens_L1.html#utfallsrum",
+    "title": "Statistik och dataanalys I",
+    "section": "Utfallsrum",
+    "text": "Utfallsrum"
+  },
+  {
+    "objectID": "slides/SDA1ModellerInferens_L1.html#händelse",
+    "href": "slides/SDA1ModellerInferens_L1.html#händelse",
+    "title": "Statistik och dataanalys I",
+    "section": "Händelse",
+    "text": "Händelse\n\nHändelsen A = få exakt 7 prickar med två tärningar. \\[\nA = \\{(1,6), (2,5),(3,4),(4,3),(5,2),(6,1)\\}\n\\]\nEn händelse är en mängd av elementärhändelser."
+  },
+  {
+    "objectID": "slides/SDA1ModellerInferens_L1.html#händelse-1",
+    "href": "slides/SDA1ModellerInferens_L1.html#händelse-1",
+    "title": "Statistik och dataanalys I",
+    "section": "Händelse",
+    "text": "Händelse\n\nHändelsen A = få samma antal prickar på båda tärningarna. \\[\nA = \\{(1,1), (2,2),(3,3),(4,4),(5,5),(6,6)\\}\n\\]"
+  },
+  {
+    "objectID": "slides/SDA1ModellerInferens_L1.html#händelse-2",
+    "href": "slides/SDA1ModellerInferens_L1.html#händelse-2",
+    "title": "Statistik och dataanalys I",
+    "section": "Händelse",
+    "text": "Händelse\n\nHändelsen A = få exakt 7 prickar med två tärningar. \\[\nA = \\{(1,6), (2,5),(3,4),(4,3),(5,2),(6,1)\\}\n\\]"
+  },
+  {
+    "objectID": "slides/SDA1ModellerInferens_L1.html#händelse---venn-diagram",
+    "href": "slides/SDA1ModellerInferens_L1.html#händelse---venn-diagram",
+    "title": "Statistik och dataanalys I",
+    "section": "Händelse - Venn diagram",
+    "text": "Händelse - Venn diagram\n\nPraktiskt att visualisera händelser i ett Venn diagram.\nUtfallsrummet (allt som kan inträffa) kan visas med en rektangel.\nHändelser ritas som cirklar, ellipser eller rektanglar."
+  },
+  {
+    "objectID": "slides/SDA1ModellerInferens_L1.html#komplementhändelsen",
+    "href": "slides/SDA1ModellerInferens_L1.html#komplementhändelsen",
+    "title": "Statistik och dataanalys I",
+    "section": "Komplementhändelsen",
+    "text": "Komplementhändelsen\n\n\n\nKomplementet till A inträffar när A inte inträffar.  \nVi skriver \\(\\mathbf{A}^c\\) där \\(c\\) står för engelskans complement.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nExempel - Tärning\n\n\n\\(\\mathbf{A}\\) = {udda antal prickar på tärning} = {1,3,5}.\n\\(\\mathbf{A}^c\\) = {jämnt antal prickar på tärning} = {2,4,6}.\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\nExempel - Inflation\n\n\n\\(\\mathbf{A}\\) = {inflationen nästa månad \\(\\leq 2\\)}.\n\\(\\mathbf{A}^c\\) = {inflationen nästa månad \\(> 2\\)}.\n\n\n\n\n \n\n\n\n\n\n\n\nExempel - Mjukvarubuggar\n\n\n\\(\\mathbf{A}\\) = {åtminstone en bugg i programvaran}={1 bugg, 2 buggar, …}.\n\\(\\mathbf{A}^c\\) = {ingen bugg i programvaran}"
+  },
+  {
+    "objectID": "slides/SDA1ModellerInferens_L1.html#disjunkta-händelser",
+    "href": "slides/SDA1ModellerInferens_L1.html#disjunkta-händelser",
+    "title": "Statistik och dataanalys I",
+    "section": "Disjunkta händelser",
+    "text": "Disjunkta händelser\n\nDisjunkta händelser har inga gemensamma element.\nDisjunkta händelser överlappar inte i Venn diagrammet.\n\n\n\n\n\n\n\n\n🇺🇸 Disjunkt = Disjoint"
+  },
+  {
+    "objectID": "slides/SDA1ModellerInferens_L1.html#snitthändelsen",
+    "href": "slides/SDA1ModellerInferens_L1.html#snitthändelsen",
+    "title": "Statistik och dataanalys I",
+    "section": "Snitthändelsen",
+    "text": "Snitthändelsen\n\nSnittet av två händelser A och B är händelsen där både A och B inträffar.\n\n\n\n\n\n\n\nSDM skriver \\[P(\\mathbf{A}\\, and \\, \\mathbf{B})\\]\nSymbolen \\(\\cap\\) är också vanlig för snittet: \\[P(\\mathbf{A} \\cap \\mathbf{B})\\]\n\n\n\n\n\nStatistik och dataanalys I     ·     Statistiska och inferens, 7.5 hp\n\n\n🇺🇸 Snitt = Intersection"
+  },
+  {
+    "objectID": "slides/SDA1ModellerInferens_L3.html#översikt",
+    "href": "slides/SDA1ModellerInferens_L3.html#översikt",
+    "title": "Statistik och dataanalys I",
+    "section": "Översikt",
+    "text": "Översikt\n\nSlumpvariabler\nVäntevärde\nVarians"
+  },
+  {
+    "objectID": "slides/SDA1ModellerInferens_L3.html#sannolikhetsfördelningar-för-slumpvariabler",
+    "href": "slides/SDA1ModellerInferens_L3.html#sannolikhetsfördelningar-för-slumpvariabler",
+    "title": "Statistik och dataanalys I",
+    "section": "Sannolikhetsfördelningar för slumpvariabler",
+    "text": "Sannolikhetsfördelningar för slumpvariabler\n\n\n\n\n\n\n\n\nStatistik och dataanalys I     ·     Statistiska och inferens, 7.5 hp"
+  },
+  {
+    "objectID": "slides/SDA1ModellerInferens_L2.html#översikt",
+    "href": "slides/SDA1ModellerInferens_L2.html#översikt",
+    "title": "Statistik och dataanalys I",
+    "section": "Översikt",
+    "text": "Översikt\n\nBetingade sannolikheter\nBayes sats"
+  },
+  {
+    "objectID": "slides/SDA1ModellerInferens_L2.html#bayes-sats",
+    "href": "slides/SDA1ModellerInferens_L2.html#bayes-sats",
+    "title": "Statistik och dataanalys I",
+    "section": "Bayes sats",
+    "text": "Bayes sats\n\n\nExempel - Covid. B = Covid. A = test positivt."
+  },
+  {
+    "objectID": "slides/SDA1ModellerInferens_L2.html#bayes-sats-1",
+    "href": "slides/SDA1ModellerInferens_L2.html#bayes-sats-1",
+    "title": "Statistik och dataanalys I",
+    "section": "Bayes sats",
+    "text": "Bayes sats\n\n\\[\n    P(B | A) = \\frac{P(A \\cap B)}{P(A)}\n\\]\n\\[\n    P(B | A) = \\frac{P(A | B)P(B)}{P(A)}\n\\]"
+  },
+  {
+    "objectID": "slides/SDA1ModellerInferens_L2.html#bayes-sats-över-en-partition",
+    "href": "slides/SDA1ModellerInferens_L2.html#bayes-sats-över-en-partition",
+    "title": "Statistik och dataanalys I",
+    "section": "Bayes sats över en partition",
+    "text": "Bayes sats över en partition\n\n\n\\[\n    P(B_k | A) = \\frac{P(A | B_k)P(B_k)}{P(A)}\n\\]\n\\[\n    P(A) = \\sum_{j=1}^K P(A | B_j)p(B_j)\n\\]\n\\[\n    \\color{#2679b5}{\\boxed{P(B_k | A) = \\frac{P(A | B_k)P(B_k)}{\\sum_{j=1}^K P(A | B_j)p(B_j)}}}\n\\]\n\n\n\n\n\n\n\n\n\n\n\nExempel - Känna igen handskrivna siffor:\n\n\\(A =\\) {svart pixel i mitten}\n\\(B_0=\\) {siffran är en nolla}\n\\(B_1=\\) {siffran är en etta}\n\\(B_2=\\) {siffran är en tvåa} osv\n\n\n\n\n\n\n\n\n\nStatistik och dataanalys I     ·     Statistiska och inferens, 7.5 hp"
+  },
+  {
     "objectID": "stealourcourse.html",
     "href": "stealourcourse.html",
     "title": "Stjäl vår kurs",
     "section": "",
-    "text": "Vi som utvecklat den här kursen hoppas att andra lärare kan bli inspirerade av den, och vilja använda delar av den själva. Allt kursmaterial ligger därför öppet på GitHub här och kan laddas ner eller klonas.\nVi undersöker hur vi kan ge kursen en slags copyleft licens som gör att den som använder kursmaterialet här på en ny kurs måste se till att även göra den kursens material tillgängligt för alla. Vi vill inte att kursens material och eventuella förbättringar ska bli inlåsta bakom olika universitets undervisningplattformar. Tanken är istället att materialet förädlas av andra, som i sin tur delar vidare till allmänheten.\n\nKunskap mår bäst ute i friska luften så alla kan ta del av den. Öppet kursmaterial ger också en transparens som hjälper till att hålla kurserna aktuella, korrekta och relevanta.\n\n\n\n\n\n\n\nWarning\n\n\n\nDen som klonar materialet ansvarar själv för eventuella fel och skador som kan uppstå. Vi som skapat kursen tar inget som helst ansvar för detta.\n\n\n\n\n\n\n\n\nWarning\n\n\n\nNågra bilder här har köpts in från bildbanker och får endast användas om användaren själv betalar för dem. Tanken är att det ska finnas en lista på vilka bilder det handlar om, men ännu har vi inte tagit oss tid att skriva ner detta.\n\n\nMer info kommer att komma här när kursmaterialet blir mer komplett."
+    "text": "Vi som utvecklat den här kursen hoppas att andra lärare kan bli inspirerade av den, och vilja använda delar av den själva. Allt kursmaterial ligger därför öppet på GitHub här och kan laddas ner eller klonas.\n\nVi undersöker hur vi kan ge kursen en slags copyleft licens som gör att den som använder kursmaterialet här på en ny kurs måste se till att även göra den kursens material tillgängligt för alla. Vi vill inte att kursens material och eventuella förbättringar ska bli inlåsta bakom olika universitets undervisningplattformar. Tanken är istället att materialet förädlas av andra, som i sin tur delar vidare till allmänheten. Kunskap mår bäst ute i friska luften så alla kan ta del av den. Öppet kursmaterial ger också en transparens som hjälper till att hålla kurserna aktuella, korrekta och relevanta.\n\n\n\n\n\n\nWarning\n\n\n\nDen som klonar materialet ansvarar själv för eventuella fel och skador som kan uppstå. Vi som skapat kursen tar inget som helst ansvar för detta.\n\n\n\n\n\n\n\n\nWarning\n\n\n\nNågra bilder här har köpts in från bildbanker och får endast användas om användaren själv betalar för dem. Tanken är att det ska finnas en lista på vilka bilder det handlar om, men ännu har vi inte tagit oss tid att skriva ner detta.\n\n\nMer info kommer att komma här när kursmaterialet blir mer komplett."
+  },
+  {
+    "objectID": "Del2.html",
+    "href": "Del2.html",
+    "title": "Del II - Sannolikhetsmodeller och Inferens, 7.5 hp",
+    "section": "",
+    "text": "I kursens andra momentet behandlas inledningsvis sannolikheter, slumpvariabler och sannolikhetsfördelningar. En central del i momentet är inferens, dvs. statistiska metoder för att dra slutsatser om olika fenomen från data, bl a samband från regressionsanalys. Kursen avslutas med en introduktion till beslutsfattade under osäkerhet.\n\n\nFöreläsningar\nFöreläsning 12 - Sannolikheter och sannolikhetsmodeller.\nLäs: SDM Kapitel 12 och 13 | Slides\nFöreläsning 13 - Sannolikhetsberäkningar.\nLäs: SDM Kapitel 13 | Slides\nFöreläsning 14 - Slumpvariabler. Väntevärde. Varians. Linjärkombinationer.\nLäs: SDM Kapitel 14 | Slides\nFöreläsning 15 - Diskreta sannolikhetsmodeller.\nLäs: SDM Kapitel 15.1, 15.2, 15.3, 15.6 | Slides\nFöreläsning 16 - Kontinuerliga sannolikhetsmodeller.\nLäs: SDM Kapitel 5.3, 15.7 | Slides\nFöreläsning 17 - Samplingfördelningar och konfidensintervall för en andel.\nLäs: SDM Kapitel 16 | Slides\nFöreläsning 18 - Konfidensintervall för ett väntevärde. Stora talens lag. Centrala gränsvärdessatsen.\nLäs: SDM Kapitel 17 | Slides\nFöreläsning 19 - Hypotestest.\nLäs: SDM Kapitel 18 | Slides\nFöreläsning 20 - Hypotestest och jämföra grupper.\nLäs: SDM Kapitel 19, 20.4, 20.5 | Slides\nFöreläsning 21 - Jämföra grupper och \\(\\chi^2\\)-test.\nLäs: SDM Kapitel 21.1, 21.2 | Slides\nFöreläsning 22 - Inferens i multipel regression.\nLäs: SDM Kapitel 23 | Slides\nVideoföreläsning - Maximum likelihood och Bayesiansk inferens.\nLäs: Kompendium avsnitt X | Slides\nFöreläsning 23 - Optimala beslut under osäkerhet.\nLäs: Slides\nFöreläsning 24 - Sammanfattning.\nLäs: Slides\n\n\nÖvningar\nÖvning 7 - Sannolikheter för händelser. Kombinatorik.\nUppgifter: SDM 12-13\nÖvning 8 - Oberoende händelser. Betingning och Bayes sats.\nUppgifter: SDM 13\nÖvning 9 - Slumpvariabler, väntevärde och standardavvikelse.\nUppgifter: SDM 14\nÖvning 10 - Diskreta sannolikhetsfördelningar.\nUppgifter: SDM 15\nÖvning 12 - Kontinerliga sannolikhetsfördelningar.\nUppgifter: SDM 15\nÖvning 13 - Samplingfördelningar och konfidensintervall för en andel.\nUppgifter: SDM 16\nÖvning 14 - Konfidensintervall för ett väntevärde.\nUppgifter: SDM 17\nÖvning 13 - Hypotestest.\nUppgifter: SDM 18\nÖvning 14 - Hypotestest och p-värde.\nUppgifter: SDM 18\nÖvning 13 - Jämföra grupper.\nUppgifter: SDM 20-21.\nÖvning 14 - Inferens för regression.\nUppgifter: SDM 23\n\n\nDatorlaborationer\nDatorlaboration 5 - Simulering från sannolikhetsfördelningar\nUppgifter: Datorlab 5\nDatorlaboration 6 - Samplingfördelningar, standardfel och centrala gränsvärdessatsen.\nUppgifter: Datorlab 6\nDatorlaboration 7 - Konfidensintervall och hypotestest.\nUppgifter: Datorlab 7\nDatorlaboration 8 - Multipel linjär regression\nUppgifter: Datorlab 8"
   },
   {
     "objectID": "assignments/Inlamningsuppgift1.html",
@@ -348,13 +467,6 @@
     "title": "Statistik och dataanalys I, 15 hp",
     "section": "",
     "text": "Inlämning\n\n\n\nEr grupp förväntas lämna in följande på Athena:\n\ndet här Quarto (qmd) dokumentet med era lösningar på inlämningsuppgiften\nen pdf-version av dokumentet.\n\nByt ut Student 1 och Student 2 vid Author till era namn."
-  },
-  {
-    "objectID": "DelA.html",
-    "href": "DelA.html",
-    "title": "Dataanalys, 7.5 hp",
-    "section": "",
-    "text": "I det här momentet ingår insamling, bearbetning, visualisering och sammanfattning av data i programspråket R. En stor del av momentet behandlar sambands- och regressionsanalys som utmynnar i metoder för prediktion.\n\n\nFöreläsningar\nFöreläsning 1 - Introduktion.\nLäs: SDM Kapitel 1 | Slides\nFöreläsning 2 - Introduktion till R. \nLäs: LITTERATUR | Slides\nFöreläsning 3 - Hantera och beskriva data.\nLäs: SDM Kapitel 2 | Slides\nFöreläsning 4 - Samband mellan kategoriska variabler.\nLäs: SDM Kapitel 3 | Slides\nFöreläsning 5 - Jämföra fördelningar. Tidsserier. Transformationer.\nLäs: SDM Kapitel 4 | Slides\nFöreläsning 6 - Standardisering och Normalmodellen.\nLäs: SDM Kapitel 5 | Slides\nFöreläsning 7 - Samband mellan kontinuerliga variabler. Korrelation.\nLäs: SDM Kapitel 6 | Slides\nFöreläsning 8 - Enkel linjär regression.\nLäs: SDM Kapitel 7 | Slides\nFöreläsning 9 - Multipel regression.\nLäs: SDM Kapitel 9 | Slides\nFöreläsning 10 - Populationer och stickprov. Undersökningar och experiment.\nLäs: SDM 10.1-10.3 och 11.1-11.2 | Slides\nFöreläsning 11 - Sammanfattning\nLäs: Slides\nVideoföreläsning - Matematikrepetition.\nLäs: Slides\n\n\nÖvningar\nÖvning 1 - Beskrivande statistik.\nUppgifter: SDM 2\nÖvning 2 - Samband mellan kategoriska variabler och korstabeller.\nUppgifter: SDM 3\nÖvning 3 - Standardavvikelse och standardisering. Normalmodellen.\nUppgifter: SDM 5\nÖvning 4 - Korrelation.\nUppgifter: SDM 6\nÖvning 5 - Estimering och tolkning av enkel linjär regression.\nUppgifter: SDM 7\nÖvning 6 - Prediktion med enkel linjär regression.\nUppgifter: SDM 7-9\n\n\nDatorlaborationer\nDatorlaboration 1 - Intro till R\nUppgifter: html eller pdf\nDatorlaboration 2 - Beskrivande statistik och visualisering i R\nUppgifter: Datorlab 2\nDatorlaboration 3 - Korrelation och enkel linjär regression\nUppgifter: Datorlab 3\nDatorlaboration 4 - Multipel linjär regression\nUppgifter: Datorlab 4"
   },
   {
     "objectID": "index.html#datamaterial",
@@ -389,7 +501,7 @@
     "href": "R.html#guidertutorials",
     "title": "R",
     "section": "Guider/Tutorials",
-    "text": "Guider/Tutorials\n\nLadda ner och installera R och RStudio: video\nEn snabbtur i RStudio: video\nEn sammanfattning av R funktioner för SDA1.\nTutorial om hur man läser in data från Excel och text-filer. 🇬🇧\nQuarto för att skriva kompletta rapporter med kod. 🇬🇧\nhtml | pdf | video"
+    "text": "Guider/Tutorials\n\nLadda ner och installera R och RStudio: video\nEn snabbtur i RStudio: video\nEn sammanfattning av R funktioner för SDA1.\nTutorial om hur man läser in data från Excel och text-filer. 🇬🇧\nQuarto för att skriva kompletta rapporter med kod. 🇬🇧\nhtml | pdf | video\nMosaic-paketet i R med dess sk formula syntax används mycket under kursen och innehåller grundläggande statistiska metoder och grafik. Detta cheat sheet för mosaic kan vara användbart.\nHär är ytterligare ett cheat sheet som jämför tre olika varianterna av R-kod finns här. Notera att kursen inte använder Tidyverse-varianten, utan fokuserar på Formula syntax och till viss mån också base-R med dess s k dollar sign syntax."
   },
   {
     "objectID": "R.html#kursens-r-paket",
@@ -397,13 +509,6 @@
     "title": "R",
     "section": "Kursens R-paket",
     "text": "Kursens R-paket\nKursen har ett eget R-paket sdakurs med några hjälpfunktioner som används på kursen.\n\nInstallera kurspaketet sdakurs\n\ninstall.packages(\"remotes\") \nlibrary(remotes)  \ninstall_github(\"StatisticsSU/sdakurs\")\nlibrary(sdakurs)\n\n\n\nInstallera kursens datamaterial\n\ninstall_github(\"StatisticsSU/SUdatasets\")\nlibrary(SUdatasets)"
-  },
-  {
-    "objectID": "DelB.html",
-    "href": "DelB.html",
-    "title": "Statistiska modeller och inferens, 7.5 hp",
-    "section": "",
-    "text": "I kursens andra momentet behandlas sannolikheter, slumpvariabler och sannolikhetsfördelningar. En central del i momentet är inferens, dvs. statistiska metoder för att dra slutsatser om olika fenomen från data. Kursen avslutas med en introduktion till beslutsfattade under osäkerhet.\n\n\nFöreläsningar\nFöreläsning 12 - Sannolikheter och sannolikhetsmodeller.\nLäs: SDM Kapitel 12 och 13 | Slides\nFöreläsning 13 - Sannolikhetsberäkningar.\nLäs: SDM Kapitel 13 | Slides\nFöreläsning 14 - Slumpvariabler. Väntevärde. Varians. Linjärkombinationer.\nLäs: SDM Kapitel 14 | Slides\nFöreläsning 15 - Diskreta sannolikhetsmodeller.\nLäs: SDM Kapitel 15.1, 15.2, 15.3, 15.6 | Slides\nFöreläsning 16 - Kontinuerliga sannolikhetsmodeller.\nLäs: SDM Kapitel 5.3, 15.7 | Slides\nFöreläsning 17 - Samplingfördelningar och konfidensintervall för en andel.\nLäs: SDM Kapitel 16 | Slides\nFöreläsning 18 - Konfidensintervall för ett väntevärde. Stora talens lag. Centrala gränsvärdessatsen.\nLäs: SDM Kapitel 17 | Slides\nFöreläsning 19 - Hypotestest.\nLäs: SDM Kapitel 18 | Slides\nFöreläsning 20 - Hypotestest och jämföra grupper.\nLäs: SDM Kapitel 19, 20.4, 20.5 | Slides\nFöreläsning 21 - Jämföra grupper och chi-2 test.\nLäs: SDM Kapitel 21.1, 21.2 | Slides\nFöreläsning 22 - Inferens i multipel regression.\nLäs: SDM Kapitel 23 | Slides\nVideoföreläsning - Maximum likelihood och Bayesiansk inferens.\nLäs: Kompendium avsnitt X | Slides\nFöreläsning 23 - Sammanfattning.\nLäs: Slides\n\n\nÖvningar\nÖvning 7 - Sannolikheter för händelser. Kombinatorik.\nUppgifter: SDM 12-13\nÖvning 8 - Oberoende händelser. Betingning och Bayes sats.\nUppgifter: SDM 13\nÖvning 9 - Slumpvariabler, väntevärde och standardavvikelse.\nUppgifter: SDM 14\nÖvning 10 - Diskreta sannolikhetsfördelningar.\nUppgifter: SDM 15\nÖvning 12 - Kontinerliga sannolikhetsfördelningar.\nUppgifter: SDM 15\nÖvning 13 - Samplingfördelningar och konfidensintervall för en andel.\nUppgifter: SDM 16\nÖvning 14 - Konfidensintervall för ett väntevärde.\nUppgifter: SDM 17\nÖvning 13 - Hypotestest.\nUppgifter: SDM 18\nÖvning 14 - Hypotestest och p-värde.\nUppgifter: SDM 18\nÖvning 13 - Jämföra grupper.\nUppgifter: SDM 20-21.\nÖvning 14 - Inferens för regression.\nUppgifter: SDM 23\n\n\nDatorlaborationer\nDatorlaboration 5 - Simulering från sannolikhetsfördelningar\nUppgifter: Datorlab 5\nDatorlaboration 6 - Samplingfördelningar, standardfel och centrala gränsvärdessatsen.\nUppgifter: Datorlab 6\nDatorlaboration 7 - Konfidensintervall och hypotestest.\nUppgifter: Datorlab 7\nDatorlaboration 8 - Multipel linjär regression\nUppgifter: Datorlab 8"
   },
   {
     "objectID": "about.html",
