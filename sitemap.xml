@@ -2,82 +2,98 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://StatisticsSU.github.io/SDA1/datorlab/lab1/DatorLab1.html</loc>
-    <lastmod>2023-01-04T23:01:42.034Z</lastmod>
+    <lastmod>2023-01-08T22:43:27.725Z</lastmod>
   </url>
   <url>
     <loc>https://StatisticsSU.github.io/SDA1/datorlab/lab2/DatorLab2.html</loc>
-    <lastmod>2023-01-04T23:01:55.078Z</lastmod>
+    <lastmod>2023-01-08T22:43:28.077Z</lastmod>
   </url>
   <url>
     <loc>https://StatisticsSU.github.io/SDA1/Del1.html</loc>
-    <lastmod>2023-01-04T23:01:59.570Z</lastmod>
+    <lastmod>2023-01-08T22:43:32.617Z</lastmod>
+  </url>
+  <url>
+    <loc>https://StatisticsSU.github.io/SDA1/observable/cgs.html</loc>
+    <lastmod>2023-01-08T22:43:32.893Z</lastmod>
+  </url>
+  <url>
+    <loc>https://StatisticsSU.github.io/SDA1/observable/studentt.html</loc>
+    <lastmod>2023-01-08T22:43:33.173Z</lastmod>
+  </url>
+  <url>
+    <loc>https://StatisticsSU.github.io/SDA1/observable/storatalenslag.html</loc>
+    <lastmod>2023-01-08T22:43:33.457Z</lastmod>
   </url>
   <url>
     <loc>https://StatisticsSU.github.io/SDA1/tutorials/ReadingDataFromFile/ReadingDataFromFile.html</loc>
-    <lastmod>2023-01-04T23:02:01.046Z</lastmod>
+    <lastmod>2023-01-08T22:43:34.977Z</lastmod>
   </url>
   <url>
     <loc>https://StatisticsSU.github.io/SDA1/tutorials/Quarto/QuartoReportExample.html</loc>
-    <lastmod>2023-01-04T23:02:02.498Z</lastmod>
+    <lastmod>2023-01-08T22:43:36.381Z</lastmod>
   </url>
   <url>
     <loc>https://StatisticsSU.github.io/SDA1/tutorials/Quarto/Intro2Quarto.html</loc>
-    <lastmod>2023-01-04T23:02:04.022Z</lastmod>
+    <lastmod>2023-01-08T22:43:37.829Z</lastmod>
   </url>
   <url>
     <loc>https://StatisticsSU.github.io/SDA1/R/TidyverseSyntax.html</loc>
-    <lastmod>2023-01-04T23:02:05.562Z</lastmod>
+    <lastmod>2023-01-08T22:43:39.405Z</lastmod>
   </url>
   <url>
     <loc>https://StatisticsSU.github.io/SDA1/R/BaseRSyntax.html</loc>
-    <lastmod>2023-01-04T23:02:06.570Z</lastmod>
+    <lastmod>2023-01-08T22:43:40.457Z</lastmod>
   </url>
   <url>
     <loc>https://StatisticsSU.github.io/SDA1/R/Rcommands.html</loc>
-    <lastmod>2023-01-04T23:02:13.286Z</lastmod>
+    <lastmod>2023-01-08T22:43:47.257Z</lastmod>
   </url>
   <url>
     <loc>https://StatisticsSU.github.io/SDA1/R/FormulaSyntax.html</loc>
-    <lastmod>2023-01-04T23:02:15.362Z</lastmod>
+    <lastmod>2023-01-08T22:43:49.313Z</lastmod>
   </url>
   <url>
     <loc>https://StatisticsSU.github.io/SDA1/slides/Slumpvariabler.html</loc>
-    <lastmod>2023-01-04T23:02:15.706Z</lastmod>
+    <lastmod>2023-01-08T22:43:49.553Z</lastmod>
   </url>
   <url>
     <loc>https://StatisticsSU.github.io/SDA1/slides/Intro.html</loc>
-    <lastmod>2023-01-04T23:02:15.958Z</lastmod>
+    <lastmod>2023-01-08T22:43:49.825Z</lastmod>
   </url>
   <url>
     <loc>https://StatisticsSU.github.io/SDA1/slides/KontinuerligaModeller.html</loc>
-    <lastmod>2023-01-04T23:02:16.230Z</lastmod>
+    <lastmod>2023-01-08T22:43:51.221Z</lastmod>
   </url>
   <url>
     <loc>https://StatisticsSU.github.io/SDA1/slides/Sannolikheter.html</loc>
-    <lastmod>2023-01-04T23:02:16.558Z</lastmod>
+    <lastmod>2023-01-08T22:43:51.533Z</lastmod>
   </url>
   <url>
     <loc>https://StatisticsSU.github.io/SDA1/slides/BetingadeSlhBayes.html</loc>
-    <lastmod>2023-01-04T23:02:16.838Z</lastmod>
+    <lastmod>2023-01-08T22:43:51.789Z</lastmod>
   </url>
   <url>
     <loc>https://StatisticsSU.github.io/SDA1/stealourcourse.html</loc>
-    <lastmod>2023-01-04T23:02:17.170Z</lastmod>
+    <lastmod>2023-01-08T22:43:52.121Z</lastmod>
   </url>
   <url>
     <loc>https://StatisticsSU.github.io/SDA1/Del2.html</loc>
-    <lastmod>2023-01-04T23:02:17.542Z</lastmod>
+    <lastmod>2023-01-08T22:43:52.453Z</lastmod>
   </url>
   <url>
     <loc>https://StatisticsSU.github.io/SDA1/assignments/Inlamningsuppgift1.html</loc>
-    <lastmod>2023-01-04T23:02:17.810Z</lastmod>
+    <lastmod>2023-01-08T22:43:52.749Z</lastmod>
+  </url>
+  <url>
+    <loc>https://StatisticsSU.github.io/SDA1/interaktiv.html</loc>
+    <lastmod>2023-01-08T22:43:53.062Z</lastmod>
   </url>
   <url>
     <loc>https://StatisticsSU.github.io/SDA1/index.html</loc>
-    <lastmod>2023-01-04T23:02:18.138Z</lastmod>
+    <lastmod>2023-01-08T22:43:53.398Z</lastmod>
   </url>
   <url>
     <loc>https://StatisticsSU.github.io/SDA1/R.html</loc>
-    <lastmod>2023-01-04T23:02:19.302Z</lastmod>
+    <lastmod>2023-01-08T22:43:54.422Z</lastmod>
   </url>
 </urlset>

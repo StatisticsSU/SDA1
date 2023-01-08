@@ -93,6 +93,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<link href=".//misc/favicons/favicon.ico" rel="icon">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -153,19 +154,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./Del1.html">
- <span class="menu-text">Del I - Dataanalys och Regression, 7.5 hp</span></a>
+ <span class="menu-text">Del 1 - Dataanalys och regression</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./Del2.html">
- <span class="menu-text">Del II - Sannolikhetsmodeller och inferens, 7.5 hp</span></a>
+ <span class="menu-text">Del 2 - Sannolikhetsmodeller och inferens</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link active" href="./R.html" aria-current="page">
  <span class="menu-text">R</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./stealourcourse.html">
- <span class="menu-text">Stjäl vår kurs</span></a>
   </li>  
 </ul>
               <div class="quarto-toggle-container">
@@ -182,19 +179,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
+    <h2 id="toc-title">Avsnitt på sidan</h2>
    
   <ul>
-  <li><a href="#programmeringsspråket-r" id="toc-programmeringsspråket-r" class="nav-link active" data-scroll-target="#programmeringsspråket-r">Programmeringsspråket R</a></li>
-  <li><a href="#rstudio" id="toc-rstudio" class="nav-link" data-scroll-target="#rstudio">RStudio</a></li>
+  <li><a href="#rstudio" id="toc-rstudio" class="nav-link active" data-scroll-target="#rstudio">RStudio</a></li>
   <li><a href="#ladda-ner-r-och-rstudio" id="toc-ladda-ner-r-och-rstudio" class="nav-link" data-scroll-target="#ladda-ner-r-och-rstudio">Ladda ner R och RStudio</a></li>
+  <li><a href="#tre-dialekter-av-r" id="toc-tre-dialekter-av-r" class="nav-link" data-scroll-target="#tre-dialekter-av-r">Tre dialekter av R</a></li>
   <li><a href="#guidertutorials" id="toc-guidertutorials" class="nav-link" data-scroll-target="#guidertutorials">Guider/Tutorials</a></li>
+  <li><a href="#cheat-sheets" id="toc-cheat-sheets" class="nav-link" data-scroll-target="#cheat-sheets">Cheat sheets</a></li>
+  <li><a href="#datamaterial" id="toc-datamaterial" class="nav-link" data-scroll-target="#datamaterial">Datamaterial</a></li>
   <li><a href="#kursens-r-paket" id="toc-kursens-r-paket" class="nav-link" data-scroll-target="#kursens-r-paket">Kursens R-paket</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -213,12 +212,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 </header>
 
-<section id="programmeringsspråket-r" class="level2">
-<h2 class="anchored" data-anchor-id="programmeringsspråket-r">Programmeringsspråket R</h2>
 <blockquote class="blockquote">
-<p>Kursen använder det mycket populära statistiska programmeringsspråket R. Programmet är helt gratis och kan laddas ner på alla datorer.</p>
+<p>Kursen använder det populära statistiska programmeringsspråket R. Programmet är helt gratis och kan laddas ner på alla datorer.</p>
 </blockquote>
-</section>
 <section id="rstudio" class="level2">
 <h2 class="anchored" data-anchor-id="rstudio">RStudio</h2>
 <p>R är lättast att jobba i från programmet RStudio. RStudio är en slags arbetsmiljö byggd kring R. Även RStudio är gratis.</p>
@@ -231,6 +227,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>RStudio kan laddas ner <a href="https://www.rstudio.com/products/rstudio/download/#download">här</a>.</li>
 </ul>
 </section>
+<section id="tre-dialekter-av-r" class="level2">
+<h2 class="anchored" data-anchor-id="tre-dialekter-av-r">Tre dialekter av R</h2>
+<p>Man kan dela upp R’s språk i tre slags dialekter, dvs tre olika kommandon (syntax) för att göra ungefär samma sak:</p>
+<ul>
+<li><strong>Base-R</strong> - (den ursprungliga) med dess s k <em>dollar sign $</em> syntax</li>
+<li><strong>Formula</strong> - syntax som via paketet <code>Mosaic</code> har utvecklats för undervisning i statistik</li>
+<li><strong>Tidyverse</strong> - en modern syntax utvecklat av personerna bakom RStudio.</li>
+</ul>
+<center>
+<a href="../../R/cheatsheets/base-r_cheat_sheet.pdf"><img src="../../misc/hexagons/figs/base_r_hexagon.svg" class="img-fluid" width="60"></a>&nbsp; <a href="../../R/cheatsheets/mosaic_cheatsheet_gf.pdf"><img src="../../misc/hexagons/figs/mosaic_hexagon.svg" class="img-fluid" width="60"></a>&nbsp; <a href="../../R/cheatsheets/ggplot2_cheatsheet.pdf"><img src="../../misc/hexagons/figs/tidyverse_hexagon.svg" class="img-fluid" width="60"></a>
+</center>
+<p><br></p>
+<p>I SDA1 kommer vi försöka använda Formula syntax som mycket som möjligt, med inslag av Base-R. Tidyverse-kod kan ofta vara extremt effektiv, men tar för lång tid att lära sig på en grundkurs i statistik. Vi kommer dock då och då att visa hur man gör samma sak i de olika dialekterna, men på ett sätt som inte stör flödet för den student som helst vill hålla sig till ett sätt. Vi använder ikoner som du som student kan klicka på för att se ett kommando i olika dialekter. Se t ex avsnittet om <a href="#cheat-sheets">cheatsheets</a> på denna sida för ett exempel (prova att klicka ikonerna i höger-marginalen).</p>
+</section>
 <section id="guidertutorials" class="level2">
 <h2 class="anchored" data-anchor-id="guidertutorials">Guider/Tutorials</h2>
 <ul>
@@ -240,27 +250,44 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p>Tutorial om hur man läser in <a href="./tutorials/ReadingDataFromFile/ReadingDataFromFile.html">data från Excel</a> och text-filer. 🇬🇧</p></li>
 <li><p><strong>Quarto</strong> för att skriva kompletta rapporter med kod. 🇬🇧<br>
 <a href="./tutorials/Quarto/Intro2Quarto.html">html</a> | <a href="./tutorials/Quarto/Intro2Quarto.pdf">pdf</a> | <a href="">video</a></p></li>
-<li><p><strong>Mosaic</strong>-paketet i R med dess sk <em>formula syntax</em> används mycket under kursen och innehåller grundläggande statistiska metoder och grafik. Detta <a href="https://github.com/mlaviolet/Mosaic-cheatsheets/raw/master/mosaic-cheatsheet-gf.pdf">cheat sheet för mosaic</a> kan vara användbart.</p></li>
-<li><p>Här är ytterligare ett cheat sheet som jämför tre olika varianterna av R-kod finns <a href="https://www.amelia.mn/Syntax-cheatsheet.pdf">här</a>. Notera att kursen <strong>inte</strong> använder <em>Tidyverse</em>-varianten, utan fokuserar på <em>Formula syntax</em> och till viss mån också <em>base-R</em> med dess s k <em>dollar sign syntax</em>.</p></li>
 </ul>
 </section>
-<section id="kursens-r-paket" class="level2">
+<section id="cheat-sheets" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="cheat-sheets">Cheat sheets</h2>
+<ul>
+<li><strong>Mosaic</strong>-paketet <a href="./R/cheatsheets/mosaic_cheatsheet_gf.pdf"><img src="../../misc/hexagons/figs/mosaic_hexagon.svg" class="img-fluid" width="25"></a> i R med dess sk <em>formula syntax</em> används mycket under kursen och innehåller grundläggande statistiska metoder och grafik. Detta s k <a href="https://github.com/mlaviolet/Mosaic-cheatsheets/raw/master/mosaic-cheatsheet-gf.pdf">cheat sheet för mosaic</a> sammanfattar de viktigaste metoderna i mosaic paketet. Klicka på ikonerna i marginalen om du är nyfiken på motsvarande cheatsheets för de andra två dialekterna av R. Om du vill jämföra de olika dialekterna sida vid sida kan du titta på <a href="./R/cheatsheets/FormulaVsTidySyntax-cheatsheet.pdf">R Syntax Comparison</a> cheat sheet.</li>
+</ul>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><a href="./R/cheatsheets/base-r_cheat_sheet.pdf"><img src="../../misc/hexagons/figs/base_r_hexagon.svg" class="img-fluid" width="60"></a>&nbsp; <a href="./R/cheatsheets/ggplot2_cheatsheet.pdf"><img src="../../misc/hexagons/figs/tidyverse_hexagon.svg" class="img-fluid" width="60"></a></p>
+</div></div><ul>
+<li>Denna <a href="./R/cheatsheets/rstudio-ide_cheatsheet.pdf">RStudio cheat sheet</a> är rätt rörig, men kan kanske vara användbar <em>efter</em> att man själv bekantat sig lite med RStudio.</li>
+</ul>
+</section>
+<section id="datamaterial" class="level2">
+<h2 class="anchored" data-anchor-id="datamaterial">Datamaterial</h2>
+<ul>
+<li>Kursboken <a href="https://nordics.pearson.com/products/stats-data-and-models-5th-global-edition-e-book?variant=42945920630933">Stats: Data and Models</a> kommer med över 500 olika datamaterial som hittas <a href="https://media.pearsoncmg.com/intl/ge/2021/cws/ge_deveaux_stats_5/statdm5d_datasets.html">här</a>. Datamaterialen är i ofta i Excel-format, se denna <a href="./tutorials/ReadingDataFromFile/ReadingDataFromFile.html">guide</a> om hur man läser in data från Excel i R.</li>
+<li>Kursens R-paket <a href="#kursens-R-paket">sda1</a> innehåller också några datamaterial som kommer användas under kursen.</li>
+</ul>
+</section>
+<section id="kursens-r-paket" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="kursens-r-paket">Kursens R-paket</h2>
-<p>Kursen har ett eget R-paket <code>sdakurs</code> med några hjälpfunktioner som används på kursen.</p>
-<section id="installera-kurspaketet-sdakurs" class="level4">
-<h4 class="anchored" data-anchor-id="installera-kurspaketet-sdakurs">Installera kurspaketet <code>sdakurs</code></h4>
+<p>Kursen har ett eget R-paket <code>sda1</code> med några hjälpfunktioner och datamaterial som används på kursen.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://github.com/StatisticsSU/sdakurs"><img src="misc/hexagons/figs/sda1paketlogo.svg" class="img-fluid figure-img" alt="sda1 kurspaket för R" width="60"></a></p>
+</figure>
+</div>
+</div></div><section id="installera-kurspaketet" class="level4">
+<h4 class="anchored" data-anchor-id="installera-kurspaketet">Installera kurspaketet</h4>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"remotes"</span>) </span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(remotes)  </span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">install_github</span>(<span class="st">"StatisticsSU/sdakurs"</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install_github</span>(<span class="st">"StatisticsSU/sda1"</span>) </span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(remotes)</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sdakurs)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="installera-kursens-datamaterial" class="level4">
-<h4 class="anchored" data-anchor-id="installera-kursens-datamaterial">Installera kursens datamaterial</h4>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install_github</span>(<span class="st">"StatisticsSU/SUdatasets"</span>)</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(SUdatasets)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
 
@@ -517,6 +544,34 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="https://www.su.se/statistiska-institutionen/">Statistiska instiutionen - Stockholms universitet</a>
+  </li>  
+</ul>
+    </div>   
+      <div class="nav-footer-center">
+        <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+ Använd vår kurs!
+  </li>  
+</ul>
+      </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/StatisticsSU/SDA1">
+      <i class="bi bi-github" role="img" aria-label="Quarto GitHub">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
 
 
 

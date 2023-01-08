@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Mattias Villani">
-<meta name="dcterms.date" content="2022-11-17">
+<meta name="dcterms.date" content="2023-01-08">
 
 <title>SDA1 - Statistik och dataanalys I, 15 hp</title>
 <style>
@@ -95,6 +95,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
+<link href="../..//misc/favicons/favicon.ico" rel="icon">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -156,19 +157,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../Del1.html">
- <span class="menu-text">Del I - Dataanalys och Regression, 7.5 hp</span></a>
+ <span class="menu-text">Del 1 - Dataanalys och regression</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../Del2.html">
- <span class="menu-text">Del II - Sannolikhetsmodeller och inferens, 7.5 hp</span></a>
+ <span class="menu-text">Del 2 - Sannolikhetsmodeller och inferens</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../R.html">
  <span class="menu-text">R</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../stealourcourse.html">
- <span class="menu-text">Stjäl vår kurs</span></a>
   </li>  
 </ul>
               <div class="quarto-toggle-container">
@@ -185,7 +182,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
+    <h2 id="toc-title">Avsnitt på sidan</h2>
    
   <ul>
   <li><a href="#introduktion" id="toc-introduktion" class="nav-link active" data-scroll-target="#introduktion">Introduktion</a></li>
@@ -227,7 +224,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">November 17, 2022</p>
+      <p class="date">January 8, 2023</p>
     </div>
   </div>
   
@@ -816,9 +813,13 @@ Tip
 <p>Man kan dela upp R’s språk i tre slags dialekter, dvs tre olika kommandon (syntax) för att göra ungefär samma sak:</p>
 <ul>
 <li><strong>Base-R</strong> - den ursprungliga syntaxen in R</li>
-<li><strong>Formula syntax</strong> - syntax som via paketet <code>Mosaic</code> har utvecklats undervisning i statistik</li>
+<li><strong>Formula syntax</strong> - syntax som via paketet <code>Mosaic</code> har utvecklats för undervisning i statistik</li>
 <li><strong>Tidyverse</strong> - en modern syntax utvecklat av personerna bakom RStudio.</li>
 </ul>
+<center>
+<a href="../../R/cheatsheets/base-r_cheat_sheet.pdf"><img src="../../misc/hexagons/figs/base_r_hexagon.svg" class="img-fluid" width="60"></a>&nbsp; <a href="../../R/cheatsheets/mosaic_cheatsheet_gf.pdf"><img src="../../misc/hexagons/figs/mosaic_hexagon.svg" class="img-fluid" width="60"></a>&nbsp; <a href="../../R/cheatsheets/ggplot2_cheatsheet.pdf"><img src="../../misc/hexagons/figs/tidyverse_hexagon.svg" class="img-fluid" width="60"></a>
+</center>
+<p><br></p>
 <p>I SDA1 kommer vi försöka använda Formula syntax som mycket som möjligt, med inslag av Base-R. Tidyverse-kod kan ofta vara extremt effektiv, men tar för lång tid att lära sig på en grundkurs i statistik. Vi kommer dock då och då att visa hur man gör samma sak i de olika dialekterna, men på ett sätt som inte stör flödet för den student som helst vill hålla sig till ett sätt. Vi använder ikoner som du som student kan klicka på för att se ett kommando i olika dialekter. Här är ett exempel (prova att klicka ikonerna i höger-marginalen):</p>
 <p>I Formula syntax har vi redan sett att vi kan göra en scatter plot med kommandot</p>
 <div class="cell">
@@ -829,7 +830,7 @@ Tip
 </div>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p><a href="../../R/BaseRSyntax.html#scatter-plot"><img src="../../misc/BaseRIcon.png" width="47" height="48"></a> <a href="../../R/TidyverseSyntax.html#scatter-plot"><img src="../../misc/TidyIcon.png" width="47" height="48"></a></p>
+<p><a href="../../R/BaseRSyntax.html#scatter-plot"><img src="../../misc/hexagons/figs/mosaic_hexagon.svg" class="img-fluid" width="60"></a> <a href="../../R/TidyverseSyntax.html#scatter-plot"><img src="../../misc/hexagons/figs/tidyverse_hexagon.svg" class="img-fluid" width="60"></a></p>
 </div></div><p>Om man vill ha plottar som liknar de fina plottarna i Tidyverse, men fortsätta att skriva den enklare formula-syntaxen så kan man använda paketet <code>ggformula</code>:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggformula)</span>
@@ -1103,6 +1104,34 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="https://www.su.se/statistiska-institutionen/">Statistiska instiutionen - Stockholms universitet</a>
+  </li>  
+</ul>
+    </div>   
+      <div class="nav-footer-center">
+        <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+ Använd vår kurs!
+  </li>  
+</ul>
+      </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/StatisticsSU/SDA1">
+      <i class="bi bi-github" role="img" aria-label="Quarto GitHub">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
 
 
 
