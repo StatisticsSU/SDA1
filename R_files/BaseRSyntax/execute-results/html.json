@@ -1,9 +1,9 @@
 {
-  "hash": "4a2dc8f51767209aa5d8148960a29602",
+  "hash": "3f5b79b3def495e735f111b7dc5c8e99",
   "result": {
-    "markdown": "---\ntitle: \"Base-R\"\nauthor: \"Mattias Villani\"\neditor: visual\n---\n\n\n## Scatter plot\n\n\n::: {.cell}\n\n```{.r .cell-code}\nplot(mtcars$hp, mtcars$mpg, xlab = \"hp\", ylab = \"mpg\", main = \"Cars fuel usage\")\n```\n\n::: {.cell-output-display}\n![](BaseRSyntax_files/figure-html/unnamed-chunk-1-1.png){width=672}\n:::\n:::\n",
+    "markdown": "---\ntitle: \"Base-R\"\nauthor: \"Mattias Villani\"\nformat: html\n---\n\n\n## Scatter plot\n\n\n::: {.cell}\n\n```{.r .cell-code}\nplot(mtcars$hp, mtcars$mpg, xlab = \"hp\", ylab = \"mpg\", main = \"Cars fuel usage\")\n```\n\n::: {.cell-output-display}\n![](BaseRSyntax_files/figure-html/unnamed-chunk-1-1.png){width=672}\n:::\n:::\n",
     "supporting": [
-      "BaseRSyntax_files"
+      "BaseRSyntax_files/figure-html"
     ],
     "filters": [
       "rmarkdown/pagebreak.lua"

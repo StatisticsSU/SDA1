@@ -1,9 +1,9 @@
 {
-  "hash": "1791fdec32b3a8e5cdfb925a18f8f13b",
+  "hash": "0890df14e439ee60e68e9dd55741f43a",
   "result": {
-    "markdown": "---\ntitle: \"Tidyverse syntax\"\nauthor: \"Mattias Villani\"\neditor: visual\n---\n\n\n## Scatter plot\n\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(ggplot2)\nggplot(data = mtcars, aes(x = hp, y = mpg)) +\n  geom_point() + \n  ggtitle(\"Cars fuel usage\") \n```\n\n::: {.cell-output-display}\n![](TidyverseSyntax_files/figure-html/unnamed-chunk-1-1.png){width=672}\n:::\n:::\n\n\nSe [ggplot2 cheat sheet](https://posit.co/wp-content/uploads/2022/10/data-visualization-1.pdf) för fler kommandon.\n",
+    "markdown": "---\ntitle: \"Tidyverse syntax\"\nauthor: \"Mattias Villani\"\nformat: html\n---\n\n\n## Introduktion\n\n[Tidyverse](https://www.tidyverse.org/) är en samling R-paket som delar på samma underliggande filosofi. När man väl lärt sig Tidyverse-filosofin, är paketen väldigt kraftfulla. Men eftersom det tar sin tid att lära sig Tidyverse så använder vi inte dessa paket på den här grundkursen. För att still nyfikenheten bland programmeringintresserade studenter kommer vi då och då länka till motsvarande kod i Tidyverse genom att visa den här ikonen i marginalen:\n\n![](../../misc/hexagons/figs/tidyverse_hexagon.svg){fig-align=\"center\" width=\"60\"}\n\nKlickar man på den ikonen får man se motsvarande kod från ett eller flera av de olika Tidyverse-paketen, t ex\n\n![](/misc/hexagons/figs/tidyhexa.svg){fig-align=\"center\" width=\"200\"}\n\nSpeciellt värt att notera bland dessa paket är [ggplot2](https://ggplot2.tidyverse.org/) som, trots sitt knepiga namn, är ett mycket användbart paket för diagram och visualisering.\n\n## Scatter plot\n\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(ggplot2)\nggplot(data = mtcars, aes(x = hp, y = mpg)) +\n  geom_point() + \n  ggtitle(\"Cars fuel usage\") \n```\n\n::: {.cell-output-display}\n![](TidyverseSyntax_files/figure-html/unnamed-chunk-1-1.png){width=672}\n:::\n:::\n\n\nSe [ggplot2 cheat sheet](https://posit.co/wp-content/uploads/2022/10/data-visualization-1.pdf) för fler kommandon.\n",
     "supporting": [
-      "TidyverseSyntax_files"
+      "TidyverseSyntax_files/figure-html"
     ],
     "filters": [
       "rmarkdown/pagebreak.lua"
