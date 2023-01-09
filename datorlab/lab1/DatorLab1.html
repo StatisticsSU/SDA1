@@ -240,6 +240,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <blockquote class="blockquote">
 <p>I den här första datorlabben kommer ni bekanta er med programmeringsspråket <strong>R</strong> och dess arbetsmiljö <strong>RStudio</strong>.</p>
 </blockquote>
+<div class="callout-caution callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Keep calm and carry on
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<blockquote class="blockquote">
+<p>Det är <strong>många</strong> nya saker som presenteras i den här datorlaborationen, så var beredd på att inte allt kommer att sjunka in direkt. Försök att ta dig igenom hela texten, och övningarna. Du kan sen återkomma till denna labb på andra datorlaborationer för att repetera de delar du behöver. Ok, ta ett djupt andetag så börjar vi!</p>
+</blockquote>
+</div>
+</div>
 <div class="callout-tip callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -289,7 +304,7 @@ Multiplikation och division
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>R använder <code>*</code> för multiplikation och <code>/</code> för division. Potenser (upphöjt till) skrivs med tecknet <code>^</code> (<code>Shift</code> + tangent till vänster om <code>Enter</code>). Så 3^2 är 9.</p>
+<p>R använder <code>*</code> för multiplikation och <code>/</code> för division. Potenser (upphöjt till) skrivs med tecknet <code>^</code>, så 3^2 är 9. Du skriver tecknet <code>^</code> genom att trycka <code>Shift</code> + tangent till vänster om <code>Enter</code>. Sen måste du trycka Mellanslag/Space innan du skriver exponenten, annars blir det 3² och det fungerar inte i R.</p>
 </div>
 </div>
 <section id="uppgift-1.1" class="level4">
@@ -298,10 +313,14 @@ Multiplikation och division
 </section>
 <section id="uppgift-1.2" class="level4">
 <h4 class="anchored" data-anchor-id="uppgift-1.2">💪 Uppgift 1.2</h4>
-<p>Skriv in talet (2+3)/(2+5) i Console och se att R svarar med 0.7142857.</p>
+<p>Beräkna 3² (3 upphöjt i 2) i Console. [läs informationsrutan ovanför!]</p>
 </section>
 <section id="uppgift-1.3" class="level4">
 <h4 class="anchored" data-anchor-id="uppgift-1.3">💪 Uppgift 1.3</h4>
+<p>Skriv in talet (2+3)/(2+5) i Console och se att R svarar med 0.7142857.</p>
+</section>
+<section id="uppgift-1.4" class="level4">
+<h4 class="anchored" data-anchor-id="uppgift-1.4">💪 Uppgift 1.4</h4>
 <p>Du köper aktier för 100 kr. Avkastningen första året är 10%. Använd R för att beräkna värdet på ditt aktiekapital efter ditt första år som aktiesparare, dvs skriv in 100*1.1 och se R returnera 110.</p>
 </section>
 </section>
@@ -387,9 +406,9 @@ Note
 <h2 class="anchored" data-anchor-id="organisera-dig-med-filmappar">3. Organisera dig med filmappar</h2>
 <p>Det är viktigt att ha ordning på sina filer på datorn och kunna tala om för R var dina filer finns så R kan läsa dem. Vi rekommenderar att du skapar en mapp/folder för varje kurs du läser. Spara inte alla filer på datorns skrivbord eller i mappen <strong>Downloads</strong> eller liknande. Gå till filhanteringsprogrammet på din dator och skapa mappen <strong>SDA1</strong>. Så här:</p>
 <ul>
-<li><p><img src="windows.png" class="img-fluid" width="20"> Windows: Starta programmet <strong>File Explorer</strong> och klicka på mappen <strong>Documents</strong> (eller <strong>Dokument</strong> om du har svenska som språk). Skapa en ny mapp med namnet <strong>SDA1</strong>.</p></li>
-<li><p><img src="mac.png" class="img-fluid" width="20">Mac: Starta programmet <strong>Finder</strong> och klicka på mappen <strong>Documents</strong>. Skapa en ny mapp med namnet <strong>SDA1</strong>.</p></li>
-<li><p><img src="linux.png" class="img-fluid" width="20"> Linux: Starta programmet <strong>Nautilus</strong> (om du använder Ubuntu, annars kan du prova att söka på ordet files om din Linux-distribution använder en annan filhanterare). Klicka på mappen <strong>Documents</strong>. Skapa en ny mapp med namnet <strong>SDA1</strong>.</p></li>
+<li><p><img src="windows.png" class="img-fluid" width="20"> Windows: Starta programmet <strong>File Explorer</strong> och navigera (klicka) till den mapp där du vill skapa din kursmapp. Skapa en ny mapp med namnet <strong>SDA1</strong>.</p></li>
+<li><p><img src="mac.png" class="img-fluid" width="20">Mac: Starta programmet <strong>Finder</strong> och navigera (klicka) till den mapp där du vill skapa din kursmapp. Skapa en ny mapp med namnet <strong>SDA1</strong>.</p></li>
+<li><p><img src="linux.png" class="img-fluid" width="20"> Linux: Starta programmet <strong>Nautilus</strong> (om du använder Ubuntu, annars kan du prova att söka på ordet files om din Linux-distribution använder en annan filhanterare). Navigera (klicka) till den mapp där du vill skapa din kursmapp. Skapa en ny mapp med namnet <strong>SDA1</strong>.</p></li>
 </ul>
 <div class="callout-warning callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
@@ -406,38 +425,55 @@ Använd inte åäö i namn på filmappar eller filer.
 Stor risk att du får problem då.</code></pre>
 </div>
 </div>
+<div class="callout-warning callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Om du skapar en mapp på en dator i datorsalen så kommer den tyvärr inte att finnas kvar nästa gång du loggar in på annan dator, eller kanske inte ens på samma dator. Vi har förslagit till IT-avdelningen på SU att ordna studentkonton på datorerna med individuella lagringsutrymmen som automatiskt dyker upp som en mapp när ni loggar in i datorsalarna. Men i dagsläget finns tyvärr inte detta så man får själv spara ner sina filer på nätet (t ex med en tjänst som Dropbox eller OneDrive). Som student vid SU har man tillgång till 1TB lagring i OneDrive, se <a href="https://www.su.se/medarbetare/it/it-tj%C3%A4nster/office-365-f%C3%B6r-studenter">denna sida</a> för mer info om hur man aktiverar detta. Ett annat sätt är att alltid bära med sig ett USB-minne och skapa SDA1 mappen på den.</p>
+</div>
+</div>
 <section id="uppgift-3.1" class="level4">
 <h4 class="anchored" data-anchor-id="uppgift-3.1">💪 Uppgift 3.1</h4>
-<p>Skapa mappen <strong>SDA1</strong> i <strong>Documents</strong> på din dator.</p>
+<p>Skapa mappen <strong>SDA1</strong> på din dator.</p>
 </section>
 </section>
 <section id="använda-editorn-source-för-att-spara-kod" class="level2">
 <h2 class="anchored" data-anchor-id="använda-editorn-source-för-att-spara-kod">4. Använda Editorn (Source) för att spara kod</h2>
 <p>Skriva kommandon direkt i Console har en nackdel: R minns inte kommandona vi har skrivit i en tidigare Session (innan vi stängde ner RStudio). Varje gång vi startar upp RStudio måste vi skriva om våra kommandon om vi vill fortsätta våra beräkningar där vi slutade senast. 😤 (Det är inte riktigt sant, fliken <strong>History</strong> i övre högra delen av RStudio minns faktiskt gamla kommandon, men det är opraktiskt att förlita sig på <strong>History</strong>).</p>
-<p>Vi skulle vilja skriva alla våra kommandon i en textfil som vi kan spara på datorns hårddisk och sen bara köra om alla kommandon in en senare Session. Source <strong>Editorn</strong> in övre vänstra delen av RStudio används för just detta.</p>
+<p>Vi skulle vilja skriva alla våra kommandon i en textfil som vi kan spara på datorns hårddisk (i din fina SDA1 mapp!) och sen bara köra om alla kommandon in en senare Session. Source <strong>Editorn</strong> in övre vänstra delen av RStudio används för just detta.</p>
 <p>Om vi klickar på menyn <u><strong>F</strong></u><strong>ile</strong> och sen under menyn <u><strong>N</strong></u><strong>ew File</strong> och slutligen på <u><strong>R</strong></u> <strong>Script</strong> så öppnas en tom textfil i <strong>Editorn</strong> som heter <em>Untitled1</em> eller något liknande. Här kan vi skriva in kommandon som vi vill spara för framtida sessioner. Vi kan t ex skriva in våra beräkningar av aktiesparandet:</p>
 <p><img src="kapitalsource.png" class="img-fluid"></p>
-<p>Vi kan spara filen genom att klicka på menyn <u><strong>F</strong></u><strong>ile</strong> och sen på <u><strong>S</strong></u><strong>ave</strong> och sen navigera dig till mappen <strong>SDA1</strong> genom att klicka i rutan som kommer upp. Döp filen till <strong>stock</strong> eller något annat namn som talar om vad filen innehåller (aktie heter stock på engelska). Klicka på Save/Spara. Filen kommer automatiskt att få filändelsen .R, dvs filen kommer alltså heta <strong>stock.R</strong> så RStudio vet att det är en fil men R kommandon. Ett samling kommandon kallas också för <strong>kod</strong> och vi säger att vi arbetar med en <strong>kodfil</strong> i editorn.</p>
+<p>Vi kan spara filen genom att klicka på menyn <u><strong>F</strong></u><strong>ile</strong> och sen på <u><strong>S</strong></u><strong>ave</strong> och sen navigera dig till mappen <strong>SDA1</strong> genom att klicka i rutan som kommer upp. Döp filen till <strong>stock</strong> eller något annat namn som talar om vad filen innehåller (aktie heter stock på engelska). Klicka på Save/Spara. Filen kommer automatiskt att få filändelsen .R, dvs filen kommer alltså heta <strong>stock.R</strong> så RStudio vet att det är en fil men R kommandon. Ett samling kommandon kallas också för <strong>kod</strong> och vi säger att vi arbetar med en <strong>kodfil</strong> i editorn. Vi kan också säga att vi har skrivit ett <strong>program</strong>.</p>
 <p>Vi kan köra alla kommandon i filen stock.R genom att klicka på <code>Source</code> - knappen uppe i högra hörnet av editorn:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="SourceButton.png" class="img-fluid figure-img" width="400"></p>
 </figure>
 </div>
-<p>Vi ser de körda kommandona i Console och efter att koden har körts kan vi skriva <code>kapital</code> i Console för att se svaret 111.936.</p>
-<p>När man arbetar med koden vill man ofta köra ett kommando i taget, och inte alla på en gång. Det kan man göra genom att placera markören (det blinkande strecket) på den rad som vill köra (<strong>exekvera</strong>) och sen klicka på <code>Run</code>-knappen i uppe i högre hörnet av editorn.</p>
+<p>När säger att vi ‘kör kommandon’ menar vi att datorn utför (exekverar) våra kommandon, rad för rad. Man kan se det som <code>Source</code>-knappen skickar kommandona till Console så vi slipper skriva in dem där. Vi kan nu skriva <code>kapital</code> i Console för att se svaret 111.936.</p>
+<p>När man arbetar med koden vill man ofta köra ett kommando i taget, och inte alla på en gång. Det kan man göra genom att placera markören (det blinkande strecket) på den rad som vill köra (<strong>exekvera</strong>) och sen klicka på <code>Run</code>-knappen i uppe i högre hörnet av editorn. Du behöver inte markera koden på raden, det räcker att bara placera markören någonstans på raden. Kortkommandot Ctrl + Enter gör samma sak.</p>
 <p>Ofta ställer man markören på den första raden i koden och klickar på <code>Run</code>-knappen om och om igen för att köra varje rad, en efter en. Allt som körs, t ex olika variabler som <code>kapital</code>, finns tillgängligt i Console, om man t ex vill undersöka om variabeln verkligen har fått det värde som det var meningen att det skulle få.</p>
-<p>Man kan också köra flera rader på en gång genom att markera raderna och trycka på <code>Run</code>-knappen.</p>
+<p>Man kan också köra flera rader kod på en gång genom att markera raderna och trycka på <code>Run</code>-knappen.</p>
 <section id="uppgift-4.1" class="level4">
 <h4 class="anchored" data-anchor-id="uppgift-4.1">💪 Uppgift 4.1</h4>
-<p>Kör hela filen stock.R genom att använda <code>Source</code>-knappen. Undersök vilket värde variabeln <code>kapital</code> i Console har efter att filen körts.</p>
+<p>Kör hela filen stock.R genom att använda <code>Source</code>-knappen. Undersök vilket värde variabeln <code>kapital</code> i Console har efter att filen körts genom att skriva <code>kapital</code> följt av Enter.</p>
 </section>
 <section id="uppgift-4.2" class="level4">
 <h4 class="anchored" data-anchor-id="uppgift-4.2">💪 Uppgift 4.2</h4>
+<p>Du kanske märkte att inte mycket hände i Console när du klickade på <code>Source</code> - knappen. Det mest hände liksom bakom scenen, där kommandona i Editorn skickades över till Console. Vi skulle kanske vilja att vår kod skrev upp <code>kapital</code> i Console efter att alla ränta-på-ränta beräkningar gjorts. Prova att lägga till en rad i slutet av din kod med variabelns namn som du är intresserad av, dvs <code>kapital</code>. Klicka på <code>Source</code> - knappen igen om verifiera att värdet 111.936 skrivs ut i Console.</p>
+</section>
+<section id="uppgift-4.3" class="level4">
+<h4 class="anchored" data-anchor-id="uppgift-4.3">💪 Uppgift 4.3</h4>
 <p>Kör kommandot på rad 1 i stock.R genom att använda <code>Run</code>-knappen. Undersök vilket värde variabeln <code>kapital</code> i Console. Upprepa detta för de resterande raderna i stock.R.</p>
 </section>
 </section>
-<section id="ställa-in-arbetsmappen-working-directory-i-r" class="level2">
+<section id="ställa-in-arbetsmappen-working-directory-i-r" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="ställa-in-arbetsmappen-working-directory-i-r">5. Ställa in arbetsmappen (working directory) i R</h2>
 <p>Hittills har vi skrivit alla kommandon och tal (t ex <code>kapital = 100</code>), dvs vi har matat in <strong>data</strong> själva. Det är naturligtvis klumpigt om man har mycket data. Vi vill kunna läsa in hela <strong>datamaterialet</strong> från en fil. Här är en Excel-fil med data från 5 års investingar i aktier:</p>
 <div class="quarto-figure quarto-figure-center">
@@ -445,14 +481,42 @@ Stor risk att du får problem då.</code></pre>
 <p><img src="ExcelTabellKapital.png" class="img-fluid figure-img" width="400"></p>
 </figure>
 </div>
-<p>Notera att:</p>
-<ul>
-<li><p>Vi använder engelska namn på kolumnerna. Svenska tecken åäö är bäst att undervika när man skriver kod. Det går att arbeta med åäö i kod, men det är lättast att undvika dem genom att skriva på engelska. Du kan inte använda mellanslag (space) i variabelnamn. Ofta vill man ha ett variabelnamn som är lätt att förstå vad variabeln innehåller. Använd <code>_</code> (underscore) eller <code>.</code> (punkt) för att dela upp ord om det behövs. T ex <code>my_pretty_little_variable = 100</code>.</p></li>
-<li><p>Avkastningen (<strong>returns</strong>) anges i procent och är satt till noll under 2018 eftersom vi köpte aktierna precis i början av år 2019 (säger vi) och alltså inte fick någon avkastning under år 2018.<br>
-</p></li>
-</ul>
+<p>Notera att avkastningen (<strong>returns</strong>) anges i procent och är satt till noll under 2018 eftersom vi köpte aktierna precis i början av år 2019 (säger vi) och alltså inte fick någon avkastning under år 2018.</p>
 <p>Excel-filen har jag döpt till <em>stock.xlsx</em>, men den kan döpas till precis vad som helst.</p>
-<p>Om R ska kunna läsa in data från filen stock.xlsx så måste vi tala om <em>var</em> filen finns på vår dator. Enklast är då att ställa in Rs <strong>working directory</strong>, dvs det standardställe där R letar efter filer i den pågående sessionen. Det finns två sätt att göra detta, varav vi endast rekommenderar det första om man är absolut nybörjare. Rätt snart bör du lära dig att använda det andra sättet, som är smidigare i längden.</p>
+<div class="callout-warning callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Variabelnamn som man ska undvika
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Vi använder engelska namn på kolumnerna. Även om svenska tecken åäö går att använda i kod, är det ändå bäst att undvika dem genom att skriva på engelska. Du kan inte använda mellanslag (space) i variabelnamn, och variabelnamn får inte heller börja med siffror. Det finns också <a href="https://rdrr.io/r/base/Reserved.html">vissa ord</a> som är reserverade och som inte får/ska användas som variabelnamn. Slutligen: R skiljer på små och stora bokstäver. Variabeln <code>kapital</code> är alltså inte samma som <code>Kapital</code>.</p>
+</div>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+What’s in a name? Mer än du tror!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Ofta vill man ha ett variabelnamn som är lätt att förstå vad variabeln innehåller. Det är superviktigt för att andra ska kunna förstå ens kod, men framförallt för att du själv ska kunna förstå din egen kod om en vecka! 🥴 Använd <code>_</code> (underscore) eller <code>.</code> (punkt) för att dela upp ord om det behövs. T ex <code>my_pretty_little_variable = 100</code>.</p>
+</div>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://doorshakespeare.com/general/whats-in-a-name/"><img src="../../slides/figs/flaticons/romeo-and-juliet.svg" class="img-fluid figure-img" width="60"></a></p>
+</figure>
+</div>
+</div></div><p>Om R ska kunna läsa in data från filen stock.xlsx så måste vi tala om <em>var</em> filen finns på vår dator. Enklast är då att ställa in Rs <strong>working directory</strong>, dvs det standardställe där R letar efter filer i den pågående sessionen. Det finns två sätt att göra detta, varav vi endast rekommenderar det första om man är absolut nybörjare. Rätt snart bör du lära dig att använda det andra sättet, som är smidigare i längden.</p>
 <ol type="1">
 <li><strong>Working directory</strong> är den mapp som R kommer leta efter filer i. Ändra din arbetsmapp (<strong>working directory</strong>) i R till samma mapp <strong>SDA1</strong> i <strong>Documents</strong> genom att välja menyn <u><strong>S</strong></u><strong>ession</strong> och sen <strong>Set <u>W</u>orking Directory</strong> och slutligen <u><strong>C</strong></u><strong>hoose Directory…</strong> och sedan klicka dig fram till mappen SDA1.</li>
 </ol>
@@ -462,7 +526,7 @@ Stor risk att du får problem då.</code></pre>
 </figure>
 </div>
 <ol start="2" type="1">
-<li>För att slippa att klicka sig fram via menyer hela tiden så är det praktiskt att ändra working directory i början av den kodfil som man jobbar med. Då kan man bara köra den kodfilen och working directory ställs in automatiskt. Kommandot <code>setwd</code> gör samma sak som punkten 1 gjorde via menyerna. Här måste vi dock veta <strong>sökvägen</strong> (<strong>path</strong>) till mappen, dvs datorns sätt att hitta till (under)mappen <strong>SDA1</strong> i <strong>Documents</strong>-mappen. Sättet att skriva sökvägar på skiljer sig åt på Windows/Mac/Linux:
+<li><p>För att slippa att klicka sig fram via menyer hela tiden så är det praktiskt att ändra working directory i början av den kodfil som man jobbar med. Då kan man bara köra den kodfilen och working directory ställs in automatiskt. Kommandot <code>setwd</code> gör samma sak som punkten 1 gjorde via menyerna. Här måste vi dock veta <strong>sökvägen</strong> (<strong>path</strong>) till mappen, dvs datorns sätt att hitta till mappen <strong>SDA1</strong>. Sättet att skriva sökvägar på skiljer sig åt på Windows/Mac/Linux. I dessa exempel antar jag att din SDA1 mapp är placerad i mappen Documents.</p>
 <ul>
 <li><p><img src="mac.png" class="img-fluid" width="20"> På en Mac skriver vi kommandot: <code>setwd('/Users/username/Documents/SDA1')</code> där <code>username</code> ska ersättas med ditt användnamn på din Mac (namnet som kommer upp när du loggar in på datorn). Notera de små ‘blipparna’ kring filvägen i <code>setwd</code> kommandot.</p></li>
 <li><p><img src="windows.png" class="img-fluid" width="15"> På en Windows-dator skriver vi kommandot <code>setwd('C:/Documents/SDA1')</code>. Notera de små ‘blipparna’ kring filvägen i <code>setwd</code> kommandot. [Windows-sökvägar skrivs vanligtvis med backslash <code>\</code>. I RStudio skriver man ändå <code>/</code> för att matcha med Mac och Linux].</p></li>
@@ -474,22 +538,30 @@ Stor risk att du får problem då.</code></pre>
 <p>Ställ in din <strong>SDA1</strong> mapp som working directory i RStudio. Kontrollera att du lyckades genom att skriva kommandot <code>getwd()</code> i Console, som bör skriva ut sökvägen till din SDA1 mapp. Nu har du talat om för R att den ska leta efter filer i din kursmapp <strong>SDA1</strong>!</p>
 </section>
 </section>
-<section id="läsa-in-data-från-fil" class="level2">
+<section id="läsa-in-data-från-fil" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="läsa-in-data-från-fil">6. Läsa in data från fil</h2>
 <p>Vi vill nu läsa in data från Excelfilen stock.xlsx. Du kan ladda ner den filen <a href="https://github.com/StatisticsSU/SDA1/datorlabb/lab1/stock.xlsx">här</a>. Beroende på din dator så kommer en av två saker hända:</p>
 <ol type="1">
 <li><p>filen stock.xlsx hamnar automatiskt i mappen <strong>Downloads</strong> (eller liknande) på din dator. Du får då kopiera eller flytta filen till din working directory (din SDA1 mapp) genom att använda datorns filhanterare.</p></li>
 <li><p>du får välja var du vill spara ner filen. Klicka dig fram till din working directory (din SDA1 mapp) och spara filen där.</p></li>
 </ol>
-<p>R kommer nu att hitta filen och vi är redo att skriva kommandot som läser in filen. Eftersom det är första gången du läser in en Excel-fil behöver du göra lite grundjobb. Vi ska göra tre steg:</p>
+<p>R kommer nu att hitta filen och vi är redo att skriva kommandot som läser in filen. Eftersom det är första gången du läser in en Excel-fil i R behöver du göra lite grundjobb. Vi ska göra tre steg:</p>
 <ol type="1">
-<li><p><strong>Installera R-paketet</strong> <code>readxl</code>. Programmet R kommer med ett antal baskommandon förinstallerat. T ex har vi redan använt <strong>funktionen</strong> <code>setwd()</code> för att tala om för R vilken mapp som är vår working directory. Men många kommandon/funktioner i R måste laddas in via s k <strong>R-paket</strong>. Det finns R-paket för nästan allt man vill göra: läsa in data, gör olika typer av statistiska analyser etc etc. Paketet <code>readxl</code> är specialiserat på att läsa in Excel-filer i R. För att installera paketet kör vi kommandot <code>install.packages('readxl')</code> antingen genom att skriv in det i en kodfil och trycka på <code>Run</code> eller genom att skriva det direkt i terminalen. Efter det kommer R att skriva ut en massa mumbo-jumbo i Console som beskriver installationen. Paket kan ta någon minut eller mer för att installera. Om inga fel uppstår brukar installationsmeddelandet avslutas med något liknande:<br>
+<li><strong>Installera R-paketet</strong> <code>readxl</code>. R kommer med ett antal baskommandon förinstallerat. T ex har vi redan använt <strong>funktionen</strong> <code>setwd()</code> för att tala om för R vilken mapp som är vår working directory. Men många kommandon/funktioner i R måste laddas in via s k <strong>R-paket</strong>. Det finns R-paket för nästan allt man vill göra: läsa in data, gör olika typer av statistiska analyser etc etc. Paketet <code>readxl</code> är specialiserat på att läsa in Excel-filer i R. För att installera paketet kör vi kommandot <code>install.packages('readxl')</code> antingen genom att skriv in det i en kodfil och trycka på <code>Run</code> eller genom att skriva det direkt i terminalen. Efter det kommer R att skriva ut en massa mumbo-jumbo i Console som beskriver installationen. Paket kan ta någon minut eller mer för att installera. Om inga fel uppstår brukar installationsmeddelandet avslutas med något liknande:<br>
 <code>DONE (readxl)</code><br>
 <code>The downloaded source packages are in</code><br>
 följt av någon kryptisk sökväg till stället på din dator där paketet har blivit installerat.<br>
 <br>
-Installation av paket behövs bara göras en gång på din dator. Du behöver inte installera om nästa gång du startar upp RStudio på nytt.</p></li>
-<li><p><strong>Ladda R-paketet</strong> <code>readxl</code>. Kommandot <code>library(readxl)</code> laddar funktionerna i paketet <code>readxl</code> till R’s arbetsminne. Först efter denna kommando kan vi använda funktionerna i paketet. Notera att vi behöver ‘blippar’ kring paketets namn när vi installerar, men inte när vi laddar paketet. Ett paket som laddat in med library finns inte tillgängligt när du start om RStudio. Du måste alltså skriva <code>library(readxl)</code> för varje ny session där du vill läsa in Excel-filer. Det är därför bra att skriva in <code>library(readxl)</code> i kodfilen du ska använda för att läsa in Excel-filer.</p></li>
+Installation av paket behövs bara göras en gång på din dator. Du behöver inte installera om nästa gång du startar upp RStudio på nytt.</li>
+</ol>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<center>
+<img src="../../slides/figs/flaticons/Spotify_Icon_RGB_Green.png" class="img-fluid" width="40">
+</center>
+<p>Paketet <a href="https://www.rcharlie.com/spotifyr/">spotifyr</a> kan t ex tala om för dig vilka dina fem mest spelade Spotify-låtar är. Se sidan <a href="https://rpubs.com/dbecker7/StrangeRThings">StrangeR things</a> för andra mer eller mindre konstiga paket. Och, ja, det är vanligt med ett stort R i namnet på R-relaterade saker. NördaR, du vet.</p>
+</div></div><ol start="2" type="1">
+<li><p><strong>Ladda R-paketet</strong> <code>readxl</code>. Kommandot <code>library(readxl)</code> laddar funktionerna i paketet <code>readxl</code> till R’s arbetsminne. Först efter denna kommando kan vi använda funktionerna i paketet. Notera att vi behöver ‘blippar’ kring paketets namn när vi installerar, men inte när vi laddar paketet. Ett paket som laddats in med library finns inte tillgängligt när du start om RStudio. Du måste alltså skriva <code>library(readxl)</code> för varje ny session där du vill läsa in Excel-filer. Det är därför bra att skriva in <code>library(readxl)</code> i kodfilen du ska använda för att läsa in Excel-filer.</p></li>
 <li><p>Läs in data från Excel-filen genom kommandot/<strong>funktionen</strong> <code>read_excel()</code>. Här hela kommandot (<strong>funktionsanropet</strong>):<br>
 <code>stockdata = read_excel('stock.xlsx', sheet = 1)</code><br>
 Det är några saker att reda ut här. Först, <code>read_excel()</code> är en <strong>funktion</strong> vilket betyder att det är ett kommando som <strong>gör något</strong> baserat på funktionens <strong>input-argument</strong>:</p>
@@ -521,6 +593,19 @@ Det är några saker att reda ut här. Först, <code>read_excel()</code> är en 
 6 2023 125.7601    0.07</code></pre>
 </div>
 </div>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Kommentarer
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>I min kod ovan skrev jag <code># gör om stockdata till en dataframe</code> på en rad. All text som kommer <em>efter</em> tecknet <code>#</code> är en s k <strong>kommentar</strong> i R. Kommentarer ignoreras av R och är därför ett bra sätt att skriva små saker som gör koden mer lättläst. Du måste ha ett <code>#</code> -tecken framför varje rad som du vill “kommentera ut”.</p>
+</div>
+</div>
 <div class="callout-tip callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -532,7 +617,7 @@ Tip
 </div>
 <div class="callout-body-container callout-body">
 <p>Istället för att placera alla filer i din working directory <strong>SDA1</strong> kan man istället ange sökvägen till filen när man läser in den. Om jag t ex har sparat filen i mappen <strong>Downloads</strong> på en Windows-dator så skriver jag <strong><br>
-</strong><code>stockdata = read.xlsx('C:/Downloads/stock.xlsx', 1, header=TRUE)</code>.</p>
+</strong><code>stockdata = read_excel('C:/Downloads/stock.xlsx', sheet = 1)</code></p>
 </div>
 </div>
 <section id="uppgift-6.1" class="level4">
@@ -746,31 +831,48 @@ Tip
 <p>Du kan skriva <code>my_list</code> i Console och sedan trycka på <code>tab</code>-tangenten i övre vänstra hörnet av tangentbordet för att se alla element som finns i listan <code>my_list</code>. Klicka på det element du vill visa. 🤩</p>
 </div>
 </div>
-<p>I nästa datorlab kommer vi introducera ännu en viktig datatyp i R: <code>factor</code>. Men låt oss spara något till dess.</p>
+<p>Vi ska slutligen presentera ytterligare en viktig datatyp i R: <code>factor</code>. Prova att skriva in kommandot <code>str(stockdata)</code> i Console. Kommandot returnerar variablernas namn och datatyper, vilket ju är <code>numeric</code> för alla våra tre kolumner <code>year</code>, <code>capital</code> och <code>returns</code> i tabellen. Men tabellkolumner kan bestå av bokstäver (strängar) eller <strong>kategoriska variabler</strong> (t ex <code>man</code> och <code>kvinna</code>). Kategoriska variabler kallas för <strong>faktorvariabler</strong> i R.</p>
+<p>R har ett antal inbyggda datamaterial, t ex datamaterialet <code>warpbreaks</code> som innehåller information om antalet fel (<code>breaks</code>) vid vävning för två olika typer av garn (<code>wool</code>) och tre olika spänningar av vävstolen (tension). Vi börjar med att tilldela datamaterialet till variabeln garndata genom att skriva <code>garndata = warpbreaks</code> i Console. Skriv <code>head(garndata)</code> för en snabb titt på de första observationerna. Som du ser är <code>breaks</code> en numerisk variabel (eller snarare en kolumn in tabellen), men både <code>wool</code> och <code>tension</code> är kategoriska faktorvariabler (<code>wool</code> kan bara vara av garntyp <code>A</code> eller <code>B</code>, och tension kan vara låg (<code>L</code>), mellan (<code>M</code>) eller hög (<code>H</code>)). Vi kan se detta mer exakt genom att skriva <code>str(garndata)</code> i Console:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>garndata <span class="ot">=</span> warpbreaks</span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(garndata)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>'data.frame':   54 obs. of  3 variables:
+ $ breaks : num  26 30 54 25 70 52 51 26 67 18 ...
+ $ wool   : Factor w/ 2 levels "A","B": 1 1 1 1 1 1 1 1 1 1 ...
+ $ tension: Factor w/ 3 levels "L","M","H": 1 1 1 1 1 1 1 1 1 2 ...</code></pre>
+</div>
+</div>
+<p>där vi ser att <code>wool</code> är en faktorvariabel med två olika värden (<strong>levels</strong>, eller <strong>nivåer</strong> på svenska), medan <code>tension</code> har tre nivåer. Vi ser även att <code>breaks</code> är en numerisk variabel. Vi kan även se denna information i den övre högra panelen i R under fliken <strong>Environment</strong> genom att klicka på den lilla pilen på <code>garndata</code>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="environmentR.png" class="img-fluid figure-img" width="503"></p>
+</figure>
+</div>
 </section>
 <section id="funktioner" class="level2">
 <h2 class="anchored" data-anchor-id="funktioner">10. Funktioner</h2>
 <p>Vi har sett idén med funktioner tidigare: en funktion <em>gör</em> något med data. I matematikens värld är en funktion <span class="math inline">\(f\)</span> en slags maskin som använder en <strong>input</strong> <span class="math inline">\(x\)</span>, gör några matematiska beräkningar, och ger tillbaka en <strong>output</strong> <span class="math inline">\(y\)</span>. Vi brukar skriva funktionen som <span class="math inline">\(y=f(x)\)</span>.</p>
 <p>En funktion i R är en liknande sak: den använder ett eller flera inputs och ger tillbaka ett eller flera outputs. Det kan handla om ren matematisk funktion, som kvadratroten <span class="math inline">\(\sqrt{x}\)</span> av ett tal <span class="math inline">\(x\)</span>, vilket i R beräknas av funktionen <code>sqrt</code>:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">=</span> <span class="dv">4</span></span>
-<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>y <span class="ot">=</span> <span class="fu">sqrt</span>(x)</span>
-<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>y</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">=</span> <span class="dv">4</span></span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>y <span class="ot">=</span> <span class="fu">sqrt</span>(x)</span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a>y</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 2</code></pre>
 </div>
 </div>
 <p>men det kan också vara något mer komplicerat som t ex att läsa in data från en Excel-fil:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>stockdata <span class="ot">=</span> <span class="fu">read_excel</span>(<span class="st">'stock.xlsx'</span>, <span class="at">sheet =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>stockdata <span class="ot">=</span> <span class="fu">read_excel</span>(<span class="st">'stock.xlsx'</span>, <span class="at">sheet =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>där <code>read_excel</code> är en funktion som tre input-argument filnamn (som en sträng!), talet 1 för att vi vill läsa det första bladet. Funktionen <code>read_excel</code> ger tillbaka en (tibble) dataframe som output med data.</p>
 <p>Det fina med programmeringsspråk är att man kan <strong>skapa egna funktioner</strong> som gör just det jobb som man behöver. Om jag t ex vill skapa en funktion som beräknar ränta-på-ränta effekten på ett sparkapital (med samma ränta varje år) så kan jag skriva ihop följande funktion:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>capital_interest <span class="ot">&lt;-</span> <span class="cf">function</span>(capital, interest, years){</span>
-<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>  newcapital <span class="ot">=</span> capital<span class="sc">*</span>interest<span class="sc">^</span>years</span>
-<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(newcapital)</span>
-<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>capital_interest <span class="ot">&lt;-</span> <span class="cf">function</span>(capital, interest, years){</span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>  newcapital <span class="ot">=</span> capital<span class="sc">*</span>interest<span class="sc">^</span>years</span>
+<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(newcapital)</span>
+<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Några saker att notera:</p>
 <ul>
@@ -782,22 +884,22 @@ Tip
 </ul>
 <p>Om jag sen vill använda min funktion för att se hur min hundring på banken kommer att utvecklas under 20 år med 5% ränta så skriver jag (jag <strong>anropar</strong> funktionen):</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>my_money <span class="ot">=</span> <span class="fu">capital_interest</span>(<span class="dv">100</span>, <span class="fl">1.05</span>, <span class="dv">20</span>)</span>
-<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>my_money</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>my_money <span class="ot">=</span> <span class="fu">capital_interest</span>(<span class="dv">100</span>, <span class="fl">1.05</span>, <span class="dv">20</span>)</span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a>my_money</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 265.3298</code></pre>
 </div>
 </div>
 <p>Vi sa ovan att vi tilldelade variabeln <code>capital_interest</code> en funktion. 🤯 Wait, what? Jo, faktiskt, om vi undersöker vilken typ av variabel <code>capital_interest</code> är så är det faktiskt en funktion:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(capital_interest)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(capital_interest)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "function"</code></pre>
 </div>
 </div>
 <p>När vi skrev variabel <code>kapital</code> i Console skrev den ut värdet, t ex 100. Vad händer om vi göra samma sak med vår funktionsvariabel <code>capital_interest</code> ? Hela funktionen skrivs ut som text!</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a> capital_interest </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a> capital_interest </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>function(capital, interest, years){
   newcapital = capital*interest^years
@@ -823,9 +925,9 @@ Tip
 <p>I SDA1 kommer vi försöka använda Formula syntax som mycket som möjligt, med inslag av Base-R. Tidyverse-kod kan ofta vara extremt effektiv, men tar för lång tid att lära sig på en grundkurs i statistik. Vi kommer dock då och då att visa hur man gör samma sak i de olika dialekterna, men på ett sätt som inte stör flödet för den student som helst vill hålla sig till ett sätt. Vi använder ikoner som du som student kan klicka på för att se ett kommando i olika dialekter. Här är ett exempel (prova att klicka ikonerna i höger-marginalen):</p>
 <p>I Formula syntax har vi redan sett att vi kan göra en scatter plot med kommandot</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(mpg <span class="sc">~</span> hp, <span class="at">data =</span> mtcars, <span class="at">main =</span> <span class="st">"Cars fuel usage"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(mpg <span class="sc">~</span> hp, <span class="at">data =</span> mtcars, <span class="at">main =</span> <span class="st">"Cars fuel usage"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="DatorLab1_files/figure-html/unnamed-chunk-26-1.png" class="img-fluid" width="672"></p>
+<p><img src="DatorLab1_files/figure-html/unnamed-chunk-27-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 
@@ -833,10 +935,10 @@ Tip
 <p><a href="../../R/BaseRSyntax.html#scatter-plot"><img src="../../misc/hexagons/figs/mosaic_hexagon.svg" class="img-fluid" width="60"></a> <a href="../../R/TidyverseSyntax.html#scatter-plot"><img src="../../misc/hexagons/figs/tidyverse_hexagon.svg" class="img-fluid" width="60"></a></p>
 </div></div><p>Om man vill ha plottar som liknar de fina plottarna i Tidyverse, men fortsätta att skriva den enklare formula-syntaxen så kan man använda paketet <code>ggformula</code>:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggformula)</span>
-<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a><span class="fu">gf_point</span>(mpg <span class="sc">~</span> hp, <span class="at">data =</span> mtcars, <span class="at">title =</span> <span class="st">"Cars fuel usage"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggformula)</span>
+<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a><span class="fu">gf_point</span>(mpg <span class="sc">~</span> hp, <span class="at">data =</span> mtcars, <span class="at">title =</span> <span class="st">"Cars fuel usage"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="DatorLab1_files/figure-html/unnamed-chunk-27-1.png" class="img-fluid" width="672"></p>
+<p><img src="DatorLab1_files/figure-html/unnamed-chunk-28-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 </section>
@@ -849,7 +951,10 @@ Tip
 <li><p>Sätta working directory så R kan hitta dina filer.</p></li>
 <li><p>Skriva kod både i Console och Editorn.</p></li>
 <li><p>Läsa in data från fil och göra inledande grafer och medelvärdeberäkningar för dataanalys.</p></li>
+<li><p>Vi har också tittat på datastrukturer i R och t o m nosat lite på funktioner i R.</p></li>
 </ul>
+<p>Om du har kommit hit utan att slita ditt hår alltför många gånger så tycker jag att du ska vara väldigt nöjd med dig själv, och allt du lärt dig om R. Ditt framtida jag kommer att tacka dig!</p>
+<p>Ta nu en ☕ och kanske en 🍨 eller t o m en 🍰 för att fira!</p>
 
 
 </section>
