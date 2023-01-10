@@ -1,20 +1,35 @@
 ---
-title: "Stjäl vår kurs"
-editor: visual
+title: "Använd vår kurs - Creative Commons licens"
+format:
+  html:
+    theme:
+      dark: superhero # litera, lumen, superhero, united
+      light: lumen
+    css: styles.css
+    toc: true
 ---
 
-Vi som utvecklat den här kursen hoppas att andra lärare kan bli inspirerade av den, och vilja använda delar av den själva. Allt kursmaterial ligger därför öppet på GitHub [här](https://github.com/StatisticsSU/SDA1) och kan laddas ner eller klonas.
+> Vi som utvecklat den här kursen hoppas att andra lärare kan bli inspirerade av den, och vilja använda delar av den själva. Öppet kursmaterial ger också en transparens som hjälper till att hålla kurserna aktuella, korrekta och relevanta. 
 
-Vi undersöker hur vi kan ge kursen en slags [copyleft licens](https://en.wikipedia.org/wiki/Copyleft) som gör att den som använder kursmaterialet här på en ny kurs måste se till att även göra den kursens material tillgängligt för alla. Vi vill inte att kursens material och eventuella förbättringar ska bli inlåsta bakom olika universitets undervisningplattformar. Tanken är istället att materialet förädlas av andra, som i sin tur delar vidare till allmänheten.
+Allt kursmaterial ligger öppet på GitHub i [kursens github repo](https://github.com/StatisticsSU/SDA1) och kan laddas ner eller klonas. Vi vill inte att kursens material och eventuella förbättringar ska bli inlåsta bakom olika universitets undervisningplattformar. Tanken är istället att materialet förädlas av andra, som i sin tur delar vidare till allmänheten. Kursmaterialet görs därför tillgängligt under Creative Commons licensen [CC BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/4.0/) vilket kortfattat innebär att:
 
-> Kunskap mår bäst ute i friska luften så alla kan ta del av den. Öppet kursmaterial ger också en transparens som hjälper till att hålla kurserna aktuella, korrekta och relevanta.
-
-::: callout-warning
-Den som klonar materialet ansvarar själv för eventuella fel och skador som kan uppstå. Vi som skapat kursen tar inget som helst ansvar för detta.
+:::column-margin
+<center>[![](/misc/by-nc-sa.png){width="120"}](https://creativecommons.org/licenses/by-nc-sa/4.0/)</center>
 :::
 
-::: callout-warning
-Några bilder här har köpts in från bildbanker och får endast användas om användaren själv betalar för dem. Tanken är att det ska finnas en lista på vilka bilder det handlar om, men ännu har vi inte tagit oss tid att skriva ner detta.
+::: callout-info
+### CC BY-NC-SA licens
+Licensen **Creative Commons erkännande, icke kommersiell, dela lika (BY-NC-SA)** innebär att du tillåter andra att använda, sprida, göra om, modifiera och bygga vidare, och skapa nya verk utifrån ditt. Så länge de erkänner dig som upphovsman och att de verk som skapas utifrån ditt verk ska licensieras  under samma villkor. De nya verk som skapas utifrån ditt verk kommer att ha samma licens.
 :::
 
-Mer info kommer att komma här när kursmaterialet blir mer komplett.
+
+::: callout-info
+### Rekommenderad text för att erkänna upphovspersonerna:
+Kursen använder material från kursen Statistik och dataanalys I (https://statisticssu.github.io/SDA1/), som utvecklats vid Statistiska institutionen, Stockholms universitet, under Creative Commons licensen CC BY-NC-SA. 
+:::
+::: callout-warning
+### Caveats
+Den som klonar och använder materialet ansvarar själv för eventuella fel och skador som kan uppstå. Vi som skapat kursen tar inget som helst ansvar för detta.
+
+Många av kursens slides innehåller bilder som köps in från bildbanken [Flaticon](https://www.flaticon.com/). Det är tillåtet för andra att fritt använda dessa slides i dess nuvarande form, t ex i undervisning, men bilderna får inte användas av andra för *skapa nya media*, t ex slides. Källfilerna till alla slides finns i [kursens github repo](https://github.com/StatisticsSU/SDA1), men eftersom bilderna från [Flaticon](https://www.flaticon.com/) inte finns i github repot kommer alla bilder som länkar till mappen `/figs/flaticons/` inte visas (alternativt kommer fel uppstå i komplileringen av slides). Användaren som vill modifiera slides får då alltså ta bort eller byta ut bilderna.
+:::

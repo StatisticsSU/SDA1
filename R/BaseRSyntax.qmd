@@ -1,7 +1,7 @@
 ---
 title: "Base-R"
 author: "Mattias Villani"
-editor: visual
+format: html
 ---
 
 ## Scatter plot

@@ -1,0 +1,1510 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+%
+\documentclass[
+  letterpaper,
+  DIV=11,
+  numbers=noendperiod,
+  oneside]{scrartcl}
+
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[left=1in,marginparwidth=2.0666666666667in,textwidth=4.1333333333333in,marginparsep=0.3in]{geometry}
+\usepackage[normalem]{ulem}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+% Make \paragraph and \subparagraph free-standing
+\ifx\paragraph\undefined\else
+  \let\oldparagraph\paragraph
+  \renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+  \let\oldsubparagraph\subparagraph
+  \renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{241,243,245}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.40,0.45,0.13}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\BuiltInTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\ExtensionTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.28,0.35,0.67}{#1}}
+\newcommand{\ImportTok}[1]{\textcolor[rgb]{0.00,0.46,0.62}{#1}}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\NormalTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
+\newcommand{\RegionMarkerTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.07,0.07,0.07}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+
+\KOMAoption{captions}{tableheading}
+\makeatletter
+\@ifpackageloaded{tcolorbox}{}{\usepackage[many]{tcolorbox}}
+\@ifpackageloaded{fontawesome5}{}{\usepackage{fontawesome5}}
+\definecolor{quarto-callout-color}{HTML}{909090}
+\definecolor{quarto-callout-note-color}{HTML}{0758E5}
+\definecolor{quarto-callout-important-color}{HTML}{CC1914}
+\definecolor{quarto-callout-warning-color}{HTML}{EB9113}
+\definecolor{quarto-callout-tip-color}{HTML}{00A047}
+\definecolor{quarto-callout-caution-color}{HTML}{FC5300}
+\definecolor{quarto-callout-color-frame}{HTML}{acacac}
+\definecolor{quarto-callout-note-color-frame}{HTML}{4582ec}
+\definecolor{quarto-callout-important-color-frame}{HTML}{d9534f}
+\definecolor{quarto-callout-warning-color-frame}{HTML}{f0ad4e}
+\definecolor{quarto-callout-tip-color-frame}{HTML}{02b875}
+\definecolor{quarto-callout-caution-color-frame}{HTML}{fd7e14}
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{Table of contents}
+\else
+  \newcommand\contentsname{Table of contents}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{List of Figures}
+\else
+  \newcommand\listfigurename{List of Figures}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{List of Tables}
+\else
+  \newcommand\listtablename{List of Tables}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{Figure}
+\else
+  \newcommand\figurename{Figure}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{Table}
+\else
+  \newcommand\tablename{Table}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{Listing}
+\newcommand*\listoflistings{\listof{codelisting}{List of Listings}}
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+\makeatletter
+\@ifpackageloaded{tcolorbox}{}{\usepackage[many]{tcolorbox}}
+\makeatother
+\makeatletter
+\@ifundefined{shadecolor}{\definecolor{shadecolor}{rgb}{.97, .97, .97}}
+\makeatother
+\makeatletter
+\@ifpackageloaded{sidenotes}{}{\usepackage{sidenotes}}
+\@ifpackageloaded{marginnote}{}{\usepackage{marginnote}}
+\makeatother
+\makeatletter
+\makeatother
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={Statistik och dataanalys I, 15 hp},
+  pdfauthor={Mattias Villani},
+  colorlinks=true,
+  linkcolor={blue},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={Blue},
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Statistik och dataanalys I, 15 hp}
+\usepackage{etoolbox}
+\makeatletter
+\providecommand{\subtitle}[1]{% add subtitle to \maketitle
+  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
+}
+\makeatother
+\subtitle{Datorlaboration 1}
+\author{Mattias Villani}
+\date{1/8/23}
+
+\begin{document}
+\maketitle
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[enhanced, breakable, interior hidden, sharp corners, borderline west={3pt}{0pt}{shadecolor}, boxrule=0pt, frame hidden]}{\end{tcolorbox}}\fi
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{introduktion}{%
+\subsection{Introduktion}\label{introduktion}}
+
+\begin{quote}
+I den här första datorlabben kommer ni bekanta er med
+programmeringsspråket \textbf{R} och dess arbetsmiljö \textbf{RStudio}.
+\end{quote}
+
+\begin{tcolorbox}[enhanced jigsaw, left=2mm, opacityback=0, toprule=.15mm, titlerule=0mm, colframe=quarto-callout-tip-color-frame, rightrule=.15mm, colbacktitle=quarto-callout-tip-color!10!white, toptitle=1mm, leftrule=.75mm, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Instruktioner}, breakable, bottomtitle=1mm, arc=.35mm, colback=white, bottomrule=.15mm, opacitybacktitle=0.6]
+
+💪 Avsnitt med den här symbolen är uppgifter där ni ska göra något.
+
+\end{tcolorbox}
+
+\begin{tcolorbox}[enhanced jigsaw, left=2mm, opacityback=0, toprule=.15mm, titlerule=0mm, colframe=quarto-callout-warning-color-frame, rightrule=.15mm, colbacktitle=quarto-callout-warning-color!10!white, toptitle=1mm, leftrule=.75mm, coltitle=black, title=\textcolor{quarto-callout-warning-color}{\faExclamationTriangle}\hspace{0.5em}{Jobba med R på egen dator}, breakable, bottomtitle=1mm, arc=.35mm, colback=white, bottomrule=.15mm, opacitybacktitle=0.6]
+
+Om du inte sitter i en datorsal på Campus måste du först installera R
+och sen RStudio. Se videon \href{}{installera R och Rstudio} för
+instruktioner.
+
+\end{tcolorbox}
+
+För att starta RStudio letar du bara upp programmet på din dator och
+klickar på startikonen. När RStudio startas upp kommer det att se ut så
+här (kan se olika ut på olika datorer):
+
+\includegraphics{RstudioPanes.png}
+
+De olika delarna av RStudio kallas ofta för \textbf{Panes}. Vi kommer gå
+igenom dessa delar vartefter, men vi börjar med att utforska
+\textbf{Console}, även kallad \textbf{terminalen}.
+
+\hypertarget{anvuxe4nda-r-som-en-miniruxe4knare}{%
+\subsection{1. Använda R som en
+miniräknare}\label{anvuxe4nda-r-som-en-miniruxe4knare}}
+
+Ett bra sätt för att vänja sig vid R är att använda R som en slags
+miniräknare. I fönstret \textbf{Console} i RStudio (vanligtvis nere till
+vänster) kan man skriva olika typer av \textbf{kommandon} som skickas
+till R för beräkning:
+
+\begin{figure}
+
+{\centering \includegraphics{RStudioConsole.png}
+
+}
+
+\end{figure}
+
+Tecknet \texttt{\textgreater{}} kallas för \textbf{kommandoprompt}
+(eller bara \textbf{prompt}) och är R's sätt att tala om att det väntar
+på att ett nytt kommando ska skrivas in (vid det blinkande strecket). Vi
+säger att vi `skriver in något på prompten'.
+
+\begin{tcolorbox}[enhanced jigsaw, left=2mm, opacityback=0, toprule=.15mm, titlerule=0mm, colframe=quarto-callout-note-color-frame, rightrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, toptitle=1mm, leftrule=.75mm, coltitle=black, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Multiplikation och division}, breakable, bottomtitle=1mm, arc=.35mm, colback=white, bottomrule=.15mm, opacitybacktitle=0.6]
+
+R använder \texttt{*} för multiplikation och \texttt{/} för division.
+Potenser (upphöjt till) skrivs med tecknet \texttt{\^{}} (\texttt{Shift}
++ tangent till vänster om \texttt{Enter}). Så 3\^{}2 är 9.
+
+\end{tcolorbox}
+
+\hypertarget{uppgift-1.1}{%
+\paragraph{💪 Uppgift 1.1}\label{uppgift-1.1}}
+
+Prova att skriva 2+2 efter det nedersta \texttt{\textgreater{}} tecknet
+i \textbf{Console} och sedan trycka på \texttt{Enter}-tangenten. R bör
+svara (\textbf{returnera}) med talet 4.
+
+\hypertarget{uppgift-1.2}{%
+\paragraph{💪 Uppgift 1.2}\label{uppgift-1.2}}
+
+Skriv in talet (2+3)/(2+5) i Console och se att R svarar med 0.7142857.
+
+\hypertarget{uppgift-1.3}{%
+\paragraph{💪 Uppgift 1.3}\label{uppgift-1.3}}
+
+Du köper aktier för 100 kr. Avkastningen första året är 10\%. Använd R
+för att beräkna värdet på ditt aktiekapital efter ditt första år som
+aktiesparare, dvs skriv in 100*1.1 och se R returnera 110.
+
+\hypertarget{anvuxe4nda-variabler-i-r}{%
+\subsection{2. Använda variabler i R}\label{anvuxe4nda-variabler-i-r}}
+
+Du är nu inne på ditt andra år som aktiesparare. Avkastningen år 2 är
+6\%. Hur mycket aktiekapital har du efter år 2? Vi kan beräkna detta
+genom 100*1.1*1.06 i Console och få svaret 116.6 kr. Men finns det något
+sätt att återanvända vår tidigare beräkning 100*1.1 = 110 kr så vi bara
+behöver multiplicera detta tal med ökningen 1.06 för år 2?
+
+Vi kan lösa detta genom att spara undan vår första beräkning i en
+\textbf{variabel}. Vi kan ge denna variabel (nästan) vilket namn vi
+vill. Jag kommer kalla den för \texttt{kapital} och börjar med att sätta
+värdet på variabeln \texttt{kapital} till 100, det ursprungliga
+kapitalet. Vi skriver \texttt{kapital\ =\ 100} i Console. Vi kan sen
+testa att R nu faktiskt minns att kapitalet är 100 genom att bara skriva
+variabelns namn följt av \texttt{Enter} i kommandoprompten i Console:
+
+\begin{figure}
+
+{\centering \includegraphics[width=4.16667in,height=\textheight]{kapital100.png}
+
+}
+
+\end{figure}
+
+R skriver snällt ut det värde (100) som jag tilldelade variabeln
+\texttt{kapital}.
+
+\begin{tcolorbox}[enhanced jigsaw, left=2mm, opacityback=0, toprule=.15mm, titlerule=0mm, colframe=quarto-callout-note-color-frame, rightrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, toptitle=1mm, leftrule=.75mm, coltitle=black, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Språkbruk}, breakable, bottomtitle=1mm, arc=.35mm, colback=white, bottomrule=.15mm, opacitybacktitle=0.6]
+
+vi säger att vi \textbf{tilldelar} \textbf{variabel} \texttt{kapital}
+\textbf{värdet} \texttt{100}. Lite mer slarvigt säger vi: `vi sätter
+\texttt{kapital} till 100'.
+
+\end{tcolorbox}
+
+\begin{tcolorbox}[enhanced jigsaw, left=2mm, opacityback=0, toprule=.15mm, titlerule=0mm, colframe=quarto-callout-warning-color-frame, rightrule=.15mm, colbacktitle=quarto-callout-warning-color!10!white, toptitle=1mm, leftrule=.75mm, coltitle=black, title=\textcolor{quarto-callout-warning-color}{\faExclamationTriangle}\hspace{0.5em}{Se upp!}, breakable, bottomtitle=1mm, arc=.35mm, colback=white, bottomrule=.15mm, opacitybacktitle=0.6]
+
+Vi kan återkalla värdet 100 från variabeln \texttt{kapital} när som
+helst. Men om du stänger ner RStudio och sen startar om programmet
+(eller om RStudio låser sig) så minns inte R längre värdet på
+\texttt{kapital} . R minns faktiskt inte ens att det fanns något som
+hette \texttt{kapital} och kommer att klaga om du skriver
+\texttt{kapital} på prompten följt av \texttt{Enter}. R och RStudio
+minns bara variabeln inom en \textbf{session}, dvs tills du avslutar
+RStudio. Om man vill spara data mellan olika sessioner måste man spara
+ner variablerna på datorns disk (eller på någon lagring på internet).
+Mer om detta senare.
+
+\end{tcolorbox}
+
+\begin{tcolorbox}[enhanced jigsaw, left=2mm, opacityback=0, toprule=.15mm, titlerule=0mm, colframe=quarto-callout-note-color-frame, rightrule=.15mm, colbacktitle=quarto-callout-note-color!10!white, toptitle=1mm, leftrule=.75mm, coltitle=black, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Note}, breakable, bottomtitle=1mm, arc=.35mm, colback=white, bottomrule=.15mm, opacitybacktitle=0.6]
+
+Istället för att skriva \texttt{kapital\ =\ 100} så kan vi lika gärna
+skriva \texttt{kapital\ \textless{}-\ 100} , där symbolen
+\texttt{\textless{}-} skrivs med de två tecknen \texttt{\textless{}}
+(mindre än) som finns långt ner till vänster på tangentbordet och
+\texttt{-} (bindestreck). Att skriva variabeltilldelningar med
+\texttt{\textless{}-} är egentligen den rekommenderade varianten i R,
+men jag tycker det är fult och föredrar \texttt{=}. 🤷
+
+\end{tcolorbox}
+
+Vi kan nu beräkna kapitalet år 1 genom att multiplicera variabeln
+\texttt{kapital} med talet 1.1
+
+\begin{figure}
+
+{\centering \includegraphics{KapitalYear1.png}
+
+}
+
+\end{figure}
+
+Vi kan också \textbf{skriva över} värdet i variabeln \texttt{kapital}
+med ett nytt värde. Vi kanske vill att \texttt{kapital} alltid ska
+innehålla värdet på det aktiekapital som jag har just nu. Låt oss först
+ändra värdet på \texttt{kapital} till värdet efter år 1:
+
+\begin{figure}
+
+{\centering \includegraphics{kapitaluppdatering.png}
+
+}
+
+\end{figure}
+
+Notera speciellt raden \texttt{kapital\ =\ kapital*1.1}. R läser detta
+som:
+
+\begin{quote}
+Jag (R) ska plocka fram värdet 100 ur variabeln \texttt{kapital}. Sen
+ska jag multiplicera det med 1.1 för att få talet 110. Det talet 110
+stoppar jag sen tillbaka i variabeln \texttt{kapital}.
+\end{quote}
+
+Värdet på variabeln \texttt{kapital} är nu alltså 110.
+
+Det fina med det här att vi nu kan fortsätta att ändra variabeln kapital
+efter att ett ytterligare år har gått, dvs värdet på ditt aktiekapital
+efter år 2:
+
+\begin{figure}
+
+{\centering \includegraphics[width=4.16667in,height=\textheight]{kapiteluppdatering2.png}
+
+}
+
+\end{figure}
+
+Variabel \texttt{kapital} är nu 116.6 och du är redo för din kommande
+avkastning under år 3.
+
+\hypertarget{uppgift-2.1}{%
+\paragraph{💪 Uppgift 2.1}\label{uppgift-2.1}}
+
+Avkastningen år 3 blev tyvärr minus 4\%. Uppdatera variabeln
+\texttt{kapital} ovan så att den visar att värdet på kapitalet efter år
+3 är 111.936 kr. Notera att en minskning med 4\% innebär att vi måste
+multiplicera med 0.96 (1-0.04). Multiplikation med tal mindre än 1 leder
+till en minskning av kapitalet.
+
+\hypertarget{organisera-dig-med-filmappar}{%
+\subsection{3. Organisera dig med
+filmappar}\label{organisera-dig-med-filmappar}}
+
+Det är viktigt att ha ordning på sina filer på datorn och kunna tala om
+för R var dina filer finns så R kan läsa dem. Vi rekommenderar att du
+skapar en mapp/folder för varje kurs du läser. Spara inte alla filer på
+datorns skrivbord eller i mappen \textbf{Downloads} eller liknande. Gå
+till filhanteringsprogrammet på din dator och skapa mappen
+\textbf{SDA1}. Så här:
+
+\begin{itemize}
+\item
+  \includegraphics[width=0.20833in,height=\textheight]{windows.png}
+  Windows: Starta programmet \textbf{File Explorer} och klicka på mappen
+  \textbf{Documents} (eller \textbf{Dokument} om du har svenska som
+  språk). Skapa en ny mapp med namnet \textbf{SDA1}.
+\item
+  \includegraphics[width=0.20833in,height=\textheight]{mac.png}Mac:
+  Starta programmet \textbf{Finder} och klicka på mappen
+  \textbf{Documents}. Skapa en ny mapp med namnet \textbf{SDA1}.
+\item
+  \includegraphics[width=0.20833in,height=\textheight]{linux.png} Linux:
+  Starta programmet \textbf{Nautilus} (om du använder Ubuntu, annars kan
+  du prova att söka på ordet files om din Linux-distribution använder en
+  annan filhanterare). Klicka på mappen \textbf{Documents}. Skapa en ny
+  mapp med namnet \textbf{SDA1}.
+\end{itemize}
+
+\begin{tcolorbox}[enhanced jigsaw, left=2mm, opacityback=0, toprule=.15mm, titlerule=0mm, colframe=quarto-callout-warning-color-frame, rightrule=.15mm, colbacktitle=quarto-callout-warning-color!10!white, toptitle=1mm, leftrule=.75mm, coltitle=black, title=\textcolor{quarto-callout-warning-color}{\faExclamationTriangle}\hspace{0.5em}{Warning}, breakable, bottomtitle=1mm, arc=.35mm, colback=white, bottomrule=.15mm, opacitybacktitle=0.6]
+
+\begin{verbatim}
+Inga åäö!
+Använd inte åäö i namn på filmappar eller filer.
+Stor risk att du får problem då.
+\end{verbatim}
+
+\end{tcolorbox}
+
+\hypertarget{uppgift-3.1}{%
+\paragraph{💪 Uppgift 3.1}\label{uppgift-3.1}}
+
+Skapa mappen \textbf{SDA1} i \textbf{Documents} på din dator.
+
+\hypertarget{anvuxe4nda-editorn-source-fuxf6r-att-spara-kod}{%
+\subsection{4. Använda Editorn (Source) för att spara
+kod}\label{anvuxe4nda-editorn-source-fuxf6r-att-spara-kod}}
+
+Skriva kommandon direkt i Console har en nackdel: R minns inte
+kommandona vi har skrivit i en tidigare Session (innan vi stängde ner
+RStudio). Varje gång vi startar upp RStudio måste vi skriva om våra
+kommandon om vi vill fortsätta våra beräkningar där vi slutade senast.
+😤 (Det är inte riktigt sant, fliken \textbf{History} i övre högra delen
+av RStudio minns faktiskt gamla kommandon, men det är opraktiskt att
+förlita sig på \textbf{History}).
+
+Vi skulle vilja skriva alla våra kommandon i en textfil som vi kan spara
+på datorns hårddisk och sen bara köra om alla kommandon in en senare
+Session. Source \textbf{Editorn} in övre vänstra delen av RStudio
+används för just detta.
+
+Om vi klickar på menyn \uline{\textbf{F}}\textbf{ile} och sen under
+menyn \uline{\textbf{N}}\textbf{ew File} och slutligen på
+\uline{\textbf{R}} \textbf{Script} så öppnas en tom textfil i
+\textbf{Editorn} som heter \emph{Untitled1} eller något liknande. Här
+kan vi skriva in kommandon som vi vill spara för framtida sessioner. Vi
+kan t ex skriva in våra beräkningar av aktiesparandet:
+
+\includegraphics{kapitalsource.png}
+
+Vi kan spara filen genom att klicka på menyn
+\uline{\textbf{F}}\textbf{ile} och sen på \uline{\textbf{S}}\textbf{ave}
+och sen navigera dig till mappen \textbf{SDA1} genom att klicka i rutan
+som kommer upp. Döp filen till \textbf{stock} eller något annat namn som
+talar om vad filen innehåller (aktie heter stock på engelska). Klicka på
+Save/Spara. Filen kommer automatiskt att få filändelsen .R, dvs filen
+kommer alltså heta \textbf{stock.R} så RStudio vet att det är en fil men
+R kommandon. Ett samling kommandon kallas också för \textbf{kod} och vi
+säger att vi arbetar med en \textbf{kodfil} i editorn.
+
+Vi kan köra alla kommandon i filen stock.R genom att klicka på
+\texttt{Source} - knappen uppe i högra hörnet av editorn:
+
+\begin{figure}
+
+{\centering \includegraphics[width=4.16667in,height=\textheight]{SourceButton.png}
+
+}
+
+\end{figure}
+
+Vi ser de körda kommandona i Console och efter att koden har körts kan
+vi skriva \texttt{kapital} i Console för att se svaret 111.936.
+
+När man arbetar med koden vill man ofta köra ett kommando i taget, och
+inte alla på en gång. Det kan man göra genom att placera markören (det
+blinkande strecket) på den rad som vill köra (\textbf{exekvera}) och sen
+klicka på \texttt{Run}-knappen i uppe i högre hörnet av editorn.
+
+Ofta ställer man markören på den första raden i koden och klickar på
+\texttt{Run}-knappen om och om igen för att köra varje rad, en efter en.
+Allt som körs, t ex olika variabler som \texttt{kapital}, finns
+tillgängligt i Console, om man t ex vill undersöka om variabeln
+verkligen har fått det värde som det var meningen att det skulle få.
+
+Man kan också köra flera rader på en gång genom att markera raderna och
+trycka på \texttt{Run}-knappen.
+
+\hypertarget{uppgift-4.1}{%
+\paragraph{💪 Uppgift 4.1}\label{uppgift-4.1}}
+
+Kör hela filen stock.R genom att använda \texttt{Source}-knappen.
+Undersök vilket värde variabeln \texttt{kapital} i Console har efter att
+filen körts.
+
+\hypertarget{uppgift-4.2}{%
+\paragraph{💪 Uppgift 4.2}\label{uppgift-4.2}}
+
+Kör kommandot på rad 1 i stock.R genom att använda \texttt{Run}-knappen.
+Undersök vilket värde variabeln \texttt{kapital} i Console. Upprepa
+detta för de resterande raderna i stock.R.
+
+\hypertarget{stuxe4lla-in-arbetsmappen-working-directory-i-r}{%
+\subsection{5. Ställa in arbetsmappen (working directory) i
+R}\label{stuxe4lla-in-arbetsmappen-working-directory-i-r}}
+
+Hittills har vi skrivit alla kommandon och tal (t ex
+\texttt{kapital\ =\ 100}), dvs vi har matat in \textbf{data} själva. Det
+är naturligtvis klumpigt om man har mycket data. Vi vill kunna läsa in
+hela \textbf{datamaterialet} från en fil. Här är en Excel-fil med data
+från 5 års investingar i aktier:
+
+\begin{figure}
+
+{\centering \includegraphics[width=4.16667in,height=\textheight]{ExcelTabellKapital.png}
+
+}
+
+\end{figure}
+
+Notera att:
+
+\begin{itemize}
+\item
+  Vi använder engelska namn på kolumnerna. Svenska tecken åäö är bäst
+  att undervika när man skriver kod. Det går att arbeta med åäö i kod,
+  men det är lättast att undvika dem genom att skriva på engelska. Du
+  kan inte använda mellanslag (space) i variabelnamn. Ofta vill man ha
+  ett variabelnamn som är lätt att förstå vad variabeln innehåller.
+  Använd \texttt{\_} (underscore) eller \texttt{.} (punkt) för att dela
+  upp ord om det behövs. T ex
+  \texttt{my\_pretty\_little\_variable\ =\ 100}.
+\item
+  Avkastningen (\textbf{returns}) anges i procent och är satt till noll
+  under 2018 eftersom vi köpte aktierna precis i början av år 2019
+  (säger vi) och alltså inte fick någon avkastning under år 2018.\\
+\end{itemize}
+
+Excel-filen har jag döpt till \emph{stock.xlsx}, men den kan döpas till
+precis vad som helst.
+
+Om R ska kunna läsa in data från filen stock.xlsx så måste vi tala om
+\emph{var} filen finns på vår dator. Enklast är då att ställa in Rs
+\textbf{working directory}, dvs det standardställe där R letar efter
+filer i den pågående sessionen. Det finns två sätt att göra detta, varav
+vi endast rekommenderar det första om man är absolut nybörjare. Rätt
+snart bör du lära dig att använda det andra sättet, som är smidigare i
+längden.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Working directory} är den mapp som R kommer leta efter filer
+  i. Ändra din arbetsmapp (\textbf{working directory}) i R till samma
+  mapp \textbf{SDA1} i \textbf{Documents} genom att välja menyn
+  \uline{\textbf{S}}\textbf{ession} och sen \textbf{Set \uline{W}orking
+  Directory} och slutligen \uline{\textbf{C}}\textbf{hoose
+  Directory\ldots{}} och sedan klicka dig fram till mappen SDA1.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=3.73958in,height=\textheight]{setwd_menu.png}
+
+}
+
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  För att slippa att klicka sig fram via menyer hela tiden så är det
+  praktiskt att ändra working directory i början av den kodfil som man
+  jobbar med. Då kan man bara köra den kodfilen och working directory
+  ställs in automatiskt. Kommandot \texttt{setwd} gör samma sak som
+  punkten 1 gjorde via menyerna. Här måste vi dock veta
+  \textbf{sökvägen} (\textbf{path}) till mappen, dvs datorns sätt att
+  hitta till (under)mappen \textbf{SDA1} i \textbf{Documents}-mappen.
+  Sättet att skriva sökvägar på skiljer sig åt på Windows/Mac/Linux:
+
+  \begin{itemize}
+  \item
+    \includegraphics[width=0.20833in,height=\textheight]{mac.png} På en
+    Mac skriver vi kommandot:
+    \texttt{setwd(\textquotesingle{}/Users/username/Documents/SDA1\textquotesingle{})}
+    där \texttt{username} ska ersättas med ditt användnamn på din Mac
+    (namnet som kommer upp när du loggar in på datorn). Notera de små
+    `blipparna' kring filvägen i \texttt{setwd} kommandot.
+  \item
+    \includegraphics[width=0.15625in,height=\textheight]{windows.png} På
+    en Windows-dator skriver vi kommandot
+    \texttt{setwd(\textquotesingle{}C:/Documents/SDA1\textquotesingle{})}.
+    Notera de små `blipparna' kring filvägen i \texttt{setwd} kommandot.
+    {[}Windows-sökvägar skrivs vanligtvis med backslash
+    \texttt{\textbackslash{}}. I RStudio skriver man ändå \texttt{/} för
+    att matcha med Mac och Linux{]}.
+  \item
+    \includegraphics[width=0.20833in,height=\textheight]{linux.png} På
+    en Linux-dator skriver vi kommandot
+    \texttt{setwd(\textquotesingle{}/home/username/Documents/SDA1\textquotesingle{})}
+    där \texttt{username} ska ersättas med ditt användnamn som använder
+    när du loggar in.
+  \end{itemize}
+\end{enumerate}
+
+\hypertarget{uppgift-5.1}{%
+\paragraph{💪 Uppgift 5.1}\label{uppgift-5.1}}
+
+Ställ in din \textbf{SDA1} mapp som working directory i RStudio.
+Kontrollera att du lyckades genom att skriva kommandot \texttt{getwd()}
+i Console, som bör skriva ut sökvägen till din SDA1 mapp. Nu har du
+talat om för R att den ska leta efter filer i din kursmapp
+\textbf{SDA1}!
+
+\hypertarget{luxe4sa-in-data-fruxe5n-fil}{%
+\subsection{6. Läsa in data från
+fil}\label{luxe4sa-in-data-fruxe5n-fil}}
+
+Vi vill nu läsa in data från Excelfilen stock.xlsx. Du kan ladda ner den
+filen
+\href{https://github.com/StatisticsSU/SDA1/datorlabb/lab1/stock.xlsx}{här}.
+Beroende på din dator så kommer en av två saker hända:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  filen stock.xlsx hamnar automatiskt i mappen \textbf{Downloads} (eller
+  liknande) på din dator. Du får då kopiera eller flytta filen till din
+  working directory (din SDA1 mapp) genom att använda datorns
+  filhanterare.
+\item
+  du får välja var du vill spara ner filen. Klicka dig fram till din
+  working directory (din SDA1 mapp) och spara filen där.
+\end{enumerate}
+
+R kommer nu att hitta filen och vi är redo att skriva kommandot som
+läser in filen. Eftersom det är första gången du läser in en Excel-fil
+behöver du göra lite grundjobb. Vi ska göra tre steg:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \textbf{Installera R-paketet} \texttt{readxl}. Programmet R kommer med
+  ett antal baskommandon förinstallerat. T ex har vi redan använt
+  \textbf{funktionen} \texttt{setwd()} för att tala om för R vilken mapp
+  som är vår working directory. Men många kommandon/funktioner i R måste
+  laddas in via s k \textbf{R-paket}. Det finns R-paket för nästan allt
+  man vill göra: läsa in data, gör olika typer av statistiska analyser
+  etc etc. Paketet \texttt{readxl} är specialiserat på att läsa in
+  Excel-filer i R. För att installera paketet kör vi kommandot
+  \texttt{install.packages(\textquotesingle{}readxl\textquotesingle{})}
+  antingen genom att skriv in det i en kodfil och trycka på \texttt{Run}
+  eller genom att skriva det direkt i terminalen. Efter det kommer R att
+  skriva ut en massa mumbo-jumbo i Console som beskriver installationen.
+  Paket kan ta någon minut eller mer för att installera. Om inga fel
+  uppstår brukar installationsmeddelandet avslutas med något liknande:\\
+  \texttt{DONE\ (readxl)}\strut \\
+  \texttt{The\ downloaded\ source\ packages\ are\ in}\strut \\
+  följt av någon kryptisk sökväg till stället på din dator där paketet
+  har blivit installerat.\\
+  \strut \\
+  Installation av paket behövs bara göras en gång på din dator. Du
+  behöver inte installera om nästa gång du startar upp RStudio på nytt.
+\item
+  \textbf{Ladda R-paketet} \texttt{readxl}. Kommandot
+  \texttt{library(readxl)} laddar funktionerna i paketet \texttt{readxl}
+  till R's arbetsminne. Först efter denna kommando kan vi använda
+  funktionerna i paketet. Notera att vi behöver `blippar' kring paketets
+  namn när vi installerar, men inte när vi laddar paketet. Ett paket som
+  laddat in med library finns inte tillgängligt när du start om RStudio.
+  Du måste alltså skriva \texttt{library(readxl)} för varje ny session
+  där du vill läsa in Excel-filer. Det är därför bra att skriva in
+  \texttt{library(readxl)} i kodfilen du ska använda för att läsa in
+  Excel-filer.
+\item
+  Läs in data från Excel-filen genom kommandot/\textbf{funktionen}
+  \texttt{read\_excel()}. Här hela kommandot
+  (\textbf{funktionsanropet}):\\
+  \texttt{stockdata\ =\ read\_excel(\textquotesingle{}stock.xlsx\textquotesingle{},\ sheet\ =\ 1)}\strut \\
+  Det är några saker att reda ut här. Först, \texttt{read\_excel()} är
+  en \textbf{funktion} vilket betyder att det är ett kommando som
+  \textbf{gör något} baserat på funktionens \textbf{input-argument}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Det första argumentet
+    \texttt{\textquotesingle{}stock.xlsx\textquotesingle{}} är en
+    \textbf{textsträng} (den har `blippar') som talar om för
+    \texttt{read\_excel()} \emph{vilken} Excelfil som ska läsas in. Vi
+    behöver inte säga mer eftersom denna fil ligger i vår working
+    directory, som ju R nu känner till.
+  \item
+    det andra input-argumentet är \texttt{sheet\ =\ 1}, vilket säger åt
+    \texttt{read\_excel()} att data ligger i det första kalkylbladet i
+    filen stock.xlsx. En Excelfil kan ju har flera kalkylblad, och vill
+    man läsa det andra bladet ändrar man \texttt{1} till \texttt{2}.
+    (men stock.xlsx har bara ett blad, så prova inte detta för då kommer
+    R att klaga).
+  \end{itemize}
+
+  Men vad betyder \texttt{stockdata\ =} i början av kommandot ovan? Jo,
+  om R ska läsa in data till arbetsminnet så måste den ge denna data ett
+  namn, vilket jag har valt till \texttt{stockdata} , men du får döpa
+  den till (nästan) vad du vill. \texttt{stockdata} är en
+  \textbf{variabel}, precis som \texttt{kapital} var en variabel
+  tidigare. Variabeln \texttt{kapital} var en enkel form av en variabel
+  som bara innehöll ett enda \textbf{värde}, t ex 100 i början av vårt
+  sparande. Variabeln \texttt{stockdata} är mer komplex. Den innehåller
+  en hel tabell med värden. Så kommandot
+
+  \texttt{stockdata\ =\ read\_excel(\textquotesingle{}stock.xlsx\textquotesingle{},\ sheet\ =\ 1)}
+
+  läses alltså av R som
+
+  \begin{quote}
+  Läs in första kalkylbladet av Excelfilen stock.xlsx till arbetsminnet
+  och spara den inlästa tabellen som en tabell i variabeln
+  \texttt{stockdata}.
+  \end{quote}
+\end{enumerate}
+
+R har lite olika varianter av tabellvariabler. Den viktigaste för oss på
+den här kursen är en s k \texttt{dataframe}. Funktionen
+\texttt{read\_excel()} läser dock in data som en s k
+\texttt{tibble}-tabell. För att göra om en \texttt{stockdata} till en
+dataframe skriver vi kommandot
+\texttt{stockdata\ =\ data.frame(stockdata)}, där variabeln (tabellen)
+\texttt{stockdata} skrivs över med resultatet att stockdata nu är en
+\texttt{dataframe}.
+
+När man har läst in ett datamaterial är det bra att ta en snabbtitt på
+den inlästa tabellen för att se att den blev korrekt inläst. Precis som
+vi gjorde med variabel \texttt{kapital} för att se dess värde (t ex 100)
+så kan skriva \texttt{stockdata} i Console för att se dess värde (som ju
+är en tabell). Om man har en tabell med många rader så blir det fort
+jobbigt att skriva ut alla rader. Kommandot \texttt{head()} är då
+praktiskt, som bara skriver ut det första 6 raderna av tabellen. Här har
+vi alla kommandon som krävs för att ladda in data och skriva ut fint på
+skärmen (förutom
+\texttt{install.packages(\textquotesingle{}readxl\textquotesingle{})}
+som jag antar att du redan har kört för att installera paketet).
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(readxl)}
+\NormalTok{stockdata }\OtherTok{=} \FunctionTok{read\_excel}\NormalTok{(}\StringTok{\textquotesingle{}stock.xlsx\textquotesingle{}}\NormalTok{, }\AttributeTok{sheet =} \DecValTok{1}\NormalTok{)}
+\NormalTok{stockdata }\OtherTok{=} \FunctionTok{data.frame}\NormalTok{(stockdata) }\CommentTok{\# gör om stockdata till en dataframe}
+\FunctionTok{head}\NormalTok{(stockdata)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+  year  capital returns
+1 2018 100.0000    0.00
+2 2019 110.0000    0.10
+3 2020 116.6000    0.06
+4 2021 111.9360   -0.04
+5 2022 117.5328    0.05
+6 2023 125.7601    0.07
+\end{verbatim}
+
+\begin{tcolorbox}[enhanced jigsaw, left=2mm, opacityback=0, toprule=.15mm, titlerule=0mm, colframe=quarto-callout-tip-color-frame, rightrule=.15mm, colbacktitle=quarto-callout-tip-color!10!white, toptitle=1mm, leftrule=.75mm, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Tip}, breakable, bottomtitle=1mm, arc=.35mm, colback=white, bottomrule=.15mm, opacitybacktitle=0.6]
+
+Istället för att placera alla filer i din working directory
+\textbf{SDA1} kan man istället ange sökvägen till filen när man läser in
+den. Om jag t ex har sparat filen i mappen \textbf{Downloads} på en
+Windows-dator så skriver jag \textbf{\hfill\break
+}\texttt{stockdata\ =\ read.xlsx(\textquotesingle{}C:/Downloads/stock.xlsx\textquotesingle{},\ 1,\ header=TRUE)}.
+
+\end{tcolorbox}
+
+\hypertarget{uppgift-6.1}{%
+\paragraph{💪 Uppgift 6.1}\label{uppgift-6.1}}
+
+Prova att ladda ner Excelfilen stock.xlsx och spara den i SDA1 mappen.
+Läs sen in filen i R med kommandot
+\texttt{stockdata\ =\ read.xlsx(\textquotesingle{}stock.xlsx\textquotesingle{},\ 1,\ header=TRUE)}
+. Skriv sen \texttt{head(stockdata)} i Console för att titta på data.\\
+Prova nu att läsa in data med kommandot
+\texttt{stockdata\ =\ read.xlsx(\textquotesingle{}stock.xlsx\textquotesingle{},\ 1,\ header=FALSE)}
+och notera skillnaden genom att återigen skriva \texttt{head(stockdata)}
+i Console.
+
+\hypertarget{uppgift-6.2}{%
+\paragraph{💪 Uppgift 6.2}\label{uppgift-6.2}}
+
+Ändra värdet på variabeln \texttt{returns} år 2023 till 0.05 i stockdata
+tabellen genom att skriva \texttt{stockdata{[}6,3{]}\ =\ 0.05} i
+Console. Det här kommandot läser R som:
+
+\begin{quote}
+Värdet i tabellen \texttt{stockdata} på rad 6 och kolumn 3 ska ändras
+till (tilldelas) värdet 0.05.
+\end{quote}
+
+Prova att skriva \texttt{stockdata} i Console för att kontrollera att
+värdet faktiskt ändrades.
+
+\hypertarget{uppgift-6.3}{%
+\paragraph{💪 Uppgift 6.3}\label{uppgift-6.3}}
+
+Spara den ändrade stockdata-tabellen till disk genom att skriva följande
+kommando i Console:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{save}\NormalTok{(stockdata, }\AttributeTok{file=}\StringTok{"stockdata2.Rdata"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+vilket sparar den ändrade \texttt{stockdata} tabellen till filen
+\texttt{stockdata2.Rdata} i din working directory
+(\textbf{SDA1}-mappen). Filformatet \texttt{Rdata} är R's eget
+filformat. Du kan i en senare session läsa in stockdata enkelt genom
+kommandot
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{load}\NormalTok{(}\StringTok{"stockdata2.Rdata"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+vilket kommer läsa in tabellen \texttt{stockdata} i R's arbetsminne.
+
+\hypertarget{analysera-data}{%
+\subsection{7. Analysera data}\label{analysera-data}}
+
+När du har läst in datamaterialet i minnet så är det dags att analysera
+det. Låt oss göra en enkel graf av variabeln \texttt{capital} över åren
+(\texttt{year}):
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{plot}\NormalTok{(capital }\SpecialCharTok{\textasciitilde{}}\NormalTok{ year, }\AttributeTok{data =}\NormalTok{ stockdata)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{figure}[H]
+
+{\centering \includegraphics{DatorLab1_files/figure-pdf/unnamed-chunk-4-1.pdf}
+
+}
+
+\end{figure}
+
+Här har vi använt funktionen \texttt{plot()} med två argument.
+Argumentet \texttt{capital\ \textasciitilde{}\ year} talar om för
+\texttt{plot()} att den ska göra en graf (`plotta') variabeln capital på
+y-axeln och variabeln year på x-axeln. Vi säger att vi `plottar capital
+\textbf{mot} year'. Men \texttt{capital} och \texttt{year} är faktiskt
+inte variabler i Rs arbetsminne. Där finns bara en tabell (dataframe)
+som heter \texttt{stockdata} med kolumner som heter \texttt{capital} och
+\texttt{year}. Så vi måste tala om för \texttt{plot()} att vi vill hämta
+variablerna \texttt{capital} och \texttt{year} från
+datamaterialet/tabellen/dataframe \texttt{stockdata}, vilket är precis
+vad som händer i det andra argumentet \texttt{data\ =\ stockdata}.
+Tecknet \textbf{\textasciitilde{}} brukar läsa som \textbf{tilde} och
+kan skrivas genom tangenterna \texttt{Alt\ gr} och tangenten till
+vänster om \texttt{Enter}.\\
+Så kommandot\\
+\strut \\
+\texttt{plot(capital\ \textasciitilde{}\ year,\ data\ =\ stockdata)}\strut \\
+\strut \\
+läses av R som
+
+\begin{quote}
+plotta variabeln \texttt{capital} mot variabeln \texttt{year}, där både
+dessa variabler är kolumner i datamaterialet \texttt{stockdata}.
+\end{quote}
+
+Om vi vill beräkna medelvärdet på en variabel kan vi använda funktionen
+\texttt{mean()}. Men om vi vill beräkna medelvärdet av variabeln
+\texttt{capital} med kommandot \texttt{mean(capital)} så får vi
+problemet att R inte har en variabel \texttt{capital} i minnet;
+\texttt{capital} är ju bara en kolumn i datamaterialet
+\texttt{stockdata}. Hur säger vi till R: gör om kolumnen
+\texttt{capital} i datamaterialet \texttt{stockdata} till en egen
+variabel och beräkna dess medelvärde (mean på engelska). Lösningen att
+använda \texttt{\$}-tecknet för att plocka ut kolumnen \texttt{returns}
+som en egen variabel: \texttt{stockdata\$capital} och sen använda
+\texttt{mean()} funktionen. Vi kan göra detta på samma kodrad och skriva
+ut resultatet:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{meancapital }\OtherTok{=} \FunctionTok{mean}\NormalTok{(stockdata}\SpecialCharTok{$}\NormalTok{capital)}
+\NormalTok{meancapital}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+[1] 113.6381
+\end{verbatim}
+
+Kodraden mean\texttt{capital\ =\ mean(stockdata\$capital)} säger alltså
+till R att
+
+\begin{quote}
+Plocka ut kolumnen \texttt{capital} från datamaterialet
+\texttt{stockdata} och beräkna dess medelvärde.
+\end{quote}
+
+Genom att explicit plocka ut kolumner på detta sätt kan vi göra grafen
+med ett lite annorlunda kommando:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{plot}\NormalTok{(stockdata}\SpecialCharTok{$}\NormalTok{capital, stockdata}\SpecialCharTok{$}\NormalTok{year)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{figure}[H]
+
+{\centering \includegraphics{DatorLab1_files/figure-pdf/unnamed-chunk-6-1.pdf}
+
+}
+
+\end{figure}
+
+där vi inte längre måste använda argumentet \texttt{data\ =\ stockdata}
+för att tala om var dessa variabler kommer från. Men det förra kommandot
+\texttt{plot(capital\ \textasciitilde{}\ year,\ data\ =\ stockdata)} är
+nog ändå mer lättläst, tycker jag.
+
+\hypertarget{uppgift-7.1}{%
+\paragraph{💪 Uppgift 7.1}\label{uppgift-7.1}}
+
+Läs återigen in data med
+\texttt{stockdata\ =\ read\_excel(\textquotesingle{}stock.xlsx\textquotesingle{},\ sheet\ =\ 1)}.
+Gör en graf där du plottar variabeln \texttt{returns} mot \texttt{year}.
+
+Här är hela koden i ett stycke:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{setwd}\NormalTok{(}\StringTok{\textquotesingle{}/home/mv/Dropbox/Teaching/SDA1/datorlab/lab1\textquotesingle{}}\NormalTok{) }\CommentTok{\# I have a Linux computer and my data is in this path}
+\FunctionTok{library}\NormalTok{(readxl)                         }
+\NormalTok{stockdata }\OtherTok{=} \FunctionTok{read\_excel}\NormalTok{(}\StringTok{\textquotesingle{}stock.xlsx\textquotesingle{}}\NormalTok{, }\AttributeTok{sheet =} \DecValTok{1}\NormalTok{)}
+\NormalTok{stockdata }\OtherTok{=} \FunctionTok{data.frame}\NormalTok{(stockdata)}
+\NormalTok{meancapital }\OtherTok{=} \FunctionTok{mean}\NormalTok{(stockdata}\SpecialCharTok{$}\NormalTok{capital)}
+\FunctionTok{plot}\NormalTok{(capital }\SpecialCharTok{\textasciitilde{}}\NormalTok{ year, }\AttributeTok{data =}\NormalTok{ stockdata)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{figure}[H]
+
+{\centering \includegraphics{DatorLab1_files/figure-pdf/unnamed-chunk-7-1.pdf}
+
+}
+
+\end{figure}
+
+Notera att vi kan skriva \textbf{kommentarer} i koden genom tecknet
+\texttt{\#} innan kommentaren. Allt efter tecknet \texttt{\#} ignoreras
+av R när den läser koden. Det kan vara ett bra sätt att förklara en
+kodrad för användaren.
+
+\hypertarget{nuxe5gra-extra-tips}{%
+\subsection{8. Några extra tips}\label{nuxe5gra-extra-tips}}
+
+\begin{itemize}
+\tightlist
+\item
+  Om du trycker på `pil-upp' ⍐ tangenten i Console så kan du stega dig
+  tillbaka till \textbf{gamla kommandon} som du har skrivit.
+\item
+  Om du vill \textbf{städa upp i Console} kan du skriva
+  \texttt{Ctrl\ +\ l} för att rensa Console från text (dvs ett litet L).
+  Dina variabler blir kvar i arbetsminnet.
+\item
+  \textbf{History}-fliken uppe till höger i RStudio visar alla tidigare
+  kommandon.
+\item
+  \textbf{Environment}-filken uppe till höger i RStudio ger dig
+  information om de datamaterial och variabler som R har i arbetsminnet.
+  Prova genom att definiera en ny variabel \texttt{c=100} i Console och
+  hur den dyker upp i \textbf{Environment}-fliken. Prova att klicka på
+  den blå pilen framför stockdata, du kommer se kolumnerna i det
+  datamaterialet.
+\item
+  \textbf{Files}-fliken nere till höger i RStudio är en inbyggd
+  filhanterare. Den visar filerna i ditt working directory och du kan
+  även hantera filer där (ta bort, döpa om osv).
+\item
+  I \textbf{Help}-fliken kan du söka på hjälp på olika kommandon. Prova
+  att skriva in \texttt{mean}. Du kan även få hjälp genom att skriva t
+  ex \texttt{?mean} i Console.
+\end{itemize}
+
+\hypertarget{datastrukturer}{%
+\subsection{9. Datastrukturer}\label{datastrukturer}}
+
+R kan spara data i olika \textbf{datastrukturer}. Vi definerade tidigare
+variabeln \texttt{kapital} och tilldela denna variabel värdet
+\texttt{100} genom kommandot \texttt{kapital\ =\ 100}.
+
+Ofta vill man spara mer än ett tal i samma datastruktur. Ett sätt är att
+skapa en \textbf{vektor} med kommandot \texttt{c()}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{capital\_all\_years }\OtherTok{=} \FunctionTok{c}\NormalTok{(}\DecValTok{100}\NormalTok{,}\DecValTok{110}\NormalTok{,}\FloatTok{116.6}\NormalTok{,}\FloatTok{111.936}\NormalTok{,}\FloatTok{117.532}\NormalTok{,}\FloatTok{125.760}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+Den nya variabel \texttt{capital\_all\_years} innehåller alltså
+kapitalet för alla år. Men om jag skulle vilja `plocka ut' kapitalets
+värde vid det tredje året? Då kan man indexera vektorn genom
+hakparenteser (brackets) \texttt{{[}{]}}, så här:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{capital\_all\_years[}\DecValTok{3}\NormalTok{]}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+[1] 116.6
+\end{verbatim}
+
+Man kan också plocka ut flera värden samtidigt, t ex år 3 och 5, med
+kommandot
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{capital\_all\_years[}\FunctionTok{c}\NormalTok{(}\DecValTok{3}\NormalTok{,}\DecValTok{5}\NormalTok{)]}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+[1] 116.600 117.532
+\end{verbatim}
+
+Notera att vi indexerade med en vektor, dvs vi använde \texttt{c()}
+kommandot eftersom vi vill tala om för R att plocka ut fler än ett
+värde.
+
+Vi har redan sett en av Rs viktigaste datatyper: en s k
+\textbf{dataframe}. En dataframe är en tabell med information om vad
+kolumnerna heter, och ibland även vad raderna heter. Ett exempel är vår
+\texttt{stockdata} som är dataframe med tre kolumner: year, capital och
+stock. Vi kan se att det är en dataframe genom att använda kommandot
+\texttt{class()}:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{class}\NormalTok{(stockdata)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+[1] "data.frame"
+\end{verbatim}
+
+Vi har faktiskt redan använt idéen med att plocka ut värden genom
+indexing in dataframes tidigare när vi skrev \texttt{stockdata{[}6,3{]}}
+för att plocka ut värdet på rad 6 och kolumn 3 i tabellen/dataframe. Och
+vi såg att vi också kunde ändra värdena i tabellen genom tilldelning:
+\texttt{stockdata{[}6,3{]}=0.05} . Samma sak kan man göra med en vektor,
+t ex så gör kommandot \texttt{capital\_all\_years{[}5{]}\ =\ 200} att vi
+ändrar kapitalet år 5 till 200 i vår vektor som innehåller alla års
+kapital.
+
+Det finns en annan slags tabell som kan vara bra att känna till i R, en
+s k \textbf{matris} (eng. Matrix). Matriser är som dataframes, men
+innehåller inte information om namnet på kolumnerna. Å andra sidan kan
+man göra matematiska beräkningar med hela matriser, men det är inget vi
+gör på denna kurs. Anledningen till att vi nämner matriser här är att
+man ibland måste göra om en matris till en dataframe eller tvärtom.
+Vissa R-program vi bara jobba med dataframes och klagar om man försöker
+få det att jobba med en matris. Låt oss skapa en matris som jag kallar
+\texttt{A} :
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{A }\OtherTok{=} \FunctionTok{matrix}\NormalTok{(}\FunctionTok{c}\NormalTok{(}\DecValTok{11}\NormalTok{,}\DecValTok{2}\NormalTok{,}\DecValTok{4}\NormalTok{,}\DecValTok{5}\NormalTok{,}\DecValTok{62}\NormalTok{,}\DecValTok{3}\NormalTok{), }\DecValTok{3}\NormalTok{, }\DecValTok{2}\NormalTok{)}
+\NormalTok{A}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+     [,1] [,2]
+[1,]   11    5
+[2,]    2   62
+[3,]    4    3
+\end{verbatim}
+
+vilket är en matris (tabell) med 3 rader och 2 kolumner (som vi skapar
+från en vektor med 6 tal). Om vi använder \texttt{class()}-kommandot så
+ser vi att A mycket riktigt är en matrix, vilket är engelska för matris:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{class}\NormalTok{(A)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+[1] "matrix" "array" 
+\end{verbatim}
+
+Om vi vill göra om en matris till en dataframe så använder vi kommandot
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{B }\OtherTok{=} \FunctionTok{as.data.frame}\NormalTok{(A)}
+\NormalTok{B}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+  V1 V2
+1 11  5
+2  2 62
+3  4  3
+\end{verbatim}
+
+där R bestämmer att kolumnerna ska heta V1 och V2 (en dataframe måste ha
+namn på kolumnerna i tabellen). B är alltså nu en dataframe, vilket man
+kan testa genom:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{class}\NormalTok{(B)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+[1] "data.frame"
+\end{verbatim}
+
+En annan viktigt datatyp vi vill nämna är en s k \textbf{sträng} (eng.
+string), vilket kallas för \texttt{character} i R och är en variabel som
+innehåller text. Värdet på en sträng-variabel skriv innanför
+citattecken:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{mittnamn }\OtherTok{=} \StringTok{"mattias"}
+\FunctionTok{class}\NormalTok{(mittnamn)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+[1] "character"
+\end{verbatim}
+
+Man kan även använda enkla `blippar' kring strängens värde, dvs
+\texttt{mittnamn\ =\ \textquotesingle{}mattias\textquotesingle{}}.
+
+Om vi t ex använder \texttt{names()} kommandot på vår \texttt{stockdata}
+dataframe så får vi en vektor med strängar (en vektor eftersom det finns
+fler än ett kolumnnamn i \texttt{stockdata}):
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{names}\NormalTok{(stockdata)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+[1] "year"    "capital" "returns"
+\end{verbatim}
+
+Slutligen finns datatypen \texttt{list} i R. En list (eller lista på
+svenska) är en vektor på steroider. En vanlig vektor måste innehålla
+\emph{data av samma sort}, t ex en vektor med numeriska tal
+\texttt{x\ =\ c(1,4,5)} eller en vektor med strängar (text):
+\texttt{c("mattias","adam","elma")} . En lista är mer generell och kan
+innehålla data av olika sort:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{my\_list }\OtherTok{=} \FunctionTok{list}\NormalTok{(}\AttributeTok{a =} \DecValTok{2}\NormalTok{, }\AttributeTok{b =} \StringTok{"hej"}\NormalTok{, }\AttributeTok{d =} \FunctionTok{c}\NormalTok{(}\DecValTok{4}\NormalTok{,}\DecValTok{5}\NormalTok{,}\DecValTok{2}\NormalTok{))}
+\NormalTok{my\_list}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+$a
+[1] 2
+
+$b
+[1] "hej"
+
+$d
+[1] 4 5 2
+\end{verbatim}
+
+Jag kan döpa elementen i listan vad jag vill, här kallade jag dem
+\texttt{a}, \texttt{b} och \texttt{d} (jag vill undvika bokstaven c
+eftersom det är symbolen för att skapa vektorer). Notera att elementet
+\texttt{a} innehåller ett enda tal, \texttt{b} en sträng och \texttt{d}
+en vektor med tre tal. I utskriften ser man också att det olika
+listelementen med ett \$-tecken framför. För att t ex plocka ut
+listelementet \texttt{d} kan man nämligen skriva
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{my\_list}\SpecialCharTok{$}\NormalTok{d}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+[1] 4 5 2
+\end{verbatim}
+
+Känns det bekant med \$-tecken för att plocka ut saker? Vi har redan
+sett att man kan plocka ut en kolumn i en dataframe (tabell) genom att
+skriva t ex \texttt{stockdata\$returns} . En dataframe är nämligen
+egentligen en slags lista.
+
+\begin{tcolorbox}[enhanced jigsaw, left=2mm, opacityback=0, toprule=.15mm, titlerule=0mm, colframe=quarto-callout-tip-color-frame, rightrule=.15mm, colbacktitle=quarto-callout-tip-color!10!white, toptitle=1mm, leftrule=.75mm, coltitle=black, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Tip}, breakable, bottomtitle=1mm, arc=.35mm, colback=white, bottomrule=.15mm, opacitybacktitle=0.6]
+
+Du kan skriva \texttt{my\_list} i Console och sedan trycka på
+\texttt{tab}-tangenten i övre vänstra hörnet av tangentbordet för att se
+alla element som finns i listan \texttt{my\_list}. Klicka på det element
+du vill visa. 🤩
+
+\end{tcolorbox}
+
+I nästa datorlab kommer vi introducera ännu en viktig datatyp i R:
+\texttt{factor}. Men låt oss spara något till dess.
+
+\hypertarget{funktioner}{%
+\subsection{10. Funktioner}\label{funktioner}}
+
+Vi har sett idén med funktioner tidigare: en funktion \emph{gör} något
+med data. I matematikens värld är en funktion \(f\) en slags maskin som
+använder en \textbf{input} \(x\), gör några matematiska beräkningar, och
+ger tillbaka en \textbf{output} \(y\). Vi brukar skriva funktionen som
+\(y=f(x)\).
+
+En funktion i R är en liknande sak: den använder ett eller flera inputs
+och ger tillbaka ett eller flera outputs. Det kan handla om ren
+matematisk funktion, som kvadratroten \(\sqrt{x}\) av ett tal \(x\),
+vilket i R beräknas av funktionen \texttt{sqrt}:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{x }\OtherTok{=} \DecValTok{4}
+\NormalTok{y }\OtherTok{=} \FunctionTok{sqrt}\NormalTok{(x)}
+\NormalTok{y}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+[1] 2
+\end{verbatim}
+
+men det kan också vara något mer komplicerat som t ex att läsa in data
+från en Excel-fil:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{stockdata }\OtherTok{=} \FunctionTok{read\_excel}\NormalTok{(}\StringTok{\textquotesingle{}stock.xlsx\textquotesingle{}}\NormalTok{, }\AttributeTok{sheet =} \DecValTok{1}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+där \texttt{read\_excel} är en funktion som tre input-argument filnamn
+(som en sträng!), talet 1 för att vi vill läsa det första bladet.
+Funktionen \texttt{read\_excel} ger tillbaka en (tibble) dataframe som
+output med data.
+
+Det fina med programmeringsspråk är att man kan \textbf{skapa egna
+funktioner} som gör just det jobb som man behöver. Om jag t ex vill
+skapa en funktion som beräknar ränta-på-ränta effekten på ett
+sparkapital (med samma ränta varje år) så kan jag skriva ihop följande
+funktion:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{capital\_interest }\OtherTok{\textless{}{-}} \ControlFlowTok{function}\NormalTok{(capital, interest, years)\{}
+\NormalTok{  newcapital }\OtherTok{=}\NormalTok{ capital}\SpecialCharTok{*}\NormalTok{interest}\SpecialCharTok{\^{}}\NormalTok{years}
+  \FunctionTok{return}\NormalTok{(newcapital)}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+Några saker att notera:
+
+\begin{itemize}
+\item
+  Man använder alltid ordet \texttt{function} där att definiera en
+  funktion.
+\item
+  Funktionens input-argument skrivs inom parenteser. Vilka namn du
+  väljer är helt fritt, men det måste vara samma variabelnamn som du
+  sedan använder innanför de s k måsvingarna \texttt{\{\}} som
+  innehåller den faktiska koden som gör jobbet.
+\item
+  Funktionen tilldelas en variabel som jag gett namnet
+  \texttt{capital\_interest} , vilket är ett namn du väljer helt själv.
+\item
+  Koden använder ränta-på-ränta formeln
+  \(capital\cdot interest^{years}\) , dvs räntan, angett som 1.1 om du
+  får 10\% ränta, upphöjs i antal sparandeår. Upphöjt skrivs som
+  \texttt{\^{}} i R.
+\item
+  Funktionen avslutar med ordet \texttt{return} och den variabel du vill
+  att funktionen ska ge tillbaka som output.
+\end{itemize}
+
+Om jag sen vill använda min funktion för att se hur min hundring på
+banken kommer att utvecklas under 20 år med 5\% ränta så skriver jag
+(jag \textbf{anropar} funktionen):
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{my\_money }\OtherTok{=} \FunctionTok{capital\_interest}\NormalTok{(}\DecValTok{100}\NormalTok{, }\FloatTok{1.05}\NormalTok{, }\DecValTok{20}\NormalTok{)}
+\NormalTok{my\_money}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+[1] 265.3298
+\end{verbatim}
+
+Vi sa ovan att vi tilldelade variabeln \texttt{capital\_interest} en
+funktion. 🤯 Wait, what? Jo, faktiskt, om vi undersöker vilken typ av
+variabel \texttt{capital\_interest} är så är det faktiskt en funktion:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{class}\NormalTok{(capital\_interest)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+[1] "function"
+\end{verbatim}
+
+När vi skrev variabel \texttt{kapital} i Console skrev den ut värdet, t
+ex 100. Vad händer om vi göra samma sak med vår funktionsvariabel
+\texttt{capital\_interest} ? Hela funktionen skrivs ut som text!
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{ capital\_interest }
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+function(capital, interest, years){
+  newcapital = capital*interest^years
+  return(newcapital)
+}
+\end{verbatim}
+
+Vi kommer inte att skriva egna funktioner på kursen. Men du kommer att
+använda funktioner. Och då kan det vara bra att veta att någon har
+skrivit dessa funktioner på precis det sätt som vi skapade funktionen
+\texttt{capital\_interest} ovan.
+
+En sista sak: vissa funktioner har inga inputargument och ibland inte
+heller några outputs. Det betyder inte att funktionen inte gör något,
+utan den har istället vissa sido-effekter som inte alltid syns.
+\texttt{setwd} är t ex funktion som har sökvägen som input, men har inga
+output, men däremot sidoeffekten att ändra working directory. Funktionen
+\texttt{getwd()} har inga input-argument men ger tillbaka din nuvarande
+working directory som output.
+
+\hypertarget{tre-dialekter-av-r}{%
+\subsection{11. Tre dialekter av R}\label{tre-dialekter-av-r}}
+
+Man kan dela upp R's språk i tre slags dialekter, dvs tre olika
+kommandon (syntax) för att göra ungefär samma sak:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Base-R} - den ursprungliga syntaxen in R
+\item
+  \textbf{Formula syntax} - syntax som via paketet \texttt{Mosaic} har
+  utvecklats för undervisning i statistik
+\item
+  \textbf{Tidyverse} - en modern syntax utvecklat av personerna bakom
+  RStudio.
+\end{itemize}
+
+\href{../../R/cheatsheets/base-r_cheat_sheet.pdf}{\includegraphics[width=0.625in,height=\textheight]{../../misc/hexagons/figs/base_r_hexagon.svg}}~
+\href{../../R/cheatsheets/mosaic_cheatsheet_gf.pdf}{\includegraphics[width=0.625in,height=\textheight]{../../misc/hexagons/figs/mosaic_hexagon.svg}}~
+\href{../../R/cheatsheets/ggplot2_cheatsheet.pdf}{\includegraphics[width=0.625in,height=\textheight]{../../misc/hexagons/figs/tidyverse_hexagon.svg}}
+
+I SDA1 kommer vi försöka använda Formula syntax som mycket som möjligt,
+med inslag av Base-R. Tidyverse-kod kan ofta vara extremt effektiv, men
+tar för lång tid att lära sig på en grundkurs i statistik. Vi kommer
+dock då och då att visa hur man gör samma sak i de olika dialekterna,
+men på ett sätt som inte stör flödet för den student som helst vill
+hålla sig till ett sätt. Vi använder ikoner som du som student kan
+klicka på för att se ett kommando i olika dialekter. Här är ett exempel
+(prova att klicka ikonerna i höger-marginalen):
+
+I Formula syntax har vi redan sett att vi kan göra en scatter plot med
+kommandot
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{plot}\NormalTok{(mpg }\SpecialCharTok{\textasciitilde{}}\NormalTok{ hp, }\AttributeTok{data =}\NormalTok{ mtcars, }\AttributeTok{main =} \StringTok{"Cars fuel usage"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{figure}[H]
+
+{\centering \includegraphics{DatorLab1_files/figure-pdf/unnamed-chunk-26-1.pdf}
+
+}
+
+\end{figure}
+
+\marginnote{\begin{footnotesize}
+
+\href{../../R/BaseRSyntax.qmd\#scatter-plot}{\includegraphics[width=0.625in,height=\textheight]{../../misc/hexagons/figs/mosaic_hexagon.svg}}
+\href{../../R/TidyverseSyntax.qmd\#scatter-plot}{\includegraphics[width=0.625in,height=\textheight]{../../misc/hexagons/figs/tidyverse_hexagon.svg}}
+
+\end{footnotesize}}
+
+Om man vill ha plottar som liknar de fina plottarna i Tidyverse, men
+fortsätta att skriva den enklare formula-syntaxen så kan man använda
+paketet \texttt{ggformula}:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(ggformula)}
+\FunctionTok{gf\_point}\NormalTok{(mpg }\SpecialCharTok{\textasciitilde{}}\NormalTok{ hp, }\AttributeTok{data =}\NormalTok{ mtcars, }\AttributeTok{title =} \StringTok{"Cars fuel usage"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{figure}[H]
+
+{\centering \includegraphics{DatorLab1_files/figure-pdf/unnamed-chunk-27-1.pdf}
+
+}
+
+\end{figure}
+
+\hypertarget{sammanfattning}{%
+\subsection{12. Sammanfattning}\label{sammanfattning}}
+
+I den här datorlaborationen har du lärt dig att:
+
+\begin{itemize}
+\item
+  Använda R som en miniräknare.
+\item
+  Använda variabler som ett sätt att spara värden i en session.
+\item
+  Sätta working directory så R kan hitta dina filer.
+\item
+  Skriva kod både i Console och Editorn.
+\item
+  Läsa in data från fil och göra inledande grafer och
+  medelvärdeberäkningar för dataanalys.
+\end{itemize}
+
+
+
+\end{document}

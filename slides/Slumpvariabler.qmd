@@ -1,0 +1,21 @@
+---
+title: "Statistik och dataanalys I"
+subtitle: Föreläsning 14 - Slumpvariabler och deras egenskaper
+author: "**Mattias Villani**"
+institute: Statistiska institutionen<br>Stockholms universitet
+format: 
+  revealjs:
+    theme: [default, custom.scss]
+---
+
+## Översikt
+
+-   Slumpvariabler
+
+-   Väntevärde
+
+-   Varians
+
+## Sannolikhetsfördelningar för slumpvariabler
+
+![](figs/DoubleDiceWithProbDist.svg){fig-align="center" width="800"}

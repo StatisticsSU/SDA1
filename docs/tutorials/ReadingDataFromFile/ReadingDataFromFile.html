@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.1.251">
+<meta name="generator" content="quarto-1.2.269">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -99,10 +99,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -135,7 +137,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
     <a href="../../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../../misc/LogoBlueJustRing.jpg" alt="" class="navbar-logo">
+    <img src="../../misc/SU_logotyp_Staende_800px.png" alt="" class="navbar-logo">
     </a>
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">SDA1</span>
@@ -147,18 +149,29 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html">Översikt</a>
+    <a class="nav-link" href="../../index.html">
+ <span class="menu-text">Översikt</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../DelA.html">Del A - Introduktion till dataanalys</a>
+    <a class="nav-link" href="../../Del1.html">
+ <span class="menu-text">Del I - Dataanalys och Regression, 7.5 hp</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../DelB.html">Del B - Statistisk inferens</a>
+    <a class="nav-link" href="../../Del2.html">
+ <span class="menu-text">Del II - Sannolikhetsmodeller och inferens, 7.5 hp</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../R.html">R</a>
+    <a class="nav-link" href="../../R.html">
+ <span class="menu-text">R</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../stealourcourse.html">
+ <span class="menu-text">Stjäl vår kurs</span></a>
   </li>  
 </ul>
+              <div class="quarto-toggle-container">
+                  <a href="" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+              </div>
               <div id="quarto-search" class="" title="Search"></div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
@@ -174,7 +187,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
    
   <ul>
   <li><a href="#excel-data" id="toc-excel-data" class="nav-link active" data-scroll-target="#excel-data">Excel data</a></li>
-  <li><a href="#reading-in-data-from-an-excel-in-r" id="toc-reading-in-data-from-an-excel-in-r" class="nav-link" data-scroll-target="#reading-in-data-from-an-excel-in-r">Reading in data from an Excel in R</a></li>
+  <li><a href="#reading-data-from-an-excel-file-in-r" id="toc-reading-data-from-an-excel-file-in-r" class="nav-link" data-scroll-target="#reading-data-from-an-excel-file-in-r">Reading data from an Excel file in R</a></li>
   <li><a href="#reading-data-from-text-.txt-and-.csv-files" id="toc-reading-data-from-text-.txt-and-.csv-files" class="nav-link" data-scroll-target="#reading-data-from-text-.txt-and-.csv-files">Reading data from text (.txt) and .csv files</a></li>
   </ul>
 </nav>
@@ -198,6 +211,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
   </div>
     
+  
     
   </div>
   
@@ -219,12 +233,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </figure>
 </div>
 </section>
-<section id="reading-in-data-from-an-excel-in-r" class="level2">
-<h2 class="anchored" data-anchor-id="reading-in-data-from-an-excel-in-r">Reading in data from an Excel in R</h2>
-<p>There are many R packages for reading data from Excel. We will be using the <code>xlsx</code> package here. This installs and loads the <code>xlsx</code> package:</p>
+<section id="reading-data-from-an-excel-file-in-r" class="level2">
+<h2 class="anchored" data-anchor-id="reading-data-from-an-excel-file-in-r">Reading data from an Excel file in R</h2>
+<p>There are many R packages for reading data from Excel. We will be using the <code>readxl</code> package here. This installs and loads the <code>readxl</code> package:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#install.packages("xlsx") # Installs the xlsx package. Do it only once.</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"xlsx"</span>)           <span class="co"># loads the xlsx package. Do it once per R session.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#install.packages("readxl") # Installs the readxl package. Do it only once.</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"readxl"</span>)           <span class="co"># loads the readxl package. Do it once per R session.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="callout-note callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
@@ -236,13 +250,13 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>I have <em>commented out</em> the installation of the package by putting a <code>#</code> sign in front of the command <code>install.packages("xlsx")</code>. So this command will not be executed/run. I already have that package installed on my computer and don’t want to re-install it. You have to <em>uncomment</em>, that is remove the sign <code>#</code>, before running this on your computer, if you haven’t installed this package already.</p>
+<p>I have <em>commented out</em> the installation of the package by putting a <code>#</code> sign in front of the command <code>install.packages("readxl")</code>. So this command will not be executed/run. I already have that package installed on my computer and don’t want to re-install it. You have to <em>uncomment</em>, that is remove the sign <code>#</code>, before running this on your computer, if you haven’t installed this package already.</p>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>tour_de_france <span class="ot">&lt;-</span> <span class="fu">read.xlsx</span>(<span class="st">'Tour_de_France_2017.xlsx'</span>, <span class="dv">1</span>, <span class="at">header=</span><span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>tour_de_france <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">'Tour_de_France_2017.xlsx'</span>, <span class="at">sheet =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>What does the number <code>1</code> and <code>header=TRUE</code> mean in the above command? Well, the number 1 tells R to read data from the first sheet in the Excel file. If you want to the read data from the third sheet in an Excel file, then just replace 1 with 3 (the tour de france data has only one sheet, however). The <em>argument</em> <code>header=TRUE</code> tells R that the first row in the Excel file contains the name of the variables in each column.</p>
+<p>The argument <code>sheet=1</code> tells R to read data from the first sheet in the Excel file. If you want to the read data from the third sheet in an Excel file, then just replace 1 with 3 (the Tour de France data has only one sheet, however).</p>
 <div class="callout-important callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -253,8 +267,8 @@ Important
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>I placed the file Tour_de_France_2017.xlsx in my working directory. You can (and typically should) keep your data files in a different place on your computer. You then need to include the path to file before the file name. For example, on a computer running Windows, if your data is stored in the Documents folder, then replace the command above with</p>
-<p><code>tour_de_france &lt;- read.xlsx('C:\Documents\Tour_de_France_2017.xlsx', 1, header=TRUE)</code></p>
+<p>I placed the file Tour_de_France_2017.xlsx in my working directory. If the file with data is at a different place on your computer then you need to include the search <strong>path</strong> to the file before the file name. For example, on a computer running Windows, if your data is stored in the Documents folder, then replace the command above with</p>
+<p><code>tour_de_france &lt;- read_excel('C:\Documents\Tour_de_France_2017.xlsx', sheet = 1)</code></p>
 </div>
 </div>
 <div class="callout-tip callout callout-style-default callout-captioned">
@@ -267,14 +281,40 @@ Tip
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Rather than telling R explicitly where you data are stored, you can also use the command</p>
-<p><code>tour_de_france &lt;- read.xlsx(file.choose(), 1)</code></p>
+<p>Rather than telling R explicitly where your data are stored, you can also use the command</p>
+<p><code>tour_de_france &lt;- read_excel(file.choose(), sheet = 1)</code></p>
 <p>which will open up a window where you can look up the file in your file explorer and it will then read the first sheet (again the <code>1</code> in the command) of that file. This is convenient, but I don’t recommend it (lousy tip! 🙄) since you then have to click your way to the file everytime you re-run your R code.</p>
 </div>
 </div>
-<p>We have now read the dataset into a variable (a <code>dataframe</code>) that I have chosen to call <code>tour_de_france</code>. We can now just type the name of this variable in the Console in R to see the data. However, this will show <em>all</em> the observations in the data, which can be messy for larger datasets. The <code>head</code> command is useful, showing only the first few observations of the dataset:</p>
+<p>We have now read the dataset into a variable that I have chosen to call <code>tour_de_france</code>. We can now just type the name of this variable in the Console in R to see the data.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(tour_de_france)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>tour_de_france</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 104 × 12
+    Year Winner             Country   Age Team  `Total Time(h.…` `Total Time(h)`
+   &lt;dbl&gt; &lt;chr&gt;              &lt;chr&gt;   &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;                      &lt;dbl&gt;
+ 1  1903 Maurice Garin      France     32 La F… 94.33.00                    94.6
+ 2  1904 Henri Cornet       France     20 Cycl… 96.05.56                    96.1
+ 3  1905 Louis Trousselier  France     24 Peug… 110.26.58                  110. 
+ 4  1906 Ren� Pottier       France     27 Peug… 189.34.00                  190. 
+ 5  1907 Lucien Petit-Bret… France     24 Peug… 158.45.05                  159. 
+ 6  1908 Lucien Petit-Bret… France     25 Peug… 156.53.29                  157. 
+ 7  1909 Fran�ois Faber     Luxemb…    22 Alcy… 157.01.22                  157. 
+ 8  1910 Octave Lapize      France     21 Alcy… 162.41.30                  163. 
+ 9  1911 Gustave Garrigou   France     27 Alcy… 195.37.00                  196. 
+10  1912 Odile Defraye      Belgium    24 Alcy… 190.30.28                  191. 
+# … with 94 more rows, and 5 more variables: `Average Speed` &lt;dbl&gt;,
+#   Stages &lt;dbl&gt;, `Total Distance Ridden` &lt;dbl&gt;, `Starting Riders` &lt;dbl&gt;,
+#   `Finishing Riders` &lt;dbl&gt;</code></pre>
+</div>
+</div>
+<p>We can see two things: 1) some accented letters like é were replaced by a question mark, 2) the dataset is store in a <code>tibble</code> data structure. A tibble is <code>tidyverse</code>’s (this alternative dialect of R) version of a <code>dataframe</code>. It is best for us to convert this into a <code>dataframe</code>, which can be done with the command (note that we are overwriting the variable <code>tour_de_france</code>):</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>tour_de_france <span class="ot">=</span> <span class="fu">data.frame</span>(tour_de_france)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>To get a quick look at the data, the <code>head</code> command is useful, showing only the first few observations of the dataset:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(tour_de_france)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  Year              Winner Country Age         Team Total.Time.h.min.sec.
 1 1903       Maurice Garin  France  32 La Fran�aise              94.33.00
@@ -301,16 +341,16 @@ Tip
 </div>
 <p>You can now start analyzing the data in different ways, perhaps plotting the average speed variable over the year that Tour de France has run:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(Average.Speed <span class="sc">~</span> Year, <span class="at">data =</span> tour_de_france)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(Average.Speed <span class="sc">~</span> Year, <span class="at">data =</span> tour_de_france)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="ReadingDataFromFile_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="672"></p>
+<p><img src="ReadingDataFromFile_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <p>The average speed has increased over the year. Notable exceptions are the years during following the first world war.</p>
 </section>
 <section id="reading-data-from-text-.txt-and-.csv-files" class="level2">
 <h2 class="anchored" data-anchor-id="reading-data-from-text-.txt-and-.csv-files">Reading data from text (.txt) and .csv files</h2>
-<p>Data often come as a pure text file, often with the file ending <code>.txt</code>. Such files contains a simple table with the data. The first row may or may not contain the names of the variables in the columns. The columns are separated by a <em>separator</em>, typically a comma (<code>,</code>) or a <code>TAB</code> (blank space of a certain width). Here is an example with data from Indy car drivers:</p>
+<p>Data may also come as a pure text file, often with the file ending <code>.txt</code>. Such files contain a simple table with the data. The first row may or may not contain the names of the variables in the columns. The columns are separated by a <em>separator</em>, typically a comma (<code>,</code>) or a <code>TAB</code> (blank space of a certain width). Here is an example with data from Indy car drivers:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="indydata_txtformat.png" class="img-fluid figure-img" width="483"></p>
@@ -319,8 +359,8 @@ Tip
 <p>Note how the columns are not nice aligned, but clearly separated by blank space (TAB) so that R can understand which numbers belongs to which variable (column). Note also that the first row contain the variable names: <code>Year</code>, <code>Winner</code>, <code>Chassis</code>, <code>Engine</code>, <code>Speed</code>, <code>Time_hrs</code> and <code>Distance</code>.</p>
 <p>Let’s read this text file with data into R using the built-in function <code>read.delim</code></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>indy <span class="ot">&lt;-</span> <span class="fu">read.delim</span>(<span class="st">'Indy_500_2018.txt'</span>, <span class="at">header =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(indy)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>indy <span class="ot">&lt;-</span> <span class="fu">read.delim</span>(<span class="st">'Indy_500_2018.txt'</span>, <span class="at">header =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(indy)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  Year        Winner  Chassis   Engine Speed.computed Time_hrs Distance
 1 1911   Ray Harroun   Marmon   Marmon       74.60212 6.702222      500
@@ -331,6 +371,7 @@ Tip
 6 1916   Dario Resta  Peugeot  Peugeot       84.00093 3.571389      300</code></pre>
 </div>
 </div>
+<p>where the argument <code>header = TRUE</code> tells R that the first row in the dataset contains the names of the variables in the data.</p>
 <p>Finally, a very common file format are, comma-separated values files, often called <code>csv</code> for short. These are similar to <code>txt</code> files, but are read into R using the built-in <code>read.csv</code> function.</p>
 <div class="callout-tip callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
@@ -371,6 +412,121 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'alternate';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
   const icon = "";
   const anchorJS = new window.AnchorJS();
   anchorJS.options = {
@@ -392,7 +548,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
     button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
     setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
       button.setAttribute("title", currentTitle);
       button.classList.remove('code-copy-button-checked');
     }, 1000);
@@ -428,24 +601,42 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
   var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
   for (var i=0; i<bibliorefs.length; i++) {
     const ref = bibliorefs[i];
-    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
-    tippyHover(ref, function() {
-      var popup = window.document.createElement('div');
-      cites.forEach(function(cite) {
-        var citeDiv = window.document.createElement('div');
-        citeDiv.classList.add('hanging-indent');
-        citeDiv.classList.add('csl-entry');
-        var biblioDiv = window.document.getElementById('ref-' + cite);
-        if (biblioDiv) {
-          citeDiv.innerHTML = biblioDiv.innerHTML;
-        }
-        popup.appendChild(citeDiv);
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
       });
-      return popup.innerHTML;
-    });
+    }
   }
 });
 </script>

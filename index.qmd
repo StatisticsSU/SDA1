@@ -1,8 +1,9 @@
 ---
 title: "Statistik och dataanalys I, 15 hp"
+format: html
 ---
 
-<img src="/images/flashytimeseries.jpg" alt="Flashy time series image" class="center" width="100%"/>
+<img src="/misc/flashytimeseries.jpg" alt="Flashy time series image" class="center" width="100%"/>
 
 ### Kursens innehåll
 
@@ -14,37 +15,46 @@ Du lär dig att utföra dataanalyser i praktiken, bl a genom datorlaborationer o
 
 Kursen består av två delar:
 
--   [Dataanalys, 7.5 hp.](DelA.html) I det här momentet ingår insamling, bearbetning, visualisering och sammanfattning av data i programspråket R. En stor del av momentet behandlar sambands- och regressionsanalys som utmynnar i metoder för prediktion.
--   [Statistiska modeller och inferens, 7.5 hp.](DelB.html) I kursens andra momentet behandlas sannolikheter, slumpvariabler och sannolikhetsfördelningar. En central del i momentet är inferens, dvs. statistiska metoder för att dra slutsatser om olika fenomen från data. Kursen avslutas med en introduktion till beslutsfattade under osäkerhet.
+-   [Dataanalys och regression, 7.5 hp.](DelA.html) I det här momentet ingår insamling, bearbetning, visualisering och sammanfattning av data i programspråket R. En stor del av momentet behandlar sambands- och regressionsanalys som utmynnar i metoder för prediktion.
+-   [Sannolikhetsmodeller och inferens, 7.5 hp.](DelB.html) I kursens andra momentet behandlas sannolikheter, slumpvariabler och sannolikhetsfördelningar. En central del i momentet är inferens, dvs. statistiska metoder för att dra slutsatser om olika fenomen från data. Kursen avslutas med en introduktion till beslutsfattade under osäkerhet.
 
 ### Kurslitteratur
 
--   De Veaux, R., Velleman, P. och Bock, D. (2021). [Stats: Data and Models](https://media.pearsoncmg.com/intl/ge/2021/cws/ge_deveaux_stats_5/statdm5d_cw.html), Pearson Global Edition, Studentlitteratur. Boken förkortas **SDM** nedan.
+-   De Veaux, R., Velleman, P. och Bock, D. (2021). [Stats: Data and Models](https://nordics.pearson.com/products/stats-data-and-models-5th-global-edition-e-book?variant=42945920630933), 5:te upplagan, Pearson Global Edition, ISBN 9781292362212. Boken förkortas **SDM** nedan. Boken finns att köpa som fysisk bok på Akademibokhandeln [Frescati](https://goo.gl/maps/25BMYBhenhYTvo6i7) eller [City](https://goo.gl/maps/mP8NxWpD1Ss1WPkk9), eller online på [Adlibris](https://www.adlibris.com/se/bok/stats-data-and-models-global-edition-9781292362212) och [Bokus](https://www.bokus.com/bok/9781292362212/stats-data-and-models-global-edition/). En digital version finns att köpa [här](https://nordics.pearson.com/products/stats-data-and-models-5th-global-edition-e-book?variant=42945920630933).
 -   Ytterligare kompletterande material som delas ut under kursens gång.
 
-### Kursstruktur och schema
+### Kursstruktur
 
-Kursen består av föreläsningar, räkneövningar och datorlaborationer.\
-Kursens schema finns på [TimeEdit]().
+Kursen består av föreläsningar, räkneövningar och datorlaborationer. Se respektive del av kursen för detaljer:  [Dataanalys och regression, 7.5 hp.](DelA.html) och [Sannolikhetsmodeller och inferens, 7.5 hp.](DelB.html).\
+
+
+### Schema
+
+Kursens schema finns på [TimeEdit](https://cloud.timeedit.net/su/web/stud1/s.html?tab=8&object=cevt_39894_VT2023&startDate=20221217&endDate=20230624&type=courseevent&h=t). Ett tips är att välja *Prenumerera* i övre högra hörnet på TimeEdit och sen klistra in länken i ditt kalenderprogram på mobilen.
+
+### Formel- och tabellsamlingar
+
+- [Formelsamlingen](/misc/formelsamling_sda1.pdf) innehåller de flesta av kursens formler och kommer att delas ut under salstentamen.
+- [Tabellsamlingen](/misc/tabellsamling_sda1.pdf) innehåller tabeller över statistiska fördelningar. Även denna samling kommer att delas ut under salstentamen.
+
+### Interaktivt material
+
+På vissa delar av kursen använder vi interaktivt material för att underlätta lärandet. De interaktiva applikationerna kommer vara länkade från föreläsningsslides och under respektive föreläsning. En sida med alla applikationer finns [här](interaktiv.qmd).
+
 
 ### Lärare
 
 ::: {layout="[ [1,1],[1,1] ]"}
 <img src="/misc/VillaniLowRes.jpg" width="35%"/>\
-[Mattias Villani](https://mattiasvillani.com)<br>Kursansvarig och föreläsare<br>Professor
+[Mattias Villani](https://mattiasvillani.com)<br>Kursansvarig och Föreläsare<br>Professor
 
-<img src="/misc/QuirozPhoto.jpg" width="40%"/>\
+<img src="/misc/QuirozPhoto.jpg" width="35%"/>\
 [Matias Quiroz](https://matiasquiroz.com)<br>Föreläsare<br>Universitetslektor
 
-<img src="/misc/female.png" width="30%"/>\
-[TBD](https://matiasquiroz.com)<br>Övningslärare<br>Masterexamen i Statistik
+<img src="/misc/female.png" width="35%"/>\
+[Mona Sfaxi](https://www.su.se/profiles/mosf7202-1.616028)<br>Övningar, Datorövningar och Jour<br>Masterexamen i Statistik
 
-<img src="/misc/female.png" width="30%"/>\
-[TBD](https://matiasquiroz.com)<br>Övningslärare<br>Kandidatexamen i Statistik
+<img src="/misc/jonlachmann.jpeg" width="35%"/>\
+[Jon Lachmann](https://www.su.se/profiles/jola4668-1.579398)<br>Datorövningar<br>Masterexamen i Statistik
 :::
 
-## Datamaterial
-
-Kursboken *Stats - Data and Models* kommer med över 500 olika datamaterial som hittas [här](https://media.pearsoncmg.com/intl/ge/2021/cws/ge_deveaux_stats_5/statdm5d_datasets.html). Datamaterialen är i ofta i Excel-format, se denna [guide](/tutorials/ReadingDataFromFile/ReadingDataFromFile.html) om hur man läser in data från Excel i R.
-
-------------------------------------------------------------------------

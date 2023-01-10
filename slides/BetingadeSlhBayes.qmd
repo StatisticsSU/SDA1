@@ -1,0 +1,69 @@
+---
+title: "Statistik och dataanalys I"
+subtitle: Föreläsning 13 - Betingade sannolikheter och Bayes sats
+author: "**Mattias Villani**"
+institute: Statistiska institutionen<br>Stockholms universitet
+format: 
+  revealjs:
+    theme: [default, custom.scss]
+---
+
+## Översikt
+
+-   Betingade sannolikheter
+
+-   Bayes sats
+
+## Bayes sats
+
+![](figs/bayes_twoevents.svg){fig-align="center" width="350"}
+
+-   `Exempel` - Covid. B = Covid. A = test positivt.
+
+## Bayes sats
+
+![](figs/bayes_twoevents_cond.svg){fig-align="center" width="350"}
+
+$$
+    P(B | A) = \frac{P(A \cap B)}{P(A)}
+$$
+
+$$
+    P(B | A) = \frac{P(A | B)P(B)}{P(A)}
+$$
+
+## Bayes sats över en partition
+
+:::: columns
+::: {.column width="60%"}
+$$
+    P(B_k | A) = \frac{P(A | B_k)P(B_k)}{P(A)}
+$$
+
+$$
+    P(A) = \sum_{j=1}^K P(A | B_j)p(B_j)
+$$
+
+$$
+    \color{#2679b5}{\boxed{P(B_k | A) = \frac{P(A | B_k)P(B_k)}{\sum_{j=1}^K P(A | B_j)p(B_j)}}}
+$$
+:::
+
+::: {.column width="40%"}
+![](figs/bayesgeneral.svg){fig-align="center" width="350"}
+:::
+::::
+
+:::: columns
+::: {.column width="60%"}
+-   `Exempel` - Känna igen handskrivna siffor:
+    -   $A =$ {svart pixel i mitten}
+    -   $B_0=$ {siffran är en nolla}
+    -   $B_1=$ {siffran är en etta}
+    -   $B_2=$ {siffran är en tvåa} osv
+:::
+
+::: {.column width="40%"}
+![](figs/mnistZeroWithRedVoxel.png){fig-align="center" width="200"}![](figs/mnistOneWithRedVoxel.png){fig-align="center" width="200"}
+:::
+::::

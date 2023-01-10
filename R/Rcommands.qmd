@@ -1,7 +1,7 @@
 ---
 title: "R commands for SDA1"
 author: "Mattias Villani"
-editor: visual
+format: html
 ---
 
 > This document gives some useful R commands for the basic stats course SDA1 using the `mosaic` and `ggformula` packages using the R formula syntax.
@@ -24,7 +24,6 @@ library(ggformula)
 ```{r}
 GSS <- read.csv("GSS_clean.csv")
 ```
-
 
 ## Plotting
 

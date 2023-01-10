@@ -3,6 +3,7 @@ title: Statistik och dataanalys I, 15 hp
 subtitle: Inlämningsuppgift 1
 author: "Student 1 och Student 2"
 date: last-modified
+format: html
 fig-cap-location: margin
 #title-block-banner: true
 ---

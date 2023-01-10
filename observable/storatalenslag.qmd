@@ -1,0 +1,13 @@
+---
+title: "Stora talens lag - Bernoullifördelning"
+format: html
+---
+
+<iframe width="100%" height="986" frameborder="0" src="https://observablehq.com/embed/66b7856da8d45e43@647?cells=text1%2Csliders%2Cflip_pic%2Csetup">
+
+</iframe>
+
+::: {style="font-size: smaller;"}
+Adaption från Marc McClures [Law of Large
+Numbers](https://observablehq.com/@mcmcclur/law-of-large-numbers)
+:::

@@ -1,0 +1,35 @@
+---
+title: "Statistik och dataanalys I"
+subtitle: Föreläsning 1 - Introduktion
+author: "**Mattias Villani**"
+institute: Statistiska institutionen<br>Stockholms universitet
+format: 
+  revealjs:
+    theme: [default, custom.scss]
+---
+
+## Översikt
+
+-   Introduktion till kursen
+
+-   Motiverande exempel
+
+
+## Riksbanken och styrräntan
+
+-   Riksbankens mål är att hålla inflationen nära 2% per år.
+
+-   Hur beror inflationen på räntan?
+
+-   Riksbankens mål är att hålla inflationen nära 2% per år.
+
+::: {layout="[ [1,1]]"}
+![](figs/inflreposcatter.png){fig-align="center" width="300"}
+
+![](figs/inflreposcatter.png){fig-align="center" width="300"}
+:::
+
+$$
+y_{t}=\alpha+{\color{orange} {\phi_{1}y_{t-1}}}+\varepsilon_{t}+{\color{blue} {\theta_{1}\varepsilon_{t-1}}}
+$$
+

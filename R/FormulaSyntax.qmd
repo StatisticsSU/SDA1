@@ -1,10 +1,10 @@
 ---
 title: "Formula syntax"
 author: "Mattias Villani"
-editor: visual
+format: html
 ---
 
-## Scatter plot 
+## Scatter plot
 
 En vanlig scatter plot fås genom:
 
@@ -15,6 +15,11 @@ plot(mpg ~ hp, data = mtcars, main = "Cars fuel usage")
 Med ggformula paketet kan man använda formel-syntax, men få plottar som liknar Tidyverse:
 
 ```{r}
+#| echo: true
+#| output: false
 library(ggformula)
+```
+
+```{r}
 gf_point(mpg ~ hp, data = mtcars, title = "Cars fuel usage")
 ```

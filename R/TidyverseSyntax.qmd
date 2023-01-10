@@ -1,8 +1,20 @@
 ---
 title: "Tidyverse syntax"
 author: "Mattias Villani"
-editor: visual
+format: html
 ---
+
+## Introduktion
+
+[Tidyverse](https://www.tidyverse.org/) är en samling R-paket som delar på samma underliggande filosofi. När man väl lärt sig Tidyverse-filosofin, är paketen väldigt kraftfulla. Men eftersom det tar sin tid att lära sig Tidyverse så använder vi inte dessa paket på den här grundkursen. För att still nyfikenheten bland programmeringintresserade studenter kommer vi då och då länka till motsvarande kod i Tidyverse genom att visa den här ikonen i marginalen:
+
+![](../../misc/hexagons/figs/tidyverse_hexagon.svg){fig-align="center" width="60"}
+
+Klickar man på den ikonen får man se motsvarande kod från ett eller flera av de olika Tidyverse-paketen, t ex
+
+![](/misc/hexagons/figs/tidyhexa.svg){fig-align="center" width="200"}
+
+Speciellt värt att notera bland dessa paket är [ggplot2](https://ggplot2.tidyverse.org/) som, trots sitt knepiga namn, är ett mycket användbart paket för diagram och visualisering.
 
 ## Scatter plot
 

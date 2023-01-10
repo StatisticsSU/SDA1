@@ -1,7 +1,12 @@
 .Rhistory
-./Rproj.user
+/.Rproj.user
+SDA1kurs.Rproj
+sda1.code-workspace
+Manifest.toml
 /.quarto/
 /_site/
 /hidden
-.Rproj.user
-sda1.code-workspace
+/admin
+/docs
+/slides/figs/flaticons/
+stealourcourse.qmd
