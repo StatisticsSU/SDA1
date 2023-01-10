@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Mattias Villani">
-<meta name="dcterms.date" content="2023-01-09">
+<meta name="dcterms.date" content="2023-01-10">
 
 <title>SDA1 - Statistik och dataanalys I, 15 hp</title>
 <style>
@@ -224,7 +224,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">January 9, 2023</p>
+      <p class="date">January 10, 2023</p>
     </div>
   </div>
   
@@ -240,25 +240,25 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <blockquote class="blockquote">
 <p>I den här första datorlabben kommer ni bekanta er med programmeringsspråket <strong>R</strong> och dess arbetsmiljö <strong>RStudio</strong>.</p>
 </blockquote>
-<div class="callout-caution callout callout-style-default callout-captioned">
+<div class="callout-important callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-caption-container flex-fill">
-Keep calm and carry on
+Oroa dig inte
 </div>
 </div>
 <div class="callout-body-container callout-body">
 <blockquote class="blockquote">
-<p>Det är <strong>många</strong> nya saker som presenteras i den här datorlaborationen, så var beredd på att inte allt kommer att sjunka in direkt. Försök att ta dig igenom hela texten, och övningarna. Du kan sen återkomma till denna labb på andra datorlaborationer för att repetera de delar du behöver. Ok, ta ett djupt andetag så börjar vi!</p>
+<p>Det är <strong>många</strong> nya saker som presenteras i den här datorlaborationen, så var beredd på att inte allt kommer att sjunka in direkt. Försök att ta dig igenom hela texten, och övningarna. Du kan sen återkomma till denna labb på andra datorlaborationer för att repetera de delar du behöver.<br> Ok, ta ett djupt andetag så börjar vi.</p>
 </blockquote>
 </div>
 </div>
-<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-info callout callout-style-default no-icon callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
-<i class="callout-icon"></i>
+<i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-caption-container flex-fill">
 Instruktioner
@@ -268,7 +268,7 @@ Instruktioner
 <p>💪 Avsnitt med den här symbolen är uppgifter där ni ska göra något.</p>
 </div>
 </div>
-<div class="callout-warning callout callout-style-default callout-captioned">
+<div class="callout-note callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
@@ -366,7 +366,7 @@ Se upp!
 <i class="callout-icon"></i>
 </div>
 <div class="callout-caption-container flex-fill">
-Note
+Learn the rules so you know how to break them
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -396,7 +396,7 @@ Note
 <p><img src="kapiteluppdatering2.png" class="img-fluid figure-img" width="400"></p>
 </figure>
 </div>
-<p>Variabel <code>kapital</code> är nu 116.6 och du är redo för din kommande avkastning under år 3.</p>
+<p>Variabeln <code>kapital</code> är nu 116.6 och du är redo för din kommande avkastning under år 3.</p>
 <section id="uppgift-2.1" class="level4">
 <h4 class="anchored" data-anchor-id="uppgift-2.1">💪 Uppgift 2.1</h4>
 <p>Avkastningen år 3 blev tyvärr minus 4%. Uppdatera variabeln <code>kapital</code> ovan så att den visar att värdet på kapitalet efter år 3 är 111.936 kr. Notera att en minskning med 4% innebär att vi måste multiplicera med 0.96 (1-0.04). Multiplikation med tal mindre än 1 leder till en minskning av kapitalet.</p>
@@ -416,7 +416,7 @@ Note
 <i class="callout-icon"></i>
 </div>
 <div class="callout-caption-container flex-fill">
-Warning
+Svenska är fint, men inte i filnamn
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -431,7 +431,7 @@ Stor risk att du får problem då.</code></pre>
 <i class="callout-icon"></i>
 </div>
 <div class="callout-caption-container flex-fill">
-Warning
+Dina filer kommer försvinna
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -540,7 +540,7 @@ What’s in a name? Mer än du tror!
 </section>
 <section id="läsa-in-data-från-fil" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="läsa-in-data-från-fil">6. Läsa in data från fil</h2>
-<p>Vi vill nu läsa in data från Excelfilen stock.xlsx. Du kan ladda ner den filen <a href="https://github.com/StatisticsSU/SDA1/datorlabb/lab1/stock.xlsx">här</a>. Beroende på din dator så kommer en av två saker hända:</p>
+<p>Vi vill nu läsa in data från Excelfilen stock.xlsx. Du kan ladda ner den filen <a href="https://statisticssu.github.io/SDA1/datorlab/lab1/stock.xlsx">här</a>. Beroende på din dator så kommer en av två saker hända:</p>
 <ol type="1">
 <li><p>filen stock.xlsx hamnar automatiskt i mappen <strong>Downloads</strong> (eller liknande) på din dator. Du får då kopiera eller flytta filen till din working directory (din SDA1 mapp) genom att använda datorns filhanterare.</p></li>
 <li><p>du får välja var du vill spara ner filen. Klicka dig fram till din working directory (din SDA1 mapp) och spara filen där.</p></li>
@@ -612,7 +612,7 @@ Kommentarer
 <i class="callout-icon"></i>
 </div>
 <div class="callout-caption-container flex-fill">
-Tip
+Ange sökväg till filer som inte är i din Working directory
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -824,15 +824,15 @@ $d
 <i class="callout-icon"></i>
 </div>
 <div class="callout-caption-container flex-fill">
-Tip
+Hitta lätt bland alla fickor
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Du kan skriva <code>my_list</code> i Console och sedan trycka på <code>tab</code>-tangenten i övre vänstra hörnet av tangentbordet för att se alla element som finns i listan <code>my_list</code>. Klicka på det element du vill visa. 🤩</p>
+<p>Om du skriver <code>my_list$</code> (inklusive $-tecknet) i Console kommer det att dyka upp en lista med alla element som finns i listan <code>my_list</code>. Använd pil-tangenterna (upp och ned) för att välja det element du är intresserad av och tryck Enter. 🤩</p>
 </div>
 </div>
 <p>Vi ska slutligen presentera ytterligare en viktig datatyp i R: <code>factor</code>. Prova att skriva in kommandot <code>str(stockdata)</code> i Console. Kommandot returnerar variablernas namn och datatyper, vilket ju är <code>numeric</code> för alla våra tre kolumner <code>year</code>, <code>capital</code> och <code>returns</code> i tabellen. Men tabellkolumner kan bestå av bokstäver (strängar) eller <strong>kategoriska variabler</strong> (t ex <code>man</code> och <code>kvinna</code>). Kategoriska variabler kallas för <strong>faktorvariabler</strong> i R.</p>
-<p>R har ett antal inbyggda datamaterial, t ex datamaterialet <code>warpbreaks</code> som innehåller information om antalet fel (<code>breaks</code>) vid vävning för två olika typer av garn (<code>wool</code>) och tre olika spänningar av vävstolen (tension). Vi börjar med att tilldela datamaterialet till variabeln garndata genom att skriva <code>garndata = warpbreaks</code> i Console. Skriv <code>head(garndata)</code> för en snabb titt på de första observationerna. Som du ser är <code>breaks</code> en numerisk variabel (eller snarare en kolumn in tabellen), men både <code>wool</code> och <code>tension</code> är kategoriska faktorvariabler (<code>wool</code> kan bara vara av garntyp <code>A</code> eller <code>B</code>, och tension kan vara låg (<code>L</code>), mellan (<code>M</code>) eller hög (<code>H</code>)). Vi kan se detta mer exakt genom att skriva <code>str(garndata)</code> i Console:</p>
+<p>R har ett antal inbyggda datamaterial, t ex datamaterialet <code>warpbreaks</code> som innehåller information om antalet fel (<code>breaks</code>) vid vävning för två olika typer av garn (<code>wool</code>) och tre olika spänningar av vävstolen (<code>tension</code>). Vi börjar med att tilldela datamaterialet till variabeln garndata genom att skriva <code>garndata = warpbreaks</code> i Console. Skriv <code>head(garndata)</code> för en snabb titt på de första observationerna. Som du ser är <code>breaks</code> en numerisk variabel (eller snarare en kolumn in tabellen), men både <code>wool</code> och <code>tension</code> är kategoriska faktorvariabler (<code>wool</code> kan bara vara av garntyp <code>A</code> eller <code>B</code>, och tension kan vara låg (<code>L</code>), mellan (<code>M</code>) eller hög (<code>H</code>)). Vi kan se detta mer exakt genom att skriva <code>str(garndata)</code> i Console:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>garndata <span class="ot">=</span> warpbreaks</span>
 <span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(garndata)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -953,8 +953,26 @@ Tip
 <li><p>Läsa in data från fil och göra inledande grafer och medelvärdeberäkningar för dataanalys.</p></li>
 <li><p>Vi har också tittat på datastrukturer i R och t o m nosat lite på funktioner i R.</p></li>
 </ul>
-<p>Om du har kommit hit utan att slita ditt hår alltför många gånger så tycker jag att du ska vara väldigt nöjd med dig själv, och allt du lärt dig om R. Ditt framtida jag kommer att tacka dig!</p>
-<p>Ta nu en ☕ och kanske en 🍨 eller t o m en 🍰 för att fira!</p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+End of the line
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Om du har kommit hit utan att slita ditt hår alltför många gånger så tycker jag att du ska vara väldigt nöjd med dig själv. Du har redan lärt dig massor om R. Ditt framtida jag kommer att tacka dig!</p>
+<p>Ta nu en ☕ och en 🍰 för att fira!</p>
+</div>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="states-of-a-programmer.png" class="img-fluid figure-img" width="550"></p>
+<p></p><figcaption class="figure-caption">https://devcamp.com/site_blogs/top-5-programming-memes</figcaption><p></p>
+</figure>
+</div>
 
 
 </section>
