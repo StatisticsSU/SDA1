@@ -12,8 +12,8 @@
   \usetheme{Luebeck}
   \usecolortheme{beaver}
   \beamertemplatenavigationsymbolsempty
-  \setbeamertemplate{headline}{}
 }
+
 
 \usepackage{graphicx} % for including images
 \usepackage{pgf} % for logo
@@ -135,7 +135,24 @@ status open
 \begin_layout Plain Layout
 
 \color gray
-ST1101
+ST1101 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hspace{4.45cm}
+\backslash
+insertframenumber/
+\backslash
+inserttotalframenumber
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
