@@ -19,7 +19,7 @@ Läs: LITTERATUR | [Slides](/misc/larry.png)
 
 **Föreläsning 3 - Hantera och beskriva data.**\
 Läs: SDM Kapitel 2 | [Slides](/misc/larry.png)\
-Widget: [histogram](/observable/histogram.qmd)
+Interaktivt: [widget - histogram](/observable/histogram.qmd)
 
 **Föreläsning 4 - Samband mellan kategoriska variabler.**\
 Läs: SDM Kapitel 3 | [Slides](/misc/larry.png) 
