@@ -163,9 +163,9 @@
   {
     "objectID": "observable/storatalenslag.html",
     "href": "observable/storatalenslag.html",
-    "title": "Stora talens lag - Bernoullifördelning",
+    "title": "Stora talens lag",
     "section": "",
-    "text": "Adaption från Marc McClures Law of Large Numbers"
+    "text": "Initial plot från Marc McClures Law of Large Numbers"
   },
   {
     "objectID": "tutorials/ReadingDataFromFile/ReadingDataFromFile.html",
@@ -698,5 +698,12 @@
     "title": "R",
     "section": "Kursens R-paket",
     "text": "Kursens R-paket\nKursen har ett eget R-paket sda1 med några hjälpfunktioner och datamaterial som används på kursen.\n\n\n\n\n\n\n\n\nInstallera kurspaketet\n\ninstall.packages(\"remotes\") \ninstall_github(\"StatisticsSU/sda1\") \nlibrary(remotes)\nlibrary(sdakurs)"
+  },
+  {
+    "objectID": "observable/storatalenslag.html#normalpopulation",
+    "href": "observable/storatalenslag.html#normalpopulation",
+    "title": "Stora talens lag",
+    "section": "Normalpopulation",
+    "text": "Normalpopulation"
   }
 ]

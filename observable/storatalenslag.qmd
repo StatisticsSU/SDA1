@@ -1,13 +1,22 @@
 ---
-title: "Stora talens lag - Bernoullifördelning"
+title: "Stora talens lag"
 format: html
 ---
 
-<iframe width="100%" height="986" frameborder="0" src="https://observablehq.com/embed/66b7856da8d45e43@647?cells=text1%2Csliders%2Cflip_pic%2Csetup">
+## Slantsingling
 
+<iframe width="100%" height="987" frameborder="0"
+  src="https://observablehq.com/embed/@mattiasvillani/stora-talens-lag@838?cells=text1%2Ctext2%2Csliders%2Cflip_pic%2Cmake_pic">
 </iframe>
 
 ::: {style="font-size: smaller;"}
-Adaption från Marc McClures [Law of Large
+Initial plot från Marc McClures [Law of Large
 Numbers](https://observablehq.com/@mcmcclur/law-of-large-numbers)
 :::
+
+
+## Normalpopulation
+
+<iframe width="100%" height="892" frameborder="0"
+  src="https://observablehq.com/embed/@mattiasvillani/stora-talens-lag@833?cells=textNormalPop%2Cviewof+userinputs%2Cprob_within_eps%2Cplt">
+</iframe>
