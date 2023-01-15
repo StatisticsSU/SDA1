@@ -1,0 +1,27 @@
+---
+title: "Interaktivt lärande"
+format: html
+---
+
+Här samlar vi alla interaktiva grafer (widgets) som vi länkar till från slides.<br>
+
+Extramaterial: till varje interaktiv graf finns en interaktiv/reaktiv notebook med mer information, här finns en [lista med alla notebooks](https://observablehq.com/collection/@mattiasvillani/sda1). Dessa notebook ingår *inte* i kursen, men länkas här för den nyfikne studenten som vill läsa lite mer för en djupare förståelse.
+
+#### Del 1 - Dataanalys och Regression
+
+Föreläsning 3 - **Val av antal bins i histogram**: <br>
+[widget](/observable/histogram.qmd) | [notebook](https://observablehq.com/@mattiasvillani/histogram)
+
+
+#### Del 2 - Sannolikhetsmodeller och Inferens
+
+<br>
+Föreläsning 16 - **Student-*t* fördelning**: <br>
+[widget](/observable/studentt.qmd) | [notebook](https://observablehq.com/@mattiasvillani/student-t)
+
+Föreläsning 18 - **Stora talens lag**: <br>
+[widget](/observable/storatalenslag.qmd) | [notebook](https://observablehq.com/@mattiasvillani/stora-talens-lag)
+
+Föreläsning 18 - **Centrala gränsvärdessatsen**: <br>
+[widget](/observable/cgs.qmd) | [notebook](https://observablehq.com/@mattiasvillani/cgs)
+

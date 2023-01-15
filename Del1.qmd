@@ -1,0 +1,85 @@
+---
+title: "Del I - Dataanalys och Regression, 7.5 hp"
+format: html
+---
+
+> I det här momentet ingår insamling, bearbetning, visualisering och sammanfattning av data i programspråket R. En stor del av momentet behandlar sambands- och regressionsanalys som utmynnar i metoder för prediktion.
+
+Förkortningen **SDM** står för kursboken [Stats: Data and Models](https://nordics.pearson.com/products/stats-data-and-models-5th-global-edition-e-book?variant=42945920630933) 5:e upplagan, global edition.
+
+Under vissa föreläsningar länkar vi till `Extramaterial`. Det är material som inte krävs för att klara kursen, men som den nyfikne kan läsa för att få en djupare förståelse.
+
+### **Föreläsningar**
+
+**Föreläsning 1 - Introduktion.**\
+Läs: SDM Kapitel 1 | [Slides](/misc/larry.png) 
+
+**Föreläsning 2 - Introduktion till R. **\
+Läs: LITTERATUR | [Slides](/misc/larry.png) 
+
+**Föreläsning 3 - Hantera och beskriva data.**\
+Läs: SDM Kapitel 2 | [Slides](/misc/larry.png)\
+Widget: [histogram](/observable/histogram.qmd)
+
+**Föreläsning 4 - Samband mellan kategoriska variabler.**\
+Läs: SDM Kapitel 3 | [Slides](/misc/larry.png) 
+
+**Föreläsning 5 - Jämföra fördelningar. Tidsserier. Transformationer.**\
+Läs: SDM Kapitel 4 | [Slides](/misc/larry.png) 
+
+**Föreläsning 6 - Standardisering och Normalmodellen.**\
+Läs: SDM Kapitel 5 | [Slides](/misc/larry.png) 
+
+**Föreläsning 7 - Samband mellan numeriska variabler.**\
+Läs: SDM Kapitel 6 | [Slides](/misc/larry.png) 
+
+**Föreläsning 8 - Enkel linjär regression.**\
+Läs: SDM Kapitel 7 | [Slides](/misc/larry.png)
+
+**Föreläsning 9 - Multipel regression.**\
+Läs: SDM Kapitel 8-9 | [Slides](/misc/larry.png) 
+
+**Föreläsning 10 - Populationer och stickprov. Undersökningar och experiment.**\
+Läs: SDM 10.1-10.3 och 11.1-11.2 | [Slides](/misc/larry.png) 
+
+**Föreläsning 11 - Sammanfattning**\
+Läs: [Slides](/misc/larry.png) 
+
+**Videoföreläsning - Matematikrepetition.**\
+Läs: [Slides](/misc/larry.png) 
+
+### **Räkneövningar**
+
+Övningarna i kursboken [Stats: Data and Models (SDM)](https://nordics.pearson.com/products/stats-data-and-models-5th-global-edition-e-book?variant=42945920630933) hänvisas till med kapitelnummer följt av övningsnummer.
+
+**Övning 1 - Beskrivande statistik.**\
+Uppgifter: SDM 2.1, 2.2, 2.6, 2.7, 2.9, 2.11, 2.12, 2.14, 2.15, 2.16, 2.17, 2.20, 2.21, 2.24. 
+
+**Övning 2 - Samband mellan kategoriska variabler och korstabeller.**\
+Uppgifter:  SDM 3.1, 3.3, 3.5, 3.6, 3.7, 3.9, 3.25, 3.31, 3.39, 3.41, 3.47, 4.1, 4.3, 4.14, 4.17, 4.45.
+
+**Övning 3 - Standardavvikelse och standardisering. Normalmodellen.**\
+Uppgifter: SDM 5.1, 5.2, 5.4, 5.5, 5.8, 5.10, 5.14, 5.16, 5.17, 5.30, 5.42, 5.48.
+
+**Övning 4 - Korrelation och enkel linjär regression.**\
+Uppgifter:  SDM 6.2,  6.3, 6.5, 6.6, 6.9, 6.14, 6.20, 7.1, 7.2, 7.3, 7.4, 7.5, 7.7, 7.9, 7.11, 7.13, 7.15, 7.19, 7.23, 7.27, 7.52.
+
+**Övning 5 - Estimering och tolkning av enkel linjär regression.**\
+Uppgifter: SDM Kapitel 8.18, 8.20, 9.1, 9.2, 9.3, 9.4, 9.5, 9.6, 9.9, 9.11, 9.14, 9.16, 9.22, 9.23, 9.28.
+
+**Övning 6 - Prediktion med enkel linjär regression.**\
+Uppgifter: Meddelas snart 
+
+### **Datorlaborationer**
+
+**Datorlaboration 1 - Introduktion till R**\
+Uppgifter: [html](/datorlab/lab1/DatorLab1.qmd)
+
+**Datorlaboration 2 - Beskrivande statistik och visualisering i R**\
+Uppgifter: [html](/datorlab/lab2/DatorLab2.qmd) | <a href="https://github.com/StatisticsSU/SDA1/raw/main/datorlab/lab2/DatorLab2.qmd" download>quarto</a> 
+
+**Datorlaboration 3 - Samband, korrelation och enkel linjär regression**\
+Uppgifter: [Datorlab 3](/misc/larry.png) 
+
+**Datorlaboration 4 - Multipel linjär regression**\
+Uppgifter: [Datorlab 4](/misc/larry.png)

@@ -1,0 +1,70 @@
+---
+title: "Statistik och Dataanalys I"
+subtitle: Föreläsning 16 - Kontinuerliga fördelningar
+author: "**Mattias Villani**"
+institute: Statistiska institutionen<br>Stockholms universitet
+format: 
+  revealjs:
+    theme: [default, custom.scss]
+---
+
+# Översikt
+
+- Normalfördelningen
+
+- Likformig fördelning
+
+- Exponentialfördelningen
+
+- Student-*t* fördelningen
+
+## Standardnormalfördelning - tabell
+
+:::: {.columns}
+
+::: {.column width="25%"}
+&nbsp;
+![](figs/standard_normal.svg){fig-align="left" width="400"}
+:::
+
+::: {.column width="75%"}
+
+<center>Andra decimalen i $z$</center>
+&nbsp;
+```{r}
+#| echo: true
+#| code-fold: true
+#| output-location: default
+library(dplyr)
+library(kableExtra)
+maxz = 2.99
+Ztable = matrix(pnorm(seq(0, maxz, by = 0.01)), length(seq(0, maxz, by = 0.1)), 10, byrow = T) %>%
+  format(digits = 4) %>%
+  data.frame()
+names(Ztable) <- as.character(format(seq(0.00, 0.09, by = 0.01), digits = 3))
+rownames(Ztable) <- as.character(format(seq(0.0, maxz, by = 0.1), digits = 2))
+
+Ztable %>%
+  kbl(format= "html", align="r") %>%
+  kable_classic(full_width = T, html_font = "helvetica")
+
+```
+
+:::
+
+::::
+
+## Student-*t* fördelningen
+
+-   [**Symmetrisk**]{style="color:#ff8000"} fördelning över $(-\infty,\infty)$ med [**tunga svansar**]{style="color:#ff8000"}.
+-   Tunga svansar = mycket sannolikhetsmassa för extrema observationer = galna observationer kan inträffa.
+
+<iframe width="100%" height="652" frameborder="0"
+  src="https://observablehq.com/embed/@mattiasvillani/student-t@320?cells=viewof+myinputs%2Ctailprobs%2Cplt">
+</iframe>
+
+## Centrala gränsvärdessatsen
+
+<iframe width="100%" height="850" frameborder="0" src="https://observablehq.com/embed/@mattiasvillani/cgs@1051?cells=viewof+dist_type%2Cviewof+params%2Cpopulation_distribution%2Cviewof+sample_size%2Cdistribution_of_sample_means">
+
+</iframe>

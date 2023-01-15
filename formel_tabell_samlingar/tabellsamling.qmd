@@ -1,0 +1,236 @@
+---
+title: "Tabellsamling - Statistik och Dataanalys I"
+format: 
+  html:
+    theme: default
+---
+
+```{r}
+#| echo: false
+# Settings
+suppressMessages(library(dplyr))
+suppressMessages(library(kableExtra))
+oddCellCol = "#F0F0F0"
+studentColText = "#4682b4" 
+studentColBack = "#a6cee3" 
+chi2ColText = "#6a3d9a"
+fColText = "#ff7f00"
+
+# function for generating a F-table with sign alpha
+Ftablegen <- function(alpha, colorText){
+df1s = c(1:22)
+df2s = c(1:30,35,40,45,50,60, 75, 100, 120, 140, 180, 250, 400, 1000)
+onetailedprobs = c(0.1, 0.05, 0.025, 0.01, 0.005)
+Ftable = matrix(NA, length(df2s), length(df1s))
+count = 0
+for (df1 in df1s){
+  count = count + 1
+  Ftable[, count] = qf(1 - alpha, df1 = df1, df2 = df2s);
+}
+Ftable = format(as.data.frame(Ftable), digits = 3)
+names(Ftable) <- as.character(format(df1s, digits = 1))
+rownames(Ftable) <- as.character(format(df2s, digits = 1))
+
+Ftable %>%
+  format(digits = 4) %>%
+  kbl(format= "html", align="r") %>%
+  add_header_above(color = colorText, align="l", line = F, header = c(" " = 4, "Frihetsgrader i täljaren" = 19)) %>%
+  kable_classic(full_width = T, font_size = 14) %>%
+  row_spec(seq(2,dim(Ftable)[1], by = 2), background = oddCellCol)}
+```
+
+## Normalfördelning
+
+Tabellen ger sannolikheten $\Phi(z) = P(Z\leq z)$ för olika $z$ där $Z$ är standardnormal, $Z\sim N(0,1)$.\
+Sannolikheter i den vänstra svansen fås genom symmetri: $P(Z\leq \textminus z) = 1-P(Z\leq z)$.
+
+:::: {.columns}
+
+::: {.column width="21%"}
+&nbsp;
+![](figs/standard_normal_tabell.svg){fig-align="left" width="400"}
+&nbsp;
+![](figs/standard_normal_tabell_symmetry.svg){fig-align="left" width="400"}
+:::
+
+::: {.column width="79%"}
+
+<center>Andra decimalen i $z$</center>
+```{r}
+#| echo: false
+suppressMessages(library(dplyr))
+suppressMessages(library(kableExtra))
+maxz = 2.99
+Ztable = matrix(pnorm(seq(0, maxz, by = 0.01)), length(seq(0, maxz, by = 0.1)), 10, byrow = T) %>%
+  format(digits = 4) %>%
+  data.frame()
+names(Ztable) <- as.character(format(seq(0.00, 0.09, by = 0.01), digits = 3))
+rownames(Ztable) <- as.character(format(seq(0.0, maxz, by = 0.1), digits = 2))
+
+Ztable %>%
+  kbl(format= "html", align="r") %>%
+  kable_classic(full_width = T, font_size = 14) %>%
+  row_spec(seq(2,dim(Ztable)[1], by = 2), background = oddCellCol)
+
+```
+:::
+::::
+
+## Student-$t$ fördelning
+
+:::: {.columns}
+
+::: {.column width="25%"}
+&nbsp;
+![](figs/standard_t_twotails_tabell.svg){fig-align="left" width="400"}
+&nbsp;&nbsp;
+![](figs/standard_t_onetail_tabell.svg){fig-align="left" width="400"}
+
+:::
+
+::: {.column width="75%"}
+
+```{r}
+#| echo: false
+suppressMessages(library(dplyr))
+suppressMessages(library(kableExtra))
+dfs = c(1:30,32, 35, 40, 45, 50, 60, 75, 100, 120, 140, 180, 250, 400, 1000, Inf)
+onetailedprobs = c(0.1,0.05, 0.025, 0.01, 0.005)
+Ttable = matrix(NA, length(dfs), length(onetailedprobs))
+#Ztable = matrix(pnorm(seq(0, maxz, by = 0.01)), length(seq(0, maxz, by = 0.1)), 10, byrow = T) 
+count = 0
+for (df in dfs){
+  count = count + 1
+  Ttable[count, ] = -qt(onetailedprobs, df = df);
+}
+Ttable = format(as.data.frame(Ttable), digits = 4)
+names(Ttable) <- as.character(format(onetailedprobs, digits = 3))
+rownames(Ttable) <- as.character(format(dfs, digits = 1))
+rownames(Ttable)[dim(Ttable)[1]] <- "oändligt"
+
+Ttable %>%
+  format(digits = 4) %>%
+  kbl(format= "html", align="r", col.names = NULL) %>%
+  add_header_above(c("df ", " ", " ", " ", " ", " "), color = studentColText, align="l", line = F) %>%
+  add_header_above(c("Ensidig sannolikhet: ", "0.100", "0.050", "0.025", "0.010", "0.005"), align = c('l','r','r','r','r','r')) %>%
+  add_header_above(c("Tvåsidig sannolikhet: ", "0.200", "0.100", "0.050", "0.020", "0.010"), align = c('l','r','r','r','r','r'), line = F) %>%
+  add_header_above(c("Konfidensnivå: ", " 80%", " 90%", " 95%", " 98%", " 99%"), align = c('l','r','r','r','r','r'), line = F, background = studentColBack) %>%
+  kable_classic(full_width = T, font_size = 14) %>%
+  row_spec(seq(2,dim(Ttable)[1], by = 2), background = oddCellCol)
+```
+
+:::
+
+::::
+
+## $\chi^2$-fördelning
+
+
+:::: {.columns}
+
+::: {.column width="25%"}
+&nbsp;
+![](figs/chi2_tabell.svg){fig-align="left" width="400"}
+
+:::
+
+::: {.column width="75%"}
+
+```{r}
+#| echo: false
+suppressMessages(library(dplyr))
+suppressMessages(library(kableExtra))
+dfs = c(1:30,40,50,60,70,80,90,100)
+onetailedprobs = c(0.1, 0.05, 0.025, 0.01, 0.005)
+Chi2table = matrix(NA, length(dfs), length(onetailedprobs))
+count = 0
+for (df in dfs){
+  count = count + 1
+  Chi2table[count, ] = qchisq(1 - onetailedprobs, df = df);
+}
+Chi2table = format(as.data.frame(Chi2table), digits = 4)
+names(Chi2table) <- as.character(format(onetailedprobs, digits = 3))
+rownames(Chi2table) <- as.character(format(dfs, digits = 1))
+
+Chi2table %>%
+  format(digits = 4) %>%
+  kbl(format= "html", align="r", col.names = NULL) %>%
+  add_header_above(c("df ", " ", " ", " ", " ", " "), color = chi2ColText, align="l", line = F) %>%
+  add_header_above(c("Sannolikhet i höger svans: ", "0.100", "0.050", "0.025", "0.010", "0.005"), align = c('l','r','r','r','r','r')) %>%
+  kable_classic(full_width = T, font_size = 14) %>%
+  row_spec(seq(2,dim(Chi2table)[1], by = 2), background = oddCellCol)
+
+
+```
+
+:::
+
+::::
+
+
+## $F$-fördelning
+
+:::: {.panel-tabset}
+
+## $\alpha = 0.01$
+
+:::: {.columns}
+
+::: {.column width="25%"}
+&nbsp;
+![](figs/F_tabell.svg){fig-align="left" width="400"}
+
+:::
+
+::: {.column width="75%"}
+Kolumnerna är frihetsgraderna i <a href="https://eddler.se/lektioner/braktal-taljare-och-namnare/" style="color: #ff7f00;">täljaren</a>.\
+Raderna är frihetsgraderna i <a href="https://eddler.se/lektioner/braktal-taljare-och-namnare/" style="color: #ff7f00;">nämnaren</a>.
+```{r}
+#| echo: false
+Ftablegen(alpha =.01, fColText)
+```
+:::
+::::
+
+## $\alpha = 0.05$
+
+:::: {.columns}
+
+::: {.column width="25%"}
+&nbsp;
+![](figs/F_tabell.svg){fig-align="left" width="400"}
+
+:::
+
+::: {.column width="75%"}
+Kolumnerna är frihetsgraderna i <a href="https://eddler.se/lektioner/braktal-taljare-och-namnare/" style="color: #ff7f00;">täljaren</a>.\
+Raderna är frihetsgraderna i <a href="https://eddler.se/lektioner/braktal-taljare-och-namnare/" style="color: #ff7f00;">nämnaren</a>.
+```{r}
+#| echo: false
+Ftablegen(alpha =.05, fColText)
+```
+:::
+::::
+## $\alpha = 0.10$
+
+:::: {.columns}
+
+::: {.column width="25%"}
+&nbsp;
+![](figs/F_tabell.svg){fig-align="left" width="400"}
+
+:::
+
+::: {.column width="75%"}
+Kolumnerna är frihetsgraderna i <a href="https://eddler.se/lektioner/braktal-taljare-och-namnare/" style="color: #ff7f00;">täljaren</a>.\
+Raderna är frihetsgraderna i <a href="https://eddler.se/lektioner/braktal-taljare-och-namnare/" style="color: #ff7f00;">nämnaren</a>.
+```{r}
+#| echo: false
+Ftablegen(alpha =.1, fColText)
+```
+
+:::
+
+::::
+
+::::

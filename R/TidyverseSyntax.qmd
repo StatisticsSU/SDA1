@@ -1,0 +1,76 @@
+---
+title: "Tidyverse syntax"
+author: "Mattias Villani"
+format: html
+---
+
+> Den här sidan samlar lite kommandon i den s k **tidyverse** ![](../misc/hexagons/figs/tidyverse_hexagon.svg){fig-align="center" width="25"} dialekten av R.
+
+## Introduktion
+
+```{r}
+#| echo: false
+load("titanic.RData")
+```
+
+[Tidyverse](https://www.tidyverse.org/) är en samling R-paket som delar på samma underliggande filosofi. När man väl lärt sig Tidyverse-filosofin, är paketen väldigt kraftfulla. Men eftersom det tar sin tid att lära sig Tidyverse så använder vi inte dessa paket på den här grundkursen. För att stilla nyfikenheten bland programmeringintresserade studenter kommer vi då och då länka till motsvarande kod i Tidyverse genom att visa den här ikonen i marginalen:
+
+![](../misc/hexagons/figs/tidyverse_hexagon.svg){fig-align="center" width="60"}
+
+Klickar man på den ikonen får man se motsvarande kod från ett eller flera av de olika Tidyverse-paketen, t ex
+
+![](/misc/hexagons/figs/tidyhexa.svg){fig-align="center" width="200"}
+
+Speciellt värt att notera bland dessa paket är [ggplot2](https://ggplot2.tidyverse.org/) som, trots sitt knepiga namn, är ett mycket användbart paket för diagram och visualisering.
+Se [ggplot2 cheat sheet](https://posit.co/wp-content/uploads/2022/10/data-visualization-1.pdf) för kommandon.
+
+Den s k `pipe`-operatorn `%>%` gör att Tidyverse-kod byggs upp på annats sätt än standard R. Pipe-operatorn skickar vidare en beräkning eller resultat till funktionen till höger i uttrycket. Ett exempel förklarar det bäst:
+
+```{r}
+suppressMessages(library(tidyverse))
+titanic %>% group_by(Survived)  %>% tally()
+```
+ där datamaterialet (dataframe) `titanic` skickas in i funktionen `group_by()` som grupperar data efter variablen Survived. Denna gruppering skickas sen vidare till funktioen `tally()` som gör sammanfattningen till en tabell. 
+
+## Scatter plot
+
+```{r}
+library(ggplot2)
+ggplot(data = mtcars, aes(x = hp, y = mpg)) +
+  geom_point() + 
+  ggtitle("Cars fuel usage") 
+```
+
+## Tabeller
+
+
+```{r}
+suppressMessages(library(tidyverse))
+titanic %>% dplyr::group_by(Survived) %>% tally()
+```
+
+eller om man vill också ha proportioner
+```{r}
+suppressMessages(library(tidyverse))
+titanic %>% 
+  dplyr::group_by(Survived)  %>% 
+  tally() %>% 
+  mutate(freq = prop.table(n))
+```
+där vi skrivit våra pipes `%>%` enligt tidyverse-konventionen med radbryt mellan en lång serie pipes. 
+
+## Stapeldiagram
+
+#### Antal
+```{r}
+library(ggplot2)
+titanic %>% 
+  group_by(Survived)  %>% 
+  tally() %>% 
+  ggplot(aes(x = Survived, y = n)) +
+  geom_bar(stat = "identity") +
+  ylab("proportion")
+```
+
+
+

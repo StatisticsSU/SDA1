@@ -1,0 +1,60 @@
+---
+title: "Statistik och dataanalys I, 15 hp"
+format: html
+---
+
+<img src="/misc/flashytimeseries.jpg" alt="Flashy time series image" class="center" width="100%"/>
+
+### Kursens innehåll
+
+> Data finns numera överallt i samhället. Kursen Statistik och dataanalys I ger dig grunderna för att förstå och använda data, både som samhällsmedborgare och som avancerad dataanalytiker.
+
+Kursen ger dig en översikt av metoder för statistisk dataanalys och dess många tillämpningar. En introduktion till dataanalys följs av praktisk datahantering i det populära statistiska [programspråket R](R.html). Samband mellan variabler analyseras, och du tränas i hur statistiska modeller kan användas för att förutsäga nya data. Slutsatser från data är alltid osäkra och en viktig del av kursen är därför sannolikhetsberäkningar. Sannolikhetsteorin används sedan i de inferensmetoder som gör det möjligt att dra korrekta slutsatser från data och fatta optimala beslut under osäkerhet.
+
+Du lär dig att utföra dataanalyser i praktiken, bl a genom datorlaborationer och två inlämningsuppgifter, men kursen ger dig även en kritisk blick på statistik som gör att du kan ifrågasätta, tolka och söka ny information för att bättre svara på olika frågeställningar.
+
+Kursen består av två delar:
+
+-   [Dataanalys och regression, 7.5 hp.](Del1.qmd) I det här momentet ingår insamling, bearbetning, visualisering och sammanfattning av data i programspråket R. En stor del av momentet behandlar sambands- och regressionsanalys som utmynnar i metoder för prediktion.
+-   [Sannolikhetsmodeller och inferens, 7.5 hp.](Del2.qmd) I kursens andra momentet behandlas sannolikheter, slumpvariabler och sannolikhetsfördelningar. En central del i momentet är inferens, dvs. statistiska metoder för att dra slutsatser om olika fenomen från data. Kursen avslutas med en introduktion till beslutsfattade under osäkerhet.
+
+### Kurslitteratur
+
+-   De Veaux, R., Velleman, P. och Bock, D. (2021). [Stats: Data and Models](https://nordics.pearson.com/products/stats-data-and-models-5th-global-edition-e-book?variant=42945920630933), 5:e upplagan, Pearson Global Edition, ISBN 9781292362212. Boken förkortas **SDM** nedan. Boken finns att köpa som fysisk bok på Akademibokhandeln [Frescati](https://goo.gl/maps/25BMYBhenhYTvo6i7) eller [City](https://goo.gl/maps/mP8NxWpD1Ss1WPkk9), eller online på [Adlibris](https://www.adlibris.com/se/bok/stats-data-and-models-global-edition-9781292362212) och [Bokus](https://www.bokus.com/bok/9781292362212/stats-data-and-models-global-edition/). En digital version finns att köpa [här](https://nordics.pearson.com/products/stats-data-and-models-5th-global-edition-e-book?variant=42945920630933).
+-   Ytterligare kompletterande material som delas ut under kursens gång.
+
+### Kursstruktur
+
+Kursen består av föreläsningar, räkneövningar och datorlaborationer. Se respektive del av kursen för detaljer:  [Dataanalys och regression, 7.5 hp.](Del1.qmd) och [Sannolikhetsmodeller och inferens, 7.5 hp.](Del2.qmd).\
+
+
+### Schema
+
+Kursens schema finns på [TimeEdit](https://cloud.timeedit.net/su/web/stud1/s.html?tab=8&object=cevt_39894_VT2023&startDate=20221217&endDate=20230624&type=courseevent&h=t). Ett tips är att välja *Prenumerera* i övre högra hörnet på TimeEdit och sen klistra in länken i ditt kalenderprogram på mobilen.
+
+### Formel- och tabellsamlingar
+
+- [Formel- och tabellsamling](/formel_tabell_samlingar/formel_tabell_SDA1.pdf) innehåller de flesta av kursens formler och tabeller och kommer att delas ut under salstentamen.
+- [Tabellsamling](/formel_tabell_samlingar/tabellsamling.qmd) är en webb-version av tabellerna i [Formel- och tabellsamling](/formel_tabell_samlingar/formel_tabell_SDA1.pdf). 
+
+### Interaktivt material
+
+På vissa delar av kursen använder vi interaktivt material för att underlätta lärandet. De interaktiva applikationerna kommer vara länkade från föreläsningsslides och under respektive föreläsning. En sida med alla applikationer finns [här](interaktiv.qmd).
+
+
+### Lärare
+
+::: {layout="[ [1,1],[1,1] ]"}
+<img src="/misc/VillaniLowRes.jpg" width="35%"/>\
+[Mattias Villani](https://mattiasvillani.com)<br>Kursansvarig och Föreläsare<br>Professor
+
+<img src="/misc/QuirozPhoto.jpg" width="35%"/>\
+[Matias Quiroz](https://matiasquiroz.com)<br>Föreläsare<br>Universitetslektor
+
+<img src="/misc/female.png" width="35%"/>\
+[Mona Sfaxi](https://www.su.se/profiles/mosf7202-1.616028)<br>Övningar, Datorövningar och Jour<br>Masterexamen i Statistik
+
+<img src="/misc/jonlachmann.jpeg" width="35%"/>\
+[Jon Lachmann](https://www.su.se/profiles/jola4668-1.579398)<br>Datorövningar<br>Masterexamen i Statistik
+:::
+

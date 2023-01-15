@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="400" viewBox="0 0 400 1600">
+<defs>
+  <clipPath id="clip570">
+    <rect x="0" y="0" width="400" height="1600"/>
+  </clipPath>
+</defs>
+<path clip-path="url(#clip570)" d="
+M0 1600 L400 1600 L400 0 L0 0  Z
+  " fill="#000000" fill-rule="evenodd" fill-opacity="0"/>
+<defs>
+  <clipPath id="clip571">
+    <rect x="320" y="160" width="400" height="1121"/>
+  </clipPath>
+</defs>
+<path clip-path="url(#clip570)" d="
+M93.7078 1404.37 L352.756 1404.37 L352.756 47.2441 L93.7078 47.2441  Z
+  " fill="#000000" fill-rule="evenodd" fill-opacity="0"/>
+<defs>
+  <clipPath id="clip572">
+    <rect x="93" y="47" width="260" height="1358"/>
+  </clipPath>
+</defs>
+<path clip-path="url(#clip572)" d="
+M223.232 1149.76 L162.136 1149.76 L284.328 1149.76 L223.232 1149.76 L223.232 816.452 L223.232 1149.76  Z
+  " fill="#1f78b4" fill-rule="evenodd" fill-opacity="1"/>
+<polyline clip-path="url(#clip572)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:8; stroke-opacity:1; fill:none" points="
+  223.232,1149.76 162.136,1149.76 284.328,1149.76 223.232,1149.76 223.232,816.452 223.232,1149.76 
+  "/>
+<path clip-path="url(#clip572)" d="
+M345.424 816.452 L345.424 707.668 L101.039 707.668 L101.039 816.452 L345.424 816.452 L345.424 707.668 L345.424 816.452  Z
+  " fill="#1f78b4" fill-rule="evenodd" fill-opacity="1"/>
+<polyline clip-path="url(#clip572)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:8; stroke-opacity:1; fill:none" points="
+  345.424,816.452 345.424,707.668 101.039,707.668 101.039,816.452 345.424,816.452 345.424,707.668 345.424,816.452 
+  "/>
+<path clip-path="url(#clip572)" d="
+M345.424 570.011 L101.039 570.011 L101.039 707.668 L345.424 707.668 L345.424 570.011 L223.232 570.011 L345.424 570.011  Z
+  " fill="#1f78b4" fill-rule="evenodd" fill-opacity="1"/>
+<polyline clip-path="url(#clip572)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:8; stroke-opacity:1; fill:none" points="
+  345.424,570.011 101.039,570.011 101.039,707.668 345.424,707.668 345.424,570.011 223.232,570.011 345.424,570.011 
+  "/>
+<path clip-path="url(#clip572)" d="
+M223.232 260.189 L162.136 260.189 L284.328 260.189 L223.232 260.189 L223.232 570.011 L223.232 260.189  Z
+  " fill="#1f78b4" fill-rule="evenodd" fill-opacity="1"/>
+<polyline clip-path="url(#clip572)" style="stroke:#000000; stroke-linecap:round; stroke-linejoin:round; stroke-width:8; stroke-opacity:1; fill:none" points="
+  223.232,260.189 162.136,260.189 284.328,260.189 223.232,260.189 223.232,570.011 223.232,260.189 
+  "/>
+<circle clip-path="url(#clip572)" cx="223.232" cy="85.6533" r="21.6" fill="#1f78b4" fill-rule="evenodd" fill-opacity="1" stroke="none"/>
+<circle clip-path="url(#clip572)" cx="223.232" cy="1365.96" r="21.6" fill="#1f78b4" fill-rule="evenodd" fill-opacity="1" stroke="none"/>
+<circle clip-path="url(#clip572)" cx="223.232" cy="1283.75" r="21.6" fill="#1f78b4" fill-rule="evenodd" fill-opacity="1" stroke="none"/>
+<polyline clip-path="url(#clip572)" style="stroke:#1f78b4; stroke-linecap:round; stroke-linejoin:round; stroke-width:0; stroke-opacity:1; fill:none" points="
+  223.232,1149.76 162.136,1149.76 284.328,1149.76 223.232,1149.76 223.232,816.452 
+  "/>
+<polyline clip-path="url(#clip572)" style="stroke:#1f78b4; stroke-linecap:round; stroke-linejoin:round; stroke-width:0; stroke-opacity:1; fill:none" points="
+  345.424,816.452 345.424,707.668 101.039,707.668 101.039,816.452 345.424,816.452 345.424,707.668 
+  "/>
+<polyline clip-path="url(#clip572)" style="stroke:#1f78b4; stroke-linecap:round; stroke-linejoin:round; stroke-width:0; stroke-opacity:1; fill:none" points="
+  345.424,570.011 101.039,570.011 101.039,707.668 345.424,707.668 345.424,570.011 223.232,570.011 
+  "/>
+<polyline clip-path="url(#clip572)" style="stroke:#1f78b4; stroke-linecap:round; stroke-linejoin:round; stroke-width:0; stroke-opacity:1; fill:none" points="
+  223.232,260.189 162.136,260.189 284.328,260.189 223.232,260.189 223.232,570.011 
+  "/>
+</svg>

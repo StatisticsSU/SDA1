@@ -1,0 +1,42 @@
+---
+title: "Base-R"
+author: "Mattias Villani"
+format: html
+---
+
+> Den här sidan samlar lite kommandon i den s k **base-R** ![](../misc/hexagons/figs/base_r_hexagon.svg){fig-align="center" width="25"} dialekten av R.
+
+## Scatter plot
+
+```{r}
+plot(mtcars$hp, mtcars$mpg, xlab = "hp", ylab = "mpg", main = "Cars fuel usage")
+```
+
+## Tabeller
+
+```{r}
+#| echo: false
+load("titanic.RData")
+```
+
+```{r}
+table(titanic$Survived)
+```
+
+eller om man vill ha en tabell med andelar
+
+```{r}
+prop.table(table(titanic$Survived))
+```
+
+## Stapeldiagram
+
+```{r}
+barplot(prop.table(table(titanic$Survived)), ylab = "proportion")
+```
+
+## Histogram
+
+```{r}
+hist(titanic$Age)
+```

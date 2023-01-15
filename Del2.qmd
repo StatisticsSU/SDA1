@@ -1,0 +1,107 @@
+---
+title: "Del II - Sannolikhetsmodeller och Inferens, 7.5 hp"
+format: html
+---
+
+> I kursens andra momentet behandlas inledningsvis sannolikheter, slumpvariabler och sannolikhetsfördelningar. En central del i momentet är inferens, dvs. statistiska metoder för att dra slutsatser om olika fenomen från data, bl a samband från regressionsanalys. Kursen avslutas med en introduktion till beslutsfattade under osäkerhet.
+
+Förkortningen **SDM** står för kursboken [Stats: Data and Models](https://nordics.pearson.com/products/stats-data-and-models-5th-global-edition-e-book?variant=42945920630933) 5:e upplagan, global edition.
+
+Under vissa föreläsningar länkar vi till `Extramaterial`. Det är material som inte krävs för att klara kursen, men som den nyfikne kan läsa för att få en djupare förståelse.
+
+### **Föreläsningar**
+
+**Föreläsning 12 - Osäkerhet och Sannolikhet.**\
+Läs: SDM Kapitel 12 och 13 | [Slides](/misc/larry.png) 
+
+**Föreläsning 13 - Betingade sannolikheter och Bayes sats.**\
+Läs: SDM Kapitel 13 | [Slides](/misc/larry.png)
+
+**Föreläsning 14 - Slumpvariabler och deras egenskaper.**\
+Läs: SDM Kapitel 14 | [Slides](/misc/larry.png)
+
+**Föreläsning 15 - Diskreta sannolikhetsmodeller.**\
+Läs: SDM Kapitel 15.1, 15.2, 15.3, 15.6 | [Slides](/misc/larry.png) 
+
+**Föreläsning 16 - Kontinuerliga sannolikhetsmodeller.**\
+Läs: SDM Kapitel 5.3, 15.7 | [Slides](/slides/KontinuerligaModeller.qmd) \
+Extramaterial: [Interaktiv notebook - student-t](https://observablehq.com/@mattiasvillani/student-t)
+
+**Föreläsning 17 - Samplingfördelningar och konfidensintervall för en andel.**\
+Läs: SDM Kapitel 16 | [Slides](/misc/larry.png) 
+
+**Föreläsning 18 - Konfidensintervall för ett väntevärde. Stora talens lag. Centrala gränsvärdessatsen.**\
+Läs: SDM Kapitel 17 | [Slides](/misc/larry.png)\
+Extra: [Interaktiv notebook - centrala gränsvärdessatsen](https://observablehq.com/@mattiasvillani/student-t)
+
+**Föreläsning 19 - Hypotestest.**\
+Läs: SDM Kapitel 18 | [Slides](/misc/larry.png) 
+
+**Föreläsning 20 - Hypotestest och jämföra grupper.**\
+Läs: SDM Kapitel 19, 20.4, 20.5 | [Slides](/misc/larry.png) 
+
+**Föreläsning 21 - Jämföra grupper och $\chi^2$-test.**\
+Läs: SDM Kapitel 21.1, 21.2 | [Slides](/misc/larry.png) 
+
+**Föreläsning 22 - Inferens i multipel regression.**\
+Läs: SDM Kapitel 23 | [Slides](/misc/larry.png) 
+
+**Videoföreläsning - Maximum likelihood och Bayesiansk inferens.**\
+Läs: Kompendium avsnitt X | [Slides](/misc/larry.png) 
+
+**Föreläsning 23 - Optimala beslut under osäkerhet.**\
+Läs: [Slides](/misc/larry.png) 
+
+**Föreläsning 24 - Sammanfattning.**\
+Läs: [Slides](/misc/larry.png) 
+
+### **Räkneövningar**
+
+Övningarna i kursboken [Stats: Data and Models (SDM)](https://nordics.pearson.com/products/stats-data-and-models-5th-global-edition-e-book?variant=42945920630933) hänvisas till med kapitelnummer följt av övningsnummer.
+
+**Övning 7 - Sannolikheter för händelser. Kombinatorik.**\
+Uppgifter: SDM 12-13
+
+**Övning 8 - Oberoende händelser. Betingning och Bayes sats.**\
+Uppgifter: SDM 13 
+
+**Övning 9 - Slumpvariabler, väntevärde och standardavvikelse.**\
+Uppgifter: SDM 14
+
+**Övning 10 - Diskreta sannolikhetsfördelningar.**\
+Uppgifter: SDM 15 
+
+**Övning 12 - Kontinerliga sannolikhetsfördelningar.**\
+Uppgifter: SDM 15 
+
+**Övning 13 - Samplingfördelningar och konfidensintervall för en andel.**\
+Uppgifter: SDM 16 
+
+**Övning 14 - Konfidensintervall för ett väntevärde.**\
+Uppgifter: SDM 17 
+
+**Övning 13 - Hypotestest.**\
+Uppgifter: SDM 18 
+
+**Övning 14 - Hypotestest och p-värde.**\
+Uppgifter: SDM 18 
+
+**Övning 13 - Jämföra grupper.**\
+Uppgifter: SDM 20-21. 
+
+**Övning 14 - Inferens för regression.**\
+Uppgifter: SDM 23 
+
+### **Datorlaborationer**
+
+**Datorlaboration 5 - Simulering från sannolikhetsfördelningar**\
+Uppgifter: [Datorlab 5](/misc/larry.png) 
+
+**Datorlaboration 6 - Samplingfördelningar, standardfel och centrala gränsvärdessatsen.**\
+Uppgifter: [Datorlab 6](/misc/larry.png) 
+
+**Datorlaboration 7 - Konfidensintervall och hypotestest.**\
+Uppgifter: [Datorlab 7](/misc/larry.png) 
+
+**Datorlaboration 8 - Multipel linjär regression**\
+Uppgifter: [Datorlab 8](/misc/larry.png)

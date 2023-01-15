@@ -1,0 +1,28 @@
+---
+title: "Formula syntax"
+author: "Mattias Villani"
+format: html
+---
+
+> Den här sidan samlar lite kommandon i den s k **formula/mosaic** ![](../misc/hexagons/figs/mosaic_hexagon.svg){fig-align="center" width="25"} dialekten av R.
+
+
+## Scatter plot
+
+En vanlig scatter plot fås genom:
+
+```{r}
+plot(mpg ~ hp, data = mtcars, main = "Cars fuel usage")
+```
+
+Med ggformula paketet kan man använda formel-syntax, men få plottar som liknar Tidyverse:
+
+```{r}
+#| echo: true
+#| output: false
+library(ggformula)
+```
+
+```{r}
+gf_point(mpg ~ hp, data = mtcars, title = "Cars fuel usage")
+```

@@ -1,0 +1,63 @@
+project:
+  type: website
+  output-dir: docs
+
+knitr:
+  opts_knit:
+    verbose: false
+  #output-dir: docs
+
+website:
+  title: "SDA1"
+  favicon: /misc/favicons/favicon.ico
+  navbar:
+    logo: /misc/SU_logo_small.png
+    background: primary
+    left:
+      - href: index.qmd
+        text: Översikt
+      - href: Del1.qmd
+        text: Del 1 - Dataanalys och regression
+      - href: Del2.qmd
+        text: Del 2 - Sannolikhetsmodeller och inferens
+      - href: R.qmd
+        text: R
+  page-footer:
+    left:
+      - text: "Statistiska institutionen - Stockholms universitet"
+        href: https://www.su.se/statistiska-institutionen/
+    center:
+      - text: "Använd vår kurs!"
+        #href: stealourcourse.qmd
+    right:
+      - icon: github
+        href: https://github.com/StatisticsSU/SDA1
+        aria-label: Quarto GitHub
+format:
+  html:
+    theme:
+      light: lumen
+      dark: superhero # litera, lumen, superhero, united
+    css: styles.css
+    toc: true
+    toc-title: Avsnitt på sidan
+    #monobackgroundcolor: #c3d0e6
+  revealjs:
+    center: true
+    slide-number: true
+    height: 1200
+    width: 2000
+    transition: none #convex
+    transition-speed: slow
+    preview-links: auto
+    toc: false
+    progress: true
+    citations-hover: false
+    logo: ../misc/SU_logotyp_Liggande_1000px.png
+    footnotes-hover: true
+    footer: "Statistik och dataanalys I &nbsp; &nbsp; · &nbsp; &nbsp; Sannolikhetsmodeller och inferens, 7.5 hp"
+callout-appearance: default
+
+
+
+

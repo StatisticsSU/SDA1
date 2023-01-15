@@ -1,0 +1,8 @@
+---
+title: "Histogram - effekten av val av bins"
+format: html
+---
+
+<iframe width="100%" height="589" frameborder="0"
+  src="https://observablehq.com/embed/@mattiasvillani/histogram@146?cells=viewof+bin_input%2Cplt">
+</iframe>
