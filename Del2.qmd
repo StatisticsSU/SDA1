@@ -24,15 +24,15 @@ Läs: SDM Kapitel 14 | [Slides](/misc/larry.png)
 Läs: SDM Kapitel 15.1, 15.2, 15.3, 15.6 | [Slides](/misc/larry.png) 
 
 **Föreläsning 16 - Kontinuerliga sannolikhetsmodeller.**\
-Läs: SDM Kapitel 5.3, 15.7 | [Slides](/slides/KontinuerligaModeller.qmd) \
-Extramaterial: [Interaktiv notebook - student-t](https://observablehq.com/@mattiasvillani/student-t)
+Läs: SDM Kapitel 5.3, 15.7 | [Slides](/misc/larry.png) \
+Extramaterial: [Notebook - student-t](https://observablehq.com/@mattiasvillani/student-t)
 
 **Föreläsning 17 - Samplingfördelningar och konfidensintervall för en andel.**\
 Läs: SDM Kapitel 16 | [Slides](/misc/larry.png) 
 
 **Föreläsning 18 - Konfidensintervall för ett väntevärde. Stora talens lag. Centrala gränsvärdessatsen.**\
 Läs: SDM Kapitel 17 | [Slides](/misc/larry.png)\
-Extra: [Interaktiv notebook - centrala gränsvärdessatsen](https://observablehq.com/@mattiasvillani/student-t)
+Extra:  [Notebook - stora talens lag](https://observablehq.com/@mattiasvillani/stora-talens-lag) | [Notebook - centrala gränsvärdessatsen](https://observablehq.com/@mattiasvillani/cgs)
 
 **Föreläsning 19 - Hypotestest.**\
 Läs: SDM Kapitel 18 | [Slides](/misc/larry.png) 
