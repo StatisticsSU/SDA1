@@ -7,3 +7,9 @@ Manifest.toml
 /admin
 /slides/figs/flaticons/
 stealourcourse.qmd
+
+docs/slides/figs/flaticons/
+docs/hidden
+docs/admin
+docs/stealourcourse.qmd
+docs/stealourcourse.html
