@@ -250,7 +250,7 @@ Information om kursen
 
 \series bold
 \color blue
-Motiverande exempel
+Motivation
 \series default
 \color inherit
 
@@ -276,7 +276,7 @@ status open
 
 \series bold
 \color orange
-Översikt
+Lärare på kursen
 \end_layout
 
 \end_inset
@@ -285,13 +285,15 @@ status open
 \end_layout
 
 \begin_deeper
-\begin_layout Itemize
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figs/Teachers.png
+	lyxscale 20
+	scale 23
 
-\series bold
-\color blue
-Information om kursen
-\series default
-\color inherit
+\end_inset
+
 
 \begin_inset VSpace medskip
 \end_inset
@@ -303,14 +305,18 @@ Information om kursen
 
 \series bold
 \color blue
-Motiverande exempel
+Statistiska institutionen
 \series default
 \color inherit
-
-\begin_inset VSpace medskip
+ - plan 6 i hus 4 på Campus Albano.
+\begin_inset VSpace smallskip
 \end_inset
 
 
+\end_layout
+
+\begin_layout Itemize
+Mottagningstider: kommer meddelas på Athena.
 \end_layout
 
 \end_deeper
@@ -329,7 +335,7 @@ status open
 
 \series bold
 \color orange
-Översikt
+Tre dokument
 \end_layout
 
 \end_inset
@@ -342,10 +348,104 @@ status open
 
 \series bold
 \color blue
-Information om kursen
+Kursplan
 \series default
 \color inherit
 
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Kursinnehåll, 
+\series bold
+\color blue
+lärandemål
+\series default
+\color inherit
+, övergripande villkor som gäller för kursen, juridiskt bindande dokument.
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Finns i mappen 
+\emph on
+Kursinformation
+\emph default
+ på Athena.
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+\color blue
+Kursbeskrivning
+\series default
+\color inherit
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Vad som gäller just den här terminen, allmän info, deadlines, 
+\series bold
+\color blue
+villkor för och bedömningskriterier, examination
+\series default
+\color inherit
+, lärare.
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Finns i mappen 
+\emph on
+Kursinformation
+\emph default
+ på Athena.
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+\color blue
+Läsanvisningar
+\series default
+\color inherit
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Vad som kommer att tas upp i undervisningen, avsnitt i kurslitteraturen,
+ övningar mm.
 \begin_inset VSpace medskip
 \end_inset
 
@@ -356,16 +456,17 @@ Information om kursen
 
 \series bold
 \color blue
-Motiverande exempel
+Finns på kurshemsidan
 \series default
 \color inherit
-
-\begin_inset VSpace medskip
-\end_inset
-
-
+, med länk från mappen 
+\emph on
+Kursinformation
+\emph default
+ på Athena.
 \end_layout
 
+\end_deeper
 \end_deeper
 \begin_layout Standard
 \begin_inset Separator parbreak
@@ -382,7 +483,7 @@ status open
 
 \series bold
 \color orange
-Översikt av kursen
+Kursens webbsida och Athena
 \end_layout
 
 \end_inset
@@ -395,40 +496,1110 @@ status open
 
 \series bold
 \color blue
-Data
+Kursens webbsida 
 \series default
-\color inherit
- 
-\begin_inset Formula $\Longrightarrow$
+\bar under
+
+\begin_inset CommandInset href
+LatexCommand href
+name "https://statisticssu.github.io/SDA1/"
+target "https://statisticssu.github.io/SDA1/"
+literal "false"
+
 \end_inset
 
- 
-\series bold
-\color blue
-Slutledning
-\series default
+
+\bar default
 \color inherit
- 
-\begin_inset Formula $\Longrightarrow$
+
+\begin_inset VSpace medskip
 \end_inset
 
- 
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
 \series bold
 \color blue
+Läsanvisningar
+\series default
+\color inherit
+ (föreläsningar, övningstal etc)
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Föreläsningsslides (pdf)
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Datorlaborationer
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Inlämningsuppgifter
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Länk till schema
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Med mera ...
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Läroplattformen
+\series bold
+\color blue
+ Athena
+\series default
+\color inherit
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Kursinfo inkl formell studieplan
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Meddelanden, inkl akuta schemaändringar
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Inlämning av inlämningsuppgifter
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Chatt
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Vi räknar med att ni har koll på meddelanden på Athena
+\series default
+.
+ 
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Tips: ladda ner
+\series bold
+\color blue
+ It's learning
+\series default
+\color inherit
+ app:en för mobil: 
+\begin_inset Graphics
+	filename figs/itslearning_logo.png
+	lyxscale 20
+	scale 4
+
+\end_inset
+
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Kursens två delar
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+\color blue
+Del 1 - Dataanalys och regression, 7.5 hp
+\end_layout
+
+\begin_layout Itemize
+Föreläsare: Matias Quiroz 
+\begin_inset Graphics
+	filename /home/mv/Dropbox/Teaching/SDA1/misc/QuirozPhoto.jpg
+	lyxscale 3
+	scale 1.1
+
+\end_inset
+
+
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Beskrivande statistik
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Visualisering
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Regression - deskriptivt
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
 Prediktion
-\series default
-\color inherit
- 
-\begin_inset Formula $\Longrightarrow$
+\begin_inset VSpace smallskip
 \end_inset
 
+
+\end_layout
+
+\begin_layout Itemize
+Introduktion till R.
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+\color blue
+Del 2 - Sannolikhetsmodeller och inferens, 7.5 hp
+\end_layout
+
+\begin_layout Itemize
+Föreläsare: Mattias Villani 
+\begin_inset Graphics
+	filename /home/mv/Dropbox/Teaching/SDA1/misc/VillaniLowRes.jpg
+	lyxscale 3
+	scale 0.5
+
+\end_inset
+
+
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Sannolikhetslära
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Sannolikhetsmodeller för dataanalys
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Inferens - slutledning från data
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Prediktion
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Beslutsfattande under osäkerhet
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Examination
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+\color blue
+Del 1 - Dataanalys och regression, 7.5 hp
+\series default
+\color inherit
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+Inlämningsuppgift, 3 hp
+\series default
+, grupparbete, skriftlig rapport.
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Skriftlig tentamen, 4.5 hp
+\series default
+.
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+\color blue
+Del 2 - Sannolikhetsmodeller och inferens, 7.5 hp
+\series default
+\color inherit
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+Inlämningsuppgift, 1.5 hp
+\series default
+, grupparbete, skriftlig rapport.
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Skriftlig tentamen, 6 hp
+\series default
+.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Kurslitteratur
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\noindent
+\align left
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "80col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Itemize
+De Veaux, R., Velleman, P.
+ och Bock, D.
+ (2021).
  
 \series bold
 \color blue
-Beslut
+Stats: Data and Models
+\series default
+\color inherit
+, 5:e upplagan, Pearson Global Edition.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Fysisk bok på Akademibokhandeln Frescati eller City, eller online på Adlibris
+ och Bokus.
+ 
+\end_layout
+
+\begin_layout Itemize
+En digital version finns att köpa eller hyra 
+\bar under
+\color blue
+
+\begin_inset CommandInset href
+LatexCommand href
+name "här"
+target "https://nordics.pearson.com/products/stats-data-and-models-5th-global-edition-e-book?variant=42945920630933"
+literal "false"
+
+\end_inset
+
+
+\bar default
+\color inherit
+.
+ 
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+\color blue
+Föreläsningsslides
 \series default
 \color inherit
 .
+ Se under respektive föreläsning på kurswebbsidan.
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color blue
+Ytterligare kompletterande material
+\series default
+\color inherit
+ som delas ut under kursens gång.
+ Se under respektive föreläsning på kurswebbsidan.
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \enskip{}
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "b"
+use_parbox 0
+use_makebox 0
+width "18col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figs/SDMcover.png
+	lyxscale 24
+	scale 17
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Inlämningsuppgifterna
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Genomförs som grupparbeten, 3 studenter i varje grupp.
+ 
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color blue
+D1 och D5 obligatoriska
+\series default
+\color inherit
+ för gruppindelning.
+ Ingen annan obligatorisk närvaro på kursen.
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Två tillfällen (deadlines) för inlämning per inlämningsuppgift: 
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Inlämning 1
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Inlämning 2 (andra chans)
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Om en inlämningsuppgift blir underkänd efter inlämning 1 får man chans att
+ komplettera och lämna in igen vid inlämning 2.
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Om en inlämningsuppgift blir underkänd efter inlämning 2 ges nästa examinationst
+illfälle nästa termin.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Inlämningsuppgifterna
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Samarbete inom arbetsgrupp är självklart tillåtet.
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color blue
+Alla i gruppen ska bidra lika
+\series default
+\color inherit
+ mycket till rapporten och arbetet som leder upp till rapporten.
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Samarbete mellan grupper är också tillåtet.
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color red
+Plagiering är inte tillåtet!
+\series default
+\color inherit
+ – automatiskt textmatchningsverktyg kommer användas.
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Ge korrekta källor.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Salstentamen
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Två tillfällen per delkurs, se kursbeskrivningen och schema.
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Upplägg - minst 50 poäng av 100 möjliga för godkänt – typiskt uppgifter/problem
+ där beräkningar och slutsatser ska redovisas skriftligt, även kunskapsfrågor
+ kan förekomma.
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Tillåtna hjälpmedel – 
+\bar under
+\color blue
+
+\begin_inset CommandInset href
+LatexCommand href
+name "Formel- och Tabellsamling"
+target "https://statisticssu.github.io/SDA1/formel_tabell_samlingar/formel_tabell_SDA1.pdf"
+literal "false"
+
+\end_inset
+
+
+\bar default
+\color inherit
+ kommer finnas i tentasalen, tar ni inte med er.
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Miniräknare utan lagrade formler och text, tar ni med er – 
+\series bold
+\color red
+andra hjälpmedel är inte tillåtna
+\series default
+\color inherit
+.
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Om särskilda behov finns (egen lokal, extra tid, språklexikon mm.) kontakta
+ studievägledaren i god innan tentan (ca 3 veckor innan).
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Betyg och betygskriterier
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Inlämningsuppgifterna: Godkänd, Underkänd.
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Salstentor: A, B, C, D, E, Fx, F.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+F och Fx är underkända betyg som kräver omtentamen
+\end_layout
+
+\begin_layout Itemize
+Går ej att komplettera vid Fx
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Minimikrav för slutbetyg på hela kursen: 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+godkänt på båda inlämningsuppgifterna
+\end_layout
+
+\begin_layout Itemize
+minst E på båda tentorna
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Slutbetyg på hela kursen = sammanvägning av betygen på tentorna, se Kursbeskrivn
+ingen.
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+För betygskriterier för respektive prov, se Kursbeskrivningen.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Kursvärdering och kursutvärdering
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Enkät skickas ut efter kursen.
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Snälla, svara! 
+\begin_inset Graphics
+	filename figs/Praying_Emoji.png
+	lyxscale 10
+	scale 2
+
+\end_inset
+
+ Vi bryr oss 
+\series bold
+verkligen
+\series default
+ om era åsikter!
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Vi sammanställer en rapport som läggs upp på Athena.
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+SDA1 - en modern kurs
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Fokus på 
+\series bold
+\color blue
+dataanalys i R
+\series default
+\color inherit
+ och 
+\series bold
+\color blue
+datorbaserat arbetsssätt
+\series default
+\color inherit
+.
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color blue
+Sambandsanalys
+\series default
+\color inherit
+ 
+\begin_inset Graphics
+	filename figs/HeartEyes.png
+	lyxscale 10
+	scale 2
+
+\end_inset
+
+ tidigt för motivation.
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Större fokus på 
+\series bold
+\color blue
+prediktion
+\series default
+\color inherit
+ (även för att välja modell).
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color blue
+Sannolikhetslära
+\series default
+\color inherit
+ 
+\series bold
+\color blue
+senare
+\series default
+\color inherit
+, när man insett varför det behövs.
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color blue
+Fokus på grundidéer
+\series default
+\color inherit
+.
+ Färre varianter av metoder.
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figs/SDA1_filosofi.svg
+	lyxscale 50
+	scale 33
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -482,6 +1653,13 @@ status open
 \series bold
 \color blue
 Riksbankens räntesättning
+\series default
+\color inherit
+
+\begin_inset VSpace medskip
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -899,7 +2077,7 @@ separation "3pt"
 shadowsize "4pt"
 framecolor "black"
 backgroundcolor "none"
-status collapsed
+status open
 
 \begin_layout Itemize
 Socialt 
@@ -1028,7 +2206,7 @@ separation "3pt"
 shadowsize "4pt"
 framecolor "black"
 backgroundcolor "none"
-status collapsed
+status open
 
 \begin_layout Itemize
 Sociala nätverk (Twitter, Facebook etc)
@@ -1040,6 +2218,10 @@ Sociala nätverk (Twitter, Facebook etc)
 
 \begin_layout Itemize
 Kriminella nätverk
+\begin_inset VSpace smallskip
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -1047,6 +2229,12 @@ Kriminella nätverk
 
 \size small
 Noder: personer.
+\size default
+
+\begin_inset VSpace smallskip
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
@@ -1064,6 +2252,10 @@ Länkar: har gjort brott tillsammans?
 \end_deeper
 \begin_layout Itemize
 Kulturella nätverk
+\begin_inset VSpace smallskip
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -1071,6 +2263,12 @@ Kulturella nätverk
 
 \size small
 Noder: Skådespelare.
+\size default
+
+\begin_inset VSpace smallskip
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
@@ -1185,7 +2383,7 @@ Noder
 Länkar
 \series default
 \color inherit
-: flygtrafik finns.
+: flygrutter.
 \end_layout
 
 \begin_layout Itemize
@@ -1209,7 +2407,7 @@ Multipla lager
 \end_layout
 
 \begin_layout Itemize
-Data: nätverk med 80 flygplats för 4 flygbolag över 10 års tid.
+Data: 80 flygplatser för 4 flygbolag över 10 års tid.
 \end_layout
 
 \begin_layout Itemize
@@ -1270,13 +2468,19 @@ Person i MR scanner
 pratar
 \series default
 \color inherit
- omväxlande med att 
+-
 \series bold
 \color blue
-knyta handen
+knyter handen
 \series default
 \color inherit
-.
+-
+\series bold
+\color blue
+pratar
+\series default
+\color inherit
+ osv.
 \end_layout
 
 \begin_layout Standard
@@ -1366,13 +2570,13 @@ literal "false"
 \end_layout
 
 \begin_layout Itemize
-Mäter mängden syresatt blod på tusentals ställen i hjärnan (
+
 \series bold
 \color blue
-data
+Mäter
 \series default
 \color inherit
-).
+ mängden syresatt blod på tusentals ställen i hjärnan.
  
 \end_layout
 
@@ -1408,11 +2612,13 @@ data
 \end_layout
 
 \begin_layout Itemize
-I vilka hjärnregioner är aktiviteten högre när man pratar? Språkcentra.
-\end_layout
 
-\begin_layout Itemize
-I vilka hjärnregioner är aktiviteten högre när man knyter handed? Motorikcentra.
+\series bold
+\color blue
+Vilka hjärnregioner aktiveras
+\series default
+\color inherit
+ när man pratar? Språkcentra.
 \end_layout
 
 \end_deeper
@@ -1622,13 +2828,6 @@ Statistiker får jobb som data scientists
 \begin_layout Standard
 \align center
 \begin_inset Graphics
-	filename figs/LeifLinkedIn.png
-	scale 28
-
-\end_inset
-
-
-\begin_inset Graphics
 	filename figs/emeliewahlstrom.png
 	scale 30.4
 
@@ -1638,6 +2837,13 @@ Statistiker får jobb som data scientists
 \begin_inset Graphics
 	filename figs/parfait.png
 	scale 30
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figs/LeifLinkedIn.png
+	scale 28
 
 \end_inset
 
@@ -1682,7 +2888,7 @@ Artificiell intelligens och maskininlärning
 \begin_inset Graphics
 	filename figs/Tracking.jpg
 	lyxscale 10
-	scale 10
+	scale 9.9
 
 \end_inset
 
@@ -1702,7 +2908,7 @@ Artificiell intelligens och maskininlärning
 \begin_inset Graphics
 	filename figs/Siri.jpg
 	lyxscale 10
-	scale 4.5
+	scale 4.43
 
 \end_inset
 
@@ -1710,7 +2916,7 @@ Artificiell intelligens och maskininlärning
 \begin_inset Graphics
 	filename figs/doctorIpad.jpg
 	lyxscale 10
-	scale 6
+	scale 5.8
 
 \end_inset
 
