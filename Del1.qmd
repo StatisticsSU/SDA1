@@ -12,7 +12,7 @@ Under vissa föreläsningar länkar vi till `Extramaterial`. Det är material so
 ### **Föreläsningar**
 
 **Föreläsning 1 - Introduktion.**\
-Läs: SDM Kapitel 1 | [Slides](/misc/larry.png) 
+Läs: SDM Kapitel 1 | [Slides](/slides/F1Intro.pdf) 
 
 **Föreläsning 2 - Introduktion till R. **\
 Läs: LITTERATUR | [Slides](/misc/larry.png) 
