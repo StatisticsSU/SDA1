@@ -15,7 +15,7 @@ Under vissa föreläsningar länkar vi till `Extramaterial`. Det är material so
 Läs: SDM Kapitel 1 | [Slides](/slides/F1Intro.pdf) 
 
 **Föreläsning 2 - Introduktion till R. **\
-Läs: LITTERATUR | [Slides](/misc/larry.png) 
+Läs: LITTERATU | [Slides](/misc/larry.png) 
 
 **Föreläsning 3 - Hantera och beskriva data.**\
 Läs: SDM Kapitel 2 | [Slides](/misc/larry.png)\
