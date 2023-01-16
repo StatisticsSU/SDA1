@@ -247,7 +247,11 @@ R kommer nu att hitta filen och vi är redo att skriva kommandot som läser in f
     Installation av paket behövs bara göras en gång på din dator. Du behöver inte installera om nästa gång du startar upp RStudio på nytt.
 
 ::: column-margin
-<center>![](../../slides/figs/flaticons/Spotify_Icon_RGB_Green.png){width="40"}</center>
+<center>
+
+![](../../slides/figs/flaticons/Spotify_Icon_RGB_Green.png){width="40"}
+
+</center>
 
 Paketet [spotifyr](https://www.rcharlie.com/spotifyr/) kan t ex tala om för dig vilka dina fem mest spelade Spotify-låtar är. Se sidan [StrangeR things](https://rpubs.com/dbecker7/StrangeRThings) för andra mer eller mindre konstiga paket. Och, ja, det är vanligt med ett stort R i namnet på R-relaterade saker. NördaR, du vet.
 :::
@@ -276,15 +280,14 @@ När man har läst in ett datamaterial är det bra att ta en snabbtitt på den i
 ```{r}
 #| echo: true
 library(openxlsx)
-stockdata = read.xlsx('stock.xlsx', sheet = 1)
-stockdata = data.frame(stockdata) # gör om stockdata till en dataframe
+stockdata = read.xlsx('stock.xlsx', sheet = 1) # läser in Excel data
 head(stockdata)
 ```
 
 ::: callout-note
 ## Kommentarer
 
-I min kod ovan skrev jag `# gör om stockdata till en dataframe` på en rad. All text som kommer *efter* tecknet `#` är en s k **kommentar** i R. Kommentarer ignoreras av R och är därför ett bra sätt att skriva små saker som gör koden mer lättläst. Du måste ha ett `#` -tecken framför varje rad som du vill "kommentera ut".
+I min kod ovan skrev jag `# läser in Excel data` på en rad. All text som kommer *efter* tecknet `#` är en s k **kommentar** i R. Kommentarer ignoreras av R och är därför ett bra sätt att skriva små saker som gör koden mer lättläst. Du måste ha ett `#` -tecken framför varje rad som du vill "kommentera ut".
 :::
 
 ::: callout-tip
@@ -322,6 +325,12 @@ load("stockdata2.Rdata")
 ```
 
 vilket kommer läsa in tabellen `stockdata` i R's arbetsminne.
+
+::: callout-tip
+## Läsa in data från andra filformat än Excel
+
+Datamaterial kan också komma från rena textfiler (`.txt`) och s k `csv` filer. Se [reading data from a file](../../tutorials/ReadingDataFromFile/ReadingDataFromFile.qmd).
+:::
 
 ## 7. Analysera data
 
@@ -565,7 +574,11 @@ Man kan dela upp R's språk i tre slags dialekter, dvs tre olika kommandon (synt
 -   **Formula syntax** - syntax som via paketet `Mosaic` har utvecklats för undervisning i statistik
 -   **Tidyverse** - en modern syntax utvecklat av personerna bakom RStudio.
 
-<center>[![](../../misc/hexagons/figs/base_r_hexagon.svg){width="60"}](../../R/cheatsheets/base-r_cheat_sheet.pdf)  [![](../../misc/hexagons/figs/mosaic_hexagon.svg){width="60"}](../../R/cheatsheets/mosaic_cheatsheet_gf.pdf)  [![](../../misc/hexagons/figs/tidyverse_hexagon.svg){width="60"}](../../R/cheatsheets/ggplot2_cheatsheet.pdf)</center>
+<center>
+
+[![](../../misc/hexagons/figs/base_r_hexagon.svg){width="60"}](../../R/cheatsheets/base-r_cheat_sheet.pdf)  [![](../../misc/hexagons/figs/mosaic_hexagon.svg){width="60"}](../../R/cheatsheets/mosaic_cheatsheet_gf.pdf)  [![](../../misc/hexagons/figs/tidyverse_hexagon.svg){width="60"}](../../R/cheatsheets/ggplot2_cheatsheet.pdf)
+
+</center>
 
 <br>
 
@@ -605,7 +618,6 @@ gf_point(mpg ~ hp, data = mtcars, title = "Cars fuel usage")
 -   Läsa in data från fil och göra inledande grafer och medelvärdeberäkningar för dataanalys.
 
 -   Vi har också tittat på datastrukturer i R och t o m nosat lite på funktioner i R.
-
 :::
 
 <br><br>

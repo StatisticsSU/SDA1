@@ -1,5 +1,5 @@
 ---
-title: "Reading data from an file"
+title: "Reading data from a file"
 author: "Mattias Villani"
 format: html
 editor: visual

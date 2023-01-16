@@ -557,7 +557,7 @@ Installation av paket behövs bara göras en gång på din dator. Du behöver in
 
 <div class="no-row-height column-margin column-container"><div class="">
 <center>
-<img src="../../slides/figs/flaticons/Spotify_Icon_RGB_Green.png" class="img-fluid" width="40">
+<p><img src="../../slides/figs/flaticons/Spotify_Icon_RGB_Green.png" class="img-fluid" width="40"></p>
 </center>
 <p>Paketet <a href="https://www.rcharlie.com/spotifyr/">spotifyr</a> kan t ex tala om för dig vilka dina fem mest spelade Spotify-låtar är. Se sidan <a href="https://rpubs.com/dbecker7/StrangeRThings">StrangeR things</a> för andra mer eller mindre konstiga paket. Och, ja, det är vanligt med ett stort R i namnet på R-relaterade saker. NördaR, du vet.</p>
 </div></div><ol start="2" type="1">
@@ -580,9 +580,8 @@ Det är några saker att reda ut här. Först, <code>read.xlsx()</code> är en <
 <p>När man har läst in ett datamaterial är det bra att ta en snabbtitt på den inlästa tabellen för att se att den blev korrekt inläst. Precis som vi gjorde med variabel <code>kapital</code> för att se dess värde (t ex 100) så kan skriva <code>stockdata</code> i Console för att se dess värde (som ju är en tabell). Om man har en tabell med många rader så blir det fort jobbigt att skriva ut alla rader. Kommandot <code>head()</code> är då praktiskt, som bara skriver ut det första 6 raderna av tabellen. Här har vi alla kommandon som krävs för att ladda in data och skriva ut fint på skärmen (förutom <code>install.packages('openxlsx')</code> som jag antar att du redan har kört för att installera paketet).</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(openxlsx)</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>stockdata <span class="ot">=</span> <span class="fu">read.xlsx</span>(<span class="st">'stock.xlsx'</span>, <span class="at">sheet =</span> <span class="dv">1</span>)</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>stockdata <span class="ot">=</span> <span class="fu">data.frame</span>(stockdata) <span class="co"># gör om stockdata till en dataframe</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(stockdata)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>stockdata <span class="ot">=</span> <span class="fu">read.xlsx</span>(<span class="st">'stock.xlsx'</span>, <span class="at">sheet =</span> <span class="dv">1</span>) <span class="co"># läser in Excel data</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(stockdata)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  year  capital returns
 1 2018 100.0000    0.00
@@ -603,7 +602,7 @@ Kommentarer
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>I min kod ovan skrev jag <code># gör om stockdata till en dataframe</code> på en rad. All text som kommer <em>efter</em> tecknet <code>#</code> är en s k <strong>kommentar</strong> i R. Kommentarer ignoreras av R och är därför ett bra sätt att skriva små saker som gör koden mer lättläst. Du måste ha ett <code>#</code> -tecken framför varje rad som du vill “kommentera ut”.</p>
+<p>I min kod ovan skrev jag <code># läser in Excel data</code> på en rad. All text som kommer <em>efter</em> tecknet <code>#</code> är en s k <strong>kommentar</strong> i R. Kommentarer ignoreras av R och är därför ett bra sätt att skriva små saker som gör koden mer lättläst. Du måste ha ett <code>#</code> -tecken framför varje rad som du vill “kommentera ut”.</p>
 </div>
 </div>
 <div class="callout-tip callout callout-style-default callout-captioned">
@@ -644,6 +643,19 @@ Prova nu att läsa in data med kommandot <code>stockdata = read.xlsx('stock.xlsx
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">"stockdata2.Rdata"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>vilket kommer läsa in tabellen <code>stockdata</code> i R’s arbetsminne.</p>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Läsa in data från andra filformat än Excel
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Datamaterial kan också komma från rena textfiler (<code>.txt</code>) och s k <code>csv</code> filer. Se <a href="../../tutorials/ReadingDataFromFile/ReadingDataFromFile.html">reading data from a file</a>.</p>
+</div>
+</div>
 </section>
 </section>
 <section id="analysera-data" class="level2">
@@ -919,7 +931,7 @@ Hitta lätt bland alla fickor
 <li><strong>Tidyverse</strong> - en modern syntax utvecklat av personerna bakom RStudio.</li>
 </ul>
 <center>
-<a href="../../R/cheatsheets/base-r_cheat_sheet.pdf"><img src="../../misc/hexagons/figs/base_r_hexagon.svg" class="img-fluid" width="60"></a>&nbsp; <a href="../../R/cheatsheets/mosaic_cheatsheet_gf.pdf"><img src="../../misc/hexagons/figs/mosaic_hexagon.svg" class="img-fluid" width="60"></a>&nbsp; <a href="../../R/cheatsheets/ggplot2_cheatsheet.pdf"><img src="../../misc/hexagons/figs/tidyverse_hexagon.svg" class="img-fluid" width="60"></a>
+<p><a href="../../R/cheatsheets/base-r_cheat_sheet.pdf"><img src="../../misc/hexagons/figs/base_r_hexagon.svg" class="img-fluid" width="60"></a>&nbsp; <a href="../../R/cheatsheets/mosaic_cheatsheet_gf.pdf"><img src="../../misc/hexagons/figs/mosaic_hexagon.svg" class="img-fluid" width="60"></a>&nbsp; <a href="../../R/cheatsheets/ggplot2_cheatsheet.pdf"><img src="../../misc/hexagons/figs/tidyverse_hexagon.svg" class="img-fluid" width="60"></a></p>
 </center>
 <p><br></p>
 <p>I SDA1 kommer vi försöka använda Formula syntax som mycket som möjligt, med inslag av Base-R. Tidyverse-kod kan ofta vara extremt effektiv, men tar för lång tid att lära sig på en grundkurs i statistik. Vi kommer dock då och då att visa hur man gör samma sak i de olika dialekterna, men på ett sätt som inte stör flödet för den student som helst vill hålla sig till ett sätt. Vi använder ikoner som du som student kan klicka på för att se ett kommando i olika dialekter. Här är ett exempel (prova att klicka ikonerna i höger-marginalen):</p>
