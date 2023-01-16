@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.256">
+<meta name="generator" content="quarto-1.2.313">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -236,6 +236,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#install.packages("openxlsx") # Installs the openxlsx package. Do it only once.</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"openxlsx"</span>)           <span class="co"># loads the openxlsx package. Do it once per R session.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'openxlsx' was built under R version 4.2.2</code></pre>
+</div>
 </div>
 <div class="callout-note callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
@@ -251,7 +254,7 @@ Note
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>tour_de_france <span class="ot">&lt;-</span> <span class="fu">read.xlsx</span>(<span class="st">'Tour_de_France_2017.xlsx'</span>, <span class="at">sheet =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>tour_de_france <span class="ot">&lt;-</span> <span class="fu">read.xlsx</span>(<span class="st">'Tour_de_France_2017.xlsx'</span>, <span class="at">sheet =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>The argument <code>sheet=1</code> tells R to read data from the first sheet in the Excel file. If you want to the read data from the third sheet in an Excel file, then just replace 1 with 3 (the Tour de France data has only one sheet, however).</p>
 <div class="callout-important callout callout-style-default callout-captioned">
@@ -285,113 +288,113 @@ Tip
 </div>
 <p>We have now read the dataset into a variable that I have chosen to call <code>tour_de_france</code>. We can now just type the name of this variable in the Console in R to see the data.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>tour_de_france</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>tour_de_france</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>    Year              Winner       Country Age                Team
-1   1903       Maurice Garin        France  32        La Fran�aise
-2   1904        Henri Cornet        France  20           Cycles JC
-3   1905   Louis Trousselier        France  24             Peugeot
-4   1906        Ren� Pottier        France  27             Peugeot
-5   1907 Lucien Petit-Breton        France  24             Peugeot
-6   1908 Lucien Petit-Breton        France  25             Peugeot
-7   1909      Fran�ois Faber    Luxembourg  22              Alcyon
-8   1910       Octave Lapize        France  21              Alcyon
-9   1911    Gustave Garrigou        France  27              Alcyon
-10  1912       Odile Defraye       Belgium  24              Alcyon
-11  1913       Philippe Thys       Belgium  23             Peugeot
-12  1914       Philippe Thys       Belgium  24             Peugeot
-13  1919          Fir Lambot       Belgium  33         La Sportive
-14  1920       Philippe Thys       Belgium  30         La Sportive
-15  1921         L�on Scieur       Belgium  33         La Sportive
-16  1922          Fir Lambot       Belgium  36             Peugeot
-17  1923     Henri P�lissier        France  33            Automoto
-18  1924  Ottavio Bottecchia         Italy  30            Automoto
-19  1925  Ottavio Bottecchia         Italy  31            Automoto
-20  1926       Lucien Buysse       Belgium  34            Automoto
-21  1927      Nicolas Frantz    Luxembourg  28              Alcyon
-22  1928      Nicolas Frantz    Luxembourg  29              Alcyon
-23  1929    Maurice De Walel       Belgium  33              Alcyon
-24  1930        Andr� Leducq        France  26              France
-25  1931       Antonin Magne        France  27              France
-26  1932        Andr� Leducq        France  28              France
-27  1933    Georges Speicher        France  26              France
-28  1934       Antonin Magne        France  30              France
-29  1935         Romain Maes       Belgium  22             Belgium
-30  1936        Silv�re Maes       Belgium  27             Belgium
-31  1937       Roger Lap�bie        France  26              France
-32  1938        Gino Bartali         Italy  24               Italy
-33  1939        Silv�re Maes       Belgium  30             Belgium
-34  1947          Jean Robic        France  26               Ouest
-35  1948        Gino Bartali         Italy  34               Italy
-36  1949        Fausto Coppi         Italy  30               Italy
-37  1950        Ferdy K�bler   Switzerland  31         Switzerland
-38  1951         Hugo Koblet   Switzerland  26         Switzerland
-39  1952        Fausto Coppi         Italy  33               Italy
-40  1953       Louison Bobet        France  28              France
-41  1954       Louison Bobet        France  29              France
-42  1955       Louison Bobet        France  30              France
-43  1956     Roger Walkowiak        France  29    Nord-Est- Centre
-44  1957    Jacques Anquetil        France  23              France
-45  1958         Charly Gaul    Luxembourg  26 Holland- Luxembourg
-46  1959 Federico Bahamontes         Spain  31               Spain
-47  1960     Gastone Nencini         Italy  30               Italy
-48  1961    Jacques Anquetil        France  27              France
-49  1962    Jacques Anquetil        France  28          St-Rapha�l
-50  1963    Jacques Anquetil        France  29          St-Rapha�l
-51  1964    Jacques Anquetil        France  30          St-Rapha�l
-52  1965      Felice Gimondi         Italy  23           Salvarini
-53  1966        Lucien Aimar        France  25                Ford
-54  1967       Roger Pingeon        France  27              France
-55  1968         Jan Janssen   Netherlands  28             Holland
-56  1969         Eddy Merckx       Belgium  24               Faema
-57  1970         Eddy Merckx       Belgium  25                Faeo
-58  1971         Eddy Merckx       Belgium  26             Molteni
-59  1972         Eddy Merckx       Belgium  27             Molteni
-60  1973          Luis Oca�a         Spain  28                 Bic
-61  1974         Eddy Merckx       Belgium  29             Molteni
-62  1975    Bernard Th�venet        France  27             Peugeot
-63  1976     Lucien van Impe       Belgium  30              Gitane
-64  1977    Bernard Th�venet        France  29             Peugeot
-65  1978     Bernard Hinault        France  24             Renault
-66  1979     Bernard Hinault        France  25             Renault
-67  1980      Joop Zoetemelk   Netherlands  34          TI-Raleigh
-68  1981     Bernard Hinault        France  27             Renault
-69  1982     Bernard Hinault        France  28             Renault
-70  1983      Laurent Fignon        France  23             Renault
-71  1984      Laurent Fignon        France  24             Renault
-72  1985     Bernard Hinault        France  31       La Vie Claire
-73  1986         Greg LeMond           USA  25       La Vie Claire
-74  1987       Stephen Roche       Ireland  28             Carrera
-75  1988       Pedro Delgado         Spain  28            Reynolds
-76  1989         Greg LeMond           USA  28                 ADR
-77  1990         Greg LeMond           USA  29                   Z
-78  1991     Miguel Indur�in         Spain  27             Banesto
-79  1992     Miguel Indur�in         Spain  28             Banesto
-80  1993     Miguel Indur�in         Spain  29             Banesto
-81  1994     Miguel Indur�in         Spain  30             Banesto
-82  1995     Miguel Indur�in         Spain  31             Banesto
-83  1996         Bjarne Riis       Denmark  32    Deutsche Telekom
-84  1997         Jan Ullrich       Germany  24             Telekom
-85  1998       Marco Pantani         Italy  28       Mercatone Uno
-86  1999     Lance Armstrong           USA  28           US Postal
-87  2000     Lance Armstrong           USA  29           US Postal
-88  2001     Lance Armstrong           USA  30           US Postal
-89  2002     Lance Armstrong           USA  31           US Postal
-90  2003     Lance Armstrong           USA  32           US Postal
-91  2004     Lance Armstrong           USA  33           US Postal
-92  2005     Lance Armstrong           USA  34           Discovery
-93  2006       Pereiro Oscar         Spain  30    Caisse d'Epargne
-94  2007    Contador Alberto         Spain  24           Discovery
-95  2008       Sastre Carlos         Spain  33       CSC-Saxo Bank
-96  2009    Contador Alberto         Spain  26              Astana
-97  2010        Andy Schleck    Luxembourg  25           Saxo Bank
-98  2011         Cadel Evans     Australia  34                 BMC
-99  2012     Bradley Wiggins Great Britain  32                 Sky
-100 2013  Christopher Froome Great Britain  28                 Sky
-101 2014      Vincezo Nibali         Italy  29              Astana
-102 2015   Cristopher Froome Great Britain  30                 Sky
-103 2016   Cristopher Froome Great Britain  31                 Sky
-104 2017   Cristopher Froome Great Britain  32                 Sky
+<pre><code>    Year                  Winner       Country Age                Team
+1   1903           Maurice Garin        France  32 La Fran&lt;U+FFFD&gt;aise
+2   1904            Henri Cornet        France  20           Cycles JC
+3   1905       Louis Trousselier        France  24             Peugeot
+4   1906     Ren&lt;U+FFFD&gt; Pottier        France  27             Peugeot
+5   1907     Lucien Petit-Breton        France  24             Peugeot
+6   1908     Lucien Petit-Breton        France  25             Peugeot
+7   1909   Fran&lt;U+FFFD&gt;ois Faber    Luxembourg  22              Alcyon
+8   1910           Octave Lapize        France  21              Alcyon
+9   1911        Gustave Garrigou        France  27              Alcyon
+10  1912           Odile Defraye       Belgium  24              Alcyon
+11  1913           Philippe Thys       Belgium  23             Peugeot
+12  1914           Philippe Thys       Belgium  24             Peugeot
+13  1919              Fir Lambot       Belgium  33         La Sportive
+14  1920           Philippe Thys       Belgium  30         La Sportive
+15  1921      L&lt;U+FFFD&gt;on Scieur       Belgium  33         La Sportive
+16  1922              Fir Lambot       Belgium  36             Peugeot
+17  1923  Henri P&lt;U+FFFD&gt;lissier        France  33            Automoto
+18  1924      Ottavio Bottecchia         Italy  30            Automoto
+19  1925      Ottavio Bottecchia         Italy  31            Automoto
+20  1926           Lucien Buysse       Belgium  34            Automoto
+21  1927          Nicolas Frantz    Luxembourg  28              Alcyon
+22  1928          Nicolas Frantz    Luxembourg  29              Alcyon
+23  1929        Maurice De Walel       Belgium  33              Alcyon
+24  1930     Andr&lt;U+FFFD&gt; Leducq        France  26              France
+25  1931           Antonin Magne        France  27              France
+26  1932     Andr&lt;U+FFFD&gt; Leducq        France  28              France
+27  1933        Georges Speicher        France  26              France
+28  1934           Antonin Magne        France  30              France
+29  1935             Romain Maes       Belgium  22             Belgium
+30  1936     Silv&lt;U+FFFD&gt;re Maes       Belgium  27             Belgium
+31  1937    Roger Lap&lt;U+FFFD&gt;bie        France  26              France
+32  1938            Gino Bartali         Italy  24               Italy
+33  1939     Silv&lt;U+FFFD&gt;re Maes       Belgium  30             Belgium
+34  1947              Jean Robic        France  26               Ouest
+35  1948            Gino Bartali         Italy  34               Italy
+36  1949            Fausto Coppi         Italy  30               Italy
+37  1950     Ferdy K&lt;U+FFFD&gt;bler   Switzerland  31         Switzerland
+38  1951             Hugo Koblet   Switzerland  26         Switzerland
+39  1952            Fausto Coppi         Italy  33               Italy
+40  1953           Louison Bobet        France  28              France
+41  1954           Louison Bobet        France  29              France
+42  1955           Louison Bobet        France  30              France
+43  1956         Roger Walkowiak        France  29    Nord-Est- Centre
+44  1957        Jacques Anquetil        France  23              France
+45  1958             Charly Gaul    Luxembourg  26 Holland- Luxembourg
+46  1959     Federico Bahamontes         Spain  31               Spain
+47  1960         Gastone Nencini         Italy  30               Italy
+48  1961        Jacques Anquetil        France  27              France
+49  1962        Jacques Anquetil        France  28   St-Rapha&lt;U+FFFD&gt;l
+50  1963        Jacques Anquetil        France  29   St-Rapha&lt;U+FFFD&gt;l
+51  1964        Jacques Anquetil        France  30   St-Rapha&lt;U+FFFD&gt;l
+52  1965          Felice Gimondi         Italy  23           Salvarini
+53  1966            Lucien Aimar        France  25                Ford
+54  1967           Roger Pingeon        France  27              France
+55  1968             Jan Janssen   Netherlands  28             Holland
+56  1969             Eddy Merckx       Belgium  24               Faema
+57  1970             Eddy Merckx       Belgium  25                Faeo
+58  1971             Eddy Merckx       Belgium  26             Molteni
+59  1972             Eddy Merckx       Belgium  27             Molteni
+60  1973       Luis Oca&lt;U+FFFD&gt;a         Spain  28                 Bic
+61  1974             Eddy Merckx       Belgium  29             Molteni
+62  1975 Bernard Th&lt;U+FFFD&gt;venet        France  27             Peugeot
+63  1976         Lucien van Impe       Belgium  30              Gitane
+64  1977 Bernard Th&lt;U+FFFD&gt;venet        France  29             Peugeot
+65  1978         Bernard Hinault        France  24             Renault
+66  1979         Bernard Hinault        France  25             Renault
+67  1980          Joop Zoetemelk   Netherlands  34          TI-Raleigh
+68  1981         Bernard Hinault        France  27             Renault
+69  1982         Bernard Hinault        France  28             Renault
+70  1983          Laurent Fignon        France  23             Renault
+71  1984          Laurent Fignon        France  24             Renault
+72  1985         Bernard Hinault        France  31       La Vie Claire
+73  1986             Greg LeMond           USA  25       La Vie Claire
+74  1987           Stephen Roche       Ireland  28             Carrera
+75  1988           Pedro Delgado         Spain  28            Reynolds
+76  1989             Greg LeMond           USA  28                 ADR
+77  1990             Greg LeMond           USA  29                   Z
+78  1991  Miguel Indur&lt;U+FFFD&gt;in         Spain  27             Banesto
+79  1992  Miguel Indur&lt;U+FFFD&gt;in         Spain  28             Banesto
+80  1993  Miguel Indur&lt;U+FFFD&gt;in         Spain  29             Banesto
+81  1994  Miguel Indur&lt;U+FFFD&gt;in         Spain  30             Banesto
+82  1995  Miguel Indur&lt;U+FFFD&gt;in         Spain  31             Banesto
+83  1996             Bjarne Riis       Denmark  32    Deutsche Telekom
+84  1997             Jan Ullrich       Germany  24             Telekom
+85  1998           Marco Pantani         Italy  28       Mercatone Uno
+86  1999         Lance Armstrong           USA  28           US Postal
+87  2000         Lance Armstrong           USA  29           US Postal
+88  2001         Lance Armstrong           USA  30           US Postal
+89  2002         Lance Armstrong           USA  31           US Postal
+90  2003         Lance Armstrong           USA  32           US Postal
+91  2004         Lance Armstrong           USA  33           US Postal
+92  2005         Lance Armstrong           USA  34           Discovery
+93  2006           Pereiro Oscar         Spain  30    Caisse d'Epargne
+94  2007        Contador Alberto         Spain  24           Discovery
+95  2008           Sastre Carlos         Spain  33       CSC-Saxo Bank
+96  2009        Contador Alberto         Spain  26              Astana
+97  2010            Andy Schleck    Luxembourg  25           Saxo Bank
+98  2011             Cadel Evans     Australia  34                 BMC
+99  2012         Bradley Wiggins Great Britain  32                 Sky
+100 2013      Christopher Froome Great Britain  28                 Sky
+101 2014          Vincezo Nibali         Italy  29              Astana
+102 2015       Cristopher Froome Great Britain  30                 Sky
+103 2016       Cristopher Froome Great Britain  31                 Sky
+104 2017       Cristopher Froome Great Britain  32                 Sky
     Total.Time(h.min.sec) Total.Time(h) Average.Speed Stages
 1                94.33.00      94.55000        25.679      6
 2                96.05.56      96.09889        25.265      6
@@ -607,34 +610,34 @@ Tip
 <p>Note that some accented letters like é were replaced by a question mark. The variable <code>tour_de_france</code> is a table of a specific type called <code>dataframe</code>, which is R’s main way of storing a table.</p>
 <p>To get a quick look at the data, the <code>head</code> command is useful, showing only the first few observations of the dataset:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(tour_de_france)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(tour_de_france)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>  Year              Winner Country Age         Team Total.Time(h.min.sec)
-1 1903       Maurice Garin  France  32 La Fran�aise              94.33.00
-2 1904        Henri Cornet  France  20    Cycles JC              96.05.56
-3 1905   Louis Trousselier  France  24      Peugeot             110.26.58
-4 1906        Ren� Pottier  France  27      Peugeot             189.34.00
-5 1907 Lucien Petit-Breton  France  24      Peugeot             158.45.05
-6 1908 Lucien Petit-Breton  France  25      Peugeot             156.53.29
-  Total.Time(h) Average.Speed Stages Total.Distance.Ridden Starting.Riders
-1      94.55000        25.679      6                  2428              60
-2      96.09889        25.265      6                  2428              88
-3     110.44944        27.107     11                  2994              60
-4     189.56667        24.463     13                  4637              82
-5     158.75139        28.470     14                  4488              93
-6     156.89139        28.740     14                  4488             112
-  Finishing.Riders
-1               21
-2               27
-3               24
-4               14
-5               33
-6               36</code></pre>
+<pre><code>  Year              Winner Country Age                Team
+1 1903       Maurice Garin  France  32 La Fran&lt;U+FFFD&gt;aise
+2 1904        Henri Cornet  France  20           Cycles JC
+3 1905   Louis Trousselier  France  24             Peugeot
+4 1906 Ren&lt;U+FFFD&gt; Pottier  France  27             Peugeot
+5 1907 Lucien Petit-Breton  France  24             Peugeot
+6 1908 Lucien Petit-Breton  France  25             Peugeot
+  Total.Time(h.min.sec) Total.Time(h) Average.Speed Stages
+1              94.33.00      94.55000        25.679      6
+2              96.05.56      96.09889        25.265      6
+3             110.26.58     110.44944        27.107     11
+4             189.34.00     189.56667        24.463     13
+5             158.45.05     158.75139        28.470     14
+6             156.53.29     156.89139        28.740     14
+  Total.Distance.Ridden Starting.Riders Finishing.Riders
+1                  2428              60               21
+2                  2428              88               27
+3                  2994              60               24
+4                  4637              82               14
+5                  4488              93               33
+6                  4488             112               36</code></pre>
 </div>
 </div>
 <p>You can now start analyzing the data in different ways, perhaps plotting the average speed variable over the year that Tour de France has run:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(Average.Speed <span class="sc">~</span> Year, <span class="at">data =</span> tour_de_france)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(Average.Speed <span class="sc">~</span> Year, <span class="at">data =</span> tour_de_france)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img src="ReadingDataFromFile_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="672"></p>
 </div>
@@ -652,8 +655,8 @@ Tip
 <p>Note how the columns are not nice aligned, but clearly separated by blank space (TAB) so that R can understand which numbers belongs to which variable (column). Note also that the first row contain the variable names: <code>Year</code>, <code>Winner</code>, <code>Chassis</code>, <code>Engine</code>, <code>Speed</code>, <code>Time_hrs</code> and <code>Distance</code>.</p>
 <p>Let’s read this text file with data into R using the built-in function <code>read.delim</code></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>indy <span class="ot">&lt;-</span> <span class="fu">read.delim</span>(<span class="st">'Indy_500_2018.txt'</span>, <span class="at">header =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(indy)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>indy <span class="ot">&lt;-</span> <span class="fu">read.delim</span>(<span class="st">'Indy_500_2018.txt'</span>, <span class="at">header =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(indy)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  Year        Winner  Chassis   Engine Speed.computed Time_hrs Distance
 1 1911   Ray Harroun   Marmon   Marmon       74.60212 6.702222      500
