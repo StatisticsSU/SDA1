@@ -17,7 +17,7 @@ Du måste först installera R och sen RStudio:
 -   R kan laddas ner [här](https://ftp.acc.umu.se/mirror/CRAN/).
 -   RStudio kan laddas ner [här](https://www.rstudio.com/products/rstudio/download/#download).
 
-Den här [youtube videon](https://youtu.be/TFGYlKvQEQ4) går igenom alla steg installationen.
+Den här [YouTube videon](https://youtu.be/TFGYlKvQEQ4) går igenom alla steg i installationen.
 
 ## Tre dialekter av R
 
@@ -25,7 +25,7 @@ Man kan dela upp R's språk i tre slags dialekter, dvs tre olika kommandon (synt
 
 -   **Base-R** - (den ursprungliga) med dess s k *dollar sign $* syntax
 -   **Formula** - syntax som via paketet `Mosaic` har utvecklats för undervisning i statistik
--   **Tidyverse** - en modern syntax utvecklat av personerna bakom RStudio.
+-   **Tidyverse** - en alternativ syntax utvecklat av personerna bakom RStudio.
 
 <center>
 [![](misc/hexagons/figs/base_r_hexagon.svg){width="60"}](R/cheatsheets/base-r_cheat_sheet.pdf)&nbsp; [![](misc/hexagons/figs/mosaic_hexagon.svg){width="60"}](R/cheatsheets/mosaic_cheatsheet_gf.pdf)&nbsp; [![](misc/hexagons/figs/tidyverse_hexagon.svg){width="60"}](R/cheatsheets/ggplot2_cheatsheet.pdf)

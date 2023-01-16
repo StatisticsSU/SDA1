@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.313">
+<meta name="generator" content="quarto-1.2.256">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Mattias Villani">
-<meta name="dcterms.date" content="2023-01-15">
+<meta name="dcterms.date" content="2023-01-16">
 
 <title>SDA1 - Statistik och dataanalys I, 15 hp</title>
 <style>
@@ -224,7 +224,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">January 15, 2023</p>
+      <p class="date">January 16, 2023</p>
     </div>
   </div>
   
@@ -547,8 +547,8 @@ What’s in a name? Mer än du tror!
 </ol>
 <p>R kommer nu att hitta filen och vi är redo att skriva kommandot som läser in filen. Eftersom det är första gången du läser in en Excel-fil i R behöver du göra lite grundjobb. Vi ska göra tre steg:</p>
 <ol type="1">
-<li><strong>Installera R-paketet</strong> <code>readxl</code>. R kommer med ett antal baskommandon förinstallerat. T ex har vi redan använt <strong>funktionen</strong> <code>setwd()</code> för att tala om för R vilken mapp som är vår working directory. Men många kommandon/funktioner i R måste laddas in via s k <strong>R-paket</strong>. Det finns R-paket för nästan allt man vill göra: läsa in data, gör olika typer av statistiska analyser etc etc. Paketet <code>readxl</code> är specialiserat på att läsa in Excel-filer i R. För att installera paketet kör vi kommandot <code>install.packages('readxl')</code> antingen genom att skriv in det i en kodfil och trycka på <code>Run</code> eller genom att skriva det direkt i terminalen. Efter det kommer R att skriva ut en massa mumbo-jumbo i Console som beskriver installationen. Paket kan ta någon minut eller mer för att installera. Om inga fel uppstår brukar installationsmeddelandet avslutas med något liknande:<br>
-<code>DONE (readxl)</code><br>
+<li><strong>Installera R-paketet</strong> <code>openxlsx</code>. R kommer med ett antal baskommandon förinstallerat. T ex har vi redan använt <strong>funktionen</strong> <code>setwd()</code> för att tala om för R vilken mapp som är vår working directory. Men många kommandon/funktioner i R måste laddas in via s k <strong>R-paket</strong>. Det finns R-paket för nästan allt man vill göra: läsa in data, gör olika typer av statistiska analyser etc etc. Paketet <code>openxlsx</code> är specialiserat på att läsa in Excel-filer i R. För att installera paketet kör vi kommandot <code>install.packages('openxlsx')</code> antingen genom att skriv in det i en kodfil och trycka på <code>Run</code> eller genom att skriva det direkt i terminalen. Efter det kommer R att skriva ut en massa mumbo-jumbo i Console som beskriver installationen. Paket kan ta någon minut eller mer för att installera. Om inga fel uppstår brukar installationsmeddelandet avslutas med något liknande:<br>
+<code>DONE (openxlsx)</code><br>
 <code>The downloaded source packages are in</code><br>
 följt av någon kryptisk sökväg till stället på din dator där paketet har blivit installerat.<br>
 <br>
@@ -561,26 +561,26 @@ Installation av paket behövs bara göras en gång på din dator. Du behöver in
 </center>
 <p>Paketet <a href="https://www.rcharlie.com/spotifyr/">spotifyr</a> kan t ex tala om för dig vilka dina fem mest spelade Spotify-låtar är. Se sidan <a href="https://rpubs.com/dbecker7/StrangeRThings">StrangeR things</a> för andra mer eller mindre konstiga paket. Och, ja, det är vanligt med ett stort R i namnet på R-relaterade saker. NördaR, du vet.</p>
 </div></div><ol start="2" type="1">
-<li><p><strong>Ladda R-paketet</strong> <code>readxl</code>. Kommandot <code>library(readxl)</code> laddar funktionerna i paketet <code>readxl</code> till R’s arbetsminne. Först efter denna kommando kan vi använda funktionerna i paketet. Notera att vi behöver ‘blippar’ kring paketets namn när vi installerar, men inte när vi laddar paketet. Ett paket som laddats in med library finns inte tillgängligt när du start om RStudio. Du måste alltså skriva <code>library(readxl)</code> för varje ny session där du vill läsa in Excel-filer. Det är därför bra att skriva in <code>library(readxl)</code> i kodfilen du ska använda för att läsa in Excel-filer.</p></li>
-<li><p>Läs in data från Excel-filen genom kommandot/<strong>funktionen</strong> <code>read_excel()</code>. Här hela kommandot (<strong>funktionsanropet</strong>):<br>
-<code>stockdata = read_excel('stock.xlsx', sheet = 1)</code><br>
-Det är några saker att reda ut här. Först, <code>read_excel()</code> är en <strong>funktion</strong> vilket betyder att det är ett kommando som <strong>gör något</strong> baserat på funktionens <strong>input-argument</strong>:</p>
+<li><p><strong>Ladda R-paketet</strong> <code>openxlsx</code>. Kommandot <code>library(openxlsx)</code> laddar funktionerna i paketet <code>openxlsx</code> till R’s arbetsminne. Först efter denna kommando kan vi använda funktionerna i paketet. Notera att vi behöver ‘blippar’ kring paketets namn när vi installerar, men inte när vi laddar paketet. Ett paket som laddats in med library finns inte tillgängligt när du start om RStudio. Du måste alltså skriva <code>library(openxlsx)</code> för varje ny session där du vill läsa in Excel-filer. Det är därför bra att skriva in <code>library(openxlsx)</code> i kodfilen du ska använda för att läsa in Excel-filer.</p></li>
+<li><p>Läs in data från Excel-filen genom kommandot/<strong>funktionen</strong> <code>read.xlsx</code>. Här hela kommandot (<strong>funktionsanropet</strong>):<br>
+<code>stockdata = read.xlsx('stock.xlsx', sheet = 1)</code><br>
+Det är några saker att reda ut här. Först, <code>read.xlsx()</code> är en <strong>funktion</strong> vilket betyder att det är ett kommando som <strong>gör något</strong> baserat på funktionens <strong>input-argument</strong>:</p>
 <ul>
-<li>Det första argumentet <code>'stock.xlsx'</code> är en <strong>textsträng</strong> (den har ‘blippar’) som talar om för <code>read_excel()</code> <em>vilken</em> Excelfil som ska läsas in. Vi behöver inte säga mer eftersom denna fil ligger i vår working directory, som ju R nu känner till.</li>
-<li>det andra input-argumentet är <code>sheet = 1</code>, vilket säger åt <code>read_excel()</code> att data ligger i det första kalkylbladet i filen stock.xlsx. En Excelfil kan ju har flera kalkylblad, och vill man läsa det andra bladet ändrar man <code>1</code> till <code>2</code>. (men stock.xlsx har bara ett blad, så prova inte detta för då kommer R att klaga).</li>
+<li>Det första argumentet <code>'stock.xlsx'</code> är en <strong>textsträng</strong> (den har ‘blippar’) som talar om för <code>read.xlsx()</code> <em>vilken</em> Excelfil som ska läsas in. Vi behöver inte säga mer eftersom denna fil ligger i vår working directory, som ju R nu känner till.</li>
+<li>det andra input-argumentet är <code>sheet = 1</code>, vilket säger åt <code>read.xlsx()</code> att data ligger i det första kalkylbladet i filen stock.xlsx. En Excelfil kan ju har flera kalkylblad, och vill man läsa det andra bladet ändrar man <code>1</code> till <code>2</code>. (men stock.xlsx har bara ett blad, så prova inte detta för då kommer R att klaga).</li>
 </ul>
 <p>Men vad betyder <code>stockdata =</code> i början av kommandot ovan? Jo, om R ska läsa in data till arbetsminnet så måste den ge denna data ett namn, vilket jag har valt till <code>stockdata</code> , men du får döpa den till (nästan) vad du vill. <code>stockdata</code> är en <strong>variabel</strong>, precis som <code>kapital</code> var en variabel tidigare. Variabeln <code>kapital</code> var en enkel form av en variabel som bara innehöll ett enda <strong>värde</strong>, t ex 100 i början av vårt sparande. Variabeln <code>stockdata</code> är mer komplex. Den innehåller en hel tabell med värden. Så kommandot</p>
-<p><code>stockdata = read_excel('stock.xlsx', sheet = 1)</code></p>
+<p><code>stockdata = read.xlsx('stock.xlsx', sheet = 1)</code></p>
 <p>läses alltså av R som</p>
 <blockquote class="blockquote">
 <p>Läs in första kalkylbladet av Excelfilen stock.xlsx till arbetsminnet och spara den inlästa tabellen som en tabell i variabeln <code>stockdata</code>.</p>
 </blockquote></li>
 </ol>
-<p>R har lite olika varianter av tabellvariabler. Den viktigaste för oss på den här kursen är en s k <code>dataframe</code>. Funktionen <code>read_excel()</code> läser dock in data som en s k <code>tibble</code>-tabell. För att göra om en <code>stockdata</code> till en dataframe skriver vi kommandot <code>stockdata = data.frame(stockdata)</code>, där variabeln (tabellen) <code>stockdata</code> skrivs över med resultatet att stockdata nu är en <code>dataframe</code>.</p>
-<p>När man har läst in ett datamaterial är det bra att ta en snabbtitt på den inlästa tabellen för att se att den blev korrekt inläst. Precis som vi gjorde med variabel <code>kapital</code> för att se dess värde (t ex 100) så kan skriva <code>stockdata</code> i Console för att se dess värde (som ju är en tabell). Om man har en tabell med många rader så blir det fort jobbigt att skriva ut alla rader. Kommandot <code>head()</code> är då praktiskt, som bara skriver ut det första 6 raderna av tabellen. Här har vi alla kommandon som krävs för att ladda in data och skriva ut fint på skärmen (förutom <code>install.packages('readxl')</code> som jag antar att du redan har kört för att installera paketet).</p>
+<p>R har lite olika varianter av tabellvariabler. Den viktigaste för oss på den här kursen är en s k <code>dataframe</code>. Du kan se att vår tabellvariabel <code>stockdata</code> faktiskt är en dataframe genom att skriva kommandot <code>class(stockdata)</code> i Console.</p>
+<p>När man har läst in ett datamaterial är det bra att ta en snabbtitt på den inlästa tabellen för att se att den blev korrekt inläst. Precis som vi gjorde med variabel <code>kapital</code> för att se dess värde (t ex 100) så kan skriva <code>stockdata</code> i Console för att se dess värde (som ju är en tabell). Om man har en tabell med många rader så blir det fort jobbigt att skriva ut alla rader. Kommandot <code>head()</code> är då praktiskt, som bara skriver ut det första 6 raderna av tabellen. Här har vi alla kommandon som krävs för att ladda in data och skriva ut fint på skärmen (förutom <code>install.packages('openxlsx')</code> som jag antar att du redan har kört för att installera paketet).</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>stockdata <span class="ot">=</span> <span class="fu">read_excel</span>(<span class="st">'stock.xlsx'</span>, <span class="at">sheet =</span> <span class="dv">1</span>)</span>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(openxlsx)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>stockdata <span class="ot">=</span> <span class="fu">read.xlsx</span>(<span class="st">'stock.xlsx'</span>, <span class="at">sheet =</span> <span class="dv">1</span>)</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>stockdata <span class="ot">=</span> <span class="fu">data.frame</span>(stockdata) <span class="co"># gör om stockdata till en dataframe</span></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(stockdata)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -617,7 +617,7 @@ Ange sökväg till filer som inte är i din Working directory
 </div>
 <div class="callout-body-container callout-body">
 <p>Istället för att placera alla filer i din working directory <strong>SDA1</strong> kan man istället ange sökvägen till filen när man läser in den. Om jag t ex har sparat filen i mappen <strong>Downloads</strong> på en Windows-dator så skriver jag <strong><br>
-</strong><code>stockdata = read_excel('C:/Downloads/stock.xlsx', sheet = 1)</code></p>
+</strong><code>stockdata = read.xlsx('C:/Downloads/stock.xlsx', sheet = 1)</code></p>
 </div>
 </div>
 <section id="uppgift-6.1" class="level4">
@@ -686,12 +686,12 @@ läses av R som</p>
 <p>där vi inte längre måste använda argumentet <code>data = stockdata</code> för att tala om var dessa variabler kommer från. Men det förra kommandot <code>plot(capital ~ year, data = stockdata)</code> är nog ändå mer lättläst, tycker jag.</p>
 <section id="uppgift-7.1" class="level4">
 <h4 class="anchored" data-anchor-id="uppgift-7.1">💪 Uppgift 7.1</h4>
-<p>Läs återigen in data med <code>stockdata = read_excel('stock.xlsx', sheet = 1)</code>. Gör en graf där du plottar variabeln <code>returns</code> mot <code>year</code>.</p>
+<p>Läs återigen in data med <code>stockdata = read.xlsx('stock.xlsx', sheet = 1)</code>. Gör en graf där du plottar variabeln <code>returns</code> mot <code>year</code>.</p>
 <p>Här är hela koden i ett stycke:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">'/home/mv/Dropbox/Teaching/SDA1/datorlab/lab1'</span>) <span class="co"># I have a Linux computer and my data is in this path</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)                         </span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>stockdata <span class="ot">=</span> <span class="fu">read_excel</span>(<span class="st">'stock.xlsx'</span>, <span class="at">sheet =</span> <span class="dv">1</span>)</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(openxlsx)                         </span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>stockdata <span class="ot">=</span> <span class="fu">read.xlsx</span>(<span class="st">'stock.xlsx'</span>, <span class="at">sheet =</span> <span class="dv">1</span>)</span>
 <span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>stockdata <span class="ot">=</span> <span class="fu">data.frame</span>(stockdata)</span>
 <span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>meancapital <span class="ot">=</span> <span class="fu">mean</span>(stockdata<span class="sc">$</span>capital)</span>
 <span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(capital <span class="sc">~</span> year, <span class="at">data =</span> stockdata)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -864,9 +864,9 @@ Hitta lätt bland alla fickor
 </div>
 <p>men det kan också vara något mer komplicerat som t ex att läsa in data från en Excel-fil:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>stockdata <span class="ot">=</span> <span class="fu">read_excel</span>(<span class="st">'stock.xlsx'</span>, <span class="at">sheet =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>stockdata <span class="ot">=</span> <span class="fu">read.xlsx</span>(<span class="st">'stock.xlsx'</span>, <span class="at">sheet =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>där <code>read_excel</code> är en funktion som tre input-argument filnamn (som en sträng!), talet 1 för att vi vill läsa det första bladet. Funktionen <code>read_excel</code> ger tillbaka en (tibble) dataframe som output med data.</p>
+<p>där <code>read.xlsx</code> är en funktion som tre input-argument filnamn (som en sträng!), talet 1 för att vi vill läsa det första bladet. Funktionen <code>read.xlsx</code> ger tillbaka en (tibble) dataframe som output med data.</p>
 <p>Det fina med programmeringsspråk är att man kan <strong>skapa egna funktioner</strong> som gör just det jobb som man behöver. Om jag t ex vill skapa en funktion som beräknar ränta-på-ränta effekten på ett sparkapital (med samma ränta varje år) så kan jag skriva ihop följande funktion:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>capital_interest <span class="ot">&lt;-</span> <span class="cf">function</span>(capital, interest, years){</span>

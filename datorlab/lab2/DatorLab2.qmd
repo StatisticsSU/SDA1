@@ -77,7 +77,7 @@ suppressMessages(library(mosaic))
 ::: callout-tip
 ## Snyggare utskrifter genom att undvika paket-meddelanden
 
-Många paket är 'pratiga' och skriver ut en massa meddelanden när man laddar in dem med `library`. Genom att skriva `suppressMessages(library(openxslx))` slipper vi få en massa meddelanden utskrivna i vår rapport.
+Många paket är 'pratiga' och skriver ut en massa meddelanden när man laddar in dem med `library`. Genom att skriva `suppressMessages(library(openxlsx))` slipper vi få en massa meddelanden utskrivna i vår rapport.
 :::
 
 Vi kan nu läsa in datamaterialet som finns i fliken `Titanic` i den Excelfil `Chapter_3.xls` ni laddade ner ovan:
