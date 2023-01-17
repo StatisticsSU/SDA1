@@ -299,8 +299,8 @@ Istället för att placera alla filer i din working directory **SDA1** kan man i
 
 #### 💪 Uppgift 6.1
 
-Prova att ladda ner Excelfilen stock.xlsx och spara den i SDA1 mappen. Läs sen in filen i R med kommandot `stockdata = read.xlsx('stock.xlsx', 1, header=TRUE)` . Skriv sen `head(stockdata)` i Console för att titta på data.\
-Prova nu att läsa in data med kommandot `stockdata = read.xlsx('stock.xlsx', 1, header=FALSE)` och notera skillnaden genom att återigen skriva `head(stockdata)` i Console.
+Prova att ladda ner Excelfilen stock.xlsx och spara den i SDA1 mappen. Läs sen in filen i R med kommandot `stockdata = read.xlsx('stock.xlsx', 1, colNames=TRUE)` . Skriv sen `head(stockdata)` i Console för att titta på data.\
+Prova nu att läsa in data med kommandot `stockdata = read.xlsx('stock.xlsx', 1, colNames=FALSE)` och notera skillnaden genom att återigen skriva `head(stockdata)` i Console.
 
 #### 💪 Uppgift 6.2
 
@@ -352,8 +352,8 @@ läses av R som
 Om vi vill beräkna medelvärdet på en variabel kan vi använda funktionen `mean()`. Men om vi vill beräkna medelvärdet av variabeln `capital` med kommandot `mean(capital)` så får vi problemet att R inte har en variabel `capital` i minnet; `capital` är ju bara en kolumn i datamaterialet `stockdata`. Hur säger vi till R: gör om kolumnen `capital` i datamaterialet `stockdata` till en egen variabel och beräkna dess medelvärde (mean på engelska). Lösningen att använda `$`-tecknet för att plocka ut kolumnen `returns` som en egen variabel: `stockdata$capital` och sen använda `mean()` funktionen. Vi kan göra detta på samma kodrad och skriva ut resultatet:
 
 ```{r}
-meancapital = mean(stockdata$capital)
-meancapital
+capital = mean(stockdata$capital)
+capital
 ```
 
 Kodraden mean`capital = mean(stockdata$capital)` säger alltså till R att
