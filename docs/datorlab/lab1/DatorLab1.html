@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Mattias Villani">
-<meta name="dcterms.date" content="2023-01-17">
+<meta name="dcterms.date" content="2023-01-18">
 
 <title>SDA1 - Statistik och dataanalys I, 15 hp</title>
 <style>
@@ -224,7 +224,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">January 17, 2023</p>
+      <p class="date">January 18, 2023</p>
     </div>
   </div>
   
@@ -466,7 +466,7 @@ Dina filer kommer försvinna
 </section>
 <section id="uppgift-4.2" class="level4">
 <h4 class="anchored" data-anchor-id="uppgift-4.2">💪 Uppgift 4.2</h4>
-<p>Du kanske märkte att inte mycket hände i Console när du klickade på <code>Source</code> - knappen. Det mest hände liksom bakom scenen, där kommandona i Editorn skickades över till Console. Vi skulle kanske vilja att vår kod skrev upp <code>kapital</code> i Console efter att alla ränta-på-ränta beräkningar gjorts. Prova att lägga till en rad i slutet av din kod med variabelns namn som du är intresserad av, dvs <code>kapital</code>. Klicka på <code>Source</code> - knappen igen om verifiera att värdet 111.936 skrivs ut i Console.</p>
+<p>Du kanske märkte att inte mycket hände i Console när du klickade på <code>Source</code> - knappen. Det mest hände liksom bakom scenen, där kommandona i Editorn skickades över till Console. Vi skulle kanske vilja att vår kod skrev upp <code>kapital</code> i Console efter att alla ränta-på-ränta beräkningar gjorts. Prova att lägga till en rad i slutet av din kod med kommandot <code>print</code> och variabelns namn som du är intresserad av, dvs <code>print(kapital)</code>. Klicka på <code>Source</code> - knappen igen och verifiera att värdet 111.936 skrivs ut i Console.</p>
 </section>
 <section id="uppgift-4.3" class="level4">
 <h4 class="anchored" data-anchor-id="uppgift-4.3">💪 Uppgift 4.3</h4>
@@ -621,8 +621,8 @@ Ange sökväg till filer som inte är i din Working directory
 </div>
 <section id="uppgift-6.1" class="level4">
 <h4 class="anchored" data-anchor-id="uppgift-6.1">💪 Uppgift 6.1</h4>
-<p>Prova att ladda ner Excelfilen stock.xlsx och spara den i SDA1 mappen. Läs sen in filen i R med kommandot <code>stockdata = read.xlsx('stock.xlsx', 1, header=TRUE)</code> . Skriv sen <code>head(stockdata)</code> i Console för att titta på data.<br>
-Prova nu att läsa in data med kommandot <code>stockdata = read.xlsx('stock.xlsx', 1, header=FALSE)</code> och notera skillnaden genom att återigen skriva <code>head(stockdata)</code> i Console.</p>
+<p>Prova att ladda ner Excelfilen stock.xlsx och spara den i SDA1 mappen. Läs sen in filen i R med kommandot <code>stockdata = read.xlsx('stock.xlsx', 1, colNames=TRUE)</code> . Skriv sen <code>head(stockdata)</code> i Console för att titta på data.<br>
+Prova nu att läsa in data med kommandot <code>stockdata = read.xlsx('stock.xlsx', 1, colNames=FALSE)</code> och notera skillnaden genom att återigen skriva <code>head(stockdata)</code> i Console.</p>
 </section>
 <section id="uppgift-6.2" class="level4">
 <h4 class="anchored" data-anchor-id="uppgift-6.2">💪 Uppgift 6.2</h4>
@@ -678,8 +678,8 @@ läses av R som</p>
 </blockquote>
 <p>Om vi vill beräkna medelvärdet på en variabel kan vi använda funktionen <code>mean()</code>. Men om vi vill beräkna medelvärdet av variabeln <code>capital</code> med kommandot <code>mean(capital)</code> så får vi problemet att R inte har en variabel <code>capital</code> i minnet; <code>capital</code> är ju bara en kolumn i datamaterialet <code>stockdata</code>. Hur säger vi till R: gör om kolumnen <code>capital</code> i datamaterialet <code>stockdata</code> till en egen variabel och beräkna dess medelvärde (mean på engelska). Lösningen att använda <code>$</code>-tecknet för att plocka ut kolumnen <code>returns</code> som en egen variabel: <code>stockdata$capital</code> och sen använda <code>mean()</code> funktionen. Vi kan göra detta på samma kodrad och skriva ut resultatet:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>meancapital <span class="ot">=</span> <span class="fu">mean</span>(stockdata<span class="sc">$</span>capital)</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>meancapital</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>capital <span class="ot">=</span> <span class="fu">mean</span>(stockdata<span class="sc">$</span>capital)</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>capital</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 113.6381</code></pre>
 </div>
