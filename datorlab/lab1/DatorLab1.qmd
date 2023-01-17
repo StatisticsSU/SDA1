@@ -231,7 +231,7 @@ Ställ in din **SDA1** mapp som working directory i RStudio. Kontrollera att du 
 
 ## 6. Läsa in data från fil
 
-Vi vill nu läsa in data från Excelfilen stock.xlsx. Du kan ladda ner den filen [här](https://statisticssu.github.io/SDA1/datorlab/lab1/stock.xlsx). Beroende på din dator så kommer en av två saker hända:
+Vi vill nu läsa in data från Excelfilen stock.xlsx. Du kan ladda ner den filen [här](https://github.com/StatisticsSU/SDA1/raw/main/datorlab/lab1/stock.xlsx). Beroende på din dator så kommer en av två saker hända:
 
 1.  filen stock.xlsx hamnar automatiskt i mappen **Downloads** (eller liknande) på din dator. Du får då kopiera eller flytta filen till din working directory (din SDA1 mapp) genom att använda datorns filhanterare.
 

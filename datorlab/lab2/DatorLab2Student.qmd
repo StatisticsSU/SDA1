@@ -1,0 +1,522 @@
+---
+title: "Statistik och dataanalys I, 15 hp "
+subtitle: "Datorlaboration 2"
+author: 
+  - Byt ut mot namnet på student 1
+  - Byt ut mot namnet på student 2
+  - Byt ut mot namnet på student 3
+date: last-modified
+format: 
+  html:
+    self-contained: true
+toc: true
+execute:
+  error: false
+language: 
+  title-block-author-single: " "
+toc-title-document: "Innehåll"
+crossref-fig-title: "Figur"
+theme: Superhero
+editor: visual
+---
+
+## Introduktion
+
+> I den här datorlabben kommer vi att titta på hur fördelningar för olika typer av variabler kan beskrivas numeriskt och grafiskt.
+
+#### 💪 Uppgift 0.3
+
+Lägg till en ny code chunk och ställ in 'working directory' till den nya mappen genom att följa anvisningarna från [Lab 1](https://statisticssu.github.io/SDA1/datorlab/lab1/DatorLab1.html#st%C3%A4lla-in-arbetsmappen-working-directory-i-r).
+
+```{r}
+# Fyll i lösning för Uppgift 0.3 här
+```
+
+
+## 1. Skapa tabeller för kategoriska variabler
+
+Installerar några paket som ska användas för laborationen.
+```{r}
+install.packages("openxlsx") # Kommentera bort denna rad om redan har openxlsx installerat från Lab 1
+install.packages("mosaic") # Kommentera bort denna rad efter att du kört Quarto-filen första gången
+suppressMessages(library(openxlsx))
+suppressMessages(library(mosaic))
+```
+
+Vi läser in datamaterialet direkt från webben:
+```{r}
+titanic = read.xlsx("https://github.com/StatisticsSU/SDA1/raw/main/datorlab/lab2/Chapter_3.xlsx", sheet = "Titanic")
+```
+
+#### 💪 Uppgift 1.1
+
+Ändra koden ovan så `read.xlsx()` istället läser in filen 'Chapter_3.xlsx' från din dator.
+
+
+Vi skriver ut det första observationerna i datamaterialet för att se att allt ser ok ut:
+```{r}
+head(titanic)
+str(titanic)
+```
+
+Variabeln `Survived` i datasetet är en kategorisk variabel med två kategorier `Dead` och `Alive`. När en variabel bara har två kategorier brukar man också säga **binär variabel**. Man kan räkna antalet observationer som tillfaller varje kategori och på så sätt skapa en frekvenstabell med funktionen `tally()` i `mosaic`-paketet enligt nedan.
+
+```{r}
+tab_survived <- tally(~ Survived, data = titanic)
+tab_survived
+```
+
+Genom att lägga till argumentet `format = proportion` i `tally()` räknas de relativa frekvenserna istället.
+
+```{r}
+tally(~ Survived, data = titanic, format = "proportion")
+```
+
+Vill man ha detta presenterat i procent kan man enkelt skriva `format = percent` istället för `proportion`
+
+```{r}
+tally(~ Survived, data = titanic, format = "percent")
+```
+
+Alltså överlevde endast 32.2% av de som befann sig på Titanic, medan 67.8% dog.
+
+
+#### 💪 Uppgift 1.1
+
+Variabeln `Class` talar om biljettklass passageraren reste med (1:a, 2:a, 3:e eller Crew (besättning)). Presentera det totala antalet inom varje biljettklass. Vilken kategori är störst?
+
+```{r}
+# Write your code here
+```
+
+#### 💪 Uppgift 1.2
+
+Beräkna den relativa frekvensen (i procent) inom varje biljettklass.
+
+```{r}
+# Write your code here
+```
+
+## 2. Grafisk illustration av kategoriska variabler
+
+Ett enkel pajdiagram fås genom koden:
+```{r}
+
+table_rel_freq = tally(~ Survived, data = titanic, format = "proportion")
+pie(x = table_rel_freq)
+```
+
+
+Och här är en lite mer informativt diagram:
+```{r}
+rel_frequencies = round(table_rel_freq, 2) # round the numbers to two decimals
+rel_frequencies
+category_names = names(table_rel_freq)
+category_names
+colors = c("lightblue", "purple")
+pie(x =  table_rel_freq, labels = rel_frequencies, col = colors)
+legend("topright", legend = category_names, fill = colors)
+
+```
+
+#### 💪 Uppgift 2.1
+
+Skapa ett pajdiagram av variabeln `Class` i titanic. Använd dig gärna av uträkningarna från Uppgift 1.2 för att skapa grafen. Välj själv om du vill illustrera det som andelar eller i procent.
+
+```{r}
+# Write your code here
+```
+
+#### 💪 Uppgift 2.2
+
+Vad är det för fel på denna graf?
+```{r}
+
+rel_frequencies = c(0.1, 0.9)
+category_names = names(table_rel_freq)
+colors = c("lightblue", "purple")
+pie(x =  table_rel_freq, labels = rel_frequencies, col = colors)
+legend("topright", legend = category_names, fill = colors)
+
+```
+
+
+```{r}
+bargraph(~ Survived, data = titanic, type = "proportion")
+```
+
+
+```{r}
+#| label: fig-andelar
+#| fig-cap: "Relative frequency of Survival on the Titanic"
+x_axis_title = "Survival"
+y_axis_title = "Frequency"
+length_y_axis = c(0, 0.80)
+colors = c("lightblue", "purple")
+
+bargraph(~ Survived, data = titanic, type = "proportion", 
+         xlab = x_axis_title, ylab = y_axis_title, ylim = length_y_axis, col = colors)
+
+```
+
+
+#### 💪 Uppgift 2.3
+
+Justera diagrammet nedan så att det ser mer presentabelt ut. Byt också ut färgerna mot två andra bland [R's standardfärger](https://r-graph-gallery.com/42-colors-names.html).
+
+```{r}
+x_axis_title = "Survival"
+y_axis_title = "Frequency"
+length_y_axis = c(0, 0.1)
+
+bargraph(~ Survived, data = titanic, type = "proportion",  
+         xlab = x_axis_title, ylab = y_axis_title, ylim = length_y_axis, col = colors)
+
+```
+
+#### 💪 Uppgift 2.4
+
+Rätta till felet i följande diagram:
+
+```{r}
+x_axis_title = "Survival"
+y_axis_title = "Frequency"
+
+bargraph(~ Survived, data = titanic, type = "count", 
+         xlab = x_axis_title, ylab = y_axis_title, col = colors)
+
+```
+
+#### 💪 Uppgift 2.5
+
+Skapa ett stapeldiagram med funktionen `bargraph()` för variabeln `Class` i titanic. Använd relativa frekvenser denna gång.
+
+```{r}
+# Write your code here
+```
+
+## 3. Dataset som består av saknade värden
+
+Vi tar bort saknade värde i variabeln Age:
+```{r}
+
+length(titanic$Age) # number of observations originally
+Age = na.omit(titanic$Age)
+length(Age) # the number of observations when missing values are removed
+
+```
+
+#### 💪 Uppgift 3.1
+
+Definiera en ny variabel `Paid` från kolumnen `Paid` i datasetet `titanic` på liknande sätt som ovan. Rensa bort eventuella saknade värden med funktionen `na.omit()`.
+
+```{r}
+# Write your code here
+```
+
+## 4. Grafisk presentation av numeriska variabler
+
+Här är ett exempel med funktionen `histogram()`:
+```{r}
+#| label: fig-hist
+#| fig-cap: "Distribution of Age onboard the Titanic"
+histogram(~ Age, data = titanic, col = "navyblue")
+```
+
+Och här med density
+```{r}
+#| label: fig-density
+#| fig-cap: "Distribution of Age onboard the Titanic"
+densityplot(~ Age, data = titanic, col = "navyblue")
+```
+
+
+#### 💪 Uppgift 4.1
+
+Rita ett histogram likt ovan, med samma variabel men med en annan färg. Testa dig fram med `breaks` argumentet tills du hittar vad du tycker är ett passande antal staplar. Rita sedan ett till likadant histogram men använd dig av Sturges regel denna gång för att bestämma hur många staplar som ska användas. Ser histogrammet bättre ut än det du ritade utan Sturges regel?
+```{r}
+# Write your code here
+```
+
+#### 💪 Uppgift 4.2
+
+Rita ett histogram över variabeln `Paid`.
+
+```{r}
+# Write your code here
+```
+
+#### 💪 Uppgift 4.3
+
+Vilket mått av medelvärdet eller medianen beskriver centralpunkten i fördelningen för `Paid` bäst?
+
+#### 💪 Uppgift 4.4
+
+Rita täthetsplottar för variablerna `Age` och `Paid`.
+
+```{r}
+# Write your code here
+```
+
+
+I det första argumentet i funktionen `barplot()` lägger vi in frekvenserna som nyss räknades ut. Det andra argumentet `names.arg` är till för att namnge de olika åldersintervallen ovan, på x-axeln. Argumentet `las = 3` gör endast så att texten på x-axeln blir lodrät.
+
+```{r}
+
+Age_Intervals = c("0-4", "5-9", "10-14", "15-19", "20-24", "25-29", "30-34", 
+              "35-39", "40-44", "45-49", "50-54", "55-59", "60-64", "65-69",
+              "70-74")
+
+barplot(frequencies, names.arg = Age_Intervals, las = 3,
+        main = "Frequency of Age onboard the Titanic")
+```
+
+Histogrammet som skapades innan går alltså i princip att göra om till ett stapeldiagram, där höjden på stapeln illustrerar hur många observationer det är som tillfaller varje ålderskategori.
+:::
+
+## 5. Numerisk beskrivning av kvantitiva variabler
+
+Om man använder sig av en frekvenstabell för en numerisk variabel riskerar man i värsta fall att få en tabell som är lika lång som antal observationer man har. Kanske har man inte ens ett enda fall där två olika observationer har samma värden. Därför används ofta andra beskrivande mått. Bland de viktigaste är **lägesmåtten** som fångar fördelningens mittpunkt
+
+-   medelvärde
+-   median
+
+och spridningsmåtten som mäter variationen kring fördelningens mittpunkt:
+
+-   varians
+-   standardavvikelse
+-   variationsbredd (`range` på engelska: skillnaden mellan maximum och minimumvärdet)
+-   Interkvartila avståndet (IQR).
+
+Funktionen `favstats()` i `mosaic`-paketet beräknar dessa mått:
+
+```{r}
+favstats(~ Age, data = titanic)
+```
+
+Funktionen räknar ut olika fördelningsmått, såsom minimumvärdet, maximumvärdet, första och tredje kvartilen samt medelvärdet och medianen. Både medelvärdet och medianen är mått på en fördelnings mittpunkt men hur lämpliga de är som mått beror på fördelningens utseende. Vi ser även att funktionen också skriver ut hur många värden datasetet består av och antalet saknade värden.
+
+Ibland vill man dock inte skriva ut all denna information för en variabel. I Datorlaboration 1 använde vi oss av funktionen `mean()` för att räkna ut medelvärdet av en variabel. Några andra vanliga funktioner utöver dessa är `var()` och `sd()`. Matematiskt motvaras dessa tre funktioner av: \begin{align}\nonumber
+\overline{y}= \frac{1}{n} \sum_{i=1}^n y_i \\ \nonumber
+s^2 =\frac{\sum_{i=1}^n(y_i-\overline{y})^2}{n-1}
+\end{align} och \begin{align}
+s = \sqrt{s^2}
+\end{align}
+
+#### 💪 Uppgift 5.1
+
+Använd funktionerna ovan för att räkna ut medelvärdet, variansen och standardavvikelsen för variabeln `Age`. Kan man räkna ut standardavvikelsen på något annat sätt i R?
+
+```{r}
+# Write your code here
+```
+
+#### 💪 Uppgift 5.2
+
+Räkna ut det variationsbredden samt det interkvartila avståndet av variabeln `Age` från utskriften vi fick från funktionen `favstats()`.
+
+```{r}
+# Write your code here
+```
+
+## 6. Indexering och upprepning (loopar)
+
+Låt oss titta på ett dataset över UFC's top 10 kampsportsutövare i Welterweight klassen bland män (december 2022). Nedan matas värdena in i vektorer och sedan sätts alla variabler ihop i en och samma tabell med funktionen `data.frame()`:
+
+```{r}
+# Defining variables:
+Name = c("Kamaru Usman", "Colby Covington", "Khamzat Chimaev", "Belal Muhammed",
+         "Gilbert Burns","Stephen Thompson", "Geoff Neal", "Sean Brady", 
+         "Vicente Luque", "Shavkat Rakhmanov" )
+Rank = c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+Wins_by_knockout = c(9, 4, 6, 5, 6, 8, 9, 3, 11, 8)
+Takedown_avg = c(3.01, 4.05, 3.98, 2.19, 2, 0.27, 0.59, 2.8, 0.51, 2.31)
+Age_fighters = c(35,34,27, 34, 35, 39, 31, 29, 30, 27)
+
+# Creating a dataframe with all the variables just defined above:
+UFC = data.frame(Name, Rank, Wins_by_knockout, Takedown_avg, Age_fighters)
+UFC
+
+```
+
+Datasetet består av fem stycken variabler och är sorterat efter `Rank`. I Lab 1 tittade vi lite på **indexering** och detta bygger vidare på det. Låt säga att vi vill veta vad åldern är för den 6:e rankade utövaren. I detta fall är datasetet väldigt litet och man kan genast identifiera alla individer. Ibland har vi dataset som är väldigt stora och då kan man behöva använda sig av indexering för att få ut information om en enskild (eller ett fåtal) observationer av intresse. För att ta reda på åldern på den 6:e rankade utövaren kan man då använda sig av koden `UFC[6, 5]`. Där siffran till vänster om kommatecknet i hakparantesen anger radtalet och siffran till höger om kommatecknet anger kolumntalet. Detta ger oss svaret 39.
+
+#### 💪 Uppgift 6.1
+
+Använd indexering för att skriva ut hur många wins by knockout Gilbert Burns har haft.
+
+```{r}
+# Write your code here
+```
+
+#### 💪 Uppgift 6.2
+
+Använd indexering för att skriva ut all information om Kamaru Usman (dvs den första raden). \[Ledtråd: om man inte skriver något alls efter kommatecknet i indexeringen får man *alla* värden i den raden\]
+
+```{r}
+# Write your code here
+```
+
+#### 💪 Uppgift 6.3
+
+Använd indexering för att skriva ut alla värden för variabeln `Takedown_avg` (dvs den 4:e kolumnen).
+
+```{r}
+# Write your code here
+```
+
+En **loop** kan väldigt kort beskrivas som en procedur som återupprepas så länge ett visst förhållande är uppfyllt. Det finns tre vanliga loopar i R. Dessa är `for`-loop, `while`-loop och `repeat`-loop. De två första är de vanligaste men vi kommer än så länge bara titta på `for`-loopen.
+
+Säg att du vill skriva en kod som skriver ut alla tal mellan 1 och 10 på skärmen. Du skulle kunna skriva print(1) följt av print(2) osv, men skulle vara jobbigt. Kan vi få datorn att göra det jobbet åt oss genom att använda en `for`-loop? Svar ja. Nedan ges ett exempel på en loop som skriver ut talen mellan 1-10 med hjälp av `print()` funktionen. Det är ett exempel på den kanske mest grundläggande loopen, men den illustrerar ändå en viktig princip. För att starta loopen används ordet `for` följt av en parentes. Vad som står inom parentesen är väldigt viktigt och det första argumentet är namnet på en så kallad indexvariabel, i detta fall `i`. Efter detta specificerar man från vilken siffra `i` börjar på samt vilken siffra `i` slutar på. Här börjar den på 1 och slutar på 10. Efter parentesen bildar man en ny så kallad klammerparentes (som ser ut som måsvingar). Där inne specificerar man allt som ska hända i varje upprepningen i loopen. I det här exemplet vill vi att loopen ska skriva ut indexnumret, ett i taget:
+
+```{r}
+for (i in 1:10){
+  print(i)
+}
+
+```
+
+Alltså skriver loopen ut vad `i` är under varje *iteration* (dvs upprepning).
+
+#### 💪 Uppgift 6.4
+
+Använd loopen ovan men byt ut indexvariabeln `i` till `k` istället. Kör sedan loopen. Vad är det som händer?
+
+```{r}
+# Write your code here
+```
+
+#### 💪 Uppgift 6.5
+
+Använd återigen loopen i exemplet ovan. Men ändra variabeln `i`s definitionsmängd från 1:10 till 24:33.
+
+```{r}
+# Write your code here
+```
+
+#### 💪 Uppgift 6.6
+
+Gör på samma vis som i övningen ovan men ändra nu definitionsmängden från 1:10 till -3:5
+
+```{r}
+# Write your code here
+```
+
+Nedan ges ett exempel på en `for`-loop som skriver ut namnet på en enskild variabel (`Name`) i tur och ordning. Här används indexering av variabeln `Name` för att endast ett namn ska skrivas ut i varje iteration, och då i samma ordning som den förekommer i variabeln.
+
+```{r}
+
+for(i in 1:10){
+  print(Name[i])
+}
+
+```
+
+::: callout-note
+Här användes endast en variabel `Name` (som faktiskt definierades innan dataframen `UFC`). Därför används inte något kommatecken inuti hakparantesen. Det beror alltså på att det här är en enskild definierad variabel utanför dataframen `UFC`.
+:::
+
+#### 💪 Uppgift 6.7
+
+Använd en `for`-loop för att skriva ut varje värde på variabeln `Wins_by_knockout`.
+
+```{r}
+# Write your code here
+```
+
+Den introduktionen till loopar kan räcka för tillfället. Men om du tyckte det var intressant kan du fortsätta läsa lite mer om loopar nedan. Annars kan du hoppas till [Sammanfattningen av Lab 2](#sammanfattning).
+
+Man kan även göra matematiska uträkningar med hjälp av en loop. Låt säga att vi vill räkna ut vad $2^6$ är (där 2 är basen och 6 är exponenten). Detta kan enkelt göras med den matematiska operationen `^` i R vilket ger oss resultatet 64. Men eftersom vi älskar att loopa så kommer vi också älska följande exempel där vi räknar ut detta värde för hand med en loop.
+
+Först måste man definiera ett startvärde. Detta görs med variabeln `myProduct` nedan. Eftersom uträkningen av $2^6 = 2\cdot 2\cdot 2\cdot 2\cdot 2\cdot 2 = 64$ egentligen bara är multiplikation, måste startvärdet vara like med 1 (används 0 kommer slutresultatet också att bli 0). Därefter kan loopen startas. Den kommer att iterera från värdet 1 till 6 (eftersom exponenten är 6). Efter första iterationen (loop-omgången) kommer `myProduct` att vara 1 multiplicerat med 2, dvs 2. Detta värde sparas i `myProduct` och syns när man skriver ut resultatet med `print(myProduct)` inuti loopen. I den andra iterationen multipliceras `myProduct` med 2 igen, och detta värde sparas nu i `myProduct`. Resultatet är $2\cdot2=4$. Den tredje iterationen multipliceras 4 med 2 och `myProduct` uppdateras till detta nya värde 8. Denna procedur upprepas tills antal iterationer `i` har nått upp till 6 gånger. Därefter avslutas loopen och `myProduct` visar då svaret på vad $2^6$ är:
+
+```{r}
+
+myProduct = 1 # We have to start with 1 here since it's multiplication
+
+for (i in 1:6){
+  myProduct = myProduct * 2  # multiplying with 2 in each iteration
+  print(myProduct) # prints the result after each iteration
+}
+myProduct # final result
+
+
+```
+
+#### 💪 Uppgift 6.8
+
+Funktionen `sum()` i R kan användas för att summera numeriska värden i en vektor. Använd denna funktion för att räkna ut medelvärdet för variabeln `Age_fighters` ovan.
+
+```{r}
+# Write your code here
+```
+
+::: callout-tip
+Medelvärdet ges av formeln: \begin{align}
+\nonumber \overline{y}= \frac{1}{n} \sum_{i=1}^n y_i
+\end{align}
+:::
+
+#### 💪 Uppgift 6.9
+
+Använd en `for`-loop för att räkna ut medelvärdet för variabeln `Age_fighters`.
+
+```{r}
+# Write your code here
+```
+
+::: callout-tip
+Skapa ett startvärde för summan och sätt detta värde till 0. Sedan inuti loopen måste du också använda dig av indexering för att säga till R vilket värde i denna variabel du vill addera till din befintliga summa.
+:::
+
+## 7. Sammanfattning {#sammanfattning}
+
+::: callout-info
+## I den här laborationen har du lärt dig:
+
+-   Metoder för att presentera en variabels fördelning och att man använder olika metoder beroende på om en variabel är numerisk eller kategorisk.
+
+-   Hur man praktiskt kan presentera kategoriska variabler i tabellform samt illustrera dem grafiskt med paj- och stapeldiagram.
+
+-   Hur man kan rita ett histogram och en täthetsplot.
+
+-   Kopplingen mellan histogram och stapeldiagram.
+
+-   Vilka beskrivande mått man kan använda sig av för numeriska variabler.
+
+-   Några exempel på vad en `for`-loop kan användas till.
+:::
+
+## A. Appendix
+
+Lista över några vanliga argument i grafer
+
+-   col = färg, kan markeras med siffror eller med namnet på färgen, oftast med små bokstäver. Glöm ej att texten måste ligga inom citattecken.
+
+-   main = rubrik på plotten, detta sätts till en textsträng, alltså en text inom citattecken.
+
+-   xlab = rubrik på x-axeln, detta sätts till en textsträng, alltså en text inom citattecken.
+
+-   ylab = rubrik på y-axeln, detta sätts till en textsträng, alltså en text inom citattecken.
+
+-   xlim = definitionsområde för x-axeln. Exempelvis betyder xlim = c(0, 14.3) att det lägsta värdet som ritas kommer att vara 0 och det högsta värdet kommer att vara 14.3 (på x-axeln).
+
+-   ylim = definitionsområde för y-axeln. Exempelvis betyder ylim = c(-2, 20.7) att det lägsta värdet som ritas kommer att vara -2 och det högsta värdet kommer att vara 20.7 (på y-axeln).
+
+-   lwd = tjocklecken på linjer (eller prickar) i ett linjediagram (spridningsdiagram), anges med ett nummer.
+
+-   lty = typ av linje (rak, streckad, prickad etc) i ett linjediagram, anges med ett nummer.
+
+-   pch = typ av prick (rund, fyrkantig + \* etc), sätts till ett nummer.
+
+-   breaks = antal staplar i ett histogram.
+
+-   cex = justering av etiketternas storlek i en figur (exempelvis cex = 0.5 i en `legend()` funktion minskar storleken som "legend-texten" tar upp i en figur med hälften). Finns även exempelvis cex.axis, cex.main för att justera storleken av texter på axlar respektive rubrik.
+
+-   bg = bakgrundsfärg i en figur.
+
+-   col.main = rubrikens färg.
+
+-   col.lab = färger för rubrikerna på axlarna.
+
+-   font = specificerar vilken typ av text man vill ha, exempelvis ger font = 3 kursiv text.
