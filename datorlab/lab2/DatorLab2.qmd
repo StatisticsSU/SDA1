@@ -31,7 +31,9 @@ editor: visual
 
 #### 💪 Uppgift 0.1
 
-Skapa en mapp `Lab2` i din kursmapp SDA1 (från Lab 1). Ladda ner Quarto-filen för denna lab genom att högerklicka [här](https://github.com/StatisticsSU/SDA1/raw/main/datorlab/lab2/DatorLab2.qmd) och välj 'Spara länk' eller något likande från menyn som dyker upp. Spara filen i din nya `Lab2` mapp. Öppna Quarto-filen i RStudio och gå över till 'Source mode' genom att klicka på 'Source' i det vänstra hörnet av din 'Editor'. Du kan nu fortsätta med denna laboration direkt i Quarto-dokumentet, där du också fyller i svaren på dina laborationsövningar. Du kan alltså lämna den här webbsidan nu och fortsätta arbetet i RStudio.
+Skapa en mapp `Lab2` i din kursmapp SDA1 (från Lab 1). Ladda ner Quarto-filen för denna lab genom att högerklicka [här](https://github.com/StatisticsSU/SDA1/raw/main/datorlab/lab2/DatorLab2.qmd) och välj 'Spara länk' eller något likande från menyn som dyker upp. Spara filen i din nya `Lab2` mapp. Öppna Quarto-filen i RStudio. Du kan nu fortsätta med denna laboration direkt i Quarto-dokumentet, där du också fyller i svaren på dina laborationsövningar. Du kan alltså lämna den här webbsidan nu och fortsätta arbetet i RStudio.
+
+Väl inne i RStudio med öppnat Quarto-dokument i 'Editor' kan ni gå över till 'Source mode' genom att klicka på 'Source' i det vänstra hörnet av din 'Editor'. Source mode är detaljerat och bra att skriva kod i eftersom man har full kontroll på dokumentet, men det är svårt att få en översikt av dokumentet. Prova nu att gå över till 'Visual mode' genom att klicka på 'Visual' i det vänstra hörnet av din 'Editor'. Vi rekommenderar att ni mestadels arbetar i Visual mode, men att gå över till Source mode när man verkligen få till någon detalj som är svår att ändra i Visual mode. ´
 
 #### 💪 Uppgift 0.2
 
