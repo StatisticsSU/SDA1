@@ -49,19 +49,13 @@ Rather than telling R explicitly where your data are stored, you can also use th
 which will open up a window where you can look up the file in your file explorer and it will then read the first sheet (again the `1` in the command) of that file. This is convenient, but I don't recommend it (lousy tip! 🙄) since you then have to click your way to the file everytime you re-run your R code.
 :::
 
-We have now read the dataset into a variable that I have chosen to call `tour_de_france`. We can now just type the name of this variable in the Console in R to see the data.
-
-```{r}
-tour_de_france
-```
-
-Note that some accented letters like é were replaced by a question mark. The variable `tour_de_france` is a table of a specific type called `dataframe`, which is R's main way of storing a table.
-
-To get a quick look at the data, the `head` command is useful, showing only the first few observations of the dataset:
+We have now read the dataset into a variable that I have chosen to call `tour_de_france`. We can now just type the name of this variable in the Console in R to see the data. The dataset contains many observations so it would be a long printout. A better way to get a quick look at the data, is to use the `head` command, showing only the first few observations of the dataset:
 
 ```{r}
 head(tour_de_france)
 ```
+
+Note that some accented letters like é were replaced by a question mark. The variable `tour_de_france` is a table of a specific type called `dataframe`, which is R's main way of storing a table.
 
 You can now start analyzing the data in different ways, perhaps plotting the average speed variable over the year that Tour de France has run:
 
