@@ -19,7 +19,10 @@ Du måste först installera R och sen RStudio:
 
 Den här [YouTube videon](https://youtu.be/TFGYlKvQEQ4) går igenom alla steg i installationen.
 
-Här är våra egna [steg-efter-steg instruktioner](/R/InstallR/installR_windows.qmd).
+Här är våra egna steg-efter-steg instruktioner:
+
+- [Windows](/R/InstallR/installR_windows.qmd)
+- [Apple/Mac](/R/InstallR/installR_mac.qmd)
 
 ## Tre dialekter av R
 

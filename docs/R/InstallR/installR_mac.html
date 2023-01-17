@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>SDA1 - Installera R och Rstudio på Windows dator</title>
+<title>SDA1 - Installera R och Rstudio på egen Apple/Mac dator</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -129,7 +129,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Installera R och Rstudio på Windows dator</h1>
+<h1 class="title">Installera R och Rstudio på egen Apple/Mac dator</h1>
 </div>
 
 
@@ -145,7 +145,7 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 <blockquote class="blockquote">
-<p>En liten guide till hur man installerar R och RStudio på Windows-dator</p>
+<p>En liten guide till hur man installerar R och RStudio på Apple/Mac</p>
 </blockquote>
 <section id="installera-r" class="level2">
 <h2 class="anchored" data-anchor-id="installera-r">Installera R</h2>
@@ -158,7 +158,7 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 <ol start="2" type="1">
-<li>Klicka på <strong>Download R for Windows</strong>:</li>
+<li>Klicka på <strong>Download R for macOS</strong>:</li>
 </ol>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -166,11 +166,16 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 <ol start="3" type="1">
-<li>Klicka på <strong>install R for the first time</strong>:</li>
+<li>Det här steget är lite lurigt eftersom du måste veta om din Mac har en processor med det nyare M1-chippet eller det äldre Intel-processorn. Om du inte vet det kan du ta redan på det <a href="https://help.arcstudiopro.com/all-how-tos/how-do-i-know-if-my-mac-has-intel-processor-or-apple-m1">så här</a>.</li>
 </ol>
+<ul>
+<li>Om du har M1 processorn (nyare Mac): klicka på länken <strong>R-4.2.2-arm64.pkg</strong></li>
+<li>Om du har Intel-processorn (äldre Mac): klicka på länken <strong>R-4.2.2.pkg</strong></li>
+</ul>
+<p>Observera att numret 4.2.2 kan vara annorlunda när du laddar ner.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="InstallRSecondScreen.png" class="img-fluid figure-img" width="500"></p>
+<p><img src="InstallRMac.png" class="img-fluid figure-img" width="400"></p>
 </figure>
 </div>
 <ol start="4" type="1">
@@ -182,14 +187,14 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 <ol start="5" type="1">
-<li>Efter Steg 4 kommer filen <em>R-4.2.2-win.exe</em> att laddas ner på din dator (igen, det kan vara lite annat nummer för dig). Dubbelklicka på den filen och följ vanliga instruktioner för hur man installerar ett program.</li>
+<li>Efter Steg 4 kommer filen <em>R-4.2.2-arm.pkg</em> (eller <strong>R-4.2.2.pkg</strong> om du har en äldre Mac) att laddas ner på din Mac (igen, det kan vara lite annat nummer för dig). Dubbelklicka på den filen och följ vanliga instruktioner för hur man installerar ett program.</li>
 </ol>
 <p>Nu är R installerat och det är dags att installera RStudio, som är den miljö du kommer använda när du skriver R kod.</p>
 </section>
 <section id="installera-rstudio." class="level2">
 <h2 class="anchored" data-anchor-id="installera-rstudio.">Installera RStudio.</h2>
 <ol type="1">
-<li>Besök <a href="https://posit.co/download/rstudio-desktop/">installeringssidan</a> igen, men gå till Step 2 och klicka på länken <strong>RSTUDIO-2022.12.0-355.EXE</strong> (igen, mycket möjligt att du ser annat nummer)</li>
+<li>Besök <a href="https://posit.co/download/rstudio-desktop/">installeringssidan</a> igen, men gå till Step 2 och klicka på länken <strong>RSTUDIO-2022.12.0-353.DMG</strong> (igen, mycket möjligt att du ser annat nummer)</li>
 </ol>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -197,7 +202,7 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 <ol start="2" type="1">
-<li>Filen <strong>RStudio-2022.12.0-353.exe</strong> laddas ner på er dator. Installera RStudio genom att klicka på den och följ installationsinstruktionerna.</li>
+<li>Filen <strong>RStudio-2022.12.0-353.dmg</strong> laddas ner på er dator. Installera RStudio genom att klicka på den och följ installationsinstruktionerna.</li>
 </ol>
 <p>Du kan nu starta RStudio genom att leta upp RStudio på din dator och klicka på ikonen som ser ut något åt det här hållet:</p>
 <div class="quarto-figure quarto-figure-center">

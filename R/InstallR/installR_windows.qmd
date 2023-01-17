@@ -1,9 +1,9 @@
 ---
-title: "Installera R och Rstudio på egen dator"
+title: "Installera R och Rstudio på Windows dator"
 format: html
 ---
 
-> En liten guide till hur man installerar R och RStudio
+> En liten guide till hur man installerar R och RStudio på Windows-dator
 
 ## Installera R
 
@@ -11,7 +11,7 @@ format: html
 
 ![](Step1InstallR.png){fig-align="center" width="250"}
 
-2. Klicka på **Download R for Windows** (om du har Windows, annars väljer du **Download R for macOS** om du har en Apple/Mac):
+2. Klicka på **Download R for Windows**:
 
 ![](installRScreen.png){fig-align="center" width="400"}
 

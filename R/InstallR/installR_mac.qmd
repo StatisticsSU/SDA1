@@ -1,0 +1,47 @@
+---
+title: "Installera R och Rstudio på egen Apple/Mac dator"
+format: html
+---
+
+> En liten guide till hur man installerar R och RStudio på Apple/Mac
+
+## Installera R
+
+1. Besök den här [installeringssidan](https://posit.co/download/rstudio-desktop/) och klicka på den blå knappen:
+
+![](Step1InstallR.png){fig-align="center" width="250"}
+
+2. Klicka på **Download R for macOS**:
+
+![](installRScreen.png){fig-align="center" width="400"}
+
+3. Det här steget är lite lurigt eftersom du måste veta om din Mac har en processor med det nyare M1-chippet eller det äldre Intel-processorn. Om du inte vet det kan du ta redan på det [så här](https://help.arcstudiopro.com/all-how-tos/how-do-i-know-if-my-mac-has-intel-processor-or-apple-m1).
+
+- Om du har M1 processorn (nyare Mac): klicka på länken **R-4.2.2-arm64.pkg**
+- Om du har Intel-processorn (äldre Mac): klicka på länken **R-4.2.2.pkg**
+
+Observera att numret 4.2.2 kan vara annorlunda när du laddar ner.
+
+![](InstallRMac.png){fig-align="center" width="400"}
+
+4. Klicka på **Download R-4.2.2 for Windows** (obs! kan stå annat nummer när du besöker sidan).
+
+![](InstallRScreen3.png){fig-align="center" width="400"}
+
+5. Efter Steg 4 kommer filen *R-4.2.2-arm.pkg* (eller **R-4.2.2.pkg** om du har en äldre Mac) att laddas ner på din Mac (igen, det kan vara lite annat nummer för dig). Dubbelklicka på den filen och följ vanliga instruktioner för hur man installerar ett program. 
+
+Nu är R installerat och det är dags att installera RStudio, som är den miljö du kommer använda när du skriver R kod.
+
+## Installera RStudio.
+
+1. Besök [installeringssidan](https://posit.co/download/rstudio-desktop/) igen, men gå till Step 2 och klicka på länken **RSTUDIO-2022.12.0-353.DMG** (igen, mycket möjligt att du ser annat nummer)
+
+![](Step2InstallRStudio.png){fig-align="center" width="400"}
+
+2. Filen **RStudio-2022.12.0-353.dmg** laddas ner på er dator. Installera RStudio genom att klicka på den och följ installationsinstruktionerna.
+
+Du kan nu starta RStudio genom att leta upp RStudio på din dator och klicka på ikonen som ser ut något åt det här hållet:
+
+![](rstudio_icon.png){fig-align="center" width="200"}
+
+3. Avboka planerna för resten av dagen, stäng av notifieringar på din mobil, och börja utforska RStudio och R! 🤓
