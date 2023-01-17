@@ -19,6 +19,8 @@ Du måste först installera R och sen RStudio:
 
 Den här [YouTube videon](https://youtu.be/TFGYlKvQEQ4) går igenom alla steg i installationen.
 
+Här är våra egna [steg-efter-steg instruktioner](/R/InstallR/installR_windows.qmd).
+
 ## Tre dialekter av R
 
 Man kan dela upp R's språk i tre slags dialekter, dvs tre olika kommandon (syntax) för att göra ungefär samma sak:

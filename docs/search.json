@@ -662,7 +662,7 @@
     "href": "R.html#ladda-ner-r-och-rstudio",
     "title": "R",
     "section": "Ladda ner R och RStudio",
-    "text": "Ladda ner R och RStudio\nDu måste först installera R och sen RStudio:\n\nR kan laddas ner här.\nRStudio kan laddas ner här.\n\nDen här YouTube videon går igenom alla steg i installationen."
+    "text": "Ladda ner R och RStudio\nDu måste först installera R och sen RStudio:\n\nR kan laddas ner här.\nRStudio kan laddas ner här.\n\nDen här YouTube videon går igenom alla steg i installationen.\nHär är våra egna steg-efter-steg instruktioner."
   },
   {
     "objectID": "R.html#tre-dialekter-av-r",
@@ -712,5 +712,47 @@
     "title": "Tabellsamling - Statistik och Dataanalys I",
     "section": "",
     "text": "Warning: package 'dplyr' was built under R version 4.2.2\n\n\nWarning: package 'kableExtra' was built under R version 4.2.2"
+  },
+  {
+    "objectID": "R/InstallR/installR.html",
+    "href": "R/InstallR/installR.html",
+    "title": "Installera R och Rstudio på egen dator",
+    "section": "",
+    "text": "En liten guide till hur man installerar R och RStudio"
+  },
+  {
+    "objectID": "R/InstallR/installR.html#installera-r",
+    "href": "R/InstallR/installR.html#installera-r",
+    "title": "Installera R och Rstudio på egen dator",
+    "section": "Installera R",
+    "text": "Installera R\n\nBesök den här installeringssidan och klicka på blå knappen:\n\n\n\n\n\n\n\nKlicka på Download R for Windows (om du har Windows, annars väljer du Download R for macOS om du har en Apple/Mac):\n\n\n\n\n\n\n\nKlicka på install R for the first time:\n\n\n\n\n\n\n\nKlicka på Download R-4.2.2 for Windows (obs! kan stå annat nummer när du besöker sidan).\n\n\n\n\n\n\n\nEfter Steg 4 kommer filen R-4.2.2-win.exe att laddas ner på din dator (igen, det kan vara lite annat nummer för dig). Dubbelklicka på den filen och följ vanliga instruktioner för hur man installerar ett program.\n\nNu är R installerat och det är dags att installera RStudio, som är den miljö du kommer använda när du skriver R kod."
+  },
+  {
+    "objectID": "R/InstallR/installR.html#installera-rstudio.",
+    "href": "R/InstallR/installR.html#installera-rstudio.",
+    "title": "Installera R och Rstudio på egen dator",
+    "section": "Installera RStudio.",
+    "text": "Installera RStudio.\n\nBesök installeringssidan igen, men gå till Step 2 och klicka på länken RSTUDIO-2022.12.0-355.EXE (igen, mycket möjligt att du ser annat nummer)\n\n\n\n\n\n\n\nFilen RStudio-2022.12.0-353.exe laddas ner på er dator. Installera RStudio genom att klicka på den och följ installationsinstruktionerna.\n\nDu kan nu starta RStudio genom att leta upp RStudio på din dator och klicka på ikonen som ser ut något åt det här hållet:"
+  },
+  {
+    "objectID": "R/InstallR/installR_windows.html",
+    "href": "R/InstallR/installR_windows.html",
+    "title": "Installera R och Rstudio på egen dator",
+    "section": "",
+    "text": "En liten guide till hur man installerar R och RStudio"
+  },
+  {
+    "objectID": "R/InstallR/installR_windows.html#installera-r",
+    "href": "R/InstallR/installR_windows.html#installera-r",
+    "title": "Installera R och Rstudio på egen dator",
+    "section": "Installera R",
+    "text": "Installera R\n\nBesök den här installeringssidan och klicka på den blå knappen:\n\n\n\n\n\n\n\nKlicka på Download R for Windows (om du har Windows, annars väljer du Download R for macOS om du har en Apple/Mac):\n\n\n\n\n\n\n\nKlicka på install R for the first time:\n\n\n\n\n\n\n\nKlicka på Download R-4.2.2 for Windows (obs! kan stå annat nummer när du besöker sidan).\n\n\n\n\n\n\n\nEfter Steg 4 kommer filen R-4.2.2-win.exe att laddas ner på din dator (igen, det kan vara lite annat nummer för dig). Dubbelklicka på den filen och följ vanliga instruktioner för hur man installerar ett program.\n\nNu är R installerat och det är dags att installera RStudio, som är den miljö du kommer använda när du skriver R kod."
+  },
+  {
+    "objectID": "R/InstallR/installR_windows.html#installera-rstudio.",
+    "href": "R/InstallR/installR_windows.html#installera-rstudio.",
+    "title": "Installera R och Rstudio på egen dator",
+    "section": "Installera RStudio.",
+    "text": "Installera RStudio.\n\nBesök installeringssidan igen, men gå till Step 2 och klicka på länken RSTUDIO-2022.12.0-355.EXE (igen, mycket möjligt att du ser annat nummer)\n\n\n\n\n\n\n\nFilen RStudio-2022.12.0-353.exe laddas ner på er dator. Installera RStudio genom att klicka på den och följ installationsinstruktionerna.\n\nDu kan nu starta RStudio genom att leta upp RStudio på din dator och klicka på ikonen som ser ut något åt det här hållet:\n\n\n\n\n\n\nAvboka planerna för resten av dagen, stäng av notifieringar på din mobil, och börja utforska RStudio och R! 🤓"
   }
 ]
