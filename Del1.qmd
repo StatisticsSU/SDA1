@@ -15,7 +15,7 @@ Under vissa föreläsningar länkar vi till `Extramaterial`. Det är material so
 Läs: SDM Kapitel 1 | [Slides](/slides/F1Intro.pdf) 
 
 **Föreläsning 2 - Kort introduktion till R. **\
-Läs: [Slides](/misc/larry.png) (laddas upp efter föreläsningen)\
+Läs: [Slides](/slides/F2.pdf)\
 Kod: [Kod](/slides/code/R_lecture_examples.R)\
 Data: [SmartPhones](/datorlab/lab3/SmartPhones.RData) | [CAPM](/datorlab/lab3/CAPM_data.RData)
 
