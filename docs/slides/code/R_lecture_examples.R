@@ -12,7 +12,7 @@ setwd('C:/Users/quiroz/Dropbox/Teaching/Stockholm University/SDA1/R code lecture
 ###########################################################
 # Example 1: Smartphone brand preferences
 ###########################################################
-load(file = "Datasets/SmartPhones.RData") # Load data
+load(file = "SmartPhones.RData") # Load data (assumes data is in folder set by setwd())
 head(SmartPhones) # Inspect first rows
 
 # Tables summarising counts, proportions, and percentages, per outcome (brand, age_group)
@@ -61,7 +61,7 @@ plot(price ~ x, data = diamonds_data, col = cs[1])
 ###########################################################
 # Example 3: Capital Asset Pricing Model (CAPM) 
 ###########################################################
-load("Datasets/CAPM_data.RData")
+load("CAPM_data.RData") # (assumes data is in folder set by setwd())
 str(CAPM)
 head(CAPM)
 
