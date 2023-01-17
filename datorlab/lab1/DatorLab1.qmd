@@ -352,8 +352,8 @@ läses av R som
 Om vi vill beräkna medelvärdet på en variabel kan vi använda funktionen `mean()`. Men om vi vill beräkna medelvärdet av variabeln `capital` med kommandot `mean(capital)` så får vi problemet att R inte har en variabel `capital` i minnet; `capital` är ju bara en kolumn i datamaterialet `stockdata`. Hur säger vi till R: gör om kolumnen `capital` i datamaterialet `stockdata` till en egen variabel och beräkna dess medelvärde (mean på engelska). Lösningen att använda `$`-tecknet för att plocka ut kolumnen `returns` som en egen variabel: `stockdata$capital` och sen använda `mean()` funktionen. Vi kan göra detta på samma kodrad och skriva ut resultatet:
 
 ```{r}
-meancapital = mean(stockdata$capital)
-meancapital
+capital = mean(stockdata$capital)
+capital
 ```
 
 Kodraden mean`capital = mean(stockdata$capital)` säger alltså till R att
