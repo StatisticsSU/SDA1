@@ -179,7 +179,7 @@ Kör hela filen stock.R genom att använda `Source`-knappen. Undersök vilket v�
 
 #### 💪 Uppgift 4.2
 
-Du kanske märkte att inte mycket hände i Console när du klickade på `Source` - knappen. Det mest hände liksom bakom scenen, där kommandona i Editorn skickades över till Console. Vi skulle kanske vilja att vår kod skrev upp `kapital` i Console efter att alla ränta-på-ränta beräkningar gjorts. Prova att lägga till en rad i slutet av din kod med kommandot `print` och variabelns namn som du är intresserad av, dvs `print(kapital)`. Klicka på `Source` - knappen igen om verifiera att värdet 111.936 skrivs ut i Console.
+Du kanske märkte att inte mycket hände i Console när du klickade på `Source` - knappen. Det mest hände liksom bakom scenen, där kommandona i Editorn skickades över till Console. Vi skulle kanske vilja att vår kod skrev upp `kapital` i Console efter att alla ränta-på-ränta beräkningar gjorts. Prova att lägga till en rad i slutet av din kod med kommandot `print` och variabelns namn som du är intresserad av, dvs `print(kapital)`. Klicka på `Source` - knappen igen och verifiera att värdet 111.936 skrivs ut i Console.
 
 #### 💪 Uppgift 4.3
 
