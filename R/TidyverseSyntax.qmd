@@ -1,6 +1,8 @@
 ---
 title: "Tidyverse syntax"
-author: "Mattias Villani"
+author: 
+  - Mattias Villani
+  - Matias Quiroz
 format: html
 ---
 

@@ -7,6 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Mattias Villani">
+<meta name="author" content="Matias Quiroz">
 
 <title>SDA1 - Tidyverse syntax</title>
 <style>
@@ -187,6 +188,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <li><a href="#scatter-plot" id="toc-scatter-plot" class="nav-link" data-scroll-target="#scatter-plot">Scatter plot</a></li>
   <li><a href="#tabeller" id="toc-tabeller" class="nav-link" data-scroll-target="#tabeller">Tabeller</a></li>
   <li><a href="#stapeldiagram" id="toc-stapeldiagram" class="nav-link" data-scroll-target="#stapeldiagram">Stapeldiagram</a></li>
+  <li><a href="#histogram-per-kategori-i-samma-figur" id="toc-histogram-per-kategori-i-samma-figur" class="nav-link" data-scroll-target="#histogram-per-kategori-i-samma-figur">Histogram per kategori i samma figur</a></li>
   </ul>
 </nav>
     </div>
@@ -203,9 +205,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="quarto-title-meta">
 
     <div>
-    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-heading">Authors</div>
     <div class="quarto-title-meta-contents">
              <p>Mattias Villani </p>
+             <p>Matias Quiroz </p>
           </div>
   </div>
     
@@ -309,9 +312,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><img src="TidyverseSyntax_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-
-
 </section>
+</section>
+<section id="histogram-per-kategori-i-samma-figur" class="level2">
+<h2 class="anchored" data-anchor-id="histogram-per-kategori-i-samma-figur">Histogram per kategori i samma figur</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">suppressMessages</span>(<span class="fu">library</span>(ggplot2))</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="at">file =</span> <span class="fu">url</span>(<span class="st">"https://github.com/StatisticsSU/SDA1/blob/main/datorlab/lab3/FevChildren.RData?raw=true"</span>))</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(FevChildren, <span class="fu">aes</span>(<span class="at">x =</span> fev, <span class="at">fill =</span> age.group)) <span class="sc">+</span> </span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">alpha =</span><span class="fl">0.75</span>, <span class="at">bins =</span> <span class="dv">20</span>) <span class="sc">+</span> <span class="fu">ggtitle</span>(<span class="st">"FEV given age.group"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="TidyverseSyntax_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+
+
 </section>
 
 </main> <!-- /main -->
