@@ -41,8 +41,6 @@ I SDA1 kommer vi försöka använda Formula syntax som mycket som möjligt, med 
 
 ## Guider/Tutorials
 
--   Ladda ner och **installera R** och RStudio: [video]()
-
 -   En snabbtur i **RStudio**: [video]()
 
 -   En sammanfattning av [R funktioner för SDA1](/R/Rcommands.html).
@@ -50,7 +48,7 @@ I SDA1 kommer vi försöka använda Formula syntax som mycket som möjligt, med 
 -   Tutorial om hur man läser in [data från Excel](/tutorials/ReadingDataFromFile/ReadingDataFromFile.html) och text-filer. 🇬🇧
 
 -   **Quarto** för att skriva kompletta rapporter med kod. 🇬🇧\
-    [html](/tutorials/Quarto/Intro2Quarto.html) \| [pdf](/tutorials/Quarto/Intro2Quarto.pdf) \| [se video på Athena, inte här]()
+    [html](/tutorials/Quarto/Intro2Quarto.html) \| [pdf](/tutorials/Quarto/Intro2Quarto.pdf) \| [video på Athena](https://athena.itslearning.com/ContentArea/ContentArea.aspx?LocationID=18157&LocationType=1&ElementID=2197031)
 
 ## Cheat sheets
 
