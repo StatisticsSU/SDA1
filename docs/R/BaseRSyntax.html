@@ -7,6 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Mattias Villani">
+<meta name="author" content="Matias Quiroz">
 
 <title>SDA1 - Base-R</title>
 <style>
@@ -187,6 +188,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <li><a href="#tabeller" id="toc-tabeller" class="nav-link" data-scroll-target="#tabeller">Tabeller</a></li>
   <li><a href="#stapeldiagram" id="toc-stapeldiagram" class="nav-link" data-scroll-target="#stapeldiagram">Stapeldiagram</a></li>
   <li><a href="#histogram" id="toc-histogram" class="nav-link" data-scroll-target="#histogram">Histogram</a></li>
+  <li><a href="#histogram-per-kategori-i-separata-figurer" id="toc-histogram-per-kategori-i-separata-figurer" class="nav-link" data-scroll-target="#histogram-per-kategori-i-separata-figurer">Histogram per kategori i separata figurer</a></li>
   </ul>
 </nav>
     </div>
@@ -203,9 +205,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="quarto-title-meta">
 
     <div>
-    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-heading">Authors</div>
     <div class="quarto-title-meta-contents">
              <p>Mattias Villani </p>
+             <p>Matias Quiroz </p>
           </div>
   </div>
     
@@ -266,6 +269,23 @@ Alive  Dead
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(titanic<span class="sc">$</span>Age)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img src="BaseRSyntax_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="histogram-per-kategori-i-separata-figurer" class="level2">
+<h2 class="anchored" data-anchor-id="histogram-per-kategori-i-separata-figurer">Histogram per kategori i separata figurer</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="at">file =</span> <span class="fu">url</span>(<span class="st">"https://github.com/StatisticsSU/SDA1/blob/main/datorlab/lab3/FevChildren.RData?raw=true"</span>))</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>fev_list <span class="ot">&lt;-</span> <span class="fu">split</span>(FevChildren<span class="sc">$</span>fev, FevChildren<span class="sc">$</span>age.group)</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="fu">length</span>(fev_list)</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>Sorted_age.group <span class="ot">&lt;-</span> <span class="fu">sort</span>(<span class="fu">unique</span>(FevChildren<span class="sc">$</span>age.group))</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow =</span> <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">2</span>))</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>n){</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">hist</span>(fev_list[[i]], <span class="at">main =</span> <span class="fu">paste</span>(<span class="st">"FEV given age.group"</span>, Sorted_age.group[i]),</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>       <span class="at">xlab =</span> <span class="st">"FEV"</span>, <span class="at">col =</span> <span class="st">"lightblue"</span>, <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1</span>), <span class="at">probability =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="BaseRSyntax_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 

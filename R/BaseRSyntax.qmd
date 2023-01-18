@@ -1,6 +1,8 @@
 ---
 title: "Base-R"
-author: "Mattias Villani"
+author: 
+  - Mattias Villani
+  - Matias Quiroz
 format: html
 ---
 
@@ -40,3 +42,18 @@ barplot(prop.table(table(titanic$Survived)), ylab = "proportion")
 ```{r}
 hist(titanic$Age)
 ```
+
+## Histogram per kategori i separata figurer 
+```{r}
+load(file = url("https://github.com/StatisticsSU/SDA1/blob/main/datorlab/lab3/FevChildren.RData?raw=true"))
+fev_list <- split(FevChildren$fev, FevChildren$age.group)
+n <- length(fev_list)
+Sorted_age.group <- sort(unique(FevChildren$age.group))
+par(mfrow = c(2,2))
+for(i in 1:n){
+  hist(fev_list[[i]], main = paste("FEV given age.group", Sorted_age.group[i]),
+       xlab = "FEV", col = "lightblue", ylim = c(0, 1), probability = TRUE)
+}
+
+```
+
