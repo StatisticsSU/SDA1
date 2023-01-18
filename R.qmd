@@ -50,7 +50,7 @@ I SDA1 kommer vi försöka använda Formula syntax som mycket som möjligt, med 
 -   Tutorial om hur man läser in [data från Excel](/tutorials/ReadingDataFromFile/ReadingDataFromFile.html) och text-filer. 🇬🇧
 
 -   **Quarto** för att skriva kompletta rapporter med kod. 🇬🇧\
-    [html](/tutorials/Quarto/Intro2Quarto.html) \| [pdf](/tutorials/Quarto/Intro2Quarto.pdf) \| [video]()
+    [html](/tutorials/Quarto/Intro2Quarto.html) \| [pdf](/tutorials/Quarto/Intro2Quarto.pdf) \| [se video på Athena, inte här]()
 
 ## Cheat sheets
 
