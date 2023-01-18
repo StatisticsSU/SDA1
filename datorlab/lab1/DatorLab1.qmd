@@ -363,7 +363,7 @@ Kodraden mean`capital = mean(stockdata$capital)` säger alltså till R att
 Genom att explicit plocka ut kolumner på detta sätt kan vi göra grafen med ett lite annorlunda kommando:
 
 ```{r}
-plot(stockdata$capital, stockdata$year)
+plot(x = stockdata$year, y = stockdata$capital)
 ```
 
 där vi inte längre måste använda argumentet `data = stockdata` för att tala om var dessa variabler kommer från. Men det förra kommandot `plot(capital ~ year, data = stockdata)` är nog ändå mer lättläst, tycker jag.
