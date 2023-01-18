@@ -49,11 +49,21 @@ load(file = url("https://github.com/StatisticsSU/SDA1/blob/main/datorlab/lab3/Fe
 fev_list <- split(FevChildren$fev, FevChildren$age.group)
 n <- length(fev_list)
 Sorted_age.group <- sort(unique(FevChildren$age.group))
-par(mfrow = c(2,2))
+par(mfrow = c(1,3))
 for(i in 1:n){
   hist(fev_list[[i]], main = paste("FEV given age.group", Sorted_age.group[i]),
        xlab = "FEV", col = "lightblue", ylim = c(0, 1), probability = TRUE)
 }
+```
 
+## Histogram per kategori i samma figur
+```{r}
+par(mfrow = c(1,1))
+hist(fev_list[[1]], main = paste("Histogram of fev given age.group"), xlab = "FEV",
+     col = 2, probability = TRUE, xlim = c(1, 8))
+for(i in 2:n){
+  hist(fev_list[[i]], add = TRUE, col = i+1, probability =  TRUE)
+}
+legend("topright", legend = c("6-9", "10-14", "15-17"), fill = c(2, 3, 4))
 ```
 
