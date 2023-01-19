@@ -25,8 +25,7 @@ Kursen består av två delar:
 
 ### Kursstruktur
 
-Kursen består av föreläsningar, räkneövningar och datorlaborationer. Se respektive del av kursen för detaljer:  [Dataanalys och regression, 7.5 hp.](Del1.qmd) och [Sannolikhetsmodeller och inferens, 7.5 hp.](Del2.qmd).\
-
+Kursen består av föreläsningar, räkneövningar och datorlaborationer. Se respektive del av kursen för detaljer: [Dataanalys och regression, 7.5 hp.](Del1.qmd) och [Sannolikhetsmodeller och inferens, 7.5 hp.](Del2.qmd).\
 
 ### Schema
 
@@ -34,13 +33,12 @@ Kursens schema finns på [TimeEdit](https://cloud.timeedit.net/su/web/stud1/s.ht
 
 ### Formel- och tabellsamlingar
 
-- [Formel- och tabellsamling](/formel_tabell_samlingar/formel_tabell_SDA1.pdf) innehåller de flesta av kursens formler och tabeller och kommer att delas ut under salstentamen.
-- [Tabellsamling](/formel_tabell_samlingar/tabellsamling.qmd) är en webb-version av tabellerna i [Formel- och tabellsamling](/formel_tabell_samlingar/formel_tabell_SDA1.pdf). 
+-   [Formel- och tabellsamling](/formel_tabell_samlingar/formel_tabell_SDA1.pdf) innehåller de flesta av kursens formler och tabeller och kommer att delas ut under salstentamen.
+-   [Tabellsamling](/formel_tabell_samlingar/tabellsamling.qmd) är en webb-version av tabellerna i [Formel- och tabellsamling](/formel_tabell_samlingar/formel_tabell_SDA1.pdf).
 
 ### Interaktivt material
 
 På vissa delar av kursen använder vi interaktivt material för att underlätta lärandet. De interaktiva applikationerna kommer vara länkade från föreläsningsslides och under respektive föreläsning. En sida med alla applikationer finns [här](interaktiv.qmd).
-
 
 ### Lärare
 
@@ -60,4 +58,4 @@ På vissa delar av kursen använder vi interaktivt material för att underlätta
 
 ### Gamla tentor med lösningar
 
-- [2023-02-10](https://youtu.be/dQw4w9WgXcQ) [Obs! visas inte för studenter!]
+-   [2023-02-10](https://youtu.be/dQw4w9WgXcQ) \[Obs! visas inte för studenter!\]
