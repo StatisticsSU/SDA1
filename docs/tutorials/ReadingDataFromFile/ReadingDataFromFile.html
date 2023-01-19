@@ -236,6 +236,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#install.packages("openxlsx") # Installs the openxlsx package. Do it only once.</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"openxlsx"</span>)           <span class="co"># loads the openxlsx package. Do it once per R session.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'openxlsx' was built under R version 4.2.2</code></pre>
+</div>
 </div>
 <div class="callout-note callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
@@ -251,7 +254,7 @@ Note
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>tour_de_france <span class="ot">&lt;-</span> <span class="fu">read.xlsx</span>(<span class="st">'Tour_de_France_2017.xlsx'</span>, <span class="at">sheet =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>tour_de_france <span class="ot">&lt;-</span> <span class="fu">read.xlsx</span>(<span class="st">'Tour_de_France_2017.xlsx'</span>, <span class="at">sheet =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>The argument <code>sheet=1</code> tells R to read data from the first sheet in the Excel file. If you want to the read data from the third sheet in an Excel file, then just replace 1 with 3 (the Tour de France data has only one sheet, however).</p>
 <div class="callout-important callout callout-style-default callout-captioned">
@@ -285,35 +288,35 @@ Tip
 </div>
 <p>We have now read the dataset into a variable that I have chosen to call <code>tour_de_france</code>. We can now just type the name of this variable in the Console in R to see the data. The dataset contains many observations so it would be a long printout. A better way to get a quick look at the data, is to use the <code>head</code> command, showing only the first few observations of the dataset:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(tour_de_france)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(tour_de_france)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>  Year              Winner Country Age         Team Total.Time(h.min.sec)
-1 1903       Maurice Garin  France  32 La Fran�aise              94.33.00
-2 1904        Henri Cornet  France  20    Cycles JC              96.05.56
-3 1905   Louis Trousselier  France  24      Peugeot             110.26.58
-4 1906        Ren� Pottier  France  27      Peugeot             189.34.00
-5 1907 Lucien Petit-Breton  France  24      Peugeot             158.45.05
-6 1908 Lucien Petit-Breton  France  25      Peugeot             156.53.29
-  Total.Time(h) Average.Speed Stages Total.Distance.Ridden Starting.Riders
-1      94.55000        25.679      6                  2428              60
-2      96.09889        25.265      6                  2428              88
-3     110.44944        27.107     11                  2994              60
-4     189.56667        24.463     13                  4637              82
-5     158.75139        28.470     14                  4488              93
-6     156.89139        28.740     14                  4488             112
-  Finishing.Riders
-1               21
-2               27
-3               24
-4               14
-5               33
-6               36</code></pre>
+<pre><code>  Year              Winner Country Age                Team
+1 1903       Maurice Garin  France  32 La Fran&lt;U+FFFD&gt;aise
+2 1904        Henri Cornet  France  20           Cycles JC
+3 1905   Louis Trousselier  France  24             Peugeot
+4 1906 Ren&lt;U+FFFD&gt; Pottier  France  27             Peugeot
+5 1907 Lucien Petit-Breton  France  24             Peugeot
+6 1908 Lucien Petit-Breton  France  25             Peugeot
+  Total.Time(h.min.sec) Total.Time(h) Average.Speed Stages
+1              94.33.00      94.55000        25.679      6
+2              96.05.56      96.09889        25.265      6
+3             110.26.58     110.44944        27.107     11
+4             189.34.00     189.56667        24.463     13
+5             158.45.05     158.75139        28.470     14
+6             156.53.29     156.89139        28.740     14
+  Total.Distance.Ridden Starting.Riders Finishing.Riders
+1                  2428              60               21
+2                  2428              88               27
+3                  2994              60               24
+4                  4637              82               14
+5                  4488              93               33
+6                  4488             112               36</code></pre>
 </div>
 </div>
 <p>Note that some accented letters like é were replaced by a question mark. The variable <code>tour_de_france</code> is a table of a specific type called <code>dataframe</code>, which is R’s main way of storing a table.</p>
 <p>You can now start analyzing the data in different ways, perhaps plotting the average speed variable over the year that Tour de France has run:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(Average.Speed <span class="sc">~</span> Year, <span class="at">data =</span> tour_de_france)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(Average.Speed <span class="sc">~</span> Year, <span class="at">data =</span> tour_de_france)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img src="ReadingDataFromFile_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="672"></p>
 </div>
@@ -331,8 +334,8 @@ Tip
 <p>Note how the columns are not nice aligned, but clearly separated by blank space (TAB) so that R can understand which numbers belongs to which variable (column). Note also that the first row contain the variable names: <code>Year</code>, <code>Winner</code>, <code>Chassis</code>, <code>Engine</code>, <code>Speed</code>, <code>Time_hrs</code> and <code>Distance</code>.</p>
 <p>Let’s read this text file with data into R using the built-in function <code>read.delim</code></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>indy <span class="ot">&lt;-</span> <span class="fu">read.delim</span>(<span class="st">'Indy_500_2018.txt'</span>, <span class="at">header =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(indy)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>indy <span class="ot">&lt;-</span> <span class="fu">read.delim</span>(<span class="st">'Indy_500_2018.txt'</span>, <span class="at">header =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(indy)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  Year        Winner  Chassis   Engine Speed.computed Time_hrs Distance
 1 1911   Ray Harroun   Marmon   Marmon       74.60212 6.702222      500
