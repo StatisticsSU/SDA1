@@ -1,6 +1,8 @@
 ---
 title: "Tidyverse syntax"
-author: "Mattias Villani"
+author: 
+  - Mattias Villani
+  - Matias Quiroz
 format: html
 ---
 
@@ -73,4 +75,11 @@ titanic %>%
 ```
 
 
+## Histogram per kategori i samma figur
+```{r}
+suppressMessages(library(ggplot2))
+load(file = url("https://github.com/StatisticsSU/SDA1/blob/main/datorlab/lab3/FevChildren.RData?raw=true"))
+ggplot(FevChildren, aes(x = fev, fill = age.group)) + 
+  geom_histogram(alpha =0.75, bins = 20) + ggtitle("FEV given age.group")
+```
 
