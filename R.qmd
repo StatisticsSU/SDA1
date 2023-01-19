@@ -1,7 +1,6 @@
 ---
 title: "R"
-format:
-  html
+format: html
 ---
 
 > Kursen använder det populära statistiska programmeringsspråket R. Programmet är helt gratis och kan laddas ner på alla datorer.

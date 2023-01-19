@@ -14,3 +14,4 @@ docs/admin
 docs/stealourcourse.qmd
 docs/stealourcourse.html
 *.lyx~
+.~lock*
