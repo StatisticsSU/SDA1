@@ -36,7 +36,8 @@ Läs: SDM Kapitel 5 | [Slides](/misc/larry.png)
 Läs: SDM Kapitel 6 | [Slides](/misc/larry.png) 
 
 **Föreläsning 8 - Enkel linjär regression.**\
-Läs: SDM Kapitel 7 | [Slides](/misc/larry.png)
+Läs: SDM Kapitel 7 | [Slides](/misc/larry.png)\
+[widget - enkel linjär regression](/observable/linreg_simple.qmd)
 
 **Föreläsning 9 - Multipel linjär regression.**\
 Läs: SDM Kapitel 8-9 | [Slides](/misc/larry.png)\

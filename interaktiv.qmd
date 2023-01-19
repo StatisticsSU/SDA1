@@ -12,6 +12,9 @@ Extramaterial: till varje interaktiv graf finns en interaktiv/reaktiv notebook m
 Föreläsning 3 - **Val av antal bins i histogram**: <br>
 [widget](/observable/histogram.qmd) | [notebook](https://observablehq.com/@mattiasvillani/histogram)
 
+Föreläsning 8 - **Enkel linjär regression**
+[widget](/observable/linreg_simple.qmd) | [notebook](https://observablehq.com/@mattiasvillani/samplingfordelningen-linear-regression)
+
 Föreläsning 9 - **Icke-linjär regression**: <br>
 [widget](/observable/ickelinregression.qmd) | [notebook](https://observablehq.com/@mattiasvillani/icke-linjar-regression)
 

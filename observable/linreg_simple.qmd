@@ -1,0 +1,8 @@
+---
+title: "Histogram - effekten av val av bins"
+format: html
+---
+
+<iframe width="100%" height="765" frameborder="0"
+  src="https://observablehq.com/embed/4ab3c3f7ade79d7c@1119?cells=viewof+n%2Cviewof+beta0%2Cviewof+beta1%2Cviewof+sigmaepsilon%2Cviewof+data_estimate%2Cestimates%2Cplt">
+</iframe>
