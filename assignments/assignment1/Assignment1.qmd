@@ -24,7 +24,21 @@ callout-note-caption: "Observera"
 callout-tip-caption: "Tips"
 editor: visual
 ---
+::: callout-warning
 
+Den här inlämningsuppgiften förutsätter att följande paket finns installerade:
+
+- `mosaic`
+
+- `dplyr`
+
+- `geosphere` 
+
+- `leaflet`
+
+Paket kan installeras via kommandot `install.packages('packagename')`, där `'packagename'` är namnet på paketet, t.ex `'mosaic'`.
+
+:::
 ## Introduktion
 
 I den första inlämningsuppgiften ska ni självständigt i grupper om tre analysera ett dataset i programmeringsspråket R. Till skillnad från datorlaborationerna finns det minimalt med kodexempel. Datorlaborationerna går igenom de flesta momenten som behandlas i inlämningsuppgiften, så se till att göra klart dessa innan.
@@ -74,7 +88,7 @@ Inlämningsuppgiften ska lämnas in i form av ett html dokument genererat av Qua
 
 ## 0. Ladda in data
 
-## 💪 Uppgift 0.1
+#### 💪 Uppgift 0.1
 
 Ställ in arbetsmappen samt ladda in dataseten `Boston_census_data.Rdata` och `Boston_districts_to_predict.Rdata` (länkar för att ladda ner data finns i Instruktioner avsnittet ovan).
 
@@ -91,7 +105,7 @@ load(file = url("https://github.com/StatisticsSU/SDA1/blob/main/assignments/assi
 
 I detta avsnitt ska ni analysera kriminaliteten i Boston med hjälp av variabeln `crime_rate`.
 
-## 💪 Uppgift 1.1
+#### 💪 Uppgift 1.1
 
 Vad kan man generellt säga om kriminaliteten i censusdistrikten? Använd lämpliga figurer samt fördelningsmått som underlag.
 
@@ -105,7 +119,7 @@ Skriv svaret här. Vid behov skrivs matematiska symboler inom dollartecken, till
 ```
 :::
 
-## 💪 Uppgift 1.2
+#### 💪 Uppgift 1.2
 
 Varierar brottsligheten i Boston beroende på den kategoriska variabeln `town`? Det finns 88 olika utfall av `town` (dvs 88 olika stadsdelar). Välj ut `Boston East Boston`, `Boston Downtown`,`Cambridge`, samt två valfria stadsdelar för att besvara frågan. Frågan besvaras med hjälp av lämpligt valda figurer och statistiska mått.
 
@@ -123,7 +137,7 @@ Skriv svaret här.
 ```
 :::
 
-## 💪 Uppgift 1.3
+#### 💪 Uppgift 1.3
 
 Vilka tre variabler i datasetet `Boston_census_data` korrelerar mest med brottslighet? Beskriv det parvisa sambandet mellan brottslighet och vardera av dessa tre variabler.
 
@@ -145,7 +159,7 @@ Skriv svaret här.
 
 I detta avsnitt ska ni analysera fastighetsskatten i Boston med hjälp av variabeln `tax_rate`.
 
-## 💪 Uppgift 2.1
+#### 💪 Uppgift 2.1
 
 Vad kan man generellt säga om fastighetsskatten i censusdistrikten? Använd lämpliga figurer samt fördelningsmått som underlag.
 
@@ -159,7 +173,7 @@ Skriv svaret här.
 ```
 :::
 
-## 💪 Uppgift 2.2
+#### 💪 Uppgift 2.2
 
 Låt oss skapa en ny variabel `cat_tax` som anger om ett censusdistrikt betalar låg (`low`), medel (`medium`), eller hög (`high`) fastighetsskatt. Vi definerar skattekategorierna enligt
 
@@ -187,7 +201,7 @@ Skriv svaret här.
 ```
 :::
 
-## 💪 Uppgift 2.3
+#### 💪 Uppgift 2.3
 
 Hur många procent av alla censusdistrikt ligger i angränsning till Charles River och tillhör en hög skattekategori? Hur stor andel av censusdistrikten med hög skatt ligger inte i angränsning till Charles River?
 
@@ -201,7 +215,7 @@ Skriv svaret här.
 ```
 :::
 
-## 💪 Uppgift 2.4
+#### 💪 Uppgift 2.4
 
 Vilka två variabler i datasetet `Boston_census_data` korrelerar mest med `tax_rate`? Beskriv det parvisa sambandet mellan `tax_rate` och vardera av dessa två variabler. Är dessa korrelationssamband eller kausala samband?
 
@@ -245,7 +259,7 @@ Boston_map <- leaflet() %>%
 Boston_map # Show interactive map
 ```
 
-## 💪 Uppgift 3.1
+#### 💪 Uppgift 3.1
 
 Gör ett histogram för variabeln `dist_fenway_park`. Vilket av censusdistrikten har längst respektive kortast avstånd till Fenway park? Markera ut dessa distrikt i en interaktiv karta tillsammans med Fenway park.
 
@@ -263,7 +277,7 @@ Skriv svaret här.
 ```
 :::
 
-## 💪 Uppgift 3.2
+#### 💪 Uppgift 3.2
 
 Finns det ett samband mellan `dist_fenway_park` och `median_home_value`?
 
@@ -277,7 +291,7 @@ Skriv svaret här.
 ```
 :::
 
-## 💪 Uppgift 3.3
+#### 💪 Uppgift 3.3
 
 Finns det ett samband mellan `dist_fenway_park` och `crime_rate`?
 
@@ -295,7 +309,7 @@ Skriv svaret här.
 
 I detta avsnitt ska ni anpassa och tolka några enkla linjära regressionsmodeller.
 
-## 💪 Uppgift 4.1
+#### 💪 Uppgift 4.1
 
 Anpassa en linjär regression med responsvariabel `NOx` och förklarande variabel `employ_dist`. Rita den anpassade regressionslinjen tillsammans med data i en lämplig figur. Beskriv resultaten och tolka modellen. Utför en modellvalidering via en residualanalys och kommentera modellens lämplighet. Om modellen inte anses lämplig, vilka antaganden har inte varit uppfyllda?
 
@@ -309,7 +323,7 @@ Skriv svaret här.
 ```
 :::
 
-## 💪 Uppgift 4.2
+#### 💪 Uppgift 4.2
 
 Använd modellen i Uppgift 4.1 för att prediktera genomsnittsutsläppet för observation 10 med `employ_dist`=10.5857 och beräkna dess residual.
 
@@ -323,7 +337,7 @@ Skriv svaret här.
 ```
 :::
 
-## 💪 Uppgift 4.3
+#### 💪 Uppgift 4.3
 
 Använd Tukeys cirkel för att transformera variablerna i Uppgift 4.1 (avgör själv vilken eller vilka av de två som behöver transformeras). Anpassa en ny linjär regression på de transformerade data. Utför en modellvalidering (efter transformation) via en residualanalys och kommentera modellens lämplighet jämfört med modellen i Uppgift 4.1. Plotta den anpassade regressionen i icke-transformerad skala tillsammans med data (också i icke-transformerad skala) i en lämplig figur.
 
@@ -341,7 +355,7 @@ Skriv svaret här.
 ```
 :::
 
-## 💪 Uppgift 4.4
+#### 💪 Uppgift 4.4
 
 Använd modellen i Uppgift 4.3 för att prediktera genomsnittsutsläppet för observation 10 med `employ_dist`=10.5857 och beräkna dess residual. Kommentera resultaten jämfört med Uppgift 4.2.
 
@@ -363,7 +377,7 @@ Skriv svaret här.
 
 I detta avsnitt ska ni studera multipel linjära regression.
 
-## 💪 Uppgift 5.1
+#### 💪 Uppgift 5.1
 
 Anpassa en linjär regression med responsvariabel logaritmerad `median_home_value` samt förklarande variabler `lower_stat_pct` och dummy-variabeln `borders_charles`. Tolka koefficienten för `borders_charles`.
 
@@ -377,7 +391,7 @@ Skriv svaret här.
 ```
 :::
 
-## 💪 Uppgift 5.2
+#### 💪 Uppgift 5.2
 
 Anpassa en linjär regression med responsvariabel `NOx` samt förklarande variabler `lower_stat_pct` och dummy-variabeln `borders_charles`. Vad tror ni om den statistiska signifikansen för respektive förklarande variabel?
 
@@ -391,7 +405,7 @@ Skriv svaret här.
 ```
 :::
 
-## 💪 Uppgift 5.3
+#### 💪 Uppgift 5.3
 
 Använd modellen i Uppgift 5.1 för att prediktera `median_home_value` för observation 30 och beräkna dess residual.
 
@@ -409,7 +423,7 @@ Skriv svaret här.
 ```
 :::
 
-## 💪 Uppgift 5.4
+#### 💪 Uppgift 5.4
 
 Ni ska nu utveckla en prognosmodell för medianhuspriset `median_home_value`. Ni får endast välja mellan följande förklarande variabler samt godtyckliga transformationer av dom (ni får även transformera responsen):
 
@@ -444,7 +458,7 @@ Skriv svaret här.
 ```
 :::
 
-## 💪 Uppgift 5.5
+#### 💪 Uppgift 5.5
 
 Gör en residualanalys av den valda modellen i Uppgift 5.3.
 
@@ -458,7 +472,7 @@ Skriv svaret här.
 ```
 :::
 
-## 💪 Uppgift 5.6
+#### 💪 Uppgift 5.6
 
 Använd modellen i Uppgift 5.4 för att prediktera medianhuspriset för observationerna i datasetet `Boston_districts_to_predict.RData`. Skriv ut resultatet så att vi enkelt kan jämföra dina prognoser när vi rättar.
 

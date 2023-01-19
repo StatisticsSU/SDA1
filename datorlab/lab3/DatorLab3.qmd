@@ -24,6 +24,20 @@ callout-tip-caption: "Tips"
 editor: visual
 ---
 
+::: callout-warning
+Den här labben förutsätter att följande paket finns installerade:
+
+-   `openxlsx`
+
+-   `mosaic`
+
+-   `vcd`
+
+-   `dplyr`
+
+Paket kan installeras via kommandot `install.packages('packagename')`, där `'packagename'` är namnet på paketet, t.ex `'mosaic'`.
+:::
+
 ## Introduktion
 
 > I den här datorlabben kommer vi att beskriva samband mellan två kategoriska variabler, samt samband mellan en numerisk och kategorisk variabel. Ni kommer också lära er om betingade fördelningar i R och hur man jämför fördelningar grafiskt. Vi kommer också att arbeta med tidsserier.

@@ -82,7 +82,12 @@ Uppgifter: [html](/datorlab/lab1/DatorLab1.qmd)
 Uppgifter: [html](/datorlab/lab2/DatorLab2.qmd) | <a href="https://github.com/StatisticsSU/SDA1/raw/main/datorlab/lab2/DatorLab2.qmd" download>quarto</a> 
 
 **Datorlaboration 3 - Samband mellan två kategoriska variabler. Samband mellan en kategorisk och en numerisk variabel. Tidsserier.**\
-Uppgifter: [html](/datorlab/lab3/DatorLab3.qmd) | <a href="https://github.com/StatisticsSU/SDA1/raw/main/datorlab/lab2/DatorLab2.qmd" download>quarto</a> 
+Uppgifter: [html](/datorlab/lab3/DatorLab3.qmd) | <a href="https://github.com/StatisticsSU/SDA1/raw/main/datorlab/lab3/DatorLab3.qmd" download>quarto</a> 
 
 **Datorlaboration 4 - Korrelation. Enkel och multipel linjär regression.**\
 Uppgifter: [Datorlab 4](/misc/larry.png)
+
+### **Inlämningsuppgift**
+
+**Inlämningsuppgift 1.**\
+Uppgifter: [html](/assignments/assignment1/Assignment1.qmd) | <a href="https://github.com/StatisticsSU/SDA1/raw/main/assignments/assignment1/Assignment1.qmd" download>quarto</a> 

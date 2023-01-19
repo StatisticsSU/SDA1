@@ -25,6 +25,16 @@ callout-tip-caption: "Tips"
 editor: visual
 ---
 
+::: callout-warning
+Den här labben förutsätter att följande paket finns installerade:
+
+-   `openxlsx`
+
+-   `mosaic`
+
+Paket kan installeras via kommandot `install.packages('packagename')`, där `'packagename'` är namnet på paketet, t.ex `'mosaic'`.
+:::
+
 ## Introduktion
 
 > I den här datorlabben kommer vi att titta på hur fördelningar för olika typer av variabler kan beskrivas numeriskt och grafiskt.
