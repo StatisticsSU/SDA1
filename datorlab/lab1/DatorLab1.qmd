@@ -88,7 +88,7 @@ vi säger att vi **tilldelar** **variabel** `kapital` **värdet** `100`. Lite me
 ::: callout-warning
 ### Se upp!
 
-Vi kan återkalla värdet 100 från variabeln `kapital` när som helst. Men om du stänger ner RStudio och sen startar om programmet (eller om RStudio låser sig) så minns inte R längre värdet på `kapital` . R minns faktiskt inte ens att det fanns något som hette `kapital` och kommer att klaga om du skriver `kapital` på prompten följt av `Enter`. R och RStudio minns bara variabeln inom en **session**, dvs tills du avslutar RStudio. Om man vill spara data mellan olika sessioner måste man spara ner variablerna på datorns disk (eller på någon lagring på internet). Mer om detta senare.
+Vi kan återkalla värdet 100 från variabeln `kapital` när som helst. Men om du stänger ner RStudio och sen startar om programmet (eller om RStudio låser sig) så minns inte R längre värdet på `kapital`. R minns faktiskt inte ens att det fanns något som hette `kapital` och kommer att klaga om du skriver `kapital` på prompten följt av `Enter`. R och RStudio minns bara variabeln inom en **session**, dvs tills du avslutar RStudio. Om man vill spara data mellan olika sessioner måste man spara ner variablerna på datorns disk (eller på någon lagring på internet). Mer om detta senare.
 :::
 
 ::: callout-note
