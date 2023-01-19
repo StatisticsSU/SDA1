@@ -1,5 +1,5 @@
 ---
-title: "Histogram - effekten av val av bins"
+title: "Enkel linjär regression"
 format: html
 ---
 
