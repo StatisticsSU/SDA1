@@ -208,7 +208,7 @@ Ofta vill man ha ett variabelnamn som är lätt att förstå vad variabeln inneh
 :::
 
 ::: column-margin
-[![](../../slides/figs/flaticons/romeo-and-juliet.svg){width="60"}](https://doorshakespeare.com/general/whats-in-a-name/)
+[![](vintage-romeo-and-juliet-poster.jpg){width="60"}](https://doorshakespeare.com/general/whats-in-a-name/)
 :::
 
 Om R ska kunna läsa in data från filen stock.xlsx så måste vi tala om *var* filen finns på vår dator. Enklast är då att ställa in Rs **working directory**, dvs det standardställe där R letar efter filer i den pågående sessionen. Det finns två sätt att göra detta, varav vi endast rekommenderar det första om man är absolut nybörjare. Rätt snart bör du lära dig att använda det andra sättet, som är smidigare i längden.
@@ -249,7 +249,7 @@ R kommer nu att hitta filen och vi är redo att skriva kommandot som läser in f
 ::: column-margin
 <center>
 
-![](../../slides/figs/flaticons/Spotify_Icon_RGB_Green.png){width="40"}
+![](spotifypure.png){width="40"}
 
 </center>
 
