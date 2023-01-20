@@ -466,7 +466,7 @@ En fördel med boxplotten kontra histogrammet är att alla medianer visas, dessu
 
 #### 💪 Uppgift 4.4
 
-Använd `boxplot()` för att jämföra fördelningarna för `fev` betingat på olika utfall av `smoking` `age.group`. Ovan hade vi en diskussion om statistisk signifikans för samma exempel. Ser ni i figuren att skillnaderna för medianerna i åldersgrupp 10-14 mellan rökare och icke rökare är liten jämfört med samma skillnad i åldersgrupp 15-17? Vilken av dessa skillnader är mest trolig att vara statistiskt signifikant?
+Använd `boxplot()` för att jämföra fördelningarna för `fev` betingat på olika utfall av `smoking` och `age.group`. Ovan hade vi en diskussion om statistisk signifikans för samma exempel. Ser ni i figuren att skillnaderna för medianerna i åldersgrupp 10-14 mellan rökare och icke rökare är liten jämfört med samma skillnad i åldersgrupp 15-17? Vilken av dessa skillnader är mest trolig att vara statistiskt signifikant?
 
 ```{r}
 # Write your code here
@@ -577,8 +577,6 @@ Nu när ni vet hur man kan använda `$`-tecken för att hämta ut variabler frå
 -   Hur man informellt resonerar kring statistisk signifikans.
 
 -   Hur man kan presentera tidsseriedata med linjeplottar.
-
--   Några exempel på vad en `for`-loop kan användas till.
 :::
 
 ## A. Appendix
