@@ -44,17 +44,21 @@ Paket kan installeras via kommandot `install.packages('packagename')`, där `'pa
 
 #### 💪 Uppgift 0.1
 
+Se till att paketen ovan är installerade innan du fortsätter med resten.
+
+#### 💪 Uppgift 0.2
+
 Skapa en mapp `Lab3` i din kursmapp SDA1 (såsom ni gjorde i Lab 1). Ladda ner Quarto-filen för denna lab genom att högerklicka [här](https://github.com/StatisticsSU/SDA1/raw/main/datorlab/lab3/DatorLab3.qmd) och välj 'Spara länk' eller något likande från menyn som dyker upp. Spara filen i din nya `Lab3` mapp. Öppna Quarto-filen i RStudio. Du kan nu fortsätta med denna laboration direkt i Quarto-dokumentet, där du också fyller i svaren på dina laborationsövningar. Du kan alltså lämna den här webbsidan nu och fortsätta arbetet i RStudio.
 
 Väl inne i RStudio med öppnat Quarto-dokument i 'Editor' kan ni gå över till 'Source mode' genom att klicka på 'Source' i det vänstra hörnet av din 'Editor'. Source mode är detaljerat och bra att skriva kod i eftersom man har full kontroll på dokumentet, men det är svårt att få en översikt av dokumentet. Prova nu att gå över till 'Visual mode' genom att klicka på 'Visual' i det vänstra hörnet av din 'Editor'. Vi rekommenderar att ni mestadels arbetar i Visual mode, men att gå över till Source mode när man verkligen få till någon detalj som är svår att ändra i Visual mode. ´
 
-#### 💪 Uppgift 0.2
+#### 💪 Uppgift 0.3
 
 Klicka på knappen Render i Editor-fönstret för att **kompilera** filen till en webbsida (html). Webbsidan kommer antingen att visas i Viewer-fönstret i RStudio eller i webbläsaren på din dator. Om din webbsida visas i webbläsaren rekommenderar vi att du ändrar inställningarna i RStudio så webbsidan visas i Viewer-fönstret. Du ställer in detta på menyn [T]{.underline}ools/[G]{.underline}lobal Options... och sen väljer du *Viewer Pane* vid *Show output preview in*:
 
 ![](https://github.com/StatisticsSU/SDA1/raw/main/datorlab/lab2/QuartoInViewerPane.png){fig-align="center" width="333"}
 
-#### 💪 Uppgift 0.3
+#### 💪 Uppgift 0.4
 
 För att säkerställa att man befinner sig i korrekt arbetsmapp varje gång Quarto-dokumentet kompileras kan man skapa en s k code-chunk efter den s k YAML-texten (som återfinns längst upp i dokumentet, mellan de tre bindestrecken - - -). Du skapar en code-chunk genom att klicka på knappen med C och ett + i övre högra hörnet av Editorn.
 
@@ -72,7 +76,7 @@ Lägg till en ny code chunk och ställ in 'working directory' till den nya mappe
 Funktionen `setwd()` i R talar om för R vilken mapp som är 'working directory'.
 :::
 
-#### 💪 Uppgift 0.4
+#### 💪 Uppgift 0.5
 
 Ladda ner `SmartPhones.RData` ([här](https://github.com/StatisticsSU/SDA1/blob/main/datorlab/lab3/SmartPhones.RData?raw=true)), `FevChildren.RData` ([här](https://github.com/StatisticsSU/SDA1/blob/main/datorlab/lab3/FevChildren.RData?raw=true)) och `CAPM_data.RData` ([här](https://github.com/StatisticsSU/SDA1/blob/main/datorlab/lab3/CAPM_data.RData?raw=true)). Filerna kommer automatiskt att sparas ner, oftast i download mappen på datorn ni sitter vid. Kopiera över filerna till `Lab3` mappen ni skapade ovan.
 
@@ -85,7 +89,7 @@ Smartphones_from_URL <- SmartPhones
 
 Argumentet till `url()` funktionen är en sträng som innehåller länken till kurshemsidans git repository där `SmartPhones.RData` finns lagrad. I raden efter har vi sparat dataframen i en variabel som heter `SmartPhones_from_URL` så att du i nästa uppgift kan jämföra mot den du läser in från din lokala fil som du sparade ovan i i `Lab3` mappen.
 
-#### 💪 Uppgift 0.5
+#### 💪 Uppgift 0.6
 
 Använd `load()` funktionen (utan `url()` funktionen) för att läsa in `SmartPhones.RData` lokalt från din dator. Jämför den lokalt inlästa filen med den du läste in från webben (finns sparad i `SmartPhones_from_URL`).
 
@@ -121,7 +125,6 @@ head(SmartPhones) # Prints first few observations
 Låt oss börja med att skapa en korstabell. En korstabell är en tabell som innehåller frekvensen för varje utfall av variablerna. Notera att om vi har två kategoriska variabler, säg $x$ och $y$, så är utfallen alla parvisa kombinationer av utfallen av de respektive variablerna.
 
 ```{r}
-#install.packages("mosaic") # Run if mosaic is not installed
 suppressMessages(library(mosaic))
 tally(~ brand + age.group, data = SmartPhones)
 ```
@@ -337,7 +340,6 @@ Om vi, för varje grupp vi betingar på, istället vill ha staplarna bredvid var
 Vi har gått igenom mosaicplot på Föreläsning 4. Notera att namnet på plotten inte har med `mosaic`-paketet att göra. En mosaicplot är en stacked barchart, men innehåller också information om marginalfördelningen på variabeln man betingar på. Vi kan använda funktionen `mosaic()` från `vcd`-paketet. Viktigt att notera att variabeln vi betingar på hamnar på y-axeln, till skillnad från x-axeln som mosaicplottarna i boken.
 
 ```{r}
-#install.packages("vcd") # Run if vcd is not installed.
 suppressMessages(library(vcd))
 t <- tally(~ age.group | brand, data = SmartPhones, format = "prop")
 vcd::mosaic(~ age.group | brand, data = SmartPhones)
@@ -348,8 +350,7 @@ Notera att vi anropar funktionen via `vcd::mosaic()` istället för `mosaic()`, 
 Variabeln smartphonepreferens har för många utfall (kategorier), vilket gör mosaicplotten oläslig. Tyvärr har inte funktionen argumentet `las` vi använde oss av för att rotera texten i `bargraph()`. För enkelhetens skull, låt oss definiera en ny dataframe där vi endast behåller repondenter som har svarat iPhone, Samsung, LG eller Sony och illustrera mosaicplotten med dessa nya data. Här är ett exempel där tidyverse löser uppgiften på ett mer elegant sätt än base R med funktionen `filter()`.
 
 ```{r}
-#install.packages("dplyr") # Run if dplyr is not installed.
-library(dplyr)
+suppressMessages(library(dplyr))
 SmartPhones_new <- filter(SmartPhones, brand == "iPhone" |brand == "Samsung"|brand == "LG" | brand == "Sony")
 ```
 
@@ -380,7 +381,6 @@ Denna uppgift bör göras först efter att man gjort klart resten av labben. Upp
 Ni kan tillämpa det ni har lärt er i Avsnitt 3 på ett nytt datamaterial. Vi föreslår att ni analyserar sambandet mellan `Survived` och `Class` i Titanic datasetet. I [Lab 2](https://statisticssu.github.io/SDA1/datorlab/lab2/DatorLab2.html) analyserade ni variablerna var för sig. Er uppgift nu är att studera om det föreligger ett samband mellan `Survived` och `Class` och hur detta samband ser ut.
 
 ```{r}
-# install.packages("openxlsx") # # Run if openxlsx is not installed. 
 suppressMessages(library(openxlsx)) # 
 titanic <- read.xlsx("https://github.com/StatisticsSU/SDA1/raw/main/datorlab/lab2/Chapter_3.xlsx", sheet = "Titanic")
 
@@ -558,7 +558,7 @@ Plotta de tre tidsserierna `MARKET`, `CITCRP` och `DATGEN` i samma figur. Använ
 Antag att ni skapar en portfölj som består av 30% `IBM`, 50% `CITCRP`och 20% `DATGEN`. Plotta månadsavkastningen för er portfölj.
 
 ::: callout-tip
-Avkastningen för en portfölj är en viktad linjär kombination av avkastningarna i tillgångarna som portföljen innehåller. I en portfölj med tre aktier vars vikter $0<w_1<1, 0<w_2<1, 0<w_3<1$, med $\sum_{k=1}^3w_k=1$, är portföljens avkastning$$r_t = w_1r^{(1)}_t + w_2r^{(2)}_t+w_3r^{(3)}_t,$$
+Avkastningen för en portfölj är en viktad linjär kombination av avkastningarna i tillgångarna som portföljen innehåller. I en portfölj med tre aktier vars vikter $0<w_1<1, 0<w_2<1, 0<w_3<1$, med $\sum_{k=1}^3w_k=1$, är portföljens avkastning $$r_t = w_1r^{(1)}_t + w_2r^{(2)}_t+w_3r^{(3)}_t,$$
 
 där $r^{(k)}_t$ är avkastningen för tillgång $k$ i portföljen.
 

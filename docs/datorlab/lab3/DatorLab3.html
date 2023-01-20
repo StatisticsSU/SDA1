@@ -4129,11 +4129,15 @@ Varning
 </blockquote>
 <section id="uppgift-0.1" class="level4">
 <h4 class="anchored" data-anchor-id="uppgift-0.1">💪 Uppgift 0.1</h4>
-<p>Skapa en mapp <code>Lab3</code> i din kursmapp SDA1 (såsom ni gjorde i Lab 1). Ladda ner Quarto-filen för denna lab genom att högerklicka <a href="https://github.com/StatisticsSU/SDA1/raw/main/datorlab/lab3/DatorLab3.qmd">här</a> och välj ‘Spara länk’ eller något likande från menyn som dyker upp. Spara filen i din nya <code>Lab3</code> mapp. Öppna Quarto-filen i RStudio. Du kan nu fortsätta med denna laboration direkt i Quarto-dokumentet, där du också fyller i svaren på dina laborationsövningar. Du kan alltså lämna den här webbsidan nu och fortsätta arbetet i RStudio.</p>
-<p>Väl inne i RStudio med öppnat Quarto-dokument i ‘Editor’ kan ni gå över till ‘Source mode’ genom att klicka på ‘Source’ i det vänstra hörnet av din ‘Editor’. Source mode är detaljerat och bra att skriva kod i eftersom man har full kontroll på dokumentet, men det är svårt att få en översikt av dokumentet. Prova nu att gå över till ‘Visual mode’ genom att klicka på ‘Visual’ i det vänstra hörnet av din ‘Editor’. Vi rekommenderar att ni mestadels arbetar i Visual mode, men att gå över till Source mode när man verkligen få till någon detalj som är svår att ändra i Visual mode. ´</p>
+<p>Se till att paketen ovan är installerade innan du fortsätter med resten.</p>
 </section>
 <section id="uppgift-0.2" class="level4">
 <h4 class="anchored" data-anchor-id="uppgift-0.2">💪 Uppgift 0.2</h4>
+<p>Skapa en mapp <code>Lab3</code> i din kursmapp SDA1 (såsom ni gjorde i Lab 1). Ladda ner Quarto-filen för denna lab genom att högerklicka <a href="https://github.com/StatisticsSU/SDA1/raw/main/datorlab/lab3/DatorLab3.qmd">här</a> och välj ‘Spara länk’ eller något likande från menyn som dyker upp. Spara filen i din nya <code>Lab3</code> mapp. Öppna Quarto-filen i RStudio. Du kan nu fortsätta med denna laboration direkt i Quarto-dokumentet, där du också fyller i svaren på dina laborationsövningar. Du kan alltså lämna den här webbsidan nu och fortsätta arbetet i RStudio.</p>
+<p>Väl inne i RStudio med öppnat Quarto-dokument i ‘Editor’ kan ni gå över till ‘Source mode’ genom att klicka på ‘Source’ i det vänstra hörnet av din ‘Editor’. Source mode är detaljerat och bra att skriva kod i eftersom man har full kontroll på dokumentet, men det är svårt att få en översikt av dokumentet. Prova nu att gå över till ‘Visual mode’ genom att klicka på ‘Visual’ i det vänstra hörnet av din ‘Editor’. Vi rekommenderar att ni mestadels arbetar i Visual mode, men att gå över till Source mode när man verkligen få till någon detalj som är svår att ändra i Visual mode. ´</p>
+</section>
+<section id="uppgift-0.3" class="level4">
+<h4 class="anchored" data-anchor-id="uppgift-0.3">💪 Uppgift 0.3</h4>
 <p>Klicka på knappen Render i Editor-fönstret för att <strong>kompilera</strong> filen till en webbsida (html). Webbsidan kommer antingen att visas i Viewer-fönstret i RStudio eller i webbläsaren på din dator. Om din webbsida visas i webbläsaren rekommenderar vi att du ändrar inställningarna i RStudio så webbsidan visas i Viewer-fönstret. Du ställer in detta på menyn <u>T</u>ools/<u>G</u>lobal Options… och sen väljer du <em>Viewer Pane</em> vid <em>Show output preview in</em>:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -4141,8 +4145,8 @@ Varning
 </figure>
 </div>
 </section>
-<section id="uppgift-0.3" class="level4">
-<h4 class="anchored" data-anchor-id="uppgift-0.3">💪 Uppgift 0.3</h4>
+<section id="uppgift-0.4" class="level4">
+<h4 class="anchored" data-anchor-id="uppgift-0.4">💪 Uppgift 0.4</h4>
 <p>För att säkerställa att man befinner sig i korrekt arbetsmapp varje gång Quarto-dokumentet kompileras kan man skapa en s k code-chunk efter den s k YAML-texten (som återfinns längst upp i dokumentet, mellan de tre bindestrecken - - -). Du skapar en code-chunk genom att klicka på knappen med C och ett + i övre högra hörnet av Editorn.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -4177,8 +4181,8 @@ Tips
 </div>
 </div>
 </section>
-<section id="uppgift-0.4" class="level4">
-<h4 class="anchored" data-anchor-id="uppgift-0.4">💪 Uppgift 0.4</h4>
+<section id="uppgift-0.5" class="level4">
+<h4 class="anchored" data-anchor-id="uppgift-0.5">💪 Uppgift 0.5</h4>
 <p>Ladda ner <code>SmartPhones.RData</code> (<a href="https://github.com/StatisticsSU/SDA1/blob/main/datorlab/lab3/SmartPhones.RData?raw=true">här</a>), <code>FevChildren.RData</code> (<a href="https://github.com/StatisticsSU/SDA1/blob/main/datorlab/lab3/FevChildren.RData?raw=true">här</a>) och <code>CAPM_data.RData</code> (<a href="https://github.com/StatisticsSU/SDA1/blob/main/datorlab/lab3/CAPM_data.RData?raw=true">här</a>). Filerna kommer automatiskt att sparas ner, oftast i download mappen på datorn ni sitter vid. Kopiera över filerna till <code>Lab3</code> mappen ni skapade ovan.</p>
 <p>Det finns olika sätt att läsa in <code>.RData</code> filer genom <code>load()</code> funktionen. Ett sätt är att skriva t.ex <code>load(&quot;SmartPhones.RData&quot;)</code>. Notera att det här förutsätter att <code>SmartPhones.RData</code> ligger i den arbetsmappen man angivit genom <code>setwd()</code> funktionen. Ett annat sätt att ladda in en <code>.RData</code> fil är att läsa in den direkt från webben med en kombination av <code>load()</code> funktionen och <code>url()</code> funktionen.</p>
 <div class="cell">
@@ -4187,8 +4191,8 @@ Tips
 </div>
 <p>Argumentet till <code>url()</code> funktionen är en sträng som innehåller länken till kurshemsidans git repository där <code>SmartPhones.RData</code> finns lagrad. I raden efter har vi sparat dataframen i en variabel som heter <code>SmartPhones_from_URL</code> så att du i nästa uppgift kan jämföra mot den du läser in från din lokala fil som du sparade ovan i i <code>Lab3</code> mappen.</p>
 </section>
-<section id="uppgift-0.5" class="level4">
-<h4 class="anchored" data-anchor-id="uppgift-0.5">💪 Uppgift 0.5</h4>
+<section id="uppgift-0.6" class="level4">
+<h4 class="anchored" data-anchor-id="uppgift-0.6">💪 Uppgift 0.6</h4>
 <p>Använd <code>load()</code> funktionen (utan <code>url()</code> funktionen) för att läsa in <code>SmartPhones.RData</code> lokalt från din dator. Jämför den lokalt inlästa filen med den du läste in från webben (finns sparad i <code>SmartPhones_from_URL</code>).</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Write your code here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -4240,8 +4244,7 @@ Tips
 </div>
 <p>Låt oss börja med att skapa en korstabell. En korstabell är en tabell som innehåller frekvensen för varje utfall av variablerna. Notera att om vi har två kategoriska variabler, säg <span class="math inline">\(x\)</span> och <span class="math inline">\(y\)</span>, så är utfallen alla parvisa kombinationer av utfallen av de respektive variablerna.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">#install.packages(&quot;mosaic&quot;) # Run if mosaic is not installed</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">suppressMessages</span>(<span class="fu">library</span>(mosaic))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">suppressMessages</span>(<span class="fu">library</span>(mosaic))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: package &#39;mosaic&#39; was built under R version 4.2.2</code></pre>
 </div>
@@ -4549,8 +4552,7 @@ brand            18-34       35-49         50+
 </div>
 <p>Vi har gått igenom mosaicplot på Föreläsning 4. Notera att namnet på plotten inte har med <code>mosaic</code>-paketet att göra. En mosaicplot är en stacked barchart, men innehåller också information om marginalfördelningen på variabeln man betingar på. Vi kan använda funktionen <code>mosaic()</code> från <code>vcd</code>-paketet. Viktigt att notera att variabeln vi betingar på hamnar på y-axeln, till skillnad från x-axeln som mosaicplottarna i boken.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="co">#install.packages(&quot;vcd&quot;) # Run if vcd is not installed.</span></span>
-<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a><span class="fu">suppressMessages</span>(<span class="fu">library</span>(vcd))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">suppressMessages</span>(<span class="fu">library</span>(vcd))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: package &#39;vcd&#39; was built under R version 4.2.2</code></pre>
 </div>
@@ -4563,9 +4565,8 @@ brand            18-34       35-49         50+
 <p>Notera att vi anropar funktionen via <code>vcd::mosaic()</code> istället för <code>mosaic()</code>, då den senare refererar till <code>mosaic</code>-paketet och inte till funktionen <code>mosaic()</code> från <code>vcd</code>-paketet som är den vi vill använda.</p>
 <p>Variabeln smartphonepreferens har för många utfall (kategorier), vilket gör mosaicplotten oläslig. Tyvärr har inte funktionen argumentet <code>las</code> vi använde oss av för att rotera texten i <code>bargraph()</code>. För enkelhetens skull, låt oss definiera en ny dataframe där vi endast behåller repondenter som har svarat iPhone, Samsung, LG eller Sony och illustrera mosaicplotten med dessa nya data. Här är ett exempel där tidyverse löser uppgiften på ett mer elegant sätt än base R med funktionen <code>filter()</code>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="co">#install.packages(&quot;dplyr&quot;) # Run if dplyr is not installed.</span></span>
-<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>SmartPhones_new <span class="ot">&lt;-</span> <span class="fu">filter</span>(SmartPhones, brand <span class="sc">==</span> <span class="st">&quot;iPhone&quot;</span> <span class="sc">|</span>brand <span class="sc">==</span> <span class="st">&quot;Samsung&quot;</span><span class="sc">|</span>brand <span class="sc">==</span> <span class="st">&quot;LG&quot;</span> <span class="sc">|</span> brand <span class="sc">==</span> <span class="st">&quot;Sony&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">suppressMessages</span>(<span class="fu">library</span>(dplyr))</span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>SmartPhones_new <span class="ot">&lt;-</span> <span class="fu">filter</span>(SmartPhones, brand <span class="sc">==</span> <span class="st">&quot;iPhone&quot;</span> <span class="sc">|</span>brand <span class="sc">==</span> <span class="st">&quot;Samsung&quot;</span><span class="sc">|</span>brand <span class="sc">==</span> <span class="st">&quot;LG&quot;</span> <span class="sc">|</span> brand <span class="sc">==</span> <span class="st">&quot;Sony&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Notera att i koden ovan så har inte <code>|</code>-tecknet samma betydelse som i formula-syntax, där den betyder betingat på. I koden ovan betyder <code>|</code>-tecknet “eller”. <code>filter</code> anropet ovan behåller alltså de observationer som har värdet <code>brand</code> lika med “iPhone” eller “Samsung” eller “LG” eller “Sony”. Tecknet <code>==</code> är en jämförelse, dvs <code>filter()</code> funktionen kollar om <code>brand</code> är lika med de värdena vi har angett och om så är fallet så behålls den. Om <code>brand</code> till exempel skulle ha värdet “Casio” så kommer den inte att behållas.</p>
 </section>
@@ -4595,8 +4596,7 @@ Extra: Ett första steg mot att arbeta mer självständigt.
 <p>Denna uppgift bör göras först efter att man gjort klart resten av labben. Uppgiften kan hoppas över vid brist på tid, då ni redan lärt er beskriva samband mellan kategoriska variabler. Syftet med uppgiften är att ni ska använda de verktygen ni har lärt er på ett självständigt sätt.</p>
 <p>Ni kan tillämpa det ni har lärt er i Avsnitt 3 på ett nytt datamaterial. Vi föreslår att ni analyserar sambandet mellan <code>Survived</code> och <code>Class</code> i Titanic datasetet. I <a href="https://statisticssu.github.io/SDA1/datorlab/lab2/DatorLab2.html">Lab 2</a> analyserade ni variablerna var för sig. Er uppgift nu är att studera om det föreligger ett samband mellan <code>Survived</code> och <code>Class</code> och hur detta samband ser ut.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages(&quot;openxlsx&quot;) # # Run if openxlsx is not installed. </span></span>
-<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a><span class="fu">suppressMessages</span>(<span class="fu">library</span>(openxlsx)) <span class="co"># </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="fu">suppressMessages</span>(<span class="fu">library</span>(openxlsx)) <span class="co"># </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: package &#39;openxlsx&#39; was built under R version 4.2.2</code></pre>
 </div>
@@ -4842,7 +4842,7 @@ Tips
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Avkastningen för en portfölj är en viktad linjär kombination av avkastningarna i tillgångarna som portföljen innehåller. I en portfölj med tre aktier vars vikter <span class="math inline">\(0&lt;w_1&lt;1, 0&lt;w_2&lt;1, 0&lt;w_3&lt;1\)</span>, med <span class="math inline">\(\sum_{k=1}^3w_k=1\)</span>, är portföljens avkastning<span class="math display">\[r_t = w_1r^{(1)}_t + w_2r^{(2)}_t+w_3r^{(3)}_t,\]</span></p>
+<p>Avkastningen för en portfölj är en viktad linjär kombination av avkastningarna i tillgångarna som portföljen innehåller. I en portfölj med tre aktier vars vikter <span class="math inline">\(0&lt;w_1&lt;1, 0&lt;w_2&lt;1, 0&lt;w_3&lt;1\)</span>, med <span class="math inline">\(\sum_{k=1}^3w_k=1\)</span>, är portföljens avkastning <span class="math display">\[r_t = w_1r^{(1)}_t + w_2r^{(2)}_t+w_3r^{(3)}_t,\]</span></p>
 <p>där <span class="math inline">\(r^{(k)}_t\)</span> är avkastningen för tillgång <span class="math inline">\(k\)</span> i portföljen.</p>
 <p>Nu när ni vet hur man kan använda <code>$</code>-tecken för att hämta ut variabler från en dataframe, kan ni lista ut hur man skapar en ny variabel som viktar variablerna enligt ovan (30% <code>IBM</code>, 50% <code>CITCRP</code>och 20% <code>DATGEN</code>).</p>
 </div>
