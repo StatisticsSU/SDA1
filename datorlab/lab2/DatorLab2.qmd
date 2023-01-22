@@ -437,7 +437,7 @@ Rita täthetsplottar för variablerna `Age` och `Paid`.
 ```
 
 ::: {.callout-note icon="false"}
-## Extra: Från histogram till Stapeldiagram (detta avsnitt kan skippas)
+## Extra: Från histogram till stapeldiagram (detta avsnitt kan skippas)
 
 Histogram kan ses som en motsvarighet till stapeldiagram när man har en numerisk variabel. Från funktionen `hist()` kan man även hämta ut hur många observationer det är som tillfaller varje åldersintervall. Låt oss först rita ett histogram nedan och spara detta med namnet `hist_Age`. Sedan kan man extrahera antalet inom varje åldersintervall med hjälp av \$-tecknet följt av `count` som räknar ut antal observationer inom varje intervall.
 

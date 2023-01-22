@@ -24,21 +24,21 @@ callout-note-caption: "Observera"
 callout-tip-caption: "Tips"
 editor: visual
 ---
-::: callout-warning
 
+::: callout-warning
 Den här inlämningsuppgiften förutsätter att följande paket finns installerade:
 
-- `mosaic`
+-   `mosaic`
 
-- `dplyr`
+-   `dplyr`
 
-- `geosphere` 
+-   `geosphere`
 
-- `leaflet`
+-   `leaflet`
 
 Paket kan installeras via kommandot `install.packages('packagename')`, där `'packagename'` är namnet på paketet, t.ex `'mosaic'`.
-
 :::
+
 ## Introduktion
 
 I den första inlämningsuppgiften ska ni självständigt i grupper om tre analysera ett dataset i programmeringsspråket R. Till skillnad från datorlaborationerna finns det minimalt med kodexempel. Datorlaborationerna går igenom de flesta momenten som behandlas i inlämningsuppgiften, så se till att göra klart dessa innan.
@@ -442,7 +442,7 @@ Tänk på att ta hänsyn till eventuell transformation av responsvariabeln när 
 
 Om ni använder `reg_crossval()` funktionen från kurspaketet `sdakurs` tänk då på två saker:
 
--   Använd argumentet `obs_order = 1:480` för att inte sortera data slumpmässigt.
+-   Använd argumentet `obs_order = 1:480` för att inte data ska sorteras slumpmässigt.
 -   Funktionen kan inte hantera en transformerad respons.
 
 Vill man transformera responsen kan man följa korsvalideringsexemplet (med transformerad respons) i Lab 4.
