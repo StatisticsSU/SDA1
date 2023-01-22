@@ -48,6 +48,7 @@ I SDA1 kommer vi försöka använda Formula syntax som mycket som möjligt, med 
 
 -   **Quarto** för att skriva kompletta rapporter med kod. 🇬🇧\
     [html](/tutorials/Quarto/Intro2Quarto.html) \| [pdf](/tutorials/Quarto/Intro2Quarto.pdf) \| [video på Athena](https://athena.itslearning.com/ContentArea/ContentArea.aspx?LocationID=18157&LocationType=1&ElementID=2197031)
+-   Det kan bli lite trassel med svenska åäö när man skriver R kod eller arbetar med Quarto. Här är en [guide](R/svenska_vokaler.pdf) om hur man ändrar s k teckenkodning i RStudio så R klarar av dessa svenska bokstäver.
 
 ## Cheat sheets
 
@@ -59,17 +60,20 @@ I SDA1 kommer vi försöka använda Formula syntax som mycket som möjligt, med 
 
 - Denna [RStudio cheat sheet](/R/cheatsheets/rstudio-ide_cheatsheet.pdf) är rätt rörig, men kan kanske vara användbar *efter* att man själv bekantat sig lite med RStudio.
 
+- Kursens egna R-paket `sda1` (se nedan) har också ett [cheat sheet](R/cheatsheets/sda1_cheatsheet.pdf).
+
 ## Datamaterial
 
 - Kursboken [Stats: Data and Models](https://nordics.pearson.com/products/stats-data-and-models-5th-global-edition-e-book?variant=42945920630933) kommer med över 500 olika datamaterial som hittas [här](https://media.pearsoncmg.com/intl/ge/2021/cws/ge_deveaux_stats_5/statdm5d_datasets.html). Datamaterialen är i ofta i Excel-format, se denna [guide](/tutorials/ReadingDataFromFile/ReadingDataFromFile.html) om hur man läser in data från Excel i R.
-- Kursens R-paket [sda1](#kursens-R-paket) innehåller också några datamaterial som kommer användas under kursen.
+- Kursens R-paket `sda1` (se nedan) innehåller också några datamaterial som kommer användas under kursen.
 
 ## Kursens R-paket
 
-Kursen har ett eget R-paket `sda1` med några hjälpfunktioner och datamaterial som används på kursen.
+Kursen har ett eget R-paket `sda1` med några hjälpfunktioner och datamaterial som används på kursen.\
+[cheat sheet](R/cheatsheets/sda1_cheatsheet.pdf) | [manual](https://github.com/StatisticsSU/sda1paket/raw/main/sda1_0.0.1.pdf)
 
 ::: column-margin
-[![](misc/hexagons/figs/sda1paketlogo.svg){fig-alt="sda1 kurspaket för R" fig-align="center" width="60"}](https://github.com/StatisticsSU/sdakurs)
+[![](misc/hexagons/figs/sda1paketlogo.svg){fig-alt="sda1 kurspaket för R" fig-align="center" width="60"}](https://github.com/StatisticsSU/sda1paket)
 :::
 
 #### Installera kurspaketet
@@ -77,9 +81,9 @@ Kursen har ett eget R-paket `sda1` med några hjälpfunktioner och datamaterial 
 ```{r}
 #| eval = FALSE
 install.packages("remotes") 
-install_github("StatisticsSU/sda1") 
 library(remotes)
-library(sdakurs)
+install_github("StatisticsSU/sda1paket") 
+library(sda1)
 ```
 
 

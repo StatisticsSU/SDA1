@@ -1,0 +1,8 @@
+---
+title: "Enkel linjär regression - skattningar"
+format: html
+---
+
+<iframe width="100%" height="519" frameborder="0"
+src="https://observablehq.com/embed/f1018d2b349b0408@1147?cells=viewof+data_estimate%2Cplt">
+</iframe>

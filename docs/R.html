@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.256">
+<meta name="generator" content="quarto-1.2.313">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -255,6 +255,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p>Tutorial om hur man läser in <a href="./tutorials/ReadingDataFromFile/ReadingDataFromFile.html">data från Excel</a> och text-filer. 🇬🇧</p></li>
 <li><p><strong>Quarto</strong> för att skriva kompletta rapporter med kod. 🇬🇧<br>
 <a href="./tutorials/Quarto/Intro2Quarto.html">html</a> | <a href="./tutorials/Quarto/Intro2Quarto.pdf">pdf</a> | <a href="https://athena.itslearning.com/ContentArea/ContentArea.aspx?LocationID=18157&amp;LocationType=1&amp;ElementID=2197031">video på Athena</a></p></li>
+<li><p>Det kan bli lite trassel med svenska åäö när man skriver R kod eller arbetar med Quarto. Här är en <a href="R/svenska_vokaler.pdf">guide</a> om hur man ändrar s k teckenkodning i RStudio så R klarar av dessa svenska bokstäver.</p></li>
 </ul>
 </section>
 <section id="cheat-sheets" class="level2 page-columns page-full">
@@ -266,33 +267,35 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="no-row-height column-margin column-container"><div class="">
 <p><a href="./R/cheatsheets/base-r_cheat_sheet.pdf"><img src="misc/hexagons/figs/base_r_hexagon.svg" class="img-fluid" width="60"></a>&nbsp; <a href="./R/cheatsheets/ggplot2_cheatsheet.pdf"><img src="misc/hexagons/figs/tidyverse_hexagon.svg" class="img-fluid" width="60"></a></p>
 </div></div><ul>
-<li>Denna <a href="./R/cheatsheets/rstudio-ide_cheatsheet.pdf">RStudio cheat sheet</a> är rätt rörig, men kan kanske vara användbar <em>efter</em> att man själv bekantat sig lite med RStudio.</li>
+<li><p>Denna <a href="./R/cheatsheets/rstudio-ide_cheatsheet.pdf">RStudio cheat sheet</a> är rätt rörig, men kan kanske vara användbar <em>efter</em> att man själv bekantat sig lite med RStudio.</p></li>
+<li><p>Kursens egna R-paket <code>sda1</code> (se nedan) har också ett <a href="R/cheatsheets/sda1_cheatsheet.pdf">cheat sheet</a>.</p></li>
 </ul>
 </section>
 <section id="datamaterial" class="level2">
 <h2 class="anchored" data-anchor-id="datamaterial">Datamaterial</h2>
 <ul>
 <li>Kursboken <a href="https://nordics.pearson.com/products/stats-data-and-models-5th-global-edition-e-book?variant=42945920630933">Stats: Data and Models</a> kommer med över 500 olika datamaterial som hittas <a href="https://media.pearsoncmg.com/intl/ge/2021/cws/ge_deveaux_stats_5/statdm5d_datasets.html">här</a>. Datamaterialen är i ofta i Excel-format, se denna <a href="./tutorials/ReadingDataFromFile/ReadingDataFromFile.html">guide</a> om hur man läser in data från Excel i R.</li>
-<li>Kursens R-paket <a href="#kursens-R-paket">sda1</a> innehåller också några datamaterial som kommer användas under kursen.</li>
+<li>Kursens R-paket <code>sda1</code> (se nedan) innehåller också några datamaterial som kommer användas under kursen.</li>
 </ul>
 </section>
 <section id="kursens-r-paket" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="kursens-r-paket">Kursens R-paket</h2>
-<p>Kursen har ett eget R-paket <code>sda1</code> med några hjälpfunktioner och datamaterial som används på kursen.</p>
+<p>Kursen har ett eget R-paket <code>sda1</code> med några hjälpfunktioner och datamaterial som används på kursen.<br>
+<a href="R/cheatsheets/sda1_cheatsheet.pdf">cheat sheet</a> | <a href="https://github.com/StatisticsSU/sda1paket/raw/main/sda1_0.0.1.pdf">manual</a></p>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://github.com/StatisticsSU/sdakurs"><img src="misc/hexagons/figs/sda1paketlogo.svg" class="img-fluid figure-img" alt="sda1 kurspaket för R" width="60"></a></p>
+<p><a href="https://github.com/StatisticsSU/sda1paket"><img src="misc/hexagons/figs/sda1paketlogo.svg" class="img-fluid figure-img" alt="sda1 kurspaket för R" width="60"></a></p>
 </figure>
 </div>
 </div></div><section id="installera-kurspaketet" class="level4">
 <h4 class="anchored" data-anchor-id="installera-kurspaketet">Installera kurspaketet</h4>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"remotes"</span>) </span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install_github</span>(<span class="st">"StatisticsSU/sda1"</span>) </span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(remotes)</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sdakurs)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(remotes)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">install_github</span>(<span class="st">"StatisticsSU/sda1paket"</span>) </span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sda1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
 

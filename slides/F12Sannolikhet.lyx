@@ -1,0 +1,982 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass beamer
+\begin_preamble
+
+% you can play with different themes and color themes to find your favorite combination.
+\mode<presentation> {
+  \usetheme{Luebeck}
+  \usecolortheme{beaver}
+  \beamertemplatenavigationsymbolsempty
+}
+
+
+\usepackage{graphicx} % for including images
+\usepackage{pgf} % for logo
+\usepackage{colortbl}
+
+\date{} % Date, can be changed to a custom date
+
+\titlegraphic{
+\vspace{-0.6cm}
+\includegraphics[width=1.5cm]{/misc/LogoBlueJustRing.jpg}\break
+
+\tiny
+\vspace{1cm}
+\includegraphics[width=0.33cm]{/misc/web.png} \href{https://mattiasvillani.com}{mattiasvillani.com}\hspace*{1cm}~
+\includegraphics[width=0.3cm]{/misc/twitter.jpg} \href{https://twitter.com/matvil}{@matvil}\hspace*{1cm}~
+\includegraphics[width=0.3cm]{/misc/github.png} \href{https://github.com/mattiasvillani}{mattiasvillani}~
+}
+
+
+\definecolor{blue}{RGB}{38, 122, 181}
+\definecolor{orange}{RGB}{255, 128, 0}
+\definecolor{lorange}{RGB}{255, 178, 102}
+\definecolor{llorange}{RGB}{255, 229,204 }
+\definecolor{verylightgray}{RGB}{246, 246, 246}
+
+\setbeamertemplate{itemize item}{\color{orange}$\blacksquare$}
+\setbeamertemplate{itemize subitem}{\tiny \color{lightgray}$\blacksquare$}
+
+\usepackage{tcolorbox}
+
+\newcommand\blfootnote[1]{%
+  \begingroup
+  \renewcommand\thefootnote{}\footnote{#1}%
+  \addtocounter{footnote}{-1}%
+  \endgroup
+}
+\end_preamble
+\options xcolor=svgnames, handout
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "palatino" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+
+\color orange
+Statistik och Dataanalys I
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+
+\color gray
+ST1101 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hspace{4.45cm}
+\backslash
+insertframenumber/
+\backslash
+inserttotalframenumber
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subtitle
+
+\color orange
+Föreläsning 12 - Osäkerhet och Sannolikhet
+\end_layout
+
+\begin_layout Author
+
+\series bold
+Mattias Villani
+\series default
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset VSpace 0.2cm
+\end_inset
+
+
+\begin_inset Graphics
+	filename misc/Beard Man Emoji.png
+	lyxscale 10
+	scale 2
+
+\end_inset
+
+
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color gray
+Statistik och Dataanalys I
+\end_layout
+
+\end_inset
+
+
+\begin_inset VSpace -0.3cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Institute
+Statistiska institutionen
+\begin_inset Newline newline
+\end_inset
+
+Stockholms universitet
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Stockholms universitet
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Översikt
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+\color blue
+Händelser
+\series default
+\color inherit
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color blue
+Sannolikheter
+\series default
+\color inherit
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color blue
+Sannolikhetsberäkningar
+\series default
+\color inherit
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Sannolikheter för dataanalys?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+\color blue
+Sannolikhetslära
+\series default
+\color inherit
+ är intressant i sig:
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Sannolikheten att bli träffad av blixten.
+ 
+\begin_inset Graphics
+	filename figs/flaticons/bolt.svg
+	lyxscale 10
+	scale 3
+
+\end_inset
+
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Sannolikheten att två personer har identiska DNA.
+ 
+\begin_inset Graphics
+	filename figs/flaticons/dna.svg
+	lyxscale 10
+	scale 3
+
+\end_inset
+
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Sannolikheten att träffa den rätta på dejtingapp.
+ 
+\begin_inset Graphics
+	filename figs/flaticons/romeo-and-juliet.svg
+	lyxscale 10
+	scale 3
+
+\end_inset
+
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Sannolikhetslära viktigt för 
+\series bold
+\color orange
+användningen
+\series default
+\color inherit
+ av 
+\series bold
+\color orange
+dataanalys
+\series default
+\color inherit
+:
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+\color blue
+Statistiska modeller är sannolikhetsmodeller
+\series default
+\color inherit
+.
+ 
+\begin_inset Newline newline
+\end_inset
+
+Bra modell av verkligheten: data sannolika enligt modellen.
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Kan 
+\series bold
+\color blue
+kvantifiera
+\series default
+\color inherit
+ 
+\series bold
+\color blue
+osäkerheten
+\series default
+\color inherit
+ i en 
+\series bold
+\color blue
+prediktion
+\series default
+\color inherit
+.
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Kan 
+\series bold
+\color blue
+fatta optimala beslut i en osäker värld
+\series default
+\color inherit
+.
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\align center
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "75col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figs/MnistTest7.png
+	lyxscale 10
+	scale 3
+
+\end_inset
+
+ 
+\begin_inset Formula $\;$
+\end_inset
+
+
+\begin_inset Graphics
+	filename figs/flaticons/right-arrow.png
+	lyxscale 10
+	scale 6
+
+\end_inset
+
+ 
+\begin_inset Formula $\;$
+\end_inset
+
+
+\begin_inset Graphics
+	filename figs/mnist_pred7.png
+	lyxscale 30
+	scale 18
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "5col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "20col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figs/flaticons/interest.svg
+	lyxscale 10
+	scale 4.5
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Utfallsrum
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+\color blue
+Utfallsrummet
+\series default
+\color inherit
+ är 
+\series bold
+\color orange
+alla möjliga utfall
+\series default
+\color inherit
+ som kan inträffa.
+\end_layout
+
+\begin_layout Itemize
+Kasta en tärning:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figs/singledice.svg
+	lyxscale 50
+	scale 23
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Kasta två tärningar:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figs/DoubleDice.pdf
+	lyxscale 50
+	scale 18
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Napoli - Juventus: {
+\begin_inset Graphics
+	filename figs/SSCN.svg
+	lyxscale 10
+	scale 2
+
+\end_inset
+
+, 
+\begin_inset Graphics
+	filename figs/juve.svg
+	lyxscale 10
+	scale 4
+
+\end_inset
+
+, Oavgjort, Inställd match}.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Händelse
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+\color blue
+Händelsen
+\series default
+\color inherit
+ A = få exakt 7 prickar med två tärningar.
+\begin_inset Formula 
+\[
+A=\{(1,6),(2,5),(3,4),(4,3),(5,2),(6,1)\}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+En händelse är en 
+\series bold
+\color blue
+mängd
+\series default
+\color inherit
+ av elementärhändelser.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figs/DoubleDiceSeven.pdf
+	lyxscale 50
+	scale 18
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Händelse - samma antal prickar
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Händelsen A = {få samma antal prickar på båda tärningarna}
+\begin_inset Formula 
+\[
+A=\{(1,1),(2,2),(3,3),(4,4),(5,5),(6,6)\}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figs/DoubleDiceSame.pdf
+	lyxscale 50
+	scale 18
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Tre sannolikhetsbegrepp
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Vad är 
+\series bold
+\color blue
+sannolikheten
+\series default
+\color inherit
+ att få en 6:a med en tärning?
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Utfallsrum: 
+\begin_inset Formula $S=\{1,2,3,4,5,6\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Händelse: 
+\begin_inset Formula $A=\{6\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Sannolikhet: 
+\begin_inset Formula $P(A)$
+\end_inset
+
+.
+ Måste uppfylla: 
+\begin_inset Formula $0\leq P(A)\leq1$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+\color blue
+Logiskt lika sannolikheter
+\series default
+\color inherit
+.
+ 
+\begin_inset Newline newline
+\end_inset
+
+En tärnings fysiska egenskaper → alla sidor är lika sannolika.
+\begin_inset Formula 
+\[
+P(A)=1/6\approx0.1667
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+\color blue
+Empirisk sannolikhet
+\series default
+\color inherit
+: andelen 6:or om jag kastar tärningen ett "oändligt" antal gånger.
+ 
+\begin_inset Formula 
+\[
+P(A)=\frac{\text{antal gånger som A inträffar}}{\text{totalt antal försök}}
+\]
+
+\end_inset
+
+Den 
+\series bold
+\color blue
+relativa frekvensen stabiliseras
+\series default
+\color inherit
+ efter många kast.
+ 
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+\color blue
+Subjektiva sannolikheter
+\series default
+\color inherit
+.
+ 
+\series bold
+Min
+\series default
+ tidigare erfarenhet av tärningskast och 
+\series bold
+min
+\series default
+ uppfattning om en tärnings symmetri säger mig att 
+\series bold
+min
+\series default
+ sannolikhet att få en 6:a är 
+\begin_inset Formula $1/6\approx0.1667$
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Relativa frekvenser stabiliseras - Stora talens lag
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figs/relativfrekvens.svg
+	lyxscale 50
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
