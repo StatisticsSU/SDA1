@@ -249,14 +249,14 @@ Boston_census_data$dist_fenway_park <- distHaversine(lat_long, fenway_park_lat_l
 Vi kan visualisera Fenway park samt censusdistrikten i en interaktiv karta med hjälp av R-paketet `leaflet`. Följande kod visualiserar Fenway park samt censusdistrikten för observationerna 30 och 45.
 
 ```{r}
-#library(leaflet) # Install if not available
-#Boston_map <- leaflet() %>% 
-#  addTiles() %>%
-#  addMarkers(lat = fenway_park_lat_long[1], lng = fenway_park_lat_long[2], popup="Fenway park") %>%
-#  addMarkers(lat = Boston_census_data$latitude[30], lng = Boston_census_data$longitude[30], popup="Observation 30") %>%
-#  addMarkers(lat = Boston_census_data$latitude[45], lng = Boston_census_data$longitude[45], popup="Observation 45") 
+library(leaflet) # Install if not available
+Boston_map <- leaflet() %>% 
+  addTiles() %>%
+  addMarkers(lat = fenway_park_lat_long[1], lng = fenway_park_lat_long[2], popup="Fenway park") %>%
+  addMarkers(lat = Boston_census_data$latitude[30], lng = Boston_census_data$longitude[30], popup="Observation 30") %>%
+  addMarkers(lat = Boston_census_data$latitude[45], lng = Boston_census_data$longitude[45], popup="Observation 45") 
 
-#Boston_map # Show interactive map
+Boston_map # Show interactive map
 ```
 
 #### 💪 Uppgift 3.1
