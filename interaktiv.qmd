@@ -23,6 +23,9 @@ Föreläsning 9 - **Icke-linjär regression**: <br>
 #### Del 2 - Sannolikhetsmodeller och Inferens
 
 <br>
+Föreläsning 13 - **Bayes sats**: <br>
+[widget](/observable/bayestheorem.qmd) | [notebook](https://observablehq.com/@mattiasvillani/bayes-theorem-for-events)
+
 Föreläsning 16 - **Student-*t* fördelning**: <br>
 [widget](/observable/studentt.qmd) | [notebook](https://observablehq.com/@mattiasvillani/student-t)
 
