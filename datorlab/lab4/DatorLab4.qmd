@@ -58,27 +58,23 @@ Klicka på knappen Render i Editor-fönstret för att **kompilera** filen till e
 
 #### 💪 Uppgift 0.4
 
-För att säkerställa att man befinner sig i korrekt arbetsmapp varje gång Quarto-dokumentet kompileras kan man skapa en s k code-chunk efter den s k YAML-texten (som återfinns längst upp i dokumentet, mellan de tre bindestrecken - - -). Du skapar en code-chunk genom att klicka på knappen med C och ett + i övre högra hörnet av Editorn.
+Quarto säkerställer att man befinner sig i korrekt arbetsmapp när koden i dokumentet exekveras. Med korrekt arbetsmapp menas den mappen ni sparade `.qmd` filen i. Vill du komma åt dataseten via `load()` kommandot **måste dataseten vara sparade i samma mapp**.
 
-![](https://github.com/StatisticsSU/SDA1/raw/main/datorlab/lab2/codechunk.png){fig-align="center" width="200" height="26"}
+Ett vanligt arbetssätt är att man jobbar i RStudio i en separat `.R` fil, där man kan testa att köra kod innan den kopieras över till Quarto dokumentet. Den `.R` filen kommer inte att ha samma 'working directory' som Quarto filen. Du måste då använda `setwd()` funktionen i `.R` filen för att ställa in 'working directory'. Notera att man också välja att skriva kod i `Console` som finns längst ner i RStudio. Där måste du också ställa in rätt 'working directory'. Det är inte rekommenderat att använda `Console` eftersom koden inte sparas där. Du kanske kommer på något jättesmart som du glömmer att kopiera över till Quarto dokumentet och kan senare inte hitta det du skrev.
 
 ::: callout-note
 ### RStudios Editor ändras beroende på vilken sorts fil du har öppen
 
-Notera att ikonerna i Editor är annorlunda när du har ett Quarto-dokument öppet jämfört med tidigare när vi hade en fil med ren R-kod öppen.
+Notera att ikonerna i Editor är annorlunda när du har ett Quarto-dokument öppet jämfört med tidigare när vi hade en fil med ren R-kod (dvs en `.R` fil) öppen.
 :::
 
-Lägg till en ny code chunk och ställ in 'working directory' till den nya mappen genom att följa anvisningarna från [Lab 1](https://statisticssu.github.io/SDA1/datorlab/lab1/DatorLab1.html#st%C3%A4lla-in-arbetsmappen-working-directory-i-r).
-
-::: callout-tip
-Funktionen `setwd()` i R talar om för R vilken mapp som är 'working directory'.
-:::
+Skapa en ny `.R` som du döper till `Lab4_test_code.R` och sparar i din `Lab 4` mapp. Ställ in 'working directory' till den nya mappen genom att följa anvisningarna från [Lab 1](https://statisticssu.github.io/SDA1/datorlab/lab1/DatorLab1.html#st%C3%A4lla-in-arbetsmappen-working-directory-i-r).
 
 #### 💪 Uppgift 0.5
 
 Ladda ner `SmartPhones.RData` ([här](https://github.com/StatisticsSU/SDA1/blob/main/datorlab/lab3/SmartPhones.RData?raw=true)), `FevChildren.RData` ([här](https://github.com/StatisticsSU/SDA1/blob/main/datorlab/lab3/FevChildren.RData?raw=true)) och `CAPM_data.RData` ([här](https://github.com/StatisticsSU/SDA1/blob/main/datorlab/lab3/CAPM_data.RData?raw=true)). Filerna kommer automatiskt att sparas ner, oftast i download mappen på datorn ni sitter vid. Kopiera över filerna till `Lab3` mappen ni skapade ovan.
 
-Som vi gick igenom i Lab 3 finns det olika sätt att läsa in `.RData` filer genom `load()` funktionen. Ett sätt är att skriva t.ex `load("FevChildren.RData")`. Notera att det här förutsätter att `FevChildren.RData` ligger i den arbetsmappen man angivit genom `setwd()` funktionen. Ett annat sätt att ladda in en `.RData` fil är att läsa in den direkt från webben med en kombination av `load()` funktionen och `url()` funktionen.
+Som vi gick igenom i Lab 3 finns det olika sätt att läsa in `.RData` filer genom `load()` funktionen. Ett sätt är att skriva t.ex `load("FevChildren.RData")`. Notera att om du gör detta i `Lab4_test_code.R` förutsätter det att `FevChildren.RData` ligger i den arbetsmappen man angivit genom `setwd()` funktionen. Ett annat sätt att ladda in en `.RData` fil är att läsa in den direkt från webben med en kombination av `load()` funktionen och `url()` funktionen.
 
 ```{r}
 load(file = url("https://github.com/StatisticsSU/SDA1/blob/main/datorlab/lab3/FevChildren.RData?raw=true"))
@@ -526,8 +522,8 @@ x_min <- min(FevChildren$height) # Min height
 x_max <- max(FevChildren$height) # Max height
 N <- 1000 # Number of grid points to predict
 new_x <- data.frame(height = seq(x_min, x_max, length.out = N)) # The grid in a dataframe
-log_yhat_grid <- predict(lm_logfev_vs_height, newdata = new_x)
-yhat_grid <- exp(log_yhat_grid) # Inverse transform
+logy_hat_grid <- predict(lm_logfev_vs_height, newdata = new_x)
+yhat_grid <- exp(logy_hat_grid) # Inverse transform
 lines(FevChildren$height, y_hat, type = "p", col = "lightcoral") # Prediction of data points
 lines(new_x$height, yhat_grid, type = "l", col = "lightcoral") # Prediction on grid
 legend(x = "topleft", pch = c(1, 1, NA), lty = c(NA, NA, 1), col = c("cornflowerblue", "lightcoral", "lightcoral"), legend=c("Data", "Predicted", "Fitted curve"))
@@ -560,6 +556,9 @@ Anpassa modellen
 $$\widehat{fev^{1/2}} = b_0 + b_1height.$$
 och utför en liknande analys som för modellen ovan, dvs $$\widehat{\log(fev)} = b_0 + b_1height.$$
 Vilken utav dessa är mest lämplig för det här exemplet? 
+```{r}
+# Write your code here
+```
 
 
 ## 4. Multipel linjär samt icke-linjär regression
@@ -613,16 +612,144 @@ Mäklarfirman vill att ni utvecklar en prognosmodell för försäljningspriset. 
 
 Mäklarfirman undrar följande utifrån den multipla linjära regressionen:
 
-- Vad kan man säga om sambandet mellan `SqFeet` och försälningspriset?
-- Vad kan man säga om sambandet mellan `Lot` och försälningspriset?
-- Verkar det finnas något samband försälningspriset och `Air`? Hur ska sambandet tolkas?
-- En visning äger rum snart för en lägenhet som har en area på 2.311 kvadratfot, en tomtarea på 17.312 kvadratfot och aircondition och mäklaren undrar vad den kan säljas för. Kommunicera din prediktion med en tydlig tolkning.  
+- Vad kan man säga om sambandet mellan `SqFeet` och försäljningspriset?
+- Vad kan man säga om sambandet mellan `Lot` och försäljningspriset?
+- Verkar det finnas något samband försäljningspriset och `Air`? Hur ska sambandet tolkas?
+- En visning äger rum snart för en lägenhet som har en area på 2.311 kvadratfot, en tomtarea på 17.312 kvadratfot och luftkonditionering. Vad kan den säljas för? Kommunicera din prediktion med en tydlig tolkning.  
 - Har er modell några brister? 
+
+```{r}
+load(file = url("https://github.com/StatisticsSU/SDA1/blob/main/datorlab/lab4/RealEstate.RData?raw=true"))
+# Write your code here
+```
+
 
 
 ## 5. Modellval genom Korsvalidering
 
-To come.
+I det här avsnittet ska vi gå igenom hur man väljer en modell med hjälp av korsvalidering. 
+
+Datasetet `Penguins.RData` innehåller dykpuls (DHR) (`dive_heart_rate`) och tid för dykning (`duration`) för 125 pingviner. Vi vill modellera dykpulsen för en pingvin som en funktion av tiden för dykningen. Ett punkdiagram visar att en linjär regression inte kommer att anpassa data väl.
+```{r}
+load(file = url("https://github.com/StatisticsSU/SDA1/blob/main/datorlab/lab4/Penguins.RData?raw=true"))
+# Write your code here
+plot(dive_heart_rate ~ duration, data = penguins, col = "cornflowerblue")
+```
+Vi befinner oss i tredje kvadranten på Tukeys cirkel och föreslår följande två modeller
+
+- **Modell 1**: $DHR^{1/2} = b_0 + b_1duration$.
+
+- **Modell 2**: $DHR^{1/2} = b_0 + b_1duration^{1/2}$.
+
+Vi anpassar Modell 1 och plottar de predikterade värdena tillsammans med data i originalskala som vi gjorde i Avsnitt 3. Skillnaden är att när vi predikterar på originalskala så använder vi en annan inverstransformation, $\left(\widehat{y^{1/2}}\right)^2$ enligt tabellen ovan.
+```{r}
+lm_sqrtDHR_vs_duration <- lm(sqrt(dive_heart_rate) ~ duration, data = penguins)
+sqrty_hat <- predict(lm_sqrtDHR_vs_duration) # sqrt scale prediction
+y_hat <- sqrty_hat^2 # original scale prediction
+plot(dive_heart_rate ~ duration, data = penguins, col = "cornflowerblue", ylim = c(0, 140), main = "Modell 1") # Data on original scale
+lines(penguins$duration, y_hat, type = "p", col = "lightcoral")
+legend(x = "topright", pch = c(1, 1), col = c("cornflowerblue", "lightcoral"), legend=c("Data", "Predicted"))
+```
+::: {.callout-note icon="false"}
+## Extra: Rita den anpassade kurvan
+
+I Avsnitt 3 lärde vi oss (extra rutan) hur man ritar in den anpassade kurvan. Vi kan göra samma sak för Modell 1.
+```{r}
+plot(dive_heart_rate ~ duration, data = penguins, col = "cornflowerblue", ylim = c(0, 140), main = "Modell 1") # Data on original scale
+x_min <- min(penguins$duration) # Min duration 
+x_max <- max(penguins$duration) # Max duration
+N <- 1000 # Number of grid points to predict
+new_x <- data.frame(duration = seq(x_min, x_max, length.out = N)) # The grid in a dataframe
+sqrty_hat_grid <- predict(lm_sqrtDHR_vs_duration, newdata = new_x)
+yhat_grid <- sqrty_hat_grid^2 # Inverse transform
+lines(penguins$duration, y_hat, type = "p", col = "lightcoral") # Prediction of data points
+lines(new_x$duration, yhat_grid, type = "l", col = "lightcoral") # Prediction on grid
+legend(x = "topright", pch = c(1, 1, NA), lty = c(NA, NA, 1), col = c("cornflowerblue", "lightcoral", "lightcoral"), legend=c("Data", "Predicted", "Fitted curve"))
+```
+:::
+
+Vi anpassar Modell 2 med följande kod. Notera att Modell 2 också transformerar den förklarande variabeln. R håller reda på det åt oss om vi anger `I(sqrt(duration))` i formula-syntaxen och vi behöver inte göra något extra. 
+```{r}
+lm_sqrtDHR_vs_sqrtduration <- lm(sqrt(dive_heart_rate) ~ I(sqrt(duration)), data = penguins)
+sqrty_hat <- predict(lm_sqrtDHR_vs_sqrtduration) # sqrt scale prediction
+y_hat <- sqrty_hat^2 # original scale prediction
+plot(dive_heart_rate ~ duration, data = penguins, col = "cornflowerblue", ylim = c(0, 140), main ="Modell 2") # Data on original scale
+lines(penguins$duration, y_hat, type = "p", col = "lightcoral")
+legend(x = "topright", pch = c(1, 1), col = c("cornflowerblue", "lightcoral"), legend=c("Data", "Predicted"))
+```
+
+::: {.callout-note icon="false"}
+## Extra: Rita den anpassade kurvan
+
+Kod som också ritar den anpassade kurvan för Modell 2. 
+```{r}
+plot(dive_heart_rate ~ duration, data = penguins, col = "cornflowerblue", ylim = c(0, 140), main = "Modell 2") # Data on original scale
+x_min <- min(penguins$duration) # Min duration 
+x_max <- max(penguins$duration) # Max duration
+N <- 1000 # Number of grid points to predict
+new_x <- data.frame(duration = seq(x_min, x_max, length.out = N)) # The grid in a dataframe
+sqrty_hat_grid <- predict(lm_sqrtDHR_vs_sqrtduration, newdata = new_x)
+yhat_grid <- sqrty_hat_grid^2 # Inverse transform
+lines(penguins$duration, y_hat, type = "p", col = "lightcoral") # Prediction of data points
+lines(new_x$duration, yhat_grid, type = "l", col = "lightcoral") # Prediction on grid
+legend(x = "topright", pch = c(1, 1, NA), lty = c(NA, NA, 1), col = c("cornflowerblue", "lightcoral", "lightcoral"), legend=c("Data", "Predicted", "Fitted curve"))
+```
+:::
+
+Vi ska nu välja vilken av Modell 1 eller Modell 2 är att föredra med hjälp av korsvalidering.
+På föreläsningen gick vi genom korsvalidering med $K = 4$ folds. Här har vi 125 pingviner så vi använder istället $K = 5$ vilket ger fem olika mängder där varje mängd har 80% träningsdata och 20% testdata enligt figuren nedan.
+
+![Korsvalidering med $K=5$ folds.](https://github.com/StatisticsSU/SDA1/blob/main/datorlab/lab4/Crossvalidation_5fold.png?raw=true){fig-align="center" width="500"}
+
+För varje modell behöver vi anropa funktionen `lm()` $K=5$ gånger med olika träningsdata enligt uppdelningen ovan. Funktionen `lm()` har ett argument `subset` som bestämmer vilka observationer (pingviner) som ska användes för att anpassa modellen, dvs träningsdata. När `lm()` har anpassats till fold $k$ ska vi använda funktionen `predict()` för att prediktera testdatan för fold $k$ och räkna ut dess residualkvadratsumma (SSE, sum of squared errors). Koden nedan demonstrerar proceduren för första folden  $k=1$ och förklaras lite mer detaljerad efter kodsnutten. 
+```{r}
+n <- 125 # Number of observations
+# Fold 1:
+obs_index <- c(1:n) # Keeps track of the indices of  the dataset (1, 2, 3, ...., n = 125)
+test_fold_index <- obs_index[c(1:25)] # Subsets indices 1:25 (test data fold 1) 
+training_fold_index <- obs_index[-c(1:25)] # Takes out the complement
+lm_modell1_fold1 <- lm(sqrt(dive_heart_rate) ~ duration, subset = training_fold_index, data = penguins) # Estimate fold 1
+test_data <- penguins[test_fold_index, ] # Create test data for fold
+sqrty_hat_fold1 <- predict(lm_modell1_fold1, new_x = test_data) # Predict test data in sqrt scale
+y_hat_fold1 <- (sqrty_hat_fold1) # Predict test data ordinary scale
+```
+
+Notera att datasetet `penguins.RData` ligger redan i slumpmässig ordning och därför kan `obs_index` innehålla observationerna i stigande ordning. Ett exempel på ett dataset som ligger i ordning (dvs inte slumpmässigt ordning) är `FevChildren.RData` där barnen i den lägsta åldersgruppen kommer först, därefter mittersta åldersgruppen följt av äldsta åldersgruppen (ni kan se det genom att klicka på datasetet i Environment-fliken). För ett dataset som ligger i ordning kan man istället definiera `obs_index <- sample(c(1:n))`. När vi skapar `training_fold_index <- obs_index[c(1:100)]` så tar vi ut värden som ligger på plats 1-100 i vektorn `obs_index`.
+
+#### 💪 Uppgift 5.1
+
+Skriv ut `training_fold` samt bekräfta att den innehåller träningsdata du vill ha för fold 1, dvs de första 100 observationerna.
+```{r}
+# Write your code here
+```
+
+När vi skapar `test_fold_index` ovan, notera att `-c(1:100)` skapar en vektor med värden $-1, -2, \dots, -100$. När vi skriver `obs_index[-c(1:100)]` försöker vi alltså plocka ut negativa index ur vektorn `obs_index`! Negativ indexering i R har en speciell betydelse: Ett negativt index hämtar ut alla andra observationer förutom den som har ett negerat index (negativt index). För att illustrera detta betrakta följande exempel:
+```{r}
+my_vector <- c(3, 2, 1, 20, 3)
+my_vector[-4]
+my_vector[-2]
+my_vector[c(-1, -3)]
+```
+`my_vector[-4]` hämtar ut alla observationer förutom den som är på index 4. `my_vector[-2]` hämtar ut alla observationer förutom den som är på index 2. `my_vector[c(-1, -3)]` hämtar ut alla observationer förutom de som är på index 1 och 3. 
+
+#### 💪 Uppgift 5.2
+Vilka observationer hämtas ut om man skriver:
+
+- `my_vector[-1]`?
+
+- `my_vector[-c(3, 1)]`?
+
+- `my_vector[-c(1, 2, 4, 5)]`?
+
+Fundera på svaret innan ni bekräftar med hjälp av kod.
+```{r}
+# Write your code here
+```
+
+Låt oss skriva ut prediktionerna för test data för fold 1 som skapades ovan och jämföra med de faktiska värdena.
+```{r}
+# Up to here: cbind(y_hat_fold1, 
+```
 
 ## 6. Sammanfattning {#sammanfattning}
 

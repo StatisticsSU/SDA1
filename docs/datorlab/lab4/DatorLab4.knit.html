@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Matias Quiroz">
-<meta name="dcterms.date" content="2023-01-21">
+<meta name="dcterms.date" content="2023-01-24">
 
 <title>SDA1 - Statistik och dataanalys I, 15 hp</title>
 <style>
@@ -4059,6 +4059,9 @@ vertical-align: -.125em;
   <li><a href="#introduktion" id="toc-introduktion" class="nav-link active" data-scroll-target="#introduktion">Introduktion</a></li>
   <li><a href="#samband-mellan-två-numeriska-variabler" id="toc-samband-mellan-två-numeriska-variabler" class="nav-link" data-scroll-target="#samband-mellan-två-numeriska-variabler">1. Samband mellan två numeriska variabler</a></li>
   <li><a href="#enkel-linjär-regression" id="toc-enkel-linjär-regression" class="nav-link" data-scroll-target="#enkel-linjär-regression">2. Enkel linjär regression</a></li>
+  <li><a href="#enkel-icke-linjär-regression" id="toc-enkel-icke-linjär-regression" class="nav-link" data-scroll-target="#enkel-icke-linjär-regression">3. Enkel icke-linjär regression</a></li>
+  <li><a href="#multipel-linjär-samt-icke-linjär-regression" id="toc-multipel-linjär-samt-icke-linjär-regression" class="nav-link" data-scroll-target="#multipel-linjär-samt-icke-linjär-regression">4. Multipel linjär samt icke-linjär regression</a></li>
+  <li><a href="#modellval-genom-korsvalidering" id="toc-modellval-genom-korsvalidering" class="nav-link" data-scroll-target="#modellval-genom-korsvalidering">5. Modellval genom Korsvalidering</a></li>
   <li><a href="#sammanfattning" id="toc-sammanfattning" class="nav-link" data-scroll-target="#sammanfattning">6. Sammanfattning</a></li>
   <li><a href="#a.-appendix" id="toc-a.-appendix" class="nav-link" data-scroll-target="#a.-appendix">A. Appendix</a></li>
   </ul>
@@ -4087,7 +4090,7 @@ vertical-align: -.125em;
     <div>
     <div class="quarto-title-meta-heading">Publicerad</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">January 21, 2023</p>
+      <p class="date">January 24, 2023</p>
     </div>
   </div>
   
@@ -4097,9 +4100,6 @@ vertical-align: -.125em;
 
 </header>
 
-<div class="cell">
-
-</div>
 <div class="callout-warning callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -4112,9 +4112,7 @@ Varning
 <div class="callout-body-container callout-body">
 <p>Den här labben förutsätter att följande paket finns installerade:</p>
 <ul>
-<li><p><code>openxlsx</code></p></li>
 <li><p><code>mosaic</code></p></li>
-<li><p><code>vcd</code></p></li>
 <li><p><code>dplyr</code></p></li>
 <li><p><code>corrplot</code></p></li>
 </ul>
@@ -4124,7 +4122,7 @@ Varning
 <section id="introduktion" class="level2">
 <h2 class="anchored" data-anchor-id="introduktion">Introduktion</h2>
 <blockquote class="blockquote">
-<p>I den här datorlabben kommer vi att beskriva samband mellan två numeriska variabler via punktdiagram och korrelation. Vi kommer också att modellera samband via både enkel och multiple linjär regression och lära oss tolka resultaten samt modellvalidering. Vi kommer att lära oss prediktion i linjär regression och hur man kan genomföra modellval genom korsvalidering. För de studenterna som är intresserade så finns det ett extra avsnitt som dyker lite djupare i R.</p>
+<p>I den här datorlabben kommer vi att beskriva samband mellan två numeriska variabler via punktdiagram och korrelation. Vi kommer också att modellera samband via både enkel och multiple linjär regression och lära oss tolka resultaten samt modellvalidering. Vi kommer att lära oss prediktion i linjär regression och hur man kan genomföra modellval genom korsvalidering. När data inte uppvisar ett linjärt samband ska vi lära oss hur man kan transformera data och anpassa en icke-linjär regression. Icke-linjär regression är svårare att tolka, men har klart bättre prediktionsförmåga om det finns icke-linjära samband mellan variabler. För de studenterna som är intresserade så finns det ett extra avsnitt som dyker lite djupare i R.</p>
 </blockquote>
 <section id="uppgift-0.1" class="level4">
 <h4 class="anchored" data-anchor-id="uppgift-0.1">💪 Uppgift 0.1</h4>
@@ -4254,7 +4252,7 @@ Tips
 <div class="cell">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(IBM <span class="sc">~</span> CITCRP, <span class="at">data =</span> CAPM, <span class="at">col =</span> <span class="st">&quot;cornflowerblue&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="DatorLab4_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="672"></p>
+<p><img src="DatorLab4_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <p>Vi ser inga tydliga avvikelser från det linjära antagandet och således är korrelationen ett rimligt mått på sambandet. Figuren visar ett positivt samband mellan variablerna.</p>
@@ -4310,7 +4308,7 @@ CPI    -0.060 -0.456  0.067  0.059 0.054  0.090 -0.048  0.029 -0.034  1.000</cod
 </div>
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">corrplot</span>(correlation_matrix_CAPM)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="DatorLab4_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid" width="672"></p>
+<p><img src="DatorLab4_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 </section>
@@ -4332,7 +4330,7 @@ CPI    -0.060 -0.456  0.067  0.059 0.054  0.090 -0.048  0.029 -0.034  1.000</cod
 <span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="sc">-</span><span class="dv">5</span><span class="sc">*</span>x<span class="sc">^</span><span class="dv">2</span> <span class="sc">+</span> <span class="fu">rnorm</span>(<span class="at">n =</span> <span class="dv">1000</span>)</span>
 <span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(x, y, <span class="at">col =</span> <span class="st">&quot;cornflowerblue&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="DatorLab4_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid" width="672"></p>
+<p><img src="DatorLab4_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <p>Det finns ett uppenbart kvadratiskt samband <span class="math inline">\(y\)</span> och <span class="math inline">\(x\)</span>. Låt oss beräkna korrelationen.</p>
@@ -4347,7 +4345,7 @@ CPI    -0.060 -0.456  0.067  0.059 0.054  0.090 -0.048  0.029 -0.034  1.000</cod
 <div class="cell">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pairs</span>(CAPM_10_variables, <span class="at">col =</span> <span class="st">&quot;cornflowerblue&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="DatorLab4_files/figure-html/unnamed-chunk-14-1.png" class="img-fluid" width="672"></p>
+<p><img src="DatorLab4_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 </section>
@@ -4362,11 +4360,11 @@ CPI    -0.060 -0.456  0.067  0.059 0.054  0.090 -0.048  0.029 -0.034  1.000</cod
 </section>
 <section id="enkel-linjär-regression" class="level2">
 <h2 class="anchored" data-anchor-id="enkel-linjär-regression">2. Enkel linjär regression</h2>
-<p>En linjär regression är användbar för att beskriva det linjära sambandet mellan en responsvariabel <span class="math inline">\(y\)</span> och en förklarande variabel <span class="math inline">\(x\)</span>. Med en anpassad linjär regressionsmodell kan man, likt Avsnitt 1, beräkna korrelationen mellan <span class="math inline">\(y\)</span> och <span class="math inline">\(x\)</span>. Men en linjär regressionsmodell erbjuder mer än så. Vi kan t.ex kvantifiera hur en förändring i <span class="math inline">\(x\)</span> påverkar <span class="math inline">\(y\)</span>. Och kanske viktigast (och roligast!) av allt: vi kan givet ett nytt <span class="math inline">\(x\)</span> prediktera det genomsnittliga värdet på <span class="math inline">\(y\)</span>.</p>
-<p>Låt oss illustrera enkel linjär regression med hjälp av datasetet <code>FevChildren.RData</code> som illustrerades i <a href="https://statisticssu.github.io/SDA1/datorlab/lab3/DatorLab3.html#samband-mellan-en-numerisk-och-en-kategorisk-variabel">Lab 3</a>. Vi anpassar en enkel linjär regression med responsvariabel utandningsvolymen (<code>fev</code>) och förklarande variabel längd (<code>height</code>) med hjälp av funktionen <code>lm()</code> som står för linear model och sparar resultatet i en variabel vi döper till <code>lm_fev_vs_height</code> .</p>
+<p>En linjär regression är användbar för att beskriva det linjära sambandet mellan en responsvariabel <span class="math inline">\(y\)</span> och en förklarande variabel <span class="math inline">\(x\)</span>. Med en anpassad linjär regressionsmodell kan man, likt Avsnitt 1, beräkna korrelationen mellan <span class="math inline">\(y\)</span> och <span class="math inline">\(x\)</span>. Men en linjär regressionsmodell erbjuder mer än så. Vi kan t.ex kvantifiera hur en förändring i <span class="math inline">\(x\)</span> är associerad med en förändring i <span class="math inline">\(y\)</span>. Och kanske viktigast (och roligast!) av allt: vi kan givet ett nytt <span class="math inline">\(x\)</span> prediktera det genomsnittliga värdet på <span class="math inline">\(y\)</span>.</p>
+<p>Låt oss illustrera enkel linjär regression med hjälp av datasetet <code>FevChildren.RData</code> som illustrerades i <a href="https://statisticssu.github.io/SDA1/datorlab/lab3/DatorLab3.html#samband-mellan-en-numerisk-och-en-kategorisk-variabel">Lab 3</a>. Vi anpassar en enkel linjär regression med responsvariabel utandningsvolymen (<code>fev</code>) och förklarande variabel längd (<code>height</code>) med hjälp av funktionen <code>lm()</code> som står för linear model och sparar resultatet i en variabel vi döper till <code>lm_fev_vs_height</code>.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="at">file =</span> <span class="fu">url</span>(<span class="st">&quot;https://github.com/StatisticsSU/SDA1/blob/main/datorlab/lab3/FevChildren.RData?raw=true&quot;</span>))</span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>lm_fev_vs_height <span class="ot">&lt;-</span> <span class="fu">lm</span>(y <span class="sc">~</span> x, <span class="at">data =</span> FevChildren)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>lm_fev_vs_height <span class="ot">&lt;-</span> <span class="fu">lm</span>(fev <span class="sc">~</span> height, <span class="at">data =</span> FevChildren)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Vi ser ovan att <code>lm()</code> funktionen använder samma alternativa formula-syntax som <code>plot()</code> funktionen, dvs av typen <code>y ~ x</code>.</p>
 <div class="callout-note callout callout-style-default no-icon callout-captioned">
@@ -4379,7 +4377,7 @@ Extra material för de nyfikna studenterna (detta avsnitt kan skippas)
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Funktionen <code>lm()</code> returnerar ett såkallat <strong>objekt</strong> som är en instans (en realiserad kopia) av <strong>klass</strong> <code>lm</code>. En klass är enkelt beskrivet en abstrakt kodmall där det anges vilka variabler som lagras i objektet, så kallade <strong>attribut</strong>, och vilka funktioner som går att använda på objektet. Vi kan se klasstypen genom att anropa <code>class()</code> funktionen.</p>
+<p>Funktionen <code>lm()</code> returnerar ett <strong>objekt</strong> som är en instans (en realiserad kopia) av <strong>klass</strong> <code>lm</code>. En klass är enkelt beskrivet en abstrakt kodmall där det anges vilka variabler som lagras i objektet, så kallade <strong>attribut</strong>, och vilka funktioner som går att använda på objektet. Vi kan se klasstypen genom att anropa <code>class()</code> funktionen.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(lm_fev_vs_height)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -4415,12 +4413,12 @@ Extra material för de nyfikna studenterna (detta avsnitt kan skippas)
 </section>
 <section id="extra-uppgift-2" class="level4">
 <h4 class="anchored" data-anchor-id="extra-uppgift-2">💪 Extra Uppgift 2</h4>
-<p>Använd funktionen ‘f()’ ovan för att räkna ut <span class="math inline">\(3^2\)</span> och spara resultatet i en variabel <code>y</code>. Vilken klass är objektet <code>y</code> en instans av? Fundera på svaret innan ni tar reda på det med hjälp av <code>class()</code>-funktionen.</p>
+<p>Använd funktionen ‘f()’ ovan för att räkna ut <span class="math inline">\(3^2\)</span> och spara resultatet i en variabel <code>y</code>. Vilken klass är objektet <code>y</code> en instans av? Fundera på svaret innan ni tar reda på det med hjälp av funktionen <code>class()</code>.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Write your code here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Det går att dyka djupare i Rs objektorienterade värld, men vi låter bli och hänvisar istället till institutionens <a href="https://www.su.se/sok-kurser-och-program/st1901-1.617486">Introduktionskurs i R-programmering</a>.</p>
-<p>Åter till användandet av <code>$</code>-tecknet. Vi använder <code>$</code>-tecknet för att hämta ett objekts attribut (de variabler som lagras i objektet). Funktionen <code>attributes()</code> listar namnen på de olika attributen.</p>
+<p>Åter till användandet av <code>$</code>-tecknet. Vi använder <code>$</code>-tecknet för att hämta ett objekts attribut (en variabel som lagras i objektet). Funktionen <code>attributes()</code> listar namnen på de olika attributen.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">attributes</span>(lm_fev_vs_height)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -4437,40 +4435,631 @@ $class
 <div class="cell">
 <div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>lm_fev_vs_height<span class="sc">$</span>coefficients</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>(Intercept)           x 
--4.89859194 -0.02282915 </code></pre>
+<pre><code>(Intercept)      height 
+-5.74145229  0.05380877 </code></pre>
 </div>
 </div>
 </section>
 <section id="extra-uppgift-3" class="level4">
 <h4 class="anchored" data-anchor-id="extra-uppgift-3">💪 Extra Uppgift 3</h4>
-<p>Gör ett histogram för residualerna.</p>
+<p>Gör ett histogram för residualerna för den anpassade modellen ovan.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Write your code here.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
 </div>
 </div>
-<p>Vi behöver inte veta dessa tekniska detaljer. Det som är fint med detta är att vi kan nu använda objektet <code>theobject</code>.</p>
+<p>Funktionen <code>lm()</code> returnerar ett såkallat objekt (som vi sparat i variabeln <code>lm_fev_vs_height</code>) av klass <code>lm</code> som förklaras i extra materialet. Vi behöver inte veta detaljerna, men en viktig sak att veta är att det finns många användbara funktioner vi kan applicera på vårt objekt. En sådan funktion är <code>summary()</code> som skriver ut resultaten från regressionen i ett snyggt format.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(lm_fev_vs_height)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(lm_fev_vs_height)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 Call:
-lm(formula = y ~ x, data = FevChildren)
+lm(formula = fev ~ height, data = FevChildren)
 
 Residuals:
-    Min      1Q  Median      3Q     Max 
--58.866  -1.811   2.385   4.144   7.352 
+     Min       1Q   Median       3Q      Max 
+-1.76006 -0.25417  0.00064  0.23903  2.10393 
 
 Coefficients:
-            Estimate Std. Error t value Pr(&gt;|t|)    
-(Intercept) -4.89859    0.21729 -22.544   &lt;2e-16 ***
-x           -0.02283    0.21917  -0.104    0.917    
+             Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept) -5.741452   0.210370  -27.29   &lt;2e-16 ***
+height       0.053809   0.001337   40.25   &lt;2e-16 ***
 ---
 Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
 
-Residual standard error: 6.871 on 998 degrees of freedom
-Multiple R-squared:  1.087e-05, Adjusted R-squared:  -0.0009911 
-F-statistic: 0.01085 on 1 and 998 DF,  p-value: 0.9171</code></pre>
+Residual standard error: 0.4327 on 604 degrees of freedom
+Multiple R-squared:  0.7284,    Adjusted R-squared:  0.7279 
+F-statistic:  1620 on 1 and 604 DF,  p-value: &lt; 2.2e-16</code></pre>
 </div>
+</div>
+<p>Efter Del 2 av kursen kommer ni känna igen i princip allt i utskriften ovan. Det vi har gått på Del 1 är:</p>
+<ul>
+<li><p><code>Residuals</code>: Visar fördelningsmåtten för residualerna, samt minsta och största värde.</p></li>
+<li><p><code>Coefficients</code>: <code>Estimate</code> kolumnen visar minsta kvadratskattningarna. <code>Intercept</code> och <code>height</code> betecknar vi med, respektive, <span class="math inline">\(b_0\)</span> och <span class="math inline">\(b_1\)</span> på föreläsningarna.</p></li>
+<li><p><code>Residual standard error</code>: Residualernas standardavvikelse som vi betecknar med <span class="math inline">\(s_e\)</span> på föreläsningarna.</p></li>
+<li><p><code>Multiple R-squared</code>: R-kvadrat som vi betecknar med <span class="math inline">\(R^2\)</span> på föreläsningarna.</p></li>
+<li><p><code>Adjusted R-squared</code>: Justerat R-kvadrat som vi betecknar med <span class="math inline">\(R_{\mathrm{adj}}^2\)</span> på föreläsningarna.</p></li>
+</ul>
+<p>Låt oss tolka resultaten ovan. 72.84% av variationen i forcerad utadningsvolym förklaras av variabeln längd. Minsta kvadratanpassningen är <span class="math display">\[\widehat{fev} = b_0 + b_1height =-5.741 + 0.054height.\]</span> Tolkningen för <span class="math inline">\(b_0=-5.741\)</span> är den predikterade genomsnittliga forcerade utandningsvolymen för barn och ungdomar som är 0 cm långa, vilket inte är meningsfullt. Vi kan inte göra en kausal tolkning för <span class="math inline">\(b_1\)</span> eftersom det inte är så att längden medför bättre eller sämre lugnkapacitet. Istället säger vi att barn och ungdomar som är 1 cm längre tenderar att i genomsnitt ha <span class="math inline">\(b_1=0.054\)</span> fler enheter forcerad utandningsvolym (än de som är 1 cm kortare). Vi kan också använda oss av <span class="math inline">\(b_1\)</span> för att till exempel säga att barn och ungdomar som är 10 cm längre tenderar att ha <span class="math inline">\(10\cdot b_1 = 5.4\)</span> fler enheter forcerad utandningsvolym (än de som är 10 cm kortare).</p>
+<p>Vårt dataset innehåller forcerad utandningsvolym och längd hos 606 individuella barn och ungdomar. Vår anpassade modell ger oss 606 prediktioner av de genomsnittliga forcerade utandningsvolymerna, dvs en prediktion <span class="math inline">\(\hat{y}_i\)</span> (<code>fev</code>) för varje <span class="math inline">\(x_i\)</span> (<code>height</code>) i datasetet. Dessa kan fås genom funktionen <code>predict()</code>. Låt oss plotta data tillsammans med de predikterade värden i samma figur med hjälp av funktionen <code>lines()</code> som användes i <a href="https://statisticssu.github.io/SDA1/datorlab/lab3/DatorLab3.html#tidsserier">Lab 3</a>. Vi använder också funktionen <code>abline()</code> som ritar den räta linjen (minsta kvadratanpassningen).</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(fev <span class="sc">~</span> height, <span class="at">data =</span> FevChildren, <span class="at">col =</span> <span class="st">&quot;cornflowerblue&quot;</span>, <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">7</span>))</span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a>y_hat <span class="ot">&lt;-</span> <span class="fu">predict</span>(lm_fev_vs_height)</span>
+<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(y_hat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>       1        2        3        4        5        6 
+2.048981 3.484061 1.707295 1.502284 2.048981 2.595678 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(FevChildren<span class="sc">$</span>height, y_hat, <span class="at">type =</span> <span class="st">&quot;p&quot;</span>, <span class="at">col =</span> <span class="st">&quot;lightcoral&quot;</span>)</span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(lm_fev_vs_height, <span class="at">col =</span> <span class="st">&quot;lightcoral&quot;</span>)</span>
+<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="at">x =</span> <span class="st">&quot;topleft&quot;</span>, <span class="at">pch =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">1</span>, <span class="cn">NA</span>), <span class="at">lty =</span> <span class="fu">c</span>(<span class="cn">NA</span>, <span class="cn">NA</span>, <span class="dv">1</span>), <span class="at">col =</span> <span class="fu">c</span>(<span class="st">&quot;cornflowerblue&quot;</span>, <span class="st">&quot;lightcoral&quot;</span>, <span class="st">&quot;lightcoral&quot;</span>), <span class="at">legend=</span><span class="fu">c</span>(<span class="st">&quot;Data&quot;</span>, <span class="st">&quot;Predicted&quot;</span>, <span class="st">&quot;Fitted line&quot;</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="DatorLab4_files/figure-html/unnamed-chunk-23-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>Det enda argumentet ni inte har stött på tidigare är <code>pch = c(1, 1, NA)</code> som anger att de två första ska vara cirkelsymboler i legendtexten och anger ingen cirkelsymbol för den sista. Argumentet <code>lty = c(NA, NA, 1)</code> anger en linje för sista men ingen linje för de två första.</p>
+<p>Antag att vi vill prediktera genomsnittliga forcerade utandningsvolymen för längder som inte finns med bland de 606 observationerna, exempelvis <span class="math inline">\(x=150\)</span> och <span class="math inline">\(x=160\)</span>. Vi kan använda <code>predict()</code> funktionens argument <code>new_data</code> som är en dataframe med samma variabelnamn som vi använde när vi anpassade modellen (<code>height</code>) i vårt fall. Följande kod skapar dataframen i en variabel vi väljer att kalla <code>new_x</code> och predikterar de genomsnittliga forcerade utandningsvolymerna för de nya <span class="math inline">\(x\)</span> värden ovan.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>new_x <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">height =</span> <span class="fu">c</span>(<span class="dv">160</span>, <span class="dv">170</span>))</span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a><span class="fu">predict</span>(lm_fev_vs_height, <span class="at">newdata =</span> new_x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>       1        2 
+2.867951 3.406038 </code></pre>
+</div>
+</div>
+<p>Exempelvis ser vi att ett barn (eller en ungdom) på 170 cm har i genomsnitt ett <code>fev</code>-värde på ca 3.4.</p>
+<section id="uppgift-2.1" class="level4">
+<h4 class="anchored" data-anchor-id="uppgift-2.1">💪 Uppgift 2.1</h4>
+<p>Prediktera responsen för <span class="math inline">\(x=180\)</span> och <span class="math inline">\(x=190\)</span>. Tolka resultaten.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Write your code here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>För att kolla modellens rimlighet kan vi göra en residualanalys. Följande tre kriterier är viktiga:</p>
+<ul>
+<li><p>Residualerna ska bete sig slumpmässigt, dvs de ska inte uppvisa ett mönster.</p></li>
+<li><p>Residualernas varians ska vara konstant, dvs inte bero på <span class="math inline">\(x\)</span>.</p></li>
+<li><p>Residualerna ska vara approximativt normalfördelade.</p></li>
+</ul>
+<p>De två senare kriterierna blir viktiga när vi gör inferens i regressionsmodellen (Del 2) av kursen. När första kriterier inte är uppfyllt betyder det ofta att sambandet i data är icke-linjärt.</p>
+<p>Residualerna kan fås genom funktionen <code>residuals</code></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>resid <span class="ot">&lt;-</span> <span class="fu">residuals</span>(lm_fev_vs_height)</span>
+<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(resid)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>          1           2           3           4           5           6 
+-0.34098108 -1.76006091  0.01270459  0.05571600 -0.15398108 -0.25967816 </code></pre>
+</div>
+</div>
+<p>Följande kod gör residualanalysen.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(FevChildren<span class="sc">$</span>height, resid, <span class="at">xlab=</span> <span class="st">&quot;height&quot;</span>, <span class="at">ylab=</span><span class="st">&#39;Residuals&#39;</span>, <span class="at">col =</span> <span class="st">&quot;cornflowerblue&quot;</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="DatorLab4_files/figure-html/unnamed-chunk-27-1.png" class="img-fluid" width="672"></p>
+</div>
+<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qqnorm</span>(resid, <span class="at">col =</span> <span class="st">&quot;cornflowerblue&quot;</span>) <span class="co"># Create normal probability plot for residuals</span></span>
+<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a><span class="fu">qqline</span>(resid, <span class="at">col =</span> <span class="st">&quot;red&quot;</span>) <span class="co"># Add a straight line to normal plot </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="DatorLab4_files/figure-html/unnamed-chunk-27-2.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>Första plotten visar att residualerna inte ter sig slumpmässigt — de visar ett, om än svagt, kvadratiskt samband. Plotten visar också en tydlig indikation på att residualernas varians inte är konstant, eftersom de varierar mer ju större <code>height</code> blir.</p>
+<p>Dessa resultat är inte överraskande om vi noga betraktar punktdiagrammet <code>fev</code> mot <code>height</code> igen samt den anpasssade linjen.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(fev <span class="sc">~</span> height, <span class="at">data =</span> FevChildren, <span class="at">col =</span> <span class="st">&quot;cornflowerblue&quot;</span>)</span>
+<span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(lm_fev_vs_height, <span class="at">col =</span> <span class="st">&quot;lightcoral&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="DatorLab4_files/figure-html/unnamed-chunk-28-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>Residualerna beräknas som avståndet mellan observationerna och dess predikterade värden (som ligger på linjen). Större avvikelser förekommer för större värden på <code>height</code> jämfört med mindre värden, därav en högre residualvarians. Data verkar inte heller följa den räta linjen eftersom en liten grad av icke-linjaritet verkar finnas. I Avsnitt 3 går vi i igenom hur vi kan anpassa en icke-linjär regression för att få bättre resultat.</p>
+</section>
+<section id="uppgift-2.2" class="level4">
+<h4 class="anchored" data-anchor-id="uppgift-2.2">💪 Uppgift 2.2</h4>
+<p>Exemplet ovan visar hur man anpassar en enkel linjär regression, tolkar resultaten, predikterar responsen för nya <span class="math inline">\(x\)</span> värden och slutligen hur man validerar modellen. Gör en regressionsanalys med responsvariabel <code>IBM</code> och förklarande variabel <code>MARKET</code> i <code>CAPM_data.RData</code> som inkluderar dessa steg. För prediktion, antag att vi vill förutspå vad som händer med IBM aktien om det sker en börskrasch och marknadsportföljen faller med 15% under en månad. Vad kan man förutsäga om IBM aktiens månadsavkastning i ett sådant scenario?</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Write your code here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</section>
+<section id="enkel-icke-linjär-regression" class="level2">
+<h2 class="anchored" data-anchor-id="enkel-icke-linjär-regression">3. Enkel icke-linjär regression</h2>
+<p>I Avsnitt 2 såg vi att regressionslinjen <span class="math display">\[\widehat{fev} = b_0 + b_1height\]</span> inte var tillräcklig. Vi kan använda icke-linjär regression för att få en bättre anpassning till data. Icke-linjär regression transformerar data så att sambandet blir linjärt efter att transformering. Tranformationerna syfte är alltså att “räta ut” data och vi kan inspektera visuellt om så är fallet. Ett annat syfte med transformationer är att de ibland gör antagandet om konstant residualvarians mer troligt, vilket också kan studeras visuellt.</p>
+<p>Vi använder oss av den så kallade <strong>ladder of powers</strong> (stege av potenstransformationer) för att “räta ut” data med hjälp av potenstransformationer. Stegen av potenstransformationer visas nedan.</p>
+<table class="table">
+<caption>Potenstransformationer för <span class="math inline">\(y\)</span> och <span class="math inline">\(x\)</span>.</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Stegnivå</th>
+<th style="text-align: center;"><span class="math inline">\(y\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(x\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">1</td>
+<td style="text-align: center;"><span class="math inline">\(y^2\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(x^2\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2</td>
+<td style="text-align: center;"><span class="math inline">\(y\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(x\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">3</td>
+<td style="text-align: center;"><span class="math inline">\(y^{1/2}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(x^{1/2}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">4</td>
+<td style="text-align: center;"><span class="math inline">\(\log(y)\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\log(x)\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">5</td>
+<td style="text-align: center;"><span class="math inline">\(-y^{-1/2}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(-x^{-1/2}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">6</td>
+<td style="text-align: center;"><span class="math inline">\(-y^{-1}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(-x^{-1}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Tukeys cirkel är en tumregel för hur vi flyttar oss upp och ner i stegen.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="data:image/png;base64,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" class="img-fluid figure-img" width="333"></p>
+<p></p><figcaption class="figure-caption">Figur 8.24 från kursboken<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></figcaption><p></p>
+</figure>
+</div>
+<p>Vi börjar med att både <span class="math inline">\(y\)</span> och <span class="math inline">\(x\)</span> befinner sig på stegnivå 2 och flyttar sig sedan uppåt eller nedåt beroende på var i Tukeys cirkel vi befinner oss. Plotten <code>fev</code> mot <code>height</code> indikerar att vi befinner oss i andra kvadraten i Tukeys cirkel. Vi ska alltså gå ner i stegen för <span class="math inline">\(y\)</span> och/eller upp i stegen för <span class="math inline">\(x\)</span> tills förhållandet ser mer linjärt ut. Och/eller här betyder att man “flyttar båda”/“flyttar enbart en”. Notera också att en av variablerna kan stanna i stegen medan man flyttar den andra uppåt eller nedåt fler än ett steg.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(fev <span class="sc">~</span> height, <span class="at">data =</span> FevChildren, <span class="at">col =</span> <span class="st">&quot;cornflowerblue&quot;</span>)  <span class="co"># Starting point: Both y and x  untransformed (Step 2 in the ladder of powers) </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="DatorLab4_files/figure-html/unnamed-chunk-30-1.png" class="img-fluid" width="672"></p>
+</div>
+<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">sqrt</span>(fev) <span class="sc">~</span> height, <span class="at">data =</span> FevChildren, <span class="at">col =</span> <span class="st">&quot;cornflowerblue&quot;</span>) <span class="co"># y down in the ladder of powers</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="DatorLab4_files/figure-html/unnamed-chunk-30-2.png" class="img-fluid" width="672"></p>
+</div>
+<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(fev <span class="sc">~</span> <span class="fu">I</span>(height<span class="sc">^</span><span class="dv">2</span>), <span class="at">data =</span> FevChildren, <span class="at">col =</span> <span class="st">&quot;cornflowerblue&quot;</span>) <span class="co"># x up in the ladder of powers</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="DatorLab4_files/figure-html/unnamed-chunk-30-3.png" class="img-fluid" width="672"></p>
+</div>
+<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">sqrt</span>(fev) <span class="sc">~</span> <span class="fu">I</span>(height<span class="sc">^</span><span class="dv">2</span>), <span class="at">data =</span> FevChildren, <span class="at">col =</span> <span class="st">&quot;cornflowerblue&quot;</span>) <span class="co"># y down and x up in the ladder of powers</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="DatorLab4_files/figure-html/unnamed-chunk-30-4.png" class="img-fluid" width="672"></p>
+</div>
+<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">log</span>(fev) <span class="sc">~</span> <span class="fu">I</span>(height), <span class="at">data =</span> FevChildren, <span class="at">col =</span> <span class="st">&quot;cornflowerblue&quot;</span>) <span class="co"># y down two steps</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="DatorLab4_files/figure-html/unnamed-chunk-30-5.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>Vi kommenterar den mystiska funktionen <code>I()</code> som dyker upp i högerledet på formula-syntaxen <code>y ~ I(x^2)</code> i rutan nedan. Man kan hoppa över rutan, det enda viktiga är att veta att <strong>funktionen <code>I()</code> behöver användas i högerledet av formula-syntax om man vill transformera <code>x</code>.</strong></p>
+<div class="callout-note callout callout-style-default no-icon callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Extra förklaring för de nyfikna studenterna (detta avsnitt kan skippas)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Formula-syntaxen tillåter att man applicerar en transformation i vänsterledet utan att använda <code>I()</code>, dvs vi kan skriva till exempel <code>sqrt(y) ~ x</code> istället för <code>I(sqrt(y)) ~ x</code>. Detsamma gäller inte högerledet eftersom i formula-syntax så har vissa operationer en annan betydelse när de utförs på den förklarande variabeln. Till exempel anpassar <code>lm(y ~ x*z)</code> en linjär regression med så kallade interakationseffekter<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> mellan de förklarande variablerna <span class="math inline">\(x\)</span> och <span class="math inline">\(z\)</span>, vilket har formen <span class="math display">\[\hat{y} = b_0 + b_1x + b_2 z  + b_3xz.\]</span> När man använder funktionen <code>I()</code> i högerledet undgår man att formula-syntax tolkar fel.</p>
+</div>
+</div>
+<p>Vi skulle kunna utvärdera vilken av transformationerna är att föredra med korsvalidering (se Avsnitt 5). Här nöjer vi oss med en utvärdering baserad på grafernas utseende. Vi ser att alla transformationerna resulterar i ett mer linjärt förhållande jämfört med ursprungsdatan (innan transformationerna). Visuellt konstaterar vi att de två sista transformationerna verkar rätar ut data bäst. Vi väljer den sista transformationen eftersom den verkar uppnå en jämnare spridning runt linjen, vilket kommer resultera i residualer med en mer konstant varians.</p>
+<p>Den anpassade linjen har formen <span class="math display">\[\widehat{\log(fev)} = b_0 + b_1height,\]</span> där vi snart ska använda <code>lm()</code> för att beräkna koefficienterna <span class="math inline">\(b_0\)</span> och <span class="math inline">\(b_1\)</span>. Men först en viktig varning.</p>
+<div class="callout-warning callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Varning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>I linjär regression tolkade vi <span class="math inline">\(b_1\)</span> som förändringen i responsvariablen <span class="math inline">\(y\)</span> som är associerad med en en-enhets förändring i den förklarande variabeln <span class="math inline">\(x\)</span>.</p>
+<p>När man transformerar <span class="math inline">\(x\)</span> så finns det inga enkla tolkningar av <span class="math inline">\(b_1\)</span>, oavsett om <span class="math inline">\(y\)</span> är transformerad eller inte!</p>
+<p>När man enbart transformerar <span class="math inline">\(y\)</span> men inte <span class="math inline">\(x\)</span> är tolkningen i den transformerade skalan. I vårt exempel är <span class="math inline">\(\b_1\)</span> den förändringen i <span class="math inline">\(\log(y)\)</span> som är associerad med en en-enhets förändring i den förklarande variabeln <span class="math inline">\(x\)</span>. Man kan ibland, beroende på transformationen av <span class="math inline">\(y\)</span>, använda <span class="math inline">\(b_1\)</span> för att få en enkel tolkning även i den originala skalan. Vi går inte igenom sådana tolkningar av <span class="math inline">\(b_1\)</span> för icke-linjär regression i den här kursen<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>.</p>
+</div>
+</div>
+<p>Är det ens värt att anpassa en modell där parametrarna inte går att tolka på ett enkelt sätt? Om målet med modellen är att prediktera bättre (jämfört med en linjär regression) så är svaret definitivt ja<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>.</p>
+<p>Precis som i Avsnitt 2 kan vi använda minsta kvadratmetoden (genom <code>lm()</code>) för att anpassa modellen på de transformerade data. När vi använder prediktion måste vi tänka på att vi har transformerat variablerna. I det här specifika exemplet med tranformationen <code>log(fev)</code> kommer funktionen <code>predict()</code> att prediktera den genomsnittliga <span class="math inline">\(\log(fev)\)</span> nivån. Vi vill prediktera i originalskala, dvs responsvariabeln <span class="math inline">\(y\)</span> (<code>fev</code>) och inte <span class="math inline">\(\log(y)\)</span> (<code>log(fev)</code>). Men vi kan använda prediktionen för <span class="math inline">\(\log(y)\)</span> och “reversera transformationen”, dvs få transformationen ogjord, för att beräkna prediktionen för <span class="math inline">\(y\)</span>. En funktion som reverserar en transformation kallas för en inverstransformation. Tabellen nedan anger inversetransformationerna (kolumnen till höger) vi kan använda oss av när vi predikterar i originalskala. Transformationerna motsvarar de i ladder of powers.</p>
+<table class="table">
+<caption>Prediktion i originalskala (kolumn til höger) för olika transformerade responser (kolumn till vänster).</caption>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Transformation av responsen</th>
+<th style="text-align: center;">Prediktion i <span class="math inline">\(y\)</span>-skala (<span class="math inline">\(\widehat{y}\)</span>)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(y^2\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\left(\widehat{y^2}\right)^{1/2}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(y\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\widehat{y}\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(y^{1/2}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\left(\widehat{y^{1/2}}\right)^2\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(\log(y)\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\exp\left(\widehat{\log(y)}\right)\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(-y^{-1/2}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\left(\widehat{-y^{-1/2}}\right)^2\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(-y^{-1}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(-\left(\widehat{-y^{-1}}\right)^{-1}\)</span></td>
+</tr>
+</tbody>
+</table>
+<div class="callout-note callout callout-style-default no-icon callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Extra förklaring för de nyfikna studenterna (detta avsnitt kan skippas)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Låt transformationen av <span class="math inline">\(y\)</span> betecknas <span class="math inline">\(\tilde{y}\)</span>. Vi kan härleda den inversa transformationen genom att lösa för <span class="math inline">\(y\)</span> i ekvationen <span class="math inline">\(\tilde{y}=g(y)\)</span> där <span class="math inline">\(g()\)</span> är transformationen.</p>
+<p>Låt oss härleda den inversa transformationen av log-transformationen. Eftersom <span class="math inline">\(\tilde{y}=\log(y)\)</span> så är <span class="math display">\[\exp\left( \tilde{y} \right) = \exp(\log(y)) \implies y = \exp\left( \tilde{y} \right),\]</span> dvs exponential-funktionen är den inversa transformen.</p>
+<p>Notera att när vi predikterar <span class="math inline">\(y\)</span> (responsen i originalskala) så sker det i två steg. I det första steget använder vi regressionen för att prediktera <span class="math inline">\(\tilde{y}\)</span> (responsen i transformed skala, log-skala i exemplet ovan), vilket ger prediktionen <span class="math inline">\(\widehat{\tilde{y}}\)</span> (<span class="math inline">\(\widehat{\log(y)}\)</span> i exemplet ovan). I andra steget applicerar vi den inversa transformen (<span class="math inline">\(\exp()\)</span> för log-transformationen) på <span class="math inline">\(\widehat{\tilde{y}}\)</span> för att få <span class="math inline">\(\widehat{y}\)</span> (<span class="math inline">\(\exp\left(\widehat{\log(y)}\right)\)</span> i exemplet ovan) som är prediktionen av <span class="math inline">\(y\)</span> (originalskala).</p>
+<section id="extra-uppgift-4" class="level4">
+<h4 class="anchored" data-anchor-id="extra-uppgift-4">💪 Extra Uppgift 4</h4>
+<p>Härled alla de övriga (eller så många du orkar) inversa transformationerna i tabellen ovan.</p>
+</section>
+</div>
+</div>
+<p>Vi är nu redo att anpassa den nya regressionen <span class="math display">\[\widehat{\log(fev)} = b_0 + b_1height,\]</span> samt prediktera och genomföra en residualanalys.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a>lm_logfev_vs_height <span class="ot">&lt;-</span> <span class="fu">lm</span>(<span class="fu">log</span>(fev) <span class="sc">~</span> height, <span class="at">data =</span> FevChildren)</span>
+<span id="cb57-2"><a href="#cb57-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(lm_logfev_vs_height)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = log(fev) ~ height, data = FevChildren)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.69706 -0.09037  0.01058  0.08988  0.43795 
+
+Coefficients:
+              Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept) -2.2227934  0.0717623  -30.97   &lt;2e-16 ***
+height       0.0202071  0.0004561   44.31   &lt;2e-16 ***
+---
+Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+
+Residual standard error: 0.1476 on 604 degrees of freedom
+Multiple R-squared:  0.7647,    Adjusted R-squared:  0.7643 
+F-statistic:  1963 on 1 and 604 DF,  p-value: &lt; 2.2e-16</code></pre>
+</div>
+</div>
+<p>Minsta kvadratskattningarna är nu <span class="math inline">\(b_0=-2.222\)</span> och <span class="math inline">\(b_1=0.020\)</span>. <span class="math inline">\(R^2=0.76145\)</span> betyder att ca 76% av variationen i <code>log(fev)</code> (observera log i tolkningen!) förklaras av <code>height</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb59"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a>logy_hat <span class="ot">&lt;-</span> <span class="fu">predict</span>(lm_logfev_vs_height) <span class="co"># log scale prediction</span></span>
+<span id="cb59-2"><a href="#cb59-2" aria-hidden="true" tabindex="-1"></a>y_hat <span class="ot">&lt;-</span> <span class="fu">exp</span>(logy_hat) <span class="co"># original scale prediction</span></span>
+<span id="cb59-3"><a href="#cb59-3" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(logy_hat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>        1         2         3         4         5         6 
+0.7027882 1.2417111 0.5744732 0.4974842 0.7027882 0.9080922 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb61"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb61-1"><a href="#cb61-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(y_hat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>       1        2        3        4        5        6 
+2.019375 3.461531 1.776195 1.644579 2.019375 2.479587 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb63"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb63-1"><a href="#cb63-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(fev <span class="sc">~</span> height, <span class="at">data =</span> FevChildren, <span class="at">col =</span> <span class="st">&quot;cornflowerblue&quot;</span>, <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">7</span>)) <span class="co"># Data on original scale</span></span>
+<span id="cb63-2"><a href="#cb63-2" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(FevChildren<span class="sc">$</span>height, y_hat, <span class="at">type =</span> <span class="st">&quot;p&quot;</span>, <span class="at">col =</span> <span class="st">&quot;lightcoral&quot;</span>)</span>
+<span id="cb63-3"><a href="#cb63-3" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="at">x =</span> <span class="st">&quot;topleft&quot;</span>, <span class="at">pch =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">1</span>), <span class="at">col =</span> <span class="fu">c</span>(<span class="st">&quot;cornflowerblue&quot;</span>, <span class="st">&quot;lightcoral&quot;</span>), <span class="at">legend=</span><span class="fu">c</span>(<span class="st">&quot;Data&quot;</span>, <span class="st">&quot;Predicted&quot;</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="DatorLab4_files/figure-html/unnamed-chunk-32-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>Notera att till skillnad från när vi anpassade <code>fev ~ height</code> så använder vi här inte <code>abline()</code> (som ritar en rät linje), eftersom regressionen är icke-linjär. Vi nöjer oss med att markera ut de enskilda prediktionsvärden, men se rutan nedanför på hur man kan göra om man vill rita en kurva.</p>
+<div class="callout-note callout callout-style-default no-icon callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Extra: Rita den anpassade kurvan i icke-linjär regression
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Notera att eftersom observationerna inte ligger i ordning så kan vi inte binda ihop de röda punkterna ovan med en linje. Det ser konstigt ut som följande figur visar:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb64"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(fev <span class="sc">~</span> height, <span class="at">data =</span> FevChildren, <span class="at">col =</span> <span class="st">&quot;cornflowerblue&quot;</span>, <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">7</span>), <span class="at">main =</span> <span class="st">&quot;Strange looking plot&quot;</span>) <span class="co"># Data on original scale</span></span>
+<span id="cb64-2"><a href="#cb64-2" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(FevChildren<span class="sc">$</span>height, y_hat, <span class="at">type =</span> <span class="st">&quot;p&quot;</span>, <span class="at">col =</span> <span class="st">&quot;lightcoral&quot;</span>) <span class="co"># Prediction of data points</span></span>
+<span id="cb64-3"><a href="#cb64-3" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(FevChildren<span class="sc">$</span>height, y_hat, <span class="at">type =</span> <span class="st">&quot;l&quot;</span>, <span class="at">col =</span> <span class="st">&quot;lightcoral&quot;</span>) <span class="co"># line</span></span>
+<span id="cb64-4"><a href="#cb64-4" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="at">x =</span> <span class="st">&quot;topleft&quot;</span>, <span class="at">pch =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">1</span>), <span class="at">col =</span> <span class="fu">c</span>(<span class="st">&quot;cornflowerblue&quot;</span>, <span class="st">&quot;lightcoral&quot;</span>), <span class="at">legend=</span><span class="fu">c</span>(<span class="st">&quot;Data&quot;</span>, <span class="st">&quot;Predicted&quot;</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="DatorLab4_files/figure-html/unnamed-chunk-33-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>Man skulle kunna sortera datasetet i stigande ordning på height och sedan binda ihop varje punkt med en linje. Men om punkterna ligger med en bit avstånd i <span class="math inline">\(x\)</span>-led så är inte det här en bra lösning, eftersom det dras en rät linje mellan punkterna och kurvan vi plottar är inte rät. En bättre lösning är att skapa ett rutnät (grid på engelska) med många punkter i <span class="math inline">\(x\)</span>-led och sedan prediktera för varje punkt i rutnätet. Ett rutnät är en indelning av ett intervall <span class="math inline">\([a,b]\)</span> i <span class="math inline">\(N\)</span> punkter med lika stort avstånd mellan varandra. Anropet <code>seq(a, b, length.out = N)</code> skapar ett rutnät.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb65"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb65-1"><a href="#cb65-1" aria-hidden="true" tabindex="-1"></a>grid <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="fl">0.1</span>, <span class="dv">1</span>, <span class="at">length.out =</span> <span class="dv">10</span>) <span class="co"># a = 0.1, b = 1 and N = 10.</span></span>
+<span id="cb65-2"><a href="#cb65-2" aria-hidden="true" tabindex="-1"></a>grid</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.0</code></pre>
+</div>
+</div>
+<p>Vi kan nu skapa en dataframe som innehåller ett rutnät mellan det minsta <span class="math inline">\(x\)</span>-värdet och det största <span class="math inline">\(x\)</span>-värdet med säg <span class="math inline">\(N=1000\)</span> punkter och prediktera responsen för dessa 1000 <span class="math inline">\(x\)</span>-värden. Funktionen ‘lines()’ kommer att binda ihop dessa punkter med räta linjer emellan — men punkterna ligger så tätt att våra ögon kommer uppfatta resultatet som en fin och jämn kurva. Följande kod anpassar kurvan på sättet som beskrivits ovan och plottar den tillsammans med data och de enskilda prediktionerna vi skapade ovan.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb67"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb67-1"><a href="#cb67-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(fev <span class="sc">~</span> height, <span class="at">data =</span> FevChildren, <span class="at">col =</span> <span class="st">&quot;cornflowerblue&quot;</span>, <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">7</span>)) <span class="co"># Data on original scale</span></span>
+<span id="cb67-2"><a href="#cb67-2" aria-hidden="true" tabindex="-1"></a>x_min <span class="ot">&lt;-</span> <span class="fu">min</span>(FevChildren<span class="sc">$</span>height) <span class="co"># Min height</span></span>
+<span id="cb67-3"><a href="#cb67-3" aria-hidden="true" tabindex="-1"></a>x_max <span class="ot">&lt;-</span> <span class="fu">max</span>(FevChildren<span class="sc">$</span>height) <span class="co"># Max height</span></span>
+<span id="cb67-4"><a href="#cb67-4" aria-hidden="true" tabindex="-1"></a>N <span class="ot">&lt;-</span> <span class="dv">1000</span> <span class="co"># Number of grid points to predict</span></span>
+<span id="cb67-5"><a href="#cb67-5" aria-hidden="true" tabindex="-1"></a>new_x <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">height =</span> <span class="fu">seq</span>(x_min, x_max, <span class="at">length.out =</span> N)) <span class="co"># The grid in a dataframe</span></span>
+<span id="cb67-6"><a href="#cb67-6" aria-hidden="true" tabindex="-1"></a>logy_hat_grid <span class="ot">&lt;-</span> <span class="fu">predict</span>(lm_logfev_vs_height, <span class="at">newdata =</span> new_x)</span>
+<span id="cb67-7"><a href="#cb67-7" aria-hidden="true" tabindex="-1"></a>yhat_grid <span class="ot">&lt;-</span> <span class="fu">exp</span>(logy_hat_grid) <span class="co"># Inverse transform</span></span>
+<span id="cb67-8"><a href="#cb67-8" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(FevChildren<span class="sc">$</span>height, y_hat, <span class="at">type =</span> <span class="st">&quot;p&quot;</span>, <span class="at">col =</span> <span class="st">&quot;lightcoral&quot;</span>) <span class="co"># Prediction of data points</span></span>
+<span id="cb67-9"><a href="#cb67-9" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(new_x<span class="sc">$</span>height, yhat_grid, <span class="at">type =</span> <span class="st">&quot;l&quot;</span>, <span class="at">col =</span> <span class="st">&quot;lightcoral&quot;</span>) <span class="co"># Prediction on grid</span></span>
+<span id="cb67-10"><a href="#cb67-10" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="at">x =</span> <span class="st">&quot;topleft&quot;</span>, <span class="at">pch =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">1</span>, <span class="cn">NA</span>), <span class="at">lty =</span> <span class="fu">c</span>(<span class="cn">NA</span>, <span class="cn">NA</span>, <span class="dv">1</span>), <span class="at">col =</span> <span class="fu">c</span>(<span class="st">&quot;cornflowerblue&quot;</span>, <span class="st">&quot;lightcoral&quot;</span>, <span class="st">&quot;lightcoral&quot;</span>), <span class="at">legend=</span><span class="fu">c</span>(<span class="st">&quot;Data&quot;</span>, <span class="st">&quot;Predicted&quot;</span>, <span class="st">&quot;Fitted curve&quot;</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="DatorLab4_files/figure-html/unnamed-chunk-35-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</div>
+</div>
+<section id="uppgift-3.1" class="level4">
+<h4 class="anchored" data-anchor-id="uppgift-3.1">💪 Uppgift 3.1</h4>
+<p>Prediktera responsen för <span class="math inline">\(x=180\)</span> och <span class="math inline">\(x=190\)</span> med den icke-linjära regressionen. Jämför resultaten med den linjära regressionen i Uppgift 2.1.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb68"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb68-1"><a href="#cb68-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Write your code here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Slutligen gör vi en residualanalys.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb69"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb69-1"><a href="#cb69-1" aria-hidden="true" tabindex="-1"></a>resid_logfev <span class="ot">&lt;-</span> <span class="fu">residuals</span>(lm_logfev_vs_height)</span>
+<span id="cb69-2"><a href="#cb69-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(resid_logfev)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>          1           2           3           4           5           6 
+-0.16746509 -0.69706393 -0.03214892 -0.05408127 -0.06356935 -0.05965209 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb71"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb71-1"><a href="#cb71-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(FevChildren<span class="sc">$</span>height, resid_logfev, <span class="at">xlab=</span> <span class="st">&quot;height&quot;</span>, <span class="at">ylab=</span><span class="st">&#39;Residuals&#39;</span>, <span class="at">col =</span> <span class="st">&quot;cornflowerblue&quot;</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="DatorLab4_files/figure-html/unnamed-chunk-37-1.png" class="img-fluid" width="672"></p>
+</div>
+<div class="sourceCode cell-code" id="cb72"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb72-1"><a href="#cb72-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qqnorm</span>(resid_logfev, <span class="at">col =</span> <span class="st">&quot;cornflowerblue&quot;</span>) <span class="co"># Create normal probability plot for residuals</span></span>
+<span id="cb72-2"><a href="#cb72-2" aria-hidden="true" tabindex="-1"></a><span class="fu">qqline</span>(resid_logfev, <span class="at">col =</span> <span class="st">&quot;red&quot;</span>) <span class="co"># Add a straight line to normal plot </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="DatorLab4_files/figure-html/unnamed-chunk-37-2.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="uppgift-3.2" class="level4">
+<h4 class="anchored" data-anchor-id="uppgift-3.2">💪 Uppgift 3.2</h4>
+<p>Kommentera residualanalysen för den nya modellen. Jämför resultaten mot residualanalysen för den otransformerade responsen (dvs <code>fev ~ height</code>). Vilken modell är att föredra?</p>
+</section>
+<section id="uppgift-3.3" class="level4">
+<h4 class="anchored" data-anchor-id="uppgift-3.3">💪 Uppgift 3.3</h4>
+<p>Anpassa modellen <span class="math display">\[\widehat{fev^{1/2}} = b_0 + b_1height.\]</span> och utför en liknande analys som för modellen ovan, dvs <span class="math display">\[\widehat{\log(fev)} = b_0 + b_1height.\]</span> Vilken utav dessa är mest lämplig för det här exemplet?</p>
+</section>
+</section>
+<section id="multipel-linjär-samt-icke-linjär-regression" class="level2">
+<h2 class="anchored" data-anchor-id="multipel-linjär-samt-icke-linjär-regression">4. Multipel linjär samt icke-linjär regression</h2>
+<p>En multipel linjär regression tillåter fler förklarande variabler. Att implementera linjär regression i R kräver inte mycket mer kunskap än det vi har gått igenom ovan.</p>
+<p>Vi analyserar återigen <code>FevChildren.RData</code> och inkluderar nu också <code>smoking</code> (som är en dummy-variabel) för att förklara <code>fev</code>, dvs <span class="math display">\[\widehat{fev}=b_0 + b_1height + b_2smoking\]</span></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb73"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb73-1"><a href="#cb73-1" aria-hidden="true" tabindex="-1"></a>lm_fev_vs_height_smoking <span class="ot">&lt;-</span> <span class="fu">lm</span>(fev <span class="sc">~</span> height <span class="sc">+</span> smoking, <span class="at">data =</span> FevChildren)</span>
+<span id="cb73-2"><a href="#cb73-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(lm_fev_vs_height_smoking)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = fev ~ height + smoking, data = FevChildren)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-1.76487 -0.25513  0.00027  0.23445  2.09853 
+
+Coefficients:
+             Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept) -5.763158   0.216872 -26.574   &lt;2e-16 ***
+height       0.053963   0.001388  38.865   &lt;2e-16 ***
+smoking1    -0.025260   0.060666  -0.416    0.677    
+---
+Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+
+Residual standard error: 0.433 on 603 degrees of freedom
+Multiple R-squared:  0.7285,    Adjusted R-squared:  0.7276 
+F-statistic: 808.9 on 2 and 603 DF,  p-value: &lt; 2.2e-16</code></pre>
+</div>
+</div>
+<p>Från utskriften kan vi utläsa att <span class="math inline">\(b_0 = -5.763\)</span>, <span class="math inline">\(b_1 = 0.054\)</span> och <span class="math inline">\(b_2=-0.025\)</span>. Vidare kan vi utläsa att ca 73 av variationen i <code>fev</code> förklaras av <code>height</code> och <code>smoking</code> Notera att R har kallat variabeln <code>smoking1</code> istället för <code>smoking</code> för att betona att <span class="math inline">\(b_2\)</span> är effekten av gruppen som röker (vi kodade rökning som 1). I en multipel regression så tolkar vi alltid de skattade effektena av en variabel givet att alla andra variablerna hålls konstanta. Till exempel, givet barn och ungdomar av samma längd så är <span class="math inline">\(b_2\)</span> förändringen (här negativt då <span class="math inline">\(b_2 &lt; 0\)</span>) i <code>fev</code> mellan rökare och inte rökare. Dvs, givet att längden är densamma, så tenderar rökare att ha mindre forcerad utandningsvolym jämfört med icke-rökare. Koefficienten <span class="math inline">\(b_1\)</span> tolkas givet att smoking hålls konstant, dvs barn och ungdomar som är 1 cm längre tenderar att i genomsnitt ha <span class="math inline">\(b_1=0.054\)</span> fler enheter forcerad utandningsvolym (än de som är 1 cm kortare) givet att de tillhör samma grupp (antingen rökare eller icke-rökare).</p>
+<p>I multipel regression är det vanligt att plotta residualerna mot de predikterade värdena, snarare än mot varje förklarande variabel. Detta beror på att man potentiellt kan ha många förklarande variabler och då är det mer praktiskt att istället göra residualanalysen utifrån en enda figur</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb75"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb75-1"><a href="#cb75-1" aria-hidden="true" tabindex="-1"></a>resid_fev_multiplereg <span class="ot">&lt;-</span> <span class="fu">residuals</span>(lm_fev_vs_height_smoking)</span>
+<span id="cb75-2"><a href="#cb75-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(resid_fev_multiplereg)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>          1           2           3           4           5           6 
+-0.34166549 -1.76486977  0.01300219  0.05660280 -0.15466549 -0.26193379 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb77"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb77-1"><a href="#cb77-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(lm_fev_vs_height_smoking<span class="sc">$</span>fitted.values, resid_fev_multiplereg, <span class="at">xlab=</span> <span class="st">&quot;y_hat&quot;</span>, <span class="at">ylab=</span><span class="st">&#39;Residuals&#39;</span>, <span class="at">col =</span> <span class="st">&quot;cornflowerblue&quot;</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="DatorLab4_files/figure-html/unnamed-chunk-39-1.png" class="img-fluid" width="672"></p>
+</div>
+<div class="sourceCode cell-code" id="cb78"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb78-1"><a href="#cb78-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qqnorm</span>(resid_fev_multiplereg, <span class="at">col =</span> <span class="st">&quot;cornflowerblue&quot;</span>) <span class="co"># Create normal probability plot for residuals</span></span>
+<span id="cb78-2"><a href="#cb78-2" aria-hidden="true" tabindex="-1"></a><span class="fu">qqline</span>(resid_fev_multiplereg, <span class="at">col =</span> <span class="st">&quot;red&quot;</span>) <span class="co"># Add a straight line to normal </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="DatorLab4_files/figure-html/unnamed-chunk-39-2.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>Vi ser liknande problem med residualplottarna som i Avsnitt 2.</p>
+<p>Antag att vi vill prediktera den genomsnittliga forcerade utandningsvolymen för barn och ungdomar som är 164.5 cm långa och röker. Eftersom <code>smoking</code> är en såkallad <code>factor</code> variabel (Rs sätt att koda kategoriska variabler) behöver vi använda <code>as.factor()</code> funktionen när vi skapar <code>new_x</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb79"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb79-1"><a href="#cb79-1" aria-hidden="true" tabindex="-1"></a>new_x <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">height =</span> <span class="fl">164.5</span>, <span class="at">smoking =</span> <span class="fu">as.factor</span>(<span class="dv">1</span>))</span>
+<span id="cb79-2"><a href="#cb79-2" aria-hidden="true" tabindex="-1"></a><span class="fu">predict</span>(lm_fev_vs_height_smoking, <span class="at">newdata =</span> new_x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>       1 
+3.088564 </code></pre>
+</div>
+</div>
+<p>Vår prediktion är att den genomsnittliga forcerade utandningsvolymen är 3.088 för rökande barn och ungdomar som är <span class="math inline">\(164.5\)</span> cm långa.</p>
+<section id="uppgift-4.1" class="level4">
+<h4 class="anchored" data-anchor-id="uppgift-4.1">💪 Uppgift 4.1</h4>
+<p>Anpassa modellen <span class="math display">\[\widehat{\log(fev)}=b_0 + b_1height + b_2smoking.\]</span> Tolka koefficienterna och utför en residualanalys samt gör en prediktion enligt ovan. Ser resultaten bättre ut?</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb81"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb81-1"><a href="#cb81-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Write your code here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="uppgift-4.2" class="level4">
+<h4 class="anchored" data-anchor-id="uppgift-4.2">💪 Uppgift 4.2</h4>
+<p>Filen <code>real_estate.RData</code> innehåller försäljningspriser <code>SalesPrice</code> samt förklarande variabler för 521 sålda objekt. En mäklarfirma anlitar er som statistiker med följande uppdrag.</p>
+<p>Mäklarfirman vill att ni utvecklar en prognosmodell för försäljningspriset. För enkelhets skull ska ni anpassa en multipel linjär regression (dvs inga transformationer!) med följande förklarande variabler:</p>
+<ul>
+<li><code>SqFeet</code>: Area i kvadratfot (enhet 1000 sqft).</li>
+<li><code>Lot</code>: Tomtarea i kvadratfot (enhet 1000 sqft).</li>
+<li><code>Air</code>: Dummy-variabel som anger om objektet har luftkonditionering (1 kodat som ja, 0 kodat som nej).</li>
+</ul>
+<p>Mäklarfirman undrar följande utifrån den multipla linjära regressionen:</p>
+<ul>
+<li>Vad kan man säga om sambandet mellan <code>SqFeet</code> och försälningspriset?</li>
+<li>Vad kan man säga om sambandet mellan <code>Lot</code> och försälningspriset?</li>
+<li>Verkar det finnas något samband försälningspriset och <code>Air</code>? Hur ska sambandet tolkas?</li>
+<li>En visning äger rum snart för en lägenhet som har en area på 2.311 kvadratfot, en tomtarea på 17.312 kvadratfot och aircondition och mäklaren undrar vad den kan säljas för. Kommunicera din prediktion med en tydlig tolkning.<br>
+</li>
+<li>Har er modell några brister?</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb82"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb82-1"><a href="#cb82-1" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="at">file =</span> <span class="fu">url</span>(<span class="st">&quot;https://github.com/StatisticsSU/SDA1/blob/main/datorlab/lab4/RealEstate.RData?raw=true&quot;</span>))</span>
+<span id="cb82-2"><a href="#cb82-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Write your code here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</section>
+<section id="modellval-genom-korsvalidering" class="level2">
+<h2 class="anchored" data-anchor-id="modellval-genom-korsvalidering">5. Modellval genom Korsvalidering</h2>
+<p>I det här avsnittet ska vi gå igenom hur man väljer en modell med hjälp av korsvalidering.</p>
+<p>Datasetet <code>Penguins.RData</code> innehåller dykpuls (DHR) (<code>dive_heart_rate</code>) och tid för dykning (<code>duration</code>) för 125 pingviner. Vi vill modellera dykpulsen för en pingvin som en funktion av tiden för dykningen. Ett punkdiagram visar att en linjär regression inte kommer att anpassa data väl.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb83"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb83-1"><a href="#cb83-1" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="at">file =</span> <span class="fu">url</span>(<span class="st">&quot;https://github.com/StatisticsSU/SDA1/blob/main/datorlab/lab4/Penguins.RData?raw=true&quot;</span>))</span>
+<span id="cb83-2"><a href="#cb83-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Write your code here</span></span>
+<span id="cb83-3"><a href="#cb83-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(dive_heart_rate <span class="sc">~</span> duration, <span class="at">data =</span> penguins, <span class="at">col =</span> <span class="st">&quot;cornflowerblue&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="DatorLab4_files/figure-html/unnamed-chunk-43-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>Vi befinner oss i tredje kvadranten på Tukeys cirkel och föreslår följande två modeller</p>
+<ul>
+<li><p>Modell 1: <span class="math inline">\(DHR^{1/2} = b_0 + b_1duration\)</span>.</p></li>
+<li><p>Modell 2:<span class="math inline">\(DHR^{1/2} = b_0 + b_1duration^{1/2}\)</span>.</p></li>
+</ul>
+<p>Vi anpassar Modell 2 och plottar de predikterade värdena tillsammans med data i originalskala som vi gjorde i Avsnitt 3. Skillnaden är att när vi predikterar på originalskala så använder vi en annan invers transformation, <span class="math inline">\(\left(\widehat{y^{1/2}}\right)^2\)</span> enligt tabellen ovan.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb84"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb84-1"><a href="#cb84-1" aria-hidden="true" tabindex="-1"></a>lm_sqrtDHR_vs_duration <span class="ot">&lt;-</span> <span class="fu">lm</span>(<span class="fu">sqrt</span>(dive_heart_rate) <span class="sc">~</span> duration, <span class="at">data =</span> penguins)</span>
+<span id="cb84-2"><a href="#cb84-2" aria-hidden="true" tabindex="-1"></a>sqrty_hat <span class="ot">&lt;-</span> <span class="fu">predict</span>(lm_sqrtDHR_vs_duration) <span class="co"># sqrt scale prediction</span></span>
+<span id="cb84-3"><a href="#cb84-3" aria-hidden="true" tabindex="-1"></a>y_hat <span class="ot">&lt;-</span> sqrty_hat<span class="sc">^</span><span class="dv">2</span> <span class="co"># original scale prediction</span></span>
+<span id="cb84-4"><a href="#cb84-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(dive_heart_rate <span class="sc">~</span> duration, <span class="at">data =</span> penguins, <span class="at">col =</span> <span class="st">&quot;cornflowerblue&quot;</span>, <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">140</span>), <span class="at">main =</span> <span class="st">&quot;Modell 1&quot;</span>) <span class="co"># Data on original scale</span></span>
+<span id="cb84-5"><a href="#cb84-5" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(penguins<span class="sc">$</span>duration, y_hat, <span class="at">type =</span> <span class="st">&quot;p&quot;</span>, <span class="at">col =</span> <span class="st">&quot;lightcoral&quot;</span>)</span>
+<span id="cb84-6"><a href="#cb84-6" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="at">x =</span> <span class="st">&quot;topright&quot;</span>, <span class="at">pch =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">1</span>), <span class="at">col =</span> <span class="fu">c</span>(<span class="st">&quot;cornflowerblue&quot;</span>, <span class="st">&quot;lightcoral&quot;</span>), <span class="at">legend=</span><span class="fu">c</span>(<span class="st">&quot;Data&quot;</span>, <span class="st">&quot;Predicted&quot;</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="DatorLab4_files/figure-html/unnamed-chunk-44-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<div class="callout-note callout callout-style-default no-icon callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Extra: Rita den anpassade kurvan
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>I Avsnitt 3 lärde vi oss (extra rutan) hur man ritar in den anpassade kurvan. Vi kan göra samma sak för Modell 1.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb85"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb85-1"><a href="#cb85-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(dive_heart_rate <span class="sc">~</span> duration, <span class="at">data =</span> penguins, <span class="at">col =</span> <span class="st">&quot;cornflowerblue&quot;</span>, <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">140</span>), <span class="at">main =</span> <span class="st">&quot;Modell 1&quot;</span>) <span class="co"># Data on original scale</span></span>
+<span id="cb85-2"><a href="#cb85-2" aria-hidden="true" tabindex="-1"></a>x_min <span class="ot">&lt;-</span> <span class="fu">min</span>(penguins<span class="sc">$</span>duration) <span class="co"># Min duration </span></span>
+<span id="cb85-3"><a href="#cb85-3" aria-hidden="true" tabindex="-1"></a>x_max <span class="ot">&lt;-</span> <span class="fu">max</span>(penguins<span class="sc">$</span>duration) <span class="co"># Max duration</span></span>
+<span id="cb85-4"><a href="#cb85-4" aria-hidden="true" tabindex="-1"></a>N <span class="ot">&lt;-</span> <span class="dv">1000</span> <span class="co"># Number of grid points to predict</span></span>
+<span id="cb85-5"><a href="#cb85-5" aria-hidden="true" tabindex="-1"></a>new_x <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">duration =</span> <span class="fu">seq</span>(x_min, x_max, <span class="at">length.out =</span> N)) <span class="co"># The grid in a dataframe</span></span>
+<span id="cb85-6"><a href="#cb85-6" aria-hidden="true" tabindex="-1"></a>sqrty_hat_grid <span class="ot">&lt;-</span> <span class="fu">predict</span>(lm_sqrtDHR_vs_duration, <span class="at">newdata =</span> new_x)</span>
+<span id="cb85-7"><a href="#cb85-7" aria-hidden="true" tabindex="-1"></a>yhat_grid <span class="ot">&lt;-</span> sqrty_hat_grid<span class="sc">^</span><span class="dv">2</span> <span class="co"># Inverse transform</span></span>
+<span id="cb85-8"><a href="#cb85-8" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(penguins<span class="sc">$</span>duration, y_hat, <span class="at">type =</span> <span class="st">&quot;p&quot;</span>, <span class="at">col =</span> <span class="st">&quot;lightcoral&quot;</span>) <span class="co"># Prediction of data points</span></span>
+<span id="cb85-9"><a href="#cb85-9" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(new_x<span class="sc">$</span>duration, yhat_grid, <span class="at">type =</span> <span class="st">&quot;l&quot;</span>, <span class="at">col =</span> <span class="st">&quot;lightcoral&quot;</span>) <span class="co"># Prediction on grid</span></span>
+<span id="cb85-10"><a href="#cb85-10" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="at">x =</span> <span class="st">&quot;topright&quot;</span>, <span class="at">pch =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">1</span>, <span class="cn">NA</span>), <span class="at">lty =</span> <span class="fu">c</span>(<span class="cn">NA</span>, <span class="cn">NA</span>, <span class="dv">1</span>), <span class="at">col =</span> <span class="fu">c</span>(<span class="st">&quot;cornflowerblue&quot;</span>, <span class="st">&quot;lightcoral&quot;</span>, <span class="st">&quot;lightcoral&quot;</span>), <span class="at">legend=</span><span class="fu">c</span>(<span class="st">&quot;Data&quot;</span>, <span class="st">&quot;Predicted&quot;</span>, <span class="st">&quot;Fitted curve&quot;</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="DatorLab4_files/figure-html/unnamed-chunk-45-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</div>
+</div>
+<p>Vi anpassar Modell 2 med följande kod. Notera att Modell 2 också transformerar den förklarande variabeln. R håller reda på det åt oss om vi anger <code>I(sqrt(duration))</code> i formula-syntaxen och vi behöver inte göra något extra.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb86"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb86-1"><a href="#cb86-1" aria-hidden="true" tabindex="-1"></a>lm_sqrtDHR_vs_sqrtduration <span class="ot">&lt;-</span> <span class="fu">lm</span>(<span class="fu">sqrt</span>(dive_heart_rate) <span class="sc">~</span> <span class="fu">I</span>(<span class="fu">sqrt</span>(duration)), <span class="at">data =</span> penguins)</span>
+<span id="cb86-2"><a href="#cb86-2" aria-hidden="true" tabindex="-1"></a>sqrty_hat <span class="ot">&lt;-</span> <span class="fu">predict</span>(lm_sqrtDHR_vs_sqrtduration) <span class="co"># sqrt scale prediction</span></span>
+<span id="cb86-3"><a href="#cb86-3" aria-hidden="true" tabindex="-1"></a>y_hat <span class="ot">&lt;-</span> sqrty_hat<span class="sc">^</span><span class="dv">2</span> <span class="co"># original scale prediction</span></span>
+<span id="cb86-4"><a href="#cb86-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(dive_heart_rate <span class="sc">~</span> duration, <span class="at">data =</span> penguins, <span class="at">col =</span> <span class="st">&quot;cornflowerblue&quot;</span>, <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">140</span>), <span class="at">main =</span><span class="st">&quot;Modell 2&quot;</span>) <span class="co"># Data on original scale</span></span>
+<span id="cb86-5"><a href="#cb86-5" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(penguins<span class="sc">$</span>duration, y_hat, <span class="at">type =</span> <span class="st">&quot;p&quot;</span>, <span class="at">col =</span> <span class="st">&quot;lightcoral&quot;</span>)</span>
+<span id="cb86-6"><a href="#cb86-6" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="at">x =</span> <span class="st">&quot;topright&quot;</span>, <span class="at">pch =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">1</span>), <span class="at">col =</span> <span class="fu">c</span>(<span class="st">&quot;cornflowerblue&quot;</span>, <span class="st">&quot;lightcoral&quot;</span>), <span class="at">legend=</span><span class="fu">c</span>(<span class="st">&quot;Data&quot;</span>, <span class="st">&quot;Predicted&quot;</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="DatorLab4_files/figure-html/unnamed-chunk-46-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb87"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb87-1"><a href="#cb87-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(dive_heart_rate <span class="sc">~</span> duration, <span class="at">data =</span> penguins, <span class="at">col =</span> <span class="st">&quot;cornflowerblue&quot;</span>, <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">140</span>), <span class="at">main =</span> <span class="st">&quot;Modell 1&quot;</span>) <span class="co"># Data on original scale</span></span>
+<span id="cb87-2"><a href="#cb87-2" aria-hidden="true" tabindex="-1"></a>x_min <span class="ot">&lt;-</span> <span class="fu">min</span>(penguins<span class="sc">$</span>duration) <span class="co"># Min duration </span></span>
+<span id="cb87-3"><a href="#cb87-3" aria-hidden="true" tabindex="-1"></a>x_max <span class="ot">&lt;-</span> <span class="fu">max</span>(penguins<span class="sc">$</span>duration) <span class="co"># Max duration</span></span>
+<span id="cb87-4"><a href="#cb87-4" aria-hidden="true" tabindex="-1"></a>N <span class="ot">&lt;-</span> <span class="dv">1000</span> <span class="co"># Number of grid points to predict</span></span>
+<span id="cb87-5"><a href="#cb87-5" aria-hidden="true" tabindex="-1"></a>new_x <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">duration =</span> <span class="fu">seq</span>(x_min, x_max, <span class="at">length.out =</span> N)) <span class="co"># The grid in a dataframe</span></span>
+<span id="cb87-6"><a href="#cb87-6" aria-hidden="true" tabindex="-1"></a>sqrty_hat_grid <span class="ot">&lt;-</span> <span class="fu">predict</span>(lm_sqrtDHR_vs_sqrtduration, <span class="at">newdata =</span> new_x)</span>
+<span id="cb87-7"><a href="#cb87-7" aria-hidden="true" tabindex="-1"></a>yhat_grid <span class="ot">&lt;-</span> sqrty_hat_grid<span class="sc">^</span><span class="dv">2</span> <span class="co"># Inverse transform</span></span>
+<span id="cb87-8"><a href="#cb87-8" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(penguins<span class="sc">$</span>duration, y_hat, <span class="at">type =</span> <span class="st">&quot;p&quot;</span>, <span class="at">col =</span> <span class="st">&quot;lightcoral&quot;</span>) <span class="co"># Prediction of data points</span></span>
+<span id="cb87-9"><a href="#cb87-9" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(new_x<span class="sc">$</span>duration, yhat_grid, <span class="at">type =</span> <span class="st">&quot;l&quot;</span>, <span class="at">col =</span> <span class="st">&quot;lightcoral&quot;</span>) <span class="co"># Prediction on grid</span></span>
+<span id="cb87-10"><a href="#cb87-10" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="at">x =</span> <span class="st">&quot;topright&quot;</span>, <span class="at">pch =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">1</span>, <span class="cn">NA</span>), <span class="at">lty =</span> <span class="fu">c</span>(<span class="cn">NA</span>, <span class="cn">NA</span>, <span class="dv">1</span>), <span class="at">col =</span> <span class="fu">c</span>(<span class="st">&quot;cornflowerblue&quot;</span>, <span class="st">&quot;lightcoral&quot;</span>, <span class="st">&quot;lightcoral&quot;</span>), <span class="at">legend=</span><span class="fu">c</span>(<span class="st">&quot;Data&quot;</span>, <span class="st">&quot;Predicted&quot;</span>, <span class="st">&quot;Fitted curve&quot;</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="DatorLab4_files/figure-html/unnamed-chunk-47-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<div class="callout-note callout callout-style-default no-icon callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Extra: Rita den anpassade kurvan
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Kod som också ritar den anpassade kurvan för Modell 2.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb88"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb88-1"><a href="#cb88-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(dive_heart_rate <span class="sc">~</span> duration, <span class="at">data =</span> penguins, <span class="at">col =</span> <span class="st">&quot;cornflowerblue&quot;</span>, <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">140</span>), <span class="at">main =</span> <span class="st">&quot;Modell 2&quot;</span>) <span class="co"># Data on original scale</span></span>
+<span id="cb88-2"><a href="#cb88-2" aria-hidden="true" tabindex="-1"></a>x_min <span class="ot">&lt;-</span> <span class="fu">min</span>(penguins<span class="sc">$</span>duration) <span class="co"># Min duration </span></span>
+<span id="cb88-3"><a href="#cb88-3" aria-hidden="true" tabindex="-1"></a>x_max <span class="ot">&lt;-</span> <span class="fu">max</span>(penguins<span class="sc">$</span>duration) <span class="co"># Max duration</span></span>
+<span id="cb88-4"><a href="#cb88-4" aria-hidden="true" tabindex="-1"></a>N <span class="ot">&lt;-</span> <span class="dv">1000</span> <span class="co"># Number of grid points to predict</span></span>
+<span id="cb88-5"><a href="#cb88-5" aria-hidden="true" tabindex="-1"></a>new_x <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">duration =</span> <span class="fu">seq</span>(x_min, x_max, <span class="at">length.out =</span> N)) <span class="co"># The grid in a dataframe</span></span>
+<span id="cb88-6"><a href="#cb88-6" aria-hidden="true" tabindex="-1"></a>sqrty_hat_grid <span class="ot">&lt;-</span> <span class="fu">predict</span>(lm_sqrtDHR_vs_sqrtduration, <span class="at">newdata =</span> new_x)</span>
+<span id="cb88-7"><a href="#cb88-7" aria-hidden="true" tabindex="-1"></a>yhat_grid <span class="ot">&lt;-</span> sqrty_hat_grid<span class="sc">^</span><span class="dv">2</span> <span class="co"># Inverse transform</span></span>
+<span id="cb88-8"><a href="#cb88-8" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(penguins<span class="sc">$</span>duration, y_hat, <span class="at">type =</span> <span class="st">&quot;p&quot;</span>, <span class="at">col =</span> <span class="st">&quot;lightcoral&quot;</span>) <span class="co"># Prediction of data points</span></span>
+<span id="cb88-9"><a href="#cb88-9" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(new_x<span class="sc">$</span>duration, yhat_grid, <span class="at">type =</span> <span class="st">&quot;l&quot;</span>, <span class="at">col =</span> <span class="st">&quot;lightcoral&quot;</span>) <span class="co"># Prediction on grid</span></span>
+<span id="cb88-10"><a href="#cb88-10" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="at">x =</span> <span class="st">&quot;topright&quot;</span>, <span class="at">pch =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">1</span>, <span class="cn">NA</span>), <span class="at">lty =</span> <span class="fu">c</span>(<span class="cn">NA</span>, <span class="cn">NA</span>, <span class="dv">1</span>), <span class="at">col =</span> <span class="fu">c</span>(<span class="st">&quot;cornflowerblue&quot;</span>, <span class="st">&quot;lightcoral&quot;</span>, <span class="st">&quot;lightcoral&quot;</span>), <span class="at">legend=</span><span class="fu">c</span>(<span class="st">&quot;Data&quot;</span>, <span class="st">&quot;Predicted&quot;</span>, <span class="st">&quot;Fitted curve&quot;</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="DatorLab4_files/figure-html/unnamed-chunk-48-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</div>
+</div>
+<p>Vi ska nu välja vilken av Modell 1 eller Modell 2 är att föredra med hjälp av korsvalidering. På föreläsningen gick vi genom korsvalidering med <span class="math inline">\(K = 4\)</span> folds. Här har vi 125 pingviner så vi använder istället <span class="math inline">\(K = 5\)</span> vilket ger fem olika mängder 80% träningsdata och 20% testdata enligt figuren nedan.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAosAAAEZCAYAAAD/rG/CAAAF63RFWHRteGZpbGUAJTNDbXhmaWxlJTIwaG9zdCUzRCUyMmFwcC5kaWFncmFtcy5uZXQlMjIlMjBtb2RpZmllZCUzRCUyMjIwMjMtMDEtMjRUMTMlM0ExOCUzQTE5LjM1MFolMjIlMjBhZ2VudCUzRCUyMjUuMCUyMChXaW5kb3dzKSUyMiUyMGV0YWclM0QlMjJsSHFWejJmbkVQSDdjREtDaUIxNyUyMiUyMHZlcnNpb24lM0QlMjIyMC44LjEwJTIyJTIwdHlwZSUzRCUyMmdvb2dsZSUyMiUzRSUzQ2RpYWdyYW0lMjBpZCUzRCUyMlg1b192WVZKaThXSk8xOTFId1IwJTIyJTIwbmFtZSUzRCUyMlNpZGEtMSUyMiUzRTVWbFJjNkl3RVA0MVBIWUdDQ0ElMkJWcXZ0M2RtNW1mT3UxN2ViQ0N2a2lzU0dXTFclMkYlMkZvSUVFSlBhUGlnOTljbnc3WktZNzl0c2R0VkElMkZkbnFsdUY1ZkU5RFNBemJERmNHdWpGczI3SzZqdmpJa1hXQmRGeTdBQ0pHUXVsVUEyUHlDaEkwSmJvZ0lXUU5SMDVwd3NtOENRWTBUU0hnRFF3elJwZE50eWxObXF2T2NRUUtNQTV3b3FLJTJGU2NqakF2WHRUbzNmQVluaWNtWEw2eGFXR1M2ZDVVNnlHSWQwdVFXaGdZSDZqRkplakdhclBpUTVlU1V2eFh2RE42elZGMk9ROG8lMkI4Y0UyRzZlTEglMkZkMnp1Y2lHayUyRldjalo5SFYzS1dGNXdzNUlZTjIwdkVmTDJKR0VUNTRBNFNuQXVJT2M2QUF5OGR4RXFWajl3aFg1ZTBNYnBJUThoWHRvUjVHUk1PNHprT2N1dFNCSXJBWWo1THBIbEtrcVJQRThvMjc2TFFCVDkwQko1eFJwOWd5JTJCTGJFJTJCUjUxWHJiZXk4M0FvekRhZ3VTWE53Q25RRm5hJTJCRWlyYllwZFpHQmFYbnllVm5MN0pVJTJCOFpiRWpzU3dqS3lvbXJvbVh3d2slMkYzb3RYaDhmT2wlMkIlMkJQbnJQd2ElMkZYMlNEem8lMkJ4cWVHVXJXanlKeDgzSXRCU0d4VFo1azBhY2tDZ1Y0MENRQW9LeFhrNEdFYUY4TFEwekVvYjU2ejBHR1huRms4MVVZb0hlbkpLVWI3Ymo5Z3ozSnA5cndXbFdIRVpMVVNLbEtleklKcUVENkdLNVRWMXNWOVhGMWNpQ2ppVUxldiUyQkklMkZHUkdIeG5YVGtyU0tNc1BTdVhCNmhOeTVGTXpuWUlYQkxwVEUzYTZFOU04akRySTNsSEhVZFZ4JTJGRFpQamZzQmVTRGoyNm9jTDNOaDhLZGFEYnpBaDhuME9KbExwNEZsdDZtQnR5ZHoyWmVidWJxZm5MazZtcU54Y3RHdVpCeSUyRnhXZ2ZzUkg2azdvcGVYZ2lEOTl3Uk1iZlkwMjBLN1JDS0lwSSUyQlVnWmoybEVVNXdNYXJSWEU1JTJCSGNlMHpvblF1NmY0TG5LOWxSWnhIZFZPTU42bk42SUlGc0NjcyUyRk1LUFl4WUJmJTJGJTJGaXklMkZleVZ5Z21Da1JPWHBvRjg4R0QyVCUyQkhZSGFjWmpCWHdmMXBxYnZzczA2YlY5ZmI0VlZUekxmTXE2NnpPcmx5YnpkZWRjbTM0cm9kWHRVdTZRUjVWZUpWa3djcUR0dmhWZGZtbkJ5dlNtbmNackdnNTlVNVIxNyUyRmczamQxM01naGVKTDZUa1FVb1ZwdGVldzFLYWoxc1c1WEYwNm42MUw5eXp6a0tiT08xbzlvbTBHajF5T3RGTSUyQmUzNlRWc2RzOGRyVTBub1cxY2d1cmExMkpWcGF6N0lZMFVYcjBYNkQxdEtxJTJGZ1pkMzNudXhkNTVUcm4zdzk5NTRySCUyQjQzUmoyJTJGcjdHUTMlMkJBUSUzRCUzRCUzQyUyRmRpYWdyYW0lM0UlM0MlMkZteGZpbGUlM0XXBuvOAAAgAElEQVR4Xu3dfXQU15nn8afFiwWSsSRAQuDEIvGCeJcAew02tpMM7yYZzxgfS7N7TvBrMgnGk50dHzaWjQ05J549mzjGOHEOcs7JZiTOsGNPFhNAPklYyyBvLJB4l2wSK7bQG0RSjBAYy+rt22wpTdNSq6qru+ve/uqfmbir6t7n81RLP25Vdfv8gR8x7OfDztNypLlGWrubpP3jZsOqoxwEEEAAAQQQQMB9gbxxN8qUrKky58bb5PM5Nw8M4DMtLP628Zfy7ge/lfxAsV/InSPZGXnua3JEBBBAAAEEEEDAIIF+f790X+iQ33cc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" class="img-fluid figure-img" width="333"></p>
+<p></p><figcaption class="figure-caption">Korsvalidering med <span class="math inline">\(K=5\)</span> folds</figcaption><p></p>
+</figure>
 </div>
 </section>
 <section id="sammanfattning" class="level2">
@@ -4518,7 +5107,16 @@ I den här laborationen har du lärt dig:
 
 </section>
 
-</main> <!-- /main -->
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>De Veaux, R. D., Velleman, P., and Bock, D. (2021). Stats: Data and Models. Pearson, Harlow, United Kingdom, fifth edition.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Interaktionseffekter gås igenom i Statistisk och Dataanalys II.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>Statistik och Dataanalys II går igenom ett par icke-linjära modeller som är tolkningsbara. Den kommande nya kursen Generaliserade Linjära Modeller som läses efter Statistik och Datanalys III går igenom många fler tolkningsbara icke-linjära modeller.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>Ett modernt exempel på modeller som saknar tolkning men är extremt bra på prediktera är djupa neurala nätverk (deep learning).<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
