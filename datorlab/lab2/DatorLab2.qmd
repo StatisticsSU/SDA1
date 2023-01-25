@@ -53,17 +53,21 @@ Klicka på knappen Render i Editor-fönstret för att **kompilera** filen till e
 
 #### 💪 Uppgift 0.3
 
-Quarto säkerställer att man befinner sig i korrekt arbetsmapp när koden i dokumentet exekveras. Med korrekt arbetsmapp menas den mappen ni sparade `.qmd` filen i. Vill du komma åt dataseten via `load()` kommandot **måste dataseten vara sparade i samma mapp**.
+För att säkerställa att man befinner sig i korrekt arbetsmapp varje gång Quarto-dokumentet kompileras kan man skapa en s k code-chunk efter den s k YAML-texten (som återfinns längst upp i dokumentet, mellan de tre bindestrecken - - -). Du skapar en code-chunk genom att klicka på knappen med C och ett + i övre högra hörnet av Editorn.
 
-Ett vanligt arbetssätt är att man jobbar i RStudio i en separat `.R` fil, där man kan testa att köra kod innan den kopieras över till Quarto dokumentet. Den `.R` filen kommer inte att ha samma 'working directory' som Quarto filen. Du måste då använda `setwd()` funktionen i `.R` filen för att ställa in 'working directory'. Notera att man också välja att skriva kod i `Console` som finns längst ner i RStudio. Där måste du också ställa in rätt 'working directory'. Det är inte rekommenderat att använda `Console` eftersom koden inte sparas där. Du kanske kommer på något jättesmart som du glömmer att kopiera över till Quarto dokumentet och kan senare inte hitta det du skrev.
+![](https://github.com/StatisticsSU/SDA1/raw/main/datorlab/lab2/codechunk.png){fig-align="center" width="200" height="26"}
 
 ::: callout-note
 ### RStudios Editor ändras beroende på vilken sorts fil du har öppen
 
-Notera att ikonerna i Editor är annorlunda när du har ett Quarto-dokument öppet jämfört med tidigare när vi hade en fil med ren R-kod (dvs en `.R` fil) öppen.
+Notera att ikonerna i Editor är annorlunda när du har ett Quarto-dokument öppet jämfört med tidigare när vi hade en fil med ren R-kod öppen.
 :::
 
-Skapa en ny `.R` som du döper till `Lab2_test_code.R` och sparar i din `Lab 2` mapp. Ställ in 'working directory' till den nya mappen genom att följa anvisningarna från [Lab 1](https://statisticssu.github.io/SDA1/datorlab/lab1/DatorLab1.html#st%C3%A4lla-in-arbetsmappen-working-directory-i-r).
+Lägg till en ny code chunk och ställ in 'working directory' till den nya mappen genom att följa anvisningarna från [Lab 1](https://statisticssu.github.io/SDA1/datorlab/lab1/DatorLab1.html#st%C3%A4lla-in-arbetsmappen-working-directory-i-r).
+
+::: callout-tip
+Funktionen `setwd()` i R talar om för R vilken mapp som är 'working directory'.
+:::
 
 #### 💪 Uppgift 0.4
 
@@ -321,7 +325,7 @@ bargraph(~ Survived, data = titanic, type = "proportion",
 
 #### 💪 Uppgift 2.4
 
-Kan du se något ovanligt med stapeldiagrammet nedan? Rätta till det. 
+Rätta till felet i följande diagram:
 
 ```{r}
 x_axis_title = "Survival"

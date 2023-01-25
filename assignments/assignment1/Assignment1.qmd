@@ -90,7 +90,7 @@ Inlämningsuppgiften ska lämnas in i form av ett html dokument genererat av Qua
 
 #### 💪 Uppgift 0.1
 
-Ladda in dataseten `Boston_census_data.Rdata` och `Boston_districts_to_predict.Rdata` (länkar för att ladda ner data finns i Instruktioner avsnittet ovan).
+Ställ in arbetsmappen samt ladda in dataseten `Boston_census_data.Rdata` och `Boston_districts_to_predict.Rdata` (länkar för att ladda ner data finns i Instruktioner avsnittet ovan).
 
 ::: {.callout-note appearance="minimal"}
 # Uppgift 0.1 - Svar
