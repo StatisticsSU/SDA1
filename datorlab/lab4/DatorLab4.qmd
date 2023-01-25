@@ -98,7 +98,7 @@ Det är viktigt att ni vet hur man läser in `.RData` filer lokalt. Det kan vara
 
 **Numeriska variabler** är variabler vars utfall är numeriska värden som har betydelse. En **kategorisk variabel** kan visserligen vara kodad som ett numeriskt värde, men värdet är godtyckligt. Ett exempel är variabeln `smoking` i `FevChildren.RData`, där ja är kodat som 1 och nej kodat som 0. Vi skulle lika gärna ha kodat ja som 0 och nej som 1. Eller till och med ja som -1 och nej som 1. Det är således viktigt att förstå att även kategoriska variabler kan ha numeriska utfall, men de räknas inte som numeriska variabler för det.
 
-Ett vanligt sambandsmått mellan **två numeriska variabler** är korrelation. Korrelation mäter det linjära sambandet mellan variablerna. Stickprovskorrelationen räknas enligt $$r_{xy}=\frac{\sum z_xz_y}{n-1},$$ {#eq-sample-korr}
+Ett vanligt sambandsmått mellan **två numeriska variabler** är korrelation. Korrelation mäter det linjära sambandet mellan variablerna. Stickprovskorrelationen räknas enligt $$r_{xy}=\frac{\sum z_xz_y}{n-1},$$
 
 där $z_x$ och $z_y$ är z-värden för $x$ och $y$, respektive. Som vanligt räknas dessa som $$z_x=\frac{x-\overline{x}}{s_x}\,\,\text{och} \,\,z_y=\frac{y-\overline{y}}{s_y},$$ där $\overline{x}$ och $\overline{y}$ är stickprovsmedelvärden samt $s_x$ och $s_y$ är stickprovsstandardavvikelser. Boken använder notationen $r$ istället för $r_{xy}$ i ekvationen ovan. Notationen $r_{xy}$ betonar att man räknar korrelationen mellan de två variablerna $x$ och $y$.
 
