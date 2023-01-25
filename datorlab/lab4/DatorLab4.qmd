@@ -719,7 +719,7 @@ lm_modell1_fold1 <- lm(sqrt(dive_heart_rate) ~ duration, subset = training_fold_
 test_data <- penguins[test_fold_index, ] # Create test data for fold
 sqrty_hat_fold1 <- predict(lm_modell1_fold1, newdata = test_data) # Predict test data in sqrt scale
 y_hat_fold1 <- (sqrty_hat_fold1)^2 # Predict test data ordinary scale
-SSE_fold1 <- sum((y_hat_fold1 - test_data$dive_heart_rate)^2) 
+SSE_fold1 <- sum((test_data$dive_heart_rate - y_hat_fold1)^2) 
 ```
 
 Notera att datasetet `penguins.RData` redan ligger i slumpmässig ordning och därför kan `obs_index` innehålla observationerna i stigande ordning. Ett exempel på ett dataset som ligger i ordning (dvs inte slumpmässigt ordning) är `FevChildren.RData` där barnen i den lägsta åldersgruppen kommer först, därefter mittersta åldersgruppen följt av äldsta åldersgruppen (ni kan se det genom att klicka på datasetet i Environment-fliken). För ett dataset som ligger i ordning kan man istället definiera `obs_index <- sample(c(1:n))`. Då innehåller `obs_index` indexen $1, 2, \dots, n$ i slumpmässig ordning.
@@ -796,7 +796,7 @@ lm_modell1_fold2 <- lm(sqrt(dive_heart_rate) ~ duration, subset = training_fold_
 test_data <- penguins[test_fold_index, ] # Create test data for fold
 sqrty_hat_fold2 <- predict(lm_modell1_fold2, newdata = test_data) # Predict test data in sqrt scale
 y_hat_fold2 <- (sqrty_hat_fold2)^2 # Predict test data ordinary scale
-SSE_fold2 <- sum((y_hat_fold2 - test_data$dive_heart_rate)^2)
+SSE_fold2 <- sum((test_data$dive_heart_rate - y_hat_fold2)^2)
 
 # Fold 3:
 test_fold_index <- obs_index[c(51:75)] # Subsets indices 51:75 (test data fold 3) 
@@ -805,7 +805,7 @@ lm_modell1_fold3 <- lm(sqrt(dive_heart_rate) ~ duration, subset = training_fold_
 test_data <- penguins[test_fold_index, ] # Create test data for fold
 sqrty_hat_fold3 <- predict(lm_modell1_fold3, newdata = test_data) # Predict test data in sqrt scale
 y_hat_fold3 <- (sqrty_hat_fold3)^2 # Predict test data ordinary scale
-SSE_fold3 <- sum((y_hat_fold3 - test_data$dive_heart_rate)^2)
+SSE_fold3 <- sum((test_data$dive_heart_rate - y_hat_fold3)^2)
 
 # Fold 4:
 test_fold_index <- obs_index[c(76:100)] # Subsets indices 76:100 (test data fold 4) 
@@ -814,7 +814,7 @@ lm_modell1_fold4 <- lm(sqrt(dive_heart_rate) ~ duration, subset = training_fold_
 test_data <- penguins[test_fold_index, ] # Create test data for fold
 sqrty_hat_fold4 <- predict(lm_modell1_fold4, newdata = test_data) # Predict test data in sqrt scale
 y_hat_fold4 <- (sqrty_hat_fold4)^2 # Predict test data ordinary scale
-SSE_fold4 <- sum((y_hat_fold4 - test_data$dive_heart_rate)^2)
+SSE_fold4 <- sum((test_data$dive_heart_rate - y_hat_fold4)^2)
 ```
 
 #### 💪 Uppgift 5.4
