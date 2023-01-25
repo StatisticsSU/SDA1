@@ -18,6 +18,7 @@
 \usepackage{graphicx} % for including images
 \usepackage{pgf} % for logo
 \usepackage{colortbl}
+\usepackage{emoji}
 
 \date{} % Date, can be changed to a custom date
 
@@ -50,6 +51,13 @@
   \addtocounter{footnote}{-1}%
   \endgroup
 }
+
+\setbeamerfont{footnote}{size=\tiny}
+\setbeamertemplate{footnote}{%
+  \parindent 1em\noindent%
+  \raggedright
+  \insertfootnotetext\par%
+}
 \end_preamble
 \options xcolor=svgnames, handout
 \use_default_options false
@@ -63,12 +71,12 @@
 \font_typewriter "default" "default"
 \font_math "auto" "auto"
 \font_default_family default
-\use_non_tex_fonts false
+\use_non_tex_fonts true
 \font_sc false
 \font_osf false
 \font_sf_scale 100 100
 \font_tt_scale 100 100
-\use_microtype false
+\use_microtype true
 \use_dash_ligatures true
 \graphics default
 \default_output_format default
@@ -129,7 +137,7 @@
 \color orange
 Statistik och Dataanalys I
 \begin_inset Argument 1
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -657,7 +665,11 @@ Kasta två tärningar:
 \end_layout
 
 \begin_layout Itemize
-Napoli - Juventus: {
+Napoli - Juventus: 
+\size larger
+{
+\size default
+
 \begin_inset Graphics
 	filename figs/SSCN.svg
 	lyxscale 10
@@ -673,7 +685,43 @@ Napoli - Juventus: {
 
 \end_inset
 
-, Oavgjort, Inställd match}.
+, Oavgjort
+\size larger
+}
+\size default
+.
+\end_layout
+
+\begin_layout Itemize
+Napoli - Juventus: 
+\size larger
+{
+\size default
+
+\begin_inset Graphics
+	filename figs/SSCN.svg
+	lyxscale 10
+	scale 2
+
+\end_inset
+
+, 
+\begin_inset Graphics
+	filename figs/juve.svg
+	lyxscale 10
+	scale 4
+
+\end_inset
+
+, Oavgjort,
+\size larger
+ 
+\size default
+Inställd match
+\size larger
+}
+\size default
+.
 \end_layout
 
 \end_deeper
@@ -692,7 +740,7 @@ status open
 
 \series bold
 \color orange
-Händelse
+Händelse - exakt sju prickar
 \end_layout
 
 \end_inset
@@ -975,6 +1023,1401 @@ Relativa frekvenser stabiliseras - Stora talens lag
 \begin_inset Separator parbreak
 \end_inset
 
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Händelse - Venn diagram
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Praktiskt att visualisera händelser i ett 
+\series bold
+\color blue
+Venn diagram
+\series default
+\color inherit
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color blue
+Utfallsrummet
+\series default
+\color inherit
+ (allt som kan inträffa) visas med 
+\series bold
+\color orange
+rektangel
+\series default
+\color inherit
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color blue
+Händelser
+\series default
+\color inherit
+ ritas som cirklar, 
+\series bold
+\color orange
+ellipser
+\series default
+\color inherit
+ eller 
+\series bold
+\color orange
+rektanglar
+\series default
+\color inherit
+.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figs/event.pdf
+	lyxscale 50
+	scale 35
+
+\end_inset
+
+
+\begin_inset space \hspace{}
+\length 1cm
+\end_inset
+
+
+\begin_inset Graphics
+	filename figs/twoevents.pdf
+	lyxscale 50
+	scale 35
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Venn diagram - summa sju prickar och samma
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figs/DoubleDiceSeven.pdf
+	lyxscale 30
+	scale 15
+
+\end_inset
+
+
+\begin_inset space \hspace{}
+\length 1cm
+\end_inset
+
+
+\begin_inset Graphics
+	filename figs/DoubleDiceSame.pdf
+	lyxscale 30
+	scale 15
+
+\end_inset
+
+
+\begin_inset VSpace 0.5cm
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename figs/DoubleDiceSevenAndSame.pdf
+	lyxscale 30
+	scale 15
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Venn diagram - summa sju prickar och jämnt
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figs/DoubleDiceSame.pdf
+	lyxscale 30
+	scale 15
+
+\end_inset
+
+
+\begin_inset space \hspace{}
+\length 1cm
+\end_inset
+
+
+\begin_inset Graphics
+	filename figs/DoubleDiceTen.pdf
+	lyxscale 30
+	scale 15
+
+\end_inset
+
+
+\begin_inset VSpace 0.5cm
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename figs/DoubleDiceTenAndSame.pdf
+	lyxscale 30
+	scale 15
+
+\end_inset
+
+
+\begin_inset space \hspace{}
+\length 1cm
+\end_inset
+
+
+\begin_inset Graphics
+	filename figs/DoubleDiceTenAndSameAbstract.pdf
+	lyxscale 30
+	scale 15
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Disjunkta händelser
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "45col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\series bold
+\color blue
+Disjunkta
+\series default
+\color inherit
+ händelser
+\begin_inset Newline newline
+\end_inset
+
+inga gemensamma element
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hspace{}
+\length 0.5cm
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "45col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\series bold
+\color blue
+Överlappande
+\series default
+\color inherit
+ händelser
+\begin_inset Newline newline
+\end_inset
+
+med gemensamma element
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "45col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figs/twoevents.pdf
+	lyxscale 50
+	scale 35
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hspace{}
+\length 0.5cm
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "45col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figs/twoeventsoverlap.pdf
+	lyxscale 50
+	scale 35
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+blfootnote{
+\backslash
+tiny 
+\backslash
+emoji{flag-united-states} Disjunkt = 
+\backslash
+textcolor{orange} {
+\backslash
+textbf{Disjoint}}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Komplementshändelsen
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+\color blue
+Komplementet
+\series default
+\color inherit
+ till A inträffar när 
+\series bold
+\color orange
+A inte inträffar
+\series default
+\color inherit
+.
+  
+\begin_inset VSpace smallskip
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+Vi skriver 
+\begin_inset Formula $\mathbf{A}^{c}$
+\end_inset
+
+ där 
+\begin_inset Formula $c$
+\end_inset
+
+ står för engelskans 
+\series bold
+\color orange
+C
+\series default
+\color inherit
+omplement.
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figs/complement.pdf
+	lyxscale 50
+	scale 25
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -0.35cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "83col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Itemize
+
+\size footnotesize
+Tärningar
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\size footnotesize
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ = {udda antal prickar på tärning} = {1,3,5}.
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+\begin_inset Formula $\mathbf{A}^{c}$
+\end_inset
+
+ = {jämnt antal prickar på tärning} = {2,4,6}.
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\size footnotesize
+Inflation
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\size footnotesize
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ = {inflationen nästa månad 
+\begin_inset Formula $\leq2$
+\end_inset
+
+}.
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+\begin_inset Formula $\mathbf{A}^{c}$
+\end_inset
+
+ = {inflationen nästa månad 
+\begin_inset Formula $>2$
+\end_inset
+
+}.
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\size footnotesize
+Mjukvarubuggar
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\size footnotesize
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ = {ingen bugg i programvaran}.
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+\begin_inset Formula $\mathbf{A}^{c}$
+\end_inset
+
+ = {åtminstone en bugg} = {1 bugg, 2 buggar, ...}
+\end_layout
+
+\end_deeper
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "15col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset VSpace 0.4cm
+\end_inset
+
+
+\begin_inset Graphics
+	filename figs/flaticons/dicered.svg
+	lyxscale 5
+	scale 3
+
+\end_inset
+
+
+\begin_inset VSpace 0.5cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figs/flaticons/grocery.svg
+	lyxscale 5
+	scale 7
+
+\end_inset
+
+
+\begin_inset VSpace 0.3cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figs/flaticons/bug.svg
+	lyxscale 5
+	scale 4
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Snitthändelsen
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+\color blue
+Snitthändelsen
+\series default
+\color inherit
+ är händelsen där 
+\series bold
+\color blue
+både A och B
+\series default
+\color inherit
+ inträffar.
+\begin_inset VSpace smallskip
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+Vi skriver 
+\begin_inset Formula $\textcolor{orange}{\mathbf{A\text{ och }B}}$
+\end_inset
+
+ eller 
+\begin_inset Formula $\textcolor{orange}{\mathbf{\mathbf{A}\cap\mathbf{B}}}$
+\end_inset
+
+.
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figs/intersection.pdf
+	lyxscale 50
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Disjunkta händelser snitt är den 
+\series bold
+\color blue
+tomma mängden
+\series default
+\color inherit
+ 
+\begin_inset Formula $\emptyset$
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+\textbf{A}\text{ och }\textbf{B}\text{ disjunkta }\quad\Longleftrightarrow\quad\textbf{A}\cap\textbf{B}=\emptyset
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+Lågkonjunktur 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+large 
+\backslash
+emoji{anxious-face-with-sweat}}
+\end_layout
+
+\end_inset
+
+
+\size default
+
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\size footnotesize
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ = {BNP-tillväxt kvartal 1 
+\begin_inset Formula $<0$
+\end_inset
+
+}
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+\begin_inset Formula $\mathbf{B}$
+\end_inset
+
+ = {BNP-tillväxt kvartal 2 
+\begin_inset Formula $<0$
+\end_inset
+
+}
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+\begin_inset Formula $\mathbf{A\cap\textbf{B}}$
+\end_inset
+
+ = {Negativ BNP-tillväxt två kvartal i rad}
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+blfootnote{
+\backslash
+tiny 
+\backslash
+emoji{flag-united-states} Snitt = 
+\backslash
+textcolor{orange} {
+\backslash
+textbf{Intersection}}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Unionhändelsen
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+\color blue
+Unionhändelsen
+\series default
+\color inherit
+ är händelsen där
+\series bold
+\color blue
+ A och/eller B
+\series default
+\color inherit
+ inträffar.
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color blue
+Minst en
+\series default
+\color inherit
+ av händelserna inträffar.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figs/union.pdf
+	lyxscale 50
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Universitetstudier 
+\size footnotesize
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+large 
+\backslash
+emoji{woman-student}}
+\end_layout
+
+\end_inset
+
+
+\size default
+
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\size footnotesize
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ = {Kommer in på kurs på betyg}
+\size default
+
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+\begin_inset Formula $\mathbf{B}$
+\end_inset
+
+ = {Kommer in på kurs på högskoleprov}
+\size default
+
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+\begin_inset Formula $\mathbf{A\cup\textbf{B}}$
+\end_inset
+
+ = {Kommer in på kurs}
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Sannolikheter
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tcolorbox}[colback=verylightgray]
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+textcolor{blue}{
+\backslash
+textbf{Sannolikheten}} $P(A)$ för händelse $A$ på utfallsrummet $S$ måste
+ uppfylla:
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{enumerate}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+item $0
+\backslash
+leq P(A)
+\backslash
+leq1$
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+item $P(S)=1$
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+item $P(A
+\backslash
+cup B)=P(A)+P(B)$ om $A$ och $B$ är 
+\backslash
+textbf{disjunkta}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{enumerate}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tcolorbox}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+På ren svenska:
+\end_layout
+
+\begin_layout Enumerate
+En sannolikhet är ett tal mellan 0 och 1.
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Sannolikheten för en 
+\series bold
+\color blue
+säker händelse
+\series default
+\color inherit
+ är 1.
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Sannolikheten för att åtminstone en av två disjunkta händelser inträffar
+ är summan av händelsernas sannolikheter.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Komplementsatsen
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $A$
+\end_inset
+
+ och 
+\begin_inset Formula $A^{c}$
+\end_inset
+
+ är disjunkta.
+ Kan inte inträffa samtidigt.
+\end_layout
+
+\begin_layout Itemize
+Någon av 
+\begin_inset Formula $A$
+\end_inset
+
+ eller 
+\begin_inset Formula $A^{c}$
+\end_inset
+
+ 
+\emph on
+måste
+\emph default
+ inträffa.
+\begin_inset Formula 
+\[
+P(A)+P(A^{c})=1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tcolorbox}[colback=verylightgray]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+textcolor{blue}{
+\backslash
+textbf{Komplementsatsen}}
+\end_layout
+
+\begin_layout Plain Layout
+
+$$P(A^{c})=1-P(A)$$
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tcolorbox}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figs/complement.pdf
+	lyxscale 50
+	scale 25
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ = {ingen bugg i koden}.
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+\begin_inset Formula $\mathbf{A}^{c}$
+\end_inset
+
+ = {bugg i koden} = {1 bugg, 2 buggar, ...}
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P(\left\{ \text{bugg i koden}\right\} )=1-P(\text{\left\{  \text{ingen bugg i koden}\right\}  })$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Additionsatsen
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+\color blue
+Additionssatsen
+\series default
+\color inherit
+ 
+\begin_inset Formula 
+\[
+P(A\cup B)=P(A)+P(B)-P(A\cap B)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Måste dra bort snittet för det räknas två ggr.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figs/union.pdf
+	lyxscale 50
+	scale 30
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figs/intersection.pdf
+	lyxscale 50
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
 
 \end_layout
 

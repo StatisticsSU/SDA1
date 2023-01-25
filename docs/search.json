@@ -718,7 +718,7 @@
     "href": "assignments/assignment1/Assignment1.html#ladda-in-data",
     "title": "Statistik och dataanalys I, 15 hp",
     "section": "0. Ladda in data",
-    "text": "0. Ladda in data\n\n💪 Uppgift 0.1\nStäll in arbetsmappen samt ladda in dataseten Boston_census_data.Rdata och Boston_districts_to_predict.Rdata (länkar för att ladda ner data finns i Instruktioner avsnittet ovan).\n\n\n\n\n\n\nUppgift 0.1 - Svar\n\n\n\n\n# Write your code here\nload(file = url(\"https://github.com/StatisticsSU/SDA1/blob/main/assignments/assignment1/Boston_census_data.RData?raw=true\"))"
+    "text": "0. Ladda in data\n\n💪 Uppgift 0.1\nLadda in dataseten Boston_census_data.Rdata och Boston_districts_to_predict.Rdata (länkar för att ladda ner data finns i Instruktioner avsnittet ovan).\n\n\n\n\n\n\nUppgift 0.1 - Svar\n\n\n\n\n# Write your code here\nload(file = url(\"https://github.com/StatisticsSU/SDA1/blob/main/assignments/assignment1/Boston_census_data.RData?raw=true\"))"
   },
   {
     "objectID": "assignments/assignment1/Assignment1.html#kriminalitet-i-boston",
@@ -957,5 +957,12 @@
     "title": "Statistik och dataanalys I, 15 hp",
     "section": "A. Appendix",
     "text": "A. Appendix\nLista över några vanliga argument i grafer\n\ncol = färg, kan markeras med siffror eller med namnet på färgen, oftast med små bokstäver. Glöm ej att texten måste ligga inom citattecken.\nmain = rubrik på plotten, detta sätts till en textsträng, alltså en text inom citattecken.\nxlab = rubrik på x-axeln, detta sätts till en textsträng, alltså en text inom citattecken.\nylab = rubrik på y-axeln, detta sätts till en textsträng, alltså en text inom citattecken.\nxlim = definitionsområde för x-axeln. Exempelvis betyder xlim = c(0, 14.3) att det lägsta värdet som ritas kommer att vara 0 och det högsta värdet kommer att vara 14.3 (på x-axeln).\nylim = definitionsområde för y-axeln. Exempelvis betyder ylim = c(-2, 20.7) att det lägsta värdet som ritas kommer att vara -2 och det högsta värdet kommer att vara 20.7 (på y-axeln).\nlwd = tjocklecken på linjer (eller prickar) i ett linjediagram (spridningsdiagram), anges med ett nummer.\nlty = typ av linje (rak, streckad, prickad etc) i ett linjediagram, anges med ett nummer.\npch = typ av prick (rund, fyrkantig + * etc), sätts till ett nummer.\nbreaks = antal staplar i ett histogram.\ncex = justering av etiketternas storlek i en figur (exempelvis cex = 0.5 i en legend() funktion minskar storleken som “legend-texten” tar upp i en figur med hälften). Finns även exempelvis cex.axis, cex.main för att justera storleken av texter på axlar respektive rubrik.\nbg = bakgrundsfärg i en figur.\ncol.main = rubrikens färg.\ncol.lab = färger för rubrikerna på axlarna.\nfont = specificerar vilken typ av text man vill ha, exempelvis ger font = 3 kursiv text."
+  },
+  {
+    "objectID": "observable/bayestheorem.html",
+    "href": "observable/bayestheorem.html",
+    "title": "Bayes sats",
+    "section": "",
+    "text": "Den här widgeten låter dig undersöka hur tillförlitliga hemtest för Covid är genom att beräkna den betingade sannolikheten P(covid | positivt test) med hjälp av Bayes sats."
   }
 ]

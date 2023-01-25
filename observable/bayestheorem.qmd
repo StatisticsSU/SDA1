@@ -1,0 +1,9 @@
+---
+title: "Bayes sats"
+format: html
+---
+
+Den här widgeten låter dig undersöka hur tillförlitliga hemtest för Covid är genom att beräkna den betingade sannolikheten P(covid | positivt test) med hjälp av Bayes sats.
+<iframe width="100%" height="271" frameborder="0"
+  src="https://observablehq.com/embed/238f7d0a31d24611@176?cells=viewof+Labels%2Cviewof+probs%2Cresult_printout">
+</iframe>
