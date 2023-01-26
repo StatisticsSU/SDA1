@@ -633,7 +633,6 @@ Datasetet `Penguins.RData` innehåller dykpuls (DHR) (`dive_heart_rate`) och tid
 
 ```{r}
 load(file = url("https://github.com/StatisticsSU/SDA1/blob/main/datorlab/lab4/Penguins.RData?raw=true"))
-# Write your code here
 plot(dive_heart_rate ~ duration, data = penguins, col = "cornflowerblue")
 ```
 

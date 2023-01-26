@@ -39,7 +39,7 @@ Läs: SDM Kapitel 6 | [Slides](/slides/F7.pdf)
 Läs: SDM Kapitel 7 | [Slides](/misc/larry.png)\
 [widget - linjär regression utan population](/observable/linreg_simple_estimates.qmd) | [widget - linjär regression med population](/observable/linreg_simple.qmd)
 
-**Föreläsning 9 - Multipel linjär regression.**\
+**Föreläsning 9 - Multipel linjär regression och modellval.**\
 Läs: SDM Kapitel 8-9 | [Slides](/misc/larry.png)\
 Extramaterial: [widget - icke-linjär regression](/observable/ickelinregression.qmd)
 
