@@ -17,7 +17,8 @@ Extramaterial: [TedTalk om sannolikheter](https://youtu.be/0m5bg2hpHNw)
 
 **Föreläsning 13 - Betingade sannolikheter och Bayes sats.**\
 Läs: SDM Kapitel 13 | [Slides](/misc/larry.png)\
-Interaktivt: [widget - bayessats](/observable/bayestheorem.qmd)
+Interaktivt: [widget - bayessats](/observable/bayestheorem.qmd)\
+Extramaterial: [Artikel om Bayes sats och snabbtest för Covid-19](https://www.varsity.co.uk/science/21149)
 
 **Föreläsning 14 - Slumpvariabler och deras egenskaper.**\
 Läs: SDM Kapitel 14 | [Slides](/misc/larry.png)
