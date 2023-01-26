@@ -22,7 +22,7 @@ Föreläsning 9 - **Icke-linjär regression**: <br>
 
 #### Del 2 - Sannolikhetsmodeller och Inferens
 
-Föreläsning 11 - **Slantsingling och stora talens lag**: <br>
+Föreläsning 12 - **Slantsingling och stora talens lag**: <br>
 [slantsingling - widget](/observable/storatalenslag_bernoulli.qmd) | [slantsingling - notebook](https://observablehq.com/@mattiasvillani/stora-talens-slantsingling)
 
 Föreläsning 13 - **Bayes sats**: <br>
