@@ -33,9 +33,9 @@ Läs: SDM Kapitel 4 | [Slides](/slides/F5.pdf)
 Läs: SDM Kapitel 5 | [Slides](/slides/F6.pdf) 
 
 **Föreläsning 7 - Samband mellan numeriska variabler.**\
-Läs: SDM Kapitel 6 | [Slides](/misc/larry.png) 
+Läs: SDM Kapitel 6 | [Slides](/slides/F7.pdf) 
 
-**Föreläsning 8 - Enkel linjär regression.**\
+**Föreläsning 8 - Enkel linjär och icke-linjär regression.**\
 Läs: SDM Kapitel 7 | [Slides](/misc/larry.png)\
 [widget - linjär regression utan population](/observable/linreg_simple_estimates.qmd) | [widget - linjär regression med population](/observable/linreg_simple.qmd)
 
