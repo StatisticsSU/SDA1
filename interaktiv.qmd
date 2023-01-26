@@ -22,7 +22,9 @@ Föreläsning 9 - **Icke-linjär regression**: <br>
 
 #### Del 2 - Sannolikhetsmodeller och Inferens
 
-<br>
+Föreläsning 11 - **Slantsingling och stora talens lag**: <br>
+[slantsingling - widget](/observable/storatalenslag_bernoulli.qmd) | [slantsingling - notebook](https://observablehq.com/@mattiasvillani/stora-talens-slantsingling)
+
 Föreläsning 13 - **Bayes sats**: <br>
 [widget](/observable/bayestheorem.qmd) | [notebook](https://observablehq.com/@mattiasvillani/bayes-theorem-for-events)
 
@@ -30,7 +32,7 @@ Föreläsning 16 - **Student-*t* fördelning**: <br>
 [widget](/observable/studentt.qmd) | [notebook](https://observablehq.com/@mattiasvillani/student-t)
 
 Föreläsning 18 - **Stora talens lag**: <br>
-[widget](/observable/storatalenslag.qmd) | [notebook](https://observablehq.com/@mattiasvillani/stora-talens-lag)
+[normalpopulation - widget](/observable/storatalenslag.qmd) | [normalpopulation - notebook](https://observablehq.com/@mattiasvillani/stora-talens-lag-allman)
 
 Föreläsning 18 - **Centrala gränsvärdessatsen**: <br>
 [widget](/observable/cgs.qmd) | [notebook](https://observablehq.com/@mattiasvillani/cgs)
