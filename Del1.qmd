@@ -36,11 +36,11 @@ Läs: SDM Kapitel 5 | [Slides](/slides/F6.pdf)
 Läs: SDM Kapitel 6 | [Slides](/slides/F7.pdf) 
 
 **Föreläsning 8 - Enkel linjär och icke-linjär regression.**\
-Läs: SDM Kapitel 7 | [Slides](/misc/larry.png)\
+Läs: SDM Kapitel 7 | [Slides](/slides/F8.pdf)\
 [widget - linjär regression utan population](/observable/linreg_simple_estimates.qmd) | [widget - linjär regression med population](/observable/linreg_simple.qmd)
 
 **Föreläsning 9 - Multipel linjär regression och modellval.**\
-Läs: SDM Kapitel 8-9 | [Slides](/misc/larry.png)\
+Läs: SDM Kapitel 8-9 | [Slides](/slides/F9.pdf)\
 Extramaterial: [widget - icke-linjär regression](/observable/ickelinregression.qmd)
 
 **Föreläsning 10 - Populationer och stickprov. Undersökningar och experiment.**\
