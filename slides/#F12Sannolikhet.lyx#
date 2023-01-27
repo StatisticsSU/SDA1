@@ -2687,6 +2687,70 @@ Måste dra bort snittet
 
 \end_layout
 
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Kombinatorik
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+\color blue
+Additionssatsen
+\series default
+\color inherit
+ 
+\begin_inset Formula 
+\[
+P(A\cup B)=P(A)+P(B)-P(A\cap B)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Måste dra bort snittet 
+\begin_inset Formula $A\cup B$
+\end_inset
+
+ för det räknas två ggr.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figs/union.pdf
+	lyxscale 50
+	scale 30
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figs/intersection.pdf
+	lyxscale 50
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Standard
 
 \end_layout
