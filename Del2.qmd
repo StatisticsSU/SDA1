@@ -13,11 +13,12 @@ Under vissa föreläsningar länkar vi till `Extramaterial`. Det är material so
 
 **Föreläsning 12 - Osäkerhet och Sannolikhet.**\
 Läs: SDM Kapitel 12 och 13 | [Slides](/misc/larry.png)\
+Interaktivt: [slantsingling](/observable/storatalenslag_bernoulli.qmd)\
 Extramaterial: [TedTalk om sannolikheter](https://youtu.be/0m5bg2hpHNw)
 
 **Föreläsning 13 - Betingade sannolikheter och Bayes sats.**\
 Läs: SDM Kapitel 13 | [Slides](/misc/larry.png)\
-Interaktivt: [widget - bayessats](/observable/bayestheorem.qmd)\
+Interaktivt: [bayessats](/observable/bayestheorem.qmd)\
 Extramaterial: [Artikel om Bayes sats och snabbtest för Covid-19](https://www.varsity.co.uk/science/21149)
 
 **Föreläsning 14 - Slumpvariabler och deras egenskaper.**\
@@ -28,7 +29,7 @@ Läs: SDM Kapitel 15.1, 15.2, 15.3, 15.6 | [Slides](/misc/larry.png)
 
 **Föreläsning 16 - Kontinuerliga sannolikhetsmodeller.**\
 Läs: SDM Kapitel 5.3, 15.7 | [Slides](/misc/larry.png) \
-Interaktivt: [widget - student-t](/observable/studentt.qmd)\
+Interaktivt: [student-t](/observable/studentt.qmd)\
 Extramaterial: [Notebook - student-t](https://observablehq.com/@mattiasvillani/student-t)
 
 **Föreläsning 17 - Samplingfördelningar och konfidensintervall för en andel.**\
@@ -36,7 +37,7 @@ Läs: SDM Kapitel 16 | [Slides](/misc/larry.png)
 
 **Föreläsning 18 - Konfidensintervall för ett väntevärde. Stora talens lag. Centrala gränsvärdessatsen.**\
 Läs: SDM Kapitel 17 | [Slides](/misc/larry.png)\
-Interaktivt: [widget - centrala gränsvärdessatsen](/observable/storatalenslag.qmd) | [widget - centrala gränsvärdessatsen](/observable/cgs.qmd)\
+Interaktivt: [stora talens lag](/observable/storatalenslag.qmd) | [centrala gränsvärdessatsen](/observable/cgs.qmd)\
 Extramaterial:  [Notebook - stora talens lag](https://observablehq.com/@mattiasvillani/stora-talens-lag) | [Notebook - centrala gränsvärdessatsen](https://observablehq.com/@mattiasvillani/cgs)
 
 **Föreläsning 19 - Hypotestest.**\

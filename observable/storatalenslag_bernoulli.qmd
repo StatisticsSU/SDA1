@@ -1,0 +1,9 @@
+---
+title: "Stora talens lag - slantsingling"
+format: html
+---
+
+
+<iframe width="100%" height="564" frameborder="0"
+  src="https://observablehq.com/embed/@mattiasvillani/stora-talens-slantsingling@929?cells=viewof+samplesize%2Cviewof+p%2Cpltkonv">
+</iframe>

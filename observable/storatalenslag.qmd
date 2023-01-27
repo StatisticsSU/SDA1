@@ -1,22 +1,24 @@
 ---
-title: "Stora talens lag"
+title: "Stora talens lag - normalfördelning"
 format: html
 ---
 
-## Slantsingling
+Låt $$X_1,X_2,\ldots,X_n   \overset{\mathrm{iid}}{\sim} \operatorname{N}(\mu,\sigma^2)$$
 
-<iframe width="100%" height="987" frameborder="0"
-  src="https://observablehq.com/embed/@mattiasvillani/stora-talens-lag@838?cells=text1%2Ctext2%2Csliders%2Cflip_pic%2Cmake_pic">
+Då gäller att
+$$
+\bar X \sim \operatorname{N}(\mu,\sigma^2/n)
+$$
+Vi ser här stora talens lag in action: eftersom variansen minskar när $n$ ökar kommer medelvärdet att ligga allt närmare väntevärdet $\mu$ i stora stickprov. Det visas i de interaktiva illustrationerna nedan.
+
+## Medelvärdet stabiliseras kring $\mu$
+
+<iframe width="100%" height="591" frameborder="0"
+  src="https://observablehq.com/embed/@mattiasvillani/stora-talens-lag-allman?cells=viewof+samplesize%2Cviewof+param%2Cpltkonv">
 </iframe>
 
-::: {style="font-size: smaller;"}
-Initial plot från Marc McClures [Law of Large
-Numbers](https://observablehq.com/@mcmcclur/law-of-large-numbers)
-:::
+## Samplingfördelningen koncentreras kring $\mu$
 
-
-## Normalpopulation
-
-<iframe width="100%" height="892" frameborder="0"
-  src="https://observablehq.com/embed/@mattiasvillani/stora-talens-lag@833?cells=textNormalPop%2Cviewof+userinputs%2Cprob_within_eps%2Cplt">
+<iframe width="100%" height="681" frameborder="0"
+  src="https://observablehq.com/embed/@mattiasvillani/stora-talens-lag-allman?cells=viewof+userinputs%2Cprob_within_eps%2Cplt">
 </iframe>
