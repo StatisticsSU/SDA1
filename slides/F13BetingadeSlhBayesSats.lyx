@@ -320,6 +320,33 @@ Intresse:
 \end_inset
 
 
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Tecknet 
+\series bold
+\color orange
+|
+\series default
+\color inherit
+ läses 'givet' eller betingat på.
+ 
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Sannolikheten för att 
+\begin_inset Formula $A$
+\end_inset
+
+ inträffar givet att B har inträffat.
 \begin_inset VSpace bigskip
 \end_inset
 
@@ -389,10 +416,223 @@ P(B|A)=\frac{P(A\cap B)}{P(A)}
 \end_layout
 
 \begin_layout Itemize
+Betinga på 
+\begin_inset Formula $A$
+\end_inset
+
+ innebär att blå cirkeln blir vårt nya utfallsrum.
+ 
+\end_layout
+
+\begin_layout Itemize
+Inget utanför blå cirkeln kan längre inträffa.
+\end_layout
+
+\begin_layout Itemize
 Covid
 \begin_inset Formula 
 \[
 P(\text{covid}\vert\text{positivt hemtest})=\frac{P(\text{positivt hemtest}\cap\text{covid})}{P(\text{positivt hemtest})}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Betingad sannolikhet
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Betingad sannolikhet
+\begin_inset Formula 
+\[
+P(B|A)=\frac{P(A\cap B)}{P(A)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Betinga på 
+\begin_inset Formula $A$
+\end_inset
+
+ innebär att blå cirkeln blir vårt nya utfallsrum.
+ 
+\end_layout
+
+\begin_layout Itemize
+Inget utanför blå cirkeln kan längre inträffa.
+\end_layout
+
+\begin_layout Itemize
+Betinga på 
+\begin_inset Formula $A$
+\end_inset
+
+ 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $A$
+\end_inset
+
+ is the new 
+\begin_inset Formula $S$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figs/conditional_prob_lifting_out.pdf
+	lyxscale 50
+	scale 35
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Betingad sannolikhet korstabell
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Matias smartphone data.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Multiplikationssatsen
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+\color blue
+Multiplikationsregeln
+\series default
+\color inherit
+
+\begin_inset Formula 
+\[
+P(A\cap B)=P(A)P(B|A)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Oberoende händelser - vetskapen om att 
+\begin_inset Formula $A$
+\end_inset
+
+ har inträffat påverkar inte sannolikheten för 
+\begin_inset Formula $B$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+P(B|A)=P(B)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color blue
+Oberoende händelser
+\series default
+\color inherit
+
+\begin_inset Formula 
+\[
+P(A\cap B)=P(A)P(B)
 \]
 
 \end_inset

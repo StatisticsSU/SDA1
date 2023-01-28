@@ -12,7 +12,7 @@ Under vissa föreläsningar länkar vi till `Extramaterial`. Det är material so
 ### **Föreläsningar**
 
 **Föreläsning 12 - Osäkerhet och Sannolikhet.**\
-Läs: SDM Kapitel 12 och 13 | [Slides](/misc/larry.png)\
+Läs: SDM Kapitel 12 och 13 | [Slides](/slides/F12Sannolikhet.pdf)\
 Interaktivt: [slantsingling](/observable/storatalenslag_bernoulli.qmd)\
 Extramaterial: [TedTalk om sannolikheter](https://youtu.be/0m5bg2hpHNw)
 
@@ -66,7 +66,7 @@ Läs: [Slides](/misc/larry.png)
 Övningarna i kursboken [Stats: Data and Models (SDM)](https://nordics.pearson.com/products/stats-data-and-models-5th-global-edition-e-book?variant=42945920630933) hänvisas till med kapitelnummer följt av övningsnummer.
 
 **Övning 7 - Sannolikheter för händelser. Kombinatorik.**\
-Uppgifter: SDM 12-13
+Uppgifter: SDM 12.2, 12.5, 12.7, 12.9, 12.12, 12.16, 12.21, 12.27, 12.29, 12.31, 12.34, 12.36, 12.39, 12.41, 12.49, 12.52.
 
 **Övning 8 - Oberoende händelser. Betingning och Bayes sats.**\
 Uppgifter: SDM 13 

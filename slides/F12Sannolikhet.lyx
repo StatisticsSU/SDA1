@@ -14,11 +14,15 @@
   \beamertemplatenavigationsymbolsempty
 }
 
-
+\usepackage[many]{tcolorbox}
 \usepackage{graphicx} % for including images
 \usepackage{pgf} % for logo
 \usepackage{colortbl}
 \usepackage{emoji}
+\usepackage{tabularx}
+\usepackage{colortbl}
+\usepackage{array}
+\tcbuselibrary{skins}
 
 \date{} % Date, can be changed to a custom date
 
@@ -39,11 +43,22 @@
 \definecolor{lorange}{RGB}{255, 178, 102}
 \definecolor{llorange}{RGB}{255, 229,204 }
 \definecolor{verylightgray}{RGB}{246, 246, 246}
+\definecolor{cobalt}{HTML}{0047AB}
+\definecolor{lightsteelblue}{HTML}{b0c4de}
+\definecolor{burntoranger}{HTML}{CC5500}
 
 \setbeamertemplate{itemize item}{\color{orange}$\blacksquare$}
 \setbeamertemplate{itemize subitem}{\tiny \color{lightgray}$\blacksquare$}
 
-\usepackage{tcolorbox}
+\newcommand\boldblue[1]{\textcolor{cobalt}{\textbf{#1}}}
+\newcommand\boldorange[1]{\textcolor{burntoranger}{\textbf{#1}}}
+\def\*#1{\mathbf{#1}}
+
+\newcolumntype{Y}{>{\raggedleft\arraybackslash}X}
+\tcbset{tab2/.style={enhanced, fontupper=\small,
+colback=lightgray!10!white,colframe=cobalt!50!black,colbacktitle=lightsteelblue!40!white,
+coltitle=black,center title}}
+
 
 \newcommand\blfootnote[1]{%
   \begingroup
@@ -312,6 +327,13 @@ Sannolikhetsberäkningar
 
 \end_layout
 
+\begin_layout Itemize
+
+\series bold
+\color blue
+Kombinatorik
+\end_layout
+
 \end_deeper
 \begin_layout Standard
 \begin_inset Separator parbreak
@@ -328,7 +350,62 @@ status open
 
 \series bold
 \color orange
-Sannolikheter för dataanalys?
+\begin_inset Quotes eld
+\end_inset
+
+Inga fler tärningar och kulor i urnor!
+\begin_inset Quotes erd
+\end_inset
+
+
+\series default
+\color inherit
+ 
+\begin_inset Graphics
+	filename figs/man-facepalming.png
+	lyxscale 50
+	scale 25
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figs/twitter_rolling_dice.png
+	lyxscale 50
+	scale 19
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Sannolikheter för dataanalys
 \end_layout
 
 \end_inset
@@ -353,10 +430,9 @@ Sannolikhetslära
 
 \begin_deeper
 \begin_layout Itemize
-Sannolikheten att bli träffad av blixten.
- 
+Sannolikheten för en kärnkraftsolycka 
 \begin_inset Graphics
-	filename figs/flaticons/bolt.svg
+	filename figs/flaticons/radiation.svg
 	lyxscale 10
 	scale 3
 
@@ -2424,7 +2500,7 @@ säker händelse
 \begin_layout Enumerate
 
 \size small
-Sannolikheten för att en händelse 
+Sannolikheten att en händelse 
 \series bold
 \color blue
 inte
@@ -2440,13 +2516,19 @@ inte
 \begin_layout Enumerate
 
 \size small
-Sannolikheten för att 
+Sannolikheten att 
 \series bold
 \color blue
 åtminstone en
 \series default
 \color inherit
- av två disjunkta händelser inträffar är summan av händelsernas sannolikheter.
+ av två händelser som 
+\series bold
+\color blue
+inte kan inträffa samtidigt
+\series default
+\color inherit
+ är summan av händelsernas sannolikheter.
 \begin_inset VSpace smallskip
 \end_inset
 
@@ -2456,7 +2538,7 @@ Sannolikheten för att
 \begin_layout Enumerate
 
 \size small
-Sannolikheten för att två oberoende händelser 
+Sannolikheten att två oberoende händelser 
 \series bold
 \color blue
 båda
@@ -2481,7 +2563,7 @@ status open
 
 \series bold
 \color orange
-Komplementsatsen
+Komplementsregeln
 \end_layout
 
 \end_inset
@@ -2498,7 +2580,13 @@ Komplementsatsen
 \begin_inset Formula $A^{c}$
 \end_inset
 
- är disjunkta.
+ är 
+\series bold
+\color blue
+disjunkta
+\series default
+\color inherit
+.
  Kan inte inträffa samtidigt.
 \end_layout
 
@@ -2543,7 +2631,7 @@ begin{tcolorbox}[colback=verylightgray]
 \backslash
 textcolor{blue}{
 \backslash
-textbf{Komplementsatsen}}
+textbf{Komplementsregeln}}
 \end_layout
 
 \begin_layout Plain Layout
@@ -2624,7 +2712,7 @@ status open
 
 \series bold
 \color orange
-Additionsatsen
+Additionsregeln
 \end_layout
 
 \end_inset
@@ -2633,18 +2721,41 @@ Additionsatsen
 \end_layout
 
 \begin_deeper
-\begin_layout Itemize
+\begin_layout Standard
+\begin_inset ERT
+status open
 
-\series bold
-\color blue
-Additionssatsen
-\series default
-\color inherit
- 
-\begin_inset Formula 
-\[
-P(A\cup B)=P(A)+P(B)-P(A\cap B)
-\]
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tcolorbox}[colback=verylightgray]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+textcolor{blue}{
+\backslash
+textbf{Additionsregeln}}
+\end_layout
+
+\begin_layout Plain Layout
+
+$$P(A
+\backslash
+cup B)=P(A)+P(B)-P(A
+\backslash
+cap B)$$
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tcolorbox}
+\end_layout
 
 \end_inset
 
@@ -2653,7 +2764,7 @@ P(A\cup B)=P(A)+P(B)-P(A\cap B)
 
 \begin_layout Itemize
 Måste dra bort snittet 
-\begin_inset Formula $A\cup B$
+\begin_inset Formula $A\cap B$
 \end_inset
 
  för det räknas två ggr.
@@ -2664,13 +2775,194 @@ Måste dra bort snittet
 \begin_inset Graphics
 	filename figs/union.pdf
 	lyxscale 50
-	scale 30
+	scale 40
 
 \end_inset
 
 
 \begin_inset Graphics
 	filename figs/intersection.pdf
+	lyxscale 50
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Röst på socialdemokraterna 
+\series default
+\color inherit
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+emoji{rose}
+\end_layout
+
+\end_inset
+
+ 
+\series bold
+\color orange
+additionsregeln
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+\begin_inset Formula $\mathbf{R}$
+\end_inset
+
+
+\series default
+ = person röstar 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+emoji{rose}
+\end_layout
+
+\end_inset
+
+ i riksdagsvalet.
+ 
+\begin_inset Formula $P(\mathbf{R})=0.2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\mathbf{K}$
+\end_inset
+
+ = person röstar 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+emoji{rose}
+\end_layout
+
+\end_inset
+
+ i kommunalvalet.
+ 
+\begin_inset Formula $P(\mathbf{K})=0.3$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Personen röstar på 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+emoji{rose}
+\end_layout
+
+\end_inset
+
+ in båda valen: 
+\begin_inset Formula $P(\text{\mathbf{R} \ensuremath{\cap} \mathbf{K}})=0.1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Röstar 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+emoji{rose}
+\end_layout
+
+\end_inset
+
+ i åtminstone ett av valen? Additionsregeln:
+\begin_inset Formula 
+\[
+P(\text{\mathbf{R} \ensuremath{\cup} \mathbf{K}})=0.2+0.3-0.1=0.4
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Röstar på 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+emoji{rose}
+\end_layout
+
+\end_inset
+
+ i något av valen?
+\begin_inset Formula 
+\[
+P(\mathbf{R}^{c}\cap\mathbf{K}^{c})=P((\text{\mathbf{R} \ensuremath{\cup} \mathbf{K}})^{c})=1-P(\text{\mathbf{R} \ensuremath{\cup} \mathbf{K}})=1-0.4=0.6
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figs/SocialdemokratVenn.pdf
 	lyxscale 50
 	scale 30
 
@@ -2687,7 +2979,837 @@ Måste dra bort snittet
 
 \end_layout
 
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Multiplikationssregeln för oberoende händelser
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Händelserna 
+\begin_inset Formula $A$
+\end_inset
+
+ och 
+\begin_inset Formula $B$
+\end_inset
+
+ är 
+\series bold
+\color blue
+oberoende
+\series default
+\color inherit
+ om vetskapen att 
+\begin_inset Formula $B$
+\end_inset
+
+ har inträffat 
+\series bold
+\color orange
+inte påverkar
+\series default
+\color inherit
+ sannolikheten för 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ Och vice versa.
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Test: kommer sannolikheten för 
+\begin_inset Formula $A$
+\end_inset
+
+ förändras om man får veta att 
+\series bold
+
+\begin_inset Formula $B$
+\end_inset
+
+
+\series default
+ har inträffat? Om inte, så är 
+\begin_inset Formula $A$
+\end_inset
+
+ och 
+\begin_inset Formula $B$
+\end_inset
+
+ oberoende.
+\series bold
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tcolorbox}[colback=verylightgray]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+textcolor{blue}{
+\backslash
+textbf{Multiplikationsregeln}}.
+ För 
+\backslash
+textcolor{orange}{
+\backslash
+textbf{oberoende}} händelser $A$ och $B$
+\end_layout
+
+\begin_layout Plain Layout
+
+$$P(A
+\backslash
+cap B)=P(A)
+\backslash
+cdot P(B)$$
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tcolorbox}
+\end_layout
+
+\end_inset
+
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Hur beräknar man sannolikheten för snittet 
+\begin_inset Formula $A\cap B$
+\end_inset
+
+ för händelser som 
+\series bold
+inte
+\series default
+ är oberoende? Stay tuned, kommer i F12.
+ 
+\begin_inset Graphics
+	filename figs/face-with-peeking-hand.png
+	lyxscale 50
+	scale 20
+
+\end_inset
+
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Multiplikationsregeln för oberoende händelser
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Vad är sannolikheten att få 5 st krona i rad vid slantsingling?
+\begin_inset Formula 
+\[
+0.5\cdot0.5\cdot0.5\cdot0.5\cdot0.5=0.5^{5}=0.03125
+\]
+
+\end_inset
+
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+1% risk att streaming laggar under en kväll.
+ Oberoende kvällar.
+ 
+\begin_inset Formula 
+\[
+P(\text{ingen lagg hela veckan)}=(1-0.01)^{7}=0.99^{7}\approx0.932.
+\]
+
+\end_inset
+
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Sannolikheten att dra två klöver 
+\begin_inset Graphics
+	filename figs/flaticons/clubs.svg
+	lyxscale 10
+	scale 2.5
+
+\end_inset
+
+ ur en blandad kortlek?
+\size footnotesize
+
+\begin_inset Formula 
+\[
+P(\text{1:a kortet klöver)}=\frac{13}{52}=\frac{1}{4}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+P(\text{2:a kortet klöver \textbf{givet} 1:a kortet klöver)}=\frac{12}{51}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+P(\text{2:a kortet klöver \textbf{givet} 1:a kortet \textbf{inte} klöver)}=\frac{13}{51}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $A=$
+\end_inset
+
+
+\begin_inset Formula $\{$
+\end_inset
+
+
+\begin_inset Graphics
+	filename figs/flaticons/clubs.svg
+	lyxscale 10
+	scale 2.5
+
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ på 1:a
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+} och 
+\begin_inset Formula $B=$
+\end_inset
+
+
+\begin_inset Formula $\{$
+\end_inset
+
+
+\begin_inset Graphics
+	filename figs/flaticons/clubs.svg
+	lyxscale 10
+	scale 2.5
+
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ på 2:a
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+} är 
+\series bold
+inte
+\series default
+ oberoende.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Röst på socialdemokraterna 
+\series default
+\color inherit
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+emoji{rose}
+\end_layout
+
+\end_inset
+
+ 
+\series bold
+\color orange
+multiplikationsregeln
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+\begin_inset Formula $\mathbf{R}$
+\end_inset
+
+
+\series default
+ = person röstar 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+emoji{rose}
+\end_layout
+
+\end_inset
+
+ i riksdagsvalet.
+ 
+\begin_inset Formula $P(\mathbf{R})=0.2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\mathbf{K}$
+\end_inset
+
+ = person röstar 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+emoji{rose}
+\end_layout
+
+\end_inset
+
+ i kommunalvalet.
+ 
+\begin_inset Formula $P(\mathbf{K})=0.3$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Personen röstar på 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+emoji{rose}
+\end_layout
+
+\end_inset
+
+ in båda valen: 
+\begin_inset Formula $P(\text{\mathbf{R} \ensuremath{\cap} \mathbf{K}})=0.1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Är händelserna 
+\series bold
+
+\begin_inset Formula $\mathbf{R}$
+\end_inset
+
+
+\series default
+ och 
+\begin_inset Formula $\mathbf{K}$
+\end_inset
+
+ 
+\series bold
+\color blue
+oberoende
+\series default
+\color inherit
+? Vi måste undersöka om 
+\begin_inset Formula 
+\[
+P(\text{\mathbf{R} \ensuremath{\cap} \mathbf{K}})=P(\mathbf{R})\cdot P(\mathbf{K})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Händelserna är 
+\series bold
+inte
+\series default
+ oberoende:
+\begin_inset Formula 
+\[
+P(\mathbf{R})\cdot P(\mathbf{K})=0.2\cdot0.3\neq0.1=P(\text{\mathbf{R} \ensuremath{\cap} \mathbf{K}})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Att hen röstat på 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+emoji{rose}
+\end_layout
+
+\end_inset
+
+ i kommunalvalet ger information om vad hen röstat på i riksdagsvalet.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color blue
+Betingad sannolikhet
+\series default
+\color inherit
+ för 
+\begin_inset Formula $\mathbf{R}$
+\end_inset
+
+ 
+\series bold
+\color blue
+givet
+\series default
+\color inherit
+ 
+\begin_inset Formula $\mathbf{K}$
+\end_inset
+
+ är sann: 
+\begin_inset Formula $0.333$
+\end_inset
+
+ (se F13).
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P(\mathbf{R})$
+\end_inset
+
+ ökar från 
+\begin_inset Formula $0.2$
+\end_inset
+
+ till 
+\begin_inset Formula $0.333$
+\end_inset
+
+ när vi vet att 
+\begin_inset Formula $\mathbf{K}$
+\end_inset
+
+ är sann.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Kombinatorik
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Dataset 1: 
+\series bold
+\color orange
+med ordning
+\series default
+\color inherit
+: 
+\begin_inset Formula $\text{Krona},\text{Klave},\text{Klave},\text{Krona},\text{Krona}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Dataset 2: 
+\series bold
+\color orange
+utan ordning
+\series default
+\color inherit
+: 3 st Krona och 2 st Klave.
+\end_layout
+
+\begin_layout Itemize
+Är det lika sannolikt att observera Dataset 1 som Dataset 2?
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color blue
+Kombinatorik
+\series default
+\color inherit
+: räknar antal sätt/kombinationer.
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color blue
+Fakultetet
+\series default
+\color inherit
+ (eng.
+ factorial).
+ Utläses som n-fakultet.
+ 
+\begin_inset Formula 
+\[
+n!=n(n-1)(n-2)\cdots2\cdot1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tcolorbox}[width=0.85
+\backslash
+hsize, tab2, tabularx={c|c|c}, boxrule=0.5pt, 
+\end_layout
+
+\begin_layout Plain Layout
+
+title = Hur många sätt att välja $k$ element bland $n$ element?]  & 
+\backslash
+vspace{0.0cm} med återläggning     & utan återläggning      
+\backslash
+
+\backslash
+
+\backslash
+hline med ordning   & $n^k$  & $
+\backslash
+,_nP_k = 
+\backslash
+frac{n!}{(n-k)!}$                             
+\backslash
+
+\backslash
+
+\backslash
+hline utan ordning   & ej på kurs & $ 
+\backslash
+,_nC_k = 
+\backslash
+frac{n!}{(n-k)!k!}$   
+\backslash
+end{tcolorbox}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Med återläggning, med hänsyn till ordning
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figs/BallsNoReplaceWithOrder.pdf
+	lyxscale 50
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Utan återläggning, med hänsyn till ordning
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figs/BallsNoReplaceWithOrdering.pdf
+	lyxscale 50
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Utan återläggning, utan hänsyn till ordning
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figs/BallsNoReplaceWithoutOrdering.pdf
+	lyxscale 50
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
 
 \end_layout
 
