@@ -254,10 +254,24 @@ status open
 
 \series bold
 \color blue
-Betingade sannolikheter
+Betingad sannolikhet
 \end_layout
 
 \begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color blue
+Lagen om total sannolikhet
+\series default
+\color inherit
+
 \begin_inset VSpace bigskip
 \end_inset
 
@@ -320,13 +334,46 @@ Intresse:
 \end_inset
 
 
-\begin_inset VSpace bigskip
+\begin_inset VSpace medskip
 \end_inset
 
 
 \end_layout
 
 \end_deeper
+\begin_layout Itemize
+Tecknet 
+\series bold
+\color orange
+|
+\series default
+\color inherit
+ läses 'givet' eller betingat på.
+ 
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Sannolikheten för att 
+\begin_inset Formula $A$
+\end_inset
+
+ inträffar 
+\series bold
+\color orange
+givet att B har inträffat
+\series default
+\color inherit
+.
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 \align center
 \begin_inset Graphics
@@ -355,7 +402,7 @@ status open
 
 \series bold
 \color orange
-Betingad sannolikhet
+Betingad sannolikhet - världen krymper
 \end_layout
 
 \end_inset
@@ -365,7 +412,13 @@ Betingad sannolikhet
 
 \begin_deeper
 \begin_layout Itemize
+
+\series bold
+\color blue
 Betingad sannolikhet
+\series default
+\color inherit
+
 \begin_inset Formula 
 \[
 P(B|A)=\frac{P(A\cap B)}{P(A)}
@@ -376,24 +429,54 @@ P(B|A)=\frac{P(A\cap B)}{P(A)}
 
 \end_layout
 
-\begin_layout Standard
-\align center
-\begin_inset Graphics
-	filename figs/bayes_twoevents_cond.pdf
-	lyxscale 50
-	scale 35
+\begin_layout Itemize
 
+\series bold
+\color blue
+Betinga på 
+\begin_inset Formula $A$
 \end_inset
 
 
+\series default
+\color inherit
+ innebär att blå cirkeln blir 
+\series bold
+\color blue
+vårt nya utfallsrum
+\series default
+\color inherit
+.
+ 
 \end_layout
 
 \begin_layout Itemize
-Covid
-\begin_inset Formula 
-\[
-P(\text{covid}\vert\text{positivt hemtest})=\frac{P(\text{positivt hemtest}\cap\text{covid})}{P(\text{positivt hemtest})}
-\]
+Inget utanför blå cirkeln kan längre inträffa.
+ 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $A$
+\end_inset
+
+ is the new 
+\begin_inset Formula $S$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figs/conditional_prob_lifting_out.pdf
+	lyxscale 50
+	scale 35
 
 \end_inset
 
@@ -416,7 +499,7 @@ status open
 
 \series bold
 \color orange
-Multiplikationssatsen
+Korstabeller och sannolikheter
 \end_layout
 
 \end_inset
@@ -425,20 +508,244 @@ Multiplikationssatsen
 \end_layout
 
 \begin_deeper
-\begin_layout Itemize
-Multiplikationssatsen
-\begin_inset Formula 
-\[
-P(A\cap B)=P(B|A)P(A)
-\]
+\begin_layout Standard
+\align center
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+ 
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Antal
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figs/PetsCounts.png
+	lyxscale 50
+	scale 35
 
 \end_inset
 
 
 \end_layout
 
-\begin_layout Itemize
-Oberoende händelser
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Sannolikheter (Table %)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figs/PetsPropTable.png
+	lyxscale 50
+	scale 35
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+ 
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Betingat på kön (Column %)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figs/PetsPropCols.png
+	lyxscale 50
+	scale 34
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="1">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Betingat på husdjur (Row %)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figs/PetsPropRows.png
+	lyxscale 50
+	scale 35
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -449,6 +756,358 @@ Oberoende händelser
 
 \end_layout
 
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Korstabell och mosaic-plott
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figs/PetsPropTable.png
+	lyxscale 50
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figs/pets_only_joint.pdf
+	scale 42
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Korstabell och betingad sannolikhet
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figs/PetsPropCols.png
+	lyxscale 50
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Korstabell och betingad sannolikhet
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figs/pets_mosaic_conditional.pdf
+	scale 42
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Allmänna multiplikationsregeln
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tcolorbox}[colback=verylightgray]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+textcolor{blue}{
+\backslash
+textbf{Allmänna multiplikationsregeln}}.
+ För händelser $A$ och $B$
+\end_layout
+
+\begin_layout Plain Layout
+
+$$P(A
+\backslash
+cap B)=P(A)
+\backslash
+cdot P(B
+\backslash
+vert A)$$
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tcolorbox}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color blue
+Oberoende händelser
+\series default
+\color inherit
+ 
+\begin_inset Formula $A$
+\end_inset
+
+ och 
+\begin_inset Formula $B$
+\end_inset
+
+ är oberoende
+\begin_inset Formula 
+\[
+P(A\cap B)=P(A)P(B)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tcolorbox}[colback=verylightgray]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+textcolor{blue}{
+\backslash
+textbf{Oberoende händelser - variant}}.
+ 
+\backslash
+newline $A$ och $B$ är oberoende om (och endast om)
+\end_layout
+
+\begin_layout Plain Layout
+
+$$P(B 
+\backslash
+vert A)=P(B)$$
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tcolorbox}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Oberoende händelser - vetskapen om att 
+\begin_inset Formula $A$
+\end_inset
+
+ har inträffat påverkar inte sannolikheten för 
+\begin_inset Formula $B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color blue
+Oberoende 
+\begin_inset Formula $\neq$
+\end_inset
+
+ Disjunkta
+\series default
+\color inherit
+.
+ Disjunkta händelser kan ju inte inträffa samtidigt!
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Betingade sannolikheter bäst i form av träd
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figs/treecats.pdf
+	lyxscale 70
+	scale 65
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Marg sannolikheter och träd
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figs/treecats.pdf
+	lyxscale 70
+	scale 65
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Frame
 \begin_inset Argument 4
 status open
@@ -470,7 +1129,7 @@ Bayes sats
 
 \series bold
 \color blue
-Multiplikationsregeln
+Allmänna multiplikationsregeln
 \series default
 \color inherit
 
@@ -485,7 +1144,13 @@ P(A\cap B)=P(B|A)P(A)
 \end_layout
 
 \begin_layout Itemize
+
+\series bold
+\color blue
 Betingad sannolikhet
+\series default
+\color inherit
+
 \begin_inset Formula 
 \[
 P(B|A)=\frac{P(A\cap B)}{P(A)}
@@ -519,7 +1184,7 @@ emoji{smiling-face-with-heart-eyes}
 
 \begin_inset Formula 
 \[
-P(B|A)=\frac{P(B\vert A)p(A)}{P(A)}
+P(B|A)=\frac{P(B\vert A)P(A)}{P(A)}
 \]
 
 \end_inset
@@ -531,7 +1196,7 @@ P(B|A)=\frac{P(B\vert A)p(A)}{P(A)}
 
 \series bold
 \color blue
-Bayes vänder på betingningar
+Bayes vänder betingningar
 \series default
 \color inherit
 : beräkna 
@@ -682,7 +1347,7 @@ status open
 
 \series bold
 \color orange
-Bayes sats - alternativ form via lagen om total sannolikhet
+Lagen om total sannolikhet
 \end_layout
 
 \end_inset
@@ -692,10 +1357,38 @@ Bayes sats - alternativ form via lagen om total sannolikhet
 
 \begin_deeper
 \begin_layout Itemize
-Covid:
+Sannolikheten för varje händelse 
+\begin_inset Formula $A$
+\end_inset
+
+ kan delas upp som:
 \begin_inset Formula 
 \[
-P(\text{covid}\vert\text{positivt hemtest})=\frac{P(\text{positivt hemtest}\vert\text{covid})P(\text{covid})}{P(\text{positivt hemtest})}
+P(A)={\normalcolor \textcolor{orange}{P(A\cap B)}}+\textcolor{blue}{P(A\cap B^{c})}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figs/lawoftotalprob.pdf
+	lyxscale 50
+	scale 33
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Allmänna multiplikationsregeln: 
+\begin_inset Formula 
+\[
+\textcolor{orange}{P(A\cap B)=P(A\vert B)P(B)}\text{ och }\textcolor{blue}{P(A\cap B^{c})=P(A\vert B^{c})P(B^{c})}
 \]
 
 \end_inset
@@ -704,13 +1397,48 @@ P(\text{covid}\vert\text{positivt hemtest})=\frac{P(\text{positivt hemtest}\vert
 \end_layout
 
 \begin_layout Itemize
-Hur beräknar vi 
-\begin_inset Formula $P(\text{positivt hemtest})$
+
+\series bold
+\color blue
+Lagen om total sannolikhet
+\series default
+\color inherit
+
+\begin_inset Formula 
+\[
+P(A)=\textcolor{orange}{P(A\vert B)P(B)}+\textcolor{blue}{P(A\vert B^{c})P(B^{c})}
+\]
+
 \end_inset
 
-? 
+
 \end_layout
 
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Bayes sats - via lagen om total sannolikhet
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
 \begin_layout Itemize
 
 \series bold
@@ -737,7 +1465,7 @@ Bayes sats
 \align center
 \begin_inset Formula 
 \[
-P(B|A)=\frac{P(B\vert A)p(A)}{P(A)}
+P(B|A)=\frac{P(B\vert A)P(A)}{P(A)}
 \]
 
 \end_inset
@@ -749,13 +1477,13 @@ P(B|A)=\frac{P(B\vert A)p(A)}{P(A)}
 
 \series bold
 \color blue
-Bayes sats
+Bayes sats 
 \series default
 \color inherit
-
+med lagen om total sannolikhet
 \begin_inset Formula 
 \[
-P(B|A)=\frac{P(B\vert A)p(A)}{P(A\vert B)P(B)+P(A\vert B^{c})P(B^{c})}
+P(B|A)=\frac{P(B\vert A)P(A)}{P(A\vert B)P(B)+P(A\vert B^{c})P(B^{c})}
 \]
 
 \end_inset
@@ -798,7 +1526,7 @@ Bayes sats
 
 \begin_inset Formula 
 \[
-P(B|A)=\frac{P(B\vert A)p(A)}{P(A\vert B)P(B)+P(A\vert B^{c})P(B^{c})}
+P(B|A)=\frac{P(B\vert A)P(A)}{P(A\vert B)P(B)+P(A\vert B^{c})P(B^{c})}
 \]
 
 \end_inset
@@ -1146,87 +1874,5 @@ Exempel: handskrivna siffor:
 
 \end_layout
 
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-
-\series bold
-\color orange
-Känna igen handskrivna siffror
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Mål: 
-\begin_inset Formula $P(\text{siffran är en nolla}|\text{svart pixel i mitten})$
-\end_inset
-
-
-\begin_inset Formula 
-\[
-P(B_{0}\vert A)=\frac{P(A\vert B_{0})p(B_{0})}{P(A)}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-Behöver veta
-\begin_inset Formula 
-\[
-p(B_{0})=\frac{1}{10}
-\]
-
-\end_inset
-
-
-\begin_inset Formula 
-\[
-P(A)=\frac{\text{antal bilder med svart pixel i mitten}}{\text{totalt antal bilder}}
-\]
-
-\end_inset
-
-
-\begin_inset Formula 
-\[
-P(A\vert B_{0})=\frac{\text{andelen bilder med svart pixel i mitten}}{\text{antal bilder med nollor på}}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\align center
-\begin_inset Graphics
-	filename figs/mnistZeroWithRedVoxel.png
-	lyxscale 50
-	scale 9
-
-\end_inset
-
-
-\begin_inset Graphics
-	filename figs/mnistOneWithRedVoxel.png
-	lyxscale 50
-	scale 9
-
-\end_inset
-
-
-\end_layout
-
-\end_deeper
 \end_body
 \end_document

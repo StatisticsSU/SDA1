@@ -2712,7 +2712,7 @@ status open
 
 \series bold
 \color orange
-Additionsregeln
+Den allmänna additionsregeln
 \end_layout
 
 \end_inset
@@ -2721,6 +2721,38 @@ Additionsregeln
 \end_layout
 
 \begin_deeper
+\begin_layout Itemize
+
+\series bold
+\color blue
+Additionsregeln
+\series default
+\color inherit
+: Om 
+\begin_inset Formula $A$
+\end_inset
+
+ och 
+\begin_inset Formula $B$
+\end_inset
+
+ är 
+\series bold
+\color orange
+disjunkta
+\series default
+\color inherit
+: 
+\begin_inset Formula 
+\[
+P(A\cup B)=P(A)+P(B)
+\]
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 \begin_inset ERT
 status open
@@ -2738,7 +2770,7 @@ begin{tcolorbox}[colback=verylightgray]
 \backslash
 textcolor{blue}{
 \backslash
-textbf{Additionsregeln}}
+textbf{Allmänna additionsregeln} (även överlappande händelser)}
 \end_layout
 
 \begin_layout Plain Layout

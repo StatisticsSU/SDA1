@@ -17,7 +17,7 @@ Interaktivt: [slantsingling](/observable/storatalenslag_bernoulli.qmd)\
 Extramaterial: [TedTalk om sannolikheter](https://youtu.be/0m5bg2hpHNw)
 
 **Föreläsning 13 - Betingade sannolikheter och Bayes sats.**\
-Läs: SDM Kapitel 13 | [Slides](/misc/larry.png)\
+Läs: SDM Kapitel 13 | [Slides](/slides/F13BetingadeSlhBayesSats.pdf)\
 Interaktivt: [bayessats](/observable/bayestheorem.qmd)\
 Extramaterial: [Artikel om Bayes sats och snabbtest för Covid-19](https://www.varsity.co.uk/science/21149)
 
@@ -53,7 +53,7 @@ Läs: SDM Kapitel 21.1, 21.2 | [Slides](/misc/larry.png)
 Läs: SDM Kapitel 23 | [Slides](/misc/larry.png) 
 
 **Videoföreläsning - Maximum likelihood och Bayesiansk inferens.**\
-Läs: Kompendium avsnitt X | [Slides](/misc/larry.png) 
+Läs: [Slides](/misc/larry.png) 
 
 **Föreläsning 23 - Optimala beslut under osäkerhet.**\
 Läs: [Slides](/misc/larry.png) 
@@ -69,7 +69,7 @@ Läs: [Slides](/misc/larry.png)
 Uppgifter: SDM 12.2, 12.5, 12.7, 12.9, 12.12, 12.16, 12.21, 12.27, 12.29, 12.31, 12.34, 12.36, 12.39, 12.41, 12.49, 12.52.
 
 **Övning 8 - Oberoende händelser. Betingning och Bayes sats.**\
-Uppgifter: SDM 13 
+Uppgifter: SDM 13.1, 13.5, 13.7, 13.10, 13.12, 13.14, 13.18, 13.21, 13.24, 13.31, 13.47, 13.49. 
 
 **Övning 9 - Slumpvariabler, väntevärde och standardavvikelse.**\
 Uppgifter: SDM 14
@@ -100,14 +100,11 @@ Uppgifter: SDM 23
 
 ### **Datorlaborationer**
 
-**Datorlaboration 5 - Simulering från sannolikhetsfördelningar**\
-Uppgifter: [Datorlab 5](/misc/larry.png) 
-
-**Datorlaboration 6 - Samplingfördelningar, standardfel och centrala gränsvärdessatsen.**\
+**Datorlaboration 6 - Simulering för att utforska sannolikhetsfördelningar.**\
 Uppgifter: [Datorlab 6](/misc/larry.png) 
 
-**Datorlaboration 7 - Konfidensintervall och hypotestest.**\
+**Datorlaboration 7 - Samplingfördelningar, standardfel och konfidensintervall.**\
 Uppgifter: [Datorlab 7](/misc/larry.png) 
 
-**Datorlaboration 8 - Multipel linjär regression**\
+**Datorlaboration 8 - Multipel linjär regression.**\
 Uppgifter: [Datorlab 8](/misc/larry.png)
