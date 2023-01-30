@@ -22,7 +22,7 @@ Interaktivt: [bayessats](/observable/bayestheorem.qmd)\
 Extramaterial: [Artikel om Bayes sats och snabbtest för Covid-19](https://www.varsity.co.uk/science/21149)
 
 **Föreläsning 14 - Slumpvariabler och deras egenskaper.**\
-Läs: SDM Kapitel 14 | [Slides](/misc/larry.png)
+Läs: SDM Kapitel 14 | [Slides](/slides/F14Slumpvariabler.pdf)
 
 **Föreläsning 15 - Diskreta sannolikhetsmodeller.**\
 Läs: SDM Kapitel 15.1, 15.2, 15.3, 15.6 | [Slides](/misc/larry.png) 
@@ -72,7 +72,7 @@ Uppgifter: SDM 12.2, 12.5, 12.7, 12.9, 12.12, 12.16, 12.21, 12.27, 12.29, 12.31,
 Uppgifter: SDM 13.1, 13.5, 13.7, 13.10, 13.12, 13.14, 13.18, 13.21, 13.24, 13.31, 13.47, 13.49. 
 
 **Övning 9 - Slumpvariabler, väntevärde och standardavvikelse.**\
-Uppgifter: SDM 14
+Uppgifter: SDM 14.1, 14.3, 14.9a, 14.11, 14.13, 14.21, 14.26, 14.33, 14.36, 14.43, 14.54.
 
 **Övning 10 - Diskreta sannolikhetsfördelningar.**\
 Uppgifter: SDM 15 

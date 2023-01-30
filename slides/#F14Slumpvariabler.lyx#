@@ -3477,32 +3477,6 @@ Kontinuerlig slumpvariabel
 \end_layout
 
 \begin_layout Itemize
-Alla värden 
-\begin_inset Formula $x$
-\end_inset
-
- har noll sannolikhet! 
-\begin_inset Formula $P(X=x)=0$
-\end_inset
-
-.
- 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-emoji{exploding-head}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
 
 \series bold
 \color blue
@@ -3528,13 +3502,7 @@ normalfördelning
 
 \begin_deeper
 \begin_layout Itemize
-
-\series bold
-\color orange
-Väntevärde
-\series default
-\color inherit
-: 
+Väntevärde: 
 \begin_inset Formula $\mu=0$
 \end_inset
 
@@ -3546,13 +3514,7 @@ Väntevärde
 \end_layout
 
 \begin_layout Itemize
-
-\series bold
-\color orange
-Standardavvikelse
-\series default
-\color inherit
- (och varians): 
+Standardavvikelse (och varians): 
 \begin_inset Formula $\sigma^{2}=1$
 \end_inset
 
@@ -3561,20 +3523,6 @@ Standardavvikelse
 \end_inset
 
 
-\end_layout
-
-\begin_layout Itemize
-
-\series bold
-\color orange
-68-95-99.7 regeln
-\series default
-\color inherit
- kommer från 
-\begin_inset Formula $N(0,1)$
-\end_inset
-
-.
 \end_layout
 
 \begin_layout Standard
@@ -3654,10 +3602,10 @@ Varians
 
 \end_deeper
 \begin_layout Itemize
-
+Normalfördelningens 
 \series bold
 \color blue
-Parametrarna
+parametrar
 \series default
 \color inherit
  
@@ -3668,7 +3616,15 @@ Parametrarna
 \begin_inset Formula $\sigma^{2}$
 \end_inset
 
- är just väntevärdet och variansen!
+ 
+\begin_inset Quotes eld
+\end_inset
+
+råkar
+\begin_inset Quotes erd
+\end_inset
+
+ var just väntevärdet och variansen.
 \end_layout
 
 \end_deeper
@@ -3735,16 +3691,14 @@ skalning
 \end_layout
 
 \begin_layout Itemize
-Beräkna sannolikheter för 
-\begin_inset Formula $X\sim N(\mu,\sigma^{2})$
+Vi kan beräkna alla sannolikheter för 
+\begin_inset Formula $N(\mu,\sigma^{2})$
 \end_inset
 
- från standard normal
-\size footnotesize
-
+-fördelning från standard normal
 \begin_inset Formula 
 \[
-P(X\leq x)=P(X-\mu\leq x-\mu)=P\left(\frac{X-\mu}{\sigma}\leq\frac{x-\mu}{\sigma}\right)=P\left(Z\leq\frac{x-\mu}{\sigma}\right)
+P(X\leq2)=P(X-\mu\leq2-\mu)=P\left(\frac{X-\mu}{\sigma}\leq\frac{2-\mu}{\sigma}\right)=P\left(Z\leq\frac{2-\mu}{\sigma}\right)
 \]
 
 \end_inset
@@ -3753,17 +3707,23 @@ P(X\leq x)=P(X-\mu\leq x-\mu)=P\left(\frac{X-\mu}{\sigma}\leq\frac{x-\mu}{\sigma
 \end_layout
 
 \begin_layout Itemize
-Exempel: 
+Exempel 
 \begin_inset Formula $X\sim N(2,3^{2})$
 \end_inset
 
 , vad är sannolikheten att 
-\begin_inset Formula $X\leq5$
+\begin_inset Formula $X>5$
 \end_inset
 
 ?
-\size footnotesize
+\begin_inset Formula 
+\[
+P(X>5)=1-P(X\leq5)
+\]
 
+\end_inset
+
+och 
 \begin_inset Formula 
 \[
 P(X\leq5)=P\left(\frac{X-2}{3}\leq\frac{5-2}{3}\right)=P\left(Z\leq1\right)=0.8413\text{ [från Z-tabell]}
@@ -3771,40 +3731,11 @@ P(X\leq5)=P\left(\frac{X-2}{3}\leq\frac{5-2}{3}\right)=P\left(Z\leq1\right)=0.84
 
 \end_inset
 
-
-\end_layout
-
-\end_deeper
-\begin_layout Standard
-\begin_inset Separator parbreak
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-
-\series bold
-\color orange
-Standardisering
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-\align center
-\begin_inset Graphics
-	filename figs/standardization.pdf
-	lyxscale 30
-	scale 38
+Så 
+\begin_inset Formula 
+\[
+P(X>5)=1-P(X\leq5)=1-0.8413\approx0.16
+\]
 
 \end_inset
 
