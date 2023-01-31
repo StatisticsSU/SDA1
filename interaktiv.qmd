@@ -28,6 +28,12 @@ Föreläsning 12 - **Slantsingling och stora talens lag**: <br>
 Föreläsning 13 - **Bayes sats**: <br>
 [widget](/observable/bayestheorem.qmd) | [notebook](https://observablehq.com/@mattiasvillani/bayes-theorem-for-events)
 
+Föreläsning 14 - **Normalfördelningen**: <br>
+[widget](/observable/normalfordelningen.qmd) | [notebook](https://observablehq.com/@mattiasvillani/normalfordelningen)
+
+Föreläsning 16 - **exponentialfördelning**: <br>
+[widget](/observable/exponentialfordelningen.qmd) | [notebook](https://observablehq.com/@mattiasvillani/exponentialfordelningen)
+
 Föreläsning 16 - **Student-*t* fördelning**: <br>
 [widget](/observable/studentt.qmd) | [notebook](https://observablehq.com/@mattiasvillani/student-t)
 
