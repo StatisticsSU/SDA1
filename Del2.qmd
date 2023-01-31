@@ -49,13 +49,15 @@ Läs: SDM Kapitel 18 | [Slides](/misc/larry.png)
 Läs: SDM Kapitel 19, 20.4, 20.5 | [Slides](/misc/larry.png) 
 
 **Föreläsning 21 - Jämföra grupper och $\chi^2$-test.**\
-Läs: SDM Kapitel 21.1, 21.2 | [Slides](/misc/larry.png) 
+Läs: SDM Kapitel 21.1, 21.2 | [Slides](/misc/larry.png)\
+Interaktivt: [chi2-fördelningen](/observable/chi2fordelningen.qmd)
 
 **Föreläsning 22 - Inferens i multipel regression.**\
 Läs: SDM Kapitel 23 | [Slides](/misc/larry.png) 
 
 **Videoföreläsning - Maximum likelihood och Bayesiansk inferens.**\
-Läs: [Slides](/misc/larry.png) 
+Läs: [Slides](/misc/larry.png)\
+Interaktivt: [betafördelningen](/observable/betafordelningen.qmd)
 
 **Föreläsning 23 - Optimala beslut under osäkerhet.**\
 Läs: [Slides](/misc/larry.png) 

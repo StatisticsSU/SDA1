@@ -1,0 +1,7 @@
+---
+title: "Chi2-fördelningen"
+format: html
+---
+
+<iframe width="100%" height="728" frameborder="0"
+  src="https://observablehq.com/embed/@mattiasvillani/chi2-fordelningen@626?cells=viewof+params%2Cdist_quantile%2Cmoments%2Cplt_pdf"></iframe>

@@ -52,3 +52,8 @@ Föreläsning 18 - **Stora talens lag**: <br>
 Föreläsning 18 - **Centrala gränsvärdessatsen**: <br>
 [widget](/observable/cgs.qmd) | [notebook](https://observablehq.com/@mattiasvillani/cgs)
 
+Föreläsning 21 - **Chi2-fördelning**: <br>
+[widget](/observable/chi2fordelningen.qmd)
+
+Videoföreläsning - **Beta-fördelning**: <br>
+[widget](/observable/betafordelningen.qmd)
