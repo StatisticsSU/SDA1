@@ -3625,7 +3625,7 @@ Cov(X,Y)=E\left((X-\mu)(Y-\nu)\right)
 \align center
 \begin_inset Graphics
 	filename figs/PositivKovarians.pdf
-	scale 45
+	scale 43
 
 \end_inset
 
