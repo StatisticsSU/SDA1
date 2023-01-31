@@ -31,8 +31,14 @@ Föreläsning 13 - **Bayes sats**: <br>
 Föreläsning 14 - **Normalfördelningen**: <br>
 [widget](/observable/normalfordelningen.qmd) | [notebook](https://observablehq.com/@mattiasvillani/normalfordelningen)
 
+Föreläsning 15 - **geometrisk fördelning**: <br>
+[widget](/observable/geometriskfordelning.qmd)
+
 Föreläsning 15 - **binomialfördelning**: <br>
 [widget](/observable/binomialfordelningen.qmd)
+
+Föreläsning 15 - **Poissonfördelning**: <br>
+[widget](/observable/poissonfordelningen.qmd)
 
 Föreläsning 16 - **exponentialfördelning**: <br>
 [widget](/observable/exponentialfordelningen.qmd) | [notebook](https://observablehq.com/@mattiasvillani/exponentialfordelningen)

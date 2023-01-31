@@ -1,0 +1,2292 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass beamer
+\begin_preamble
+
+% you can play with different themes and color themes to find your favorite combination.
+\mode<presentation> {
+  \usetheme{Luebeck}
+  \usecolortheme{beaver}
+  \beamertemplatenavigationsymbolsempty
+}
+
+
+\usepackage{graphicx} % for including images
+\usepackage{pgf} % for logo
+\usepackage{colortbl}
+\usepackage{booktabs}
+\usepackage{emoji}
+
+\date{} % Date, can be changed to a custom date
+
+\titlegraphic{
+\vspace{-0.6cm}
+\includegraphics[width=1.5cm]{/misc/LogoBlueJustRing.jpg}\break
+
+\tiny
+\vspace{1cm}
+\includegraphics[width=0.33cm]{/misc/web.png} \href{https://mattiasvillani.com}{mattiasvillani.com}\hspace*{1cm}~
+\includegraphics[width=0.3cm]{/misc/twitter.jpg} \href{https://twitter.com/matvil}{@matvil}\hspace*{1cm}~
+\includegraphics[width=0.3cm]{/misc/github.png} \href{https://github.com/mattiasvillani}{mattiasvillani}~
+}
+
+
+\definecolor{blue}{RGB}{38, 122, 181}
+\definecolor{orange}{RGB}{255, 128, 0}
+\definecolor{lorange}{RGB}{255, 178, 102}
+\definecolor{llorange}{RGB}{255, 229,204 }
+\definecolor{verylightgray}{RGB}{246, 246, 246}
+
+
+\setbeamertemplate{itemize item}{\color{orange}$\blacksquare$}
+\setbeamertemplate{itemize subitem}{\color{orange}$\blacktriangleright$}
+
+\usepackage{tcolorbox}
+
+\newcommand\blfootnote[1]{%
+  \begingroup
+  \renewcommand\thefootnote{}\footnote{#1}%
+  \addtocounter{footnote}{-1}%
+  \endgroup
+}
+\end_preamble
+\options xcolor=svgnames, handout
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "palatino" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+
+\color orange
+Statistik och Dataanalys I
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+
+\color gray
+ST1101
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hspace{4.45cm}
+\backslash
+insertframenumber/
+\backslash
+inserttotalframenumber
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subtitle
+
+\color orange
+Föreläsning 14 - Slumpvariabler
+\end_layout
+
+\begin_layout Author
+
+\series bold
+Mattias Villani
+\series default
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset VSpace 0.2cm
+\end_inset
+
+
+\begin_inset Graphics
+	filename misc/Beard Man Emoji.png
+	lyxscale 10
+	scale 2
+
+\end_inset
+
+
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color gray
+Statistik och Dataanalys I
+\end_layout
+
+\end_inset
+
+
+\begin_inset VSpace -0.3cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Institute
+Statistiska institutionen
+\begin_inset Newline newline
+\end_inset
+
+Stockholms universitet
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Stockholms universitet
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Översikt
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Varians - fördelningens spridning
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Väntevärdet 
+\begin_inset Formula $\mu$
+\end_inset
+
+ är bara en slags bästa gissning.
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Ofta viktigt att veta fördelningens 
+\series bold
+\color blue
+spridning
+\series default
+\color inherit
+.
+ Osäkerhet.
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Medelavvikelse från 
+\begin_inset Formula $\mu$
+\end_inset
+
+ som spridning?
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Avvikelser från centrum 
+\begin_inset Formula $x-\mu$
+\end_inset
+
+.
+ 
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Problem: Negativa och positiva avvikelser kan ta ut varandra.
+ 
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Lösning: kvadrera avvikelserna 
+\begin_inset Formula $(x-\mu)^{2}$
+\end_inset
+
+ först.
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+\color blue
+Variansen
+\series default
+\color inherit
+ för en slumpvariabel
+\begin_inset Formula 
+\[
+Var(X)=\sum_{\text{alla x}}(x-\mu)^{2}P(x)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Variansen skrivs ofta med symbolen 
+\begin_inset Formula $\sigma^{2}$
+\end_inset
+
+.
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Exempel: 
+\begin_inset Formula $X=$
+\end_inset
+
+ räntekostnad.
+ 
+\begin_inset Formula $\mu=E(X)=3252$
+\end_inset
+
+.
+\size footnotesize
+
+\begin_inset Formula 
+\begin{align*}
+Var(X) & =(833-3252)^{2}\cdot\textcolor{orange}{0.017}+(1667-3252)^{2}\cdot\textcolor{orange}{0.094}+\\
+ & \ldots+(6667-3252)^{2}\cdot\textcolor{orange}{0.001}\approx965553.1{\color{blue}\mathbf{}\text{ kr}^{2}}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Standardavvikelse - ett mått på medelspridning
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+\color blue
+Variansen
+\series default
+\color inherit
+ för en slumpvariabel
+\begin_inset Formula 
+\[
+Var(X)=\sum_{\text{alla x}}(x-\mu)^{2}P(x)
+\]
+
+\end_inset
+
+Variansen har 
+\series bold
+\color orange
+enheter i kvadrat
+\series default
+\color inherit
+.
+ Ingen trevlig tolkning.
+ 
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color blue
+Standardavvikelsen
+\series default
+\color inherit
+ har samma enheter som slumpvariabeln
+\begin_inset Formula 
+\[
+\sigma=SD(X)=\sqrt{Var(X)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Exempel: 
+\begin_inset Formula $X=$
+\end_inset
+
+ räntekostnad.
+ 
+\begin_inset Formula 
+\[
+\sigma=\sqrt{965553.1}\approx982.63\texttt{ {\color{blue}{\color{blue}{\color{blue}kr}}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Vår 
+\begin_inset Quotes eld
+\end_inset
+
+bästa gissning
+\begin_inset Quotes erd
+\end_inset
+
+ av räntekostnad: 
+\begin_inset Formula $\mu=3252$
+\end_inset
+
+ kr
+\end_layout
+
+\begin_layout Itemize
+Men en 
+\begin_inset Quotes eld
+\end_inset
+
+typisk avvikelse
+\begin_inset Quotes erd
+\end_inset
+
+ från denna gissning är cirka 
+\begin_inset Formula $983$
+\end_inset
+
+ kr.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Väntevärde och standardavvikelse
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Graphics
+	filename figs/discrete_mean_std.pdf
+	lyxscale 50
+	scale 40
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figs/normal_no_axis.pdf
+	lyxscale 50
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Skifta slumpvariabler
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Exempel: 
+\begin_inset Formula $X$
+\end_inset
+
+ ränta i procent på mitt banklån.
+ 
+\begin_inset Formula $E(X)=3.9\%$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Sämre förhandlare: bankräntan 2% högre än styrräntan.
+\end_layout
+
+\begin_layout Itemize
+Din ränta: 
+\begin_inset Formula $Y=X+2$
+\end_inset
+
+.
+ 
+\series bold
+\color blue
+Skiftar/förskjuter
+\series default
+\color inherit
+ slumpvariabeln.
+\end_layout
+
+\begin_layout Itemize
+Måste vi göra om alla beräkningar för dig? Nope.
+ 
+\begin_inset Formula 
+\[
+E(Y)=E(X)+2=3.9+2=5.9\%
+\]
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tcolorbox}[colback=verylightgray]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+textcolor{blue}{
+\backslash
+textbf{Väntevärde - skiftade slumpvariabler}}.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-0.2cm}
+\end_layout
+
+\begin_layout Plain Layout
+
+$$E(X
+\backslash
+pm c)=E(X)
+\backslash
+pm c 
+\backslash
+hspace{0.5cm}
+\backslash
+text{ för godtycklig konstant }c$$
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tcolorbox}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color blue
+Variansen ändras inte
+\series default
+\color inherit
+ av ett skift:
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tcolorbox}[colback=verylightgray]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+textcolor{blue}{
+\backslash
+textbf{Varians - skiftade slumpvariabler}}.
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-0.2cm}
+\end_layout
+
+\begin_layout Plain Layout
+
+$$Var(X 
+\backslash
+pm c)=Var(X) 
+\backslash
+hspace{0.5cm}
+\backslash
+text{ för godtycklig konstant }c$$
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tcolorbox}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Skala slumpvariabler
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Exempel: får dra av 30% på skatten för räntekostnad.
+\end_layout
+
+\begin_layout Itemize
+Räntekostnad efter skatt: 
+\begin_inset Formula $Y=0.7\cdot X$
+\end_inset
+
+.
+ 
+\series bold
+\color blue
+Skalar
+\series default
+\color inherit
+ slumpvariabeln.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tcolorbox}[colback=verylightgray]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+textcolor{blue}{
+\backslash
+textbf{Väntevärde - skalning}}.
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-0.2cm}
+\end_layout
+
+\begin_layout Plain Layout
+
+$$E(aX)=a
+\backslash
+cdot E(X) 
+\backslash
+hspace{0.5cm}
+\backslash
+text{ för godtycklig konstant }a$$
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tcolorbox}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tcolorbox}[colback=verylightgray]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+textcolor{blue}{
+\backslash
+textbf{Varians - skalning}}.
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-0.2cm}
+\end_layout
+
+\begin_layout Plain Layout
+
+$$Var(aX)=a^2Var(X) 
+\backslash
+hspace{0.5cm}
+\backslash
+text{ för godtycklig konstant }a$$
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tcolorbox}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tcolorbox}[colback=verylightgray]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+textcolor{blue}{
+\backslash
+textbf{Standardavvikelse - skalning}}.
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-0.2cm}
+\end_layout
+
+\begin_layout Plain Layout
+
+$$SD(aX)=
+\backslash
+vert a 
+\backslash
+vert 
+\backslash
+cdot Var(X) 
+\backslash
+hspace{0.5cm}
+\backslash
+text{ för godtycklig konstant }a$$
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tcolorbox}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\size small
+\begin_inset Formula $E(0.7\cdot X)=0.7\cdot3252=2276.4\text{ kr}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\size small
+\begin_inset Formula $SD(0.7\cdot X)=0.7\cdot982.63\approx687.84\text{ kr}$
+\end_inset
+
+
+\size default
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Linjärkombinationer av slumpvariabler 
+\series default
+\color inherit
+
+\begin_inset Graphics
+	filename figs/HeartEyes.png
+	lyxscale 10
+	scale 2
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+\color blue
+Linjärkombination
+\series default
+\color inherit
+ av slumpvariabel = 
+\series bold
+\color blue
+skift och skalning
+\series default
+\color inherit
+.
+\begin_inset Formula 
+\[
+Y=c+aX
+\]
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tcolorbox}[colback=verylightgray]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+textcolor{blue}{
+\backslash
+textbf{Väntevärde - linjärkombination}}.
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-0.2cm}
+\end_layout
+
+\begin_layout Plain Layout
+
+$$E(c 
+\backslash
+pm aX)=c 
+\backslash
+pm aE(X) 
+\backslash
+hspace{0.5cm}
+\backslash
+text{ för konstanter }a 
+\backslash
+text{ och } c$$
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tcolorbox}
+\end_layout
+
+\end_inset
+
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tcolorbox}[colback=verylightgray]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+textcolor{blue}{
+\backslash
+textbf{Varians - linjärkombination}}.
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-0.2cm}
+\end_layout
+
+\begin_layout Plain Layout
+
+$$Var(c 
+\backslash
+pm aX)=a^2Var(X) 
+\backslash
+hspace{0.5cm}
+\backslash
+text{ för konstanter }a 
+\backslash
+text{ och } c$$
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tcolorbox}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Exempel företags produktionskostnader: 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $X$
+\end_inset
+
+ antal efterfrågade enheter (slumpvariabel).
+\end_layout
+
+\begin_layout Itemize
+Fast produktionskostnad 
+\begin_inset Formula $c$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Rörlig produktionskostnad per enhet 
+\begin_inset Formula $a$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Produktionskostnad: 
+\begin_inset Formula $Y=c+aX$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Väntevärde - summa av slumpvariabler
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $X$
+\end_inset
+
+ och 
+\begin_inset Formula $Y$
+\end_inset
+
+ är två olika slumpvaribler
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $X$
+\end_inset
+
+ antal prickar på 1:a tärningen
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $Y$
+\end_inset
+
+ antal prickar på 2:a tärningen
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $X+Y$
+\end_inset
+
+ = totalt antal prickar på båda tärningarna.
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tcolorbox}[colback=verylightgray]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+textcolor{blue}{
+\backslash
+textbf{Väntevärde - summa av slumpvariabler}}.
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-0.2cm}
+\end_layout
+
+\begin_layout Plain Layout
+
+$$E(X+Y)= E(X) + E(Y)$$
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tcolorbox}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Varians - summa av oberoende slumpvariabler
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+För 
+\series bold
+\color blue
+variansen
+\series default
+\color inherit
+ måste vi vara försiktiga med eventuella 
+\series bold
+\color orange
+beroenden mellan variabler
+\series default
+\color inherit
+.
+\end_layout
+
+\begin_layout Itemize
+Vadslagning:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $X$
+\end_inset
+
+ är din vinst/förlust i ett vad.
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $Y$
+\end_inset
+
+ är din motståndares vinst/förlust.
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $X+Y=0$
+\end_inset
+
+, dvs har ingen varians alls! Perfekt beroende.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Aktieportfölj:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $X$
+\end_inset
+
+ är avkastning aktie.
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $Y$
+\end_inset
+
+ är avkastning på annan aktie.
+ 
+\end_layout
+
+\begin_layout Itemize
+Total avkastning: 
+\begin_inset Formula $X+Y$
+\end_inset
+
+.
+ Varians?
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Om vi antar att 
+\begin_inset Formula $X$
+\end_inset
+
+ och 
+\begin_inset Formula $Y$
+\end_inset
+
+ är oberoende blir variansen enkel:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tcolorbox}[colback=verylightgray]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+textcolor{blue}{
+\backslash
+textbf{Väntevärde - summa av 
+\backslash
+textcolor{orange}{oberoende} slumpvariabler}}.
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-0.2cm}
+\end_layout
+
+\begin_layout Plain Layout
+
+$$Var(X+Y)= Var(X) + Var(Y)$$
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tcolorbox}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Väntevärde och varians - många oberoende variabler
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Låt 
+\begin_inset Formula $X_{1},X_{2}$
+\end_inset
+
+ och 
+\begin_inset Formula $X_{3}$
+\end_inset
+
+ vara tre oberoende slumpvariabler.
+ 
+\begin_inset Formula 
+\[
+E(X_{1}+X_{2}+X_{3})=E(X_{1})+E(X_{2})+E(X_{3})
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+Var(X_{1}+X_{2}+X_{3})=Var(X_{1})+Var(X_{2})+Var(X_{3})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tcolorbox}[colback=verylightgray]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+textcolor{blue}{
+\backslash
+textbf{Väntevärde - summa av slumpvariabler}}.
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-0.2cm}
+\end_layout
+
+\begin_layout Plain Layout
+
+$$E(X_1+X_2+
+\backslash
+ldots,X_n)= E(X_1) + E(X_2)+
+\backslash
+ldots+E(X_n)$$
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tcolorbox}
+\end_layout
+
+\end_inset
+
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tcolorbox}[colback=verylightgray]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+textcolor{blue}{
+\backslash
+textbf{Varians - summa av 
+\backslash
+textcolor{orange}{oberoende} slumpvariabler}}.
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-0.2cm}
+\end_layout
+
+\begin_layout Plain Layout
+
+$$V(X_1+X_2+
+\backslash
+ldots,X_n)= Var(X_1) + Var(X_2)+
+\backslash
+ldots+Var(X_n)$$
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tcolorbox}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Kontinuerliga slumpvariabler
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+\color blue
+Kontinuerlig slumpvariabel
+\series default
+\color inherit
+ antar alla värden (decimaler).
+\end_layout
+
+\begin_layout Itemize
+Alla värden 
+\begin_inset Formula $x$
+\end_inset
+
+ har noll sannolikhet! 
+\begin_inset Formula $P(X=x)=0$
+\end_inset
+
+.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+emoji{exploding-head}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color blue
+Standard
+\series default
+\color inherit
+ 
+\series bold
+\color blue
+normalfördelning
+\series default
+\color inherit
+, 
+\begin_inset Formula $Z\sim N(0,1)$
+\end_inset
+
+
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+\color orange
+Väntevärde
+\series default
+\color inherit
+: 
+\begin_inset Formula $\mu=0$
+\end_inset
+
+
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color orange
+Standardavvikelse
+\series default
+\color inherit
+ (och varians): 
+\begin_inset Formula $\sigma^{2}=1$
+\end_inset
+
+
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color orange
+68-95-99.7 regeln
+\series default
+\color inherit
+ kommer från 
+\begin_inset Formula $N(0,1)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename figs/standard_normal_1std.pdf
+	lyxscale 30
+	scale 17
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figs/standard_normal_2std.pdf
+	lyxscale 30
+	scale 17
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figs/standard_normal_3std.pdf
+	lyxscale 30
+	scale 17
+
+\end_inset
+
+
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+\color blue
+Normalfördelning
+\series default
+\color inherit
+, 
+\begin_inset Formula $X\sim N(\mu,\sigma^{2})$
+\end_inset
+
+
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Väntevärde 
+\begin_inset Formula $E(X)=\mu$
+\end_inset
+
+
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Varians 
+\begin_inset Formula $Var(X)=\sigma^{2}$
+\end_inset
+
+
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+\color blue
+Parametrarna
+\series default
+\color inherit
+ 
+\begin_inset Formula $\mu$
+\end_inset
+
+ och 
+\begin_inset Formula $\sigma^{2}$
+\end_inset
+
+ är just väntevärdet och variansen!
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Standardisering
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Om 
+\begin_inset Formula $X\sim N(\mu,\sigma^{2})$
+\end_inset
+
+ så gäller att 
+\begin_inset Formula 
+\[
+Z=\frac{X-\mu}{\sigma}\sim N(0,1)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color blue
+Standardisering
+\series default
+\color inherit
+: från allmän normalfördelning till standard normal genom 
+\series bold
+\color orange
+skift
+\series default
+\color inherit
+ och 
+\series bold
+\color orange
+skalning
+\series default
+\color inherit
+.
+\end_layout
+
+\begin_layout Itemize
+Beräkna sannolikheter för 
+\begin_inset Formula $X\sim N(\mu,\sigma^{2})$
+\end_inset
+
+ från standard normal
+\size footnotesize
+
+\begin_inset Formula 
+\[
+P(X\leq x)=P(X-\mu\leq x-\mu)=P\left(\frac{X-\mu}{\sigma}\leq\frac{x-\mu}{\sigma}\right)=P\left(Z\leq\frac{x-\mu}{\sigma}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Exempel: 
+\begin_inset Formula $X\sim N(2,3^{2})$
+\end_inset
+
+, vad är sannolikheten att 
+\begin_inset Formula $X\leq5$
+\end_inset
+
+?
+\size footnotesize
+
+\begin_inset Formula 
+\[
+P(X\leq5)=P\left(\frac{X-2}{3}\leq\frac{5-2}{3}\right)=P\left(Z\leq1\right)=0.8413\text{ [från Z-tabell]}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Standardisering
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figs/standardization.pdf
+	lyxscale 30
+	scale 38
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Korrelation - linjärt beroende i data
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Korrelation: linjärt beroende mellan variabler.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figs/PosKorr.pdf
+	scale 45
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figs/NegKorr.pdf
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Beroende variabler - Kovarians och Korrelation
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Låt 
+\begin_inset Formula $X$
+\end_inset
+
+ ha väntevärde 
+\begin_inset Formula $\mu$
+\end_inset
+
+ och 
+\begin_inset Formula $Y$
+\end_inset
+
+ väntevärde 
+\begin_inset Formula $\nu$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color orange
+Kovarians
+\series default
+\color inherit
+: 
+\series bold
+\color blue
+linjärt beroende
+\series default
+\color inherit
+ mellan slumpvariabler.
+\begin_inset Formula 
+\[
+Cov(X,Y)=E\left((X-\mu)(Y-\nu)\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figs/PositivKovarians.pdf
+	scale 43
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+\color blue
+Korrelation 
+\begin_inset Formula $(-1\leq Corr(X,Y)\leq1)$
+\end_inset
+
+ 
+\color orange
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+emoji{smiling-face-with-heart-eyes}
+\end_layout
+
+\end_inset
+
+
+\series default
+\color inherit
+
+\begin_inset Formula 
+\[
+Corr(X,Y)=\frac{Cov(X,Y)}{SD(X)\cdot SD(Y)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Variansen av en summan av beroende variabler
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tcolorbox}[colback=verylightgray]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+textcolor{blue}{
+\backslash
+textbf{Varians - summa av 
+\backslash
+textcolor{orange}{beroende} slumpvariabler}}.
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-0.2cm}
+\end_layout
+
+\begin_layout Plain Layout
+
+$$V(X+Y)= Var(X) + Var(Y)+2Cov(X,Y)$$
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tcolorbox}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color blue
+Positiv kovarians
+\series default
+\color inherit
+ - 
+\series bold
+\color orange
+variansen
+\series default
+\color inherit
+ för summan 
+\series bold
+\color orange
+större
+\series default
+\color inherit
+ än vid oberoende.
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color blue
+Negativ kovarians
+\series default
+\color inherit
+ - 
+\series bold
+\color orange
+variansen
+\series default
+\color inherit
+ för summan 
+\series bold
+\color orange
+mindre
+\series default
+\color inherit
+ än vid oberoende.
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Säker aktieportfölj: välj aktier var priser tenderar att röra sig i olika
+ riktningar.
+ Even Steven.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figs/evensteven.pdf
+	lyxscale 30
+	scale 28
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
