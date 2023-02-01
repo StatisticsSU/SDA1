@@ -26,8 +26,9 @@ Läs: SDM Kapitel 14 | [Slides](/slides/F14Slumpvariabler.pdf)\
 Interaktivt: [normalfördelningen](/observable/normalfordelningen.qmd)
 
 **Föreläsning 15 - Diskreta sannolikhetsmodeller.**\
-Läs: SDM Kapitel 15.1, 15.2, 15.3, 15.6 | [Slides](/misc/larry.png)\
-Interaktivt: [geometrisk fördelning](/observable/geometriskfordelning.qmd) | [binomialfördelningen](/observable/binomialfordelningen.qmd) | [Poissonfördelningen](/observable/poissonfordelningen.qmd)
+Läs: SDM Kapitel 15.1, 15.2, 15.3, 15.6 | [Slides](/slides/F15DiskretaModeller.pdf)\
+Interaktivt: [geometrisk fördelning](/observable/geometriskfordelning.qmd) | [binomialfördelningen](/observable/binomialfordelningen.qmd) | [Poissonfördelningen](/observable/poissonfordelningen.qmd)\
+Kod:  [geometric.R](/code/geometric.R)
 
 **Föreläsning 16 - Kontinuerliga sannolikhetsmodeller.**\
 Läs: SDM Kapitel 5.3, 14.4, 15.7 | [Slides](/misc/larry.png) \
@@ -79,7 +80,7 @@ Uppgifter: SDM 13.1, 13.5, 13.7, 13.10, 13.12, 13.14, 13.18, 13.21, 13.24, 13.31
 Uppgifter: SDM 14.1, 14.3, 14.9a, 14.11, 14.13, 14.21, 14.26, 14.33, 14.36, 14.43, 14.54.
 
 **Övning 10 - Diskreta sannolikhetsfördelningar.**\
-Uppgifter: SDM 15 
+Uppgifter: SDM 15.1, 15.3, 15.5, 15.7, 15.18, 15.19, 15.21, 15.28, 15.29, 15.31, 15.41, 15.45, 15.49, 15.59.
 
 **Övning 12 - Kontinerliga sannolikhetsfördelningar.**\
 Uppgifter: SDM 15 
