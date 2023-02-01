@@ -192,7 +192,7 @@ y <- -5*x^2 + rnorm(n = 1000)
 plot(x, y, col = "cornflowerblue")
 ```
 
-Det finns ett uppenbart kvadratiskt samband $y$ och $x$. Låt oss beräkna korrelationen.
+Det finns ett uppenbart kvadratiskt samband mellan $y$ och $x$. Låt oss beräkna korrelationen.
 
 ```{r}
 cor(x, y)
