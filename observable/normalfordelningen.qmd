@@ -3,5 +3,5 @@ title: "Normalfördelningen"
 format: html
 ---
 
-<iframe width="100%" height="757" frameborder="0"
-  src="https://observablehq.com/embed/@mattiasvillani/normalfordelningen@535?cells=viewof+params%2Cdist_quantile%2Cmoments%2Cplt_pdf"></iframe>
+<iframe width="100%" height="605" frameborder="0"
+  src="https://observablehq.com/embed/@mattiasvillani/normalfordelningen@663?cells=viewof+params%2Cdist_quantile%2Cmoments%2Csidebysideplot"></iframe>
