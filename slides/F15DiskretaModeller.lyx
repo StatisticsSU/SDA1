@@ -938,8 +938,8 @@ status open
 \align center
 \begin_inset CommandInset href
 LatexCommand href
-name "\\includegraphics[width=0.7\\textwidth]{../observable/figs/geometrisk_widget.png}"
-target "https://statisticssu.github.io/SDA1/observable/geometriskfordelning.html"
+name "\\includegraphics[width=0.7\\textwidth]{../observable/figs/binomial_widget.png}"
+target "https://statisticssu.github.io/SDA1/observable/binomialfordelningen.html"
 literal "true"
 
 \end_inset
