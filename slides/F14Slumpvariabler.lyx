@@ -3404,7 +3404,7 @@ status open
 \align center
 \begin_inset CommandInset href
 LatexCommand href
-name "\\includegraphics[width=0.7\\textwidth]{../observable/normal_widget.png}"
+name "\\includegraphics[width=0.7\\textwidth]{../observable/figs/normal_widget.png}"
 target "https://statisticssu.github.io/SDA1/observable/normalfordelningen.html"
 literal "true"
 

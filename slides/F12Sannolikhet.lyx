@@ -1180,7 +1180,7 @@ status open
 \align center
 \begin_inset CommandInset href
 LatexCommand href
-name "\\includegraphics[width=0.9\\textwidth]{../observable/slantsingling.png}"
+name "\\includegraphics[width=0.9\\textwidth]{../observable/figs/slantsingling.png}"
 target "https://statisticssu.github.io/SDA1/observable/storatalenslag_bernoulli.html"
 literal "true"
 

@@ -165,7 +165,7 @@ inserttotalframenumber
 \begin_layout Subtitle
 
 \color orange
-Föreläsning 14 - Slumpvariabler
+Föreläsning 15 - Diskreta sannolikhetsmodeller
 \end_layout
 
 \begin_layout Author
@@ -278,6 +278,678 @@ Binomialfördelning
 \series bold
 \color blue
 Poissonfördelning
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Bernoulliförsök
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+\color blue
+Bernoulliförsök
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Bara 
+\series bold
+\color orange
+två möjliga utfall
+\series default
+\color inherit
+: lyckas/misslyckas.
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+\color orange
+Samma sannolikhet
+\series default
+\color inherit
+ för lyckas,
+\series bold
+\color orange
+ 
+\begin_inset Formula $p$
+\end_inset
+
+
+\series default
+\color inherit
+, i alla försök.
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+\color orange
+Oberoende
+\series default
+\color inherit
+ 
+\series bold
+\color orange
+försök
+\series default
+\color inherit
+.
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Typexempel: 
+\series bold
+\color blue
+slantsingling
+\series default
+\color inherit
+.
+ 
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Lyckas = Krona, Misslyckas = Klave.
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Sannolikhet 
+\begin_inset Formula $p=0.5$
+\end_inset
+
+ för schysst mynt.
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Utfall på singling beror inte på antal singlingar.
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Lyckas/Misslyckas är bara en benämning.
+ 
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Död/Levande.
+ Hel/Trasig.
+ Spam/inte spam.
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Två möjliga utfall: 
+\series bold
+\color blue
+binär variabel
+\series default
+\color inherit
+.
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[
+\backslash
+emoji{warning}]
+\end_layout
+
+\end_inset
+
+Utan återläggning 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+ beroende.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$P(
+\backslash
+text{3 st 
+\backslash
+spadesuit})=
+\backslash
+frac{13}{52}
+\backslash
+cdot 
+\backslash
+frac{12}{51} 
+\backslash
+cdot 
+\backslash
+frac{11}{50}$
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Geometrisk fördelning
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Email: 
+\series bold
+\color blue
+spam
+\series default
+\color inherit
+ eller 
+\series bold
+\color blue
+ham
+\series default
+\color inherit
+ (icke-spam).
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $P(\text{spam})=p=0.9$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P(\text{ham})=q=1-p=0.1$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Hur många mejl måste du öppna tills du får ditt första ham?
+\size small
+
+\begin_inset Formula 
+\[
+P(\text{första ham på fjärde mejlet})=\underbrace{0.9\cdot0.9\cdot0.9}_{3\text{ spam}}\cdot\underbrace{0.1}_{\text{ham}}=0.9^{3}\cdot0.1=0.0729
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Vad är sannolikheten för 
+\begin_inset Formula $x$
+\end_inset
+
+ st mejl tills första ham?
+\begin_inset Formula 
+\[
+P(\text{första ham på }x\text{:te mejlet})=0.9^{x-1}\cdot0.1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color blue
+Slumpvariabel
+\series default
+\color inherit
+ från Bernoulliförsök
+\begin_inset Formula 
+\[
+X=\text{antal försök {\color{blue}\boldsymbol{tills}\:\boldsymbol{första}\:\boldsymbol{lyckade}} inträffar}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color orange
+Geometrisk fördelning
+\series default
+\color inherit
+
+\begin_inset Formula 
+\[
+P(X=x)=q^{x-1}p,\quad\text{ för }x=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[
+\backslash
+emoji{warning}]
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $X$
+\end_inset
+
+ räknar med försöket där du först lyckas.
+\begin_inset Newline newline
+\end_inset
+
+Wikipedia kallar detta för 
+\bar under
+\color blue
+
+\begin_inset CommandInset href
+LatexCommand href
+name "för-första-gången-fördelning"
+target "https://sv.wikipedia.org/wiki/Geometrisk_f%C3%B6rdelning"
+literal "false"
+
+\end_inset
+
+
+\bar default
+\color inherit
+.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Geometrisk fördelning
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "1pt"
+separation "1pt"
+shadowsize "4pt"
+framecolor "orange"
+backgroundcolor "white"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset CommandInset href
+LatexCommand href
+name "\\includegraphics[width=0.7\\textwidth]{../observable/figs/geometrisk_widget.png}"
+target "https://statisticssu.github.io/SDA1/observable/geometriskfordelning.html"
+literal "true"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Binomialfördelning
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Email: 
+\series bold
+\color blue
+spam
+\series default
+\color inherit
+ eller 
+\series bold
+\color blue
+ham
+\series default
+\color inherit
+ (icke-spam).
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $P(\text{spam})=p=0.9$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $P(\text{ham})=q=1-p=0.1$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Hur många mejl måste du öppna tills du får ditt första ham?
+\size small
+
+\begin_inset Formula 
+\[
+P(\text{första ham på fjärde mejlet})=\underbrace{0.9\cdot0.9\cdot0.9}_{3\text{ spam}}\cdot\underbrace{0.1}_{\text{ham}}=0.9^{3}\cdot0.1=0.0729
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Vad är sannolikheten för 
+\begin_inset Formula $x$
+\end_inset
+
+ st mejl tills första ham?
+\begin_inset Formula 
+\[
+P(\text{första ham på }x\text{:te mejlet})=0.9^{x-1}\cdot0.1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color blue
+Slumpvariabel
+\series default
+\color inherit
+ från Bernoulliförsök
+\begin_inset Formula 
+\[
+X=\text{antal försök {\color{blue}\boldsymbol{tills}\:\boldsymbol{första}\:\boldsymbol{lyckade}} inträffar}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color orange
+Geometrisk fördelning
+\series default
+\color inherit
+
+\begin_inset Formula 
+\[
+P(X=x)=q^{x-1}p,\quad\text{ för }x=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[
+\backslash
+emoji{warning}]
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $X$
+\end_inset
+
+ räknar med försöket där du först lyckas.
+\begin_inset Newline newline
+\end_inset
+
+Wikipedia kallar detta för 
+\bar under
+\color blue
+
+\begin_inset CommandInset href
+LatexCommand href
+name "för-första-gången-fördelning"
+target "https://sv.wikipedia.org/wiki/Geometrisk_f%C3%B6rdelning"
+literal "false"
+
+\end_inset
+
+
+\bar default
+\color inherit
+.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Binomialfördelning
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "1pt"
+separation "1pt"
+shadowsize "4pt"
+framecolor "orange"
+backgroundcolor "white"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset CommandInset href
+LatexCommand href
+name "\\includegraphics[width=0.7\\textwidth]{../observable/figs/geometrisk_widget.png}"
+target "https://statisticssu.github.io/SDA1/observable/geometriskfordelning.html"
+literal "true"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
