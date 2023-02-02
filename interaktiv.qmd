@@ -40,6 +40,9 @@ Föreläsning 15 - **binomialfördelning**: <br>
 Föreläsning 15 - **Poissonfördelning**: <br>
 [widget](/observable/poissonfordelningen.qmd)
 
+Föreläsning 15 - **Maximum likelihoodskattning - Poissonfördelning**: <br>
+[widget](/observable/ml_poisson.qmd)
+
 Föreläsning 16 - **exponentialfördelning**: <br>
 [widget](/observable/exponentialfordelningen.qmd) | [notebook](https://observablehq.com/@mattiasvillani/exponentialfordelningen)
 

@@ -25,6 +25,8 @@
 \usepackage{tabularx}
 \usepackage{array}
 \tcbuselibrary{skins}
+%\usepackage{fdsymbol} % for card symbols
+
 
 \newcolumntype{Y}{>{\raggedleft\arraybackslash}X}
 \tcbset{tab2/.style={enhanced, fontupper=\small,
@@ -440,7 +442,7 @@ Sannolikhet
 \end_layout
 
 \begin_layout Itemize
-Utfall på singling beror inte på antal singlingar.
+Utfall på en singling beror inte på andra singlingar.
 \begin_inset VSpace bigskip
 \end_inset
 
@@ -460,21 +462,7 @@ Lyckas/Misslyckas är bara en benämning.
 \begin_layout Itemize
 Död/Levande.
  Hel/Trasig.
- Spam/inte spam.
-\begin_inset VSpace medskip
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-Två möjliga utfall: 
-\series bold
-\color blue
-binär variabel
-\series default
-\color inherit
-.
+ Spam/Ham.
 \begin_inset VSpace medskip
 \end_inset
 
@@ -498,141 +486,12 @@ Utan återläggning
 \begin_inset Formula $\Rightarrow$
 \end_inset
 
- beroende.
- 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$P(
-\backslash
-text{3 st 
-\backslash
-spadesuit})=
-\backslash
-frac{13}{52}
-\backslash
-cdot 
-\backslash
-frac{12}{51} 
-\backslash
-cdot 
-\backslash
-frac{11}{50}$
-\end_layout
-
-\end_inset
-
-.
-\end_layout
-
-\end_deeper
-\begin_layout Standard
-\begin_inset Separator parbreak
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-
-\series bold
-\color orange
-Bernoulliförsök
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-
-\series bold
-\color blue
-Bernoulli-försök
-\begin_inset VSpace medskip
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Enumerate
-Bara 
-\series bold
-\color orange
-två möjliga utfall
-\series default
-\color inherit
-: lyckas/misslyckas.
-\begin_inset VSpace medskip
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
-
-\series bold
-\color orange
-Samma sannolikhet
-\series default
-\color inherit
- för lyckas,
-\series bold
-\color orange
- 
+ inte samma 
 \begin_inset Formula $p$
 \end_inset
 
-
-\series default
-\color inherit
-, i alla försök.
-\begin_inset VSpace medskip
-\end_inset
-
-
-\end_layout
-
-\begin_layout Enumerate
-
-\series bold
-\color orange
-Oberoende
-\series default
-\color inherit
- 
-\series bold
-\color orange
-försök
-\series default
-\color inherit
-.
-\begin_inset VSpace bigskip
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\begin_layout Itemize
-Typexempel: 
-\series bold
-\color blue
-slantsingling
-\series default
-\color inherit
-.
- 
-\begin_inset VSpace medskip
+ i olika försök:
+\begin_inset VSpace smallskip
 \end_inset
 
 
@@ -640,72 +499,6 @@ slantsingling
 
 \begin_deeper
 \begin_layout Itemize
-Lyckas = Krona, Misslyckas = Klave.
-\begin_inset VSpace medskip
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-Sannolikhet 
-\begin_inset Formula $p=0.5$
-\end_inset
-
- för schysst mynt.
-\begin_inset VSpace medskip
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-Utfall på singling beror inte på antal singlingar.
-\begin_inset VSpace bigskip
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\begin_layout Itemize
-Lyckas/Misslyckas är bara en benämning.
- 
-\begin_inset VSpace medskip
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-Död/Levande.
- Hel/Trasig.
- Spam/inte spam.
-\begin_inset VSpace medskip
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-[
-\backslash
-emoji{warning}]
-\end_layout
-
-\end_inset
-
-Utan återläggning 
-\begin_inset Formula $\Rightarrow$
-\end_inset
-
- beroende.
- 
 \begin_inset ERT
 status open
 
@@ -713,26 +506,61 @@ status open
 
 $P(
 \backslash
-text{3 st 
+text{1:a kortet 
 \backslash
-spadesuit})=
+spadesuit}) = 
 \backslash
-frac{13}{52}
-\backslash
-cdot 
-\backslash
-frac{12}{51} 
-\backslash
-cdot 
-\backslash
-frac{11}{50}$
+frac{13}{52}$
 \end_layout
 
 \end_inset
 
-.
+
+\begin_inset VSpace smallskip
+\end_inset
+
+
 \end_layout
 
+\begin_layout Itemize
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$P(
+\backslash
+text{2:a kortet 
+\backslash
+spadesuit}) = 
+\backslash
+frac{12}{51}
+\backslash
+text{ om 1:a 
+\backslash
+spadesuit} 
+\backslash
+, 
+\backslash
+text{ eller } 
+\backslash
+frac{13}{51} 
+\backslash
+text{ om 1:a 
+\backslash
+heartsuit,
+\backslash
+diamondsuit,
+\backslash
+clubsuit }$.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Standard
 \begin_inset Separator parbreak
@@ -783,19 +611,109 @@ lyckat = 1
 , 
 \series bold
 \color blue
-misslyckat = 0
+misslyckat =0
 \series default
+\size small
 \color inherit
 .
-\size small
+\size default
 
-\begin_inset Formula 
-\[
-X=\begin{cases}
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size small
+\begin_inset Box Boxed
+position "b"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "58col%"
+special "none"
+height "2.5cm"
+height_special "none"
+thickness "1pt"
+separation "2pt"
+shadowsize "4pt"
+framecolor "orange"
+backgroundcolor "white"
+status open
+
+\begin_layout Plain Layout
+
+\size small
+\begin_inset Formula $X=\begin{cases}
 1 & \text{om Bernoulli-försök lyckat}\\
 0 & \text{om Bernoulli-försök misslyckat}
-\end{cases}
-\]
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace medskip
+\end_inset
+
+
+\size small
+
+\begin_inset Formula $P(X=x)=\begin{cases}
+p & \text{för }x=1\\
+q & \text{för }x=0
+\end{cases}$
+\end_inset
+
+
+\size default
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \quad{}
+\end_inset
+
+
+\begin_inset Box Frameless
+position "b"
+hor_pos "c"
+has_inner_box 1
+inner_pos "b"
+use_parbox 0
+use_makebox 0
+width "30col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename figs/bernoulli_dist.pdf
+	lyxscale 40
+	scale 30
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -804,15 +722,7 @@ X=\begin{cases}
 
 \begin_layout Standard
 \align center
-\begin_inset Graphics
-	filename figs/bernoulli_dist.pdf
-	lyxscale 40
-	scale 35
-
-\end_inset
-
-
-\begin_inset VSpace -0.5cm
+\begin_inset VSpace -0.3cm
 \end_inset
 
 
@@ -833,13 +743,14 @@ och
 \color blue
 Varians
 \series default
-\size small
+\size footnotesize
 \color inherit
 
 \begin_inset Formula 
-\[
-E(X)=\mu=\sum x\cdot P(x)=0\cdot P(X=0)+1\cdot P(X=1)=0\cdot q+1\cdot p=p
-\]
+\begin{align*}
+E(X) & =\mu=\sum_{\text{alla }x}x\cdot P(x)=0\cdot P(X=0)+1\cdot P(X=1)\\
+ & =0\cdot q+1\cdot p=p
+\end{align*}
 
 \end_inset
 
@@ -1049,7 +960,7 @@ Hur många mejl måste du öppna tills du får ditt första ham?
 
 \begin_inset Formula 
 \[
-P(\text{första ham på fjärde mejlet})=\underbrace{0.9\cdot0.9\cdot0.9}_{3\text{ spam}}\cdot\underbrace{0.1}_{\text{ham}}=0.9^{3}\cdot0.1=0.0729
+P(\text{första ham på fjärde mejlet})=\overbrace{\underbrace{0.9\cdot0.9\cdot0.9}_{3\text{ spam}}\cdot\underbrace{0.1}_{\text{ham}}}^{{\color{orange}\text{gånger pga oberoende}}}=0.9^{3}\cdot0.1=0.0729
 \]
 
 \end_inset
@@ -1077,7 +988,7 @@ P(\text{första ham på }x\text{:te mejlet})=0.9^{x-1}\cdot0.1
 
 \series bold
 \color blue
-Slumpvariabel
+Geometrisk slumpvariabel
 \series default
 \color inherit
  från Bernoulliförsök
@@ -1126,7 +1037,11 @@ emoji{warning}]
 \begin_inset Formula $X$
 \end_inset
 
- räknar med försöket där du först lyckas.
+ 
+\series bold
+inkluderar
+\series default
+ försöket där du först lyckas.
 \begin_inset Newline newline
 \end_inset
 
@@ -1240,7 +1155,17 @@ Geometrisk fördelning i R
 \begin_inset Formula $X\sim\mathrm{Geom}(p=0.4)$
 \end_inset
 
+.
+ Sannolikheten 
+\begin_inset Formula $p$
+\end_inset
 
+ kallas 
+\family typewriter
+prob
+\family default
+ i R.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -1254,7 +1179,7 @@ has_inner_box 1
 inner_pos "t"
 use_parbox 0
 use_makebox 0
-width "75col%"
+width "80col%"
 special "none"
 height "1in"
 height_special "totalheight"
@@ -1482,6 +1407,21 @@ innan
 \series default
 \color inherit
  första lyckade.
+ Fix:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figs/geomR.png
+	scale 25
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset VSpace bigskip
 \end_inset
 
@@ -1490,13 +1430,21 @@ innan
 
 \begin_layout Itemize
 Se programkoden 
-\family typewriter
-\color orange
-geometric.R
-\family default
+\bar under
+\color blue
+
+\begin_inset CommandInset href
+LatexCommand href
+name "Geometric.R"
+target "https://statisticssu.github.io/SDA1/code/geometric.R"
+literal "false"
+
+\end_inset
+
+
+\bar default
 \color inherit
-.
- på webben under dagens föreläsning.
+ på kurssidan.
 \end_layout
 
 \end_deeper
@@ -1589,11 +1537,23 @@ Hur många lyckade
 \end_layout
 
 \begin_layout Itemize
-Antal försök 
+
+\series bold
+\color blue
+Antal försök
+\series default
+\color inherit
+ 
 \begin_inset Formula $n$
 \end_inset
 
- är förbestämt och fixerat.
+ är 
+\series bold
+\color blue
+förbestämt
+\series default
+\color inherit
+ och fixerat.
  
 \begin_inset VSpace smallskip
 \end_inset
@@ -1685,6 +1645,12 @@ Exempel:
 \end_inset
 
  försök med resultat: 
+\begin_inset Newline newline
+\end_inset
+
+
+\size footnotesize
+
 \begin_inset Formula $X_{1}=1$
 \end_inset
 
@@ -1697,6 +1663,8 @@ Exempel:
 \end_inset
 
  (Klave tredje).
+\size default
+
 \begin_inset Formula 
 \[
 X=1+1+0=2\text{ st lyckade (Krona)}.
@@ -2560,7 +2528,21 @@ flera sätt att få
 \end_layout
 
 \begin_layout Itemize
-Så 
+Eftersom dessa tre olika sätt att få 
+\begin_inset Formula $X=2$
+\end_inset
+
+
+\size small
+ 
+\size default
+är 
+\series bold
+\color blue
+disjunkta
+\series default
+\color inherit
+:
 \size small
 
 \begin_inset Formula 
@@ -2568,6 +2550,10 @@ Så
 P(X=2)=3\cdot p^{2}q
 \]
 
+\end_inset
+
+
+\begin_inset VSpace -0.75cm
 \end_inset
 
 
@@ -2607,355 +2593,6 @@ status open
 \series bold
 \color orange
 Binomialfördelningens sannolikheter
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-
-\series bold
-\color blue
-Sannolikhetsfördelning
-\series default
-\color inherit
- 
-\begin_inset Formula $X\sim\mathrm{Bin}(3,p)$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\align center
-
-\size small
-\begin_inset Box Boxed
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "60col%"
-special "none"
-height "1in"
-height_special "totalheight"
-thickness "1pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "orange"
-backgroundcolor "white"
-status open
-
-\begin_layout Plain Layout
-\align center
-
-\size small
-\begin_inset Tabular
-<lyxtabular version="3" rows="2" columns="6">
-<features tabularvalignment="middle">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="center" valignment="top">
-<row>
-<cell alignment="center" valignment="top" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\size small
-\begin_inset Formula $x$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\size small
-\begin_inset Formula $0$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\size small
-\begin_inset Formula $1$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\size small
-\begin_inset Formula $2$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\size small
-\begin_inset Formula $3$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\size small
-\begin_inset Formula $P(x)$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\size small
-\begin_inset Formula $q^{3}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\size small
-\begin_inset Formula $3\cdot pq^{2}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\size small
-\begin_inset Formula $3\cdot p^{2}q$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\size small
-\begin_inset Formula $p^{3}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-Kolla att summan av alla sannolikheter är ett:
-\begin_inset Formula 
-\[
-q^{3}+3\cdot pq^{2}+3\cdot p^{2}q+p^{3}=(p+q)^{3}=1^{3}=1
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-Allmänna fallet 
-\begin_inset Formula $X\sim\mathrm{Bin}(n,p)$
-\end_inset
-
- 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$$P(X=x)= {}_nC_x
-\backslash
-cdot p^xq^{n-x}$$
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-${}_nC_x$
-\end_layout
-
-\end_inset
-
- är antalet sätt ordna 
-\begin_inset Formula $x$
-\end_inset
-
- st 1:or bland 
-\begin_inset Formula $n$
-\end_inset
-
- observationer.
-\end_layout
-
-\begin_layout Standard
-\align center
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-boldblue{Kombinationer och permutationer} 
-\backslash
-begin{tcolorbox}[width=0.87
-\backslash
-hsize, tab2, tabularx={c|c|c}, boxrule=0.5pt, title = Hur många sätt att
- välja $k$ element bland $n$ element?]  & 
-\backslash
-vspace{0.1cm} med återläggning     & utan återläggning      
-\backslash
-
-\backslash
-
-\backslash
-hline med ordning   & $n^k$  & $
-\backslash
-,_nP_k = 
-\backslash
-frac{n!}{(n-k)!}$                             
-\backslash
-
-\backslash
-
-\backslash
-hline utan ordning   & ej på kurs & $ 
-\backslash
-,_nC_k = 
-\backslash
-frac{n!}{(n-k)!k!}$   
-\backslash
-end{tcolorbox}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\begin_layout Standard
-\begin_inset Separator parbreak
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-
-\series bold
-\color orange
-Approximera binomialfördelning med normal
 \end_layout
 
 \end_inset
@@ -3529,15 +3166,27 @@ Var(X) & =\lambda
 
 \begin_layout Itemize
 Exempel:
+\begin_inset VSpace smallskip
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
 antal buggar i en mjukvara
+\begin_inset VSpace smallskip
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
 antal bud i en eBay auktion
+\begin_inset VSpace smallskip
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
