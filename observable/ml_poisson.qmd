@@ -3,5 +3,5 @@ title: "Maximum likelihood estimation - Poissonfördelning"
 format: html
 ---
 
-<iframe width="100%" height="1086.0625" frameborder="0"
-  src="https://observablehq.com/embed/6ad25aff8c6dc593@1147?cells=modell%2Cviewof+settings%2Ctextslh%2Cpltdata%2Cpltlikelihood"></iframe>
+<iframe width="100%" height="1086" frameborder="0"
+  src="https://observablehq.com/embed/6ad25aff8c6dc593@1155?cells=modell%2Cviewof+settings%2Ctextslh%2Cpltdata%2Cpltlikelihood"></iframe>
