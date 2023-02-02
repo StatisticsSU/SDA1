@@ -3295,63 +3295,7 @@ nBids
 \end_layout
 
 \begin_layout Itemize
-Auktionerna har mynt med olika värden och olika reservationspris (säljarens
- lägsta tänkbara pris).
- 
-\end_layout
-
-\begin_layout Itemize
-Fokus här på de 550 observationer med lägst reservationspris.
-\end_layout
-
-\begin_layout Itemize
-Vi modellerar 
-\begin_inset Formula $X=$
-\end_inset
-
-
-\family typewriter
- nBids
-\family default
- med modellen 
-\begin_inset Formula $X\overset{\mathrm{ober}}{\sim}\mathrm{Pois}(\lambda)$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Itemize
-Hur väljer vi parametern 
-\begin_inset Formula $\lambda$
-\end_inset
-
-? 
-\series bold
-\color blue
-Punktskattning
-\series default
-\color inherit
-.
- 
-\series bold
-\color blue
-Estimat
-\series default
-\color inherit
-.
- 
-\end_layout
-
-\begin_layout Itemize
-Eftersom 
-\begin_inset Formula $E(X)=\lambda$
-\end_inset
-
- så är 
-\begin_inset Formula $\hat{\lambda}=\bar{x}$
-\end_inset
-
-, stickprovsmedelvärdet rimligt.
+Auktio
 \end_layout
 
 \begin_layout Standard
