@@ -388,7 +388,7 @@ status open
 
 \series bold
 \color orange
-Likformig fördelning
+Exponentialfördelning
 \end_layout
 
 \end_inset
@@ -399,10 +399,36 @@ Likformig fördelning
 \begin_deeper
 \begin_layout Standard
 \align center
-\begin_inset Graphics
-	filename figs/exponential.svg
-	lyxscale 30
-	scale 50
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "1pt"
+separation "1pt"
+shadowsize "4pt"
+framecolor "orange"
+backgroundcolor "white"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset CommandInset href
+LatexCommand href
+name "\\includegraphics[width=0.7\\textwidth]{../observable/figs/expon_widget.png}"
+target "https://statisticssu.github.io/SDA1/observable/exponentialfordelning.html"
+literal "true"
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -437,20 +463,6 @@ Student-
 
 \end_layout
 
-\begin_deeper
-\begin_layout Standard
-\align center
-\begin_inset Graphics
-	filename figs/exponential.svg
-	lyxscale 30
-	scale 50
-
-\end_inset
-
-
-\end_layout
-
-\end_deeper
 \begin_layout Standard
 \begin_inset Separator parbreak
 \end_inset
