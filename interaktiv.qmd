@@ -52,6 +52,9 @@ Föreläsning 16 - **exponentialfördelning**: <br>
 Föreläsning 16 - **Student-*t* fördelning**: <br>
 [widget](/observable/studentt.qmd) | [notebook](https://observablehq.com/@mattiasvillani/student-t)
 
+Föreläsning 16 - **Allmän student-*t* fördelning**: <br>
+[widget](/observable/studentt_allman.qmd) | [notebook](https://observablehq.com/@mattiasvillani/student-t-fordelning-allman-version)
+
 Föreläsning 18 - **Stora talens lag**: <br>
 [normalpopulation - widget](/observable/storatalenslag.qmd) | [normalpopulation - notebook](https://observablehq.com/@mattiasvillani/stora-talens-lag-allman)
 
