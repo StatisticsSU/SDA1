@@ -80,28 +80,25 @@ Uppgifter: SDM 13.1, 13.5, 13.7, 13.10, 13.12, 13.14, 13.18, 13.21, 13.24, 13.31
 **Övning 9 - Slumpvariabler, väntevärde och standardavvikelse.**\
 Uppgifter: SDM 14.1, 14.3, 14.9a, 14.11, 14.13, 14.21, 14.26, 14.33, 14.36, 14.43, 14.54.
 
-**Övning 10 - Diskreta sannolikhetsfördelningar.**\
-Uppgifter: SDM 15.1, 15.3, 15.5, 15.7, 15.18, 15.19, 15.21, 15.28, 15.29, 15.31, 15.41, 15.45, 15.49, 15.59.
+**Övning 10 - Sannolikhetsfördelningar I.**\
+Uppgifter: SDM 15.1, 15.3, 15.5, 15.18, 15.19, 15.21, 15.28, 15.29, 15.31, 15.41, 15.45.
 
-**Övning 12 - Kontinerliga sannolikhetsfördelningar.**\
-Uppgifter: SDM 15 
+**Övning 11 - Sannolikhetsfördelningar II.**\
+Uppgifter: SDM 15.7, 15.11, 15.12, 15.49, 15.59, 15.60, 15.61, 15.62.
 
-**Övning 13 - Samplingfördelningar och konfidensintervall för en andel.**\
+**Övning 12 - Samplingfördelningar och konfidensintervall för en andel.**\
 Uppgifter: SDM 16 
 
-**Övning 14 - Konfidensintervall för ett väntevärde.**\
+**Övning 13 - Konfidensintervall för ett väntevärde.**\
 Uppgifter: SDM 17 
 
-**Övning 13 - Hypotestest.**\
+**Övning 14 - Hypotestest.**\
 Uppgifter: SDM 18 
 
-**Övning 14 - Hypotestest och p-värde.**\
-Uppgifter: SDM 18 
-
-**Övning 13 - Jämföra grupper.**\
+**Övning 15 - Jämföra grupper.**\
 Uppgifter: SDM 20-21. 
 
-**Övning 14 - Inferens för regression.**\
+**Övning 16 - Inferens för regression.**\
 Uppgifter: SDM 23 
 
 ### **Datorlaborationer**
