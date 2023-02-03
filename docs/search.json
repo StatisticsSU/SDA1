@@ -1013,5 +1013,40 @@
     "title": "Tabellsamling - Statistik och Dataanalys I",
     "section": "",
     "text": "Warning: package 'dplyr' was built under R version 4.2.2\n\n\nWarning: package 'kableExtra' was built under R version 4.2.2"
+  },
+  {
+    "objectID": "assignments/assignment2/Assignment2.html",
+    "href": "assignments/assignment2/Assignment2.html",
+    "title": "Statistik och dataanalys I, 15 hp",
+    "section": "",
+    "text": "Installation av nödvändiga paket\n\n\n\nDen här inlämningsuppgiften förutsätter att följande paket finns installerade:\n\nmosaic\n\nPaket kan installeras via kommandot install.packages('packagename'), där 'packagename' är namnet på paketet, t.ex 'mosaic'."
+  },
+  {
+    "objectID": "assignments/assignment2/Assignment2.html#introduktion",
+    "href": "assignments/assignment2/Assignment2.html#introduktion",
+    "title": "Statistik och dataanalys I, 15 hp",
+    "section": "Introduktion",
+    "text": "Introduktion\nI den första inlämningsuppgiften ska ni självständigt i grupper om tre analysera ett dataset i programmeringsspråket R. Till skillnad från datorlaborationerna finns det minimalt med kodexempel. Datorlaborationerna går igenom de flesta momenten som behandlas i inlämningsuppgiften, så se till att göra klart dessa innan.\n\n\n\n\n\n\n\nInstruktioner\n\n\n\nI denna inlämningsuppgift ska ni analysera ett datamaterial … Följande variabler finns i datasetet boston_census_data.Rdata (ladda ner) …\n\ntown: Stadsdel.\nlongitude: Longitud koordinat..\nlower_stat_pct: Procentandel underklass definerad som en av två: (i) andel vuxna utan gymnasieutbildning eller (ii) andel män som genomför okvalificerat arbete.\n\nROADMAP\nInlämningsuppgiften ska lämnas in i form av ett html dokument genererat av Quarto. Kontrollera noga att du inte har några felmeddelande och att dokumentet kompileras utan problem. Använd tydliga figurer och namnge axlarna med tydliga variabelnamn. Glöm inte att skriva era namn ovanför istället för Namn 1, Namn 2 och Namn 3."
+  },
+  {
+    "objectID": "assignments/assignment2/Assignment2.html#ladda-in-data",
+    "href": "assignments/assignment2/Assignment2.html#ladda-in-data",
+    "title": "Statistik och dataanalys I, 15 hp",
+    "section": "0. Ladda in data",
+    "text": "0. Ladda in data\n\n💪 Uppgift 0.1\nLadda in dataseten Boston_census_data.Rdata och Boston_districts_to_predict.Rdata (länkar för att ladda ner data finns i Instruktioner avsnittet ovan).\n\n\n\n\n\n\nUppgift 0.1 - Svar\n\n\n\n\n# Write your code here\nload(file = url(\"https://github.com/StatisticsSU/SDA1/blob/main/assignments/assignment1/Boston_census_data.RData?raw=true\"))"
+  },
+  {
+    "objectID": "assignments/assignment2/Assignment2.html#kriminalitet-i-boston",
+    "href": "assignments/assignment2/Assignment2.html#kriminalitet-i-boston",
+    "title": "Statistik och dataanalys I, 15 hp",
+    "section": "1. Kriminalitet i Boston",
+    "text": "1. Kriminalitet i Boston\nI detta avsnitt ska ni analysera kriminaliteten i Boston med hjälp av variabeln crime_rate.\n\n💪 Uppgift 1.1\nVad kan man generellt säga om kriminaliteten i censusdistrikten? Använd lämpliga figurer samt fördelningsmått som underlag.\n\n\n\n\n\n\nUppgift 1.1 - Svar\n\n\n\nSkriv svaret här. Vid behov skrivs matematiska symboler inom dollartecken, till exempel \\(\\overline{y} = \\sum^{n}_{i=1} y_i\\). Koden skrivs i R-rutan nedanför.\n\n# Write your code here\n\n\n\n\n\n💪 Uppgift 1.2\nVarierar brottsligheten i Boston beroende på den kategoriska variabeln town? Det finns 88 olika utfall av town (dvs 88 olika stadsdelar). Välj ut Boston East Boston, Boston Downtown,Cambridge, samt två valfria stadsdelar för att besvara frågan. Frågan besvaras med hjälp av lämpligt valda figurer och statistiska mått.\n\n\n\n\n\n\nTips\n\n\n\nSkapa en ny data frame som filtrerar Boston_census_data (till exempel genom filter() funktionen) utefter de stadsdelarna ni är intresserade utav innan ni påbörjar analysen.\n\n\n\n\n\n\n\n\nUppgift 1.2 - Svar\n\n\n\nSkriv svaret här.\n\n# Write your code here\n\n\n\n\n\n💪 Uppgift 1.3\nVilka tre variabler i datasetet Boston_census_data korrelerar mest med brottslighet? Beskriv det parvisa sambandet mellan brottslighet och vardera av dessa tre variabler.\n\n\n\n\n\n\nTips\n\n\n\nKom ihåg att korrelation är ett beroendemått för numeriska variabler.\n\n\n\n\n\n\n\n\nUppgift 1.3 - Svar\n\n\n\nSkriv svaret här.\n\n# Write your code here"
+  },
+  {
+    "objectID": "assignments/assignment2/Assignment2.html#fastighetsskatt-i-boston",
+    "href": "assignments/assignment2/Assignment2.html#fastighetsskatt-i-boston",
+    "title": "Statistik och dataanalys I, 15 hp",
+    "section": "2. Fastighetsskatt i Boston",
+    "text": "2. Fastighetsskatt i Boston\nI detta avsnitt ska ni analysera fastighetsskatten i Boston med hjälp av variabeln tax_rate.\n\n💪 Uppgift 2.1\nVad kan man generellt säga om fastighetsskatten i censusdistrikten? Använd lämpliga figurer samt fördelningsmått som underlag.\n\n\n\n\n\n\nUppgift 2.1 - Svar\n\n\n\nSkriv svaret här.\n\n# Write your code here"
   }
 ]

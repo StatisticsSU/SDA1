@@ -3,5 +3,5 @@ title: "Poissonfördelningen"
 format: html
 ---
 
-<iframe width="100%" height="727" frameborder="0"
+  <iframe width="100%" height="727" frameborder="0"
   src="https://observablehq.com/embed/@mattiasvillani/poisson-distribution@779?cells=viewof+params%2Cdist_quantile%2Cmoments%2Cplt_pdf"></iframe>

@@ -43,6 +43,9 @@ Föreläsning 15 - **Poissonfördelning**: <br>
 Föreläsning 15 - **Maximum likelihoodskattning - Poissonfördelning**: <br>
 [widget](/observable/ml_poisson.qmd)
 
+Föreläsning 16 - **likformig fördelning**: <br>
+[widget](/observable/uniformfordelning.qmd) | [notebook](https://observablehq.com/@mattiasvillani/likformig-fordelningen)
+
 Föreläsning 16 - **exponentialfördelning**: <br>
 [widget](/observable/exponentialfordelningen.qmd) | [notebook](https://observablehq.com/@mattiasvillani/exponentialfordelningen)
 

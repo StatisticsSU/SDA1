@@ -105,11 +105,11 @@ Uppgifter: SDM 23
 
 ### **Datorlaborationer**
 
-**Datorlaboration 6 - Simulering för att utforska sannolikhetsfördelningar.**\
+**Datorlaboration 5 - Simulering för att utforska slumpvariabler och deras egenskaper.**\
+Uppgifter: [Datorlab 5](/misc/larry.png) 
+
+**Datorlaboration 6 - Samplingfördelningar, standardfel och konfidensintervall.**\
 Uppgifter: [Datorlab 6](/misc/larry.png) 
 
-**Datorlaboration 7 - Samplingfördelningar, standardfel och konfidensintervall.**\
-Uppgifter: [Datorlab 7](/misc/larry.png) 
-
-**Datorlaboration 8 - Multipel linjär regression.**\
-Uppgifter: [Datorlab 8](/misc/larry.png)
+**Datorlaboration 7 - Multipel linjär regression - inferens.**\
+Uppgifter: [Datorlab 7](/misc/larry.png)
