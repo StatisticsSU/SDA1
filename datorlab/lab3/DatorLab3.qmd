@@ -72,7 +72,6 @@ Notera att ikonerna i Editor är annorlunda när du har ett Quarto-dokument öpp
 
 Skapa en ny `.R` som du döper till `Lab3_test_code.R` och ställ in 'working directory' till den nya mappen genom att följa anvisningarna från [Lab 1](https://statisticssu.github.io/SDA1/datorlab/lab1/DatorLab1.html#st%C3%A4lla-in-arbetsmappen-working-directory-i-r).
 
-
 #### 💪 Uppgift 0.5
 
 Ladda ner `SmartPhones.RData` ([här](https://github.com/StatisticsSU/SDA1/blob/main/datorlab/lab3/SmartPhones.RData?raw=true)), `FevChildren.RData` ([här](https://github.com/StatisticsSU/SDA1/blob/main/datorlab/lab3/FevChildren.RData?raw=true)) och `CAPM_data.RData` ([här](https://github.com/StatisticsSU/SDA1/blob/main/datorlab/lab3/CAPM_data.RData?raw=true)). Filerna kommer automatiskt att sparas ner, oftast i download mappen på datorn ni sitter vid. Kopiera över filerna till `Lab3` mappen ni skapade ovan.
@@ -528,7 +527,7 @@ Ibland kan det vara bra att kunna hämta ut en variabel från en dataframe. Anta
 
 #### 💪 Uppgift 5.3
 
-Plotta tidsserien för tillgången `CITCRP`. Hur drabbades `CITCRP` av Black Monday jämfört med marknadsportföljen?
+Plotta tidsserien för tillgången `CITCRP`. Hur drabbades `CITCRP` av Black Monday jämfört med marknadsportföljen? Skriv ut return för `CITCRP` och jämför med Uppgift 5.2. 
 
 ```{r}
 # Write your code here
