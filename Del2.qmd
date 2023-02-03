@@ -31,8 +31,9 @@ Interaktivt: [geometrisk fördelning](/observable/geometriskfordelning.qmd) | [b
 Kod:  [geometric.R](/code/geometric.R)
 
 **Föreläsning 16 - Kontinuerliga sannolikhetsmodeller.**\
-Läs: SDM Kapitel 5.3, 14.4, 15.7 | [Slides](/misc/larry.png) \
-Interaktivt: [student-t](/observable/studentt.qmd) | [exponential](/observable/exponentialfordelningen.qmd)\
+Läs: SDM Kapitel 5.3, 14.4, 15.7 | [Slides](/slides/F16KontinuerligaModeller.pdf) \
+Interaktivt: [likformig](/observable/uniformfordelning.qmd) | [exponential](/observable/exponentialfordelningen.qmd) | [student-t](/observable/studentt.qmd) | [allmän student-t](/observable/studentt_allman.qmd)\
+Kod:  [exponential.R](/code/exponential.R)\
 Extramaterial: [Notebook - student-t](https://observablehq.com/@mattiasvillani/student-t)
 
 **Föreläsning 17 - Samplingfördelningar och konfidensintervall för en andel.**\

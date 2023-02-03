@@ -1207,7 +1207,7 @@ Beräkning
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1241,7 +1241,7 @@ R kommando
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1277,7 +1277,7 @@ dgeom(x = 2, prob = 0.4)
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1308,7 +1308,7 @@ Kvantil
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1323,7 +1323,7 @@ Kvantil
 \begin_layout Plain Layout
 
 \family typewriter
-qgeom(p = 0.3, prob = 0.4)
+qgeom(p = 0.5, prob = 0.4)
 \end_layout
 
 \end_inset
@@ -1339,7 +1339,7 @@ qgeom(p = 0.3, prob = 0.4)
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1354,7 +1354,7 @@ qgeom(p = 0.3, prob = 0.4)
 \begin_layout Plain Layout
 
 \family typewriter
-rgeom(n = 10, prob 0.4)
+rgeom(n = 10, prob = 0.4)
 \end_layout
 
 \end_inset
@@ -1435,7 +1435,7 @@ Se programkoden
 
 \begin_inset CommandInset href
 LatexCommand href
-name "Geometric.R"
+name "geometric.R"
 target "https://statisticssu.github.io/SDA1/code/geometric.R"
 literal "false"
 
