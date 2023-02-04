@@ -115,15 +115,45 @@ savefig(figFolder*"standard_normal_3std.pdf")
 σ = 3
 xgrid = (μ - 4*σ):0.01:(μ + 4*σ)
 normaldens = pdf.(Normal(μ, σ), xgrid)
-plot(xgrid,normaldens, color=colors[2],
-    fill=(0,opacity,colors[2]), label = nothing, 
-    ylab = L"f(x)", xlab = L"x")
-savefig(figFolder*"normal.svg")
+median = quantile(Normal(μ, σ), 0.5)
+IQR = quantile(Normal(μ, σ), [0.25,0.75])
+plot(xgrid[xgrid .>=IQR[1] .&& xgrid .<=IQR[2]], normaldens[xgrid .>=IQR[1] .&& xgrid .<=IQR[2]], color = nothing, fill=(0,opacity,colors[2]), label = "IQR", ylab = L"f(x)", xlab = L"x", legend = :topright)
+plot!([median, median], [0, pdf(Normal(μ, σ), median)], color = colors[4], label = "median")
+plot!([median, median], [0, pdf(Normal(μ, σ), median)], color = :gray, 
+    label = "väntevärde", linestyle = :dash)
+plot!(xgrid,normaldens, color=colors[2], label = nothing)
+#vline!([median, median], color = colors[4], label = "median")
+savefig(figFolder*"normal_median_IQR.svg")
+
+# Exponential distribution
+λ = 1
+xgrid = 0:0.01:6
+dens = pdf.(Exponential(λ), xgrid)
+median = quantile(Exponential(λ), 0.5)
+meandist = mean(Exponential(λ))
+IQR = quantile(Exponential(λ), [0.25,0.75])
+plot(xgrid[xgrid .>=IQR[1] .&& xgrid .<=IQR[2]], dens[xgrid .>=IQR[1] .&& xgrid .<=IQR[2]], color = nothing, fill=(0,opacity, colors[4]), label = "IQR", ylab = L"f(x)", xlab = L"x", legend = :topright)
+plot!([median, median], [0, pdf(Exponential(λ), median)], color = colors[2], label = "median")
+plot!([meandist, meandist], [0, pdf(Exponential(λ), meandist)], color = colors[2], 
+    linestyle = :dash,  label = "väntevärde")
+plot!(xgrid, dens, color=colors[4], label = nothing)
+#vline!([median, median], color = colors[4], label = "median")
+savefig(figFolder*"expon_median_IQR.svg")
+
+
+
 
 # Chi2 distribution
 ν = 3
-xvals = 0:0.01:12
-plot(xvals, pdf.(Chisq(ν), xvals), label = nothing, lw = 2,
-    ylab = L"f(x)", xlab = L"x", c = colors[10],
-    fill=(0, opacity, colors[10]))
-savefig(figFolder*"chi2.svg")
+xgrid = 0:0.01:12
+dens = pdf.(Chisq(ν), xgrid)
+median = quantile(Chisq(ν), 0.5)
+meandist = mean(Chisq(ν))
+IQR = quantile(Chisq(ν), [0.25,0.75])
+plot(xgrid[xgrid .>=IQR[1] .&& xgrid .<=IQR[2]], dens[xgrid .>=IQR[1] .&& xgrid .<=IQR[2]], color = nothing, fill=(0,opacity, colors[10]), label = "IQR", ylab = L"f(x)", xlab = L"x", legend = :topright)
+plot!([median, median], [0, pdf(Chisq(ν), median)], color = colors[2], label = "median")
+plot!([meandist, meandist], [0, pdf(Chisq(ν), meandist)], color = colors[2], 
+    linestyle = :dash,  label = "väntevärde")
+plot!(xgrid, dens, color=colors[10], label = nothing)
+#vline!([median, median], color = colors[4], label = "median")
+savefig(figFolder*"chi2_median_IQR.svg")
