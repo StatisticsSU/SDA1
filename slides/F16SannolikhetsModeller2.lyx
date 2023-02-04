@@ -183,7 +183,7 @@ inserttotalframenumber
 \begin_layout Subtitle
 
 \color orange
-Föreläsning 16 - Kontinuerliga sannolikhetsmodeller
+Föreläsning 16 - Sannolikhetsmodeller II
 \end_layout
 
 \begin_layout Author
@@ -273,7 +273,7 @@ status open
 
 \series bold
 \color blue
-Likformig fördelning
+Poissonfördelning
 \begin_inset VSpace bigskip
 \end_inset
 
@@ -332,7 +332,119 @@ status open
 
 \series bold
 \color orange
-Likformig fördelning
+Poissonfördelning
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+\color blue
+Poissonfördelningen
+\series default
+\color inherit
+ är en fördelning för 
+\series bold
+\color blue
+räknedata
+\series default
+\color inherit
+ (antal).
+\end_layout
+
+\begin_layout Itemize
+Om 
+\begin_inset Formula $X\sim\mathrm{Poisson}(\lambda)$
+\end_inset
+
+ så 
+\begin_inset Formula 
+\[
+P(X=x)=\frac{e^{-\lambda}\lambda^{x}}{x!},\qquad\text{för }x=0,1,2,...
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Poisson har samma 
+\series bold
+\color blue
+väntevärde
+\series default
+\color inherit
+ och 
+\series bold
+\color blue
+varians
+\series default
+\color inherit
+:
+\begin_inset Formula 
+\begin{align*}
+E(X) & =\lambda\\
+Var(X) & =\lambda
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Exempel:
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+antal buggar i en mjukvara
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+antal budgivare i en eBay auktion
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+antal besök till läkaren
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Poissonfördelning - interaktivt
 \end_layout
 
 \end_inset
@@ -365,8 +477,8 @@ status open
 \align center
 \begin_inset CommandInset href
 LatexCommand href
-name "\\includegraphics[width=0.7\\textwidth]{../observable/figs/uniform_widget.png}"
-target "https://statisticssu.github.io/SDA1/observable/uniformfordelning.html"
+name "\\includegraphics[width=0.65\\textwidth]{../observable/figs/poisson_widget.png}"
+target "https://statisticssu.github.io/SDA1/observable/poissonfordelningen.html"
 literal "true"
 
 \end_inset
@@ -395,6 +507,353 @@ status open
 
 \series bold
 \color orange
+Poissonfördelning för antal bud på eBay
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Data från 1000 
+\series bold
+\color blue
+eBay-auktioner av samlarmynt
+\series default
+\color inherit
+.
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\family typewriter
+nBids 
+\family default
+är 
+\series bold
+\color orange
+antalet budgivare
+\series default
+\color inherit
+ i en given auktion.
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Olika värdefulla och olika reservationspris (lägsta pris).
+ 
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Fokus här på de 550 observationer med lägst reservationspris.
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color blue
+Modell
+\series default
+\color inherit
+ för 
+\family typewriter
+nBids
+\family default
+: 
+\begin_inset Formula $X_{1},\ldots,X_{n}\overset{\mathrm{ober}}{\sim}\mathrm{Pois}(\lambda)$
+\end_inset
+
+.
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figs/ebaydata.png
+	lyxscale 40
+	scale 25
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+blfootnote{
+\backslash
+tiny Wegmann, B.
+ och Villani, M.
+ (2011).
+ Bayesian Inference in Structural Second-Price Common Value Auctions, 
+\backslash
+underline{{
+\backslash
+color{blue} 
+\backslash
+href{http://doi.org/10.1198/jbes.2011.08289}{
+\backslash
+emph{Journal of Business and Economic Statistics}}}}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Punktskattning av modellparametrar
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Modell för 
+\family typewriter
+nBids
+\family default
+: 
+\begin_inset Formula $X_{1},\ldots,X_{n}\overset{\mathrm{ober}}{\sim}\mathrm{Pois}(\lambda)$
+\end_inset
+
+.
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Hur väljer vi parametern 
+\begin_inset Formula $\lambda$
+\end_inset
+
+? 
+\series bold
+\color blue
+Punktskattning
+\series default
+\color inherit
+.
+ 
+\series bold
+\color blue
+Estimat
+\series default
+\color inherit
+.
+ 
+\begin_inset Formula $\hat{\lambda}$
+\end_inset
+
+.
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color blue
+Momentmetoden
+\series default
+\color inherit
+: Eftersom 
+\begin_inset Formula $E(X)=\lambda$
+\end_inset
+
+ så är 
+\begin_inset Formula $\hat{\lambda}=\bar{x}$
+\end_inset
+
+ rimligt.
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color orange
+Maximum likelihood
+\series default
+\color inherit
+: välj det 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ som maximerar sannolikheten för datamaterialet.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+emoji{smiling-face-with-heart-eyes}
+\end_layout
+
+\end_inset
+
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Maximum likelihood-metoden funkar för alla modeller.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+emoji{smiling-face-with-sunglasses}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Maximum likelihood för Poisson - interaktivt
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "1pt"
+separation "1pt"
+shadowsize "4pt"
+framecolor "orange"
+backgroundcolor "white"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset CommandInset href
+LatexCommand href
+name "\\includegraphics[width=0.65\\textwidth]{../observable/figs/ml_poisson_widget.png}"
+target "https://statisticssu.github.io/SDA1/observable/ml_poisson.html"
+literal "true"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
 Exponentialfördelning
 \end_layout
 
@@ -409,7 +868,13 @@ Om
 \begin_inset Formula $X\sim\mathrm{Expon}(\lambda)$
 \end_inset
 
- så är sannolikhetsfunktionen
+ så är 
+\series bold
+\color blue
+täthetsfunktionen
+\series default
+\color inherit
+
 \begin_inset Formula 
 \[
 f(x)=\lambda e^{-\lambda x},\text{ för }x>0
@@ -428,10 +893,22 @@ f(x)=\lambda e^{-\lambda x},\text{ för }x>0
 \end_layout
 
 \begin_layout Itemize
-Väntevärdet är
+
+\series bold
+\color blue
+Väntevärde
+\series default
+\color inherit
+ och 
+\series bold
+\color blue
+varians
+\series default
+\color inherit
+
 \begin_inset Formula 
 \[
-E(X)=\frac{1}{\lambda}
+E(X)=\frac{1}{\lambda}\text{ och }Var(X)=\frac{1}{\lambda^{2}}
 \]
 
 \end_inset
@@ -498,14 +975,14 @@ till stödlinje per timme är
 \series bold
 \color blue
 
-\begin_inset Formula $\mathrm{Poisson}(\lambda=3)$
+\begin_inset Formula $\mathrm{Poisson}(\lambda=6)$
 \end_inset
 
 
 \series default
 \color inherit
  så förväntar vi oss 
-\begin_inset Formula $\lambda=3$
+\begin_inset Formula $\lambda=6$
 \end_inset
 
  st samtal i timmen.
@@ -523,14 +1000,14 @@ tiden mellan samtal
 \series default
 \color inherit
  
-\begin_inset Formula ${\color{orange}\mathrm{Expon}(\lambda=3)}$
+\begin_inset Formula ${\color{orange}\mathrm{Expon}(\lambda=6)}$
 \end_inset
 
  och vi förväntar oss 
-\begin_inset Formula $1/\lambda=1/3$
+\begin_inset Formula $1/\lambda=1/6$
 \end_inset
 
- timmar (20 minuter) mellan samtal.
+ timmar (10 minuter) mellan samtal.
 \end_layout
 
 \end_deeper
@@ -903,6 +1380,40 @@ rexp(n = 10, rate = 3)
 \end_layout
 
 \begin_layout Itemize
+
+\series bold
+\color blue
+Täthetsfunktion
+\series default
+\color inherit
+ heter 
+\series bold
+\color orange
+d
+\color blue
+ensity function
+\series default
+\color inherit
+ på engelska.
+ 
+\begin_inset Newline newline
+\end_inset
+
+Därav namnet 
+\family typewriter
+\color orange
+d
+\color inherit
+exp
+\family default
+.
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
 Se programkoden 
 \bar under
 \color blue
@@ -950,6 +1461,93 @@ Student-
 \end_layout
 
 \begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $X\sim t_{\nu}(0,1)$
+\end_inset
+
+ är en 
+\series bold
+\color blue
+student-
+\emph on
+t
+\series default
+\color inherit
+ 
+\emph default
+fördelning med 
+\begin_inset Formula $\nu$
+\end_inset
+
+ 
+\series bold
+\color blue
+frihetsgrader
+\series default
+\color inherit
+.
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color blue
+Kontinuerliga symmetriska
+\series default
+\color inherit
+ variabler över
+\series bold
+\color blue
+ 
+\begin_inset Formula $(-\infty,\infty)$
+\end_inset
+
+
+\series default
+\color inherit
+.
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Student-t har mer sannolikhet på 
+\series bold
+\color blue
+extrema utfall
+\series default
+\color inherit
+.
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color blue
+Student-
+\emph on
+t
+\series default
+\color inherit
+ 
+\emph default
+fördelning blir alltmer lik normal när 
+\begin_inset Formula $\nu$
+\end_inset
+
+ ökar.
+\end_layout
+
 \begin_layout Standard
 \align center
 \begin_inset Box Boxed
@@ -974,7 +1572,7 @@ status open
 \align center
 \begin_inset CommandInset href
 LatexCommand href
-name "\\includegraphics[width=0.66\\textwidth]{../observable/figs/studentt_widget.png}"
+name "\\includegraphics[width=0.4\\textwidth]{../observable/figs/studentt_widget.png}"
 target "https://statisticssu.github.io/SDA1/observable/studentt.html"
 literal "true"
 
@@ -1004,7 +1602,7 @@ status open
 
 \series bold
 \color orange
-Varför Student-
+Varför student-
 \begin_inset Formula $t$
 \end_inset
 
@@ -1018,11 +1616,10 @@ Varför Student-
 
 \begin_deeper
 \begin_layout Itemize
-Låt 
 \begin_inset Formula $X_{1},X_{2},\ldots,X_{n}$
 \end_inset
 
- var oberoende data from 
+ är oberoende data from 
 \begin_inset Formula $N(\mu,\sigma^{2})$
 \end_inset
 
@@ -1131,7 +1728,11 @@ status open
 
 \series bold
 \color orange
-Aktieavkastning
+Student-
+\emph on
+t
+\emph default
+ som modell för aktieavkastning
 \end_layout
 
 \end_inset
@@ -1145,7 +1746,7 @@ Daglig avkastning Ericsson B aktie under hela år 2022.
  
 \begin_inset Graphics
 	filename figs/ericsson_badge.svg
-	lyxscale 40
+	lyxscale 80
 	scale 40
 
 \end_inset

@@ -183,7 +183,7 @@ inserttotalframenumber
 \begin_layout Subtitle
 
 \color orange
-Föreläsning 15 - Diskreta sannolikhetsmodeller
+Föreläsning 15 - Sannolikhetsmodeller I
 \end_layout
 
 \begin_layout Author
@@ -306,7 +306,18 @@ Binomialfördelning
 
 \series bold
 \color blue
-Poissonfördelning
+Likformig fördelning
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color blue
+Normalfördelning
 \end_layout
 
 \end_deeper
@@ -510,7 +521,9 @@ text{1:a kortet
 \backslash
 spadesuit}) = 
 \backslash
-frac{13}{52}$
+frac{13}{52}=
+\backslash
+frac{1}{4}$
 \end_layout
 
 \end_inset
@@ -561,6 +574,148 @@ clubsuit }$.
 \end_layout
 
 \end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Motivation - regression med binära y-variabler
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\size small
+Bernoulli-fördelning med 
+\series bold
+\color blue
+samma sannolikhet 
+\begin_inset Formula $p$
+\end_inset
+
+
+\series default
+\color inherit
+.
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Spamdata: lära oss om 
+\begin_inset Formula $p=P(\text{spam})$
+\end_inset
+
+ från data.
+ 
+\begin_inset Formula $\hat{p}=0.9$
+\end_inset
+
+.
+
+\size small
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+emoji{face-with-rolling-eyes}
+\end_layout
+
+\end_inset
+
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color blue
+Spam-filter
+\series default
+\color inherit
+: ska datorn skicka 
+\series bold
+just detta mejl
+\series default
+ till Spam? 
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+SDAII: 
+\series bold
+\color blue
+Logistisk regression
+\series default
+\color inherit
+ där spam sannolikheten 
+\series bold
+\color orange
+
+\begin_inset Formula $p$
+\end_inset
+
+ beror på förklarande variabler
+\series default
+\color inherit
+, som i regression.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+emoji{face-blowing-a-kiss}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figs/LogisticRegSpam.pdf
+	lyxscale 40
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
 \end_deeper
 \begin_layout Standard
 \begin_inset Separator parbreak
@@ -666,7 +821,7 @@ status open
 
 \begin_inset Formula $P(X=x)=\begin{cases}
 p & \text{för }x=1\\
-q & \text{för }x=0
+q=1-p & \text{för }x=0
 \end{cases}$
 \end_inset
 
@@ -758,138 +913,8 @@ E(X) & =\mu=\sum_{\text{alla }x}x\cdot P(x)=0\cdot P(X=0)+1\cdot P(X=1)\\
 \begin_inset Formula 
 \begin{align*}
 Var(X) & =\sum(x-\mu)^{2}\cdot P(x)=(0-p)^{2}\cdot q+(1-p)^{2}\cdot p\\
- & =p^{2}q+q^{2}\cdot p=pq\left(p+q\right)=pq
+ & =p^{2}q+q^{2}\cdot p=pq(\underbrace{p+q}_{1})=pq
 \end{align*}
-
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\begin_layout Standard
-\begin_inset Separator parbreak
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-
-\series bold
-\color orange
-Motivation - regression med binära y-variabler
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-
-\size small
-Bernoulli-fördelning med 
-\series bold
-\color blue
-samma sannolikhet 
-\begin_inset Formula $p$
-\end_inset
-
-
-\series default
-\color inherit
-.
-\end_layout
-
-\begin_layout Itemize
-Spamdata: kan lära oss om 
-\begin_inset Formula $p$
-\end_inset
-
- från data.
- 
-\begin_inset Formula $\hat{p}=0.9$
-\end_inset
-
-.
-
-\size small
- 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-emoji{face-with-rolling-eyes}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-
-\series bold
-\color blue
-Spam-filter
-\series default
-\color inherit
-: ska datorn skicka 
-\series bold
-just detta mejl
-\series default
- till Spam? 
-\end_layout
-
-\begin_layout Itemize
-SDAII: 
-\series bold
-\color blue
-Logistisk regression
-\series default
-\color inherit
- där spam sannolikheten 
-\series bold
-\color orange
-
-\begin_inset Formula $p$
-\end_inset
-
- beror på förklarande variabler
-\series default
-\color inherit
-, som i regression.
- 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-emoji{face-blowing-a-kiss}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\align center
-\begin_inset Graphics
-	filename figs/LogisticRegSpam.pdf
-	lyxscale 40
-	scale 35
 
 \end_inset
 
@@ -1207,7 +1232,7 @@ Beräkning
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1241,7 +1266,7 @@ R kommando
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1277,7 +1302,7 @@ dgeom(x = 2, prob = 0.4)
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1308,7 +1333,7 @@ Kvantil
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1323,7 +1348,7 @@ Kvantil
 \begin_layout Plain Layout
 
 \family typewriter
-qgeom(p = 0.3, prob = 0.4)
+qgeom(p = 0.5, prob = 0.4)
 \end_layout
 
 \end_inset
@@ -1339,7 +1364,7 @@ qgeom(p = 0.3, prob = 0.4)
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1354,7 +1379,7 @@ qgeom(p = 0.3, prob = 0.4)
 \begin_layout Plain Layout
 
 \family typewriter
-rgeom(n = 10, prob 0.4)
+rgeom(n = 10, prob = 0.4)
 \end_layout
 
 \end_inset
@@ -1422,7 +1447,7 @@ innan
 \end_layout
 
 \begin_layout Standard
-\begin_inset VSpace bigskip
+\begin_inset VSpace medskip
 \end_inset
 
 
@@ -1435,7 +1460,7 @@ Se programkoden
 
 \begin_inset CommandInset href
 LatexCommand href
-name "Geometric.R"
+name "geometric.R"
 target "https://statisticssu.github.io/SDA1/code/geometric.R"
 literal "false"
 
@@ -1611,20 +1636,24 @@ parametrar
 \end_inset
 
 
+\begin_inset VSpace smallskip
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
 
 \series bold
 \color blue
-Binomialvariabeln 
-\begin_inset Formula $X$
-\end_inset
-
- är summan av 
+Binomial: summan av 
 \begin_inset Formula $n$
 \end_inset
 
+ 
+\color orange
+oberoende
+\color blue
  Bernoullivariabler
 \series default
 \color inherit
@@ -2941,6 +2970,889 @@ status open
 
 \series bold
 \color orange
+Kontinuerliga slumpvariabler och täthetsfunktionen
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+\color blue
+Kontinuerlig slumpvariabel
+\series default
+\color inherit
+ antar alla värden, men 
+\begin_inset Formula $P(X=x)=0$
+\end_inset
+
+ för alla 
+\begin_inset Formula $x$
+\end_inset
+
+! 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+emoji{exploding-head}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color orange
+Täthetsfunktion
+\series default
+\color inherit
+: 
+\begin_inset Formula $f(x)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Positiv 
+\begin_inset Formula $f(x)>0$
+\end_inset
+
+ för alla 
+\begin_inset Formula $x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Täthetsfunktion ger 
+\series bold
+inte
+\series default
+ sannolikheter.
+ OK om 
+\begin_inset Formula $f(x)>1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color blue
+Täthetsfunktionen
+\series default
+\color inherit
+ används för att 
+\series bold
+\color blue
+beräkna sannolikheter
+\series default
+\color inherit
+:
+\begin_inset Formula 
+\[
+P(a\leq X\leq b)=\text{arean under }f(x)\text{ mellan }a\text{ och }b
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figs/normal_interval_area_standard.pdf
+	lyxscale 40
+	scale 20
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color blue
+SDAIII
+\series default
+\color inherit
+: räkna arean under funktion med 
+\series bold
+\color blue
+integration
+\series default
+\color inherit
+.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Likformig fördelning
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "1pt"
+separation "1pt"
+shadowsize "4pt"
+framecolor "orange"
+backgroundcolor "white"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset CommandInset href
+LatexCommand href
+name "\\includegraphics[width=0.7\\textwidth]{../observable/figs/uniform_widget.png}"
+target "https://statisticssu.github.io/SDA1/observable/uniformfordelning.html"
+literal "true"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Normalfördelning
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $X\sim N(\mu,\sigma^{2})$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+E(X) & =\mu\\
+Var(X) & =\sigma^{2}
+\end{align*}
+
+\end_inset
+
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color blue
+68-95-99.7% regeln
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figs/normal_interval_rule.pdf
+	lyxscale 40
+	scale 25
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figs/normal_interval_rule_standard.pdf
+	lyxscale 40
+	scale 25
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Normalfördelning - standardisering
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+\color blue
+Standardisering
+\series default
+\color inherit
+
+\begin_inset Formula 
+\[
+X\sim N(\mu,\sigma^{2})\Rightarrow Z=\frac{X-\mu}{\sigma}\sim N(0,1)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color orange
+Sannolikhet via standardisering
+\series default
+\color inherit
+ för 
+\begin_inset Formula $X\sim N(2,3^{2})$
+\end_inset
+
+
+\size small
+
+\begin_inset Formula 
+\[
+P(X\leq5)=P(X-2\leq5-2)=P\left(\frac{X-2}{3}\leq\frac{5-2}{3}\right)=P(Z\leq1)
+\]
+
+\end_inset
+
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figs/normal_left_tail.pdf
+	lyxscale 40
+	scale 25
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figs/normal_left_tail_standard.pdf
+	lyxscale 40
+	scale 25
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Normalfördelning - Z-tabell
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figs/NormalScreenLargerRed.png
+	lyxscale 40
+	scale 25
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Normalfördelning - symmetri
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+\color blue
+Negativa 
+\begin_inset Formula $z$
+\end_inset
+
+-värden
+\series default
+\color inherit
+ finns inte i Z-tabellen.
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Vi utnyttjar normalfördelningens 
+\series bold
+\color blue
+symmetri
+\series default
+\color inherit
+ för negativa 
+\begin_inset Formula $z$
+\end_inset
+
+
+\size small
+
+\begin_inset Formula 
+\[
+P(Z\leq-2)=1-P(Z\leq2)
+\]
+
+\end_inset
+
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figs/normal_symmetry1.pdf
+	lyxscale 40
+	scale 17
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figs/normal_symmetry2.pdf
+	lyxscale 40
+	scale 17
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figs/normal_symmetry3.pdf
+	lyxscale 40
+	scale 17
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Normalfördelning - intervall via standardisering
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+\color blue
+Sannolikhet via standardisering
+\series default
+\color inherit
+ för 
+\begin_inset Formula $X\sim N(2,3^{2})$
+\end_inset
+
+
+\size footnotesize
+
+\begin_inset Formula 
+\begin{align*}
+P(0 & \leq X\leq5)=P\left(\frac{0-2}{3}\leq\frac{X-2}{3}\leq\frac{5-2}{3}\right)\\
+ & =P(-0.667\leq Z\leq1)\\
+ & =P(Z\leq1)-P(Z\leq-0.667)
+\end{align*}
+
+\end_inset
+
+
+\size small
+och pga 
+\series bold
+\color blue
+symmetri
+\series default
+\color inherit
+
+\begin_inset Formula 
+\[
+P(Z\leq-0.667)=1-P(Z\leq0.667)
+\]
+
+\end_inset
+
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figs/normal_interval_area.pdf
+	lyxscale 40
+	scale 25
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figs/normal_interval_area_standard.pdf
+	lyxscale 40
+	scale 25
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Normalfördelningen - interaktivt
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "1pt"
+separation "1pt"
+shadowsize "4pt"
+framecolor "orange"
+backgroundcolor "white"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset CommandInset href
+LatexCommand href
+name "\\includegraphics[width=0.7\\textwidth]{../observable/figs/normal_widget.png}"
+target "https://statisticssu.github.io/SDA1/observable/normalfordelningen.html"
+literal "true"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Normalfördelning - egenskaper
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tcolorbox}[colback=verylightgray]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+textcolor{blue}{
+\backslash
+textbf{Linjärkombination av normalfördelad slumpvariabel}}.
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{0.2cm}
+\backslash
+newline
+\end_layout
+
+\begin_layout Plain Layout
+
+Om $X 
+\backslash
+sim 
+\backslash
+operatorname{N}(
+\backslash
+mu, 
+\backslash
+sigma^2)$ och $Y = c + a X$ så gäller
+\end_layout
+
+\begin_layout Plain Layout
+
+$$Y 
+\backslash
+sim 
+\backslash
+operatorname{N}(c + a 
+\backslash
+mu,
+\backslash
+, a^2
+\backslash
+sigma^2)$$
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tcolorbox}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tcolorbox}[colback=verylightgray]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+textcolor{blue}{
+\backslash
+textbf{Summa av 
+\backslash
+textcolor{orange}{oberoende normalfördelade} slumpvariabler}}.
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{0.2cm}
+\backslash
+newline
+\end_layout
+
+\begin_layout Plain Layout
+
+Om $X 
+\backslash
+sim 
+\backslash
+operatorname{N}(
+\backslash
+mu_X, 
+\backslash
+sigma_X^2)$ och $Y 
+\backslash
+sim 
+\backslash
+operatorname{N}(
+\backslash
+mu_Y, 
+\backslash
+sigma_Y^2)$ är oberoende slumpvariabler så är även summan normalfördelad:
+\end_layout
+
+\begin_layout Plain Layout
+
+$$X+Y 
+\backslash
+sim 
+\backslash
+operatorname{N}(
+\backslash
+mu_X + 
+\backslash
+mu_Y, 
+\backslash
+, 
+\backslash
+sigma_X^2 + 
+\backslash
+sigma_Y^2)$$
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tcolorbox}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color orange
+Fördelningarna 
+\series default
+\color inherit
+för linjärkombination och summa är 
+\series bold
+\color orange
+normal
+\series default
+\color inherit
+!
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Summan är fortfarande normal om 
+\series bold
+\color blue
+
+\begin_inset Formula $X$
+\end_inset
+
+ och 
+\begin_inset Formula $Y$
+\end_inset
+
+ är beroende
+\series default
+\color inherit
+.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
 Approximera binomialfördelning med normal
 \end_layout
 
@@ -3080,505 +3992,6 @@ literal "true"
 \end_inset
 
 
-\end_layout
-
-\end_deeper
-\begin_layout Standard
-\begin_inset Separator parbreak
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-
-\series bold
-\color orange
-Poissonfördelning
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-
-\series bold
-\color blue
-Poissonfördelningen
-\series default
-\color inherit
- är en fördelning för 
-\series bold
-\color blue
-räknedata
-\series default
-\color inherit
- (antal).
-\end_layout
-
-\begin_layout Itemize
-Om 
-\begin_inset Formula $X\sim\mathrm{Poisson}(\lambda)$
-\end_inset
-
- så 
-\begin_inset Formula 
-\[
-P(X=x)=\frac{e^{-\lambda}\lambda^{x}}{x!},\qquad\text{för }x=0,1,2,...
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-Poisson har samma 
-\series bold
-\color blue
-väntevärde
-\series default
-\color inherit
- och 
-\series bold
-\color blue
-varians
-\series default
-\color inherit
-:
-\begin_inset Formula 
-\begin{align*}
-E(X) & =\lambda\\
-Var(X) & =\lambda
-\end{align*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-Exempel:
-\begin_inset VSpace smallskip
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-antal buggar i en mjukvara
-\begin_inset VSpace smallskip
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-antal bud i en eBay auktion
-\begin_inset VSpace smallskip
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-antal besök till läkaren
-\end_layout
-
-\end_deeper
-\end_deeper
-\begin_layout Standard
-\begin_inset Separator parbreak
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-
-\series bold
-\color orange
-Poissonfördelning - interaktivt
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-\align center
-\begin_inset Box Boxed
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "100col%"
-special "none"
-height "1in"
-height_special "totalheight"
-thickness "1pt"
-separation "1pt"
-shadowsize "4pt"
-framecolor "orange"
-backgroundcolor "white"
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset CommandInset href
-LatexCommand href
-name "\\includegraphics[width=0.65\\textwidth]{../observable/figs/poisson_widget.png}"
-target "https://statisticssu.github.io/SDA1/observable/poissonfordelningen.html"
-literal "true"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\begin_layout Standard
-\begin_inset Separator parbreak
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-
-\series bold
-\color orange
-Poissonfördelning för antal bud på eBay
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Data från 1000 
-\series bold
-\color blue
-eBay-auktioner av samlarmynt
-\series default
-\color inherit
-.
-\begin_inset VSpace smallskip
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-
-\family typewriter
-nBids 
-\family default
-är 
-\series bold
-\color orange
-antalet budgivare
-\series default
-\color inherit
- i en given auktion.
-\begin_inset VSpace smallskip
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-Olika värdefulla och olika reservationspris (lägsta pris).
- 
-\begin_inset VSpace smallskip
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-Fokus här på de 550 observationer med lägst reservationspris.
-\begin_inset VSpace smallskip
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-
-\series bold
-\color blue
-Modell
-\series default
-\color inherit
- för 
-\family typewriter
-nBids
-\family default
-: 
-\begin_inset Formula $X_{1},\ldots,X_{n}\overset{\mathrm{ober}}{\sim}\mathrm{Pois}(\lambda)$
-\end_inset
-
-.
-\begin_inset VSpace smallskip
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\align center
-\begin_inset Graphics
-	filename figs/ebaydata.png
-	lyxscale 40
-	scale 25
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-blfootnote{
-\backslash
-tiny Wegmann, B.
- och Villani, M.
- (2011).
- Bayesian Inference in Structural Second-Price Common Value Auctions with
- Bertil Wegmann, 
-\backslash
-underline{{
-\backslash
-color{blue} 
-\backslash
-href{http://doi.org/10.1198/jbes.2011.08289}{
-\backslash
-emph{Journal of Business and Economic Statistics}}}}}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\begin_layout Standard
-\begin_inset Separator parbreak
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-
-\series bold
-\color orange
-Punktskattning av modellparametrar
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Modell för 
-\family typewriter
-nBids
-\family default
-: 
-\begin_inset Formula $X_{1},\ldots,X_{n}\overset{\mathrm{ober}}{\sim}\mathrm{Pois}(\lambda)$
-\end_inset
-
-.
-\begin_inset VSpace bigskip
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-Hur väljer vi parametern 
-\begin_inset Formula $\lambda$
-\end_inset
-
-? 
-\series bold
-\color blue
-Punktskattning
-\series default
-\color inherit
-.
- 
-\series bold
-\color blue
-Estimat
-\series default
-\color inherit
-.
- 
-\begin_inset Formula $\hat{\lambda}$
-\end_inset
-
-.
-\begin_inset VSpace bigskip
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-
-\series bold
-\color blue
-Momentmetoden
-\series default
-\color inherit
-: Eftersom 
-\begin_inset Formula $E(X)=\lambda$
-\end_inset
-
- så är 
-\begin_inset Formula $\hat{\lambda}=\bar{x}$
-\end_inset
-
- rimligt.
-\begin_inset VSpace bigskip
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-
-\series bold
-\color orange
-Maximum likelihood
-\series default
-\color inherit
-: välj det 
-\begin_inset Formula $\lambda$
-\end_inset
-
- som maximerar sannolikheten för datamaterialet.
- 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-emoji{smiling-face-with-heart-eyes}
-\end_layout
-
-\end_inset
-
-
-\begin_inset VSpace bigskip
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-Maximum likelihood-metoden funkar för alla modeller.
- 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-emoji{smiling-face-with-sunglasses}
-\end_layout
-
-\end_inset
-
-
-\begin_inset VSpace bigskip
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-
-\series bold
-\color blue
-Minsta-kvadrat-metoden
-\series default
-\color inherit
- för regression: 
-\begin_inset Newline newline
-\end_inset
-
-Regressionslinjen 
-\begin_inset Formula $\hat{y}=b_{0}+b_{1}\cdot x$
-\end_inset
-
- är en skattning av populationens regressionslinje: 
-\begin_inset Formula $\beta_{0}+\beta_{1}\cdot x$
-\end_inset
-
-.
- Mer om det i F22.
-\begin_inset VSpace bigskip
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-För normalfördelade regressionsdata (F22) är 
-\begin_inset Formula $b_{0}$
-\end_inset
-
- och 
-\begin_inset Formula $b_{1}$
-\end_inset
-
- faktiskt också maximum likelihood-skattningar! 
 \end_layout
 
 \end_deeper

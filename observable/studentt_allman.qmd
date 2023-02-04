@@ -3,5 +3,5 @@ title: "Allmän Student-*t* distribution"
 format: html
 ---
 
-<iframe width="100%" height="913.96875" frameborder="0"
+<iframe width="100%" height="851" frameborder="0"
   src="https://observablehq.com/embed/@mattiasvillani/student-t-fordelning-allman-version?cells=moments%2Cviewof+myinputs%2Cviewof+shownormal%2Ctailprobs%2Cplt"></iframe>

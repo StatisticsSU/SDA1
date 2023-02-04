@@ -1,6 +1,6 @@
 ---
 title: "Statistik och dataanalys I, 15 hp "
-subtitle: "Datorlaboration 5 - Simulering"
+subtitle: "Datorlaboration 6 - Samplingfördelningar, intervall och hypotesttest"
 author: 
   - Mattias Villani
 date: last-modified
@@ -43,6 +43,4 @@ Se till att paketen ovan är installerade i RStudio innan du fortsätter med res
 
 #### 💪 Uppgift 0.2
 
-Skapa en mapp `Lab5` i din kursmapp SDA1. Ladda ner Quarto-filen för denna lab genom att högerklicka [här](https://github.com/StatisticsSU/SDA1/raw/main/datorlab/lab5/DatorLab5.qmd) och välj 'Spara länk' eller något likande från menyn som dyker upp. Spara filen i din nya `Lab5` mapp. Öppna Quarto-filen i RStudio och fortsätt med denna laboration direkt i Quarto-dokumentet, där du också fyller i svaren på dina laborationsövningar.
-
--   Simulera två oberoende Expon. Fördelningen för kvoten? Väntevärdet för kvoten? Variansen för kvoten? Vad är sannolikheten att Pr(kvot \< x).
+Skapa en mapp `Lab5` i din kursmapp SDA1. Ladda ner Quarto-filen för denna lab genom att högerklicka [här](https://github.com/StatisticsSU/SDA1/raw/main/datorlab/lab6/DatorLab6.qmd) och välj 'Spara länk' eller något likande från menyn som dyker upp. Spara filen i din nya `Lab5` mapp. Öppna Quarto-filen i RStudio och fortsätt med denna laboration direkt i Quarto-dokumentet, där du också fyller i svaren på dina laborationsövningar.

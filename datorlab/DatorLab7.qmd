@@ -1,0 +1,74 @@
+---
+title: "Statistik och dataanalys I, 15 hp "
+subtitle: "Datorlaboration 7 - Regression"
+author: 
+  - Mattias Villani
+date: last-modified
+format: 
+  html:
+    self-contained: true
+toc: true
+execute:
+  error: false
+language: 
+  title-block-author-single: " "
+toc-title-document: "Innehåll"
+crossref-fig-title: "Figur"
+theme: Superhero
+title-block-banner-color: Primary
+title-block-published: "Publicerad"
+callout-warning-caption: "Varning"
+callout-note-caption: "Observera"
+callout-tip-caption: "Tips"
+editor: visual
+---
+
+::: callout-warning
+## Installera paket
+
+Den här labben förutsätter att följande paket finns installerade:
+
+-   `mosaic`
+
+Paket kan installeras via kommandot `install.packages('packagename')`, där `'packagename'` är namnet på paketet, t.ex `'mosaic'`.
+:::
+
+## Introduktion
+
+> I den här datorlabben kommer vi att arbeta med fördelningar i R, bland annat lära oss simulera från olika fördelningar, dvs dra slumptal från fördelningar.
+
+#### 💪 Uppgift 0.1
+
+Se till att paketen ovan är installerade i RStudio innan du fortsätter med resten.
+
+#### 💪 Uppgift 0.2
+
+Skapa en mapp `Lab5` i din kursmapp SDA1. Ladda ner Quarto-filen för denna lab genom att högerklicka [här](https://github.com/StatisticsSU/SDA1/raw/main/datorlab/lab7/DatorLab7.qmd) och välj 'Spara länk' eller något likande från menyn som dyker upp. Spara filen i din nya `Lab5` mapp. Öppna Quarto-filen i RStudio och fortsätt med denna laboration direkt i Quarto-dokumentet, där du också fyller i svaren på dina laborationsövningar.
+
+## Z. Estimera model
+
+**Enkel regression**
+
+Estimera på data
+
+Tolka utskrift, gör test.
+
+Prediktion
+
+Prediktionsintervall med reg_predict
+
+**Multipel**
+
+Samma som ovan, men inte grafisk prediktionsintervall, bara med lm.predict och interval.
+
+## Y. Simulera samplingfördelning - enkel regression
+
+-   Simulera enkel regressionsmodell för hand. Ta fram samplingfördelning för b_1 genom simulering. Undersök väntevärdesriktighet. Jämför simulerad fördelning med teoretiska samplingfördelningen.
+
+## X. Omitted variable bias
+
+#### 💪 Uppgift X.1
+
+-   Simulera regression med två kovariater med reg_simulate i sda1 paketet. Okorrelerade x. Skatta regression med bara x_1. Undersök unbiasedness.
+
+-   Simulera regression med två kovariater med reg_simulate i sda1 paketet. korrelerade x. Skatta regression med bara x_1. Undersök unbiasedness.

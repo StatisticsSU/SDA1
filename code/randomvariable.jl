@@ -64,7 +64,7 @@ plot(xgrid[xgrid.>=cutoff1 .&& xgrid.<=cutoff2],
     normaldens[xgrid.>=cutoff1 .&& xgrid.<=cutoff2], 
     color=colors[2],
     fill=(0,opacity,colors[2]), label = nothing, yaxis = false,
-    title = L"68\%: \mu \pm 1 \sigma")
+    title = L"68.3\%: \mu \pm \sigma")
 
 plot!(xgrid, normaldens, color = colors[2], label = nothing,
     xlabel = L"x")
@@ -82,7 +82,7 @@ plot(xgrid[xgrid.>=cutoff1 .&& xgrid.<=cutoff2],
     normaldens[xgrid.>=cutoff1 .&& xgrid.<=cutoff2], 
     color=colors[4],
     fill=(0,opacity,colors[4]), label = nothing, yaxis = false,
-    title = L"95\%: \mu \pm 2 \sigma")
+    title = L"95.4\%: \mu \pm 2 \sigma")
 
 plot!(xgrid, normaldens, color = colors[4], label = nothing,
     xlabel = L"x")
@@ -106,3 +106,24 @@ plot!(xgrid, normaldens, color = colors[10], label = nothing,
     xlabel = L"x")
 
 savefig(figFolder*"standard_normal_3std.pdf")
+
+
+
+
+# Median and interquartile range - Normal distribution
+μ = 2
+σ = 3
+xgrid = (μ - 4*σ):0.01:(μ + 4*σ)
+normaldens = pdf.(Normal(μ, σ), xgrid)
+plot(xgrid,normaldens, color=colors[2],
+    fill=(0,opacity,colors[2]), label = nothing, 
+    ylab = L"f(x)", xlab = L"x")
+savefig(figFolder*"normal.svg")
+
+# Chi2 distribution
+ν = 3
+xvals = 0:0.01:12
+plot(xvals, pdf.(Chisq(ν), xvals), label = nothing, lw = 2,
+    ylab = L"f(x)", xlab = L"x", c = colors[10],
+    fill=(0, opacity, colors[10]))
+savefig(figFolder*"chi2.svg")
