@@ -20,20 +20,19 @@ Den här [YouTube videon](https://youtu.be/TFGYlKvQEQ4) går igenom alla steg i 
 
 Här är våra egna steg-efter-steg instruktioner:
 
-- [Windows](/R/InstallR/installR_windows.qmd)
-- [Apple/Mac](/R/InstallR/installR_mac.qmd)
+-   [Windows](/R/InstallR/installR_windows.qmd)
+-   [Apple/Mac](/R/InstallR/installR_mac.qmd)
 
 ## Tre dialekter av R
 
 Man kan dela upp R's språk i tre slags dialekter, dvs tre olika kommandon (syntax) för att göra ungefär samma sak:
 
--   **Base-R** - (den ursprungliga) med dess s k *dollar sign $* syntax
+-   **Base-R** - (den ursprungliga) med dess s k *dollar sign \$* syntax
 -   **Formula** - syntax som via paketet `Mosaic` har utvecklats för undervisning i statistik
 -   **Tidyverse** - en alternativ syntax utvecklat av personerna bakom RStudio.
 
-<center>
-[![](misc/hexagons/figs/base_r_hexagon.svg){width="60"}](R/cheatsheets/base-r_cheat_sheet.pdf)&nbsp; [![](misc/hexagons/figs/mosaic_hexagon.svg){width="60"}](R/cheatsheets/mosaic_cheatsheet_gf.pdf)&nbsp; [![](misc/hexagons/figs/tidyverse_hexagon.svg){width="60"}](R/cheatsheets/ggplot2_cheatsheet.pdf)
-</center>
+<center>[![](misc/hexagons/figs/base_r_hexagon.svg){width="60"}](R/cheatsheets/base-r_cheat_sheet.pdf)  [![](misc/hexagons/figs/mosaic_hexagon.svg){width="60"}](R/cheatsheets/mosaic_cheatsheet_gf.pdf)  [![](misc/hexagons/figs/tidyverse_hexagon.svg){width="60"}](R/cheatsheets/ggplot2_cheatsheet.pdf)</center>
+
 <br>
 
 I SDA1 kommer vi försöka använda Formula syntax som mycket som möjligt, med inslag av Base-R. Tidyverse-kod kan ofta vara extremt effektiv, men tar för lång tid att lära sig på en grundkurs i statistik. Vi kommer ibland visa hur man gör samma sak i de olika dialekterna, men på ett sätt som inte stör flödet för den student som helst vill hålla sig till ett sätt. Vi använder ikoner i marginalen som man kan klicka på för att se ett kommando i olika dialekter. Se t ex avsnittet om [cheatsheets](#cheat-sheets) på denna sida för ett exempel (prova att klicka ikonerna i höger-marginalen).
@@ -48,29 +47,30 @@ I SDA1 kommer vi försöka använda Formula syntax som mycket som möjligt, med 
 
 -   **Quarto** för att skriva kompletta rapporter med kod. 🇬🇧\
     [html](/tutorials/Quarto/Intro2Quarto.html) \| [pdf](/tutorials/Quarto/Intro2Quarto.pdf) \| [video på Athena](https://athena.itslearning.com/ContentArea/ContentArea.aspx?LocationID=18157&LocationType=1&ElementID=2197031)
+
 -   Det kan bli lite trassel med svenska åäö när man skriver R kod eller arbetar med Quarto. Här är en [guide](R/svenska_vokaler.pdf) om hur man ändrar s k teckenkodning i RStudio så R klarar av dessa svenska bokstäver.
 
-## Cheat sheets
+## Cheat sheets {#cheat-sheets}
 
--   **Mosaic**-paketet [![](misc/hexagons/figs/mosaic_hexagon.svg){width="25"}](/R/cheatsheets/mosaic_cheatsheet_gf.pdf)  i R med dess sk *formula syntax* används mycket under kursen och innehåller grundläggande statistiska metoder och grafik. Detta s k [cheat sheet för mosaic](https://github.com/mlaviolet/Mosaic-cheatsheets/raw/master/mosaic-cheatsheet-gf.pdf) sammanfattar de viktigaste metoderna i mosaic paketet. Klicka på ikonerna i marginalen om du är nyfiken på motsvarande cheatsheets för de andra två dialekterna av R. Om du vill jämföra de olika dialekterna sida vid sida kan du titta på [R Syntax Comparison](/R/cheatsheets/FormulaVsTidySyntax-cheatsheet.pdf) cheat sheet.
+-   **Mosaic**-paketet [![](misc/hexagons/figs/mosaic_hexagon.svg){width="25"}](/R/cheatsheets/mosaic_cheatsheet_gf.pdf) i R med dess sk *formula syntax* används mycket under kursen och innehåller grundläggande statistiska metoder och grafik. Detta s k [cheat sheet för mosaic](https://github.com/mlaviolet/Mosaic-cheatsheets/raw/master/mosaic-cheatsheet-gf.pdf) sammanfattar de viktigaste metoderna i mosaic paketet. Klicka på ikonerna i marginalen om du är nyfiken på motsvarande cheatsheets för de andra två dialekterna av R. Om du vill jämföra de olika dialekterna sida vid sida kan du titta på [R Syntax Comparison](/R/cheatsheets/FormulaVsTidySyntax-cheatsheet.pdf) cheat sheet.
 
 ::: column-margin
-[![](misc/hexagons/figs/base_r_hexagon.svg){width="60"}](/R/cheatsheets/base-r_cheat_sheet.pdf)&nbsp; [![](misc/hexagons/figs/tidyverse_hexagon.svg){width="60"}](/R/cheatsheets/ggplot2_cheatsheet.pdf)
+[![](misc/hexagons/figs/base_r_hexagon.svg){width="60"}](/R/cheatsheets/base-r_cheat_sheet.pdf)  [![](misc/hexagons/figs/tidyverse_hexagon.svg){width="60"}](/R/cheatsheets/ggplot2_cheatsheet.pdf)
 :::
 
-- Denna [RStudio cheat sheet](/R/cheatsheets/rstudio-ide_cheatsheet.pdf) är rätt rörig, men kan kanske vara användbar *efter* att man själv bekantat sig lite med RStudio.
+-   Denna [RStudio cheat sheet](/R/cheatsheets/rstudio-ide_cheatsheet.pdf) är rätt rörig, men kan kanske vara användbar *efter* att man själv bekantat sig lite med RStudio.
 
-- Kursens egna R-paket `sda1` (se nedan) har också ett [cheat sheet](R/cheatsheets/sda1_cheatsheet.pdf).
+-   Kursens egna R-paket `sda1` (se nedan) har också ett [cheat sheet](R/cheatsheets/sda1_cheatsheet.pdf).
 
 ## Datamaterial
 
-- Kursboken [Stats: Data and Models](https://nordics.pearson.com/products/stats-data-and-models-5th-global-edition-e-book?variant=42945920630933) kommer med över 500 olika datamaterial som hittas [här](https://media.pearsoncmg.com/intl/ge/2021/cws/ge_deveaux_stats_5/statdm5d_datasets.html). Datamaterialen är i ofta i Excel-format, se denna [guide](/tutorials/ReadingDataFromFile/ReadingDataFromFile.html) om hur man läser in data från Excel i R.
-- Kursens R-paket `sda1` (se nedan) innehåller också några datamaterial som kommer användas under kursen.
+-   Kursboken [Stats: Data and Models](https://nordics.pearson.com/products/stats-data-and-models-5th-global-edition-e-book?variant=42945920630933) kommer med över 500 olika datamaterial som hittas [här](https://media.pearsoncmg.com/intl/ge/2021/cws/ge_deveaux_stats_5/statdm5d_datasets.html). Datamaterialen är i ofta i Excel-format, se denna [guide](/tutorials/ReadingDataFromFile/ReadingDataFromFile.html) om hur man läser in data från Excel i R.
+-   Kursens R-paket `sda1` (se nedan) innehåller också några datamaterial som kommer användas under kursen.
 
 ## Kursens R-paket
 
 Kursen har ett eget R-paket `sda1` med några hjälpfunktioner och datamaterial som används på kursen.\
-[cheat sheet](R/cheatsheets/sda1_cheatsheet.pdf) | [manual](https://github.com/StatisticsSU/sda1paket/raw/main/sda1_0.0.1.pdf)
+[cheat sheet](R/cheatsheets/sda1_cheatsheet.pdf) \| [manual](https://github.com/StatisticsSU/sda1paket/raw/main/sda1_0.0.1.pdf)
 
 ::: column-margin
 [![](misc/hexagons/figs/sda1paketlogo.svg){fig-alt="sda1 kurspaket för R" fig-align="center" width="60"}](https://github.com/StatisticsSU/sda1paket)
@@ -85,6 +85,3 @@ library(remotes)
 install_github("StatisticsSU/sda1paket") 
 library(sda1)
 ```
-
-
-
