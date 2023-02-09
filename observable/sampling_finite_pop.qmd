@@ -1,7 +1,0 @@
----
-title: "Samplingfördelning - Ändlig population"
-format: html
----
-
-<iframe width="100%" height="924" frameborder="0"
-  src="https://observablehq.com/embed/@mattiasvillani/samplingfordeling-for-andlig-population@1226?cells=viewof+N%2Cviewof+n%2Ctexter%2Csamples_table%2Chistoplot"></iframe>
