@@ -12,61 +12,61 @@ Under vissa föreläsningar länkar vi till `Extramaterial`. Det är material so
 ### **Föreläsningar**
 
 **Föreläsning 12 - Osäkerhet och Sannolikhet.**\
-Läs: SDM Kapitel 12 och 13 | [Slides](/slides/F12Sannolikhet.pdf)\
+Läs: SDM Kapitel 12 och 13 \| [Slides](/slides/F12Sannolikhet.pdf)\
 Interaktivt: [slantsingling](/observable/storatalenslag_bernoulli.qmd)\
 Extramaterial: [TedTalk om sannolikheter](https://youtu.be/0m5bg2hpHNw)
 
 **Föreläsning 13 - Betingade sannolikheter och Bayes sats.**\
-Läs: SDM Kapitel 13 | [Slides](/slides/F13BetingadeSlhBayesSats.pdf)\
+Läs: SDM Kapitel 13 \| [Slides](/slides/F13BetingadeSlhBayesSats.pdf)\
 Interaktivt: [bayessats](/observable/bayestheorem.qmd)\
 Extramaterial: [Artikel om Bayes sats och snabbtest för Covid-19](https://www.varsity.co.uk/science/21149)
 
 **Föreläsning 14 - Slumpvariabler och deras egenskaper.**\
-Läs: SDM Kapitel 14 | [Slides](/slides/F14Slumpvariabler.pdf)\
+Läs: SDM Kapitel 14 \| [Slides](/slides/F14Slumpvariabler.pdf)\
 Interaktivt: [normalfördelningen](/observable/normalfordelningen.qmd)
 
 **Föreläsning 15 - Sannolikhetsmodeller I.**\
-Läs: SDM Kapitel 15.1, 15.2, 15.3, 15.6 | [Slides](/slides/F15SannolikhetsModeller1.pdf)\
-Interaktivt: [geometrisk fördelning](/observable/geometriskfordelning.qmd) | [binomialfördelningen](/observable/binomialfordelningen.qmd) | 
-[likformig](/observable/uniformfordelning.qmd) | [normalfördelning](/observable/normalfordelningen.qmd)\
-Kod:  [geometric.R](/code/geometric.R)
+Läs: SDM Kapitel 15.1, 15.2, 15.3, 15.6 \| [Slides](/slides/F15SannolikhetsModeller1.pdf)\
+Interaktivt: [geometrisk fördelning](/observable/geometriskfordelning.qmd) \| [binomialfördelningen](/observable/binomialfordelningen.qmd) \| [likformig](/observable/uniformfordelning.qmd) \| [normalfördelning](/observable/normalfordelningen.qmd)\
+Kod: [geometric.R](/code/geometric.R)
 
 **Föreläsning 16 - Sannolikhetsmodeller II.**\
-Läs: SDM Kapitel 5.3, 14.4, 15.7 | [Slides](/slides/F16SannolikhetsModeller2.pdf) \
-Interaktivt: [Poissonfördelningen](/observable/poissonfordelningen.qmd) | [maximum likelihood - Poisson](/observable/ml_poisson.qmd) | [exponential](/observable/exponentialfordelningen.qmd) | [student-t](/observable/studentt.qmd) | [allmän student-t](/observable/studentt_allman.qmd)\
-Kod:  [exponential.R](/code/exponential.R)\
-Extramaterial: [Notebook - student-t](https://observablehq.com/@mattiasvillani/student-t) \ [notebook - matematisk härledning av maximum likelihood skattningen i Poissonmodellen](https://observablehq.com/@mattiasvillani/maximum-likelihood-poissonmodellen)
+Läs: SDM Kapitel 5.3, 14.4, 15.7 \| [Slides](/slides/F16SannolikhetsModeller2.pdf)\
+Interaktivt: [Poissonfördelningen](/observable/poissonfordelningen.qmd) \| [maximum likelihood - Poisson](/observable/ml_poisson.qmd) \| [exponential](/observable/exponentialfordelningen.qmd) \| [student-t](/observable/studentt.qmd) \| [allmän student-t](/observable/studentt_allman.qmd)\
+Kod: [exponential.R](/code/exponential.R)\
+Extramaterial: [Notebook - student-t](https://observablehq.com/@mattiasvillani/student-t)  [notebook - matematisk härledning av maximum likelihood skattningen i Poissonmodellen](https://observablehq.com/@mattiasvillani/maximum-likelihood-poissonmodellen)
 
 **Föreläsning 17 - Samplingfördelningar och konfidensintervall för en andel.**\
-Läs: SDM Kapitel 16 | [Slides](/misc/larry.png) 
+Läs: SDM Kapitel 16 \| [Slides](/misc/larry.png)\
+Interaktivt: [samplingfördelning - liten ändlig population](/observable/sampling_finite_pop.qmd) | [samplingfördelning för andel - ändlig population](/observable/sampling_prop_finite_pop.qmd)
 
 **Föreläsning 18 - Konfidensintervall för ett väntevärde. Stora talens lag. Centrala gränsvärdessatsen.**\
-Läs: SDM Kapitel 17 | [Slides](/misc/larry.png)\
-Interaktivt: [stora talens lag](/observable/storatalenslag.qmd) | [centrala gränsvärdessatsen](/observable/cgs.qmd)\
-Extramaterial:  [Notebook - stora talens lag](https://observablehq.com/@mattiasvillani/stora-talens-lag) | [Notebook - centrala gränsvärdessatsen](https://observablehq.com/@mattiasvillani/cgs)
+Läs: SDM Kapitel 17 \| [Slides](/misc/larry.png)\
+Interaktivt: [stora talens lag](/observable/storatalenslag.qmd) \| [centrala gränsvärdessatsen](/observable/cgs.qmd)\
+Extramaterial: [Notebook - stora talens lag](https://observablehq.com/@mattiasvillani/stora-talens-lag) \| [Notebook - centrala gränsvärdessatsen](https://observablehq.com/@mattiasvillani/cgs)
 
 **Föreläsning 19 - Hypotestest.**\
-Läs: SDM Kapitel 18 | [Slides](/misc/larry.png) 
+Läs: SDM Kapitel 18 \| [Slides](/misc/larry.png)
 
 **Föreläsning 20 - Hypotestest och jämföra grupper.**\
-Läs: SDM Kapitel 19, 20.4, 20.5 | [Slides](/misc/larry.png) 
+Läs: SDM Kapitel 19, 20.4, 20.5 \| [Slides](/misc/larry.png)
 
-**Föreläsning 21 - Jämföra grupper och $\chi^2$-test.**\
-Läs: SDM Kapitel 21.1, 21.2 | [Slides](/misc/larry.png)\
+**Föreläsning 21 - Jämföra grupper och** $\chi^2$-test.\
+Läs: SDM Kapitel 21.1, 21.2 \| [Slides](/misc/larry.png)\
 Interaktivt: [chi2-fördelningen](/observable/chi2fordelningen.qmd)
 
 **Föreläsning 22 - Inferens i multipel regression.**\
-Läs: SDM Kapitel 23 | [Slides](/misc/larry.png) 
+Läs: SDM Kapitel 23 \| [Slides](/misc/larry.png)
 
 **Videoföreläsning - Maximum likelihood och Bayesiansk inferens.**\
 Läs: [Slides](/misc/larry.png)\
 Interaktivt: [betafördelningen](/observable/betafordelningen.qmd)
 
 **Föreläsning 23 - Optimala beslut under osäkerhet.**\
-Läs: [Slides](/misc/larry.png) 
+Läs: [Slides](/misc/larry.png)
 
 **Föreläsning 24 - Sammanfattning.**\
-Läs: [Slides](/misc/larry.png) 
+Läs: [Slides](/misc/larry.png)
 
 ### **Räkneövningar**
 
@@ -76,7 +76,7 @@ Läs: [Slides](/misc/larry.png)
 Uppgifter: SDM 12.2, 12.5, 12.7, 12.9, 12.12, 12.16, 12.21, 12.27, 12.29, 12.31, 12.34, 12.36, 12.39, 12.41, 12.49, 12.52.
 
 **Övning 8 - Oberoende händelser. Betingning och Bayes sats.**\
-Uppgifter: SDM 13.1, 13.5, 13.7, 13.10, 13.12, 13.14, 13.18, 13.21, 13.24, 13.31, 13.47, 13.49. 
+Uppgifter: SDM 13.1, 13.5, 13.7, 13.10, 13.12, 13.14, 13.18, 13.21, 13.24, 13.31, 13.47, 13.49.
 
 **Övning 9 - Slumpvariabler, väntevärde och standardavvikelse.**\
 Uppgifter: SDM 14.1, 14.3, 14.9a, 14.11, 14.13, 14.21, 14.26, 14.33, 14.36, 14.43, 14.54.
@@ -88,27 +88,27 @@ Uppgifter: SDM 15.1, 15.3, 15.5, 15.18, 15.19, 15.21, 15.28, 15.29, 15.31, 15.41
 Uppgifter: SDM 15.7, 15.11, 15.12, 15.49, 15.59, 15.60, 15.61, 15.62.
 
 **Övning 12 - Samplingfördelningar och konfidensintervall för en andel.**\
-Uppgifter: SDM 16 
+Uppgifter: SDM 16
 
 **Övning 13 - Konfidensintervall för ett väntevärde. Hypotestest.**\
-Uppgifter: SDM 17 
+Uppgifter: SDM 17
 
 **Övning 14 - Hypotestest.**\
-Uppgifter: SDM 18. SDM 20-21. 
+Uppgifter: SDM 18. SDM 20-21.
 
-**Övning 15 -  Jämföra grupper och chi2-test.**\
-Uppgifter: SDM 23 
+**Övning 15 - Jämföra grupper och chi2-test.**\
+Uppgifter: SDM 23
 
 **Övning 16 - Inferens för regression.**\
-Uppgifter: SDM 23 
+Uppgifter: SDM 23
 
 ### **Datorlaborationer**
 
 **Datorlaboration 5 - Simulering för att utforska slumpvariabler och deras egenskaper.**\
-Uppgifter: [Datorlab 5](/misc/larry.png) 
+Uppgifter: [Datorlab 5](/misc/larry.png)
 
 **Datorlaboration 6 - Samplingfördelningar, standardfel och konfidensintervall.**\
-Uppgifter: [Datorlab 6](/misc/larry.png) 
+Uppgifter: [Datorlab 6](/misc/larry.png)
 
 **Datorlaboration 7 - Multipel linjär regression - inferens.**\
 Uppgifter: [Datorlab 7](/misc/larry.png)
