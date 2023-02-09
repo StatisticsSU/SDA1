@@ -104,8 +104,8 @@ Uppgifter: SDM 23
 
 ### **Datorlaborationer**
 
-**Datorlaboration 5 - Simulering för att utforska slumpvariabler och deras egenskaper.**\
-Uppgifter: [Datorlab 5](/misc/larry.png)
+**Datorlaboration 5 - Räkna med fördelningar i R. Simulering.**\
+Uppgifter: [html](/datorlab/lab5/DatorLab5.qmd) | <a href="https://github.com/StatisticsSU/SDA1/raw/main/datorlab/lab5/DatorLab5.qmd" download>quarto</a>
 
 **Datorlaboration 6 - Samplingfördelningar, standardfel och konfidensintervall.**\
 Uppgifter: [Datorlab 6](/misc/larry.png)
