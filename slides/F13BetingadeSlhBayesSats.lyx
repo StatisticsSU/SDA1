@@ -915,9 +915,7 @@ textbf{Allmänna multiplikationsregeln}}.
 
 $$P(A
 \backslash
-cap B)=P(A)
-\backslash
-cdot P(B
+cap B)=P(A) P(B
 \backslash
 vert A)$$
 \end_layout
@@ -1138,7 +1136,7 @@ Allmänna multiplikationsregeln
 
 \begin_inset Formula 
 \[
-P(A\cap B)=P(B|A)P(A)
+P(A\cap B)=P(B|A)P(A)=P(A|B)P(B)
 \]
 
 \end_inset
@@ -1187,7 +1185,7 @@ emoji{smiling-face-with-heart-eyes}
 
 \begin_inset Formula 
 \[
-P(B|A)=\frac{P(B\vert A)P(A)}{P(A)}
+P(B|A)=\frac{P(A\vert B)P(B)}{P(A)}
 \]
 
 \end_inset
@@ -1302,7 +1300,7 @@ Förenkling: skilja på enbart 0:or och 1:or
 {siffran är en nolla}
 \begin_inset Formula 
 \[
-P(B\vert A)=\frac{P(A\vert B)p(B)}{P(A)}
+P(B\vert A)=\frac{P(A\vert B)P(B)}{P(A)}
 \]
 
 \end_inset
@@ -1468,7 +1466,7 @@ Bayes sats
 \align center
 \begin_inset Formula 
 \[
-P(B|A)=\frac{P(B\vert A)P(A)}{P(A)}
+P(B|A)=\frac{P(A\vert B)P(B)}{P(A)}
 \]
 
 \end_inset
@@ -1486,7 +1484,7 @@ Bayes sats
 med lagen om total sannolikhet
 \begin_inset Formula 
 \[
-P(B|A)=\frac{P(B\vert A)P(A)}{P(A\vert B)P(B)+P(A\vert B^{c})P(B^{c})}
+P(B|A)=\frac{P(A\vert B)P(B)}{P(A\vert B)P(B)+P(A\vert B^{c})P(B^{c})}
 \]
 
 \end_inset
@@ -1529,7 +1527,7 @@ Bayes sats
 
 \begin_inset Formula 
 \[
-P(B|A)=\frac{P(B\vert A)P(A)}{P(A\vert B)P(B)+P(A\vert B^{c})P(B^{c})}
+P(B|A)=\frac{P(A\vert B)P(B)}{P(A\vert B)P(B)+P(A\vert B^{c})P(B^{c})}
 \]
 
 \end_inset
