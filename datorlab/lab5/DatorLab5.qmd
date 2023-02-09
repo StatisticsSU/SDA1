@@ -282,7 +282,7 @@ Uppskatta variansen för $Z$ genom simulering. Verifiera att uppskattningen är 
 
 En webbsida registrerade när besökare besökte deras webbsida under ett dygn. Här är en grafisk illustration av antalet besök under dygnet, varje streck är ett besök vid en viss tidpunkt:
 
-![](website_times.svg){fig-align="center"}
+![](https://github.com/StatisticsSU/SDA1/raw/main/datorlab/lab5/website_times.svg){fig-align="center"}
 
 Antalet besök för var och ett av dygnets timmar var
 
