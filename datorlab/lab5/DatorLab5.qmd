@@ -23,15 +23,15 @@ callout-tip-caption: "Tips"
 editor: visual
 ---
 
+## Introduktion och viktig förberedande information
+
+> I den här datorlabben kommer vi att arbeta med fördelningar i R, bland annat lära oss göra sannolikhetsberäkningar och simulera från olika fördelningar, dvs dra slumptal från fördelningar.
+
 ::: callout-warning
 ## Installera paket
 
 Den här labben förutsätter inga installerade paket.
 :::
-
-## Introduktion och viktig förberedande information
-
-> I den här datorlabben kommer vi att arbeta med fördelningar i R, bland annat lära oss göra sannolikhetsberäkningar och simulera från olika fördelningar, dvs dra slumptal från fördelningar.
 
 ::: callout-important
 ## Skapa mapp för labben

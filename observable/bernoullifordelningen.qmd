@@ -1,0 +1,7 @@
+---
+title: "Bernoullifördelningen"
+format: html
+---
+
+<iframe width="100%" height="717" frameborder="0"
+  src="https://observablehq.com/embed/@mattiasvillani/bernoullifordelningen@904?cells=textdist%2Cviewof+p%2Cmomentstext%2Cmoments%2Cplt_pdf"></iframe>
