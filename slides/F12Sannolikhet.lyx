@@ -32,9 +32,10 @@
 
 \tiny
 \vspace{1cm}
-\includegraphics[width=0.33cm]{/misc/web.png} \href{https://mattiasvillani.com}{mattiasvillani.com}\hspace*{1cm}~
-\includegraphics[width=0.3cm]{/misc/twitter.jpg} \href{https://twitter.com/matvil}{@matvil}\hspace*{1cm}~
-\includegraphics[width=0.3cm]{/misc/github.png} \href{https://github.com/mattiasvillani}{mattiasvillani}~
+\href{https://mattiasvillani.com}{\includegraphics[width=0.33cm]{/misc/web.png} mattiasvillani.com}\hspace*{1cm}~
+\href{https://twitter.com/matvil}{\includegraphics[width=0.3cm]{/misc/twitter.jpg} @matvil}\hspace*{1cm}~
+\href{https://fosstodon.org/@matvil}{\includegraphics[width=0.3cm]{/misc/mastodon.pdf} @matvil}\hspace*{1cm}~
+\href{https://github.com/mattiasvillani}{\includegraphics[width=0.3cm]{/misc/github.png} mattiasvillani}~
 }
 
 
@@ -484,12 +485,6 @@ Sannolikheten att träffa den rätta på dejtingapp.
 Sannolikhetslära viktigt för 
 \series bold
 \color orange
-användningen
-\series default
-\color inherit
- av 
-\series bold
-\color orange
 dataanalys
 \series default
 \color inherit
@@ -513,7 +508,11 @@ Statistiska modeller är sannolikhetsmodeller
 \begin_inset Newline newline
 \end_inset
 
-Bra modell av verkligheten: data sannolika enligt modellen.
+
+\begin_inset VSpace smallskip
+\end_inset
+
+rBra modell av verkligheten: data sannolika enligt modellen.
 \begin_inset VSpace medskip
 \end_inset
 
@@ -675,6 +674,175 @@ status open
 
 
 \end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Sannolikheter för regression
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Hittills på kursen:
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+skatta 
+\series bold
+\color blue
+regressionslinjen
+\series default
+\color inherit
+: 
+\begin_inset Formula $\hat{y}=b_{0}+b_{1}x$
+\end_inset
+
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color blue
+prediktion
+\series default
+\color inherit
+ för ny observation: 
+\begin_inset Formula $\hat{y}_{i}=b_{0}+b_{1}x_{i}$
+\end_inset
+
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Med sannolikhetslära kan vi göra mycket mer:
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+om 
+\begin_inset Formula $b_{1}\neq0$
+\end_inset
+
+,
+\series bold
+\color blue
+ 
+\series default
+\color inherit
+finns det
+\series bold
+\color blue
+ verkligen korrelation
+\series default
+\color inherit
+ mellan 
+\begin_inset Formula $x$
+\end_inset
+
+ och 
+\begin_inset Formula $y$
+\end_inset
+
+? 
+\series bold
+\color orange
+Stickprov
+\series default
+\color inherit
+ vs 
+\series bold
+\color orange
+Population
+\series default
+\color inherit
+.
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color blue
+osäkerhetsintervall för 
+\begin_inset Formula $b_{1}$
+\end_inset
+
+
+\series default
+\color inherit
+ som troligen täcker sanna värdet.
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color blue
+osäkerhetsintervall för prediktionen
+\series default
+\color inherit
+ 
+\begin_inset Formula $\hat{y}_{i}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figs/prediction_intervals.pdf
+	lyxscale 50
+	scale 22
 
 \end_inset
 
@@ -2069,6 +2237,30 @@ Vi skriver
 \end_inset
 
 .
+\begin_inset space \hspace{}
+\length 1.9cm
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tiny 
+\backslash
+emoji{flag-united-states} Snitt = 
+\backslash
+textcolor{orange} {
+\backslash
+textbf{Intersection}}
+\end_layout
+
+\end_inset
+
+
 \begin_inset VSpace smallskip
 \end_inset
 
@@ -2080,13 +2272,46 @@ Vi skriver
 \begin_inset Graphics
 	filename figs/intersection.pdf
 	lyxscale 50
-	scale 30
+	scale 25
 
 \end_inset
 
 
 \end_layout
 
+\begin_layout Itemize
+Två tärningar:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\size footnotesize
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+ = {samma prickar på båda tärningar}
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+\begin_inset Formula $\mathbf{B}$
+\end_inset
+
+ = {totalt 10 prickar}
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+\begin_inset Formula $\mathbf{A}\cap\mathbf{B}$
+\end_inset
+
+ = {5:a på båda tärningar}
+\end_layout
+
+\end_deeper
 \begin_layout Itemize
 
 \size footnotesize
@@ -2156,6 +2381,8 @@ emoji{anxious-face-with-sweat}}
 
 \end_deeper
 \begin_layout Itemize
+
+\size footnotesize
 Disjunkta händelsers snitt är den 
 \series bold
 \color blue
@@ -2171,30 +2398,6 @@ tomma mängden
 \[
 \mathbf{A}\text{ och }\textbf{\mathbf{B}}\text{ disjunkta }\quad\Longleftrightarrow\quad\mathbf{A}\cap\textbf{\mathbf{B}}=\mathbf{\emptyset}
 \]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-blfootnote{
-\backslash
-tiny 
-\backslash
-emoji{flag-united-states} Snitt = 
-\backslash
-textcolor{orange} {
-\backslash
-textbf{Intersection}}}
-\end_layout
 
 \end_inset
 
@@ -2967,7 +3170,7 @@ P(\text{\mathbf{R} \ensuremath{\cup} \mathbf{K}})=0.2+0.3-0.1=0.4
 \end_layout
 
 \begin_layout Itemize
-Röstar på 
+Röstar inte på 
 \begin_inset ERT
 status open
 
@@ -3196,16 +3399,24 @@ Multiplikationsregeln för oberoende händelser
 
 \begin_deeper
 \begin_layout Itemize
+Vad är sannolikheten att få 2 st krona i rad vid slantsingling?
+\begin_inset Formula 
+\[
+0.5\cdot0.5=0.5^{2}=0.25
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
 Vad är sannolikheten att få 5 st krona i rad vid slantsingling?
 \begin_inset Formula 
 \[
 0.5\cdot0.5\cdot0.5\cdot0.5\cdot0.5=0.5^{5}=0.03125
 \]
 
-\end_inset
-
-
-\begin_inset VSpace medskip
 \end_inset
 
 
@@ -3223,7 +3434,7 @@ P(\text{ingen lagg hela veckan)}=(1-0.01)^{7}=0.99^{7}\approx0.932.
 \end_inset
 
 
-\begin_inset VSpace medskip
+\begin_inset VSpace smallskip
 \end_inset
 
 

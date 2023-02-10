@@ -28,9 +28,10 @@
 
 \tiny
 \vspace{1cm}
-\includegraphics[width=0.33cm]{/misc/web.png} \href{https://mattiasvillani.com}{mattiasvillani.com}\hspace*{1cm}~
-\includegraphics[width=0.3cm]{/misc/twitter.jpg} \href{https://twitter.com/matvil}{@matvil}\hspace*{1cm}~
-\includegraphics[width=0.3cm]{/misc/github.png} \href{https://github.com/mattiasvillani}{mattiasvillani}~
+\href{https://mattiasvillani.com}{\includegraphics[width=0.33cm]{/misc/web.png} mattiasvillani.com}\hspace*{1cm}~
+\href{https://twitter.com/matvil}{\includegraphics[width=0.3cm]{/misc/twitter.jpg} @matvil}\hspace*{1cm}~
+\href{https://fosstodon.org/@matvil}{\includegraphics[width=0.3cm]{/misc/mastodon.pdf} @matvil}\hspace*{1cm}~
+\href{https://github.com/mattiasvillani}{\includegraphics[width=0.3cm]{/misc/github.png} mattiasvillani}~
 }
 
 
@@ -321,7 +322,7 @@ Covid:
 \begin_deeper
 \begin_layout Itemize
 A = {positivt hemtest}.
- B = {har Covid}.
+ B = {har covid}.
 \begin_inset VSpace medskip
 \end_inset
 
@@ -590,7 +591,7 @@ Antal
 \begin_inset Text
 
 \begin_layout Plain Layout
-Sannolikheter (Table %)
+Snittsannolikheter (Table %)
 \end_layout
 
 \end_inset
@@ -786,6 +787,42 @@ Korstabell och mosaic-plott
 \begin_inset Graphics
 	filename figs/pets_only_joint.pdf
 	scale 42
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Venn-diagram
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figs/venn_cat_dogs.pdf
+	scale 75
 
 \end_inset
 
@@ -1080,7 +1117,7 @@ status open
 
 \series bold
 \color orange
-Simultana och marginella sannolikheter bäst i tabell
+Snitt- och marginella sannolikheter bäst i tabell
 \end_layout
 
 \end_inset
@@ -1863,7 +1900,7 @@ Exempel: handskrivna siffor:
 \begin_inset Formula $A=$
 \end_inset
 
-{svart pixel i mitten}
+{vit pixel i mitten}
 \end_layout
 
 \end_deeper

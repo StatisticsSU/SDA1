@@ -43,13 +43,14 @@ coltitle=black,center title}}
 \vspace{-0.6cm}
 \includegraphics[width=1.5cm]{/misc/LogoBlueJustRing.jpg}\break
 
+
 \tiny
 \vspace{1cm}
-\includegraphics[width=0.33cm]{/misc/web.png} \href{https://mattiasvillani.com}{mattiasvillani.com}\hspace*{1cm}~
-\includegraphics[width=0.3cm]{/misc/twitter.jpg} \href{https://twitter.com/matvil}{@matvil}\hspace*{1cm}~
-\includegraphics[width=0.3cm]{/misc/github.png} \href{https://github.com/mattiasvillani}{mattiasvillani}~
+\href{https://mattiasvillani.com}{\includegraphics[width=0.33cm]{/misc/web.png} mattiasvillani.com}\hspace*{1cm}~
+\href{https://twitter.com/matvil}{\includegraphics[width=0.3cm]{/misc/twitter.jpg} @matvil}\hspace*{1cm}~
+\href{https://fosstodon.org/@matvil}{\includegraphics[width=0.3cm]{/misc/mastodon.pdf} @matvil}\hspace*{1cm}~
+\href{https://github.com/mattiasvillani}{\includegraphics[width=0.3cm]{/misc/github.png} mattiasvillani}~
 }
-
 
 \definecolor{blue}{RGB}{38, 122, 181}
 \definecolor{orange}{RGB}{255, 128, 0}
@@ -843,10 +844,6 @@ literal "true"
 \end_layout
 
 \begin_layout Frame
-
-\end_layout
-
-\begin_layout Frame
 \begin_inset Argument 4
 status open
 
@@ -1226,7 +1223,7 @@ dexp(x = 0.5, rate = 3)
 \end_inset
 
  vid 
-\begin_inset Formula $x=2$
+\begin_inset Formula $x=0.5$
 \end_inset
 
 
