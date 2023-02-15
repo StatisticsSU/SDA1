@@ -808,7 +808,7 @@ status open
 
 \series bold
 \color orange
-Kasta två tärningar - fördelning för slumpvariabel
+Kasta tärning - fördelning för slumpvariabel
 \end_layout
 
 \end_inset
@@ -859,7 +859,7 @@ status open
 
 \series bold
 \color orange
-Kasta två tärningar - fördelning för slumpvariabel
+Kasta tärning - fördelning för slumpvariabel
 \end_layout
 
 \end_inset
@@ -938,7 +938,7 @@ stickprov
 \end_inset
 
 .
-\begin_inset VSpace medskip
+\begin_inset VSpace smallskip
 \end_inset
 
 
@@ -973,18 +973,6 @@ expected value
 E(X)=\sum_{\text{alla }x}x\cdot P(x)
 \]
 
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-Summan är över alla möjliga värden för 
-\begin_inset Formula $X$
-\end_inset
-
-.
-\begin_inset VSpace medskip
 \end_inset
 
 
@@ -1028,7 +1016,7 @@ lilla my
 \end_inset
 
 .
-\begin_inset VSpace medskip
+\begin_inset VSpace smallskip
 \end_inset
 
 
@@ -1113,11 +1101,6 @@ Medelvärdet
 \end_inset
 
  påverkas mycket av extrema värden.
- 
-\size footnotesize
-Jfr median
-\size default
-.
 \begin_inset VSpace smallskip
 \end_inset
 
@@ -1802,7 +1785,7 @@ end{table}
 \size small
 \begin_inset Formula 
 \[
-E(\text{bankränta)}=1\cdot\textcolor{orange}{0.017}+2\cdot\textcolor{orange}{0.094}+\ldots+8\cdot\textcolor{orange}{0.001}\approx3.9\%
+E(\text{ränta)}=1\cdot\textcolor{orange}{0.017}+2\cdot\textcolor{orange}{0.094}+\ldots+8\cdot\textcolor{orange}{0.001}\approx3.9\%
 \]
 
 \end_inset
@@ -1866,7 +1849,7 @@ status open
 
 \series bold
 \color orange
-Varians - fördelningens spridning (i kvadrat)
+Varians - fördelningens spridning
 \end_layout
 
 \end_inset
@@ -1929,7 +1912,7 @@ Avvikelser från centrum
 \end_layout
 
 \begin_layout Itemize
-Problem: Negativa och positiva avvikelser tar ut varandra.
+Problem: Negativa och positiva avvikelser kan ta ut varandra.
  
 \begin_inset VSpace smallskip
 \end_inset
@@ -2419,15 +2402,7 @@ Täthetsfunktion
 \end_layout
 
 \begin_layout Itemize
-Täthetsfunktion ger 
-\series bold
-inte
-\series default
- sannolikheter.
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
+Positiv 
 \begin_inset Formula $f(x)>0$
 \end_inset
 
@@ -2436,22 +2411,21 @@ inte
 \end_inset
 
 .
- (ok med 
-\begin_inset Formula $f(x)>1)$
-\end_inset
-
-
 \end_layout
 
 \begin_layout Itemize
-arean under 
-\begin_inset Formula $f(x)$
+Täthetsfunktion ger 
+\series bold
+inte
+\series default
+ sannolikheter.
+ OK om 
+\begin_inset Formula $f(x)>1$
 \end_inset
 
- ska vara 1.
+.
 \end_layout
 
-\end_deeper
 \begin_layout Itemize
 
 \series bold
@@ -2725,7 +2699,7 @@ Exempel:
 \end_layout
 
 \begin_layout Itemize
-Sämre förhandlare: bankräntan 2% högre än min.
+Sämre förhandlare: bankräntan 2% högre än styrräntan.
 \end_layout
 
 \begin_layout Itemize
@@ -3057,7 +3031,7 @@ end{tcolorbox}
 \begin_layout Itemize
 
 \size small
-\begin_inset Formula $E(0.7\cdot X)=0.7\cdot E(X)=0.7\cdot3252=2276.4\text{ kr}$
+\begin_inset Formula $E(0.7\cdot X)=0.7\cdot3252=2276.4\text{ kr}$
 \end_inset
 
 
@@ -3066,7 +3040,7 @@ end{tcolorbox}
 \begin_layout Itemize
 
 \size small
-\begin_inset Formula $SD(0.7\cdot X)=\left|0.7\right|\cdot SD(X)=0.7\cdot982.63\approx687.84\text{ kr}$
+\begin_inset Formula $SD(0.7\cdot X)=0.7\cdot982.63\approx687.84\text{ kr}$
 \end_inset
 
 
@@ -3333,19 +3307,11 @@ skift
 \color inherit
  och 
 \series bold
-\color blue
+\color orange
 skalning
 \series default
 \color inherit
-
-\begin_inset Formula 
-\[
-Z=\frac{X\textcolor{orange}{-\mu}}{\textcolor{blue}{\sigma}}
-\]
-
-\end_inset
-
-
+.
 \end_layout
 
 \begin_layout Itemize
@@ -4184,14 +4150,6 @@ Korrelation: linjärt beroende mellan variabler.
 
 \end_layout
 
-\begin_layout Itemize
-Stickprovskovarians: 
-\begin_inset Formula $s_{xy}=Cov(x,y)=\frac{\sum_{i=1}^{n}(x_{i}-\bar{x})(y_{i}-\bar{y})}{n-1}$
-\end_inset
-
-
-\end_layout
-
 \end_deeper
 \begin_layout Standard
 \begin_inset Separator parbreak
@@ -4459,7 +4417,6 @@ mindre
 \begin_layout Itemize
 Säker aktieportfölj: välj aktier var priser tenderar att röra sig i olika
  riktningar.
- Negativ kovarians.
  Even Steven.
 \end_layout
 
