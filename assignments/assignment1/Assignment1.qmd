@@ -460,7 +460,7 @@ Skriv svaret här.
 
 #### 💪 Uppgift 5.5
 
-Gör en residualanalys av den valda modellen i Uppgift 5.3.
+Gör en residualanalys av den valda modellen i Uppgift 5.4.
 
 ::: {.callout-note appearance="minimal"}
 # Uppgift 5.5 - Svar
