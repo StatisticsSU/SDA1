@@ -445,14 +445,14 @@ När man enbart transformerar $y$ men inte $x$ är tolkningen i den transformera
 
 Precis som i Avsnitt 2 kan vi använda minsta kvadratmetoden (genom `lm()`) för att anpassa modellen på de transformerade data. När vi använder prediktion måste vi tänka på att vi har transformerat variablerna. I det här specifika exemplet med tranformationen `log(fev)` kommer funktionen `predict()` att prediktera den genomsnittliga $\log(fev)$ nivån. Vi vill prediktera i originalskala, dvs responsvariabeln $y$ (`fev`) och inte $\log(y)$ (`log(fev)`). Men vi kan använda prediktionen för $\log(y)$ och "reversera transformationen", dvs få transformationen ogjord, för att beräkna prediktionen för $y$. En funktion som reverserar en transformation kallas för en inverstransformation. Tabellen nedan anger inversetransformationerna (kolumnen till höger) vi kan använda oss av när vi predikterar i originalskala. Transformationerna motsvarar de i ladder of powers.
 
-| Transformation av responsen | Prediktion i $y$-skala ($\widehat{y}$) |
-|:---------------------------:|:--------------------------------------:|
-|            $y^2$            |   $\left(\widehat{y^2}\right)^{1/2}$   |
-|             $y$             |             $\widehat{y}$              |
-|          $y^{1/2}$          |   $\left(\widehat{y^{1/2}}\right)^2$   |
-|          $\log(y)$          |  $\exp\left(\widehat{\log(y)}\right)$  |
-|         $-y^{-1/2}$         |  $\left(\widehat{-y^{-1/2}}\right)^2$  |
-|          $-y^{-1}$          | $-\left(\widehat{-y^{-1}}\right)^{-1}$ |
+| Transformation av responsen | Prediktion i $y$-skala ($\widehat{y}$)  |
+|:---------------------------:|:---------------------------------------:|
+|            $y^2$            |   $\left(\widehat{y^2}\right)^{1/2}$    |
+|             $y$             |              $\widehat{y}$              |
+|          $y^{1/2}$          |   $\left(\widehat{y^{1/2}}\right)^2$    |
+|          $\log(y)$          |  $\exp\left(\widehat{\log(y)}\right)$   |
+|         $-y^{-1/2}$         | $\left(\widehat{-y^{-1/2}}\right)^{-2}$ |
+|          $-y^{-1}$          | $-\left(\widehat{-y^{-1}}\right)^{-1}$  |
 
 : Prediktion i originalskala (kolumn till höger) för olika transformerade responser (kolumn till vänster).
 
