@@ -299,22 +299,6 @@ Exponentialfördelning
 Student-
 \emph on
 t
-\emph default
-
-\begin_inset VSpace bigskip
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-
-\series bold
-\color blue
-Sannolikhetsmodeller
-\series default
-\color inherit
- och verkligheten
 \end_layout
 
 \end_deeper
@@ -369,6 +353,17 @@ Om
 P(X=x)=\frac{e^{-\lambda}\lambda^{x}}{x!},\qquad\text{för }x=0,1,2,...
 \]
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $e\approx2.71$
+\end_inset
+
+ är Eulers tal.
+\begin_inset VSpace smallskip
 \end_inset
 
 
@@ -708,7 +703,7 @@ Momentmetoden
 \series default
 \color inherit
 : Eftersom 
-\begin_inset Formula $E(X)=\lambda$
+\begin_inset Formula $\lambda=E(X)$
 \end_inset
 
  så är 
@@ -880,13 +875,6 @@ f(x)=\lambda e^{-\lambda x},\text{ för }x>0
 \end_inset
 
 
-\end_layout
-
-\begin_layout Itemize
-\begin_inset Formula $e\approx2.71$
-\end_inset
-
- är Eulers tal.
 \end_layout
 
 \begin_layout Itemize
@@ -1640,10 +1628,10 @@ Stickprovmedelvärdet
 \end_layout
 
 \begin_layout Itemize
-Inferens: intresserad av fördelningen för det 
+Inferens: fördelningen för det 
 \series bold
 \color orange
-standardiserad medelvärdet
+standardiserade medelvärdet
 \series default
 \color inherit
 
@@ -1877,228 +1865,6 @@ literal "true"
 
 
 \end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\begin_layout Standard
-\begin_inset Separator parbreak
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-
-\series bold
-\color orange
-Population och stickprov - ändliga populationer
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-\align center
-\begin_inset Graphics
-	filename figs/Population_sample.pdf
-	lyxscale 30
-	scale 50
-
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\begin_layout Standard
-\begin_inset Separator parbreak
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-
-\series bold
-\color orange
-Modeller som en förenkling av verkligheten
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-\align center
-\begin_inset Graphics
-	filename figs/model_reality_nodata.pdf
-	lyxscale 30
-	scale 30
-
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\begin_layout Standard
-\begin_inset Separator parbreak
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-
-\series bold
-\color orange
-Sannolikhetsmodeller och inferens
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-\align center
-\begin_inset Graphics
-	filename figs/model_reality_nopreds.pdf
-	lyxscale 30
-	scale 30
-
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\begin_layout Standard
-\begin_inset Separator parbreak
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-
-\series bold
-\color orange
-Sannolikhetsmodeller möter verkligheten - prediktion
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-\align center
-\begin_inset Graphics
-	filename figs/modeLreality_nofeedback.pdf
-	lyxscale 30
-	scale 30
-
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\begin_layout Standard
-\begin_inset Separator parbreak
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-
-\series bold
-\color orange
-Modellering är en iterativ process
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-\align center
-\begin_inset Graphics
-	filename figs/model_reality_nodecision.pdf
-	lyxscale 30
-	scale 30
-
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\begin_layout Standard
-\begin_inset Separator parbreak
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-
-\series bold
-\color orange
-Slutmålet är ofta beslutsfattande i en osäker värld
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-\align center
-\begin_inset Graphics
-	filename figs/model_reality.pdf
-	lyxscale 30
-	scale 30
 
 \end_inset
 
