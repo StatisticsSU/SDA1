@@ -38,7 +38,7 @@ Extramaterial: [Notebook - student-t](https://observablehq.com/@mattiasvillani/s
 
 **Föreläsning 17 - Samplingfördelningar och konfidensintervall för en andel.**\
 Läs: SDM Kapitel 16 \| [Slides](/misc/larry.png)\
-Interaktivt: [samplingfördelning - liten ändlig population](/observable/sampling_finite_pop.qmd) | [stora talens lag - normalapproximation för en andel](/observable/storatalenslag_bernoulli_normalapprox.qmd) | [samplingfördelning för andel - ändlig population](/observable/sampling_prop_finite_pop.qmd)
+Interaktivt: [samplingfördelning - liten ändlig population](/observable/sampling_finite_pop.qmd) | [stora talens lag - normalapproximation för en andel](/observable/storatalenslag_bernoulli_normalapprox.qmd) | [samplingfördelning för andel - ändlig population](/observable/sampling_prop_finite_pop.qmd) | [konfidensintervall för en andel](/observable/konfidensintervall_andel.qmd)
 
 **Föreläsning 18 - Konfidensintervall för ett väntevärde. Stora talens lag. Centrala gränsvärdessatsen.**\
 Läs: SDM Kapitel 17 \| [Slides](/misc/larry.png)\
