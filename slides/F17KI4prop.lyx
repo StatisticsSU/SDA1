@@ -1937,7 +1937,7 @@ status open
 
 \series bold
 \color orange
-Konfidensintervall för en andel
+Normalapproximation för en andel
 \end_layout
 
 \end_inset
@@ -1967,7 +1967,7 @@ Normalapproximation
 
 \begin_layout Itemize
 68-95-99.7 regeln:
-\begin_inset VSpace smallskip
+\begin_inset VSpace medskip
 \end_inset
 
 
@@ -1975,48 +1975,45 @@ Normalapproximation
 
 \begin_deeper
 \begin_layout Itemize
-sannolikhet 
-\begin_inset Formula $\hat{p}$
+\begin_inset Formula $P(\hat{p}$
 \end_inset
 
  är högst en standardavvikelse från 
-\begin_inset Formula $p$
+\begin_inset Formula $p)=0.683$
 \end_inset
 
- är 0.683
-\begin_inset VSpace smallskip
+
+\begin_inset VSpace medskip
 \end_inset
 
 
 \end_layout
 
 \begin_layout Itemize
-sannolikhet 
-\begin_inset Formula $\hat{p}$
+\begin_inset Formula $P(\hat{p}$
 \end_inset
 
  är högst två standardavvikelser från 
-\begin_inset Formula $p$
+\begin_inset Formula $p)=0.954$
 \end_inset
 
- är 0.954
-\begin_inset VSpace smallskip
+
+\begin_inset VSpace medskip
 \end_inset
 
 
 \end_layout
 
 \begin_layout Itemize
-sannolikhet 
-\begin_inset Formula $\hat{p}$
+\begin_inset Formula $P(\hat{p}$
 \end_inset
 
  är högst tre standardavvikelser från 
-\begin_inset Formula $p$
+\begin_inset Formula $p)=0.997$
 \end_inset
 
- är 0.997
-\begin_inset VSpace bigskip
+
+\begin_inset VSpace medskip
 \end_inset
 
 
@@ -2033,7 +2030,7 @@ rundare
 \end_inset
 
  sannolikheter:
-\begin_inset VSpace smallskip
+\begin_inset VSpace medskip
 \end_inset
 
 
@@ -2041,47 +2038,44 @@ rundare
 
 \begin_deeper
 \begin_layout Itemize
-sannolikhet 
-\begin_inset Formula $\hat{p}$
+\begin_inset Formula $P(\hat{p}$
 \end_inset
 
  är högst 1.645 standardavvikelser från 
-\begin_inset Formula $p$
+\begin_inset Formula $p)=0.90$
 \end_inset
 
- är 0.90.
-\begin_inset VSpace smallskip
+
+\begin_inset VSpace medskip
 \end_inset
 
 
 \end_layout
 
 \begin_layout Itemize
-sannolikhet 
-\begin_inset Formula $\hat{p}$
+\begin_inset Formula $P(\hat{p}$
 \end_inset
 
  är högst 1.96 standardavvikelser från 
-\begin_inset Formula $p$
+\begin_inset Formula $p)=0.95$
 \end_inset
 
- är 0.95.
-\begin_inset VSpace smallskip
+ 
+\begin_inset VSpace medskip
 \end_inset
 
 
 \end_layout
 
 \begin_layout Itemize
-sannolikhet 
-\begin_inset Formula $\hat{p}$
+\begin_inset Formula $P(\hat{p}$
 \end_inset
 
  är högst 2.576 standardavvikelser från 
-\begin_inset Formula $p$
+\begin_inset Formula $p)=0.99$
 \end_inset
 
- är 0.99.
+
 \end_layout
 
 \end_deeper
@@ -2090,6 +2084,658 @@ sannolikhet
 \begin_inset Separator parbreak
 \end_inset
 
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Kritisk värde för 95%-igt konfidensintervall
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Intervall med sannolikhet 
+\begin_inset Formula $0.95$
+\end_inset
+
+:
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Sannolikhetsmassa 
+\series bold
+utanför
+\series default
+ intervallet: 
+\begin_inset Formula $\alpha=0.05$
+\end_inset
+
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Sannolikhetsmassa 
+\series bold
+i vardera svans
+\series default
+: 
+\begin_inset Formula $\alpha/2=0.025$
+\end_inset
+
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $z_{\alpha/2}=\textcolor{orange}{z_{0.025}=1.96}$
+\end_inset
+
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Quotes eld
+\end_inset
+
+värdet som har 2.5% av sannolikhetsmassan till höger om sig
+\begin_inset Quotes erd
+\end_inset
+
+.
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $z_{0.025}$
+\end_inset
+
+ från Z-tabell, det 
+\begin_inset Formula $z$
+\end_inset
+
+ där 
+\begin_inset Formula $P(Z\leq z)=1-0.025=0.975$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figs/standard_normal_twotails_95.pdf
+	lyxscale 30
+	scale 32
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Kritisk värde för 80%-igt konfidensintervall
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Intervall med sannolikhet 
+\begin_inset Formula $0.8$
+\end_inset
+
+:
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\alpha=0.2$
+\end_inset
+
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $z_{\alpha/2}=\textcolor{orange}{z_{0.1}=1.282}$
+\end_inset
+
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Quotes eld
+\end_inset
+
+värdet som har 10% av sannolikhetsmassan till höger om sig
+\begin_inset Quotes erd
+\end_inset
+
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figs/standard_normal_twotails_80.pdf
+	lyxscale 30
+	scale 35
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Kritisk värde - konfidensintervall 
+\begin_inset Formula $1-\alpha$
+\end_inset
+
+ sannolikhet
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+\color blue
+Kritiskt värde
+\series default
+\color inherit
+ 
+\series bold
+\color blue
+för ett intervall
+\series default
+\color inherit
+ med sannolikhet 
+\begin_inset Formula $1-\alpha$
+\end_inset
+
+:
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Sannolikhetsmassa 
+\series bold
+utanför
+\series default
+ intervallet: 
+\begin_inset Formula $\alpha$
+\end_inset
+
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Sannolikhetsmassa 
+\series bold
+i vardera svans
+\series default
+: 
+\begin_inset Formula $\alpha/2$
+\end_inset
+
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $z_{\alpha/2}$
+\end_inset
+
+ 
+\begin_inset Quotes eld
+\end_inset
+
+har 
+\begin_inset Formula $\alpha/2$
+\end_inset
+
+ av sannolikhetsmassan till höger om sig
+\begin_inset Quotes erd
+\end_inset
+
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figs/standard_normal_twotails.pdf
+	lyxscale 30
+	scale 35
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+95%-igt konfidensintervall för en andel
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Normalapproximation
+\size footnotesize
+
+\begin_inset Formula 
+\[
+\hat{p}\sim N\left(p,\sqrt{\frac{pq}{n}}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tcolorbox}[colback=verylightgray]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+textcolor{blue}{
+\backslash
+textbf{Approximativt 95
+\backslash
+%-igt konfidensintervall för andel }p}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-0.2cm}
+\end_layout
+
+\begin_layout Plain Layout
+
+$$
+\backslash
+hat p 
+\backslash
+pm z_{0.025}
+\backslash
+cdot SE(
+\backslash
+hat p)$$
+\end_layout
+
+\begin_layout Plain Layout
+
+där $$SE(
+\backslash
+hat p)=
+\backslash
+sqrt{
+\backslash
+frac{
+\backslash
+hat p 
+\backslash
+hat q}{n}}$$
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tcolorbox}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Ett intervall från ett 
+\series bold
+\color blue
+givet stickprov
+\series default
+\color inherit
+ antingen täcker eller missar 
+\begin_inset Formula $p$
+\end_inset
+
+.
+ Vi får aldrig veta vilket.
+\end_layout
+
+\begin_layout Itemize
+Ett 95%-igt konfidensintervall kommer innehålla populationsvärdet 
+\begin_inset Formula $p$
+\end_inset
+
+ 
+\series bold
+\color blue
+i 95% av alla möjliga stickprov
+\series default
+\color inherit
+.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Konfidensintervall för en andel
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Normalapproximation
+\size footnotesize
+
+\begin_inset Formula 
+\[
+\hat{p}\sim N\left(p,\sqrt{\frac{pq}{n}}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tcolorbox}[colback=verylightgray]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+textcolor{blue}{
+\backslash
+textbf{Approximativt } (1-
+\backslash
+alpha)
+\backslash
+textbf{
+\backslash
+%-igt konfidensintervall för andel }p}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{-0.2cm}
+\end_layout
+
+\begin_layout Plain Layout
+
+$$
+\backslash
+hat p 
+\backslash
+pm z_{
+\backslash
+alpha/2}
+\backslash
+cdot SE(
+\backslash
+hat p)$$
+\end_layout
+
+\begin_layout Plain Layout
+
+där $$SE(
+\backslash
+hat p)=
+\backslash
+sqrt{
+\backslash
+frac{
+\backslash
+hat p 
+\backslash
+hat q}{n}}$$
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tcolorbox}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Konfidensintervall för en andel - interaktivt
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "1pt"
+separation "1pt"
+shadowsize "4pt"
+framecolor "orange"
+backgroundcolor "white"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset CommandInset href
+LatexCommand href
+name "\\includegraphics[width=0.65\\textwidth]{../observable/figs/konfidens_andel_widget.png}"
+target "https://statisticssu.github.io/SDA1/observable/konfidensintervall_andel.html"
+literal "true"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
 
 \end_layout
 

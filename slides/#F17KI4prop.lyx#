@@ -2082,9 +2082,38 @@ sannolikhet
 \end_inset
 
  är 0.99.
+\begin_inset Separator parbreak
+\end_inset
+
+
 \end_layout
 
 \end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Normalapproximation för en andel
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
 \begin_layout Itemize
 
 \series bold
@@ -2115,26 +2144,52 @@ z_{\alpha/2}
 
 \begin_layout Itemize
 Exempel: intervall med sannolikhet 
-\begin_inset Formula $0.9$
+\begin_inset Formula $0.95$
 \end_inset
 
- (90%-igt intervall):
+ (95%-igt intervall):
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\alpha=0.05$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $\alpha=0.1$
+\begin_inset Formula $z_{\alpha/2}=z_{0.025}=1.96$
+\end_inset
+
+ (värdet som har 2.5% av sannolikhetsmassan till höger om sig)
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Exempel: intervall med sannolikhet 
+\begin_inset Formula $0.8$
+\end_inset
+
+ (80%-igt intervall):
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\alpha=0.2$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $z_{\alpha/2}=z_{0.05}=$
+\begin_inset Formula $z_{\alpha/2}=z_{0.1}=1.282$
 \end_inset
 
 
 \end_layout
 
+\end_deeper
 \end_deeper
 \begin_layout Standard
 \begin_inset Separator parbreak
