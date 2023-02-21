@@ -3488,7 +3488,7 @@ Normalfördelning i R
 
 \begin_deeper
 \begin_layout Itemize
-\begin_inset Formula $X\sim N(\mu,\sigma^{2})$
+\begin_inset Formula $X\sim N(\mu,\sigma)$
 \end_inset
 
 .

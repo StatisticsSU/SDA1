@@ -184,7 +184,7 @@ inserttotalframenumber
 \begin_layout Subtitle
 
 \color orange
-Föreläsning 16 - Sannolikhetsmodeller II
+Föreläsning 16 - Sannolikhetsmodeller för kontinuerliga variabler
 \end_layout
 
 \begin_layout Author
@@ -274,6 +274,28 @@ status open
 
 \series bold
 \color blue
+Likformig fördelning
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color blue
+Normalfördelning
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color blue
 Poissonfördelning
 \begin_inset VSpace bigskip
 \end_inset
@@ -299,6 +321,895 @@ Exponentialfördelning
 Student-
 \emph on
 t
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Kontinuerliga slumpvariabler och täthetsfunktionen
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+\color blue
+Kontinuerlig slumpvariabel
+\series default
+\color inherit
+ antar alla värden, men 
+\begin_inset Formula $P(X=x)=0$
+\end_inset
+
+ för alla 
+\begin_inset Formula $x$
+\end_inset
+
+! 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+emoji{exploding-head}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color orange
+Täthetsfunktion
+\series default
+\color inherit
+: 
+\begin_inset Formula $f(x)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Positiv 
+\begin_inset Formula $f(x)>0$
+\end_inset
+
+ för alla 
+\begin_inset Formula $x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Täthetsfunktion ger 
+\series bold
+inte
+\series default
+ sannolikheter.
+ OK om 
+\begin_inset Formula $f(x)>1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color blue
+Täthetsfunktionen
+\series default
+\color inherit
+ används för att 
+\series bold
+\color blue
+beräkna sannolikheter
+\series default
+\color inherit
+:
+\begin_inset Formula 
+\[
+P(a\leq X\leq b)=\text{arean under }f(x)\text{ mellan }a\text{ och }b
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figs/normal_interval_area_standard.pdf
+	lyxscale 40
+	scale 20
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color blue
+SDAIII
+\series default
+\color inherit
+: räkna arean under funktion med 
+\series bold
+\color blue
+integration
+\series default
+\color inherit
+.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Likformig fördelning
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "1pt"
+separation "1pt"
+shadowsize "4pt"
+framecolor "orange"
+backgroundcolor "white"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset CommandInset href
+LatexCommand href
+name "\\includegraphics[width=0.7\\textwidth]{../observable/figs/uniform_widget.png}"
+target "https://statisticssu.github.io/SDA1/observable/uniformfordelning.html"
+literal "true"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Normalfördelning
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $X\sim N(\mu,\sigma)$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+E(X) & =\mu\\
+SD(X) & =\sigma
+\end{align*}
+
+\end_inset
+
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color blue
+68-95-99.7% regeln
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figs/normal_interval_rule.pdf
+	lyxscale 40
+	scale 25
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figs/normal_interval_rule_standard.pdf
+	lyxscale 40
+	scale 25
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Normalfördelning - standardisering
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+\color blue
+Standardisering
+\series default
+\color inherit
+
+\begin_inset Formula 
+\[
+X\sim N(\mu,\sigma)\Rightarrow Z=\frac{X-\mu}{\sigma}\sim N(0,1)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color orange
+Sannolikhet via standardisering
+\series default
+\color inherit
+ för 
+\begin_inset Formula $X\sim N(2,3)$
+\end_inset
+
+
+\size small
+
+\begin_inset Formula 
+\[
+P(X\leq5)=P(X-2\leq5-2)=P\left(\frac{X-2}{3}\leq\frac{5-2}{3}\right)=P(Z\leq1)
+\]
+
+\end_inset
+
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figs/normal_left_tail.pdf
+	lyxscale 40
+	scale 25
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figs/normal_left_tail_standard.pdf
+	lyxscale 40
+	scale 25
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Normalfördelning - Z-tabell
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figs/NormalScreenLargerRed.png
+	lyxscale 40
+	scale 25
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Normalfördelning - symmetri
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+\color blue
+Negativa 
+\begin_inset Formula $z$
+\end_inset
+
+-värden
+\series default
+\color inherit
+ finns inte i Z-tabellen.
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Vi utnyttjar normalfördelningens 
+\series bold
+\color blue
+symmetri
+\series default
+\color inherit
+ för negativa 
+\begin_inset Formula $z$
+\end_inset
+
+
+\size small
+
+\begin_inset Formula 
+\[
+P(Z\leq-2)=1-P(Z\leq2)
+\]
+
+\end_inset
+
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figs/normal_symmetry1.pdf
+	lyxscale 40
+	scale 17
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figs/normal_symmetry2.pdf
+	lyxscale 40
+	scale 17
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figs/normal_symmetry3.pdf
+	lyxscale 40
+	scale 17
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Normalfördelning - intervall via standardisering
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+\color blue
+Sannolikhet via standardisering
+\series default
+\color inherit
+ för 
+\begin_inset Formula $X\sim N(2,3)$
+\end_inset
+
+
+\size footnotesize
+
+\begin_inset Formula 
+\begin{align*}
+P(0 & \leq X\leq5)=P\left(\frac{0-2}{3}\leq\frac{X-2}{3}\leq\frac{5-2}{3}\right)\\
+ & =P(-0.667\leq Z\leq1)\\
+ & =P(Z\leq1)-P(Z\leq-0.667)
+\end{align*}
+
+\end_inset
+
+
+\size small
+och pga 
+\series bold
+\color blue
+symmetri
+\series default
+\color inherit
+
+\begin_inset Formula 
+\[
+P(Z\leq-0.667)=1-P(Z\leq0.667)
+\]
+
+\end_inset
+
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figs/normal_interval_area.pdf
+	lyxscale 40
+	scale 25
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename figs/normal_interval_area_standard.pdf
+	lyxscale 40
+	scale 25
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Normalfördelningen - interaktivt
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "1pt"
+separation "1pt"
+shadowsize "4pt"
+framecolor "orange"
+backgroundcolor "white"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset CommandInset href
+LatexCommand href
+name "\\includegraphics[width=0.7\\textwidth]{../observable/figs/normal_widget.png}"
+target "https://statisticssu.github.io/SDA1/observable/normalfordelningen.html"
+literal "true"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Normalfördelning - egenskaper
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tcolorbox}[colback=verylightgray]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+textcolor{blue}{
+\backslash
+textbf{Linjärkombination av normalfördelad slumpvariabel}}.
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{0.2cm}
+\backslash
+newline
+\end_layout
+
+\begin_layout Plain Layout
+
+Om $X 
+\backslash
+sim 
+\backslash
+operatorname{N}(
+\backslash
+mu, 
+\backslash
+sigma)$ och $Y = c + a X$ så gäller
+\end_layout
+
+\begin_layout Plain Layout
+
+$$Y 
+\backslash
+sim 
+\backslash
+operatorname{N}(c + a 
+\backslash
+mu,
+\backslash
+, 
+\backslash
+vert a 
+\backslash
+vert 
+\backslash
+sigma)$$
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tcolorbox}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tcolorbox}[colback=verylightgray]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+textcolor{blue}{
+\backslash
+textbf{Summa av 
+\backslash
+textcolor{orange}{oberoende normalfördelade} slumpvariabler}}.
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{0.2cm}
+\backslash
+newline
+\end_layout
+
+\begin_layout Plain Layout
+
+Om $X 
+\backslash
+sim 
+\backslash
+operatorname{N}(
+\backslash
+mu_X, 
+\backslash
+sigma_X)$ och $Y 
+\backslash
+sim 
+\backslash
+operatorname{N}(
+\backslash
+mu_Y, 
+\backslash
+sigma_Y)$ är oberoende slumpvariabler så är även summan normalfördelad:
+\end_layout
+
+\begin_layout Plain Layout
+
+$$X+Y 
+\backslash
+sim 
+\backslash
+operatorname{N}(
+\backslash
+mu_X + 
+\backslash
+mu_Y, 
+\backslash
+, 
+\backslash
+sqrt{
+\backslash
+sigma_X^2 + 
+\backslash
+sigma_Y^2})$$
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tcolorbox}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color orange
+Fördelningarna 
+\series default
+\color inherit
+för linjärkombination och summa är 
+\series bold
+\color orange
+normal
+\series default
+\color inherit
+!
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Summan är fortfarande normal om 
+\series bold
+\color blue
+
+\begin_inset Formula $X$
+\end_inset
+
+ och 
+\begin_inset Formula $Y$
+\end_inset
+
+ är beroende
+\series default
+\color inherit
+.
+ 
 \end_layout
 
 \end_deeper
