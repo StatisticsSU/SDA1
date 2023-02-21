@@ -3,5 +3,5 @@ title: "Konfidensintervall för en andel - normalapproximation"
 format: html
 ---
 
-<iframe width="100%" height="688" frameborder="0"
-  src="https://observablehq.com/embed/fa3ac3f819ff567e@237?cells=viewof+settings%2Cviewof+nrep%2Ctextinfo%2Cplt"></iframe>
+<iframe width="100%" height="687" frameborder="0"
+  src="https://observablehq.com/embed/@mattiasvillani/konfidensintervall-for-en-andel?cells=viewof+settings%2Cviewof+nrep%2Ctextinfo%2Cplt"></iframe>

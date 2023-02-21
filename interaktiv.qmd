@@ -85,6 +85,12 @@ Extramaterial: till varje interaktiv graf finns en interaktiv/reaktiv notebook m
 **Samplingfördelning för en andel - ändlig population**<br>
 [widget](/observable/sampling_prop_finite_pop.qmd) | [notebook](https://observablehq.com/@mattiasvillani/samplingfordelning-for-andel-andlig_pop)
 
+**Stora talens lag - normalapproximation av en andel**<br>
+[widget](/observable/storatalenslag_bernoulli_normalapprox.qmd)
+
+**Konfidensintervall för en andel - normalapproximation**<br>
+[widget](/observable/konfidensintervall_andel.qmd)
+
 ### Föreläsning 18
 
 **Stora talens lag**: <br>
