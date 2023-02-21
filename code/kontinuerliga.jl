@@ -26,7 +26,7 @@ plot(xgrid[xgrid.>=(μ - 3*σ) .&& xgrid.<=(μ - 2*σ)],
     xticks = ([μ - 3*σ, μ - 2*σ, μ - 1*σ,μ, μ + 1*σ, μ + 2*σ, μ + 3*σ],
               [L"\mu-3\sigma",L"\mu-2\sigma",L"\mu-\sigma",L"\mu",
                     L"\mu+\sigma",L"\mu+2\sigma",L"\mu+3\sigma"]),
-    title = L"X\sim\mathrm{N}(\mu,\sigma^2)")
+    title = L"X\sim\mathrm{N}(\mu,\sigma)")
 
 plot!(xgrid[xgrid.>=(μ + 2*σ) .&& xgrid.<=(μ + 3*σ)],
     normaldens[xgrid.>=(μ + 2*σ) .&& xgrid.<=(μ + 3*σ)], color=colors[2],
@@ -110,7 +110,7 @@ cutoff = 5
 probLessThanCutOff = cdf(Normal(μ, σ), cutoff)
 plot(xgrid[xgrid.<=cutoff],normaldens[xgrid.<=cutoff], color=colors[2],
     fill=(0,opacity,colors[2]), label = nothing, yaxis = false,
-    title = L"X \sim \mathrm{N}(\mu=2,\sigma^2 = 9)")
+    title = L"X \sim \mathrm{N}(\mu=2,\sigma = 3)")
 
 plot!(xgrid, normaldens, color = colors[2], label = nothing,
     xlabel = L"x")
@@ -131,7 +131,7 @@ cutoff = (5 - 2)/3
 probLessThanCutOff = cdf(Normal(μ, σ), cutoff)
 plot(xgrid[xgrid.<=cutoff],normaldens[xgrid.<=cutoff], color=colors[2],
     fill=(0,opacity,colors[6]), label = nothing, yaxis = false,
-    title = L"Z \sim \mathrm{N}(\mu=0,\sigma^2 = 1)")
+    title = L"Z \sim \mathrm{N}(\mu=0,\sigma = 1)")
 
 plot!(xgrid, normaldens, color = colors[6], label = nothing,
     xlabel = L"z")
@@ -216,7 +216,7 @@ probInterval = cdf(Normal(μ, σ), cutoff2) - cdf(Normal(μ, σ), cutoff1)
 plot(xgrid[xgrid.>=cutoff1 .&& xgrid.<=cutoff2],
     normaldens[xgrid.>=cutoff1 .&& xgrid.<=cutoff2], color=colors[2],
     fill=(0,opacity,colors[2]), label = nothing, yaxis = false,
-    title = L"X\sim\mathrm{N}(\mu=2,\sigma^2 = 9)")
+    title = L"X\sim\mathrm{N}(\mu=2,\sigma = 3)")
 
 plot!(xgrid, normaldens, color = colors[2], label = nothing,
     xlabel = L"x")
@@ -239,7 +239,7 @@ probInterval = cdf(Normal(μ, σ), cutoff2) - cdf(Normal(μ, σ), cutoff1)
 plot(xgrid[xgrid.>=cutoff1 .&& xgrid.<=cutoff2],
     normaldens[xgrid.>=cutoff1 .&& xgrid.<=cutoff2], color=colors[6],
     fill=(0,opacity,colors[6]), label = nothing, yaxis = false,
-    title = L"Z\sim\mathrm{N}(\mu=0,\sigma^2 = 1)",
+    title = L"Z\sim\mathrm{N}(\mu=0,\sigma = 1)",
     xticks = round.([-4,-2,-2/3, 0, 1, 2, 4], digits = 2), xtickfontsize = 8)
 
 plot!(xgrid, normaldens, color = colors[6], label = nothing,

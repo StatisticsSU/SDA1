@@ -2203,7 +2203,7 @@ Normalfördelning
 \series default
 \color inherit
 , 
-\begin_inset Formula $X\sim N(\mu,\sigma^{2})$
+\begin_inset Formula $X\sim N(\mu,\sigma)$
 \end_inset
 
 
@@ -2227,8 +2227,8 @@ Väntevärde
 \end_layout
 
 \begin_layout Itemize
-Varians 
-\begin_inset Formula $Var(X)=\sigma^{2}$
+Standardavvikelse 
+\begin_inset Formula $SD(X)=\sigma$
 \end_inset
 
 
@@ -2251,10 +2251,10 @@ Parametrarna
 \end_inset
 
  och 
-\begin_inset Formula $\sigma^{2}$
+\begin_inset Formula $\sigma$
 \end_inset
 
- är just väntevärdet och variansen!
+ är just väntevärdet och standardavvikelsen!
 \begin_inset VSpace smallskip
 \end_inset
 
@@ -3057,7 +3057,7 @@ end{tcolorbox}
 \begin_layout Itemize
 
 \size small
-\begin_inset Formula $E(0.7\cdot X)=0.7\cdot E(X)=0.7\cdot3252=2276.4\text{ kr}$
+\begin_inset Formula $E(Y)=E(0.7\cdot X)=0.7\cdot E(X)=0.7\cdot3252=2276.4\text{ kr}$
 \end_inset
 
 
@@ -3066,7 +3066,7 @@ end{tcolorbox}
 \begin_layout Itemize
 
 \size small
-\begin_inset Formula $SD(0.7\cdot X)=\left|0.7\right|\cdot SD(X)=0.7\cdot982.63\approx687.84\text{ kr}$
+\begin_inset Formula $SD(Y)=SD(0.7\cdot X)=\left|0.7\right|\cdot SD(X)=0.7\cdot982.63\approx687.84\text{ kr}$
 \end_inset
 
 

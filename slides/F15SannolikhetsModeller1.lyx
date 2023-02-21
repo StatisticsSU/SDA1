@@ -3192,14 +3192,14 @@ Normalfördelning
 
 \begin_deeper
 \begin_layout Itemize
-\begin_inset Formula $X\sim N(\mu,\sigma^{2})$
+\begin_inset Formula $X\sim N(\mu,\sigma)$
 \end_inset
 
 
 \begin_inset Formula 
 \begin{align*}
 E(X) & =\mu\\
-Var(X) & =\sigma^{2}
+SD(X) & =\sigma
 \end{align*}
 
 \end_inset
@@ -3277,7 +3277,7 @@ Standardisering
 
 \begin_inset Formula 
 \[
-X\sim N(\mu,\sigma^{2})\Rightarrow Z=\frac{X-\mu}{\sigma}\sim N(0,1)
+X\sim N(\mu,\sigma)\Rightarrow Z=\frac{X-\mu}{\sigma}\sim N(0,1)
 \]
 
 \end_inset
@@ -3293,7 +3293,7 @@ Sannolikhet via standardisering
 \series default
 \color inherit
  för 
-\begin_inset Formula $X\sim N(2,3^{2})$
+\begin_inset Formula $X\sim N(2,3)$
 \end_inset
 
 
@@ -3502,7 +3502,7 @@ Sannolikhet via standardisering
 \series default
 \color inherit
  för 
-\begin_inset Formula $X\sim N(2,3^{2})$
+\begin_inset Formula $X\sim N(2,3)$
 \end_inset
 
 
@@ -3687,7 +3687,7 @@ operatorname{N}(
 \backslash
 mu, 
 \backslash
-sigma^2)$ och $Y = c + a X$ så gäller
+sigma)$ och $Y = c + a X$ så gäller
 \end_layout
 
 \begin_layout Plain Layout
@@ -3700,9 +3700,13 @@ operatorname{N}(c + a
 \backslash
 mu,
 \backslash
-, a^2
+, 
 \backslash
-sigma^2)$$
+vert a 
+\backslash
+vert 
+\backslash
+sigma)$$
 \end_layout
 
 \begin_layout Plain Layout
@@ -3758,7 +3762,7 @@ operatorname{N}(
 \backslash
 mu_X, 
 \backslash
-sigma_X^2)$ och $Y 
+sigma_X)$ och $Y 
 \backslash
 sim 
 \backslash
@@ -3766,7 +3770,7 @@ operatorname{N}(
 \backslash
 mu_Y, 
 \backslash
-sigma_Y^2)$ är oberoende slumpvariabler så är även summan normalfördelad:
+sigma_Y)$ är oberoende slumpvariabler så är även summan normalfördelad:
 \end_layout
 
 \begin_layout Plain Layout
@@ -3783,9 +3787,11 @@ mu_Y,
 \backslash
 , 
 \backslash
+sqrt{
+\backslash
 sigma_X^2 + 
 \backslash
-sigma_Y^2)$$
+sigma_Y^2})$$
 \end_layout
 
 \begin_layout Plain Layout
@@ -3880,7 +3886,7 @@ E(X)=\mu=np
  och 
 \begin_inset Formula 
 \[
-Var(X)=\sigma^{2}=npq
+SD(X)=\sigma=\sqrt{npq}
 \]
 
 \end_inset
@@ -3902,7 +3908,7 @@ Normalapproximation
  av binomialfördelning 
 \begin_inset Formula 
 \[
-X\overset{\mathrm{approx}}{\sim}N(np,npq)
+X\overset{\mathrm{approx}}{\sim}N(np,\sqrt{npq})
 \]
 
 \end_inset
