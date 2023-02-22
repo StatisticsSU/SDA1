@@ -958,7 +958,7 @@ Lyckas = ham
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $P(\text{spam})=q=1-0.9$
+\begin_inset Formula $P(\text{spam})=q=1-0.1=0.9$
 \end_inset
 
 .
@@ -1944,7 +1944,7 @@ emoji{face-screaming-in-fear}
 
 \begin_inset Formula 
 \[
-E(X)=\sum_{x=0}^{n}(x-\mu)^{2}\cdot P(x)
+Var(X)=\sum_{x=0}^{n}(x-\mu)^{2}\cdot P(x)
 \]
 
 \end_inset
