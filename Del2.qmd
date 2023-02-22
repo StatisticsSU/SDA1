@@ -31,7 +31,7 @@ Interaktivt: [bernoullifördelning]([widget](/observable/bernoullifordelningen.q
 Kod: [geometric.R](/code/geometric.R)
 
 **Föreläsning 16 - Sannolikhetsmodeller för kontinuerliga slumpvariabler**\
-Läs: SDM Kapitel 5.3, 14.4, 15.7 \| [Slides](/slides/F16KontinuerligaSannolikhetsmodeller2.pdf)\
+Läs: SDM Kapitel 5.3, 14.4, 15.7 \| [Slides](/slides/F16KontinuerligaSannolikhetsmodeller.pdf)\
 Interaktivt: [Poissonfördelningen](/observable/poissonfordelningen.qmd) \| [maximum likelihood - Poisson](/observable/ml_poisson.qmd) \| [exponential](/observable/exponentialfordelningen.qmd) \| [student-t](/observable/studentt.qmd) \| [allmän student-t](/observable/studentt_allman.qmd)\
 Kod: [exponential.R](/code/exponential.R)\
 Extramaterial: [Notebook - student-t](https://observablehq.com/@mattiasvillani/student-t) 
@@ -56,7 +56,8 @@ Läs: SDM Kapitel 21.1, 21.2, 22.1 \| [Slides](/misc/larry.png)\
 Interaktivt: [chi2-fördelningen](/observable/chi2fordelningen.qmd)
 
 **Föreläsning 22 - Inferens i multipel regression.**\
-Läs: SDM Kapitel 23 \| [Slides](/misc/larry.png)
+Läs: SDM Kapitel 23 \| [Slides](/misc/larry.png)\
+Interaktivt: [samplingfördelning regression](/observable/linreg_simple_samping_dist.qmd)
 
 **Videoföreläsning - Maximum likelihood och Bayesiansk inferens.**\
 Läs: [Slides](/misc/larry.png)\

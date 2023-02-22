@@ -104,6 +104,11 @@ Extramaterial: till varje interaktiv graf finns en interaktiv/reaktiv notebook m
 **Chi2-fördelning**: <br>
 [widget](/observable/chi2fordelningen.qmd)
 
+### Föreläsning 22
+
+**samplingfördelning regression** <br>
+[widget](/observable/linreg_simple_samping_dist.qmd) | [notebook](https://observablehq.com/@mattiasvillani/samplingfordelningen-linear-regression)
+
 ### Videoföreläsning
 
 **Beta-fördelning**: <br>
