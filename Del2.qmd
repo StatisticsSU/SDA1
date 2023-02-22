@@ -57,7 +57,7 @@ Interaktivt: [chi2-fördelningen](/observable/chi2fordelningen.qmd)
 
 **Föreläsning 22 - Inferens i multipel regression.**\
 Läs: SDM Kapitel 23 \| [Slides](/misc/larry.png)\
-Interaktivt: [samplingfördelning regression](/observable/linreg_simple_samping_dist.qmd)
+Interaktivt: [samplingfördelning regression](/observable/linreg_simple_sampling_dist.qmd)
 
 **Videoföreläsning - Maximum likelihood och Bayesiansk inferens.**\
 Läs: [Slides](/misc/larry.png)\
