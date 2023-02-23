@@ -49,16 +49,16 @@ Kod: [confidence_intervals_salmon.R](/code/confidence_intervals_salmon.R)
 **Föreläsning 19 - Hypotestest.**\
 Läs: SDM Kapitel 18 \| [Slides](/misc/larry.png)
 
-**Föreläsning 20 - Hypotestest och jämföra grupper.**\
-Läs: SDM Kapitel 19, 20.4, 20.5 \| [Slides](/misc/larry.png)
-
-**Föreläsning 21 - Jämföra grupper och** $\chi^2$-test.\
-Läs: SDM Kapitel 21.1, 21.2, 22.1 \| [Slides](/misc/larry.png)\
-Interaktivt: [chi2-fördelningen](/observable/chi2fordelningen.qmd)
-
-**Föreläsning 22 - Inferens i multipel regression.**\
+**Föreläsning 20 - Inferens i multipel regression.**\
 Läs: SDM Kapitel 23 \| [Slides](/misc/larry.png)\
 Interaktivt: [samplingfördelning regression](/observable/linreg_simple_sampling_dist.qmd)
+
+**Föreläsning 21 - Hypotestest och jämföra grupper.**\
+Läs: SDM Kapitel 19, 20.4, 20.5 \| [Slides](/misc/larry.png)
+
+**Föreläsning 22 - Jämföra grupper och** $\chi^2$-test.\
+Läs: SDM Kapitel 21.1, 21.2, 22.1 \| [Slides](/misc/larry.png)\
+Interaktivt: [chi2-fördelningen](/observable/chi2fordelningen.qmd)
 
 **Videoföreläsning - Maximum likelihood och Bayesiansk inferens.**\
 Läs: [Slides](/misc/larry.png)\
@@ -68,7 +68,7 @@ Extramaterial: [notebook - matematisk härledning av maximum likelihood skattnin
 **Föreläsning 23 - Optimala beslut under osäkerhet.**\
 Läs: [Slides](/misc/larry.png)
 
-**Föreläsning 24 - Sammanfattning.**\
+**Föreläsning 24 - Sammanfattning och räkning av övningstenta.**\
 Läs: [Slides](/misc/larry.png)
 
 ### **Räkneövningar**
