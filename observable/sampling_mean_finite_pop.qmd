@@ -1,0 +1,7 @@
+---
+title: "Samplingfördelning - medelvärde i en ändlig population"
+format: html
+---
+
+<iframe width="100%" height="1023" frameborder="0"
+  src="https://observablehq.com/embed/@mattiasvillani/samplingfordelning-for-ett-medelvarde-andlig-population@1511?cells=plt_hist_pop%2Cviewof+settings%2Cplt"></iframe>

@@ -72,14 +72,14 @@ plot!(xgrid[xgrid.<=cutoff1],tdens[xgrid.<=cutoff1], color=colors[2],
 
 plot!(xgrid, tdens, color = colors[2], label = nothing)
 
-annotate!(cutoff1 +0.4, -0.05, 
-    text(L"-t_\alpha", :black, :right, 28))
+annotate!(cutoff1 +0.8, -0.05, 
+    text(L"-t_{\alpha/2}", :black, :right, 28))
 annotate!(-2.8, 0.09, 
     text(L"\alpha/2", :black, :right, 26))
 plot!([-3.1,-2.5], [0.055,0.015], arrow = true, lw = 2, color = :black)
 
-annotate!(cutoff2 +0.4, -0.05, 
-    text(L"t_\alpha", :black, :right, 28))
+annotate!(cutoff2 +0.8, -0.05, 
+    text(L"t_{\alpha/2}", :black, :right, 28))
 annotate!(3.9, 0.09, 
     text(L"\alpha/2", :black, :right, 26))
 plot!([3.1, 2.5], [0.055,0.015], arrow = true, lw = 2, color = :black)
