@@ -41,9 +41,10 @@ Läs: SDM Kapitel 16.1-16.5 | [Slides](/slides/F17KI4prop.pdf)\
 Interaktivt: [samplingfördelning - liten ändlig population](/observable/sampling_finite_pop.qmd) | [stora talens lag - normalapproximation för en andel](/observable/storatalenslag_bernoulli_normalapprox.qmd) | [samplingfördelning för andel - ändlig population](/observable/sampling_prop_finite_pop.qmd) | [konfidensintervall för en andel](/observable/konfidensintervall_andel.qmd)
 
 **Föreläsning 18 - Konfidensintervall för ett väntevärde. Stora talens lag. Centrala gränsvärdessatsen.**\
-Läs: SDM Kapitel 17 \| [Slides](/misc/larry.png)\
+Läs: SDM Kapitel 17 \| [Slides](/slides/F18KI4mean.pdf)\
 Interaktivt: [stora talens lag](/observable/storatalenslag.qmd) \| [centrala gränsvärdessatsen](/observable/cgs.qmd)\
-Extramaterial: [Notebook - stora talens lag](https://observablehq.com/@mattiasvillani/stora-talens-lag) \| [Notebook - centrala gränsvärdessatsen](https://observablehq.com/@mattiasvillani/cgs)
+Extramaterial: [Notebook - stora talens lag](https://observablehq.com/@mattiasvillani/stora-talens-lag) \| [Notebook - centrala gränsvärdessatsen](https://observablehq.com/@mattiasvillani/cgs)\
+Kod: [confidence_intervals_salmon.R](/code/confidence_intervals_salmon.R)
 
 **Föreläsning 19 - Hypotestest.**\
 Läs: SDM Kapitel 18 \| [Slides](/misc/larry.png)
