@@ -2757,7 +2757,7 @@ hat p)$$
 
 \begin_layout Plain Layout
 
-$$SE(
+där $$SE(
 \backslash
 hat p)=
 \backslash
@@ -2842,19 +2842,11 @@ SDM-boken:
 \end_inset
 
 .
- 
-\begin_inset Newline newline
+ Och ofta avrundar de 
+\begin_inset Formula $z_{\alpha}$
 \end_inset
 
-SDM-boken avrundar också ofta 
-\begin_inset Formula $z_{0.025}=1.96$
-\end_inset
 
- till 
-\begin_inset Formula $z^{*}=2$
-\end_inset
-
-.
 \end_layout
 
 \end_deeper
@@ -2933,16 +2925,15 @@ vilket ger intervallet
 \end_layout
 
 \begin_layout Itemize
-Intervallet 
+Med 95% säkerhet/konfidens täcker intervallet 
 \begin_inset Formula $(0.355,0.387)$
 \end_inset
 
- innehåller andelen S-röstare, 
+ andelen S-röstare i p, 
 \begin_inset Formula $p$
 \end_inset
 
-, med 95% säkerhet.
- Men kom ihåg vad detta faktiskt betyder! 
+.
 \end_layout
 
 \begin_layout Itemize

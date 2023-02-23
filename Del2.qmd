@@ -37,7 +37,7 @@ Kod: [exponential.R](/code/exponential.R)\
 Extramaterial: [Notebook - student-t](https://observablehq.com/@mattiasvillani/student-t) 
 
 **Föreläsning 17 - Samplingfördelningar och konfidensintervall för en andel.**\
-Läs: SDM Kapitel 16.1-16.5 | [Slides](/misc/larry.png)\
+Läs: SDM Kapitel 16.1-16.5 | [Slides](/slides/F17KI4prop.pdf)\
 Interaktivt: [samplingfördelning - liten ändlig population](/observable/sampling_finite_pop.qmd) | [stora talens lag - normalapproximation för en andel](/observable/storatalenslag_bernoulli_normalapprox.qmd) | [samplingfördelning för andel - ändlig population](/observable/sampling_prop_finite_pop.qmd) | [konfidensintervall för en andel](/observable/konfidensintervall_andel.qmd)
 
 **Föreläsning 18 - Konfidensintervall för ett väntevärde. Stora talens lag. Centrala gränsvärdessatsen.**\

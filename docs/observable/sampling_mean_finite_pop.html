@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>SDA1 - Del II - Sannolikhetsmodeller och Inferens, 7.5 hp</title>
+<title>SDA1 - Samplingfördelning - medelvärde i en ändlig population</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,25 +23,25 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href=".//misc/favicons/favicon.ico" rel="icon">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="..//misc/favicons/favicon.ico" rel="icon">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -62,9 +62,8 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="nav-fixed">
@@ -74,10 +73,10 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./misc/SU_logo_small.png" alt="" class="navbar-logo">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../misc/SU_logo_small.png" alt="" class="navbar-logo">
     </a>
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">SDA1</span>
     </a>
   </div>
@@ -87,19 +86,19 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html">
+    <a class="nav-link" href="../index.html">
  <span class="menu-text">Översikt</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./Del1.html">
+    <a class="nav-link" href="../Del1.html">
  <span class="menu-text">Del 1 - Dataanalys och regression</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./Del2.html" aria-current="page">
+    <a class="nav-link" href="../Del2.html">
  <span class="menu-text">Del 2 - Sannolikhetsmodeller och inferens</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./R.html">
+    <a class="nav-link" href="../R.html">
  <span class="menu-text">R</span></a>
   </li>  
 </ul>
@@ -116,22 +115,14 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Avsnitt på sidan</h2>
-   
-  <ul>
-  <li><a href="#föreläsningar" id="toc-föreläsningar" class="nav-link active" data-scroll-target="#föreläsningar"><strong>Föreläsningar</strong></a></li>
-  <li><a href="#räkneövningar" id="toc-räkneövningar" class="nav-link" data-scroll-target="#räkneövningar"><strong>Räkneövningar</strong></a></li>
-  <li><a href="#datorlaborationer" id="toc-datorlaborationer" class="nav-link" data-scroll-target="#datorlaborationer"><strong>Datorlaborationer</strong></a></li>
-  </ul>
-</nav>
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Del II - Sannolikhetsmodeller och Inferens, 7.5 hp</h1>
+<h1 class="title">Samplingfördelning - medelvärde i en ändlig population</h1>
 </div>
 
 
@@ -146,92 +137,10 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<blockquote class="blockquote">
-<p>I kursens andra momentet behandlas inledningsvis sannolikheter, slumpvariabler och sannolikhetsfördelningar. En central del i momentet är inferens, dvs. statistiska metoder för att dra slutsatser om olika fenomen från data, bl a samband från regressionsanalys. Kursen avslutas med en introduktion till beslutsfattade under osäkerhet.</p>
-</blockquote>
-<p>Förkortningen <strong>SDM</strong> står för kursboken <a href="https://nordics.pearson.com/products/stats-data-and-models-5th-global-edition-e-book?variant=42945920630933">Stats: Data and Models</a> 5:e upplagan, global edition.</p>
-<p>Under vissa föreläsningar länkar vi till <code>Extramaterial</code>. Det är material som inte krävs för att klara kursen, men som den nyfikne kan läsa för att få en djupare förståelse.</p>
-<section id="föreläsningar" class="level3">
-<h3 class="anchored" data-anchor-id="föreläsningar"><strong>Föreläsningar</strong></h3>
-<p><strong>Föreläsning 12 - Osäkerhet och Sannolikhet.</strong><br>
-Läs: SDM Kapitel 12 och 13 | <a href="./slides/F12Sannolikhet.pdf">Slides</a><br>
-Interaktivt: <a href="./observable/storatalenslag_bernoulli.html">slantsingling</a><br>
-Extramaterial: <a href="https://youtu.be/0m5bg2hpHNw">TedTalk om sannolikheter</a></p>
-<p><strong>Föreläsning 13 - Betingade sannolikheter och Bayes sats.</strong><br>
-Läs: SDM Kapitel 13 | <a href="./slides/F13BetingadeSlhBayesSats.pdf">Slides</a><br>
-Interaktivt: <a href="./observable/bayestheorem.html">bayessats</a><br>
-Extramaterial: <a href="https://www.varsity.co.uk/science/21149">Artikel om Bayes sats och snabbtest för Covid-19</a></p>
-<p><strong>Föreläsning 14 - Slumpvariabler och deras egenskaper.</strong><br>
-Läs: SDM Kapitel 14 | <a href="./slides/F14Slumpvariabler.pdf">Slides</a><br>
-Interaktivt: <a href="./observable/normalfordelningen.html">normalfördelningen</a></p>
-<p><strong>Föreläsning 15 - Sannolikhetsmodeller för diskreta slumpvariabler</strong><br>
-Läs: SDM Kapitel 15.1, 15.2, 15.3, 15.6 | <a href="./slides/F15DiskretaSannolikhetsmodeller.pdf">Slides</a><br>
-Interaktivt: <a href="[widget](/observable/bernoullifordelningen.qmd)">bernoullifördelning</a> | <a href="./observable/geometriskfordelning.html">geometrisk fördelning</a> | <a href="./observable/binomialfordelningen.html">binomialfördelningen</a> | <a href="./observable/uniformfordelning.html">likformig</a> | <a href="./observable/normalfordelningen.html">normalfördelning</a><br>
-Kod: <a href="./code/geometric.R">geometric.R</a></p>
-<p><strong>Föreläsning 16 - Sannolikhetsmodeller för kontinuerliga slumpvariabler</strong><br>
-Läs: SDM Kapitel 5.3, 14.4, 15.7 | <a href="./slides/F16KontinuerligaSannolikhetsmodeller.pdf">Slides</a><br>
-Interaktivt: <a href="./observable/poissonfordelningen.html">Poissonfördelningen</a> | <a href="./observable/ml_poisson.html">maximum likelihood - Poisson</a> | <a href="./observable/exponentialfordelningen.html">exponential</a> | <a href="./observable/studentt.html">student-t</a> | <a href="./observable/studentt_allman.html">allmän student-t</a><br>
-Kod: <a href="./code/exponential.R">exponential.R</a><br>
-Extramaterial: <a href="https://observablehq.com/@mattiasvillani/student-t">Notebook - student-t</a></p>
-<p><strong>Föreläsning 17 - Samplingfördelningar och konfidensintervall för en andel.</strong><br>
-Läs: SDM Kapitel 16.1-16.5 | <a href="./slides/F17KI4prop.pdf">Slides</a><br>
-Interaktivt: <a href="./observable/sampling_finite_pop.html">samplingfördelning - liten ändlig population</a> | <a href="./observable/storatalenslag_bernoulli_normalapprox.html">stora talens lag - normalapproximation för en andel</a> | <a href="./observable/sampling_prop_finite_pop.html">samplingfördelning för andel - ändlig population</a> | <a href="./observable/konfidensintervall_andel.html">konfidensintervall för en andel</a></p>
-<p><strong>Föreläsning 18 - Konfidensintervall för ett väntevärde. Stora talens lag. Centrala gränsvärdessatsen.</strong><br>
-Läs: SDM Kapitel 17 | <a href="./misc/larry.png">Slides</a><br>
-Interaktivt: <a href="./observable/storatalenslag.html">stora talens lag</a> | <a href="./observable/cgs.html">centrala gränsvärdessatsen</a><br>
-Extramaterial: <a href="https://observablehq.com/@mattiasvillani/stora-talens-lag">Notebook - stora talens lag</a> | <a href="https://observablehq.com/@mattiasvillani/cgs">Notebook - centrala gränsvärdessatsen</a></p>
-<p><strong>Föreläsning 19 - Hypotestest.</strong><br>
-Läs: SDM Kapitel 18 | <a href="./misc/larry.png">Slides</a></p>
-<p><strong>Föreläsning 20 - Hypotestest och jämföra grupper.</strong><br>
-Läs: SDM Kapitel 19, 20.4, 20.5 | <a href="./misc/larry.png">Slides</a></p>
-<p><strong>Föreläsning 21 - Jämföra grupper och</strong> <span class="math inline">\(\chi^2\)</span>-test.<br>
-Läs: SDM Kapitel 21.1, 21.2, 22.1 | <a href="./misc/larry.png">Slides</a><br>
-Interaktivt: <a href="./observable/chi2fordelningen.html">chi2-fördelningen</a></p>
-<p><strong>Föreläsning 22 - Inferens i multipel regression.</strong><br>
-Läs: SDM Kapitel 23 | <a href="./misc/larry.png">Slides</a><br>
-Interaktivt: <a href="./observable/linreg_simple_sampling_dist.html">samplingfördelning regression</a></p>
-<p><strong>Videoföreläsning - Maximum likelihood och Bayesiansk inferens.</strong><br>
-Läs: <a href="./misc/larry.png">Slides</a><br>
-Interaktivt: <a href="./observable/ml_poisson.html">maximum likelihood - Poisson</a> | <a href="./observable/betafordelningen.html">betafördelningen</a><br>
-Extramaterial: <a href="https://observablehq.com/@mattiasvillani/maximum-likelihood-poissonmodellen">notebook - matematisk härledning av maximum likelihood skattningen i Poissonmodellen</a></p>
-<p><strong>Föreläsning 23 - Optimala beslut under osäkerhet.</strong><br>
-Läs: <a href="./misc/larry.png">Slides</a></p>
-<p><strong>Föreläsning 24 - Sammanfattning.</strong><br>
-Läs: <a href="./misc/larry.png">Slides</a></p>
-</section>
-<section id="räkneövningar" class="level3">
-<h3 class="anchored" data-anchor-id="räkneövningar"><strong>Räkneövningar</strong></h3>
-<p>Övningarna i kursboken <a href="https://nordics.pearson.com/products/stats-data-and-models-5th-global-edition-e-book?variant=42945920630933">Stats: Data and Models (SDM)</a> hänvisas till med kapitelnummer följt av övningsnummer.</p>
-<p><strong>Övning 7 - Sannolikheter för händelser. Kombinatorik.</strong><br>
-Uppgifter: SDM 12.2, 12.5, 12.7, 12.9, 12.12, 12.16, 12.21, 12.27, 12.29, 12.31, 12.34, 12.36, 12.39, 12.41, 12.49, 12.52.</p>
-<p><strong>Övning 8 - Oberoende händelser. Betingning och Bayes sats.</strong><br>
-Uppgifter: SDM 13.1, 13.5, 13.7, 13.10, 13.12, 13.14, 13.18, 13.21, 13.24, 13.31, 13.47, 13.49.</p>
-<p><strong>Övning 9 - Slumpvariabler, väntevärde och standardavvikelse.</strong><br>
-Uppgifter: SDM 14.1, 14.3, 14.9a, 14.11, 14.13, 14.21, 14.26, 14.33, 14.36, 14.43, 14.54.</p>
-<p><strong>Övning 10 - Sannolikhetsmodeller I.</strong><br>
-Uppgifter: SDM 15.1, 15.3, 15.5, 15.18, 15.19, 15.21, 15.28, 15.29, 15.31, 15.41, 15.45.</p>
-<p><strong>Övning 11 - Sannolikhetsmodeller II.</strong><br>
-Uppgifter: SDM 15.7, 15.11, 15.12, 15.49, 15.59, 15.60, 15.61, 15.62.</p>
-<p><strong>Övning 12 - Konfidensintervall.</strong><br>
-Uppgifter: SDM 16.2, 16.3, 16.5, 16.7, 16.14, 16.16, 16.27a-c), 16.31.</p>
-<p><strong>Övning 13 - Hypotestest.</strong><br>
-Uppgifter: SDM 18, 19.</p>
-<p><strong>Övning 14 - Jämföra grupper och chi2-test.</strong><br>
-Uppgifter: SDM 20, 21, 22.</p>
-<p><strong>Övning 15 - Inferens för regression.</strong><br>
-Uppgifter: SDM 23</p>
-</section>
-<section id="datorlaborationer" class="level3">
-<h3 class="anchored" data-anchor-id="datorlaborationer"><strong>Datorlaborationer</strong></h3>
-<p><strong>Datorlaboration 5 - Räkna med fördelningar i R. Simulering.</strong><br>
-Uppgifter: <a href="./datorlab/lab5/DatorLab5.html">html</a> | <a href="https://github.com/StatisticsSU/SDA1/raw/main/datorlab/lab5/DatorLab5.qmd" download="">quarto</a></p>
-<p><strong>Datorlaboration 6 - Samplingfördelningar, standardfel och konfidensintervall.</strong><br>
-Uppgifter: <a href="./misc/larry.png">Datorlab 6</a></p>
-<p><strong>Datorlaboration 7 - Multipel linjär regression - inferens.</strong><br>
-Uppgifter: <a href="./misc/larry.png">Datorlab 7</a></p>
+<iframe width="100%" height="1023" frameborder="0" src="https://observablehq.com/embed/@mattiasvillani/samplingfordelning-for-ett-medelvarde-andlig-population@1511?cells=plt_hist_pop%2Cviewof+settings%2Cplt">
+</iframe>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
