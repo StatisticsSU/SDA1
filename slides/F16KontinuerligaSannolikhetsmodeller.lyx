@@ -1250,38 +1250,12 @@ Poissonfördelningen
 räknedata
 \series default
 \color inherit
- (antal):
+ (antal).
 \end_layout
 
-\begin_deeper
-\begin_layout Itemize
-antal buggar i en mjukvara
-\begin_inset VSpace smallskip
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-antal budgivare i en eBay auktion
-\begin_inset VSpace smallskip
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-antal besök till läkaren
-\begin_inset VSpace medskip
-\end_inset
-
-
-\end_layout
-
-\end_deeper
 \begin_layout Itemize
 Om 
-\begin_inset Formula $X\sim\mathrm{Pois}(\lambda)$
+\begin_inset Formula $X\sim\mathrm{Poisson}(\lambda)$
 \end_inset
 
  så 
@@ -1331,6 +1305,36 @@ Var(X) & =\lambda
 
 \end_layout
 
+\begin_layout Itemize
+Exempel:
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+antal buggar i en mjukvara
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+antal budgivare i en eBay auktion
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+antal besök till läkaren
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Standard
 \begin_inset Separator parbreak
@@ -2433,7 +2437,7 @@ t
 \color inherit
  
 \emph default
-fördelning alltmer lik normalfördelning när 
+fördelning blir alltmer lik normal när 
 \begin_inset Formula $\nu$
 \end_inset
 
@@ -2633,36 +2637,6 @@ t
 \end_layout
 
 \begin_deeper
-\begin_layout Itemize
-Student-
-\begin_inset Formula $t$
-\end_inset
-
- fördelningen kommer visa sig viktig för inferens för väntevärdet 
-\begin_inset Formula $\mu$
-\end_inset
-
- i en normalpopulation.
- F18.
-\begin_inset VSpace medskip
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-Student-
-\begin_inset Formula $t$
-\end_inset
-
- är en bra modell för data med extremvärden.
- 
-\begin_inset VSpace medskip
-\end_inset
-
-
-\end_layout
-
 \begin_layout Itemize
 Daglig avkastning Ericsson B aktie under hela år 2022.
  

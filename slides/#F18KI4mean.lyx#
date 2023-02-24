@@ -302,6 +302,19 @@ Konfidensintervall för ett väntevärde
 \series bold
 \color blue
 Centrala gränsvärdessatsen och stora talens lag
+\color inherit
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color blue
+Samplingfördelningen via bootstrap
 \end_layout
 
 \end_deeper
@@ -546,8 +559,8 @@ skalad
 
 \begin_inset Formula 
 \begin{align*}
-E(\bar{X}) & =E\left(\frac{1}{n}\sum_{i=1}^{n}X_{i}\right)\overset{\mathrm{skalning}}{=}\frac{1}{n}E\left(\sum_{i=1}^{n}X_{i}\right)\overset{\mathrm{summa}}{=}\frac{1}{n}\left(\sum_{i=1}^{n}E(X_{i})\right)\\
- & \overset{\mathrm{modell}}{=}\frac{1}{n}\left(\sum_{i=1}^{n}\mu\right)\overset{\mathrm{samma}\,\mathrm{termer}}{=}\frac{1}{n}\left(n\mu\right)=\mu
+E((\bar{X}) & =E\left(\frac{1}{n}\sum_{i=1}^{n}X_{i}\right)\overset{\mathrm{skalning}}{=}\frac{1}{n}E\left(\sum_{i=1}^{n}X_{i}\right)\overset{\mathrm{summa}}{=}\frac{1}{n}\left(\sum_{i=1}^{n}E(X_{i})\right)\\
+ & =\frac{1}{n}\left(\sum_{i=1}^{n}\mu\right)\overset{\mathrm{samma}\,\mathrm{termer}}{=}\frac{1}{n}\left(n\mu\right)=\mu
 \end{align*}
 
 \end_inset
@@ -568,7 +581,7 @@ Varians/Standardavvikelse
 \begin_inset Formula 
 \begin{align*}
 Var(\bar{X}) & =Var\left(\frac{1}{n}\sum_{i=1}^{n}X_{i}\right)\overset{\mathrm{skalning}}{=}\left(\frac{1}{n}\right)^{2}Var\left(\sum_{i=1}^{n}X_{i}\right)\overset{\mathrm{summa}}{=}\frac{1}{n^{2}}\left(\sum_{i=1}^{n}Var(X_{i})\right)\\
- & \overset{\mathrm{modell}}{=}\frac{1}{n^{2}}\left(\sum_{i=1}^{n}\sigma^{2}\right)\overset{\mathrm{samma}\mathrm{\,termer}}{=}\frac{1}{n^{2}}\left(n\sigma^{2}\right)=\frac{\sigma^{2}}{n}
+ & =\frac{1}{n^{2}}\left(\sum_{i=1}^{n}\sigma^{2}\right)\overset{\mathrm{samma}\mathrm{\,termer}}{=}\frac{1}{n^{2}}\left(n\sigma^{2}\right)=\frac{\sigma^{2}}{n}
 \end{align*}
 
 \end_inset
@@ -771,7 +784,6 @@ skatta
 
  med stickprovsvariansen
 \series default
-\size footnotesize
 \color inherit
 
 \begin_inset Formula 
@@ -784,95 +796,12 @@ s^{2}=\frac{\sum_{i=1}^{n}(x_{i}-\bar{x})^{2}}{n-1}
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset Box Frameless
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "87col%"
-special "none"
-height "1in"
-height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
-status open
-
 \begin_layout Itemize
-Varför 
+Varför dividerar vi med 
 \begin_inset Formula $n-1$
 \end_inset
 
-? För att 
-\series bold
-\color blue
-
-\begin_inset Formula $s^{2}$
-\end_inset
-
- är väntevärdesriktig för 
-\begin_inset Formula $\sigma^{2}$
-\end_inset
-
-
-\series default
-\color inherit
-
-\begin_inset Formula 
-\[
-E(s^{2})=\sigma^{2}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset Box Frameless
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "b"
-use_parbox 0
-use_makebox 0
-width "12col%"
-special "none"
-height "1in"
-height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
-status open
-
-\begin_layout Plain Layout
-\begin_inset space \hspace{}
-\length 1cm
-\end_inset
-
-
-\begin_inset Graphics
-	filename figs/Bias_variance_bullseye_simpler.pdf
-	lyxscale 20
-	scale 18
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
+? 
 \end_layout
 
 \begin_layout Itemize
@@ -1049,7 +978,7 @@ Z=\frac{\bar{X}-\mu}{\frac{\sigma}{\sqrt{n}}}\sim N\left(0,1\right)
 Om
 \series bold
 \color blue
- okänd 
+ 
 \begin_inset Formula $\sigma$
 \end_inset
 
@@ -1060,20 +989,10 @@ Om
 
 \series default
 \color inherit
- 
+ är 
 \series bold
 \color blue
-skattas
-\series default
-\color inherit
- med 
-\begin_inset Formula $s^{2}$
-\end_inset
-
-
-\series bold
-\color blue
- 
+okänd 
 \series default
 \color inherit
 är 
@@ -1102,8 +1021,11 @@ T=\frac{\bar{X}-\mu}{\frac{\textcolor{orange}{s}}{\sqrt{n}}}\sim t_{n-1}
 \end_layout
 
 \begin_layout Itemize
-Alltså: när standardavvikelsen i populationen måste skattas får den standardiser
-ade 
+Alltså: när standardavvikelsen i populationen skattas med 
+\begin_inset Formula $s$
+\end_inset
+
+ får den standardiserade 
 \begin_inset Formula $\bar{X}$
 \end_inset
 
@@ -1199,8 +1121,7 @@ status open
 
 \series bold
 \color orange
-K.I.
- väntevärde - normalpopulation, okänd varians
+KI väntevärde - normalpopulation med okänd varians
 \end_layout
 
 \end_inset
@@ -1511,7 +1432,9 @@ Normalfördelad population?
 \begin_inset Graphics
 	filename figs/SalmonEasternCanadaHist.pdf
 	lyxscale 40
-	scale 25
+	scale 20
+	BoundingBox 0cm 32cm 1212bp 1730bp
+	clip
 
 \end_inset
 
@@ -1519,17 +1442,13 @@ Normalfördelad population?
 \begin_inset Graphics
 	filename figs/SalmonEasternCanadaBoxplot.pdf
 	lyxscale 40
-	scale 25
+	scale 10
+	BoundingBox 0cm 32cm 1212bp 1730bp
+	clip
 
 \end_inset
 
 
-\end_layout
-
-\begin_layout Itemize
-Svårt se med få observationer.
- Histogram ok.
- Inga outliers.
 \end_layout
 
 \end_deeper
@@ -2219,43 +2138,6 @@ literal "true"
 
 \end_layout
 
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\begin_layout Standard
-\begin_inset Separator parbreak
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-
-\series bold
-\color orange
-Tre olika sitationer
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Normalpopulation med känd varians 
-\begin_inset Formula $\sigma^{2}$
-\end_inset
-
-: 
-\begin_inset Formula $\bar{x}\pm z_{\alpa}$
 \end_inset
 
 
