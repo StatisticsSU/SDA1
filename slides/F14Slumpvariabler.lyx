@@ -3948,7 +3948,7 @@ begin{tcolorbox}[colback=verylightgray]
 \backslash
 textcolor{blue}{
 \backslash
-textbf{Väntevärde - summa av 
+textbf{Varians - summa av 
 \backslash
 textcolor{orange}{oberoende} slumpvariabler}}.
 \end_layout
