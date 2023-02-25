@@ -99,6 +99,9 @@ Extramaterial: till varje interaktiv graf finns en interaktiv/reaktiv notebook m
 **Centrala gränsvärdessatsen**: <br>
 [widget](/observable/cgs.qmd) | [notebook](https://observablehq.com/@mattiasvillani/cgs)
 
+**Samplingfördelning för ett medelvärde**<br>
+[widget](sampling_mean_finite_pop.qmd) | [notebook](https://observablehq.com/@mattiasvillani/samplingfordelning-for-ett-medelvarde-andlig-population)
+
 ### Föreläsning 21
 
 **Chi2-fördelning**: <br>
