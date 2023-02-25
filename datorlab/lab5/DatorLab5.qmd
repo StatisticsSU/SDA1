@@ -198,7 +198,7 @@ Låt $X\sim \mathrm{Pois}(\lambda)$ med $\lambda = 2$. Beräkna $P(X=2)$ och $P(
 
 #### 💪 Uppgift 1.2
 
-I valet 2022 fick Liberalerna 4.61% av rösterna. I en undersökning bland totalt 1046 personser angav 30 personer att de skulle rösta på Liberalerna om det var val idag. Kan det vara så att Liberalernas röstningsandel är (ungefär) oförändrad på 4.61%, eller tyder den nya undersökningen på något annat? Undersök detta genom att rita upp ett stapeldiagram över sannolikhetsfördelningen $P(X=x)$ för $X \sim \mathrm{Binom}\operatorname{}(n= 1046, p = 0.0461)$ för x-värdena `xvalues = 0:100`. Är resultatet från valundersökningen ett sannolikt utfall? Om inte, vilket slutsats drar du om Liberalernas faktiska väljarandel?
+I valet 2022 fick Liberalerna 4.61% av rösterna. I en undersökning bland totalt 1046 personser angav 30 personer att de skulle rösta på Liberalerna om det var val idag. Kan det vara så att Liberalernas röstningsandel är (ungefär) oförändrad på 4.61%, eller tyder den nya undersökningen på något annat? Undersök detta genom att rita upp ett stapeldiagram över sannolikhetsfördelningen $P(X=x)$ för $X \sim \mathrm{Binom}\operatorname{}(n= 1046, p = 0.0461)$ för x-värdena `xvalues = 0:100`. Är resultatet från valundersökningen ett sannolikt utfall? Om inte, vilket slutsats drar du, genom att titta i stapeldiagramet, om Liberalernas faktiska väljarandel?
 
 ```{r}
 # Write your code here
