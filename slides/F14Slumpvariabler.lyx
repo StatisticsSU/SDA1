@@ -3027,7 +3027,7 @@ vert a
 \backslash
 vert 
 \backslash
-cdot Var(X) 
+cdot SD(X) 
 \backslash
 hspace{0.5cm}
 \backslash
