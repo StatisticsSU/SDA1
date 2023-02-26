@@ -1885,6 +1885,43 @@ status open
 
 \series bold
 \color orange
+Konfidensintervall för väntevärde i R
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figs/KI_salmon_R.png
+	lyxscale 50
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
 KI väntevärde - normalpop, okänd varians, 
 \begin_inset Formula $n\geq30$
 \end_inset

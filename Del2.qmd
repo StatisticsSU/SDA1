@@ -47,7 +47,7 @@ Extramaterial: [Notebook - stora talens lag](https://observablehq.com/@mattiasvi
 Kod: [confidence_intervals_salmon.R](/code/confidence_intervals_salmon.R)
 
 **Föreläsning 19 - Hypotestest.**\
-Läs: SDM Kapitel 18 \| [Slides](/misc/larry.png)
+Läs: SDM Kapitel 18 (ej *Random matters* på sid 579) \| [Slides](/misc/larry.png)
 
 **Föreläsning 20 - Inferens i multipel regression.**\
 Läs: SDM Kapitel 23 \| [Slides](/misc/larry.png)\
