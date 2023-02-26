@@ -48,7 +48,7 @@ Kod: [confidence_intervals_salmon.R](/code/confidence_intervals_salmon.R)
 
 **Föreläsning 19 - Hypotestest.**\
 Läs: SDM Kapitel 18 (ej *Random matters* på sid 579) \| [Slides](/misc/larry.png)\
-Interaktivt: [hypotestest väntevärde](/observable/hypotesttest_mean.qmd)
+Interaktivt: [hypotestest väntevärde](/observable/hypotestest_mean.qmd)
 
 **Föreläsning 20 - Inferens i multipel regression.**\
 Läs: SDM Kapitel 23 \| [Slides](/misc/larry.png)\
@@ -97,11 +97,11 @@ Uppgifter: SDM 16.2, 16.3, 16.5, 16.7, 16.14, 16.16, 16.27a-c), 16.31.
 **Övning 13 - Hypotestest.**\
 Uppgifter: SDM 18, 19.
 
-**Övning 14 - Jämföra grupper och chi2-test.**\
-Uppgifter: SDM 20, 21, 22.
-
-**Övning 15 - Inferens för regression.**\
+**Övning 14 - Inferens för regression.**\
 Uppgifter: SDM 23
+
+**Övning 15 - Jämföra grupper och chi2-test.**\
+Uppgifter: SDM 20, 21, 22.
 
 ### **Datorlaborationer**
 

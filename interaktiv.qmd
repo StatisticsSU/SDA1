@@ -106,7 +106,7 @@ Extramaterial: till varje interaktiv graf finns en interaktiv/reaktiv notebook m
 ### Föreläsning 19
 
 **Hypotesttest väntevärde**<br>
-[widget](/observable/hypotesttest_mean.qmd) 
+[widget](/observable/hypotestest_mean.qmd) 
 
 ### Föreläsning 21
 
