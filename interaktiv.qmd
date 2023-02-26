@@ -100,7 +100,13 @@ Extramaterial: till varje interaktiv graf finns en interaktiv/reaktiv notebook m
 [widget](/observable/cgs.qmd) | [notebook](https://observablehq.com/@mattiasvillani/cgs)
 
 **Samplingfördelning för ett medelvärde**<br>
-[widget](sampling_mean_finite_pop.qmd) | [notebook](https://observablehq.com/@mattiasvillani/samplingfordelning-for-ett-medelvarde-andlig-population)
+[widget](/observable/sampling_mean_finite_pop.qmd) | [notebook](https://observablehq.com/@mattiasvillani/samplingfordelning-for-ett-medelvarde-andlig-population)
+
+
+### Föreläsning 19
+
+**Hypotesttest väntevärde**<br>
+[widget](/observable/hypotesttest_mean.qmd) 
 
 ### Föreläsning 21
 

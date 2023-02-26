@@ -1,0 +1,7 @@
+---
+title: "Bernoullifördelningen"
+format: html
+---
+
+<iframe width="100%" height="802.96875" frameborder="0"
+  src="https://observablehq.com/embed/@mattiasvillani/hypotestest-for-ett-vantevarde@815?cells=viewof+inputs%2Cprobserrors%2Cplt_pdf"></iframe>

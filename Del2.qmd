@@ -42,12 +42,13 @@ Interaktivt: [samplingfördelning - liten ändlig population](/observable/sampli
 
 **Föreläsning 18 - Konfidensintervall för ett väntevärde. Stora talens lag. Centrala gränsvärdessatsen.**\
 Läs: SDM Kapitel 17 \| [Slides](/slides/F18KI4mean.pdf)\
-Interaktivt: [stora talens lag](/observable/storatalenslag.qmd) \| [centrala gränsvärdessatsen](/observable/cgs.qmd)\
+Interaktivt: [stora talens lag](/observable/storatalenslag.qmd) | [centrala gränsvärdessatsen](/observable/cgs.qmd)\
 Extramaterial: [Notebook - stora talens lag](https://observablehq.com/@mattiasvillani/stora-talens-lag) \| [Notebook - centrala gränsvärdessatsen](https://observablehq.com/@mattiasvillani/cgs)\
 Kod: [confidence_intervals_salmon.R](/code/confidence_intervals_salmon.R)
 
 **Föreläsning 19 - Hypotestest.**\
-Läs: SDM Kapitel 18 (ej *Random matters* på sid 579) \| [Slides](/misc/larry.png)
+Läs: SDM Kapitel 18 (ej *Random matters* på sid 579) \| [Slides](/misc/larry.png)\
+Interaktivt: [hypotestest väntevärde](/observable/hypotesttest_mean.qmd)
 
 **Föreläsning 20 - Inferens i multipel regression.**\
 Läs: SDM Kapitel 23 \| [Slides](/misc/larry.png)\
