@@ -100,7 +100,7 @@ där *p=0.3* och stickprovsstorleken *n=100*. Vi gör detta genom att simulera 1
 ```{r}
 p = 0.3              # andelen i populationen/modellen
 nsim = 1000          # vi vill simulera 1000 olika stickprov
-n = 100              # varje stickprov består av 10 observationer.
+n = 100              # varje stickprov består av 100 observationer.
 phats = rep(0, nsim) # skapar vektor där andelen (phat) i varje stickprov sparas.
 count = 0            
 for (i in 1:nsim){
@@ -124,7 +124,7 @@ for (p in ps){   # man får använda annat namn än i som loop-variabel
 plot(ps, probability, type = "l", xlab = "p", ylab = "P(X<=0.5)")
 ```
 
-## Konfidensintervall och test för en andel
+## 1. Konfidensintervall och test för en andel
 
 #### 💪 Uppgift 1.1
 
@@ -146,7 +146,7 @@ Använd konfidensintervallen för Januari och Februari 2023 för att förklara N
 
 I senaste valet fick S 30,33% av rösterna. Använda `prop.test` för att testa på 5% signifikansnivå om andelen S-väljare i i Februari 2023 är förändrat sedan valet.
 
-## Konfidensintervall och test för ett väntevärde
+## 2. Konfidensintervall och test för ett väntevärde
 
 #### 💪 Uppgift 2.1
 
@@ -203,3 +203,25 @@ $$
 $$
 
 använd funktionen `t.test` för att testa detta. Tips: läs i hjälpen `?t.test`.
+
+## 3. Centrala gränsvärdessatsen
+
+Antag att data kommer från en likforming (Uniform) fördelning mellan 0 och 1, dvs $a=0$ och $b=1$ i den likformiga fördelningen. Alltså: $X_1,X_2,\ldots,X_n\overset{iid}{\sim}\mathrm{Uniform}(0,1).$
+
+#### 💪 Uppgift 3.1
+
+Simulera 10000 stickprov med vardera $n=2$ observationer och beräkna medelvärdet i varje stickprov. Rita ett histogram över dessa 10000 medelvärden.
+
+#### 💪 Uppgift 3.2
+
+Upprepa Uppgift 3.1 för $n=5$, $n=10$ och $n=30$ observationer i varje stickprov. Kommentera resultatet.
+
+#### 💪 Uppgift 3.3
+
+Upprepa Uppgift 3.2, men istället för att beräkna medelvärdet i varje stickprov så ska du beräkna statistikan
+
+$$
+x_{\mathrm{max}}=\max(x_1,x_2,\ldots,x_n)
+$$
+
+dvs det högsta värdet i varje stickprov. Varför verkar centrala gränsvärdessatsen inte fungera här?
