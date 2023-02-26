@@ -1,6 +1,6 @@
 ---
 title: "Statistik och dataanalys I, 15 hp "
-subtitle: "Datorlaboration 6 - Konfidensintervall och hypotesttest"
+subtitle: "Datorlaboration 6 - Konfidensintervall, hypotesttest och centrala gränsvärdessatsen"
 author: 
   - Mattias Villani
 date: last-modified
