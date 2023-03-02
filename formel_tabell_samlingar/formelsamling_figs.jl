@@ -1,3 +1,5 @@
+using Pkg
+Pkg.activate(".")
 using Plots, Distributions, LinearAlgebra, PlotUtils, StatsBase
 using LaTeXStrings, Measures, Utils
 figFolder = "/home/mv/Dropbox/Apps/ShareLaTeX/SDA1/figs/"
@@ -12,9 +14,9 @@ opacity = 0.5
 
 # Geometric distribution
 p = 0.7
-xvals = 0:5
-bar(xvals, pdf.(Geometric(p),xvals), label = nothing, lw = 0,
-    xticks = 0:10, ylab = L"P(X=x)", xlab = L"x", c = colors[1],
+xvals = 1:5
+bar(xvals, pdf.(Geometric(p), xvals), label = nothing, lw = 0,
+    xticks = 1:10, ylab = L"P(X=x)", xlab = L"x", c = colors[1],
     bar_width = 0.3, linecolor = :auto)#, title = L"\mathrm{Geo}(p=0.7)")
 savefig(figFolder*"geometric.svg")
 
