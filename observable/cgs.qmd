@@ -3,5 +3,5 @@ title: "Centrala gränsvärdessatsen"
 format: html
 ---
 
-<iframe width="100%" height="850" frameborder="0" src="https://observablehq.com/embed/@mattiasvillani/cgs@1051?cells=viewof+dist_type%2Cviewof+params%2Cpopulation_distribution%2Cviewof+sample_size%2Cdistribution_of_sample_means">
-</iframe>
+<iframe width="100%" height="1083" frameborder="0"
+  src="https://observablehq.com/embed/@mattiasvillani/cgs@1160?cells=viewof+dist_type%2Cviewof+params%2Cpltdata%2Cviewof+sample_size%2Cpltmeans"></iframe>

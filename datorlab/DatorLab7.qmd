@@ -28,9 +28,17 @@ editor: visual
 
 Den här labben förutsätter att följande paket finns installerade:
 
--   `mosaic`
+-   `sda1`
 
-Paket kan installeras via kommandot `install.packages('packagename')`, där `'packagename'` är namnet på paketet, t.ex `'mosaic'`.
+sda1 är kursens egna R-paket och måste installeras från GitHub. Det görs genom att först installera paketet remotes och därefter installera kurspaketet:
+
+```{r}
+# install.packages("remotes") # avkommentera första gången
+library(remotes)
+#install_github("StatisticsSU/sda1paket")  # avkommentera första gången
+library(sda1)
+
+```
 :::
 
 ## Introduktion
@@ -64,6 +72,7 @@ Samma som ovan, men inte grafisk prediktionsintervall, bara med lm.predict och i
 ## Y. Simulera samplingfördelning - enkel regression
 
 -   Simulera enkel regressionsmodell för hand. Ta fram samplingfördelning för b_1 genom simulering. Undersök väntevärdesriktighet. Jämför simulerad fördelning med teoretiska samplingfördelningen.
+-   Låt X:n vara korrelerade mer och mer korrelerade. Vad händer med standardfelen? Varför?
 
 ## X. Omitted variable bias
 
