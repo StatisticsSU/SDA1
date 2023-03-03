@@ -27,10 +27,10 @@ plot(xgrid, normalpdf, color = colors[2], label = L"\hat p \sim N(%$(round(μ, d
 plot!(xgrid[xgrid.>=CI[1] .&& xgrid.<=CI[2]], 
     normalpdf[xgrid.>=CI[1] .&& xgrid.<=CI[2]], lw = 0,      
      color = colors[2], fill=(0,opacity,colors[2]), label = "95% K.I.", yaxis = false,
-     title = "Samplingfördelning för "*L"\hat p \sim N(\hat p, \sqrt{pq/n})")
+     title = "Skattad samplingfördelning för "*L"\hat p")
 
 plot!(xgrid, normalpdf, color = colors[2], label = nothing)
-plot!([p₀,p₀], [0,8], c = colors[4], label = L"p=0.15")
+plot!([p₀,p₀], [0,8], c = colors[4], label = L"p_{\mathrm{gammal}}=0.15")
 plot!([0.03,0.08], [6,4], arrow = true, lw = 2, color = :black, label = nothing)
 annotate!(0.035, 7, 
     text(L"95\%", :black, :right, 16))
@@ -50,7 +50,7 @@ CIt = (quantile(normaldens, α/2), quantile(normaldens, 1-α/2))
 xgrid = (μ - 4*σ):0.001:(μ + 4*σ)
 normalpdf = pdf.(normaldens, xgrid)
 plot(xgrid, normalpdf, color = colors[2], label = L"\hat p \sim N(%$(round(μ, digits = 3)),%$(round(σ, digits = 3)))", xlabel = L"\hat p", legend = :topright,
- title = L"\hat p \sim N(p_0, \sqrt{p_0 q_0/n})", yaxis = false, titlelocation = :left)
+ title = "Under "*L"H_0: \hat p \sim N(p_0, \sqrt{p_0 q_0/n})", yaxis = false, titlelocation = :left)
 plot!(xgrid[xgrid.<=CIt[1]], 
     normalpdf[xgrid.<=CIt[1]], lw = 0,      
      color = colors[2], fill=(0,opacity,colors[2]), label = "Förkastar "*L"H_0")
