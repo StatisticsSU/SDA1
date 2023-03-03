@@ -43,14 +43,14 @@ Skapa en mapp `Lab5` i din kursmapp SDA1. Ladda ner Quarto-filen för denna lab 
 
 R har en massa statistiska fördelningar inbyggda från start, och ytterligare många, många mer i olika R-paket. För varje fördelning finns det fyra typer av funktioner:
 
--   **r**-funktionen som genererar slumptal från fördelningen, t ex `rnorm(n = 5, mean = 2, sd = 3)` genererar 5 slumptal från normalfördelningen $X\sim N(2,3^2)$. Argumentet `sd` betyder standard deviation, dvs standardavvikelse. Tio slumptal från Poissonfördelningen $\mathrm{Pois}(\lambda = 2)$ får man med `rpois(n = 10, lambda = 2)` osv. r-funktionen har fått sitt namn från **r**andom.
+-   **r**-funktionen som genererar slumptal från fördelningen, t ex `rnorm(n = 5, mean = 2, sd = 3)` genererar 5 slumptal från normalfördelningen $X\sim N(2,3)$. Argumentet `sd` betyder standard deviation, dvs standardavvikelse. Tio slumptal från Poissonfördelningen $\mathrm{Pois}(\lambda = 2)$ får man med `rpois(n = 10, lambda = 2)` osv. r-funktionen har fått sitt namn från **r**andom.
 
 -   **p**-funktionen som beräknar sannolikheten att slumpvariabeln är mindre än ett visst tal, dvs $P(X\leq x)$ för något $x$. p-funktionen har fått sitt namn från engelskans **p**robability.\
-    `pnorm(q = 1, mean = 2, sd = 3)` beräknar sannolikheten att $X\sim N(2,3^2)$ är mindre än 1.
+    `pnorm(q = 1, mean = 2, sd = 3)` beräknar sannolikheten att $X\sim N(2,3)$ är mindre än 1.
 
--   **d**-funktionen som för en diskret variabel $X$ beräknar sannolikheten $P(X=x)$. För en kontinuerlig variabel beräknar d-funktionen täthetsfunktionen $f(x)$ i en given punkt $x$. Det är från det kontinuerliga fallet som d-funktionen fått sitt namn, d som i **d**ensity. Kommandot `dnorm(x = 1, mean = 2, sd = 3)` beräknar täthetsfunktionens värde i punkten $x=0$, dvs $f(0)$ för en $X\sim N(2,3^2)$ variabel.
+-   **d**-funktionen som för en diskret variabel $X$ beräknar sannolikheten $P(X=x)$. För en kontinuerlig variabel beräknar d-funktionen täthetsfunktionen $f(x)$ i en given punkt $x$. Det är från det kontinuerliga fallet som d-funktionen fått sitt namn, d som i **d**ensity. Kommandot `dnorm(x = 0, mean = 2, sd = 3)` beräknar täthetsfunktionens värde i punkten $x=0$, dvs $f(0)$ för en $X\sim N(2,3)$ variabel.
 
--   **q**-funktionen beräknar $p$-kvantilen för en fördelning, dvs det värde $x$ där $P(X \leq x)=p$. Vi kan t ex beräkna 25% eller 0.25-kvantilen för en normalfördelad variabel $X\sim N (2,3^2)$ med kommandot `qnorm(p = 0.25, mean = 2, sd = 3)`.
+-   **q**-funktionen beräknar $p$-kvantilen för en fördelning, dvs det värde $x$ där $P(X \leq x)=p$. Vi kan t ex beräkna 25% eller 0.25-kvantilen för en normalfördelad variabel $X\sim N (2,3)$ med kommandot `qnorm(p = 0.25, mean = 2, sd = 3)`.
 
     ```{r}
     #| code-fold: true
@@ -123,7 +123,7 @@ dnorm(x = c(-1,0,1), mean = c(0, 0.5, 3), sd = 1)
 ::: callout-warning
 ## Normalfördelning med varians eller standardavvikelse?
 
-I funktionen `rnorm()` anger man fördelningens spridning som en standardavvikelse med argumentet `sd`. Det skulle motsvara att man skrev $N(\mu,\sigma)$ för en normalfördelning i matematisk/symbolisk notation. Men vanligtvis skriver vi normalfördelningen med variansen som andra argument i den symboliska beskrivningen: $N(\mu,\sigma^2)$, men alla böcker gör inte så. Man får helt enkelt se upp och kontrollera om en normalfördelning skrivs med en standardavvikelse eller varians. I formelsamlingen och på tentan kommer jag skriva $N(\mu,\sigma^2)$.
+I funktionen `rnorm()` anger man fördelningens spridning som en standardavvikelse med argumentet `sd`. Det motsvarar att man skriver $N(\mu,\sigma)$ för en normalfördelning i matematisk/symbolisk notation. Många böcker skriver dock normalfördelningen med **variansen** som andra argument i den symboliska beskrivningen: $N(\mu,\sigma^2)$. Man får helt enkelt se upp och kontrollera om en normalfördelning skrivs med en standardavvikelse eller varians. I formelsamlingen och på tentan har jag kommer jag skriva $N(\mu,\sigma)$, som boken gör.
 :::
 
 ### Rita upp sannolikhetsfördelningen för en diskret variabel

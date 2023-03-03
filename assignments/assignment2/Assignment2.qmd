@@ -1,6 +1,6 @@
 ---
 title: "Statistik och dataanalys I, 15 hp "
-subtitle: "Inlämningsuppgift 2"
+subtitle: "Inlämningsuppgift 2, 1.5 hp"
 author: 
 - Namn 1
 - Namn 2
@@ -27,6 +27,7 @@ editor: visual
 
 ::: callout-warning
 ## Installation av nödvändiga paket
+
 Den här inlämningsuppgiften förutsätter att följande paket finns installerade:
 
 -   `mosaic`
@@ -43,11 +44,7 @@ I den första inlämningsuppgiften ska ni självständigt i grupper om tre analy
 ::: callout-note
 ### Instruktioner
 
-I denna inlämningsuppgift ska ni analysera ett datamaterial ... Följande variabler finns i datasetet `boston_census_data.Rdata` ([ladda ner](https://github.com/StatisticsSU/SDA1/blob/main/assignments/assignment1/Boston_census_data.RData?raw=true)) ...
-
--   `town`: Stadsdel.
--   `longitude`: Longitud koordinat..
--   `lower_stat_pct`: Procentandel underklass definerad som en av två: (i) andel vuxna utan gymnasieutbildning eller (ii) andel män som genomför okvalificerat arbete.
+I denna inlämningsuppgift ska ni analysera ett datamaterial ...
 
 ROADMAP
 
@@ -89,10 +86,10 @@ Skriv svaret här. Vid behov skrivs matematiska symboler inom dollartecken, till
 
 #### 💪 Uppgift 1.2
 
-Varierar brottsligheten i Boston beroende på den kategoriska variabeln `town`? Det finns 88 olika utfall av `town` (dvs 88 olika stadsdelar). Välj ut `Boston East Boston`, `Boston Downtown`,`Cambridge`, samt två valfria stadsdelar för att besvara frågan. Frågan besvaras med hjälp av lämpligt valda figurer och statistiska mått.
+lorem impsun
 
 ::: callout-tip
-Skapa en ny data frame som filtrerar `Boston_census_data` (till exempel genom `filter()` funktionen) utefter de stadsdelarna ni är intresserade utav innan ni påbörjar analysen.
+lorem impsun
 :::
 
 ::: {.callout-note appearance="minimal"}
@@ -101,22 +98,8 @@ Skapa en ny data frame som filtrerar `Boston_census_data` (till exempel genom `f
 Skriv svaret här.
 
 ```{r}
-# Write your code here
+# Write your code her
 ```
-:::
-
-#### 💪 Uppgift 1.3
-
-Vilka tre variabler i datasetet `Boston_census_data` korrelerar mest med brottslighet? Beskriv det parvisa sambandet mellan brottslighet och vardera av dessa tre variabler.
-
-::: callout-tip
-Kom ihåg att korrelation är ett beroendemått för *numeriska variabler*.
-:::
-
-::: {.callout-note appearance="minimal"}
-# Uppgift 1.3 - Svar
-
-Skriv svaret här.
 
 ```{r}
 # Write your code here
@@ -140,4 +123,3 @@ Skriv svaret här.
 # Write your code here
 ```
 :::
-
