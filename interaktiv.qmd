@@ -108,15 +108,21 @@ Extramaterial: till varje interaktiv graf finns en interaktiv/reaktiv notebook m
 **Hypotesttest väntevärde**<br>
 [widget](/observable/hypotestest_mean.qmd) 
 
-### Föreläsning 21
-
-**Chi2-fördelning**: <br>
-[widget](/observable/chi2fordelningen.qmd)
-
-### Föreläsning 22
+### Föreläsning 20
 
 **samplingfördelning regression** <br>
 [widget](/observable/linreg_simple_samping_dist.qmd) | [notebook](https://observablehq.com/@mattiasvillani/samplingfordelningen-linear-regression)
+
+### Föreläsning 21
+
+**Hypotestest - fel av typ I och II**: <br>
+[widget](/observable/hypotestest_typ1och2.qmd) | [notebook](https://observablehq.com/@mattiasvillani/typ1och2fel)
+
+### Föreläsning 22
+
+**Chi2-fördelning**: <br>
+[widget](/observable/chi2fordelningen.qmd) | [notebook](https://observablehq.com/@mattiasvillani/chi2-fordelningen)
+
 
 ### Videoföreläsning
 

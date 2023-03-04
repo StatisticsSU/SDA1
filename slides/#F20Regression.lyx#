@@ -2506,14 +2506,14 @@ Prediktionsintervall
 
 \begin_deeper
 \begin_layout Itemize
-Antag att vi gör en prognos vid ett nytt 
+Antag att vi gör en prognos vid ett 
 \begin_inset Formula $x=x_{\star}$
 \end_inset
 
 
 \begin_inset Formula 
 \[
-\hat{y}_{\star}=b_{0}+b_{1}x_{\mathrm{\star}}
+\hat{y}(x)=b_{0}+b_{1}x_{\mathrm{\star}}
 \]
 
 \end_inset
@@ -2561,11 +2561,7 @@ okända parametrarna
 \begin_inset Formula $\beta_{1}$
 \end_inset
 
-, dvs osäkerhet om regressionslinjen vid 
-\begin_inset Formula $x_{\star}$
-\end_inset
-
-.
+, dvs osäkerhet om regressionslinjen.
  
 \begin_inset VSpace medskip
 \end_inset
@@ -2619,7 +2615,7 @@ Prediktionsvariansen
 : 
 \begin_inset Formula 
 \[
-\sigma_{\mathrm{prediktion}}^{2}={\color{blue}\sigma_{\mathrm{regressionslinjen\:}\mathrm{vid\:}x_{\star}}^{2}}+{\color{orange}\sigma_{\varepsilon}^{2}}
+\sigma_{\mathrm{prediktion}}^{2}=\sigma_{\mathrm{regressionslinjen}\mathrm{vid}x_{\mathrm{test}}}^{2}+\sigma_{\varepsilon}^{2}
 \]
 
 \end_inset
@@ -2634,14 +2630,14 @@ Prediktionsvariansen
 95%-igt prediktionsintervall
 \series default
 \color inherit
- för enskild observation vid 
-\begin_inset Formula $x_{\star}$
+ för en enskild observation vid 
+\begin_inset Formula $x$
 \end_inset
 
 
 \begin_inset Formula 
 \[
-\hat{y}_{\star}\pm t_{0.025,n-2}\cdot\sqrt{{\color{blue}\frac{s_{e}^{2}}{n}+s_{b_{1}}^{2}(x_{\mathrm{\star}}-\bar{x})^{2}}+{\color{orange}s_{e}^{2}}}
+\hat{y}(x)\pm t_{n-2,0.025}\cdot\sqrt{\frac{s_{e}^{2}}{n}+s_{b_{1}}^{2}(x_{\mathrm{test}}-\bar{x})^{2}+s_{e}^{2}}
 \]
 
 \end_inset
@@ -3027,7 +3023,7 @@ Under
 \series default
 \color inherit
  har vi att 
-\begin_inset Formula $T\sim t_{n-k-1}$
+\begin_inset Formula $T\sim t(n-k-1)$
 \end_inset
 
 .

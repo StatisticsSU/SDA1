@@ -2214,7 +2214,7 @@ status open
 \align center
 \begin_inset CommandInset href
 LatexCommand href
-name "\\includegraphics[width=0.6\\textwidth]{../observable/figs/cgs_widget.png}"
+name "\\includegraphics[width=0.52\\textwidth]{../observable/figs/cgs_widget.png}"
 target "https://statisticssu.github.io/SDA1/observable/cgs.html"
 literal "true"
 
@@ -2441,7 +2441,7 @@ okänd varians
 
 \begin_inset Formula 
 \[
-\bar{x}\pm t_{\alpha/2}\cdot\frac{s}{\sqrt{n}}
+\bar{x}\pm t_{\alpha/2,n-1}\cdot\frac{s}{\sqrt{n}}
 \]
 
 \end_inset
