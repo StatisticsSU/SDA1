@@ -1283,7 +1283,13 @@ Residualanalys för att undersöka de 4 antagandena
 
 \begin_deeper
 \begin_layout Itemize
-Residualer:
+
+\series bold
+\color blue
+Residualer
+\series default
+\color inherit
+:
 \begin_inset Formula 
 \[
 e_{i}=y_{i}-\hat{y}_{i}
@@ -1295,6 +1301,20 @@ e_{i}=y_{i}-\hat{y}_{i}
 \end_layout
 
 \begin_layout Enumerate
+
+\series bold
+\color orange
+Linjärt samband?
+\series default
+\color inherit
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset VSpace smallskip
+\end_inset
+
 Plotta 
 \begin_inset Formula $y_{i}$
 \end_inset
@@ -1314,9 +1334,31 @@ Plotta
 
 .
  Linjärt?
+\begin_inset VSpace bigskip
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
+
+\series bold
+\color orange
+Oberoende 
+\begin_inset Formula $\varepsilon$
+\end_inset
+
+?
+\series default
+\color inherit
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset VSpace smallskip
+\end_inset
+
 Plotta residualer 
 \begin_inset Formula $e_{i}$
 \end_inset
@@ -1330,14 +1372,7 @@ Plotta residualer
 \begin_inset Formula $e_{i}$
 \end_inset
 
- mot tid, om tidsserie.
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset VSpace bigskip
-\end_inset
-
-
+ mot tid, om tidsserier.
 \begin_inset VSpace bigskip
 \end_inset
 
@@ -1345,6 +1380,24 @@ Plotta residualer
 \end_layout
 
 \begin_layout Enumerate
+
+\series bold
+\color orange
+Homoskedastiska 
+\begin_inset Formula $\varepsilon$
+\end_inset
+
+?
+\series default
+\color inherit
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset VSpace smallskip
+\end_inset
+
 Plotta residualer 
 \begin_inset Formula $e_{i}$
 \end_inset
@@ -1370,6 +1423,24 @@ SD(\varepsilon_{i})=\sigma_{\varepsilon}
 \end_layout
 
 \begin_layout Enumerate
+
+\series bold
+\color orange
+Normalfördelade 
+\begin_inset Formula $\varepsilon$
+\end_inset
+
+?
+\series default
+\color inherit
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset VSpace smallskip
+\end_inset
+
 Histogram, boxplot, QQ-plot för residualer 
 \begin_inset Formula $e_{i}$
 \end_inset
@@ -1393,7 +1464,7 @@ status open
 
 \series bold
 \color orange
-Residualanalys sda1-paketet
+Residualanalys lifespan - sda1-paketet
 \end_layout
 
 \end_inset
@@ -1402,18 +1473,220 @@ Residualanalys sda1-paketet
 \end_layout
 
 \begin_deeper
-\begin_layout Itemize
+\begin_layout Standard
+\align center
 \begin_inset Graphics
 	filename figs/lifespan_reg_residual.png
+	scale 30
 
 \end_inset
 
 
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Standard
+\align center
 \begin_inset Graphics
 	filename figs/lifespan_reg_residual.pdf
+	lyxscale 30
+	scale 23
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Residualer simulerade data - alla antaganden OK
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figs/Residuals_AllGood.pdf
+	lyxscale 30
+	scale 35
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Trouble in paradise 1 - heteroscedastisk varians
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figs/Residuals_NormalHetero.pdf
+	lyxscale 30
+	scale 35
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Trouble in paradise 2 - icke-normala 
+\begin_inset Formula $\varepsilon$
+\end_inset
+
+ (outliers)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figs/Residuals_Studentt4_Homo.pdf
+	lyxscale 30
+	scale 35
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Trouble in paradise 3 - icke-normala och hetero 
+\begin_inset Formula $\varepsilon$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figs/Residual_Studentt4_Hetero.pdf
+	lyxscale 30
+	scale 35
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Trouble in paradise 4 - ej oberoende 
+\begin_inset Formula $\varepsilon$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figs/Residuals_Autocorrelated.pdf
+	lyxscale 30
+	scale 35
 
 \end_inset
 
@@ -2062,11 +2335,16 @@ t_{\mathrm{obs}}=\frac{1.763-0}{0.289}=6.100
 \end_layout
 
 \begin_layout Itemize
-Eftersom 
-\begin_inset Formula $\left|t_{\mathrm{obs}}\right|>t_{\mathrm{crit}}$
+\begin_inset Formula ${\color{blue}\left|t_{\mathrm{obs}}\right|>t_{\mathrm{crit}}}$
 \end_inset
 
- så förkastar vi nollhypotesen på 
+ så vi 
+\series bold
+\color blue
+förkastar nollhypotesen
+\series default
+\color inherit
+ på 
 \begin_inset Formula $5\%$
 \end_inset
 
@@ -2315,7 +2593,7 @@ träffas av ett
 \begin_inset Quotes erd
 \end_inset
 
- som har standardavvikelse 
+ med standardavvikelse 
 \begin_inset Formula $\sigma_{\varepsilon}$
 \end_inset
 
@@ -2493,7 +2771,13 @@ Multipel regression - modell och samplingfördelning
 Populationsmodell
 \series default
 \color inherit
- för multipel regression med 
+ för 
+\series bold
+\color orange
+multipel regression
+\series default
+\color inherit
+ med 
 \begin_inset Formula $k$
 \end_inset
 
@@ -2513,7 +2797,15 @@ Varje
 \begin_inset Formula $\beta_{j}$
 \end_inset
 
- skattas med minsta-kvadrat-metoden.
+ skattas med 
+\begin_inset Formula $b_{j}$
+\end_inset
+
+ med minsta-kvadrat-metoden.
+\begin_inset VSpace medskip
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
@@ -2570,6 +2862,10 @@ Varför
 \end_inset
 
 .
+\begin_inset VSpace medskip
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
@@ -2633,11 +2929,13 @@ Multipel regression - konfidensintervall och test
 Populationsmodell
 \series default
 \color inherit
- multipel regression med 
-\begin_inset Formula $k$
-\end_inset
+ 
+\series bold
+\color orange
+multipel regression
+\series default
+\color inherit
 
- förklarande variabler
 \begin_inset Formula 
 \[
 Y=\beta_{0}+\beta_{1}x_{1}+\beta_{2}x_{2}+\ldots+\beta_{k}x_{k}+\varepsilon,\quad\varepsilon\sim N(0,\sigma_{\varepsilon})

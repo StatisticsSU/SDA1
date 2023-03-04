@@ -1994,7 +1994,7 @@ Allmänt
 
 \begin_inset Formula 
 \[
-\frac{\text{Estimatet}-\text{Parametern under }H_{0}}{\text{Standardfel Estimator under }H_{0}}
+\frac{\text{Estimatet}-\text{Parametern under }H_{0}}{\text{Standardfel Estimator}}
 \]
 
 \end_inset

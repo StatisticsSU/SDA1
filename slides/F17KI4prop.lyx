@@ -2305,7 +2305,8 @@ Intervall med sannolikhet
 \begin_inset Quotes eld
 \end_inset
 
-värdet som har 10% av sannolikhetsmassan till höger om sig
+värdet som har 10% av sannolikhetsmassan till höger om sig i standard normalförd
+elning
 \begin_inset Quotes erd
 \end_inset
 
@@ -2427,7 +2428,7 @@ har
 \begin_inset Formula $\alpha/2$
 \end_inset
 
- av sannolikhetsmassan till höger om sig
+ av sannolikhetsmassan till höger om sig i standard normalfördelning
 \begin_inset Quotes erd
 \end_inset
 
