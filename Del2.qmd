@@ -19,19 +19,19 @@ Extramaterial: [TedTalk om sannolikheter](https://youtu.be/0m5bg2hpHNw)
 **Föreläsning 13 - Betingade sannolikheter och Bayes sats.**\
 Läs: SDM Kapitel 13 \| [Slides](/slides/F13BetingadeSlhBayesSats.pdf)\
 Interaktivt: [bayessats](/observable/bayestheorem.qmd)\
-Extramaterial: [Artikel om Bayes sats och snabbtest för Covid-19](https://www.varsity.co.uk/science/21149)
+Extramaterial: [artikel om Bayes sats och snabbtest för Covid-19](https://www.varsity.co.uk/science/21149)
 
 **Föreläsning 14 - Slumpvariabler och deras egenskaper.**\
 Läs: SDM Kapitel 14 \| [Slides](/slides/F14Slumpvariabler.pdf)\
 Interaktivt: [normalfördelningen](/observable/normalfordelningen.qmd)
 
-**Föreläsning 15 - Sannolikhetsmodeller för diskreta slumpvariabler**\
-Läs: SDM Kapitel 15.1, 15.2, 15.3, 15.6 \| [Slides](/slides/F15DiskretaSannolikhetsmodeller.pdf)\
+**Föreläsning 15 - Sannolikhetsmodeller I**\
+Läs: SDM Kapitel 15.1, 15.2, 15.3, 15.6 \| [Slides](/slides/F15Sannolikhetsmodeller1.pdf)\
 Interaktivt: [bernoullifördelning](/observable/bernoullifordelningen.qmd) | [geometrisk fördelning](/observable/geometriskfordelning.qmd) | [binomialfördelningen](/observable/binomialfordelningen.qmd) | [likformig](/observable/uniformfordelning.qmd) | [normalfördelning](/observable/normalfordelningen.qmd)\
 Kod: [geometric.R](/code/geometric.R)
 
-**Föreläsning 16 - Sannolikhetsmodeller för kontinuerliga slumpvariabler**\
-Läs: SDM Kapitel 5.3, 14.4, 15.7 \| [Slides](/slides/F16KontinuerligaSannolikhetsmodeller.pdf)\
+**Föreläsning 16 - Sannolikhetsmodeller II**\
+Läs: SDM Kapitel 5.3, 14.4, 15.7 \| [Slides](/slides/F16Sannolikhetsmodeller2.pdf)\
 Interaktivt: [Poissonfördelningen](/observable/poissonfordelningen.qmd) \| [maximum likelihood - Poisson](/observable/ml_poisson.qmd) \| [exponential](/observable/exponentialfordelningen.qmd) \| [student-t](/observable/studentt.qmd) \| [allmän student-t](/observable/studentt_allman.qmd)\
 Kod: [exponential.R](/code/exponential.R)\
 Extramaterial: [Notebook - maximum likelihood för Poisson](https://observablehq.com/@mattiasvillani/maximum-likelihood-poissonmodellen) | [Notebook - student-t](https://observablehq.com/@mattiasvillani/student-t) 
@@ -53,7 +53,8 @@ Interaktivt: [hypotestest - väntevärde](/observable/hypotestest_mean.qmd)
 **Föreläsning 20 - Inferens i linjär regression.**\
 Läs: SDM Kapitel 23 (ej 23.7-23.8) \| [Slides](/slides/F20Regression.pdf)\
 Kod: [regression lifespan data](/code/lifespan_regression.R)\
-Interaktivt: [samplingfördelning regression](/observable/linreg_simple_sampling_dist.qmd)
+Interaktivt: [samplingfördelning regression](/observable/linreg_simple_sampling_dist.qmd)\
+Extramaterial: [kod för residualanalys på simulerad regressionsdata](code/residualanalys_simulerade_data.R)
 
 **Föreläsning 21 - Hypotestest och jämföra grupper.**\
 Läs: SDM Kapitel 19, 20.4, 20.5 \| [Slides](/misc/larry.png)\
