@@ -28,11 +28,14 @@ editor: visual
 
 Den här labben förutsätter att följande paket finns installerade:
 
+-   `mosaic`
 -   `sda1`
 
 sda1 är kursens egna R-paket och måste installeras från GitHub. Det görs genom att först installera paketet remotes och därefter installera kurspaketet:
 
 ```{r}
+#| output: false
+library(mosaic)
 # install.packages("remotes") # avkommentera första gången
 library(remotes)
 #install_github("StatisticsSU/sda1paket")  # avkommentera första gången
@@ -43,41 +46,122 @@ library(sda1)
 
 ## Introduktion
 
-> I den här datorlabben kommer vi att arbeta med fördelningar i R, bland annat lära oss simulera från olika fördelningar, dvs dra slumptal från fördelningar.
+> I den här datorlabben kommer ni analysera olika datamaterial med regression. Det första datamaterialet om reklam är verkligt. I Uppgift 3 ska ni analysera datamaterial som är simulerade av mig, från olika populationsmodeller som jag har valt. Det blir ett intressant laboratorium, där ni kan utforska olika aspekter av regression i en kontrollerad miljö. Och även få veta den underliggande populationsmodellen efter att ni gjort labben!
 
-#### 💪 Uppgift 0.1
+::: callout-important
+## Skapa mapp för labben
 
-Se till att paketen ovan är installerade i RStudio innan du fortsätter med resten.
+Skapa en mapp `Lab7` i din kursmapp SDA1. Ladda ner Quarto-filen för denna lab genom att högerklicka [här](https://github.com/StatisticsSU/SDA1/raw/main/datorlab/lab7/DatorLab7.qmd) och välj 'Spara länk' eller något likande från menyn som dyker upp. Spara filen i din `Lab7` mapp. Öppna Quarto-filen i RStudio och fortsätt med denna laboration direkt i Quarto-dokumentet, där du också fyller i svaren på dina laborationsövningar.
+:::
 
-#### 💪 Uppgift 0.2
+## 1. Enkel regression för reklamdata
 
-Skapa en mapp `Lab5` i din kursmapp SDA1. Ladda ner Quarto-filen för denna lab genom att högerklicka [här](https://github.com/StatisticsSU/SDA1/raw/main/datorlab/lab7/DatorLab7.qmd) och välj 'Spara länk' eller något likande från menyn som dyker upp. Spara filen i din nya `Lab5` mapp. Öppna Quarto-filen i RStudio och fortsätt med denna laboration direkt i Quarto-dokumentet, där du också fyller i svaren på dina laborationsövningar.
+Datamaterialet `reklam.csv` innehåller data på *n=200* produkters försäljning (`sales`) i tusentals US dollar och hur mycket (i s k reklamenheter) produkten har marknadsförts i olika reklamkanaler: `tv`, `radio` och `newspaper`. Vi läser in data med kommandot:
 
-## Z. Estimera model
+```{r}
+reklam = read.csv(file = "reklam.csv")
+head(reklam)
+```
 
-**Enkel regression**
+Vi börjar med en enkel regressionsmodell med enbart `tv` som förklarande variabel. Vi utforskar data genom histogram för responsvariabeln `sales` och scatterplot mot `tv`.
 
-Estimera på data
+```{r}
+par(mfrow = c(1,2))
+hist(reklam$sales, col = "orange", main = "")
+plot(sales ~ tv, data = reklam, pch = 19, cex = 0.7, col = "steelblue")
+```
 
-Tolka utskrift, gör test.
+#### 💪 Uppgift 1.1
 
-Prediktion
+Skatta den enkla linjära regressionsmodellen i R:
 
-Prediktionsintervall med reg_predict
+$$
+\texttt{sales} = \beta_0 + \beta_1 \cdot \texttt{tv} + \varepsilon, \hspace{1cm} \varepsilon\overset{iid}{\sim}N(0,\sigma_{\varepsilon})
+$$
 
-**Multipel**
+och tolka skattningen av intercept och lutningskoefficient. Vilken skattning av $\sigma_{\varepsilon}$ ger R, och hur tolkar du denna?
 
-Samma som ovan, men inte grafisk prediktionsintervall, bara med lm.predict och interval.
+#### 💪 Uppgift 1.2
 
-## Y. Simulera samplingfördelning - enkel regression
+Testa om variabeln tv är en signifikant förklarande variabel på 5% signifikansnivå. Ställ upp noll- och alternativhypotes, teststatistiska med fördelning under nollhypotesen. Utför testet med hjälp av formelsamlingen och formulera din slutsats. Du får använda information från R, men du ska ställa upp formeln för teststatistikan beräkna alla delar av den formeln.
 
--   Simulera enkel regressionsmodell för hand. Ta fram samplingfördelning för b_1 genom simulering. Undersök väntevärdesriktighet. Jämför simulerad fördelning med teoretiska samplingfördelningen.
--   Låt X:n vara korrelerade mer och mer korrelerade. Vad händer med standardfelen? Varför?
+#### 💪 Uppgift 1.3
 
-## X. Omitted variable bias
+Visa hur R har beräknat p-värdet i regression-utskriften (från `summary`) genom att göra beräkningen själv med relevant s k `p`,`d`,`q`, eller `r`-funktion.
 
-#### 💪 Uppgift X.1
+#### 💪 Uppgift 1.4
 
--   Simulera regression med två kovariater med reg_simulate i sda1 paketet. Okorrelerade x. Skatta regression med bara x_1. Undersök unbiasedness.
+Gör en residualanalys med funktionen `reg_residuals` i `sda1`-paketet, och kommentera om var och ett av de fyra grundläggande antaganden för populationsmodellen verkar uppfyllda.
 
--   Simulera regression med två kovariater med reg_simulate i sda1 paketet. korrelerade x. Skatta regression med bara x_1. Undersök unbiasedness.
+#### 💪 Uppgift 1.5
+
+Gör en prediktion med 95%-iga prediktionsintervall för `sales` vid `tv=100`. \[tips: argumentet `newdata` i `predict`-funktionen måste vara en dataframe, inte en vektor. Se min [kod för lifespan data](https://statisticssu.github.io/SDA1/code/lifespan_regression.R).\]
+
+## 2. Multipel regression för reklamdata
+
+Vi går nu vidare med en multipel regressionsmodell med alla tre förklarande variabler: `tv`, `radio` och `newspaper`. Först en titt på data:
+
+```{r}
+par(mfrow = c(2,2))
+hist(reklam$sales, col = "orange", main = "")
+plot(sales ~ tv, data = reklam, pch = 19, cex = 0.7, col = "steelblue")
+plot(sales ~ radio, data = reklam, pch = 19, cex = 0.7, col = "steelblue")
+plot(sales ~ newspaper, data = reklam, pch = 19, cex = 0.7, col = "steelblue")
+```
+
+#### 💪 Uppgift 2.1
+
+Anpassa följande multipla regressionsmodell:
+
+$$
+\texttt{sales} = \beta_0 
++ \beta_1 \cdot \texttt{tv} 
++ \beta_2 \cdot \texttt{radio} 
++ \beta_3 \cdot \texttt{newspaper} 
++ \varepsilon, \hspace{1cm} \varepsilon\overset{iid}{\sim}N(0,\sigma_{\varepsilon})
+$$
+
+och tolka skattningen av regressionskoefficienten för `tv`.
+
+#### 💪 Uppgift 2.2
+
+Testa om variabeln `tv` är en signifikant förklarande variabel på 5% signifikansnivå. Ställ upp noll- och alternativhypotes, teststatistiska med fördelning under nollhypotesen. Utför testet och formulera din slutsats. Du får använda information från R, men du ska ställa upp formeln för teststatistikan och beräkna den.
+
+Kommentera kortfattat utifrån utskriften om `radio` och `newspaper` är signifikanta på 5% signifikansnivå.
+
+#### 💪 Uppgift 2.3
+
+Vilken modell, den enkla regressionen eller den multipla, föredrar du? Motivera med relevant R² värde och genom att göra 5-fold korsvalidering med funktionen `reg_crossval` i `sda1`-paketet.
+
+## 3. Residualanalys på simulerade data
+
+Jag har simulerat fem olika datamaterial `simdata1-5` från en linjär regressionsmodell:
+
+$$
+\texttt{y} = \beta_0 
++ \beta_1 \cdot \texttt{X1} 
++ \beta_2 \cdot \texttt{X2} 
++ \varepsilon
+$$
+
+där i vissa datamaterial har feltermer $\varepsilon$ som inte uppfyller alla av de fyra antagandena, och eventuellt kan det också finnas ett icke-linjärt samband mellan någon förklarande variabel och y. Er uppgift är att utföra residualanalys med funktionen `reg_residuals` i `sda1`-paketet för att försöka upptäcka vilka antaganden som inte är uppfyllda i respektive datamaterial (Uppgift 3.1-3.5 nedan). Ni bör också titta på `plot(simdata1)` för varje datamaterial för att upptäcka icke-linjära samband.
+
+Här är de fem datamaterialen:
+
+```{r}
+simdata1 = read.csv(file = "simdata1.csv")
+simdata2 = read.csv(file = "simdata2.csv")
+simdata3 = read.csv(file = "simdata3.csv")
+simdata4 = read.csv(file = "simdata4.csv")
+simdata5 = read.csv(file = "simdata5.csv")
+```
+
+#### 💪 Uppgift 3.1 - simdata1
+
+#### 💪 Uppgift 3.2 - simdata2
+
+#### 💪 Uppgift 3.3 - simdata3
+
+#### 💪 Uppgift 3.4 - simdata4
+
+#### 💪 Uppgift 3.5 - simdata5

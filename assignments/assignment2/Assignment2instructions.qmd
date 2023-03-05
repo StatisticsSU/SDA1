@@ -214,7 +214,7 @@ Använd formelsamlingen för att testa om `logincome` är en signifikant förkla
 
 #### 💪 Uppgift 3.4
 
-Gör en prediktion med 95% prediktionsintervall för `logcost` vid `logincome=11` genom att använda R. \[tips: argumentet `newdata` i `predict`-funktionen måste vara en dataframe, inte en vektor. Se min [kod för lifespan data](https://statisticssu.github.io/SDA1/code/lifespan_regression.R).
+Gör en prediktion med 95% prediktionsintervall för `logcost` vid `logincome=11` genom att använda R. \[tips: argumentet `newdata` i `predict`-funktionen måste vara en dataframe, inte en vektor. Se min [kod för lifespan data](https://statisticssu.github.io/SDA1/code/lifespan_regression.R).\]
 
 #### 💪 Uppgift 3.5
 
