@@ -121,6 +121,6 @@ Uppgifter: [Datorlab 7](/misc/larry.png)
 ### **Inlämningsuppgift**
 
 **Inlämningsuppgift 2.**\
-Uppgifter: [instrukioner i html](/assignments/assignment2/Assignment2instructions.qmd) | <a href="https://github.com/StatisticsSU/SDA1/raw/main/assignments/assignment2/Assignment2handin.qmd" download>quarto för inlämning</a> 
+Uppgifter: [instruktioner i html](/assignments/assignment2/Assignment2instructions.qmd) | <a href="https://github.com/StatisticsSU/SDA1/raw/main/assignments/assignment2/Assignment2handin.qmd" download>quarto för inlämning</a> 
 
 
