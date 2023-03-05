@@ -1,4 +1,4 @@
-ElecCost,LogRooms,LogIncome,LogPeople,ElHeat,SheOnly,PeakHeat,CookEl,PoolFilt,AirRev,AirCond,MWave,Dish,Dryer
+cost,LogRooms,LogIncome,LogPeople,elheat,onlysecondary,waterheat,cookel,poolfilt,airrev,aircond,microwave,dish,dryer
 545.0,1.9459101490553132,10.305613759378778,1.3862943611198906,0.0,0.0,0.0,1.0,0.0,1.0,1.0,0.0,0.0,0.0
 389.0,1.9459101490553132,9.367344120785848,0.6931471805599453,0.0,0.0,0.0,1.0,0.0,0.0,0.0,1.0,1.0,0.0
 390.0,2.0794415416798357,9.735068900911164,0.6931471805599453,1.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0

@@ -117,3 +117,10 @@ Uppgifter: [html](/datorlab/lab6/DatorLab6.qmd) | <a href="https://github.com/St
 
 **Datorlaboration 7 - Multipel linjär regression - inferens.**\
 Uppgifter: [Datorlab 7](/misc/larry.png)
+
+### **Inlämningsuppgift**
+
+**Inlämningsuppgift 2.**\
+Uppgifter: [instrukioner i html](/assignments/assignment2/Assignment2instructions.qmd) | <a href="https://github.com/StatisticsSU/SDA1/raw/main/assignments/assignment2/Assignment2handin.qmd" download>quarto för inlämning</a> 
+
+
