@@ -59,7 +59,7 @@ Skapa en mapp `Lab7` i din kursmapp SDA1. Ladda ner Quarto-filen för denna lab 
 Datamaterialet `reklam.csv` innehåller data på *n=200* produkters försäljning (`sales`) i tusentals US dollar och hur mycket (i s k reklamenheter) produkten har marknadsförts i olika reklamkanaler: `tv`, `radio` och `newspaper`. Vi läser in data med kommandot:
 
 ```{r}
-reklam = read.csv(file = "reklam.csv")
+reklam = read.csv(file = 'https://github.com/StatisticsSU/SDA1/raw/main/datorlab/lab7/reklam.csv')
 head(reklam)
 ```
 
@@ -149,11 +149,11 @@ där i vissa datamaterial har feltermer $\varepsilon$ som inte uppfyller alla av
 Här är de fem datamaterialen:
 
 ```{r}
-simdata1 = read.csv(file = "simdata1.csv")
-simdata2 = read.csv(file = "simdata2.csv")
-simdata3 = read.csv(file = "simdata3.csv")
-simdata4 = read.csv(file = "simdata4.csv")
-simdata5 = read.csv(file = "simdata5.csv")
+simdata1 = read.csv(file = 'https://github.com/StatisticsSU/SDA1/raw/main/datorlab/lab7/simdata1.csv')
+simdata2 = read.csv(file = 'https://github.com/StatisticsSU/SDA1/raw/main/datorlab/lab7/simdata2.csv')
+simdata3 = read.csv(file = 'https://github.com/StatisticsSU/SDA1/raw/main/datorlab/lab7/simdata3.csv')
+simdata4 = read.csv(file = 'https://github.com/StatisticsSU/SDA1/raw/main/datorlab/lab7/simdata4.csv')
+simdata5 = read.csv(file = 'https://github.com/StatisticsSU/SDA1/raw/main/datorlab/lab7/simdata5.csv')
 ```
 
 #### 💪 Uppgift 3.1 - simdata1
