@@ -2041,7 +2041,7 @@ status open
 \align center
 \begin_inset CommandInset href
 LatexCommand href
-name "\\includegraphics[width=0.6\\textwidth]{../observable/figs/sampdist_regression_widget.png}"
+name "\\includegraphics[width=0.6\\textwidth]{../observable/figs/storatalenslag_widget.png}"
 target "https://statisticssu.github.io/SDA1/observable/linreg_simple_sampling_dist.html"
 literal "true"
 
@@ -2060,6 +2060,10 @@ literal "true"
 \begin_inset Separator parbreak
 \end_inset
 
+
+\end_layout
+
+\begin_layout Frame
 
 \end_layout
 
@@ -2253,7 +2257,7 @@ sda1-paketet:
 \begin_inset Graphics
 	filename figs/lifespan_reg_confint.pdf
 	lyxscale 40
-	scale 40
+	scale 35
 
 \end_inset
 
@@ -2580,7 +2584,7 @@ Hypotestest i R
 \begin_inset Graphics
 	filename figs/lifespan_reg_test.pdf
 	lyxscale 50
-	scale 50
+	scale 35
 
 \end_inset
 
@@ -2637,7 +2641,7 @@ Prediktionsintervall
 \series default
 \color inherit
  för 
-\begin_inset Formula $\hat{y}_{\star}$
+\begin_inset Formula $\hat{y}(x)$
 \end_inset
 
  - 
