@@ -980,7 +980,7 @@ betingat väntevärde
 :
 \begin_inset Formula 
 \[
-E(y\vert x)=\beta_{0}+\beta_{1}x
+E(Y\vert x)=\beta_{0}+\beta_{1}x
 \]
 
 \end_inset
@@ -1053,6 +1053,43 @@ felterm
 \color inherit
 .
 \begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Regression som modell för betingad fördelning
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figs/regdensities.pdf
+	lyxscale 30
+	scale 45
+
 \end_inset
 
 
@@ -1185,7 +1222,7 @@ linjärt
 
 \begin_inset Formula 
 \[
-E(y\vert x)=\beta_{0}+\beta_{1}x
+E(Y\vert x)=\beta_{0}+\beta_{1}x
 \]
 
 \end_inset
@@ -1324,7 +1361,11 @@ Plotta
 \end_inset
 
 .
- Ser linjärt ut? Plotta 
+ Ser linjärt ut? 
+\begin_inset Newline newline
+\end_inset
+
+Plotta 
 \begin_inset Formula $e_{i}$
 \end_inset
 
@@ -1333,7 +1374,7 @@ Plotta
 \end_inset
 
 .
- Linjärt?
+ Konstant, eller mönster kvar?
 \begin_inset VSpace bigskip
 \end_inset
 
@@ -1368,11 +1409,15 @@ Plotta residualer
 \end_inset
 
 .
- Eller 
+ 
+\begin_inset Newline newline
+\end_inset
+
+Tidsserier: plotta 
 \begin_inset Formula $e_{i}$
 \end_inset
 
- mot tid, om tidsserier.
+ mot tid (observationsnummer).
 \begin_inset VSpace bigskip
 \end_inset
 
@@ -1940,7 +1985,7 @@ Standardfel för
 \begin_inset Graphics
 	filename figs/lifespan_reg_sterr.pdf
 	lyxscale 40
-	scale 30
+	scale 55
 
 \end_inset
 
@@ -1952,6 +1997,73 @@ Standardfel för
 \begin_inset Separator parbreak
 \end_inset
 
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Samplingfördelning i regression - interaktivt
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "1pt"
+separation "1pt"
+shadowsize "4pt"
+framecolor "orange"
+backgroundcolor "white"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset CommandInset href
+LatexCommand href
+name "\\includegraphics[width=0.6\\textwidth]{../observable/figs/storatalenslag_widget.png}"
+target "https://statisticssu.github.io/SDA1/observable/linreg_simple_sampling_dist.html"
+literal "true"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
 
 \end_layout
 
@@ -2506,14 +2618,14 @@ Prediktionsintervall
 
 \begin_deeper
 \begin_layout Itemize
-Antag att vi gör en prognos vid ett 
+Antag att vi gör en prognos vid ett nytt 
 \begin_inset Formula $x=x_{\star}$
 \end_inset
 
 
 \begin_inset Formula 
 \[
-\hat{y}(x)=b_{0}+b_{1}x_{\mathrm{\star}}
+\hat{y}_{\star}=b_{0}+b_{1}x_{\mathrm{\star}}
 \]
 
 \end_inset
@@ -2561,7 +2673,11 @@ okända parametrarna
 \begin_inset Formula $\beta_{1}$
 \end_inset
 
-, dvs osäkerhet om regressionslinjen.
+, dvs osäkerhet om regressionslinjen vid 
+\begin_inset Formula $x_{\star}$
+\end_inset
+
+.
  
 \begin_inset VSpace medskip
 \end_inset
@@ -2615,7 +2731,7 @@ Prediktionsvariansen
 : 
 \begin_inset Formula 
 \[
-\sigma_{\mathrm{prediktion}}^{2}=\sigma_{\mathrm{regressionslinjen}\mathrm{vid}x_{\mathrm{test}}}^{2}+\sigma_{\varepsilon}^{2}
+\sigma_{\mathrm{prediktion}}^{2}={\color{blue}\sigma_{\mathrm{regressionslinjen\:}\mathrm{vid\:}x_{\star}}^{2}}+{\color{orange}\sigma_{\varepsilon}^{2}}
 \]
 
 \end_inset
@@ -2630,14 +2746,14 @@ Prediktionsvariansen
 95%-igt prediktionsintervall
 \series default
 \color inherit
- för en enskild observation vid 
-\begin_inset Formula $x$
+ för enskild observation vid 
+\begin_inset Formula $x_{\star}$
 \end_inset
 
 
 \begin_inset Formula 
 \[
-\hat{y}(x)\pm t_{n-2,0.025}\cdot\sqrt{\frac{s_{e}^{2}}{n}+s_{b_{1}}^{2}(x_{\mathrm{test}}-\bar{x})^{2}+s_{e}^{2}}
+\hat{y}_{\star}\pm t_{0.025,n-2}\cdot\sqrt{{\color{blue}\frac{s_{e}^{2}}{n}+s_{b_{1}}^{2}(x_{\mathrm{\star}}-\bar{x})^{2}}+{\color{orange}s_{e}^{2}}}
 \]
 
 \end_inset
@@ -3023,7 +3139,7 @@ Under
 \series default
 \color inherit
  har vi att 
-\begin_inset Formula $T\sim t(n-k-1)$
+\begin_inset Formula $T\sim t_{n-k-1}$
 \end_inset
 
 .

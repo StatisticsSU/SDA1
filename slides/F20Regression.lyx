@@ -980,7 +980,7 @@ betingat väntevärde
 :
 \begin_inset Formula 
 \[
-E(y\vert x)=\beta_{0}+\beta_{1}x
+E(Y\vert x)=\beta_{0}+\beta_{1}x
 \]
 
 \end_inset
@@ -1222,7 +1222,7 @@ linjärt
 
 \begin_inset Formula 
 \[
-E(y\vert x)=\beta_{0}+\beta_{1}x
+E(Y\vert x)=\beta_{0}+\beta_{1}x
 \]
 
 \end_inset
@@ -1361,7 +1361,11 @@ Plotta
 \end_inset
 
 .
- Ser linjärt ut? Plotta 
+ Ser linjärt ut? 
+\begin_inset Newline newline
+\end_inset
+
+Plotta 
 \begin_inset Formula $e_{i}$
 \end_inset
 
@@ -1370,7 +1374,7 @@ Plotta
 \end_inset
 
 .
- Linjärt?
+ Konstant, eller mönster kvar?
 \begin_inset VSpace bigskip
 \end_inset
 
@@ -1405,11 +1409,15 @@ Plotta residualer
 \end_inset
 
 .
- Eller 
+ 
+\begin_inset Newline newline
+\end_inset
+
+Tidsserier: plotta 
 \begin_inset Formula $e_{i}$
 \end_inset
 
- mot tid, om tidsserier.
+ mot tid (observationsnummer).
 \begin_inset VSpace bigskip
 \end_inset
 
@@ -1977,7 +1985,70 @@ Standardfel för
 \begin_inset Graphics
 	filename figs/lifespan_reg_sterr.pdf
 	lyxscale 40
-	scale 30
+	scale 55
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Samplingfördelning i regression - interaktivt
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "1pt"
+separation "1pt"
+shadowsize "4pt"
+framecolor "orange"
+backgroundcolor "white"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset CommandInset href
+LatexCommand href
+name "\\includegraphics[width=0.6\\textwidth]{../observable/figs/sampdist_regression_widget.png}"
+target "https://statisticssu.github.io/SDA1/observable/linreg_simple_sampling_dist.html"
+literal "true"
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -2182,7 +2253,7 @@ sda1-paketet:
 \begin_inset Graphics
 	filename figs/lifespan_reg_confint.pdf
 	lyxscale 40
-	scale 35
+	scale 40
 
 \end_inset
 
@@ -2509,7 +2580,7 @@ Hypotestest i R
 \begin_inset Graphics
 	filename figs/lifespan_reg_test.pdf
 	lyxscale 50
-	scale 35
+	scale 50
 
 \end_inset
 
@@ -2566,7 +2637,7 @@ Prediktionsintervall
 \series default
 \color inherit
  för 
-\begin_inset Formula $\hat{y}(x)$
+\begin_inset Formula $\hat{y}_{\star}$
 \end_inset
 
  - 

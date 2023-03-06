@@ -1,6 +1,6 @@
 ---
 title: "Statistik och dataanalys I, 15 hp "
-subtitle: "Datorlaboration 7 - Regression"
+subtitle: "Datorlaboration 7 - Inferens för regression"
 author: 
   - Mattias Villani
 date: last-modified
@@ -83,7 +83,7 @@ och tolka skattningen av intercept och lutningskoefficient. Vilken skattning av 
 
 #### 💪 Uppgift 1.2
 
-Testa om variabeln tv är en signifikant förklarande variabel på 5% signifikansnivå. Ställ upp noll- och alternativhypotes, teststatistiska med fördelning under nollhypotesen. Utför testet med hjälp av formelsamlingen och formulera din slutsats. Du får använda information från R, men du ska ställa upp formeln för teststatistikan beräkna alla delar av den formeln.
+Testa om variabeln tv är en signifikant förklarande variabel på 5% signifikansnivå. Ställ upp noll- och alternativhypotes, teststatistiska med fördelning under nollhypotesen. Utför testet med hjälp av formelsamlingen och formulera din slutsats. Du får använda information från R, men du ska ställa upp formeln för teststatistikan och beräkna med den formeln.
 
 #### 💪 Uppgift 1.3
 
@@ -95,7 +95,7 @@ Gör en residualanalys med funktionen `reg_residuals` i `sda1`-paketet, och komm
 
 #### 💪 Uppgift 1.5
 
-Gör en prediktion med 95%-iga prediktionsintervall för `sales` vid `tv=100`. \[tips: argumentet `newdata` i `predict`-funktionen måste vara en dataframe, inte en vektor. Se min [kod för lifespan data](https://statisticssu.github.io/SDA1/code/lifespan_regression.R).\]
+Gör en prediktion med 95%-igt prediktionsintervall för `sales` vid `tv=100`. \[tips: argumentet `newdata` i `predict`-funktionen måste vara en dataframe, inte en vektor. Se min [kod för lifespan data](https://statisticssu.github.io/SDA1/code/lifespan_regression.R).\]
 
 ## 2. Multipel regression för reklamdata
 
