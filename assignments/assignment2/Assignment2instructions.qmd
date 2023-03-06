@@ -227,11 +227,11 @@ $$
 +\beta_3 \cdot \texttt{logpeople} \\
 +\beta_4 \cdot \texttt{onlysecondary}
 +\beta_5 \cdot \texttt{poolfilt}
-+\beta_5 \cdot \texttt{aircond} 
++\beta_6 \cdot \texttt{aircond} 
 + \varepsilon, \hspace{1cm} \varepsilon\overset{iid}{\sim}N(0,\sigma_{\varepsilon})
 $$
 
-där `logrooms = log(rooms)` och `logpeople = log(people)` (lägg till dessa transformerade variabler i vår dataframe `df`). Tolka skattningarna av koefficienterna $\beta_1$ och $\beta_5$.
+där `logrooms = log(rooms)` och `logpeople = log(people)` (lägg till dessa transformerade variabler i vår dataframe `df`). Tolka skattningarna av koefficienterna $\beta_1$ och $\beta_6$.
 
 #### 💪 Uppgift 3.6
 
