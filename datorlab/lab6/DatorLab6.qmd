@@ -148,8 +148,6 @@ I senaste valet fick S 30,33% av rösterna. Använda `prop.test` för att testa 
 
 ## 2. Konfidensintervall och test för ett väntevärde
 
-#### 💪 Uppgift 2.1
-
 I Övning 20.65 i SDA-boken analyseras data för mängden socker i frukostflingor (gram per 100 gram flingor) för flingor som riktar sig till barn (`child_sugar`):
 
 ```{r}
@@ -159,6 +157,8 @@ child_sugar = c(40.3,55.0,45.7,43.3,50.3,45.9,53.5,43,44.2,44,47.4,44,33.6,55.1,
 Låt oss analysera `child_sugar` med modellen
 
 $$X_1,X_2,\ldots,X_n \overset{iid}{\sim}N(\mu,\sigma)$$
+
+#### 💪 Uppgift 2.1
 
 Använd R för att beräkna ett 95%-igt konfidensintervall för $\mu$, både genom att använda formeln
 
