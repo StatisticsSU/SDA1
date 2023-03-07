@@ -335,110 +335,15 @@ Fel av typ I och II
 Fel av typ I
 \series default
 : 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-\begin_inset Formula $\alpha=P(\text{förkasta }H_{0}\mid H_{0}\text{ sann})$
+\begin_inset Formula $\alpha=P(\text{Förkasta }H_{0}\mid H_{0}\text{ sann})$
 \end_inset
 
-.
- 
+
 \end_layout
 
 \begin_layout Itemize
-Bestäms av kritiska värdet.
-\end_layout
-
-\end_deeper
-\begin_layout Itemize
-
-\series bold
-Fel av typ II:
-\series default
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-\begin_inset Formula $\beta=P(\text{inte förkasta }H_{0}\mid H_{A}\text{ sann})$
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Itemize
-Beror på kritiska värdet, men också sanna värdet på 
-\begin_inset Formula $\mu$
-\end_inset
-
- under 
-\begin_inset Formula $H_{A}$
-\end_inset
-
-.
-\end_layout
-
-\end_deeper
-\end_deeper
-\begin_layout Standard
-\begin_inset Separator parbreak
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-
-\series bold
-\color orange
-Fel av typ I och II - interaktivt
-\end_layout
-
-\end_inset
-
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-\align center
-\begin_inset Box Boxed
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "100col%"
-special "none"
-height "1in"
-height_special "totalheight"
-thickness "1pt"
-separation "1pt"
-shadowsize "4pt"
-framecolor "orange"
-backgroundcolor "white"
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset CommandInset href
-LatexCommand href
-name "\\includegraphics[width=0.6\\textwidth]{../observable/figs/typ1och2_widget.png}"
-target "https://statisticssu.github.io/SDA1/observable/hypotestest_typ1och2.html"
-literal "true"
-
-\end_inset
-
-
-\end_layout
-
+Fel av typ II: 
+\begin_inset Formula $\beta$
 \end_inset
 
 

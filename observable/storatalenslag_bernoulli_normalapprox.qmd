@@ -1,8 +1,7 @@
 ---
-title: "Stora talens lag - normalapproximation av andel"
+title: "Normalapproximation av andel"
 format: html
 ---
 
-
-<iframe width="100%" height="733" frameborder="0"
-  src="https://observablehq.com/embed/@mattiasvillani/stora-talens-slantsingling@1039?cells=normalapproxtext%2Cviewof+userinputs%2Ccondition_sample_size%2Ccondition_successes%2Ccondition_failure%2Cplt"></iframe>
+ <iframe width="100%" height="706" frameborder="0"
+  src="https://observablehq.com/embed/@mattiasvillani/stora-talens-slantsingling@1142?cells=viewof+userinputs%2Ccondition_sample_size%2Ccondition_successes%2Ccondition_failure%2Cplt"></iframe>
