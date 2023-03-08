@@ -1415,112 +1415,46 @@ T=\frac{\bar{d}-0}{\frac{s_{d}}{\sqrt{n}}}\sim t_{n-1}
 
 \end_layout
 
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-
-\series bold
-\color orange
-Local vs online insurance sales
-\series default
-\color inherit
-
-\begin_inset space \hspace{}
-\length 1cm
-\end_inset
-
-
-\begin_inset Graphics
-	filename figs/sdmdata_online_insurance_badge.svg
-	lyxscale 80
-	scale 70
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
- 
-\end_layout
-
-\begin_deeper
 \begin_layout Standard
-\align left
-
-\size scriptsize
-\begin_inset Box Frameless
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "12col%"
-special "none"
-height "1in"
-height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
-status open
-
-\begin_layout Plain Layout
-\align left
-
-\size tiny
 \begin_inset Tabular
 <lyxtabular version="3" rows="13" columns="4">
 <features tabularvalignment="middle">
 <column alignment="center" valignment="top">
-<column alignment="right" valignment="top">
-<column alignment="right" valignment="top">
-<column alignment="right" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
 <row>
 <cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size tiny
 Person
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="right" valignment="top" topline="true" bottomline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size tiny
 Local
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="right" valignment="top" topline="true" bottomline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size tiny
 Online
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="right" valignment="top" topline="true" bottomline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size tiny
 PriceDiff
 \end_layout
 
@@ -1532,41 +1466,33 @@ PriceDiff
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size tiny
 1
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="right" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size tiny
 550
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="right" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size tiny
 388
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="right" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size tiny
 162
 \end_layout
 
@@ -1578,41 +1504,33 @@ PriceDiff
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size tiny
 2
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="right" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size tiny
 856
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="right" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size tiny
 593
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="right" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size tiny
 263
 \end_layout
 
@@ -1624,41 +1542,33 @@ PriceDiff
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size tiny
 3
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="right" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size tiny
 460
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="right" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size tiny
 497
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="right" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size tiny
 -37
 \end_layout
 
@@ -1670,41 +1580,33 @@ PriceDiff
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size tiny
 4
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="right" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size tiny
 1248
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="right" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size tiny
 910
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="right" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size tiny
 338
 \end_layout
 
@@ -1716,41 +1618,33 @@ PriceDiff
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size tiny
 5
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="right" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size tiny
 580
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="right" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size tiny
 665
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="right" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size tiny
 -85
 \end_layout
 
@@ -1762,41 +1656,33 @@ PriceDiff
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size tiny
 6
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="right" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size tiny
 1022
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="right" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size tiny
 1263
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="right" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size tiny
 -241
 \end_layout
 
@@ -1808,42 +1694,34 @@ PriceDiff
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size tiny
 7
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="right" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size tiny
 773
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="right" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size tiny
 703
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="right" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size tiny
-70
+70 
 \end_layout
 
 \end_inset
@@ -1854,42 +1732,34 @@ PriceDiff
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size tiny
 8
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="right" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size tiny
 830
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="right" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size tiny
 789
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="right" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size tiny
-41
+41 
 \end_layout
 
 \end_inset
@@ -1900,41 +1770,33 @@ PriceDiff
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size tiny
 9
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="right" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size tiny
 900
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="right" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size tiny
 1001
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="right" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size tiny
 -101
 \end_layout
 
@@ -1946,41 +1808,33 @@ PriceDiff
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size tiny
 10
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="right" valignment="top" bottomline="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size tiny
 710
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="right" valignment="top" bottomline="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size tiny
 699
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="right" valignment="top" bottomline="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size tiny
 11
 \end_layout
 
@@ -1992,42 +1846,33 @@ PriceDiff
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size tiny
 medelvärde
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="right" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size tiny
 792.900
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="right" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size tiny
 750.800
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="right" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\series bold
-\size tiny
 42.100
 \end_layout
 
@@ -2039,42 +1884,33 @@ medelvärde
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size tiny
 standardavv.
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="right" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size tiny
 235.431
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="right" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size tiny
 254.956
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="right" valignment="top" usebox="none">
+<cell alignment="center" valignment="top" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\series bold
-\size tiny
 174.964
 \end_layout
 
@@ -2083,73 +1919,6 @@ standardavv.
 </row>
 </lyxtabular>
 
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset space \hspace{}
-\length 4cm
-\end_inset
-
-
-\begin_inset Box Frameless
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "30col%"
-special "none"
-height "1in"
-height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
-status open
-
-\begin_layout Plain Layout
-\align left
-
-\size scriptsize
-\begin_inset Graphics
-	filename figs/boxplot_twopop_paired_insurance.pdf
-	lyxscale 40
-	scale 25
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\align left
-
-\size scriptsize
-\begin_inset Graphics
-	filename figs/paired_ttest_R.png
-	lyxscale 40
-	scale 27
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\begin_layout Standard
-\begin_inset Separator parbreak
 \end_inset
 
 

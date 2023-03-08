@@ -39,4 +39,5 @@ SE = sqrt(s1^2/n1 + s2^2/n2) # Standard error for xBar1 - xBar2
 tcrit = qt(0.975, df = 17.223)  # df from results of t.test above
 CI95 = c((xBar1 - xBar2) - tcrit*SE, (xBar1 - xBar2) + tcrit*SE)
 
-
+# Side-by-side boxplots are nice
+bwplot(Total.Pesticides ~ Location, data = salmonTwoPop, box.ratio = 0.2, fill = alpha("steelblue", 0.7), alpha = 0.5)

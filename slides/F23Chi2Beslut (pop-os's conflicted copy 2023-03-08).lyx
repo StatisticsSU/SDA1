@@ -185,7 +185,7 @@ inserttotalframenumber
 \begin_layout Subtitle
 
 \color orange
-Föreläsning 22 - Hypotestest och jämföra grupper
+Föreläsning 23 - Chi2-test och fatta beslut under osäkerhet
 \end_layout
 
 \begin_layout Author
@@ -792,10 +792,6 @@ Grupp 2: Norge med
 \end_inset
 
 .
-\begin_inset VSpace medskip
-\end_inset
-
-
 \end_layout
 
 \begin_deeper
@@ -831,7 +827,7 @@ Grupp 2: Norge med
 \begin_inset Graphics
 	filename figs/SalmonNorwayHist.pdf
 	lyxscale 20
-	scale 26
+	scale 28
 
 \end_inset
 
@@ -839,7 +835,7 @@ Grupp 2: Norge med
 \begin_inset Graphics
 	filename figs/SalmonNorwayBoxplot.pdf
 	lyxscale 20
-	scale 26
+	scale 28
 
 \end_inset
 
@@ -881,7 +877,7 @@ Grupp 1:
 \end_inset
 
  observationer från populationen 
-\begin_inset Formula ${\color{orange}N}(\mu_{1},\sigma_{1})$
+\begin_inset Formula $N(\mu_{1},\sigma_{1})$
 \end_inset
 
 .
@@ -916,7 +912,7 @@ Grupp 2:
 \end_inset
 
  observationer från populationen 
-\begin_inset Formula ${\color{orange}N}(\mu_{2},\sigma_{2})$
+\begin_inset Formula $N(\mu_{2},\sigma_{2})$
 \end_inset
 
 .
@@ -951,13 +947,7 @@ Medelvärde
 Oberoende
 \series default
 \color inherit
- observationer 
-\series bold
-\color blue
-inom och mellan grupperna
-\series default
-\color inherit
-.
+ stickprov från populationerna.
 \size footnotesize
 
 \begin_inset Formula 
@@ -978,6 +968,10 @@ Var(\bar{X}_{1}-\bar{X}_{2}) & =Var(\bar{X}_{1})+Var(\bar{X}_{2})=\frac{\sigma_{
 Standardfel
 \series default
 \color inherit
+ 
+\begin_inset Formula $\bar{X}_{1}-\bar{X}_{2}$
+\end_inset
+
  
 \begin_inset Formula 
 \[
@@ -1064,25 +1058,6 @@ Jämföra grupper - bekämpningsmedel i lax
 \begin_layout Standard
 \align center
 \begin_inset Graphics
-	filename figs/SalmonTwoPopBoxplots.pdf
-	lyxscale 20
-	scale 25
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset VSpace -1cm
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\align center
-\begin_inset Graphics
 	filename figs/salmon_two_sample_t.png
 	lyxscale 50
 	scale 30
@@ -1125,8 +1100,8 @@ Jämföra grupper - test för
 Hypotestest för skillnaden mellan två gruppers väntevärden:
 \begin_inset Formula 
 \begin{align*}
-H_{0} & :\mu_{1}=\mu_{2}\hspace{1em}\hspace{1em}\hspace{1em}\hspace{1em}\hspace{1em}\hspace{1em}\hspace{1em}H_{0}:\mu_{1}-\mu_{2}=d_{0}\\
-H_{A} & :\mu_{1}\neq\mu_{2}\hspace{1em}\hspace{1em}\hspace{1em}\hspace{1em}\hspace{1em}\hspace{1em}\hspace{1em}H_{A}:\mu_{1}-\mu_{2}\neq d_{0}
+H_{0} & :\mu_{1}=\mu_{2}\\
+H_{A} & :\mu_{1}\neq\mu_{2}
 \end{align*}
 
 \end_inset
@@ -1157,7 +1132,7 @@ Teststatistika
 
 \begin_inset Formula 
 \[
-T=\frac{(\bar{X}_{1}-\bar{X}_{2})-0}{SE(\bar{x}_{1}-\bar{x}_{2})}=\frac{(\bar{X}_{1}-\bar{X}_{2})-0}{\sqrt{\frac{s_{1}^{2}}{n_{1}}+\frac{s_{2}^{2}}{n_{2}}}}\sim t_{\mathrm{df}}\text{ }\text{under }H_{0}
+T=\frac{(\bar{X}_{1}-\bar{X}_{2})-(\mu_{1}-\mu_{2})}{SE(\bar{x}_{1}-\bar{x}_{2})}=\frac{(\bar{X}_{1}-\bar{X}_{2})-(\mu_{1}-\mu_{2})}{\sqrt{\frac{s_{1}^{2}}{n_{1}}+\frac{s_{2}^{2}}{n_{2}}}}\sim t_{\mathrm{df}}\text{ }\text{under }H_{0}
 \]
 
 \end_inset
@@ -1220,17 +1195,11 @@ Jämföra parade grupper
 
 \begin_deeper
 \begin_layout Itemize
-
-\series bold
-\color orange
-Parade data
-\series default
-\color inherit
-.
- Ex 
+Parade data.
+ 
 \series bold
 \color blue
-mäter samma 
+Mäter samma 
 \begin_inset Formula $n$
 \end_inset
 
@@ -1278,18 +1247,7 @@ differenser
 \begin_inset Formula $d_{i}=x_{1i}-x_{2i}$
 \end_inset
 
-.
- 
-\end_layout
 
-\begin_layout Itemize
-
-\series bold
-\color blue
-Differenserna ska vara oberoende
-\series default
-\color inherit
- mellan personer.
 \end_layout
 
 \begin_layout Itemize
@@ -1396,746 +1354,6 @@ status open
 \[
 T=\frac{\bar{d}-0}{\frac{s_{d}}{\sqrt{n}}}\sim t_{n-1}
 \]
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\begin_layout Standard
-\begin_inset Separator parbreak
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-
-\series bold
-\color orange
-Local vs online insurance sales
-\series default
-\color inherit
-
-\begin_inset space \hspace{}
-\length 1cm
-\end_inset
-
-
-\begin_inset Graphics
-	filename figs/sdmdata_online_insurance_badge.svg
-	lyxscale 80
-	scale 70
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-\align left
-
-\size scriptsize
-\begin_inset Box Frameless
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "12col%"
-special "none"
-height "1in"
-height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
-status open
-
-\begin_layout Plain Layout
-\align left
-
-\size tiny
-\begin_inset Tabular
-<lyxtabular version="3" rows="13" columns="4">
-<features tabularvalignment="middle">
-<column alignment="center" valignment="top">
-<column alignment="right" valignment="top">
-<column alignment="right" valignment="top">
-<column alignment="right" valignment="top">
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\size tiny
-Person
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="right" valignment="top" topline="true" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\size tiny
-Local
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="right" valignment="top" topline="true" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\size tiny
-Online
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="right" valignment="top" topline="true" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\size tiny
-PriceDiff
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\size tiny
-1
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="right" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\size tiny
-550
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="right" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\size tiny
-388
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="right" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\size tiny
-162
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\size tiny
-2
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="right" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\size tiny
-856
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="right" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\size tiny
-593
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="right" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\size tiny
-263
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\size tiny
-3
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="right" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\size tiny
-460
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="right" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\size tiny
-497
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="right" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\size tiny
--37
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\size tiny
-4
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="right" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\size tiny
-1248
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="right" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\size tiny
-910
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="right" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\size tiny
-338
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\size tiny
-5
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="right" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\size tiny
-580
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="right" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\size tiny
-665
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="right" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\size tiny
--85
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\size tiny
-6
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="right" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\size tiny
-1022
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="right" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\size tiny
-1263
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="right" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\size tiny
--241
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\size tiny
-7
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="right" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\size tiny
-773
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="right" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\size tiny
-703
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="right" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\size tiny
-70
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\size tiny
-8
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="right" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\size tiny
-830
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="right" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\size tiny
-789
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="right" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\size tiny
-41
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\size tiny
-9
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="right" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\size tiny
-900
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="right" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\size tiny
-1001
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="right" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\size tiny
--101
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\size tiny
-10
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="right" valignment="top" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\size tiny
-710
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="right" valignment="top" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\size tiny
-699
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="right" valignment="top" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\size tiny
-11
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\size tiny
-medelvärde
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="right" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\size tiny
-792.900
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="right" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\size tiny
-750.800
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="right" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\series bold
-\size tiny
-42.100
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\size tiny
-standardavv.
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="right" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\size tiny
-235.431
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="right" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\size tiny
-254.956
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="right" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\series bold
-\size tiny
-174.964
-\end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset space \hspace{}
-\length 4cm
-\end_inset
-
-
-\begin_inset Box Frameless
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "30col%"
-special "none"
-height "1in"
-height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
-status open
-
-\begin_layout Plain Layout
-\align left
-
-\size scriptsize
-\begin_inset Graphics
-	filename figs/boxplot_twopop_paired_insurance.pdf
-	lyxscale 40
-	scale 25
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\align left
-
-\size scriptsize
-\begin_inset Graphics
-	filename figs/paired_ttest_R.png
-	lyxscale 40
-	scale 27
 
 \end_inset
 
