@@ -320,6 +320,155 @@ status open
 
 \series bold
 \color orange
+Praktisk vs Statistisk signifikans
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+\color blue
+Teststatistiska
+\series default
+\color inherit
+
+\begin_inset Formula 
+\[
+T=\frac{\bar{X}-\mu_{0}}{\frac{s}{\sqrt{n}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Stora stickprov: även små skillnader 
+\begin_inset Formula $\bar{X}-\mu_{0}$
+\end_inset
+
+ blir 
+\series bold
+\color blue
+signifikanta
+\series default
+\color inherit
+.
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Det betyder inte alltid att de är 
+\series bold
+\color blue
+praktiskt betydelsefulla
+\series default
+\color inherit
+.
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Studie 1:
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\bar{x}=1$
+\end_inset
+
+, 
+\begin_inset Formula $\mu_{0}=0$
+\end_inset
+
+, 
+\begin_inset Formula $s=2$
+\end_inset
+
+, 
+\begin_inset Formula $n=10$
+\end_inset
+
+.
+\begin_inset Formula 
+\[
+t_{\mathrm{obs}}=\frac{1-0}{\frac{2}{\sqrt{10}}}=1.58
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Studie 2:
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\bar{x}=0.05$
+\end_inset
+
+, 
+\begin_inset Formula $\mu_{0}=0$
+\end_inset
+
+, 
+\begin_inset Formula $s=2$
+\end_inset
+
+, 
+\begin_inset Formula $n=10000$
+\end_inset
+
+.
+\begin_inset Formula 
+\[
+t_{\mathrm{obs}}=\frac{0.05-0}{\frac{2}{\sqrt{10000}}}=2.5
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
 Fel av typ I och II
 \end_layout
 
@@ -332,21 +481,587 @@ Fel av typ I och II
 \begin_layout Itemize
 
 \series bold
+\color blue
 Fel av typ I
 \series default
+\color inherit
 : 
-\begin_inset Formula $\alpha=P(\text{Förkasta }H_{0}\mid H_{0}\text{ sann})$
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\alpha=P(\text{förkasta }H_{0}\mid H_{0}\text{ sann})$
+\end_inset
+
+.
+ 
+\begin_inset VSpace medskip
 \end_inset
 
 
 \end_layout
 
 \begin_layout Itemize
-Fel av typ II: 
-\begin_inset Formula $\beta$
+Bestäms av kritiska värdet.
+\begin_inset VSpace bigskip
 \end_inset
 
 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+\color blue
+Fel av typ II
+\series default
+\color inherit
+: 
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\beta=P(\text{inte förkasta }H_{0}\mid H_{A}\text{ sann})$
+\end_inset
+
+.
+ 
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Beror på kritiska värdet och 
+\series bold
+\color orange
+värdet på 
+\begin_inset Formula $\mu$
+\end_inset
+
+ under 
+\begin_inset Formula $H_{A}$
+\end_inset
+
+
+\series default
+\color inherit
+.
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+\color blue
+Testets styrka
+\series default
+\color inherit
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $1-\beta=P(\text{förkasta }H_{0}\mid H_{A}\text{ sann})$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Fel av typ I och II
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figs/typ1and2table.pdf
+	lyxscale 40
+	scale 85
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Fel av typ I och II - interaktivt
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Box Boxed
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "1pt"
+separation "1pt"
+shadowsize "4pt"
+framecolor "orange"
+backgroundcolor "white"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset CommandInset href
+LatexCommand href
+name "\\includegraphics[width=0.6\\textwidth]{../observable/figs/typ1och2_widget.png}"
+target "https://statisticssu.github.io/SDA1/observable/hypotestest_typ1och2.html"
+literal "true"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Jämföra grupper - bekämpningsmedel i odlad lax
+\begin_inset space \hspace{}
+\length 1.8cm
+\end_inset
+
+ 
+\series default
+\color inherit
+
+\begin_inset Graphics
+	filename figs/sdmdata_salmon_badge.svg
+	lyxscale 80
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\family typewriter
+Total.pestocide
+\family default
+ i 
+\begin_inset Formula $153$
+\end_inset
+
+ laxar vid 8 olika platser.
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Grupp 1: Eastern Canada med 
+\begin_inset Formula $n=24$
+\end_inset
+
+ laxar:
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\family typewriter
+\size tiny
+x=c(25.739, 24.799, 27.563, 21.511, 23.821, 23.311, 49.883, 42.352, 44.598, 31.353,
+ 33.837, 33.915, 41.668, 42.383, 43.638, 39.768, 35.256, 36.270, 29.630, 31.266, 32.577,
+ 33.056, 29.789, 27.737)
+\end_layout
+
+\begin_layout Itemize
+Grupp 2: Norge med Bekämpningsmedel (
+\family typewriter
+Total.pestocide
+\family default
+) i Eastern Canada med 
+\begin_inset Formula $n=24$
+\end_inset
+
+ laxar:
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\family typewriter
+\size tiny
+x=c(25.739, 24.799, 27.563, 21.511, 23.821, 23.311, 49.883, 42.352, 44.598, 31.353,
+ 33.837, 33.915, 41.668, 42.383, 43.638, 39.768, 35.256, 36.270, 29.630, 31.266, 32.577,
+ 33.056, 29.789, 27.737)
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Jämföra grupper - konfidensintervall för 
+\begin_inset Formula $\mu_{1}-\mu_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Grupp 1: 
+\begin_inset Formula $n_{1}$
+\end_inset
+
+ observationer från populationen 
+\begin_inset Formula $N(\mu_{1},\sigma_{1})$
+\end_inset
+
+.
+ 
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Medelvärde 
+\begin_inset Formula $\bar{x}_{1}$
+\end_inset
+
+ och standardavvikelse 
+\begin_inset Formula $s_{1}$
+\end_inset
+
+.
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Grupp 2: 
+\begin_inset Formula $n_{2}$
+\end_inset
+
+ observationer från populationen 
+\begin_inset Formula $N(\mu_{2},\sigma_{2})$
+\end_inset
+
+.
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Medelvärde 
+\begin_inset Formula $\bar{x}_{2}$
+\end_inset
+
+ och standardavvikelse 
+\begin_inset Formula $s_{2}$
+\end_inset
+
+.
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+\color blue
+Oberoende
+\series default
+\color inherit
+ stickprov från populationerna.
+\size footnotesize
+
+\begin_inset Formula 
+\begin{align*}
+E(\bar{X}_{1}-\bar{X}_{2}) & =E(\bar{X}_{1})-E(\bar{X}_{2})=\mu_{1}-\mu_{2}\\
+Var(\bar{X}_{1}-\bar{X}_{2}) & =Var(\bar{X}_{1})+Var(\bar{X}_{2})=\frac{\sigma_{1}^{2}}{n_{1}}+\frac{\sigma_{2}^{2}}{n_{2}}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color blue
+Standardfel
+\series default
+\color inherit
+ 
+\begin_inset Formula $\bar{X}_{1}-\bar{X}_{2}$
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+SE(\bar{x}_{1}-\bar{x}_{2})=\sqrt{\frac{s_{1}^{2}}{n_{1}}+\frac{s_{2}^{2}}{n_{2}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color blue
+Konfidensintervall för differensen 
+\begin_inset Formula $\mu_{1}-\mu_{2}$
+\end_inset
+
+
+\series default
+\color inherit
+
+\begin_inset Formula 
+\[
+(\bar{x}_{1}-\bar{x}_{2})\pm t_{0.025,\mathrm{df}}\cdot SE(\bar{x}_{1}-\bar{x}_{2})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Frihetsgraderna 
+\begin_inset Formula $\mathrm{df}$
+\end_inset
+
+ har en komplicerad formel.
+ Använder R.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Jämföra grupper - test för 
+\begin_inset Formula $\mu_{1}=\mu_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Hypotestest för skillnaden mellan två gruppers väntevärden:
+\begin_inset Formula 
+\begin{align*}
+H_{0} & :\mu_{1}=\mu_{2}\\
+H_{A} & :\mu_{1}\neq\mu_{2}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Recall: Allmän formel teststatistika
+\begin_inset Formula 
+\[
+\frac{\text{Estimat}-\text{parameter under }H_{0}}{\text{Standardfel estimator under }H_{0}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color blue
+Teststatistika
+\series default
+\size small
+\color inherit
+
+\begin_inset Formula 
+\[
+T=\frac{(\bar{X}_{1}-\bar{X}_{2})-(\mu_{1}-\mu_{2})}{SE(\bar{x}_{1}-\bar{x}_{2})}=\frac{(\bar{X}_{1}-\bar{X}_{2})-(\mu_{1}-\mu_{2})}{\sqrt{\frac{s_{1}^{2}}{n_{1}}+\frac{s_{2}^{2}}{n_{2}}}}\sim t_{\mathrm{df}}\text{ }\text{under }H_{0}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Förkastar 
+\begin_inset Formula $H_{0}$
+\end_inset
+
+ om 
+\begin_inset Formula $\vert t_{obs}\vert>t_{crit}$
+\end_inset
+
+.
+ 
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $p$
+\end_inset
+
+-värde från 
+\begin_inset Formula $t_{\mathrm{df}}$
+\end_inset
+
+.
+ 
 \end_layout
 
 \end_deeper

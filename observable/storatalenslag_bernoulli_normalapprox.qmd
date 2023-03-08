@@ -3,5 +3,5 @@ title: "Normalapproximation av andel"
 format: html
 ---
 
- <iframe width="100%" height="706" frameborder="0"
-  src="https://observablehq.com/embed/@mattiasvillani/stora-talens-slantsingling@1142?cells=viewof+userinputs%2Ccondition_sample_size%2Ccondition_successes%2Ccondition_failure%2Cplt"></iframe>
+<iframe width="100%" height="706" frameborder="0"
+  src="https://observablehq.com/embed/@mattiasvillani/stora-talens-slantsingling?cells=viewof+userinputs%2Ccondition_sample_size%2Ccondition_successes%2Ccondition_failure%2Cplt"></iframe>
