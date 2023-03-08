@@ -25,50 +25,18 @@ xBar2 = mean(x2)
 s1 = sd(x1)
 s2 = sd(x2)
 
-ttest_results = t.test(~ Total.Pesticides |  Location, data = salmonTwoPop)
+# Using the t.test function to compute C.I. and do test H0: mu1 = mu2
+t.test(Total.Pesticides ~ Location, data = salmonTwoPop)
 
-# Standard error for xBar1 - xBar2
-SE = sqrt(s1^2/n1 + s2^2/n2)
+# t.test(~ Total.Pesticides |  Location, data = salmonTwoPop) # alternative formulation
+
+# since p-value = 0.02663 < 0.05, we reject H0 at 5% significance level
+
+# Doing the confidence interval calculation "by hand"
+SE = sqrt(s1^2/n1 + s2^2/n2) # Standard error for xBar1 - xBar2
 
 # 95% Confidence interval for mu1-mu2
-CI95 = c((xBar1 - xBar2) - tcrit*SE, xBar + tcrit*SE)
-
-# 95% Confidence interval with the Mosaic package
-with(salmon, t.test(Total.Pesticides[Location == "Eastern Canada"]))
-
-# 68% Confidence interval with the Mosaic package
-with(salmon, t.test(Total.Pesticides[Location == "Eastern Canada"], conf.level = 0.68))
-
-# 99% Confidence interval with the Mosaic package
-with(salmon, t.test(Total.Pesticides[Location == "Eastern Canada"], conf.level = 0.99))
-
-
-#################################
-# Let's analyze all locations now
-#################################
-
-locations = unique(salmon$Location) # Vector with names of the eight unique locations
-n_locations = length(locations)     # Number of locations
-# Preparing a table (matrix) with zeros to store results
-summary_results = as.data.frame(matrix(rep(0,4*n_locations), n_locations, 4))
-colnames(summary_results) <- c("Location", "SampleMean", "Lower95", "Upper95") # just column names
-summary_results[,1] <- locations  # name the rows by the location name
-for (i in 1:n_locations){
-  results = with(salmon, t.test(Total.Pesticides[Location == locations[i]]))
-  summary_results[i, 1] = locations[i]
-  summary_results[i, 2] = as.numeric(results$estimate)
-  summary_results[i, c(3,4)] = as.numeric(results$conf.int)
-}
-summary_results
-
-
-# Plot the results with ggplot2 (tidyverse) 
-library(ggplot2)
-ggplot(summary_results) +
-  geom_bar( aes(x = Location, y = SampleMean), stat = "identity", fill = "steelblue", alpha=0.7) +                      # bar chart
-  geom_errorbar( aes(x = Location, ymin = Lower95, ymax = Upper95), width=0.5, colour="orange", alpha=0.9, cex = 0.5) + # adds the confidence intervals
-  coord_flip() +                                                                                                        # flips coordinates so bars are horizontal
-  theme(panel.grid.major.y = element_blank())                                                                           # removes the horizontal gridlines 
-
+tcrit = qt(0.975, df = 17.223)  # df from results of t.test above
+CI95 = c((xBar1 - xBar2) - tcrit*SE, (xBar1 - xBar2) + tcrit*SE)
 
 

@@ -50,14 +50,14 @@ Kod: [confidence_intervals_salmon.R](/code/confidence_intervals_salmon.R)
 Läs: SDM Kapitel 18 (ej *Random matters* på sid 579) \| [Slides](/slides/F19HypotesTest.pdf)\
 Interaktivt: [hypotestest - väntevärde](/observable/hypotestest_mean.qmd)
 
-**Föreläsning 20 - Inferens i linjär regression - populationsmodell och standardfel**\
-Läs: SDM Kapitel 23 (ej 23.7-23.8) \| [Slides](/slides/F20Regression.pdf)\
+**Föreläsning 20 - Inferens i linjär regression - populationsmodell och samplingfördelning**\
+Läs: SDM Kapitel 23.1-23.3 \| [Slides](/slides/F20Regression1.pdf)\
 Kod: [regression lifespan data](/code/lifespan_regression.R)\
 Interaktivt: [samplingfördelning regression](/observable/linreg_simple_sampling_dist.qmd)\
 Extramaterial: [kod för residualanalys på simulerad regressionsdata](code/residualanalys_simulerade_data.R)
 
 **Föreläsning 21 - Inferens i linjär regression - konfidensintervall, hypotestest och prediktionsintervall**\
-Läs: SDM Kapitel 23 (ej 23.7-23.8) \| [Slides](/slides/F20Regression.pdf)\
+Läs: SDM Kapitel 23.3-23.6 \| [Slides](/slides/F21Regression2.pdf)\
 
 **Föreläsning 22 - Hypotestest och jämföra grupper.**\
 Läs: SDM Kapitel 19, 20.4, 20.5, 21.1, 21.2 \| [Slides](/misc/larry.png)\

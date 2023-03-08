@@ -185,7 +185,7 @@ inserttotalframenumber
 \begin_layout Subtitle
 
 \color orange
-Föreläsning 20 - Inferens i linjär regression
+Föreläsning 22 - Hypotestest och jämföra grupper
 \end_layout
 
 \begin_layout Author
@@ -738,6 +738,10 @@ Total.pestocide
 \end_inset
 
  laxar vid 8 olika platser.
+\begin_inset VSpace medskip
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
@@ -746,6 +750,15 @@ Grupp 1: Eastern Canada med
 \end_inset
 
  laxar.
+ 
+\begin_inset Formula $N(\mu_{1},\sigma_{1})$
+\end_inset
+
+.
+\begin_inset VSpace medskip
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -761,6 +774,10 @@ Grupp 1: Eastern Canada med
 \end_inset
 
 
+\begin_inset VSpace medskip
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -769,7 +786,12 @@ Grupp 2: Norge med
 \begin_inset Formula $n=12$
 \end_inset
 
- laxar:
+ laxar.
+ 
+\begin_inset Formula $N(\mu_{2},\sigma_{2})$
+\end_inset
+
+.
 \end_layout
 
 \begin_deeper
@@ -785,15 +807,27 @@ Grupp 2: Norge med
 \end_inset
 
 
+\begin_inset VSpace bigskip
+\end_inset
+
+
 \end_layout
 
 \end_deeper
+\begin_layout Itemize
+Är 
+\begin_inset Formula $\mu_{1}=\mu_{2}$
+\end_inset
+
+?
+\end_layout
+
 \begin_layout Standard
 \align center
 \begin_inset Graphics
 	filename figs/SalmonNorwayHist.pdf
 	lyxscale 20
-	scale 12
+	scale 28
 
 \end_inset
 
@@ -801,7 +835,7 @@ Grupp 2: Norge med
 \begin_inset Graphics
 	filename figs/SalmonNorwayBoxplot.pdf
 	lyxscale 20
-	scale 12
+	scale 28
 
 \end_inset
 
@@ -996,6 +1030,59 @@ status open
 
 \series bold
 \color orange
+Jämföra grupper - bekämpningsmedel i lax
+\begin_inset space \hspace{}
+\length 0.1cm
+\end_inset
+
+ 
+\series default
+\color inherit
+
+\begin_inset Graphics
+	filename figs/sdmdata_salmon_badge.svg
+	lyxscale 80
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename figs/salmon_two_sample_t.png
+	lyxscale 50
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
 Jämföra grupper - test för 
 \begin_inset Formula $\mu_{1}=\mu_{2}$
 \end_inset
@@ -1080,6 +1167,202 @@ Förkastar
 
 .
  
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Jämföra parade grupper
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Parade data.
+ 
+\series bold
+\color blue
+Mäter samma 
+\begin_inset Formula $n$
+\end_inset
+
+ personer
+\series default
+\color inherit
+ vid två tillfällen:
+\end_layout
+
+\begin_layout Itemize
+Mätningar vid tidpunkt 1: 
+\begin_inset Formula $N(\mu_{1},\sigma_{1})$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+Mätningar vid tidpunkt 2: 
+\begin_inset Formula $N(\mu_{2},\sigma_{2})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color blue
+Beroende
+\series default
+\color inherit
+ stickprov, med lika många observationer.
+\end_layout
+
+\begin_layout Itemize
+Skapa 
+\series bold
+\color blue
+differenser
+\series default
+\color inherit
+ av mätningarna: 
+\begin_inset Formula $d_{i}=x_{1i}-x_{2i}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color blue
+Standardfel
+\series default
+\color inherit
+
+\begin_inset Formula 
+\[
+SE(\bar{d})=\frac{s_{d}}{\sqrt{n}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color blue
+95%-igt konfidensintervall 
+\series default
+\color inherit
+
+\begin_inset Formula 
+\[
+\bar{d}\pm t_{0.025}\cdot\frac{s_{d}}{\sqrt{n}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color blue
+Hypotestest
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -0.9cm
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "45col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{align*}
+H_{0} & :\mu_{1}=\mu_{2}\\
+H_{1} & :\mu_{1}\neq\mu_{2}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "b"
+use_parbox 0
+use_makebox 0
+width "45col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+T=\frac{\bar{d}-0}{\frac{s_{d}}{\sqrt{n}}}\sim t_{n-1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
