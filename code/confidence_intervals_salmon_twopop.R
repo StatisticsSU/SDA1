@@ -1,37 +1,37 @@
 # Confidence intervals for the Farmed_salmon data in the SDA-book, chapter 17.
+# Two populations: Eastern Canada and Norway
 # Author: Mattias Villani, https://mattiasvillani.com
 
 library(mosaic)
 salmon <- read.csv(file = "data/Farmed_salmon.txt", sep = "\t")
-salmonReduced <- salmon[salmon$Location == "Eastern Canada" | salmon$Location == "Scotland" | salmon$Location == "Norway",]
+salmonTwoPop <- salmon[salmon$Location == "Eastern Canada" | salmon$Location == "Norway",]
 
-########################################
-# Focusing first only on Eastern Canada
-########################################
-# Select all observations (rows with Location == "Eastern Canada")
-# Then immediately select the Total.Pesticides variable and store in vector x
-x = salmon[salmon$Location == "Eastern Canada",]$Total.Pesticides 
-n = length(x)
+x1 = salmon[salmon$Location == "Eastern Canada",]$Total.Pesticides 
+n1 = length(x1)
+x2 = salmon[salmon$Location == "Norway",]$Total.Pesticides 
+n2 = length(x2)
 
 # Plot the data - to check for normality
-hist(x, main = "Eastern Canada", xlab ="Bekämpningsmedel", c = alpha("orange", 0.7)) # Hard to tell with only 24 observations
-bwplot(x, main = "Eastern Canada", xlab ="Bekämpningsmedel", box.ratio = 0.2, fill = alpha("steelblue", 0.7), alpha = 0.5) # At least no outliers
+hist(x1, main = "Eastern Canada", xlab ="Bekämpningsmedel", c = alpha("orange", 0.7)) # Hard to tell with only 24 observations
+bwplot(x1, main = "Eastern Canada", xlab ="Bekämpningsmedel", box.ratio = 0.2, fill = alpha("steelblue", 0.7), alpha = 0.5) # At least no outliers
+hist(x2, main = "Norway", xlab ="Bekämpningsmedel", c = alpha("orange", 0.7)) # Hard to tell with only 24 observations
+bwplot(x2, main = "Norway", xlab ="Bekämpningsmedel", box.ratio = 0.2, fill = alpha("steelblue", 0.7), alpha = 0.5) # At least no outliers
 
-# Estimate the mean mu of the population with the sample mean, xBar:
-xBar = mean(x)
+# Estimate the mean mu of the two population with the sample mean, xBar:
+xBar1 = mean(x1)
+xBar2 = mean(x2)
 
-# Estimate the standard deviation of the population:
-s = sd(x)
+# Estimate the standard deviation of the populations:
+s1 = sd(x1)
+s2 = sd(x2)
 
-# Standard error - the standard deviation of the sampling distribution of xBar
-SE = s/sqrt(n)
+ttest_results = t.test(~ Total.Pesticides |  Location, data = salmonTwoPop)
 
-# Critical value from t-distribution with n-1 degrees of freedom. 
-# Confidence level: 95% (which means 2.5% to the right, or 97.% to the left)
-tcrit = qt(0.975, df = n-1)
+# Standard error for xBar1 - xBar2
+SE = sqrt(s1^2/n1 + s2^2/n2)
 
-# 95% Confidence interval
-CI95 = c(xBar - tcrit*SE, xBar + tcrit*SE)
+# 95% Confidence interval for mu1-mu2
+CI95 = c((xBar1 - xBar2) - tcrit*SE, xBar + tcrit*SE)
 
 # 95% Confidence interval with the Mosaic package
 with(salmon, t.test(Total.Pesticides[Location == "Eastern Canada"]))

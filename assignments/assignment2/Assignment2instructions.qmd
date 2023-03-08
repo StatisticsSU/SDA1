@@ -100,7 +100,7 @@ df = electricitycost
 
 #### 💪 Uppgift 1.1
 
-Variabeln `people` innehåller antal personer i hushållet. Definiera variabeln `extrapeople = df$people - 1`, som mäter antalet personer *utöver* ägaren (som vi antar är bara en person). Modellera `extrapeople` som oberoende observationer från en $\mathrm{Pois}(\lambda)$-fördelning. Skatta parametern $\lambda$ från datamaterialet.
+Variabeln `people` innehåller antal personer i hushållet. Definiera variabeln `extrapeople = df$people - 1`, som mäter antalet personer *utöver* ägaren (som vi antar är bara en person). I den här uppgiften ska vi modellera `extrapeople` som oberoende observationer från en $\mathrm{Pois}(\lambda)$-fördelning. Skatta parametern $\lambda$ från datamaterialet.
 
 #### 💪 Uppgift 1.2
 
@@ -130,7 +130,7 @@ hist(log(df$cost), 30, freq = FALSE, col = "orange")
 
 #### 💪 Uppgift 2.1
 
-Modellera variabeln `logcost = log(df$cost)` som oberoende observationer från en $N(\mu,\sigma)$ fördelning. Skatta $\mu$ och $\sigma$ från data.
+I den här uppgiften ska vi modellera variabeln `logcost = log(df$cost)` som oberoende observationer från en $N(\mu,\sigma)$ fördelning. Skatta $\mu$ och $\sigma$ från data.
 
 #### 💪 Uppgift 2.2
 
