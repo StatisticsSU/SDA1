@@ -142,7 +142,7 @@ Jämför median av variabeln `logcost` med medianen från den skattade sannolikh
 
 #### 💪 Uppgift 2.4
 
-Gör ett 95%-igt konfidensintervall för $\mu$ i modellen för `logcost` från Uppgift 2.1, både genom att använda formellsamlingen och genom att använda en funktion i R. Tolka intervallet.
+Gör ett 95%-igt konfidensintervall för $\mu$ i modellen för `logcost` från Uppgift 2.1, **både** genom att använda formelsamlingen och genom att använda en funktion i R. Tolka intervallet. \[Som jag skrev i instruktionerna ovan är det ok att använda R för att beräkna delar av konfidensintervallet även i fallet där jag ber om att ni ska använda formelsamling; t ex använda `sd()`-funktionen för att beräkna standardavvikelsen `s`. Men jag vill att ni använder formeln för konfidensintervall från formelsamlingen i den slutliga uträkningen. För att träna inför tentan. Och sen jämföra med det konfidensintervall ni får direkt från R\].
 
 #### 💪 Uppgift 2.5
 
