@@ -130,7 +130,7 @@ hist(log(df$cost), 30, freq = FALSE, col = "orange")
 
 #### 💪 Uppgift 2.1
 
-I den här uppgiften ska vi modellera variabeln `logcost = log(df$cost)` som oberoende observationer från en $N(\mu,\sigma)$ fördelning. Skatta $\mu$ och $\sigma$ från data.
+I den här uppgiften ska vi modellera variabeln `logcost = log(df$cost)` som oberoende observationer från en $N(\mu,\sigma)$ fördelning. Skatta $\mu$ och $\sigma$ från data. \[Obs! Ni behöver inte transformera tillbaka till originalskala, utan arbeta med hela Uppgift 2 på log-skala.\]
 
 #### 💪 Uppgift 2.2
 
@@ -138,7 +138,7 @@ Undersök grafiskt hur väl den skattade normalmodellen passar variabeln `logcos
 
 #### 💪 Uppgift 2.3
 
-Jämför median av variabeln `logcost` med medianen från den skattade sannolikhetsmodellen från Uppgift 2.1.
+Jämför median av variabeln `logcost` med medianen från den skattade sannolikhetsmodellen från Uppgift 2.1. \[hint: lösningen blir väldigt enkel här, det är meningen. Jag vill att ni ska tänka på kopplingen mellan den teoretiska sannolikhetsmodellen och hur den relaterar till data.\]
 
 #### 💪 Uppgift 2.4
 
