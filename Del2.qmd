@@ -60,7 +60,7 @@ Extramaterial: [kod för residualanalys på simulerad regressionsdata](code/resi
 Läs: SDM Kapitel 23.3-23.6 \| [Slides](/slides/F21Regression2.pdf)\
 
 **Föreläsning 22 - Hypotestest och jämföra grupper.**\
-Läs: SDM Kapitel 19, 20.4-20.5, 21.1-21.3 | [Slides](/slides/ComparePop.pdf)\
+Läs: SDM Kapitel 19, 20.4-20.5, 21.1-21.3 | [Slides](/slides/F22ComparePop.pdf)\
 Interaktivt: [hypotestest fel typ I och II](/observable/hypotestest_typ1och2.qmd)
 
 **Föreläsning 23 - $\chi^2$ goodness-of-fit test. Optimala beslut under osäkerhet.**\
