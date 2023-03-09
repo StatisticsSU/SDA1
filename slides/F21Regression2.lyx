@@ -276,6 +276,29 @@ status open
 
 \series bold
 \color blue
+Konfidensintervall
+\series default
+\color inherit
+ och 
+\series bold
+\color blue
+hypotesttest
+\series default
+\color inherit
+ i enkel regression
+\series bold
+\color blue
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color blue
 Prediktionsintervall
 \begin_inset VSpace bigskip
 \end_inset
@@ -343,7 +366,7 @@ Hur
  varierar mellan olika stickprov:
 \begin_inset Formula 
 \[
-\sigma_{b_{1}}=SD(b_{1})=\frac{\sigma_{\varepsilon}}{\sqrt{n-1}s_{x}}
+\sigma_{b_{1}}=SD(b_{1})=\frac{\sigma_{\varepsilon}}{s_{x}\sqrt{n-1}}
 \]
 
 \end_inset
@@ -364,7 +387,7 @@ standardfelet
 
 \begin_inset Formula 
 \[
-s_{b_{1}}=SE(b_{1})=\frac{s_{e}}{\sqrt{n-1}s_{x}}
+s_{b_{1}}=SE(b_{1})=\frac{s_{e}}{s_{x}\sqrt{n-1}}
 \]
 
 \end_inset

@@ -64,7 +64,7 @@ Läs: SDM Kapitel 19, 20.4-20.5, 21.1-21.3 | [Slides](/slides/ComparePop.pdf)\
 Interaktivt: [hypotestest fel typ I och II](/observable/hypotestest_typ1och2.qmd)
 
 **Föreläsning 23 - $\chi^2$ goodness-of-fit test. Optimala beslut under osäkerhet.**\
-Läs: [Slides](/misc/larry.png)\
+Läs: SDM 22.1 | [Slides](/misc/larry.png)\
 Interaktivt: [chi2-fördelningen](/observable/chi2fordelningen.qmd)
 
 **Föreläsning 24 - Räkning av övningstenta.**\

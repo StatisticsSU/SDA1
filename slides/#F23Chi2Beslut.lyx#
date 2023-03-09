@@ -320,31 +320,11 @@ Kortkampanj (Uppgift 22.2 i SDM)
 \begin_deeper
 \begin_layout Itemize
 Bank har tre sorters kreditkort: Silver, Gold och Platinum.
-\begin_inset VSpace medskip
-\end_inset
-
-
 \end_layout
 
 \begin_layout Itemize
 Marknadsföringkampanj.
- Skillnad i vilken kortklass kunder ansöker om?
-\begin_inset VSpace medskip
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-Undersöker 
-\begin_inset Formula $n=200$
-\end_inset
-
- personers ansökningar efter kampanj.
-\begin_inset VSpace medskip
-\end_inset
-
-
+ Skillnad i vilken kortklass kunder ansöker för?
 \end_layout
 
 \begin_layout Standard
@@ -386,8 +366,6 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size footnotesize
 Korttyp
 \end_layout
 
@@ -397,9 +375,7 @@ Korttyp
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size footnotesize
-Historiskt
+Historiskt, andel i %
 \end_layout
 
 \end_inset
@@ -408,9 +384,20 @@ Historiskt
 \begin_inset Text
 
 \begin_layout Plain Layout
+Observerat antal, 
+\begin_inset Formula $\mathrm{Obs}$
+\end_inset
 
-\size footnotesize
-Efter kampanj
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Efter kampanj, andel i %
 \end_layout
 
 \end_inset
@@ -419,20 +406,11 @@ Efter kampanj
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size footnotesize
-Observerat antal
-\end_layout
-
+Förväntat antal, 
+\begin_inset Formula $\mathrm{Exp}$
 \end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
-\begin_inset Text
 
-\begin_layout Plain Layout
 
-\size footnotesize
-Förväntat antal
 \end_layout
 
 \end_inset
@@ -443,8 +421,6 @@ Förväntat antal
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size footnotesize
 Silver
 \end_layout
 
@@ -454,12 +430,7 @@ Silver
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size footnotesize
-\begin_inset Formula $60\%$
-\end_inset
-
-
+60%
 \end_layout
 
 \end_inset
@@ -468,12 +439,16 @@ Silver
 \begin_inset Text
 
 \begin_layout Plain Layout
+111
+\end_layout
 
-\size footnotesize
-\begin_inset Formula $55\%\%$
 \end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
 
-
+\begin_layout Plain Layout
+55%
 \end_layout
 
 \end_inset
@@ -482,26 +457,7 @@ Silver
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size footnotesize
-\begin_inset Formula $111$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\size footnotesize
-\begin_inset Formula $200\cdot0.6=120$
-\end_inset
-
-
+120
 \end_layout
 
 \end_inset
@@ -512,8 +468,6 @@ Silver
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size footnotesize
 Gold 
 \end_layout
 
@@ -523,12 +477,7 @@ Gold
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size footnotesize
-\begin_inset Formula $30\%$
-\end_inset
-
-
+30%
 \end_layout
 
 \end_inset
@@ -537,12 +486,16 @@ Gold
 \begin_inset Text
 
 \begin_layout Plain Layout
+59
+\end_layout
 
-\size footnotesize
-\begin_inset Formula $29.5\%$
 \end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
 
-
+\begin_layout Plain Layout
+29.5%
 \end_layout
 
 \end_inset
@@ -551,26 +504,7 @@ Gold
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size footnotesize
-\begin_inset Formula $59$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\size footnotesize
-\begin_inset Formula $200\cdot0.3=60$
-\end_inset
-
-
+60
 \end_layout
 
 \end_inset
@@ -581,8 +515,6 @@ Gold
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size footnotesize
 Platinum
 \end_layout
 
@@ -592,12 +524,7 @@ Platinum
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size footnotesize
-\begin_inset Formula $10\%$
-\end_inset
-
-
+10%
 \end_layout
 
 \end_inset
@@ -606,12 +533,16 @@ Platinum
 \begin_inset Text
 
 \begin_layout Plain Layout
+30
+\end_layout
 
-\size footnotesize
-\begin_inset Formula $15\%$
 \end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
 
-
+\begin_layout Plain Layout
+15%
 \end_layout
 
 \end_inset
@@ -620,26 +551,7 @@ Platinum
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\size footnotesize
-\begin_inset Formula $30$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\size footnotesize
-\begin_inset Formula $200\cdot0.1=20$
-\end_inset
-
-
+20
 \end_layout
 
 \end_inset
@@ -686,194 +598,6 @@ Chi2-test
 \end_layout
 
 \begin_deeper
-\begin_layout Itemize
-
-\series bold
-\color blue
-Räknedata
-\series default
-\color inherit
-.
- Antal.
-\begin_inset VSpace smallskip
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-Hypotestest:
-\begin_inset VSpace smallskip
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-\begin_inset Formula $H_{0}$
-\end_inset
-
-: räknedata följer fördelning med sannolikhet 
-\begin_inset Formula $p_{k}$
-\end_inset
-
- i cell 
-\begin_inset Formula $k$
-\end_inset
-
-.
-\begin_inset VSpace smallskip
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-\begin_inset Formula $H_{A}$
-\end_inset
-
-: räknedata följer annan fördelning.
-\begin_inset VSpace smallskip
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\begin_layout Itemize
-Totalt antal i hela tabellen: 
-\begin_inset Formula $n$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Itemize
-
-\series bold
-\color blue
-Förväntat antal
-\series default
-\color inherit
- i cell 
-\begin_inset Formula $k$
-\end_inset
-
-:
-\series bold
-\color blue
- 
-\begin_inset Formula $\mathrm{Exp}_{k}=n\cdot p_{k}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-
-\series bold
-\color blue
-Observerat antal
-\series default
-\color inherit
- i cell 
-\begin_inset Formula $k$
-\end_inset
-
-: 
-\series bold
-\color blue
-
-\begin_inset Formula $\mathrm{Obs}_{k}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-Chi2 (
-\begin_inset Formula $\chi^{2}$
-\end_inset
-
-) test för tabell med 
-\begin_inset Formula $N$
-\end_inset
-
- celler - 
-\series bold
-\color blue
-teststatistika
-\series default
-\color inherit
-
-\begin_inset Formula 
-\[
-\chi^{2}=\sum_{k=1}^{K}\frac{(\mathrm{Obs}_{k}-\mathrm{Exp}_{k})^{2}}{\mathrm{Exp}_{k}}=\sum_{\text{all cells}}\frac{(\mathrm{Obs}-\mathrm{Exp})^{2}}{\mathrm{Exp}}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-
-\series bold
-\color blue
-Under 
-\begin_inset Formula $H_{0}$
-\end_inset
-
-
-\series default
-\color inherit
- - 
-\series bold
-\color orange
-Chi2-fördelning
-\series default
-\color inherit
- med 
-\begin_inset Formula $K-1$
-\end_inset
-
- frihetsgrader
-\begin_inset Formula 
-\[
-\chi^{2}\sim\chi_{K-1}^{2}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\begin_layout Standard
-\begin_inset Separator parbreak
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-
-\series bold
-\color orange
-Chi2-fördelning
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
 \begin_layout Standard
 \align center
 \begin_inset Box Boxed
@@ -906,6 +630,129 @@ literal "true"
 
 
 \end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Chi2-test
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Nollhypotes, 
+\begin_inset Formula $H_{0}$
+\end_inset
+
+: räknedata i en tabell med 
+\begin_inset Formula $N$
+\end_inset
+
+ celler följer en viss specificerad fördelning med sannolikhet 
+\begin_inset Formula $p_{k}$
+\end_inset
+
+ i cell 
+\begin_inset Formula $k$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Totalt antal i hela tabellen 
+\begin_inset Formula $n$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Förväntat antal i cell 
+\begin_inset Formula $k$
+\end_inset
+
+:
+\begin_inset Formula $\mathrm{Exp}_{k}=n\cdot p_{k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Observerat antal i cell 
+\begin_inset Formula $k$
+\end_inset
+
+: 
+\begin_inset Formula $\mathrm{Obs}_{k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Chi2 (
+\begin_inset Formula $\chi^{2}$
+\end_inset
+
+) test för tabell med 
+\begin_inset Formula $N$
+\end_inset
+
+ celler - 
+\series bold
+\color blue
+teststatistika
+\series default
+\color inherit
+
+\begin_inset Formula 
+\[
+\chi^{2}=\sum_{k=1}^{K}\frac{(\mathrm{Obs}_{k}-\mathrm{Exp}_{k})^{2}}{\mathrm{Exp}_{k}}=\sum_{\text{all cells}}\frac{(\mathrm{Obs}-\mathrm{Exp})^{2}}{\mathrm{Exp}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Fördelning under 
+\begin_inset Formula $H_{0}$
+\end_inset
+
+ - Chi2 fördelning med 
+\begin_inset Formula $K-1$
+\end_inset
+
+ frihetsgrader
+\begin_inset Formula 
+\[
+\chi^{2}\sim\chi_{K-1}^{2}
+\]
 
 \end_inset
 
