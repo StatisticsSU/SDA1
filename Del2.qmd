@@ -58,6 +58,8 @@ Extramaterial: [kod för residualanalys på simulerad regressionsdata](code/resi
 
 **Föreläsning 21 - Inferens i linjär regression - konfidensintervall, hypotestest och prediktionsintervall**\
 Läs: SDM Kapitel 23.3-23.6 \| [Slides](/slides/F21Regression2.pdf)\
+Kod: [simulera från populationsmodellen i enkel regression](/code/simulera_reg_data.R)
+
 
 **Föreläsning 22 - Hypotestest och jämföra grupper.**\
 Läs: SDM Kapitel 19, 20.4-20.5, 21.1-21.3 | [Slides](/slides/F22ComparePop.pdf)\
@@ -69,12 +71,11 @@ Läs: SDM 22.1 | [Slides](/misc/larry.png)\
 Interaktivt: [chi2-fördelningen](/observable/chi2fordelningen.qmd)
 
 **Föreläsning 24 - Räkning av övningstenta.**\
-Läs: [Slides](/misc/larry.png)
+Tentan läggs ut här på söndag kväll, 12:e mars
 
-**Videoföreläsning - Maximum likelihood och Bayesiansk inferens.**\
-Läs: [Slides](/misc/larry.png)\
-Interaktivt: [maximum likelihood - Poisson](/observable/ml_poisson.qmd) | [betafördelningen](/observable/betafordelningen.qmd)\
-Extramaterial: [notebook - matematisk härledning av maximum likelihood skattningen i Poissonmodellen](https://observablehq.com/@mattiasvillani/maximum-likelihood-poissonmodellen)
+**Videoföreläsning - Bayesiansk inferens.**\
+Läs: [Video på Athena](https://athena.itslearning.com/ContentArea/ContentArea.aspx?LocationID=18157&LocationType=1&ElementID=2278308) | [Slides](/slides/FVideoBayesianskStatistik.pdf)\
+Extramaterial: [notebook - bayesiansk inferens för väntevärde i normalmodellen](https://observablehq.com/@mattiasvillani/bayes-iid-gaussian-known-var)
 
 
 ### **Räkneövningar**

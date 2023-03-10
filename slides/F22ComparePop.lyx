@@ -1320,7 +1320,7 @@ SE(\bar{d})=\frac{s_{d}}{\sqrt{n}}
 
 \begin_inset Formula 
 \[
-\bar{d}\pm t_{0.025}\cdot\frac{s_{d}}{\sqrt{n}}
+\bar{d}\pm t_{0.025},n-1\cdot\frac{s_{d}}{\sqrt{n}}
 \]
 
 \end_inset
