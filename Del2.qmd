@@ -44,7 +44,7 @@ Interaktivt: [samplingfördelning - liten ändlig population](/observable/sampli
 Läs: SDM Kapitel 17 \| [Slides](/slides/F18KI4mean.pdf)\
 Interaktivt: [stora talens lag](/observable/storatalenslag.qmd) | [centrala gränsvärdessatsen](/observable/cgs.qmd)\
 Extramaterial: [Notebook - stora talens lag](https://observablehq.com/@mattiasvillani/stora-talens-lag) \| [Notebook - centrala gränsvärdessatsen](https://observablehq.com/@mattiasvillani/cgs)\
-Kod: [confidence_intervals_salmon.R](/code/confidence_intervals_salmon.R)
+Kod: [konfidensintervall laxar](/code/confidence_intervals_salmon.R)
 
 **Föreläsning 19 - Hypotestest.**\
 Läs: SDM Kapitel 18 (ej *Random matters* på sid 579) \| [Slides](/slides/F19HypotesTest.pdf)\
@@ -61,6 +61,7 @@ Läs: SDM Kapitel 23.3-23.6 \| [Slides](/slides/F21Regression2.pdf)\
 
 **Föreläsning 22 - Hypotestest och jämföra grupper.**\
 Läs: SDM Kapitel 19, 20.4-20.5, 21.1-21.3 | [Slides](/slides/F22ComparePop.pdf)\
+Kod: [oberoende grupper - laxar](code/confidence_intervals_salmon_twopop.R) | [parade grupper - online försäkringar](code/paired_two_pop_online_insurance.R)\
 Interaktivt: [hypotestest fel typ I och II](/observable/hypotestest_typ1och2.qmd)
 
 **Föreläsning 23 - $\chi^2$ goodness-of-fit test. Optimala beslut under osäkerhet.**\

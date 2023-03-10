@@ -1362,7 +1362,7 @@ status open
 \begin_inset Formula 
 \begin{align*}
 H_{0} & :\mu_{1}=\mu_{2}\\
-H_{1} & :\mu_{1}\neq\mu_{2}
+H_{A} & :\mu_{1}\neq\mu_{2}
 \end{align*}
 
 \end_inset

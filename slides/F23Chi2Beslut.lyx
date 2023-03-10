@@ -936,6 +936,50 @@ Nyttofunktion
  
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+Vi behöver ofta fatta beslut i en miljö med osäkerhet.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Beslut: Ska jag ta med ett paraply när jag går ut? 
+\end_layout
+
+\begin_layout Itemize
+Osäkerhet: kommer det att regna?
+\end_layout
+
+\begin_layout Itemize
+Beslut: ska jag investera i aktier eller spara på banken? 
+\end_layout
+
+\begin_layout Itemize
+Osäkerhet: börsens utveckling under min placeringshorisont.
+\end_layout
+
+\begin_layout Itemize
+Ska Sverige satsa på snabbtåg?
+\end_layout
+
+\begin_layout Itemize
+Osäkerhet: hur kommer elbilar utvecklas? Klimatet? Vad kommer det kosta?
+ etc etc
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Ett fattat beslut har 
+\series bold
+\color blue
+konsekvenser
+\series default
+\color inherit
+.
+ 
+\end_layout
+
+\end_deeper
 \begin_layout Standard
 \begin_inset Separator parbreak
 \end_inset
