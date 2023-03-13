@@ -67,7 +67,7 @@ Kod: [oberoende grupper - laxar](code/confidence_intervals_salmon_twopop.R) | [p
 Interaktivt: [hypotestest fel typ I och II](/observable/hypotestest_typ1och2.qmd)
 
 **Föreläsning 23 - $\chi^2$ goodness-of-fit test. Optimala beslut under osäkerhet.**\
-Läs: SDM 22.1 | [Slides](/misc/larry.png)\
+Läs: SDM 22.1 | [Slides](slides/F23Chi2Beslut.pdf)\
 Interaktivt: [chi2-fördelningen](/observable/chi2fordelningen.qmd)
 
 **Föreläsning 24 - Räkning av övningstenta.**\
