@@ -24,7 +24,7 @@ boxplot_image <- ggplot(data, aes(x = "", y = y)) +
 sticker(
   subplot = boxplot_image,
   package = "",
-  filename = "sda1hexagon.svg",
+  filename = "sda123icon",
   s_width = 1.4, # figure options
   s_height = 1.4,
   s_x = 1.042,

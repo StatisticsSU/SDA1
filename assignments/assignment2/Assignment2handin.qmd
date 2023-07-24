@@ -54,8 +54,8 @@ Läs in dina paket här:
 #| echo: false
 #| output: false
 library(remotes)
-install_github("StatisticsSU/sda1paket")
-library(sda1)
+install_github("StatisticsSU/sda123")
+library(sda123)
 library(mosaic)
 library(gplots) # for the plotLowess function
 ```

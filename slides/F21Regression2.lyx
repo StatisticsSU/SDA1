@@ -736,7 +736,7 @@ R:
 \end_layout
 
 \begin_layout Itemize
-sda1-paketet:
+sda123-paketet:
 \end_layout
 
 \begin_layout Standard
@@ -1301,7 +1301,7 @@ status open
 
 \series bold
 \color orange
-Plot av prediktionsintervall sda1-paketet
+Plot av prediktionsintervall sda123-paketet
 \end_layout
 
 \end_inset
@@ -1720,7 +1720,7 @@ status open
 
 \series bold
 \color orange
-Simulera data med sda1 paketet
+Simulera data med sda123 paketet
 \end_layout
 
 \end_inset
@@ -1757,7 +1757,7 @@ status open
 
 \series bold
 \color orange
-Skatta från simulerat data med sda1 paketet
+Skatta från simulerat data med sda123 paketet
 \end_layout
 
 \end_inset

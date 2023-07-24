@@ -68,7 +68,7 @@ p
 
 
 # Triss
-library(sda1)
+library(sda123)
 head(triss)
 df = triss
 df = rbind(c(0,6000000-1287000,0.7855), df)

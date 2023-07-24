@@ -5,7 +5,7 @@
 #install.packages("remotes")
 #library(remotes)
 #install_github("StatisticsSU/sda1paket")
-library(sda1)
+library(sda123)
 
 # Simulate regression with homoscedastic normal errors
 simdata <- reg_simulate(n = 100, betavect = c(1, 1, -1), sigma_eps = 1)

@@ -266,34 +266,36 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><a href="./R/cheatsheets/base-r_cheat_sheet.pdf"><img src="misc/hexagons/figs/base_r_hexagon.svg" class="img-fluid" width="60"></a>&nbsp; <a href="./R/cheatsheets/ggplot2_cheatsheet.pdf"><img src="misc/hexagons/figs/tidyverse_hexagon.svg" class="img-fluid" width="60"></a></p>
 </div></div><ul>
 <li><p>Denna <a href="./R/cheatsheets/rstudio-ide_cheatsheet.pdf">RStudio cheat sheet</a> är rätt rörig, men kan kanske vara användbar <em>efter</em> att man själv bekantat sig lite med RStudio.</p></li>
-<li><p>Kursens egna R-paket <code>sda1</code> (se nedan) har också ett <a href="R/cheatsheets/sda1_cheatsheet.pdf">cheat sheet</a>.</p></li>
+<li><p>Kursens R-paket <code>sda123</code> (se nedan) har också ett <a href="R/cheatsheets/sda1_cheatsheet.pdf">cheat sheet</a>.</p></li>
 </ul>
 </section>
 <section id="datamaterial" class="level2">
 <h2 class="anchored" data-anchor-id="datamaterial">Datamaterial</h2>
 <ul>
 <li>Kursboken <a href="https://nordics.pearson.com/products/stats-data-and-models-5th-global-edition-e-book?variant=42945920630933">Stats: Data and Models</a> kommer med över 500 olika datamaterial som hittas <a href="https://media.pearsoncmg.com/intl/ge/2021/cws/ge_deveaux_stats_5/statdm5d_datasets.html">här</a>. Datamaterialen är i ofta i Excel-format, se denna <a href="./tutorials/ReadingDataFromFile/ReadingDataFromFile.html">guide</a> om hur man läser in data från Excel i R.</li>
-<li>Kursens R-paket <code>sda1</code> (se nedan) innehåller också några datamaterial som kommer användas under kursen.</li>
+<li>Kursens R-paket <code>sda123</code> (se nedan) och framförallt R-paket <code>SUdatasets</code> innehåller också några datamaterial som kommer användas under kursen.</li>
 </ul>
 </section>
 <section id="kursens-r-paket" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="kursens-r-paket">Kursens R-paket</h2>
-<p>Kursen har ett eget R-paket <code>sda1</code> med några hjälpfunktioner och datamaterial som används på kursen.<br>
+<p>Kurserna <strong>statistik och dataanalys I, II och III</strong> har ett gemensamt R-paket <code>sda123</code> med några hjälpfunktioner och datamaterial som används på kurserna.<br>
 <a href="R/cheatsheets/sda1_cheatsheet.pdf">cheat sheet</a> | <a href="https://github.com/StatisticsSU/sda1paket/raw/main/sda1_0.0.1.pdf">manual</a></p>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://github.com/StatisticsSU/sda1paket"><img src="misc/hexagons/figs/sda1paketlogo.svg" class="img-fluid figure-img" alt="sda1 kurspaket för R" width="60"></a></p>
+<p><a href="https://github.com/StatisticsSU/sda1paket"><img src="misc/hexagons/figs/sda123icon.png" class="img-fluid figure-img" alt="sda123 kurspaket för R" width="106"></a></p>
 </figure>
 </div>
-</div></div><section id="installera-kurspaketet" class="level4">
-<h4 class="anchored" data-anchor-id="installera-kurspaketet">Installera kurspaketet</h4>
+</div></div><section id="installera-kurspaketet-och-paket-med-datamaterial" class="level4">
+<h4 class="anchored" data-anchor-id="installera-kurspaketet-och-paket-med-datamaterial">Installera kurspaketet och paket med datamaterial</h4>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"remotes"</span>) </span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(remotes)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">install_github</span>(<span class="st">"StatisticsSU/sda1paket"</span>) </span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sda1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">install_github</span>(<span class="st">"StatisticsSU/sda123"</span>) </span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sda123)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">install_github</span>(<span class="st">"StatisticsSU/SUdatasets"</span>) </span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(SUdatasets)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
 

@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.280">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>SDA1 - Tabellsamling - Statistik och Dataanalys I</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="..//misc/favicons/favicon.ico" rel="icon">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+<script src="../site_libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="../site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../misc/SU_logotyp_Staende_800px.png" alt="" class="navbar-logo">
+    </a>
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">SDA1</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html">
+ <span class="menu-text">Översikt</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../Del1.html">
+ <span class="menu-text">Del 1 - Dataanalys och regression</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../Del2.html">
+ <span class="menu-text">Del 2 - Sannolikhetsmodeller och inferens</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../R.html">
+ <span class="menu-text">R</span></a>
+  </li>  
+</ul>
+              <div class="quarto-toggle-container">
+                  <a href="" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+              </div>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Tabellsamling - Statistik och Dataanalys I</h1>
+<p class="subtitle lead">Student-<span class="math inline">\(t\)</span> fördelning</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<div class="columns">
+<div class="column" style="width:25%;">
+<p>&nbsp; <img src="figs/standard_t_twotails.svg" class="img-fluid" data-fig-align="left" width="400"> &nbsp;&nbsp; <img src="figs/standard_t_onetail.svg" class="img-fluid" data-fig-align="left" width="400"></p>
+</div><div class="column" style="width:75%;">
+<div class="cell">
+<div class="cell-output-display">
+
+<table class=" lightable-classic" style="font-family: helvetica; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: left; padding-right: 4px; padding-left: 4px; background-color: #a6cee3 !important;" colspan="1"><div style="">Confidence level: </div></th>
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: left; padding-right: 4px; padding-left: 4px; background-color: #a6cee3 !important;" colspan="1"><div style=""> 80%</div></th>
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: left; padding-right: 4px; padding-left: 4px; background-color: #a6cee3 !important;" colspan="1"><div style=""> 90%</div></th>
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: left; padding-right: 4px; padding-left: 4px; background-color: #a6cee3 !important;" colspan="1"><div style=""> 95%</div></th>
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: left; padding-right: 4px; padding-left: 4px; background-color: #a6cee3 !important;" colspan="1"><div style=""> 98%</div></th>
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: left; padding-right: 4px; padding-left: 4px; background-color: #a6cee3 !important;" colspan="1"><div style=""> 99%</div></th>
+</tr>
+<tr>
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: left; " colspan="1"><div style="">Two-tail probability: </div></th>
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: left; " colspan="1"><div style="">0.200</div></th>
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: left; " colspan="1"><div style="">0.100</div></th>
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: left; " colspan="1"><div style="">0.050</div></th>
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: left; " colspan="1"><div style="">0.020</div></th>
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: left; " colspan="1"><div style="">0.010</div></th>
+</tr>
+<tr>
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: left; " colspan="1"><div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">One-tail probability: </div></th>
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: left; " colspan="1"><div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">0.100</div></th>
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: left; " colspan="1"><div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">0.050</div></th>
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: left; " colspan="1"><div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">0.025</div></th>
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: left; " colspan="1"><div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">0.010</div></th>
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: left; " colspan="1"><div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">0.005</div></th>
+</tr>
+<tr>
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: left; " colspan="1"><div style="">df </div></th>
+<th style="empty-cells: hide;border-bottom:hidden;" colspan="1"></th>
+<th style="empty-cells: hide;border-bottom:hidden;" colspan="1"></th>
+<th style="empty-cells: hide;border-bottom:hidden;" colspan="1"></th>
+<th style="empty-cells: hide;border-bottom:hidden;" colspan="1"></th>
+<th style="empty-cells: hide;border-bottom:hidden;" colspan="1"></th>
+</tr>
+</thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> 1 </td>
+   <td style="text-align:left;"> 3.078 </td>
+   <td style="text-align:left;"> 6.314 </td>
+   <td style="text-align:left;"> 12.706 </td>
+   <td style="text-align:left;"> 31.821 </td>
+   <td style="text-align:left;"> 63.657 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 2 </td>
+   <td style="text-align:left;"> 1.886 </td>
+   <td style="text-align:left;"> 2.920 </td>
+   <td style="text-align:left;"> 4.303 </td>
+   <td style="text-align:left;"> 6.965 </td>
+   <td style="text-align:left;"> 9.925 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 3 </td>
+   <td style="text-align:left;"> 1.638 </td>
+   <td style="text-align:left;"> 2.353 </td>
+   <td style="text-align:left;"> 3.182 </td>
+   <td style="text-align:left;"> 4.541 </td>
+   <td style="text-align:left;"> 5.841 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 4 </td>
+   <td style="text-align:left;"> 1.533 </td>
+   <td style="text-align:left;"> 2.132 </td>
+   <td style="text-align:left;"> 2.776 </td>
+   <td style="text-align:left;"> 3.747 </td>
+   <td style="text-align:left;"> 4.604 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 5 </td>
+   <td style="text-align:left;"> 1.476 </td>
+   <td style="text-align:left;"> 2.015 </td>
+   <td style="text-align:left;"> 2.571 </td>
+   <td style="text-align:left;"> 3.365 </td>
+   <td style="text-align:left;"> 4.032 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 6 </td>
+   <td style="text-align:left;"> 1.440 </td>
+   <td style="text-align:left;"> 1.943 </td>
+   <td style="text-align:left;"> 2.447 </td>
+   <td style="text-align:left;"> 3.143 </td>
+   <td style="text-align:left;"> 3.707 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 7 </td>
+   <td style="text-align:left;"> 1.415 </td>
+   <td style="text-align:left;"> 1.895 </td>
+   <td style="text-align:left;"> 2.365 </td>
+   <td style="text-align:left;"> 2.998 </td>
+   <td style="text-align:left;"> 3.499 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 8 </td>
+   <td style="text-align:left;"> 1.397 </td>
+   <td style="text-align:left;"> 1.860 </td>
+   <td style="text-align:left;"> 2.306 </td>
+   <td style="text-align:left;"> 2.896 </td>
+   <td style="text-align:left;"> 3.355 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 9 </td>
+   <td style="text-align:left;"> 1.383 </td>
+   <td style="text-align:left;"> 1.833 </td>
+   <td style="text-align:left;"> 2.262 </td>
+   <td style="text-align:left;"> 2.821 </td>
+   <td style="text-align:left;"> 3.250 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 10 </td>
+   <td style="text-align:left;"> 1.372 </td>
+   <td style="text-align:left;"> 1.812 </td>
+   <td style="text-align:left;"> 2.228 </td>
+   <td style="text-align:left;"> 2.764 </td>
+   <td style="text-align:left;"> 3.169 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 11 </td>
+   <td style="text-align:left;"> 1.363 </td>
+   <td style="text-align:left;"> 1.796 </td>
+   <td style="text-align:left;"> 2.201 </td>
+   <td style="text-align:left;"> 2.718 </td>
+   <td style="text-align:left;"> 3.106 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 12 </td>
+   <td style="text-align:left;"> 1.356 </td>
+   <td style="text-align:left;"> 1.782 </td>
+   <td style="text-align:left;"> 2.179 </td>
+   <td style="text-align:left;"> 2.681 </td>
+   <td style="text-align:left;"> 3.055 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 13 </td>
+   <td style="text-align:left;"> 1.350 </td>
+   <td style="text-align:left;"> 1.771 </td>
+   <td style="text-align:left;"> 2.160 </td>
+   <td style="text-align:left;"> 2.650 </td>
+   <td style="text-align:left;"> 3.012 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 14 </td>
+   <td style="text-align:left;"> 1.345 </td>
+   <td style="text-align:left;"> 1.761 </td>
+   <td style="text-align:left;"> 2.145 </td>
+   <td style="text-align:left;"> 2.624 </td>
+   <td style="text-align:left;"> 2.977 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 15 </td>
+   <td style="text-align:left;"> 1.341 </td>
+   <td style="text-align:left;"> 1.753 </td>
+   <td style="text-align:left;"> 2.131 </td>
+   <td style="text-align:left;"> 2.602 </td>
+   <td style="text-align:left;"> 2.947 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 16 </td>
+   <td style="text-align:left;"> 1.337 </td>
+   <td style="text-align:left;"> 1.746 </td>
+   <td style="text-align:left;"> 2.120 </td>
+   <td style="text-align:left;"> 2.583 </td>
+   <td style="text-align:left;"> 2.921 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 17 </td>
+   <td style="text-align:left;"> 1.333 </td>
+   <td style="text-align:left;"> 1.740 </td>
+   <td style="text-align:left;"> 2.110 </td>
+   <td style="text-align:left;"> 2.567 </td>
+   <td style="text-align:left;"> 2.898 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 18 </td>
+   <td style="text-align:left;"> 1.330 </td>
+   <td style="text-align:left;"> 1.734 </td>
+   <td style="text-align:left;"> 2.101 </td>
+   <td style="text-align:left;"> 2.552 </td>
+   <td style="text-align:left;"> 2.878 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 19 </td>
+   <td style="text-align:left;"> 1.328 </td>
+   <td style="text-align:left;"> 1.729 </td>
+   <td style="text-align:left;"> 2.093 </td>
+   <td style="text-align:left;"> 2.539 </td>
+   <td style="text-align:left;"> 2.861 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 20 </td>
+   <td style="text-align:left;"> 1.325 </td>
+   <td style="text-align:left;"> 1.725 </td>
+   <td style="text-align:left;"> 2.086 </td>
+   <td style="text-align:left;"> 2.528 </td>
+   <td style="text-align:left;"> 2.845 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 21 </td>
+   <td style="text-align:left;"> 1.323 </td>
+   <td style="text-align:left;"> 1.721 </td>
+   <td style="text-align:left;"> 2.080 </td>
+   <td style="text-align:left;"> 2.518 </td>
+   <td style="text-align:left;"> 2.831 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 22 </td>
+   <td style="text-align:left;"> 1.321 </td>
+   <td style="text-align:left;"> 1.717 </td>
+   <td style="text-align:left;"> 2.074 </td>
+   <td style="text-align:left;"> 2.508 </td>
+   <td style="text-align:left;"> 2.819 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 23 </td>
+   <td style="text-align:left;"> 1.319 </td>
+   <td style="text-align:left;"> 1.714 </td>
+   <td style="text-align:left;"> 2.069 </td>
+   <td style="text-align:left;"> 2.500 </td>
+   <td style="text-align:left;"> 2.807 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 24 </td>
+   <td style="text-align:left;"> 1.318 </td>
+   <td style="text-align:left;"> 1.711 </td>
+   <td style="text-align:left;"> 2.064 </td>
+   <td style="text-align:left;"> 2.492 </td>
+   <td style="text-align:left;"> 2.797 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 25 </td>
+   <td style="text-align:left;"> 1.316 </td>
+   <td style="text-align:left;"> 1.708 </td>
+   <td style="text-align:left;"> 2.060 </td>
+   <td style="text-align:left;"> 2.485 </td>
+   <td style="text-align:left;"> 2.787 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 26 </td>
+   <td style="text-align:left;"> 1.315 </td>
+   <td style="text-align:left;"> 1.706 </td>
+   <td style="text-align:left;"> 2.056 </td>
+   <td style="text-align:left;"> 2.479 </td>
+   <td style="text-align:left;"> 2.779 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 27 </td>
+   <td style="text-align:left;"> 1.314 </td>
+   <td style="text-align:left;"> 1.703 </td>
+   <td style="text-align:left;"> 2.052 </td>
+   <td style="text-align:left;"> 2.473 </td>
+   <td style="text-align:left;"> 2.771 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 28 </td>
+   <td style="text-align:left;"> 1.313 </td>
+   <td style="text-align:left;"> 1.701 </td>
+   <td style="text-align:left;"> 2.048 </td>
+   <td style="text-align:left;"> 2.467 </td>
+   <td style="text-align:left;"> 2.763 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 29 </td>
+   <td style="text-align:left;"> 1.311 </td>
+   <td style="text-align:left;"> 1.699 </td>
+   <td style="text-align:left;"> 2.045 </td>
+   <td style="text-align:left;"> 2.462 </td>
+   <td style="text-align:left;"> 2.756 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 30 </td>
+   <td style="text-align:left;"> 1.310 </td>
+   <td style="text-align:left;"> 1.697 </td>
+   <td style="text-align:left;"> 2.042 </td>
+   <td style="text-align:left;"> 2.457 </td>
+   <td style="text-align:left;"> 2.750 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 32 </td>
+   <td style="text-align:left;"> 1.309 </td>
+   <td style="text-align:left;"> 1.694 </td>
+   <td style="text-align:left;"> 2.037 </td>
+   <td style="text-align:left;"> 2.449 </td>
+   <td style="text-align:left;"> 2.738 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 35 </td>
+   <td style="text-align:left;"> 1.306 </td>
+   <td style="text-align:left;"> 1.690 </td>
+   <td style="text-align:left;"> 2.030 </td>
+   <td style="text-align:left;"> 2.438 </td>
+   <td style="text-align:left;"> 2.724 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 40 </td>
+   <td style="text-align:left;"> 1.303 </td>
+   <td style="text-align:left;"> 1.684 </td>
+   <td style="text-align:left;"> 2.021 </td>
+   <td style="text-align:left;"> 2.423 </td>
+   <td style="text-align:left;"> 2.704 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 45 </td>
+   <td style="text-align:left;"> 1.301 </td>
+   <td style="text-align:left;"> 1.679 </td>
+   <td style="text-align:left;"> 2.014 </td>
+   <td style="text-align:left;"> 2.412 </td>
+   <td style="text-align:left;"> 2.690 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 50 </td>
+   <td style="text-align:left;"> 1.299 </td>
+   <td style="text-align:left;"> 1.676 </td>
+   <td style="text-align:left;"> 2.009 </td>
+   <td style="text-align:left;"> 2.403 </td>
+   <td style="text-align:left;"> 2.678 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 60 </td>
+   <td style="text-align:left;"> 1.296 </td>
+   <td style="text-align:left;"> 1.671 </td>
+   <td style="text-align:left;"> 2.000 </td>
+   <td style="text-align:left;"> 2.390 </td>
+   <td style="text-align:left;"> 2.660 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 75 </td>
+   <td style="text-align:left;"> 1.293 </td>
+   <td style="text-align:left;"> 1.665 </td>
+   <td style="text-align:left;"> 1.992 </td>
+   <td style="text-align:left;"> 2.377 </td>
+   <td style="text-align:left;"> 2.643 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 100 </td>
+   <td style="text-align:left;"> 1.290 </td>
+   <td style="text-align:left;"> 1.660 </td>
+   <td style="text-align:left;"> 1.984 </td>
+   <td style="text-align:left;"> 2.364 </td>
+   <td style="text-align:left;"> 2.626 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 120 </td>
+   <td style="text-align:left;"> 1.289 </td>
+   <td style="text-align:left;"> 1.658 </td>
+   <td style="text-align:left;"> 1.980 </td>
+   <td style="text-align:left;"> 2.358 </td>
+   <td style="text-align:left;"> 2.617 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 140 </td>
+   <td style="text-align:left;"> 1.288 </td>
+   <td style="text-align:left;"> 1.656 </td>
+   <td style="text-align:left;"> 1.977 </td>
+   <td style="text-align:left;"> 2.353 </td>
+   <td style="text-align:left;"> 2.611 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 180 </td>
+   <td style="text-align:left;"> 1.286 </td>
+   <td style="text-align:left;"> 1.653 </td>
+   <td style="text-align:left;"> 1.973 </td>
+   <td style="text-align:left;"> 2.347 </td>
+   <td style="text-align:left;"> 2.603 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 250 </td>
+   <td style="text-align:left;"> 1.285 </td>
+   <td style="text-align:left;"> 1.651 </td>
+   <td style="text-align:left;"> 1.969 </td>
+   <td style="text-align:left;"> 2.341 </td>
+   <td style="text-align:left;"> 2.596 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 400 </td>
+   <td style="text-align:left;"> 1.284 </td>
+   <td style="text-align:left;"> 1.649 </td>
+   <td style="text-align:left;"> 1.966 </td>
+   <td style="text-align:left;"> 2.336 </td>
+   <td style="text-align:left;"> 2.588 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> 1000 </td>
+   <td style="text-align:left;"> 1.282 </td>
+   <td style="text-align:left;"> 1.646 </td>
+   <td style="text-align:left;"> 1.962 </td>
+   <td style="text-align:left;"> 2.330 </td>
+   <td style="text-align:left;"> 2.581 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Inf </td>
+   <td style="text-align:left;"> 1.282 </td>
+   <td style="text-align:left;"> 1.645 </td>
+   <td style="text-align:left;"> 1.960 </td>
+   <td style="text-align:left;"> 2.326 </td>
+   <td style="text-align:left;"> 2.576 </td>
+  </tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'alternate';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="https://www.su.se/statistiska-institutionen/">Statistiska institutionen - Stockholms universitet</a>
+  </li>  
+</ul>
+    </div>   
+      <div class="nav-footer-center">
+        <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+ Använd vår kurs!
+  </li>  
+</ul>
+      </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/StatisticsSU/SDA1">
+      <i class="bi bi-github" role="img" aria-label="Quarto GitHub">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+</body></html>

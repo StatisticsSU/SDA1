@@ -34,13 +34,13 @@ Den här inlämningsuppgiften förutsätter att följande paket finns installera
 
 -   `remotes`
 
--   `sda1`
+-   `sda123`
 
 De tre första paketen kan installeras som vanligt via kommandot `install.packages('packagename')`, där `'packagename'` är namnet på paketet, t.ex `'mosaic'`.
 
-Det sista paketet, `sda1`, är kursens egna R-paket och installeras med kommandot
+Det sista paketet, `sda123`, är SDA-kursernas egna R-paket och installeras med kommandot
 
-`install_github("StatisticsSU/sda1paket")`
+`install_github("StatisticsSU/sda123")`
 
 **efter** att du laddat in `remotes` paketet.
 :::
@@ -51,8 +51,8 @@ Det sista paketet, `sda1`, är kursens egna R-paket och installeras med kommando
 suppressMessages(library(mosaic))
 suppressMessages(library(gplots))
 suppressMessages(library(remotes))
-#install_github("StatisticsSU/sda1paket")
-suppressMessages(library(sda1))
+#install_github("StatisticsSU/sda123")
+suppressMessages(library(sda123))
 ```
 
 ## Introduktion
@@ -64,7 +64,7 @@ I denna andra inlämningsuppgift ska ni självständigt i grupper om tre analyse
 ::: callout-note
 ### Instruktioner
 
-I denna inlämningsuppgift ska ni analysera ett datamaterial med 1602 australiska hushålls elkonsumption[^1], och finns i kursens R-paket `sda1` och heter `electricitycost`. När du installerat och laddat in sda1-paketet finns `electricitycost` tillgängligt som en dataframe, dvs en tabell där raderna är observationer (hushåll) och kolumnerna är variabler, t ex hushållets kostnad för el och information om hushållets storlek och utrustning. Se nedan för mer information.
+I denna inlämningsuppgift ska ni analysera ett datamaterial med 1602 australiska hushålls elkonsumption[^1], och finns i kursens R-paket `sda123` och heter `electricitycost`. När du installerat och laddat in `sda123`-paketet finns `electricitycost` tillgängligt som en dataframe, dvs en tabell där raderna är observationer (hushåll) och kolumnerna är variabler, t ex hushållets kostnad för el och information om hushållets storlek och utrustning. Se nedan för mer information.
 
 Till skillnad från den tidigare inlämningsuppgiften **ska ni i denna inlämningsuppgift arbeta i ett separat Quarto-dokument där ni skriver alla svar**. Det här dokumentet som du läser nu innehåller alltså bara instruktioner och frågorna. Det Quarto-dokument som ni ska göra analysen och skriva svaren i finns [här](https://github.com/StatisticsSU/SDA1/raw/main/assignments/assignment2/Assignment2handin.qmd "Quartodokument för inlämning").
 
@@ -81,12 +81,12 @@ Inlämningsuppgiften ska lämnas in i form av ett html dokument genererat av Qua
 
 ## 0. Läsa in data
 
-Datamaterialet `electricitycost` läses in via kurspaketet `sda1`:
+Datamaterialet `electricitycost` läses in via kurspaketet `sda123`:
 
 ```{r}
 library(remotes)
-#install_github("StatisticsSU/sda1paket")
-library(sda1)
+#install_github("StatisticsSU/sda123")
+library(sda123)
 head(electricitycost)
 ```
 

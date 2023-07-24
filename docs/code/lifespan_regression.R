@@ -1,7 +1,7 @@
 #install.packages("remotes")
 #library(remotes)
 #install_github("StatisticsSU/sda1paket")
-library(sda1)
+library(sda123)
 
 lifespan_no_usa = lifespan[1:29,] # ta bort outliern USA
 
@@ -16,14 +16,14 @@ summary(model)
 # Konfidensintervall - base R
 confint(model)
 
-# Konfidensintervall - sda1
+# Konfidensintervall - sda123
 reg_summary(model, conf_intervals = TRUE, anova = FALSE)
 
 # Residualanalys
 model = lm(lifespan ~ spending, data = lifespan_no_usa)
 reg_residuals(model)
 
-# Prediktionsintervall - sda1
+# Prediktionsintervall - sda123
 reg_predict(lifespan ~ spending, data = lifespan_no_usa)
 
 # Anpassat värde/prediktion för Sverige:

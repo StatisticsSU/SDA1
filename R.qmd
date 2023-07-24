@@ -56,28 +56,30 @@ I SDA1 kommer vi försöka använda Formula syntax som mycket som möjligt, med 
 
 -   Denna [RStudio cheat sheet](/R/cheatsheets/rstudio-ide_cheatsheet.pdf) är rätt rörig, men kan kanske vara användbar *efter* att man själv bekantat sig lite med RStudio.
 
--   Kursens egna R-paket `sda1` (se nedan) har också ett [cheat sheet](R/cheatsheets/sda1_cheatsheet.pdf).
+-   Kursens R-paket `sda123` (se nedan) har också ett [cheat sheet](R/cheatsheets/sda1_cheatsheet.pdf).
 
 ## Datamaterial
 
 -   Kursboken [Stats: Data and Models](https://nordics.pearson.com/products/stats-data-and-models-5th-global-edition-e-book?variant=42945920630933) kommer med över 500 olika datamaterial som hittas [här](https://media.pearsoncmg.com/intl/ge/2021/cws/ge_deveaux_stats_5/statdm5d_datasets.html). Datamaterialen är i ofta i Excel-format, se denna [guide](/tutorials/ReadingDataFromFile/ReadingDataFromFile.html) om hur man läser in data från Excel i R.
--   Kursens R-paket `sda1` (se nedan) innehåller också några datamaterial som kommer användas under kursen.
+-   Kursens R-paket `sda123` (se nedan) och framförallt R-paket `SUdatasets` innehåller också några datamaterial som kommer användas under kursen.
 
 ## Kursens R-paket
 
-Kursen har ett eget R-paket `sda1` med några hjälpfunktioner och datamaterial som används på kursen.\
+Kurserna **statistik och dataanalys I, II och III** har ett gemensamt R-paket `sda123` med några hjälpfunktioner och datamaterial som används på kurserna.\
 [cheat sheet](R/cheatsheets/sda1_cheatsheet.pdf) \| [manual](https://github.com/StatisticsSU/sda1paket/raw/main/sda1_0.0.1.pdf)
 
 ::: column-margin
-[![](misc/hexagons/figs/sda1paketlogo.svg){fig-alt="sda1 kurspaket för R" fig-align="center" width="60"}](https://github.com/StatisticsSU/sda1paket)
+[![](misc/hexagons/figs/sda123icon.png){fig-alt="sda123 kurspaket för R" fig-align="center" width="106"}](https://github.com/StatisticsSU/sda1paket)
 :::
 
-#### Installera kurspaketet
+#### Installera kurspaketet och paket med datamaterial 
 
 ```{r}
 #| eval = FALSE
 install.packages("remotes") 
 library(remotes)
-install_github("StatisticsSU/sda1paket") 
-library(sda1)
+install_github("StatisticsSU/sda123") 
+library(sda123)
+install_github("StatisticsSU/SUdatasets") 
+library(SUdatasets)
 ```

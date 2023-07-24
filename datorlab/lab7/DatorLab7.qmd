@@ -29,9 +29,9 @@ editor: visual
 Den här labben förutsätter att följande paket finns installerade:
 
 -   `mosaic`
--   `sda1`
+-   `sda123`
 
-sda1 är kursens egna R-paket och måste installeras från GitHub. Det görs genom att först installera paketet remotes och därefter installera kurspaketet:
+sda123 är kursens egna R-paket och måste installeras från GitHub. Det görs genom att först installera paketet remotes och därefter installera kurspaketet:
 
 ```{r}
 #| output: false
@@ -39,7 +39,7 @@ library(mosaic)
 # install.packages("remotes") # avkommentera första gången
 library(remotes)
 #install_github("StatisticsSU/sda1paket")  # avkommentera första gången
-library(sda1)
+library(sda123)
 
 ```
 :::
@@ -91,7 +91,7 @@ Visa hur R har beräknat p-värdet i regression-utskriften (från `summary`) gen
 
 #### 💪 Uppgift 1.4
 
-Gör en residualanalys med funktionen `reg_residuals` i `sda1`-paketet, och kommentera om var och ett av de fyra grundläggande antaganden för populationsmodellen verkar uppfyllda.
+Gör en residualanalys med funktionen `reg_residuals` i `sda123`-paketet, och kommentera om var och ett av de fyra grundläggande antaganden för populationsmodellen verkar uppfyllda.
 
 #### 💪 Uppgift 1.5
 
@@ -131,7 +131,7 @@ Kommentera kortfattat utifrån utskriften om `radio` och `newspaper` är signifi
 
 #### 💪 Uppgift 2.3
 
-Vilken modell, den enkla regressionen eller den multipla, föredrar du? Motivera med relevant R² värde och genom att göra 5-fold korsvalidering med funktionen `reg_crossval` i `sda1`-paketet.
+Vilken modell, den enkla regressionen eller den multipla, föredrar du? Motivera med relevant R² värde och genom att göra 5-fold korsvalidering med funktionen `reg_crossval` i `sda123`-paketet.
 
 ## 3. Residualanalys på simulerade data
 
@@ -144,7 +144,7 @@ $$
 + \varepsilon
 $$
 
-där i vissa datamaterial har feltermer $\varepsilon$ som inte uppfyller alla av de fyra antagandena, och eventuellt kan det också finnas ett icke-linjärt samband mellan någon förklarande variabel och y. Er uppgift är att utföra residualanalys med funktionen `reg_residuals` i `sda1`-paketet för att försöka upptäcka vilka antaganden som inte är uppfyllda i respektive datamaterial (Uppgift 3.1-3.5 nedan). Ni bör också titta på `plot(simdata1)` för varje datamaterial för att upptäcka icke-linjära samband.
+där i vissa datamaterial har feltermer $\varepsilon$ som inte uppfyller alla av de fyra antagandena, och eventuellt kan det också finnas ett icke-linjärt samband mellan någon förklarande variabel och y. Er uppgift är att utföra residualanalys med funktionen `reg_residuals` i `sda123`-paketet för att försöka upptäcka vilka antaganden som inte är uppfyllda i respektive datamaterial (Uppgift 3.1-3.5 nedan). Ni bör också titta på `plot(simdata1)` för varje datamaterial för att upptäcka icke-linjära samband.
 
 Här är de fem datamaterialen:
 
