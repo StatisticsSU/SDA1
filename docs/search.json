@@ -263,7 +263,7 @@
     "href": "datorlab/lab7/DatorLab7.html",
     "title": "Statistik och dataanalys I, 15 hp",
     "section": "",
-    "text": "Installera paket\n\n\n\nDen här labben förutsätter att följande paket finns installerade:\n\nmosaic\nsda1\n\nsda1 är kursens egna R-paket och måste installeras från GitHub. Det görs genom att först installera paketet remotes och därefter installera kurspaketet:\n\nlibrary(mosaic)\n# install.packages(\"remotes\") # avkommentera första gången\nlibrary(remotes)\n#install_github(\"StatisticsSU/sda1paket\")  # avkommentera första gången\nlibrary(sda123)"
+    "text": "Installera paket\n\n\n\nDen här labben förutsätter att följande paket finns installerade:\n\nmosaic\nsda123\n\nsda123 är kursens egna R-paket och måste installeras från GitHub. Det görs genom att först installera paketet remotes och därefter installera kurspaketet:\n\nlibrary(mosaic)\n# install.packages(\"remotes\") # avkommentera första gången\nlibrary(remotes)\n#install_github(\"StatisticsSU/sda1paket\")  # avkommentera första gången\nlibrary(sda123)"
   },
   {
     "objectID": "datorlab/lab7/DatorLab7.html#introduktion",
