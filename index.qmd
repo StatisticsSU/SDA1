@@ -5,7 +5,7 @@ format: html
 
 <img src="/misc/flashytimeseries.jpg" alt="Flashy time series image" class="center" width="100%"/>
 
-### Kursens innehåll
+### Kursen innehåll
 
 > Data finns numera överallt i samhället. Kursen Statistik och dataanalys I ger dig grunderna för att förstå och använda data, både som samhällsmedborgare och som avancerad dataanalytiker.
 
