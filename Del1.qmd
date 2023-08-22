@@ -46,7 +46,7 @@ Extramaterial: [widget - icke-linjär regression](/observable/ickelinregression.
 **Föreläsning 10 - Populationer och stickprov. Undersökningar och experiment.**\
 Läs: SDM 10.1-10.3 och 11.1-11.2 | [Slides](/slides/F10.pdf)\ 
 
-**Föreläsning 11b - Sammanfattning**\
+**Föreläsning 11 - Sammanfattning**\
 Läs: [Slides](/misc/larry.png) 
 
 ### **Räkneövningar**
