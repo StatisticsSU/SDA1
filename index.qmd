@@ -3,7 +3,7 @@ title: "Statistik och dataanalys I, 15 hp"
 format: html
 ---
 
-<img src="/misc/flashytimeseries.jpg" alt="Flashy time series image" class="center" width="100%"/>
+<img src="/misc/statspicai.png" alt="Flashy time series image" class="center" width="100%"/>
 
 ### Kursens innehåll
 
