@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>SDA1 - Del I - Dataanalys och Regression, 7.5 hp</title>
+<title>SDA1 - Hypotestest - typ I och II fel</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,25 +23,25 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href=".//misc/favicons/favicon.ico" rel="icon">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="..//misc/favicons/favicon.ico" rel="icon">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -64,7 +64,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="nav-fixed">
@@ -74,10 +74,10 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./misc/SU_logo_small.png" alt="" class="navbar-logo">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../misc/SU_logo_small.png" alt="" class="navbar-logo">
     </a>
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">SDA1</span>
     </a>
   </div>
@@ -88,19 +88,19 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html" rel="" target="">
+    <a class="nav-link" href="../index.html" rel="" target="">
  <span class="menu-text">Översikt</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./Del1.html" rel="" target="" aria-current="page">
+    <a class="nav-link" href="../Del1.html" rel="" target="">
  <span class="menu-text">Del 1 - Dataanalys och regression</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./Del2.html" rel="" target="">
+    <a class="nav-link" href="../Del2.html" rel="" target="">
  <span class="menu-text">Del 2 - Sannolikhetsmodeller och inferens</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./R.html" rel="" target="">
+    <a class="nav-link" href="../R.html" rel="" target="">
  <span class="menu-text">R</span></a>
   </li>  
 </ul>
@@ -116,23 +116,14 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Avsnitt på sidan</h2>
-   
-  <ul>
-  <li><a href="#föreläsningar" id="toc-föreläsningar" class="nav-link active" data-scroll-target="#föreläsningar"><strong>Föreläsningar</strong></a></li>
-  <li><a href="#räkneövningar" id="toc-räkneövningar" class="nav-link" data-scroll-target="#räkneövningar"><strong>Räkneövningar</strong></a></li>
-  <li><a href="#datorlaborationer" id="toc-datorlaborationer" class="nav-link" data-scroll-target="#datorlaborationer"><strong>Datorlaborationer</strong></a></li>
-  <li><a href="#inlämningsuppgift" id="toc-inlämningsuppgift" class="nav-link" data-scroll-target="#inlämningsuppgift"><strong>Inlämningsuppgift</strong></a></li>
-  </ul>
-</nav>
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Del I - Dataanalys och Regression, 7.5 hp</h1>
+<h1 class="title">Hypotestest - typ I och II fel</h1>
 </div>
 
 
@@ -147,75 +138,10 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<blockquote class="blockquote">
-<p>I momentet ingår insamling, bearbetning, visualisering och sammanfattning av data i programspråket R. En stor del av momentet behandlar sambands- och regressionsanalys som utmynnar i metoder för prediktion.</p>
-</blockquote>
-<p>Förkortningen <strong>SDM</strong> står för kursboken <a href="https://nordics.pearson.com/products/stats-data-and-models-5th-global-edition-e-book?variant=42945920630933">Stats: Data and Models</a> 5:e upplagan, global edition.</p>
-<p>Under vissa föreläsningar länkar vi till <code>Extramaterial</code>. Det är material som inte krävs för att klara kursen, men som den nyfikne kan läsa för att få en djupare förståelse.</p>
-<section id="föreläsningar" class="level3">
-<h3 class="anchored" data-anchor-id="föreläsningar"><strong>Föreläsningar</strong></h3>
-<p><strong>Föreläsning 1 - Introduktion.</strong><br>
-Läs: SDM Kapitel 1 | <a href="./slides/F1Intro.pdf">Slides</a></p>
-<p><strong>Föreläsning 2 - Kort introduktion till R. </strong><br>
-Läs: <a href="./slides/F2.pdf">Slides</a><br>
-Kod: <a href="./slides/code/R_lecture_examples.R">Kod</a><br>
-Data: <a href="./datorlab/lab3/SmartPhones.RData">SmartPhones</a> | <a href="./datorlab/lab3/CAPM_data.RData">CAPM</a></p>
-<p><strong>Föreläsning 3 - Hantera och beskriva data.</strong><br>
-Läs: SDM Kapitel 2 | <a href="./slides/F3.pdf">Slides</a><br>
-Interaktivt: <a href="./observable/histogram.html">widget - histogram</a></p>
-<p><strong>Föreläsning 4 - Samband mellan kategoriska variabler.</strong><br>
-Läs: SDM Kapitel 3 | <a href="./slides/F4.pdf">Slides</a></p>
-<p><strong>Föreläsning 5 - Jämföra fördelningar. Tidsserier. Transformationer.</strong><br>
-Läs: SDM Kapitel 4 | <a href="./slides/F5.pdf">Slides</a></p>
-<p><strong>Föreläsning 6 - Standardisering och normalmodellen.</strong><br>
-Läs: SDM Kapitel 5 | <a href="./slides/F6.pdf">Slides</a></p>
-<p><strong>Föreläsning 7 - Samband mellan numeriska variabler.</strong><br>
-Läs: SDM Kapitel 6 | <a href="./slides/F7.pdf">Slides</a></p>
-<p><strong>Föreläsning 8 - Enkel linjär och icke-linjär regression.</strong><br>
-Läs: SDM Kapitel 7 | <a href="./slides/F8.pdf">Slides</a><br>
-<a href="./observable/linreg_simple_estimates.html">widget - linjär regression utan population</a> | <a href="./observable/linreg_simple.html">widget - linjär regression med population</a></p>
-<p><strong>Föreläsning 9 - Multipel linjär regression och modellval.</strong><br>
-Läs: SDM Kapitel 8-9 | <a href="./slides/F9.pdf">Slides</a><br>
-Extramaterial: <a href="./observable/ickelinregression.html">widget - icke-linjär regression</a></p>
-<p><strong>Föreläsning 10 - Populationer och stickprov. Undersökningar och experiment.</strong><br>
-Läs: SDM 10.1-10.3 och 11.1-11.2 | <a href="./slides/F10.pdf">Slides</a>&nbsp;</p>
-<p><strong>Föreläsning 11 - Sammanfattning</strong><br>
-Läs: <a href="./misc/larry.png">Slides</a></p>
-</section>
-<section id="räkneövningar" class="level3">
-<h3 class="anchored" data-anchor-id="räkneövningar"><strong>Räkneövningar</strong></h3>
-<p>Övningarna i kursboken <a href="https://nordics.pearson.com/products/stats-data-and-models-5th-global-edition-e-book?variant=42945920630933">Stats: Data and Models (SDM)</a> hänvisas till med kapitelnummer följt av övningsnummer.</p>
-<p><strong>Övning 1 - Beskrivande statistik.</strong><br>
-Uppgifter: SDM 2.1, 2.2, 2.6, 2.7, 2.9, 2.11, 2.12, 2.14, 2.15, 2.16, 2.17, 2.20, 2.21, 2.24.</p>
-<p><strong>Övning 2 - Samband mellan kategoriska variabler. Transformationer.</strong><br>
-Uppgifter: SDM 3.1, 3.3, 3.5, 3.6, 3.7, 3.9, 3.25, 3.31, 3.39, 3.41, 3.47, 4.1, 4.3, 4.14, 4.17, 4.45.</p>
-<p><strong>Övning 3 - Standarisering och normalmodellen.</strong><br>
-Uppgifter: SDM 5.1, 5.2, 5.4, 5.5, 5.8, 5.10, 5.14, 5.16, 5.17, 5.30, 5.42, 5.48.</p>
-<p><strong>Övning 4 - Samband mellan numeriska variabler. Korrelation och enkel linjär regression.</strong><br>
-Uppgifter: SDM 6.2, 6.3, 6.5, 6.6, 6.9, 6.14, 6.20, 7.1, 7.2, 7.3, 7.4, 7.5, 7.7, 7.9, 7.11, 7.13, 7.15, 7.19, 7.23, 7.27, 7.52.</p>
-<p><strong>Övning 5 - Multipel linjär regression.</strong><br>
-Uppgifter: SDM Kapitel 8.18, 8.20, 9.1, 9.2, 9.3, 9.4, 9.5, 9.6, 9.9, 9.11, 9.14, 9.16, 9.22, 9.23, 9.28.</p>
-<p><strong>Övning 6 - Repetition.</strong><br>
-Repetitionstillfälle.</p>
-</section>
-<section id="datorlaborationer" class="level3">
-<h3 class="anchored" data-anchor-id="datorlaborationer"><strong>Datorlaborationer</strong></h3>
-<p><strong>Datorlaboration 1 - Introduktion till R.</strong><br>
-Uppgifter: <a href="./datorlab/lab1/DatorLab1.html">html</a></p>
-<p><strong>Datorlaboration 2 - Beskrivande statistik och visualisering i R.</strong><br>
-Uppgifter: <a href="./datorlab/lab2/DatorLab2.html">html</a> | <a href="https://github.com/StatisticsSU/SDA1/raw/main/datorlab/lab2/DatorLab2.qmd" download="">quarto</a></p>
-<p><strong>Datorlaboration 3 - Samband mellan två kategoriska variabler. Samband mellan en kategorisk och en numerisk variabel. Tidsserier.</strong><br>
-Uppgifter: <a href="./datorlab/lab3/DatorLab3.html">html</a> | <a href="https://github.com/StatisticsSU/SDA1/raw/main/datorlab/lab3/DatorLab3.qmd" download="">quarto</a></p>
-<p><strong>Datorlaboration 4 - Korrelation. Enkel och multipel linjär samt icke-linjär regression.</strong><br>
-Uppgifter: <a href="./datorlab/lab4/DatorLab4.html">html</a> | <a href="https://github.com/StatisticsSU/SDA1/raw/main/datorlab/lab4/DatorLab4.qmd" download="">quarto</a></p>
-</section>
-<section id="inlämningsuppgift" class="level3">
-<h3 class="anchored" data-anchor-id="inlämningsuppgift"><strong>Inlämningsuppgift</strong></h3>
-<p><strong>Inlämningsuppgift 1.</strong><br>
-Uppgifter: <a href="./assignments/assignment1/Assignment1.html">html</a> | <a href="https://github.com/StatisticsSU/SDA1/raw/main/assignments/assignment1/Assignment1.qmd" download="">quarto</a></p>
+<iframe width="100%" height="1340" frameborder="0" src="https://observablehq.com/embed/@mattiasvillani/typ1och2fel?cells=modelltext%2Cviewof+inputs%2Cprobserrors%2Cplt_pdf">
+</iframe>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
