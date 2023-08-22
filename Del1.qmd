@@ -3,6 +3,9 @@ title: "Del I - Dataanalys och Regression, 7.5 hp"
 format: html
 ---
 
+<img src="/misc/statspicai3.png" alt="Flashy time series image" class="center" width="100%"/>
+
+
 > I momentet ingår insamling, bearbetning, visualisering och sammanfattning av data i programspråket R. En stor del av momentet behandlar sambands- och regressionsanalys som utmynnar i metoder för prediktion.
 
 Förkortningen **SDM** står för kursboken [Stats: Data and Models](https://nordics.pearson.com/products/stats-data-and-models-5th-global-edition-e-book?variant=42945920630933) 5:e upplagan, global edition.

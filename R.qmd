@@ -3,6 +3,8 @@ title: "R"
 format: html
 ---
 
+<img src="/misc/compstatpicai.png" alt="Flashy time series image" class="center" width="100%"/>
+
 > Kursen använder det populära statistiska programmeringsspråket R. Programmet är helt gratis och kan laddas ner på alla datorer.
 
 ## RStudio

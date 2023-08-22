@@ -3,6 +3,8 @@ title: "Del II - Sannolikhetsmodeller och Inferens, 7.5 hp"
 format: html
 ---
 
+<img src="/misc/statspicai4.png" alt="Flashy time series image" class="center" width="100%"/>
+
 > I kursens andra momentet behandlas inledningsvis sannolikheter, slumpvariabler och sannolikhetsfördelningar. En central del i momentet är inferens, dvs. statistiska metoder för att dra slutsatser om olika fenomen från data, bl a samband från regressionsanalys. Kursen avslutas med en introduktion till beslutsfattade under osäkerhet.
 
 Förkortningen **SDM** står för kursboken [Stats: Data and Models](https://nordics.pearson.com/products/stats-data-and-models-5th-global-edition-e-book?variant=42945920630933) 5:e upplagan, global edition.
