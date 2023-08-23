@@ -17,40 +17,35 @@ Under vissa föreläsningar länkar vi till `Extramaterial`. Det är material so
 **Föreläsning 1 - Introduktion.**\
 Läs: SDM Kapitel 1 | [Slides](/slides/F1Intro.pdf) 
 
-**Föreläsning 2 - Kort introduktion till R. **\
-Läs: [Slides](/slides/F2.pdf)\
-Kod: [Kod](/slides/code/R_lecture_examples.R)\
-Data: [SmartPhones](/datorlab/lab3/SmartPhones.RData) | [CAPM](/datorlab/lab3/CAPM_data.RData)
-
-**Föreläsning 3 - Hantera och beskriva data.**\
-Läs: SDM Kapitel 2 | [Slides](/slides/F3.pdf)\
+**Föreläsning 2 - Hantera och beskriva data**\
+Läs: SDM Kapitel 2 | [Slides](/misc/larry.png)\
 Interaktivt: [widget - histogram](/observable/histogram.qmd)
 
-**Föreläsning 4 - Samband mellan kategoriska variabler.**\
-Läs: SDM Kapitel 3 | [Slides](/slides/F4.pdf) 
+**Föreläsning 3 - Samband mellan kategoriska variabler**\
+Läs: SDM Kapitel 3 | [Slides](/misc/larry.png) 
 
-**Föreläsning 5 - Jämföra fördelningar. Tidsserier. Transformationer.**\
-Läs: SDM Kapitel 4 | [Slides](/slides/F5.pdf) 
+**Föreläsning 4 - Jämföra fördelningar. Tidsserier. Transformationer.**\
+Läs: SDM Kapitel 4 | [Slides](/misc/larry.png) 
 
-**Föreläsning 6 - Standardisering och normalmodellen.**\
-Läs: SDM Kapitel 5 | [Slides](/slides/F6.pdf) 
+**Föreläsning 5 - Standardiserade variabler och normalfördelningen**\
+Läs: SDM Kapitel 5 | [Slides](/misc/larry.png) 
 
-**Föreläsning 7 - Samband mellan numeriska variabler.**\
-Läs: SDM Kapitel 6 | [Slides](/slides/F7.pdf) 
+**Föreläsning 6 - Samband mellan numeriska variabler. Korrelation**\
+Läs: SDM Kapitel 6 | [Slides](/misc/larry.png) 
 
-**Föreläsning 8 - Enkel linjär och icke-linjär regression.**\
-Läs: SDM Kapitel 7 | [Slides](/slides/F8.pdf)\
+**Föreläsning 7 - Enkel linjär regression.**\
+Läs: SDM Kapitel 7 | [Slides](/misc/larry.png)\
 [widget - linjär regression utan population](/observable/linreg_simple_estimates.qmd) | [widget - linjär regression med population](/observable/linreg_simple.qmd)
 
-**Föreläsning 9 - Multipel linjär regression och modellval.**\
-Läs: SDM Kapitel 8-9 | [Slides](/slides/F9.pdf)\
+**Föreläsning 8 - Transformationer. Multipel linjär regression.**\
+Läs: SDM Kapitel 8, 9.1-9-4 | [Slides](/misc/larry.png)\
 Extramaterial: [widget - icke-linjär regression](/observable/ickelinregression.qmd)
 
-**Föreläsning 10 - Populationer och stickprov. Undersökningar och experiment.**\
-Läs: SDM 10.1-10.3 och 11.1-11.2 | [Slides](/slides/F10.pdf)\ 
+**Föreläsning 9 - Dummyvariabler i regressionsmodeller. Modellval.**\
+Läs: SDM 9.5  | [Slides](/misc/larry.png)\ 
 
-**Föreläsning 11 - Sammanfattning**\
-Läs: [Slides](/misc/larry.png) 
+**Föreläsning 10 - Stickprov och populationer. Observationsstudier och experiment.**\
+Läs: SDM kapitel 10.1-10.3 och 11.1-11.2 | [Slides](/misc/larry.png) 
 
 ### **Räkneövningar**
 
