@@ -125,6 +125,6 @@ Uppgifter: [html](/datorlab/lab7/DatorLab7.qmd) | <a href="https://github.com/St
 ### **Inlämningsuppgift**
 
 **Inlämningsuppgift 2.**\
-Uppgifter: [instruktioner i html](/assignments/assignment2/Assignment2instructions.qmd) | <a href="https://github.com/StatisticsSU/SDA1/raw/main/assignments/assignment2/Assignment2handin.qmd" download>quarto för inlämning</a> 
+Uppgifter: [instruktioner i html](/misc/larry.png) | <a href="/misc/larry.png" download>quarto för inlämning</a> 
 
 
