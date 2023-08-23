@@ -16,7 +16,7 @@ language:
   title-block-author-single: " "
 toc-title-document: "Innehåll"
 crossref-fig-title: "Figur"
-theme: Superhero
+theme: lumen
 title-block-banner-color: Primary
 title-block-published: "Publicerad"
 callout-warning-caption: "Varning"
