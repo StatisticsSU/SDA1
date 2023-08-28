@@ -44,8 +44,8 @@ På vissa delar av kursen använder vi interaktivt material för att underlätta
 <img src="/misc/VillaniLowRes.jpg" width="35%"/>\
 [Mattias Villani](https://mattiasvillani.com)<br>Kursansvarig och Föreläsare<br>Professor
 
-<img src="/misc/QuirozPhoto.jpg" width="35%"/>\
-[Matias Quiroz](https://matiasquiroz.com)<br>Föreläsare<br>Universitetslektor
+<img src="/misc/karlsigfrid.png" width="35%"/>\
+[Karl Sigfrid](https://www.su.se/profiles/kasi3175-1.513541)<br>Föreläsare<br>Doktorand
 
 <img src="/misc/female.png" width="35%"/>\
 [Mona Sfaxi](https://www.su.se/profiles/mosf7202-1.616028)<br>Övningar, Datorövningar och Jour<br>Masterexamen i Statistik
