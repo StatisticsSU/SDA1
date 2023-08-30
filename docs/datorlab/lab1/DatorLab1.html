@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.256">
+<meta name="generator" content="quarto-1.3.450">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Mattias Villani">
-<meta name="dcterms.date" content="2023-01-19">
+<meta name="dcterms.date" content="2023-07-24">
 
 <title>SDA1 - Statistik och dataanalys I, 15 hp</title>
 <style>
@@ -19,9 +19,10 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
@@ -48,43 +49,13 @@ pre.numberSource code > span > a:first-child::before
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
     padding: 0 4px; width: 4em;
-    color: #aaaaaa;
   }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
 div.sourceCode
   {   }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { color: #008000; } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { color: #008000; font-weight: bold; } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 
@@ -123,10 +94,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="../../styles.css">
@@ -146,32 +119,32 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <span class="navbar-title">SDA1</span>
     </a>
   </div>
+            <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html">
+    <a class="nav-link" href="../../index.html" rel="" target="">
  <span class="menu-text">Översikt</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../Del1.html">
+    <a class="nav-link" href="../../Del1.html" rel="" target="">
  <span class="menu-text">Del 1 - Dataanalys och regression</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../Del2.html">
+    <a class="nav-link" href="../../Del2.html" rel="" target="">
  <span class="menu-text">Del 2 - Sannolikhetsmodeller och inferens</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../R.html">
+    <a class="nav-link" href="../../R.html" rel="" target="">
  <span class="menu-text">R</span></a>
   </li>  
 </ul>
-              <div class="quarto-toggle-container">
-                  <a href="" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
-              </div>
-              <div id="quarto-search" class="" title="Search"></div>
+            <div class="quarto-navbar-tools ms-auto">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
@@ -185,7 +158,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <h2 id="toc-title">Avsnitt på sidan</h2>
    
   <ul>
-  <li><a href="#introduktion" id="toc-introduktion" class="nav-link active" data-scroll-target="#introduktion">Introduktion</a></li>
+  <li><a href="#introduktion" id="toc-introduktion" class="nav-link active" data-scroll-target="#introduktion">Introduktion</a>
+  <ul class="collapse">
+  <li><a href="#instruktioner" id="toc-instruktioner" class="nav-link" data-scroll-target="#instruktioner">Instruktioner</a></li>
+  </ul></li>
   <li><a href="#använda-r-som-en-miniräknare" id="toc-använda-r-som-en-miniräknare" class="nav-link" data-scroll-target="#använda-r-som-en-miniräknare">1. Använda R som en miniräknare</a></li>
   <li><a href="#använda-variabler-i-r" id="toc-använda-variabler-i-r" class="nav-link" data-scroll-target="#använda-variabler-i-r">2. Använda variabler i R</a></li>
   <li><a href="#organisera-dig-med-filmappar" id="toc-organisera-dig-med-filmappar" class="nav-link" data-scroll-target="#organisera-dig-med-filmappar">3. Organisera dig med filmappar</a></li>
@@ -198,6 +174,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <li><a href="#funktioner" id="toc-funktioner" class="nav-link" data-scroll-target="#funktioner">10. Funktioner</a></li>
   <li><a href="#tre-dialekter-av-r" id="toc-tre-dialekter-av-r" class="nav-link" data-scroll-target="#tre-dialekter-av-r">11. Tre dialekter av R</a></li>
   <li><a href="#sammanfattning" id="toc-sammanfattning" class="nav-link" data-scroll-target="#sammanfattning">12. Sammanfattning</a></li>
+  <li><a href="#i-den-här-laborationen-har-du-lärt-dig" id="toc-i-den-här-laborationen-har-du-lärt-dig" class="nav-link" data-scroll-target="#i-den-här-laborationen-har-du-lärt-dig">I den här laborationen har du lärt dig:</a></li>
   </ul>
 </nav>
     </div>
@@ -224,7 +201,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">January 19, 2023</p>
+      <p class="date">July 24, 2023</p>
     </div>
   </div>
   
@@ -240,12 +217,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <blockquote class="blockquote">
 <p>I den här första datorlabben kommer ni bekanta er med programmeringsspråket <strong>R</strong> och dess arbetsmiljö <strong>RStudio</strong>.</p>
 </blockquote>
-<div class="callout-important callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 Ta det lugnt
 </div>
 </div>
@@ -255,25 +232,16 @@ Ta det lugnt
 </blockquote>
 </div>
 </div>
-<div class="callout-info callout callout-style-default no-icon callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Instruktioner
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<section id="instruktioner" class="level3 callout-info">
+<h3 class="anchored" data-anchor-id="instruktioner">Instruktioner</h3>
 <p>💪 Avsnitt med den här symbolen är uppgifter där ni ska göra något.</p>
-</div>
-</div>
-<div class="callout-note callout callout-style-default callout-captioned">
+</section>
+<div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 Jobba med R på egen dator
 </div>
 </div>
@@ -294,12 +262,12 @@ Jobba med R på egen dator
 </figure>
 </div>
 <p>Tecknet <code>&gt;</code> kallas för <strong>kommandoprompt</strong> (eller bara <strong>prompt</strong>) och är R’s sätt att tala om att det väntar på att ett nytt kommando ska skrivas in (vid det blinkande strecket). Vi säger att vi ‘skriver in något på prompten’.</p>
-<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 Multiplikation och division
 </div>
 </div>
@@ -334,12 +302,12 @@ Multiplikation och division
 </figure>
 </div>
 <p>R skriver snällt ut det värde (100) som jag tilldelade variabeln <code>kapital</code>.</p>
-<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 Språkbruk
 </div>
 </div>
@@ -347,12 +315,12 @@ Språkbruk
 <p>vi säger att vi <strong>tilldelar</strong> <strong>variabel</strong> <code>kapital</code> <strong>värdet</strong> <code>100</code>. Lite mer slarvigt säger vi: ‘vi sätter <code>kapital</code> till 100’.</p>
 </div>
 </div>
-<div class="callout-warning callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 Se upp!
 </div>
 </div>
@@ -360,12 +328,12 @@ Se upp!
 <p>Vi kan återkalla värdet 100 från variabeln <code>kapital</code> när som helst. Men om du stänger ner RStudio och sen startar om programmet (eller om RStudio låser sig) så minns inte R längre värdet på <code>kapital</code>. R minns faktiskt inte ens att det fanns något som hette <code>kapital</code> och kommer att klaga om du skriver <code>kapital</code> på prompten följt av <code>Enter</code>. R och RStudio minns bara variabeln inom en <strong>session</strong>, dvs tills du avslutar RStudio. Om man vill spara data mellan olika sessioner måste man spara ner variablerna på datorns disk (eller på någon lagring på internet). Mer om detta senare.</p>
 </div>
 </div>
-<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 Learn the rules so you know how to break them
 </div>
 </div>
@@ -410,12 +378,12 @@ Learn the rules so you know how to break them
 <li><p><img src="mac.png" class="img-fluid" width="20">Mac: Starta programmet <strong>Finder</strong> och navigera (klicka) till den mapp där du vill skapa din kursmapp. Skapa en ny mapp med namnet <strong>SDA1</strong>.</p></li>
 <li><p><img src="linux.png" class="img-fluid" width="20"> Linux: Starta programmet <strong>Nautilus</strong> (om du använder Ubuntu, annars kan du prova att söka på ordet files om din Linux-distribution använder en annan filhanterare). Navigera (klicka) till den mapp där du vill skapa din kursmapp. Skapa en ny mapp med namnet <strong>SDA1</strong>.</p></li>
 </ul>
-<div class="callout-warning callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 Svenska är fint, men inte i filnamn
 </div>
 </div>
@@ -425,12 +393,12 @@ Använd inte åäö i namn på filmappar eller filer.
 Stor risk att du får problem då.</code></pre>
 </div>
 </div>
-<div class="callout-warning callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 Dina filer kommer försvinna
 </div>
 </div>
@@ -483,12 +451,12 @@ Dina filer kommer försvinna
 </div>
 <p>Notera att avkastningen (<strong>returns</strong>) anges i procent och är satt till noll under 2018 eftersom vi köpte aktierna precis i början av år 2019 (säger vi) och alltså inte fick någon avkastning under år 2018.</p>
 <p>Excel-filen har jag döpt till <em>stock.xlsx</em>, men den kan döpas till precis vad som helst.</p>
-<div class="callout-warning callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 Variabelnamn som man ska undvika
 </div>
 </div>
@@ -496,12 +464,12 @@ Variabelnamn som man ska undvika
 <p>Vi använder engelska namn på kolumnerna. Även om svenska tecken åäö går att använda i kod, är det ändå bäst att undvika dem genom att skriva på engelska. Du kan inte använda mellanslag (space) i variabelnamn, och variabelnamn får inte heller börja med siffror. Det finns också <a href="https://rdrr.io/r/base/Reserved.html">vissa ord</a> som är reserverade och som inte får/ska användas som variabelnamn. Slutligen: R skiljer på små och stora bokstäver. Variabeln <code>kapital</code> är alltså inte samma som <code>Kapital</code>.</p>
 </div>
 </div>
-<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 What’s in a name? Mer än du tror!
 </div>
 </div>
@@ -592,12 +560,12 @@ Det är några saker att reda ut här. Först, <code>read.xlsx()</code> är en <
 6 2023 125.7601    0.07</code></pre>
 </div>
 </div>
-<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 Kommentarer
 </div>
 </div>
@@ -605,12 +573,12 @@ Kommentarer
 <p>I min kod ovan skrev jag <code># läser in Excel data</code> på en rad. All text som kommer <em>efter</em> tecknet <code>#</code> är en s k <strong>kommentar</strong> i R. Kommentarer ignoreras av R och är därför ett bra sätt att skriva små saker som gör koden mer lättläst. Du måste ha ett <code>#</code> -tecken framför varje rad som du vill “kommentera ut”.</p>
 </div>
 </div>
-<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 Ange sökväg till filer som inte är i din Working directory
 </div>
 </div>
@@ -643,12 +611,12 @@ Prova nu att läsa in data med kommandot <code>stockdata = read.xlsx('stock.xlsx
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">load</span>(<span class="st">"stockdata2.Rdata"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>vilket kommer läsa in tabellen <code>stockdata</code> i R’s arbetsminne.</p>
-<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 Läsa in data från andra filformat än Excel
 </div>
 </div>
@@ -830,12 +798,12 @@ $d
 </div>
 </div>
 <p>Känns det bekant med $-tecken för att plocka ut saker? Vi har redan sett att man kan plocka ut en kolumn i en dataframe (tabell) genom att skriva t ex <code>stockdata$returns</code> . En dataframe är nämligen egentligen en slags lista.</p>
-<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 Hitta lätt bland alla fickor
 </div>
 </div>
@@ -956,16 +924,9 @@ Hitta lätt bland alla fickor
 </section>
 <section id="sammanfattning" class="level2">
 <h2 class="anchored" data-anchor-id="sammanfattning">12. Sammanfattning</h2>
-<div class="callout-info callout callout-style-default no-icon callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-I den här laborationen har du lärt dig:
-</div>
-</div>
-<div class="callout-body-container callout-body">
+</section>
+<section id="i-den-här-laborationen-har-du-lärt-dig" class="level2 callout-info">
+<h2 class="anchored" data-anchor-id="i-den-här-laborationen-har-du-lärt-dig">I den här laborationen har du lärt dig:</h2>
 <ul>
 <li><p>Använda R som en miniräknare.</p></li>
 <li><p>Använda variabler som ett sätt att spara värden i en session.</p></li>
@@ -974,15 +935,14 @@ I den här laborationen har du lärt dig:
 <li><p>Läsa in data från fil och göra inledande grafer och medelvärdeberäkningar för dataanalys.</p></li>
 <li><p>Vi har också tittat på datastrukturer i R och t o m nosat lite på funktioner i R.</p></li>
 </ul>
-</div>
-</div>
+</section>
 <p><br><br></p>
-<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 End of the line
 </div>
 </div>
@@ -994,12 +954,11 @@ End of the line
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="states-of-a-programmer.png" class="img-fluid figure-img" width="550"></p>
-<p></p><figcaption class="figure-caption">https://devcamp.com/site_blogs/top-5-programming-memes</figcaption><p></p>
+<figcaption class="figure-caption">https://devcamp.com/site_blogs/top-5-programming-memes</figcaption>
 </figure>
 </div>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1144,9 +1103,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
@@ -1211,6 +1184,92 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {
@@ -1260,13 +1319,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </li>  
 </ul>
     </div>   
-      <div class="nav-footer-center">
-        <ul class="footer-items list-unstyled">
+    <div class="nav-footer-center">
+      <ul class="footer-items list-unstyled">
     <li class="nav-item">
  Använd vår kurs!
   </li>  
 </ul>
-      </div>
+    </div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item compact">

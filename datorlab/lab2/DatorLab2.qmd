@@ -325,7 +325,7 @@ Kan du se något ovanligt med stapeldiagrammet nedan? Rätta till det.
 
 ```{r}
 x_axis_title = "Survival"
-y_axis_title = "Frequency"
+y_axis_title = "Relative frequency"
 
 bargraph(~ Survived, data = titanic, type = "count", 
          xlab = x_axis_title, ylab = y_axis_title, col = colors)

@@ -1,7 +1,0 @@
----
-title: "Samplingfördelning - enkel linjär regression"
-format: html
----
-
-<iframe width="100%" height="1218" frameborder="0"
-  src="https://observablehq.com/embed/@mattiasvillani/samplingfordelningen-linear-regression@1649?cells=viewof+n%2Cviewof+beta0%2Cviewof+beta1%2Cviewof+sigmaepsilon%2Cviewof+sampleno%2Cestimates%2Cplt%2Csamplingplots"></iframe>
