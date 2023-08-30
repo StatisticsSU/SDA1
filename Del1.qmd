@@ -52,10 +52,10 @@ Läs: SDM kapitel 10.1-10.3 och 11.1-11.2 | [Slides](/misc/larry.png)
 Övningarna i kursboken [Stats: Data and Models (SDM)](https://nordics.pearson.com/products/stats-data-and-models-5th-global-edition-e-book?variant=42945920630933) hänvisas till med kapitelnummer följt av övningsnummer.
 
 **Övning 1 - Beskrivande statistik.**\
-Uppgifter: SDM 2.1, 2.2, 2.6, 2.7, 2.9, 2.11, 2.12, 2.14, 2.15, 2.16, 2.17, 2.20, 2.21, 2.24. 
+Uppgifter: SDM 2.1, 2.2, 2.6, 2.7, 2.11, 2.15, 2.16, 2.17, 2.20, 2.21, 2.24. 
 
 **Övning 2 - Samband mellan kategoriska variabler. Transformationer.**\
-Uppgifter:  SDM 3.1, 3.3, 3.5, 3.6, 3.7, 3.9, 3.25, 3.31, 3.39, 3.41, 3.47, 4.1, 4.3, 4.14, 4.17, 4.45.
+Uppgifter:  SDM 3.1, 3.3, 3.5, 3.6, 3.7, 3.9, 3.25, 3.39, 3.41, 4.1, 4.3, 4.14, 4.17, 4.45.
 
 **Övning 3 - Standarisering och normalmodellen.**\
 Uppgifter: SDM 5.1, 5.2, 5.4, 5.5, 5.8, 5.10, 5.14, 5.16, 5.17, 5.30, 5.42, 5.48.

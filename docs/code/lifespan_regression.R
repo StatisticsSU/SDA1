@@ -1,6 +1,6 @@
 #install.packages("remotes")
 #library(remotes)
-#install_github("StatisticsSU/sda1paket")
+#install_github("StatisticsSU/sda123")
 library(sda123)
 
 lifespan_no_usa = lifespan[1:29,] # ta bort outliern USA
