@@ -50,8 +50,8 @@ På vissa delar av kursen använder vi interaktivt material för att underlätta
 <img src="/misc/female.png" width="35%"/>\
 [Mona Sfaxi](https://www.su.se/profiles/mosf7202-1.616028)<br>Övningar, Datorövningar och Jour<br>Masterexamen i Statistik
 
-<img src="/misc/jonlachmann.jpeg" width="35%"/>\
-[Jon Lachmann](https://www.su.se/profiles/jola4668-1.579398)<br>Datorövningar<br>Masterexamen i Statistik
+<img src="/misc/sofia.jpeg" width="35%"/>\
+[Sofia Edlund](https://www.su.se/profiles/soed8022-1.660492)<br>Datorövningar<br>Masterstudent i Statistik
 :::
 
 ### Tentor med lösningar
