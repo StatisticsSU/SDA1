@@ -349,7 +349,7 @@ läses av R som
 
 > plotta variabeln `capital` mot variabeln `year`, där både dessa variabler är kolumner i datamaterialet `stockdata`.
 
-Om vi vill beräkna medelvärdet på en variabel kan vi använda funktionen `mean()`. Men om vi vill beräkna medelvärdet av variabeln `capital` med kommandot `mean(capital)` så får vi problemet att R inte har en variabel `capital` i minnet; `capital` är ju bara en kolumn i datamaterialet `stockdata`. Hur säger vi till R: gör om kolumnen `capital` i datamaterialet `stockdata` till en egen variabel och beräkna dess medelvärde (mean på engelska). Lösningen att använda `$`-tecknet för att plocka ut kolumnen `returns` som en egen variabel: `stockdata$capital` och sen använda `mean()` funktionen. Vi kan göra detta på samma kodrad och skriva ut resultatet:
+Om vi vill beräkna medelvärdet på en variabel kan vi använda funktionen `mean()`. Men om vi vill beräkna medelvärdet av variabeln `capital` med kommandot `mean(capital)` så får vi problemet att R inte har en variabel `capital` i minnet; `capital` är ju bara en kolumn i datamaterialet `stockdata`. Hur säger vi till R: gör om kolumnen `capital` i datamaterialet `stockdata` till en egen variabel och beräkna dess medelvärde (mean på engelska). Lösningen att använda `$`-tecknet för att plocka ut kolumnen `capital` som en egen variabel: `stockdata$capital` och sen använda `mean()` funktionen. Vi kan göra detta på samma kodrad och skriva ut resultatet:
 
 ```{r}
 capital = mean(stockdata$capital)
@@ -370,7 +370,7 @@ där vi inte längre måste använda argumentet `data = stockdata` för att tala
 
 #### 💪 Uppgift 7.1
 
-Läs återigen in data med `stockdata = read.xlsx('stock.xlsx', sheet = 1)`. Gör en graf där du plottar variabeln `returns` mot `year`.
+Läs återigen in data med `stockdata = read.xlsx('stock.xlsx', sheet = 1)`. Gör en graf där du plottar variabeln `capital` mot `year`.
 
 Här är hela koden i ett stycke:
 
@@ -481,7 +481,7 @@ Jag kan döpa elementen i listan vad jag vill, här kallade jag dem `a`, `b` och
 my_list$d
 ```
 
-Känns det bekant med \$-tecken för att plocka ut saker? Vi har redan sett att man kan plocka ut en kolumn i en dataframe (tabell) genom att skriva t ex `stockdata$returns` . En dataframe är nämligen egentligen en slags lista.
+Känns det bekant med \$-tecken för att plocka ut saker? Vi har redan sett att man kan plocka ut en kolumn i en dataframe (tabell) genom att skriva t ex `stockdata$capital` . En dataframe är nämligen egentligen en slags lista.
 
 ::: callout-tip
 ### Hitta lätt bland alla fickor

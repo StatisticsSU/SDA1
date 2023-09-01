@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Mattias Villani">
-<meta name="dcterms.date" content="2023-07-24">
+<meta name="dcterms.date" content="2023-09-01">
 
 <title>SDA1 - Statistik och dataanalys I, 15 hp</title>
 <style>
@@ -201,7 +201,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">July 24, 2023</p>
+      <p class="date">September 1, 2023</p>
     </div>
   </div>
   
@@ -644,7 +644,7 @@ läses av R som</p>
 <blockquote class="blockquote">
 <p>plotta variabeln <code>capital</code> mot variabeln <code>year</code>, där både dessa variabler är kolumner i datamaterialet <code>stockdata</code>.</p>
 </blockquote>
-<p>Om vi vill beräkna medelvärdet på en variabel kan vi använda funktionen <code>mean()</code>. Men om vi vill beräkna medelvärdet av variabeln <code>capital</code> med kommandot <code>mean(capital)</code> så får vi problemet att R inte har en variabel <code>capital</code> i minnet; <code>capital</code> är ju bara en kolumn i datamaterialet <code>stockdata</code>. Hur säger vi till R: gör om kolumnen <code>capital</code> i datamaterialet <code>stockdata</code> till en egen variabel och beräkna dess medelvärde (mean på engelska). Lösningen att använda <code>$</code>-tecknet för att plocka ut kolumnen <code>returns</code> som en egen variabel: <code>stockdata$capital</code> och sen använda <code>mean()</code> funktionen. Vi kan göra detta på samma kodrad och skriva ut resultatet:</p>
+<p>Om vi vill beräkna medelvärdet på en variabel kan vi använda funktionen <code>mean()</code>. Men om vi vill beräkna medelvärdet av variabeln <code>capital</code> med kommandot <code>mean(capital)</code> så får vi problemet att R inte har en variabel <code>capital</code> i minnet; <code>capital</code> är ju bara en kolumn i datamaterialet <code>stockdata</code>. Hur säger vi till R: gör om kolumnen <code>capital</code> i datamaterialet <code>stockdata</code> till en egen variabel och beräkna dess medelvärde (mean på engelska). Lösningen att använda <code>$</code>-tecknet för att plocka ut kolumnen <code>capital</code> som en egen variabel: <code>stockdata$capital</code> och sen använda <code>mean()</code> funktionen. Vi kan göra detta på samma kodrad och skriva ut resultatet:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>capital <span class="ot">=</span> <span class="fu">mean</span>(stockdata<span class="sc">$</span>capital)</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>capital</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -666,7 +666,7 @@ läses av R som</p>
 <p>där vi inte längre måste använda argumentet <code>data = stockdata</code> för att tala om var dessa variabler kommer från. Men det förra kommandot <code>plot(capital ~ year, data = stockdata)</code> är nog ändå mer lättläst, tycker jag.</p>
 <section id="uppgift-7.1" class="level4">
 <h4 class="anchored" data-anchor-id="uppgift-7.1">💪 Uppgift 7.1</h4>
-<p>Läs återigen in data med <code>stockdata = read.xlsx('stock.xlsx', sheet = 1)</code>. Gör en graf där du plottar variabeln <code>returns</code> mot <code>year</code>.</p>
+<p>Läs återigen in data med <code>stockdata = read.xlsx('stock.xlsx', sheet = 1)</code>. Gör en graf där du plottar variabeln <code>capital</code> mot <code>year</code>.</p>
 <p>Här är hela koden i ett stycke:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">'/home/mv/Dropbox/Teaching/SDA1/datorlab/lab1'</span>) <span class="co"># I have a Linux computer and my data is in this path</span></span>
@@ -797,7 +797,7 @@ $d
 <pre><code>[1] 4 5 2</code></pre>
 </div>
 </div>
-<p>Känns det bekant med $-tecken för att plocka ut saker? Vi har redan sett att man kan plocka ut en kolumn i en dataframe (tabell) genom att skriva t ex <code>stockdata$returns</code> . En dataframe är nämligen egentligen en slags lista.</p>
+<p>Känns det bekant med $-tecken för att plocka ut saker? Vi har redan sett att man kan plocka ut en kolumn i en dataframe (tabell) genom att skriva t ex <code>stockdata$capital</code> . En dataframe är nämligen egentligen en slags lista.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
