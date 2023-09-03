@@ -25,7 +25,7 @@ Interaktivt: [widget - histogram](/observable/histogram.qmd)
 Läs: SDM Kapitel 3 | [Slides](/slides/part1_ht23/lecture3_embedded.html) 
 
 **Föreläsning 4 - Jämföra fördelningar. Tidsserier. Transformationer.**\
-Läs: SDM Kapitel 4 | [Slides](/misc/larry.png) 
+Läs: SDM Kapitel 4 | [Slides](/slides/part1_ht23/lecture4_embedded.html) 
 
 **Föreläsning 5 - Standardiserade variabler och normalfördelningen.**\
 Läs: SDM Kapitel 5 | [Slides](/misc/larry.png) 
