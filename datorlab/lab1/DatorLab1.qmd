@@ -427,7 +427,7 @@ class(stockdata)
 
 Vi har faktiskt redan använt idéen med att plocka ut värden genom indexing in dataframes tidigare när vi skrev `stockdata[6,3]` för att plocka ut värdet på rad 6 och kolumn 3 i tabellen/dataframe. Och vi såg att vi också kunde ändra värdena i tabellen genom tilldelning: `stockdata[6,3]=0.05` . Samma sak kan man göra med en vektor, t ex så gör kommandot `capital_all_years[5] = 200` att vi ändrar kapitalet år 5 till 200 i vår vektor som innehåller alla års kapital.
 
-Det finns en annan slags tabell som kan vara bra att känna till i R, en s k **matris** (eng. Matrix). Matriser är som dataframes, men innehåller inte information om namnet på kolumnerna. Å andra sidan kan man göra matematiska beräkningar med hela matriser, men det är inget vi gör på denna kurs. Anledningen till att vi nämner matriser här är att man ibland måste göra om en matris till en dataframe eller tvärtom. Vissa R-program vi bara jobba med dataframes och klagar om man försöker få det att jobba med en matris. Låt oss skapa en matris som jag kallar `A` :
+Det finns en annan slags tabell som kan vara bra att känna till i R, en s k **matris** (eng. Matrix). Matriser är som dataframes, men innehåller inte information om namnet på kolumnerna. Å andra sidan kan man göra matematiska beräkningar med hela matriser, men det är inget vi gör på denna kurs. Anledningen till att vi nämner matriser här är att man ibland måste göra om en matris till en dataframe eller tvärtom. Vissa R-program vill bara jobba med dataframes och klagar om man försöker få det att jobba med en matris. Låt oss skapa en matris som jag kallar `A` :
 
 ```{r}
 A = matrix(c(11,2,4,5,62,3), 3, 2)

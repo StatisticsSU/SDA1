@@ -307,9 +307,11 @@ Man kan nämligen ge lite extra kommandon i varje code-chunk genom att använda 
 
 #### 💪 Uppgift 2.3
 
-Justera diagrammet nedan så att det ser mer presentabelt ut. Byt också ut färgerna mot två andra bland [R's standardfärger](https://r-graph-gallery.com/42-colors-names.html).
+Justera diagrammet nedan så att allt stämmer och så att det ser mer presentabelt ut. Byt också ut färgerna mot två andra bland [R's standardfärger](https://r-graph-gallery.com/42-colors-names.html).
 
 ```{r}
+#| label: fig-andelar2
+#| fig-cap: "Relative Frequency of Survival on the Titanic"
 x_axis_title = "Survival"
 y_axis_title = "Frequency"
 length_y_axis = c(0, 0.1)
@@ -321,9 +323,11 @@ bargraph(~ Survived, data = titanic, type = "proportion",
 
 #### 💪 Uppgift 2.4
 
-Kan du se något ovanligt med stapeldiagrammet nedan? Rätta till det. 
+Kan du se något ovanligt med stapeldiagrammet nedan? Rätta till det.
 
 ```{r}
+#| label: fig-frekvenser
+#| fig-cap: "Frequency of Survival on the Titanic"
 x_axis_title = "Survival"
 y_axis_title = "Relative frequency"
 
@@ -456,13 +460,14 @@ Vi har alltså åldersintervallen "0-4", "5-9", "10-14", "15-19", "20-24", "25-2
 I det första argumentet i funktionen `barplot()` lägger vi in frekvenserna som nyss räknades ut. Det andra argumentet `names.arg` är till för att namnge de olika åldersintervallen ovan, på x-axeln. Argumentet `las = 3` gör endast så att texten på x-axeln blir lodrät.
 
 ```{r}
+#| label: fig-barplot
+#| fig-cap: "Distribution of Age onboard the Titanic"
 
 Age_Intervals = c("0-4", "5-9", "10-14", "15-19", "20-24", "25-29", "30-34", 
               "35-39", "40-44", "45-49", "50-54", "55-59", "60-64", "65-69",
               "70-74")
 
-barplot(frequencies, names.arg = Age_Intervals, las = 3,
-        main = "Frequency of Age onboard the Titanic")
+barplot(frequencies, names.arg = Age_Intervals, las = 3)
 ```
 
 Histogrammet som skapades innan går alltså i princip att göra om till ett stapeldiagram, där höjden på stapeln illustrerar hur många observationer det är som tillfaller varje ålderskategori.

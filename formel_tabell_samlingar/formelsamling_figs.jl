@@ -1,5 +1,3 @@
-using Pkg
-Pkg.activate(".")
 using Plots, Distributions, LinearAlgebra, PlotUtils, StatsBase
 using LaTeXStrings, Measures, Utils
 figFolder = "/home/mv/Dropbox/Apps/ShareLaTeX/SDA1/figs/"
@@ -36,6 +34,26 @@ bar(xvals, pdf.(Poisson(λ),xvals), label = nothing, lw = 0,
     xticks = 0:10, ylab = L"P(X=x)", xlab = L"x", c = colors[9],
     bar_width = 0.5)#, title = L"\mathrm{Pois}(\lambda=2)")
 savefig(figFolder*"poisson.svg")
+
+# Negative binomial distribution
+r = 5
+p = 0.7
+xvals = 0:10
+bar(xvals, pdf.(NegativeBinomial(r,p), xvals), label = nothing, lw = 0,
+    xticks = 0:10, ylab = L"P(X=x)", xlab = L"x", c = colors[3],
+    bar_width = 0.5)#, title = L"\mathrm{Negative binomial}(r=5,p=0.7)")
+savefig(figFolder*"negbin.svg")
+
+# Hypergeometrisk
+s = 40 # number of successes in population
+f = 60 # number of failures in population
+n = 10 # number of draws
+xvals = 0:10
+bar(xvals, pdf.(Hypergeometric(s, f, n), xvals), label = nothing, lw = 0,
+    xticks = 0:10, ylab = L"P(X=x)", xlab = L"x", c = colors[1],
+    bar_width = 0.5)
+savefig(figFolder*"hypergeo.svg")
+
 
 # Standard Normal distribution
 xgrid = -4:0.01:4
@@ -155,3 +173,20 @@ plot(xvals, pdf.(TDist(ν), xvals), label = nothing, lw = 2,
     fill=(0, opacity, colors[6]))
 savefig(figFolder*"studentt.svg")
 
+# Gamma distribution
+α = 2
+β = 1
+xvals = eps():0.01:8
+plot(xvals, pdf.(Gamma(α, β), xvals), label = nothing, lw = 2,
+    ylab = L"f(x)", xlab = L"x", c = colors[10],
+    fill=(0, opacity, colors[9]))
+savefig(figFolder*"gamma_scale.svg")
+
+# Beta distribution
+α = 3
+β = 2
+xvals = eps():0.001:1
+plot(xvals, pdf.(Beta(α, β), xvals), label = nothing, lw = 2,
+    ylab = L"f(x)", xlab = L"x", c = colors[6],
+    fill=(0, opacity, colors[5]))
+savefig(figFolder*"beta.svg")
