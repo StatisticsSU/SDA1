@@ -28,10 +28,11 @@ Läs: SDM Kapitel 3 | [Slides](/slides/part1_ht23/lecture3_embedded.html)
 Läs: SDM Kapitel 4 | [Slides](/slides/part1_ht23/lecture4_embedded.html) 
 
 **Föreläsning 5 - Standardiserade variabler och normalfördelningen.**\
-Läs: SDM Kapitel 5 | [Slides](/slides/part1_ht23/lecture5_embedded.html) 
+Läs: SDM Kapitel 5 | [Slides](/slides/part1_ht23/lecture5_embedded.html)\
+Extramaterial: [Hantera dataset med dplyr](/slides/part1_ht23/dplyr_demo.html)
 
 **Föreläsning 6 - Samband mellan numeriska variabler. Korrelation.**\
-Läs: SDM Kapitel 6 | [Slides](/misc/larry.png) 
+Läs: SDM Kapitel 6 | [Slides](/slides/part1_ht23/lecture6_embedded.html) 
 
 **Föreläsning 7 - Enkel linjär regression.**\
 Läs: SDM Kapitel 7 | [Slides](/misc/larry.png)\
