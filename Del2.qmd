@@ -16,7 +16,11 @@ Under vissa föreläsningar länkar vi till `Extramaterial`. Det är material so
 **Föreläsning 12 - Osäkerhet och Sannolikhet.**\
 Läs: SDM Kapitel 12 och 13 \| [Slides](/slides/F12Sannolikhet.pdf)\
 Interaktivt: [slantsingling](/observable/storatalenslag_bernoulli.qmd)\
-Extramaterial: [TedTalk om sannolikheter](https://youtu.be/0m5bg2hpHNw)
+Extramaterial: [TedTalk om sannolikheter](
+https://youtu.be/0m5bg2hpHNw)
+<details><summary>innehåll</summary>
+Sannolikhetstolkningar &#x2022; Händelser &#x2022; Union &#x2022; Snitt &#x2022; Sannolikhetsberäkningar &#x2022; Venn diagram &#x2022; Kombinatorik
+</details>
 
 **Föreläsning 13 - Betingade sannolikheter och Bayes sats.**\
 Läs: SDM Kapitel 13 \| [Slides](/slides/F13BetingadeSlhBayesSats.pdf)\

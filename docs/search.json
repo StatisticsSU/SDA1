@@ -564,7 +564,7 @@
     "href": "R.html#cheat-sheets",
     "title": "R",
     "section": "Cheat sheets",
-    "text": "Cheat sheets\n\nMosaic-paketet  i R med dess sk formula syntax används mycket under kursen och innehåller grundläggande statistiska metoder och grafik. Detta s k cheat sheet för mosaic sammanfattar de viktigaste metoderna i mosaic paketet. Klicka på ikonerna i marginalen om du är nyfiken på motsvarande cheatsheets för de andra två dialekterna av R. Om du vill jämföra de olika dialekterna sida vid sida kan du titta på R Syntax Comparison cheat sheet.\n\n\n\n  \n\nDenna RStudio cheat sheet är rätt rörig, men kan kanske vara användbar efter att man själv bekantat sig lite med RStudio.\nKursens R-paket sda123 (se nedan) har också ett cheat sheet."
+    "text": "Cheat sheets\n\nMosaic-paketet  i R med dess sk formula syntax används mycket under kursen och innehåller grundläggande statistiska metoder och grafik. Detta s k cheat sheet för mosaic sammanfattar de viktigaste metoderna i mosaic paketet. Klicka på ikonerna i marginalen om du är nyfiken på motsvarande cheatsheets för de andra två dialekterna av R. Om du vill jämföra de olika dialekterna sida vid sida kan du titta på R Syntax Comparison cheat sheet.\nVill man bekanta sig lite mer med base-R så kan man titta i detta cheat sheet.\n\n\n\n  \n\nDenna RStudio cheat sheet är rätt rörig, men kan kanske vara användbar efter att man själv bekantat sig lite med RStudio.\nKursens R-paket sda123 (se nedan) har också ett cheat sheet."
   },
   {
     "objectID": "R.html#datamaterial",

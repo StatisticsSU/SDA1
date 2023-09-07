@@ -54,6 +54,4 @@ På vissa delar av kursen använder vi interaktivt material för att underlätta
 [Sofia Edlund](https://www.su.se/profiles/soed8022-1.660492)<br>Datorövningar<br>Masterstudent i Statistik
 :::
 
-### Tentor med lösningar
 
--   [2023-08-17](https://youtu.be/dQw4w9WgXcQ) \[Obs! visas inte för studenter!\]

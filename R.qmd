@@ -51,6 +51,7 @@ I SDA1 kommer vi försöka använda Formula syntax som mycket som möjligt, med 
 ## Cheat sheets {#cheat-sheets}
 
 -   **Mosaic**-paketet [![](misc/hexagons/figs/mosaic_hexagon.svg){width="25"}](/R/cheatsheets/mosaic_cheatsheet_gf.pdf) i R med dess sk *formula syntax* används mycket under kursen och innehåller grundläggande statistiska metoder och grafik. Detta s k [cheat sheet för mosaic](https://github.com/mlaviolet/Mosaic-cheatsheets/raw/master/mosaic-cheatsheet-gf.pdf) sammanfattar de viktigaste metoderna i mosaic paketet. Klicka på ikonerna i marginalen om du är nyfiken på motsvarande cheatsheets för de andra två dialekterna av R. Om du vill jämföra de olika dialekterna sida vid sida kan du titta på [R Syntax Comparison](/R/cheatsheets/FormulaVsTidySyntax-cheatsheet.pdf) cheat sheet.
+-   Vill man bekanta sig lite mer med base-R så kan man titta i detta [cheat sheet](/R/cheatsheets/base-r_cheat_sheet.pdf).
 
 ::: column-margin
 [![](misc/hexagons/figs/base_r_hexagon.svg){width="60"}](/R/cheatsheets/base-r_cheat_sheet.pdf)  [![](misc/hexagons/figs/tidyverse_hexagon.svg){width="60"}](/R/cheatsheets/ggplot2_cheatsheet.pdf)
