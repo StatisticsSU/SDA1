@@ -71,7 +71,7 @@ Dummyvariabler &#x2022; Modellval &#x2022; Överanpassning och underanpassning &
 
 
 **Föreläsning 10 - Stickprov och populationer. Observationsstudier och experiment.**\
-Läs: SDM kapitel 10.1-10.3 och 11.1-11.2 | [Slides](/misc/larry.png)\ 
+Läs: SDM kapitel 10.1-10.3 och 11.1-11.2 | [Slides](/slides/part1_ht23/lecture9_embedded.html)\ 
 <details><summary>innehåll</summary>
 Inferens &#x2022; Populationer och stickprov &#x2022; Bias &#x2022; Slumpvisa variationer &#x2022; Simple random sampling &#x2022; Populationsparametrar och statistika &#x2022; Observationsstudier &#x2022; Experiment
 </details>
