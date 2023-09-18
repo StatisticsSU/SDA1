@@ -50,28 +50,28 @@ Spridningsdiagram &#x2022; Korrelationskoefficienten &#x2022; Korrelation och ka
 </details>
 
 **Föreläsning 7 - Enkel linjär regression.**\
-Läs: SDM Kapitel 7 | [Slides](/misc/larry.png)\
+Läs: SDM Kapitel 7 | [Slides](/slides/part1_ht23/lecture7_embedded.html)\
 Extramaterial: [widget - linjär regression utan population](/observable/linreg_simple_estimates.qmd) | [widget - linjär regression med population](/observable/linreg_simple.qmd)
 <details><summary>innehåll</summary>
 Den enkla linjära regressionsmodellen &#x2022; Tolkning av regressionskoefficienter &#x2022; Prediktion &#x2022; Minsta kvadratmetoden &#x2022; Signifikans &#x2022; Modellantaganden och residualanalys &#x2022; R-kvadrat &#x2022; Analys av variansen
 </details>
 
 **Föreläsning 8 - Transformationer. Multipel linjär regression.**\
-Läs: SDM Kapitel 8, 9.1-9-4 | [Slides](/misc/larry.png)\
+Läs: SDM Kapitel 8, 9.1-9-4 | [Slides](/slides/part1_ht23/lecture8_embedded.html)\
 Extramaterial: [widget - icke-linjär regression](/observable/ickelinregression.qmd)\
 <details><summary>innehåll</summary>
 Transformation av variabler för regression &#x2022; Multipel linjär regression &#x2022; Adjusted R-squared
 </details>
 
 **Föreläsning 9 - Dummyvariabler i regressionsmodeller. Modellval.**\
-Läs: SDM 9.5  | [Slides](/misc/larry.png)\ 
+Läs: SDM 9.5  | [Slides](/slides/part1_ht23/lecture9_embedded.html)\ 
 <details><summary>innehåll</summary>
 Dummyvariabler &#x2022; Modellval &#x2022; Överanpassning och underanpassning &#x2022; Träningsdata och testdata &#x2022; Korsvalidering
 </details>
 
 
 **Föreläsning 10 - Stickprov och populationer. Observationsstudier och experiment.**\
-Läs: SDM kapitel 10.1-10.3 och 11.1-11.2 | [Slides](/misc/larry.png)\ 
+Läs: SDM kapitel 10.1-10.3 och 11.1-11.2 | [Slides](/slides/part1_ht23/lecture10_embedded.html)\ 
 <details><summary>innehåll</summary>
 Inferens &#x2022; Populationer och stickprov &#x2022; Bias &#x2022; Slumpvisa variationer &#x2022; Simple random sampling &#x2022; Populationsparametrar och statistika &#x2022; Observationsstudier &#x2022; Experiment
 </details>
