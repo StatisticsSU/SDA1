@@ -108,7 +108,7 @@ Interaktivt: [chi2-fördelningen](/observable/chi2fordelningen.qmd)
 Chi2-test för goodness of fit &#x2022; Beslut under osäkerhet  &#x2022; Nyttobegreppet &#x2022; Beslutstabeller &#x2022; Maximera förväntad nytta
 </details>
 
-**Föreläsning 24 - Räkning av gammal tenta**\
+**Föreläsning 23 - Räkning av gammal tenta**\
 
 **Videoföreläsning - Bayesiansk inferens.**\
 Läs: [Video på Athena](https://athena.itslearning.com/ContentArea/ContentArea.aspx?LocationID=18157&LocationType=1&ElementID=2278308) | [Slides](/slides/FVideoBayesianskStatistik.pdf)\
