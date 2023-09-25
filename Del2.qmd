@@ -13,7 +13,7 @@ Under vissa föreläsningar länkar vi till `Extramaterial`. Det är material so
 
 ### **Föreläsningar**
 
-**Föreläsning 12 - Osäkerhet och Sannolikhet.**\
+**Föreläsning 11 - Osäkerhet och Sannolikhet.**\
 Läs: SDM Kapitel 12 och 13 \| [Slides](/slides/F12Sannolikhet.pdf)\
 Interaktivt: [slantsingling](/observable/storatalenslag_bernoulli.qmd)\
 Extramaterial: [TedTalk om sannolikheter](
@@ -22,7 +22,7 @@ https://youtu.be/0m5bg2hpHNw)
 Sannolikhetstolkningar &#x2022; Händelser &#x2022; Union &#x2022; Snitt &#x2022; Sannolikhetsberäkningar &#x2022; Venn diagram &#x2022; Kombinatorik
 </details>
 
-**Föreläsning 13 - Betingade sannolikheter och Bayes sats.**\
+**Föreläsning 12 - Betingade sannolikheter och Bayes sats.**\
 Läs: SDM Kapitel 13 \| [Slides](/slides/F13BetingadeSlhBayesSats.pdf)\
 Interaktivt: [bayessats](/observable/bayestheorem.qmd)\
 Extramaterial: [artikel om Bayes sats och snabbtest för Covid-19](https://www.varsity.co.uk/science/21149)
@@ -30,14 +30,14 @@ Extramaterial: [artikel om Bayes sats och snabbtest för Covid-19](https://www.v
 Betingad sannolikhet &#x2022; Multiplikationsregeln &#x2022; Oberoende händelser &#x2022; Disjunkta händelser &#x2022; Bayes sats &#x2022; Lagen om total sannolikhet 
 </details>
 
-**Föreläsning 14 - Slumpvariabler och deras egenskaper.**\
+**Föreläsning 13 - Slumpvariabler och deras egenskaper.**\
 Läs: SDM Kapitel 14 \| [Slides](/slides/F14Slumpvariabler.pdf)\
 Interaktivt: [normalfördelningen](/observable/normalfordelningen.qmd)
 <details><summary>innehåll</summary>
 Slumpvariabler &#x2022; Sannolikhetsfördelning &#x2022; Väntevärde &#x2022; Varians &#x2022; Standardavvikelse &#x2022; Normalfördelning &#x2022; Slumpvariabler &#x2022; Linjärkombinationer &#x2022; Standardisering &#x2022; Kovarians &#x2022; Korrelation &#x2022; Varians av summa av slumpvariabler
 </details>
 
-**Föreläsning 15 - Sannolikhetsmodeller I**\
+**Föreläsning 14 - Sannolikhetsmodeller I**\
 Läs: SDM Kapitel 15.1, 15.2, 15.3, 15.6 \| [Slides](/slides/F15Sannolikhetsmodeller1.pdf)\
 Interaktivt: [bernoullifördelning](/observable/bernoullifordelningen.qmd) | [geometrisk fördelning](/observable/geometriskfordelning.qmd) | [binomialfördelningen](/observable/binomialfordelningen.qmd) | [likformig](/observable/uniformfordelning.qmd) | [normalfördelning](/observable/normalfordelningen.qmd)\
 Kod: [geometric.R](/code/geometric.R)
@@ -45,7 +45,7 @@ Kod: [geometric.R](/code/geometric.R)
 Bernoulliförsök &#x2022; Geometrisk fördelning &#x2022;  Binomialfördelning &#x2022; Normalapproximation av binomial
 </details>
 
-**Föreläsning 16 - Sannolikhetsmodeller II**\
+**Föreläsning 15 - Sannolikhetsmodeller II**\
 Läs: SDM Kapitel 5.3, 14.4, 15.7 \| [Slides](/slides/F16Sannolikhetsmodeller2.pdf)\
 Interaktivt: [Poissonfördelningen](/observable/poissonfordelningen.qmd) \| [maximum likelihood - Poisson](/observable/ml_poisson.qmd) \| [exponential](/observable/exponentialfordelningen.qmd) \| [student-t](/observable/studentt.qmd) \| [allmän student-t](/observable/studentt_allman.qmd)\
 Kod: [exponential.R](/code/exponential.R)\
@@ -54,14 +54,14 @@ Extramaterial: [Notebook - maximum likelihood för Poisson](https://observablehq
 Likformig fördelning &#x2022; Normalfördelning &#x2022; Poissonfördelning &#x2022; Exponentialfördelning &#x2022; Student-t fördelning &#x2022; Punktskattning
 </details>
 
-**Föreläsning 17 - Samplingfördelningar och konfidensintervall för en andel.**\
+**Föreläsning 16 - Samplingfördelningar och konfidensintervall för en andel.**\
 Läs: SDM Kapitel 16.1-16.5 | [Slides](/slides/F17KI4prop.pdf)\
 Interaktivt: [samplingfördelning - liten ändlig population](/observable/sampling_finite_pop.qmd) | [stora talens lag - normalapproximation för en andel](/observable/storatalenslag_bernoulli_normalapprox.qmd) | [samplingfördelning för andel - ändlig population](/observable/sampling_prop_finite_pop.qmd) | [konfidensintervall för en andel](/observable/konfidensintervall_andel.qmd)
 <details><summary>innehåll</summary>
 Population &#x2022; Stickprov &#x2022; Samplingfördelning för en andel &#x2022; Väntevärdesriktighet &#x2022; Bias och varians &#x2022; Konfidensintervall för en andel
 </details>
 
-**Föreläsning 18 - Konfidensintervall för ett väntevärde. Stora talens lag. Centrala gränsvärdessatsen.**\
+**Föreläsning 17 - Konfidensintervall för ett väntevärde. Stora talens lag. Centrala gränsvärdessatsen.**\
 Läs: SDM Kapitel 17 \| [Slides](/slides/F18KI4mean.pdf)\
 Interaktivt: [stora talens lag](/observable/storatalenslag.qmd) | [centrala gränsvärdessatsen](/observable/cgs.qmd)\
 Extramaterial: [Notebook - stora talens lag](https://observablehq.com/@mattiasvillani/stora-talens-lag) \| [Notebook - centrala gränsvärdessatsen](https://observablehq.com/@mattiasvillani/cgs)\
@@ -70,14 +70,14 @@ Kod: [konfidensintervall laxar](/code/confidence_intervals_salmon.R)
 Samplingfördelning för ett väntevärde - känd varians &#x2022; Samplingfördelning för ett väntevärde - okänd varians &#x2022; Konfidensintervall för ett väntevärde &#x2022; Stora talens lag &#x2022; Centrala gränsvärdessatsen
 </details>
 
-**Föreläsning 19 - Hypotestest.**\
+**Föreläsning 18 - Hypotestest.**\
 Läs: SDM Kapitel 18 (ej *Random matters* på sid 579) \| [Slides](/slides/F19HypotesTest.pdf)\
 Interaktivt: [hypotestest - väntevärde](/observable/hypotestest_mean.qmd)
 <details><summary>innehåll</summary>
 Hypotestest för ett väntevärde &#x2022; Hypotestest för en andel &#x2022; Hypoteser och nollfördelning &#x2022; Kritiska värden &#x2022; p-värde
 </details>
 
-**Föreläsning 20 - Inferens i linjär regression - populationsmodell och samplingfördelning**\
+**Föreläsning 19 - Inferens i linjär regression - populationsmodell och samplingfördelning**\
 Läs: SDM Kapitel 23.1-23.3 \| [Slides](/slides/F20Regression1.pdf)\
 Kod: [regression lifespan data](/code/lifespan_regression.R)\
 Interaktivt: [samplingfördelning regression](/observable/linreg_simple_sampling_dist.qmd)\
@@ -86,14 +86,14 @@ Extramaterial: [kod för residualanalys på simulerad regressionsdata](code/resi
 Linjär regression som sannolikhetsmodell &#x2022; Regressionsmodellens antaganden &#x2022; Residualanalys &#x2022; Samplingfördelningen för minsta-kvadrat-skattningen &#x2022; Standardfel
 </details>
 
-**Föreläsning 21 - Inferens i linjär regression - konfidensintervall, hypotestest och prediktionsintervall**\
+**Föreläsning 20 - Inferens i linjär regression - konfidensintervall, hypotestest och prediktionsintervall**\
 Läs: SDM Kapitel 23.3-23.6 \| [Slides](/slides/F21Regression2.pdf)\
 Kod: [simulera från populationsmodellen i enkel regression](/code/simulera_reg_data.R)
 <details><summary>innehåll</summary>
 Konfidensintervall linjär regression &#x2022; Hypotestest linjär regression &#x2022; Prediktionsintervall
 </details>
 
-**Föreläsning 22 - Hypotestest och jämföra grupper.**\
+**Föreläsning 21 - Hypotestest och jämföra grupper.**\
 Läs: SDM Kapitel 19, 20.4-20.5, 21.1-21.3 | [Slides](/slides/F22ComparePop.pdf)\
 Kod: [oberoende grupper - laxar](code/confidence_intervals_salmon_twopop.R) | [parade grupper - online försäkringar](code/paired_two_pop_online_insurance.R)\
 Interaktivt: [hypotestest fel typ I och II](/observable/hypotestest_typ1och2.qmd)
@@ -101,14 +101,16 @@ Interaktivt: [hypotestest fel typ I och II](/observable/hypotestest_typ1och2.qmd
 Fel av typ I och II vid hypotestest &#x2022; Hypotestest för att jämföra väntevärden i oberoende grupper  &#x2022; Hypotestest för att jämföra väntevärden för parade data
 </details>
 
-**Föreläsning 23 - $\chi^2$ goodness-of-fit test. Optimala beslut under osäkerhet.**\
+**Föreläsning 22 - $\chi^2$ goodness-of-fit test. Optimala beslut under osäkerhet.**\
 Läs: SDM 22.1 | [Slides](slides/F23Chi2Beslut.pdf)\
 Interaktivt: [chi2-fördelningen](/observable/chi2fordelningen.qmd)
 <details><summary>innehåll</summary>
 Chi2-test för goodness of fit &#x2022; Beslut under osäkerhet  &#x2022; Nyttobegreppet &#x2022; Beslutstabeller &#x2022; Maximera förväntad nytta
 </details>
 
-**Föreläsning 24 - Räkning av gammal tenta**\
+**Föreläsning 23 - Räkning av gammal tenta**\
+
+**Föreläsning 24 - Reserv/Sammanfattning**\
 
 **Videoföreläsning - Bayesiansk inferens.**\
 Läs: [Video på Athena](https://athena.itslearning.com/ContentArea/ContentArea.aspx?LocationID=18157&LocationType=1&ElementID=2278308) | [Slides](/slides/FVideoBayesianskStatistik.pdf)\

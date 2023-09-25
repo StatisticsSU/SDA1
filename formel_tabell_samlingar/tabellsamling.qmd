@@ -155,7 +155,7 @@ Chi2table %>%
   kbl(format= "html", align="r", col.names = NULL) %>%
   add_header_above(c("df ", " ", " ", " ", " ", " ", " ", " ", " "), color = chi2ColText, align="l", line = F) %>%
   add_header_above(c("", "0.990", "0.975", "0.950", "0.900", "0.100", "0.050", "0.025", "0.010"), align = c('l','r','r','r','r','r','r','r','r')) %>%
-  kable_classic(full_width = T, font_size = 14)
+  kable_classic(full_width = F, font_size = 14)
 ```
 
 :::
