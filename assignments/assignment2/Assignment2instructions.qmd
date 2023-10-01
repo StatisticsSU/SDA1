@@ -81,12 +81,12 @@ Inlämningsuppgiften ska lämnas in i form av ett html dokument genererat av Qua
 
 ## 0. Läsa in data
 
-Datamaterialet `electricitycost` läses in via kurspaketet `sda123`:
+Datamaterialet `electricitycost` läses in via paketet `SUdatasets`:
 
 ```{r}
 library(remotes)
-#install_github("StatisticsSU/sda123")
-library(sda123)
+#install_github("StatisticsSU/SUdatasets")
+library(SUdatasets)
 head(electricitycost)
 ```
 
@@ -100,11 +100,11 @@ df = electricitycost
 
 #### 💪 Uppgift 1.1
 
-Variabeln `people` innehåller antal personer i hushållet. Definiera variabeln `extrapeople = df$people - 1`, som mäter antalet personer *utöver* ägaren (som vi antar är bara en person). I den här uppgiften ska vi modellera `extrapeople` som oberoende observationer från en $\mathrm{Pois}(\lambda)$-fördelning. Skatta parametern $\lambda$ från datamaterialet.
+Variabeln `people` innehåller antal personer i hushållet. Definiera variabeln `extrapeople = df$people - 1`, som mäter antalet personer *utöver* ägaren (som vi antar är bara en person). Vi ska använda en $\mathrm{Pois}(\lambda)$-fördelning som modell för variabeln `extrapeople` där vi också antar att observationerna är oberoende. Låt oss börja med att skatta parametern $\lambda$ från datamaterialet med maximum-likelihoodmetoden. Go!
 
 #### 💪 Uppgift 1.2
 
-Undersök grafiskt om den skattade Poisson-modellen i Uppgift 1.1 anpassar data väl.
+Undersök grafiskt om den skattade Poisson-modellen i Uppgift 1.1 anpassar data väl. Här vill jag att ni plottar variabeln `extrapeople` i lämpligt diagram och att ni sen lägger till en plot (t ex en linje med punkter på för att visa en diskret fördelning) som visar sannolikhetsfördelningen för den skattade Poisson-modellen i Uppgift 1.1. Typ som den vänstra diagrammet [här](https://statisticssu.github.io/SDA1/observable/ml_poisson.html).
 
 #### 💪 Uppgift 1.3
 
@@ -130,7 +130,7 @@ hist(log(df$cost), 30, freq = FALSE, col = "orange")
 
 #### 💪 Uppgift 2.1
 
-I den här uppgiften ska vi modellera variabeln `logcost = log(df$cost)` som oberoende observationer från en $N(\mu,\sigma)$ fördelning. Skatta $\mu$ och $\sigma$ från data. \[Obs! Ni behöver inte transformera tillbaka till originalskala, utan arbeta med hela Uppgift 2 på log-skala.\]
+I den här uppgiften ska vi anta att variabeln `logcost = log(df$cost)` kan modelleras som oberoende observationer från en $N(\mu,\sigma)$ fördelning. Skatta $\mu$ och $\sigma$ från data. \[Obs! Ni behöver inte transformera tillbaka till originalskala, utan arbeta med hela Uppgift 2 på log-skala.\]
 
 #### 💪 Uppgift 2.2
 
@@ -138,15 +138,15 @@ Undersök grafiskt hur väl den skattade normalmodellen passar variabeln `logcos
 
 #### 💪 Uppgift 2.3
 
-Jämför median av variabeln `logcost` med medianen från den skattade sannolikhetsmodellen från Uppgift 2.1. \[hint: lösningen blir väldigt enkel här, det är meningen. Jag vill att ni ska tänka på kopplingen mellan den teoretiska sannolikhetsmodellen och hur den relaterar till data.\]
+Jämför 99% kvantilen/percentilen av variabeln `logcost` i data med 99%-kvantilen från den skattade sannolikhetsmodellen från Uppgift 2.1.
 
 #### 💪 Uppgift 2.4
 
-Gör ett 95%-igt konfidensintervall för $\mu$ i modellen för `logcost` från Uppgift 2.1, **både** genom att använda formelsamlingen och genom att använda en funktion i R. Tolka intervallet. \[Som jag skrev i instruktionerna ovan är det ok att använda R för att beräkna delar av konfidensintervallet även i fallet där jag ber om att ni ska använda formelsamling; t ex använda `sd()`-funktionen för att beräkna standardavvikelsen `s`. Men jag vill att ni använder formeln för konfidensintervall från formelsamlingen i den slutliga uträkningen. För att träna inför tentan. Och sen jämföra med det konfidensintervall ni får direkt från R\].
+Gör ett 95%-igt konfidensintervall för $\mu$ i modellen för `logcost` från Uppgift 2.1, **både** genom att använda formelsamlingen och genom att använda en funktion i R. Tolka intervallet. \[Som jag skrev i instruktionerna ovan är det OK att använda R för att beräkna delar av konfidensintervallet även i fallet där jag ber om att ni ska använda formelsamling; t ex använda `sd()`-funktionen för att beräkna standardavvikelsen `s`. Men jag vill att ni använder formeln för konfidensintervall från formelsamlingen i den slutliga uträkningen. För att träna inför tentan. Och sen jämföra med det konfidensintervall ni får direkt från R\].
 
 #### 💪 Uppgift 2.5
 
-Testa om den genomsnittliga `logcost` i modellen/populationen är mindre än 6. Ställ upp noll- och alternativhypotes och testa på 5% signifikansnivå. Gör beräkningarna både med hjälp av formelsamlingen och med R.
+I en tidigare undersökning drog man slutsatsen att hushållens totala elkostnad var 350 australiska dollar. Testa om den genomsnittliga `logcost` i modellen/populationen är mindre än `log(350)` ($log(350) \approx 5.857933$). Ställ upp noll- och alternativhypotes och testa på 5% signifikansnivå. Gör beräkningarna både med hjälp av formelsamlingen och med R.
 
 #### 💪 Uppgift 2.6
 
@@ -154,7 +154,7 @@ Beräkna *p*-värdet för testet i Uppgift 2.5 genom att använda R. Hade du fö
 
 #### 💪 Uppgift 2.7
 
-Antag att vi tar den skevheten som vi ser i histogrammet över `logcost` på allvar. Beskriv (inga uträkningar) om vi ändå kan göra ett hypotestest utan att anta att `logcost` är normalfördelad.
+Antag att vi tar den skevheten som vi ser i histogrammet över `logcost` på allvar. Beskriv (inga uträkningar) om vi ändå kan göra ett hypotestest **utan** att anta att `logcost` är normalfördelad.
 
 #### 💪 Uppgift 2.8
 
