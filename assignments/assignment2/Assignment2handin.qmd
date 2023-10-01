@@ -41,7 +41,7 @@ Om en formel ska anges så är det ok att skriva det i vanlig text (markdown), t
 
 xbar +- t(0.025,n-1)\*s/sqrt(n),
 
-Vill man vara lite fancy kan man ge sig på att skriva matematik med LaTeX genom att använda dubbla dollar-tecken:
+Vill man vara lite extra fancy kan man ge sig på att skriva matematik med LaTeX genom att använda dubbla dollar-tecken:
 
 $\bar x \pm t_{0.025,n-1}\frac{s}{\sqrt n}$.
 
