@@ -81,12 +81,12 @@ Inlämningsuppgiften ska lämnas in i form av ett html dokument genererat av Qua
 
 ## 0. Läsa in data
 
-Datamaterialet `electricitycost` läses in via paketet `SUdatasets`:
+Datamaterialet `electricitycost` läses in via kurspaketet `sda123`:
 
 ```{r}
 library(remotes)
-#install_github("StatisticsSU/SUdatasets")
-library(SUdatasets)
+#install_github("StatisticsSU/sda123")
+library(sda123)
 head(electricitycost)
 ```
 
