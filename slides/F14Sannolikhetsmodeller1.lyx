@@ -1023,7 +1023,7 @@ Geometrisk fördelning
 
 \begin_inset Formula 
 \[
-P(X=x)=q^{x-1}p,\quad\text{ för }x=0,1,2,...
+P(X=x)=q^{x-1}p,\quad\text{ för }x=1,2,...
 \]
 
 \end_inset

@@ -102,7 +102,7 @@ p = 0.3              # andelen i populationen/modellen
 nsim = 1000          # vi vill simulera 1000 olika stickprov
 n = 100              # varje stickprov består av 100 observationer.
 phats = rep(0, nsim) # skapar vektor där andelen (phat) i varje stickprov sparas.
-count = 0            
+count = 0            # den här variabeln kommer hålla koll på stickprovets nummer
 for (i in 1:nsim){
   count = count + 1
   x = rbinom(n, size = 1, prob = p) # size = 1 gör att binomialfördelningen blir en Bernoulli.
@@ -188,7 +188,7 @@ Upprepa testet i uppgiften ovan för olika värden på nollhypotesens värde, $\
 
 Använd en for-loop för att loop:a över alla värden på $\mu_0$. Använd min kod ovan som beräkna sannolikheten $P(X\leq 0.5)$ för en Bernoulli-variabel med sannolikheten $p$ som en mall för denna loop.
 
-Resultatet från `t.test` är en lista. Så använd \$-tecknet för att plocka ut *p*-värdet från resultat-listan från testet (t ex `resultat$p.value`) om du sparat resultatet från `t.test` i variabeln `resultat`).
+Resultatet från `t.test` är en lista. Så använd \$-tecknet för att plocka ut *p*-värdet från resultat-listan från testet (t ex `resultat$p.value` om du sparat resultatet från `t.test` i variabeln `resultat`).
 :::
 
 #### 💪 Uppgift 2.4
@@ -197,7 +197,7 @@ Du är egentligen intresserad av att bevisa att den genomsnittliga sockermängde
 
 $$
 \begin{align}
-&H_0: \mu \leq 40 \\
+&H_0: \mu = 40 \\
 &H_1: \mu > 40
 \end{align}
 $$

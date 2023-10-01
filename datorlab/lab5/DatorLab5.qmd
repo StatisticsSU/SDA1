@@ -48,7 +48,11 @@ R har en massa statistiska fördelningar inbyggda från start, och ytterligare m
 -   **p**-funktionen som beräknar sannolikheten att slumpvariabeln är mindre än ett visst tal, dvs $P(X\leq x)$ för något $x$. p-funktionen har fått sitt namn från engelskans **p**robability.\
     `pnorm(q = 1, mean = 2, sd = 3)` beräknar sannolikheten att $X\sim N(2,3)$ är mindre än 1.
 
--   **d**-funktionen som för en diskret variabel $X$ beräknar sannolikheten $P(X=x)$. För en kontinuerlig variabel beräknar d-funktionen täthetsfunktionen $f(x)$ i en given punkt $x$. Det är från det kontinuerliga fallet som d-funktionen fått sitt namn, d som i **d**ensity. Kommandot `dnorm(x = 0, mean = 2, sd = 3)` beräknar täthetsfunktionens värde i punkten $x=0$, dvs $f(0)$ för en $X\sim N(2,3)$ variabel.
+-   **d**-funktionen som för en diskret variabel $X$ beräknar sannolikheten $P(X=x)$. För en kontinuerlig variabel beräknar d-funktionen täthetsfunktionen $f(x)$ i en given punkt $x$. Det är från det kontinuerliga fallet som d-funktionen fått sitt namn, d som i **d**ensity.
+
+    -   Kommandot `dnorm(x = 0, mean = 2, sd = 3)` beräknar täthetsfunktionens värde i punkten $x=0$, dvs $f(0)$ för en $X\sim N(2,3)$ variabel.
+
+    -   Koden `dpois(x = 3, lambda = 2)` beräknar sannolikheten $P(X=3)$ att den diskreta Poissonfördelade variabeln $X\sim \mathrm{Pois}(\lambda=2)$ antar värdet $x=3$.
 
 -   **q**-funktionen beräknar $p$-kvantilen för en fördelning, dvs det värde $x$ där $P(X \leq x)=p$. Vi kan t ex beräkna 25% eller 0.25-kvantilen för en normalfördelad variabel $X\sim N (2,3)$ med kommandot `qnorm(p = 0.25, mean = 2, sd = 3)`.
 
@@ -173,7 +177,7 @@ Hur kan man rita upp sannolikheterna för en kontinuerlig variabel? Kontinuerlig
 
 -   beräkna d-funktionen för vektorn med x-värden
 
--   plotta täthetsfunktionen som en kurva med kommandot `plot()` eller `lines()` (används om det inte redan finns något uppritat i grafen).
+-   plotta täthetsfunktionen som en kurva med kommandot `plot()` eller `lines()` (används om det redan finns något uppritat i grafen som man vill behålla).
 
 Här plottar vi täthetsfunktionen för en standard normalfördelningen:
 
@@ -184,13 +188,13 @@ plot(xvalues, density_values, type = "l", xlab = "x", ylab = "density", main = "
      col = "steelblue", lwd = 2) # lwd är line width, dvs tjocklek på linje.
 ```
 
-I det här fallet var det ganska lätt att välja start- och slutpunkt för x-värdena: vi vet ju från 68-95-99.7 regeln att 99.7% av sannolikhetsmassan ligger mellan -3 och 3 för standard normalfördelning. I andra fall kan det vara svårare att bestämma lämpliga x-värden och man får prova sig fram (om man har en q-funktion, dvs kvantilfunktion, för fördelningen kan man använda den för att beräkna lämpliga start- och slutvärden på x). Hur väljer man avståndet mellan olika x-värden (dvs `by = 0.01` i min kod)? Det brukar spela mindre roll. Väljer man för stora avstånd blir kurvan hackig. Väljer man verkligt små avstånd blir det många olika x-värden och det kan ta tid för R beräkna alla täthetsvärden.
+I det här fallet var det ganska lätt att välja start- och slutpunkt för x-värdena: vi vet ju från 68-95-99.7 regeln att 99.7% av sannolikhetsmassan ligger mellan -3 och 3 för standard normalfördelning. I andra fall kan det vara svårare att bestämma lämpliga x-värden och man får prova sig fram (om man har en q-funktion, dvs kvantilfunktion, för fördelningen kan man använda den för att beräkna lämpliga start- och slutvärden på x). Hur väljer man avståndet mellan olika x-värden (dvs `by = 0.01` i min kod)? Det brukar spela mindre roll. Väljer man för stora avstånd blir kurvan hackig. Väljer man verkligt små avstånd blir det många olika x-värden och det kan ta tid för R beräkna alla täthetsvärden. Ett alternativ sätt att skapa denna vektor är `xvalues = seq(-3, 3, length = 1000)` där man har kontroll på att vektorn ska ha exakt 1000 värden mellan -3 och 3.
 
 ## 1. Räkna med sannolikhetsfördelningar
 
 #### 💪 Uppgift 1.1
 
-Låt $X\sim \mathrm{Pois}(\lambda)$ med $\lambda = 2$. Beräkna $P(X=2)$ och $P(X\leq 3)$. Hint: `?ppois`
+Låt $X\sim \mathrm{Pois}(\lambda)$ med $\lambda = 2$. Beräkna $P(X=2)$ och $P(X\leq 3)$. \[Hint: `?dpois` och `?ppois`\]
 
 ```{r}
 # Write your code here
@@ -198,7 +202,7 @@ Låt $X\sim \mathrm{Pois}(\lambda)$ med $\lambda = 2$. Beräkna $P(X=2)$ och $P(
 
 #### 💪 Uppgift 1.2
 
-I valet 2022 fick Liberalerna 4.61% av rösterna. I en undersökning bland totalt 1046 personser angav 30 personer att de skulle rösta på Liberalerna om det var val idag. Kan det vara så att Liberalernas röstningsandel är (ungefär) oförändrad på 4.61%, eller tyder den nya undersökningen på något annat? Undersök detta genom att rita upp ett stapeldiagram över sannolikhetsfördelningen $P(X=x)$ för $X \sim \mathrm{Binom}\operatorname{}(n= 1046, p = 0.0461)$ för x-värdena `xvalues = 0:100`. Är resultatet från valundersökningen ett sannolikt utfall? Om inte, vilket slutsats drar du, genom att titta i stapeldiagramet, om Liberalernas faktiska väljarandel?
+I valet 2022 fick Liberalerna 4.61% av rösterna. I en undersökning bland totalt 1046 personser angav 30 personer att de skulle rösta på Liberalerna om det var val idag. Kan det vara så att Liberalernas röstningsandel är (ungefär) oförändrad på 4.61%, eller tyder den nya undersökningen på något annat? Undersök detta genom att rita upp ett stapeldiagram över sannolikhetsfördelningen $P(X=x)$ för $X \sim \mathrm{Binom}\operatorname{}(n= 1046, p = 0.0461)$ för x-värdena `xvalues = 0:100`. Är resultatet från valundersökningen ett sannolikt utfall **om** det skulle vara så att andelen i populationen faktiskt är oförändrad på 4.61%? Om inte, vilket slutsats drar du om Liberalernas faktiska väljarandel i populationen baserat på utfallet från undersökningen?
 
 ```{r}
 # Write your code here
@@ -206,7 +210,7 @@ I valet 2022 fick Liberalerna 4.61% av rösterna. I en undersökning bland total
 
 #### 💪 Uppgift 1.3
 
-Beräkna $P(X \leq 30)$ för $X \sim \mathrm{Binom}(n= 1046, p = 0.0461)$ genom att använda binomialfördelningen. Jämför svaret med samma sannolikhet från en normalapproximation (se F15):
+Beräkna $P(X \leq 30)$ för $X \sim \mathrm{Binom}(n= 1046, p = 0.0461)$ genom att använda binomialfördelningen. Jämför svaret med samma sannolikhet från en normalapproximation (se F14):
 
 $$
 X\sim \mathrm{Binom}(n,p) \text{ approximeras med } X\sim \mathrm{N}\Big(\mu=np, \sigma = \sqrt{n p (1-p)}\Big)
@@ -260,11 +264,11 @@ Använd `lines()` när du plottar täthetsfunktionen, annars kommer histogrammet
 
 ## 3. Simulering för att beräkna nya fördelningar
 
-En mycket trevlig egenskap med simulering är att det är väldigt enkelt att beräkna fördelningen för en **funktion** av slumpvariabler. Vi vet ju t ex att om $X\sim \operatorname{N}(\mu,\sigma^2)$ så är fördelningen för linjärkombinationen $Y=c+aX$ också normalfördelad: $Y\sim \operatorname{N}(c+a\mu, a^2 \sigma ^2)$. Men det är långt ifrån alla fall där vi matematiskt kan bevisa sådana goa resultat. Med simulering kan vi få fram fördelningen för *alla* funktioner och även fördelningen för en summa av slumpvariabler, och mer. Den kan vi även göra om fördelningen för $X$ är något annat än normalfördelad. Låt oss testa direkt i en övning!
+En mycket trevlig egenskap med simulering är att det är väldigt enkelt att beräkna fördelningen för en **funktion** av slumpvariabler. Vi vet ju t ex att om $X\sim \operatorname{N}(\mu,\sigma)$ så är fördelningen för linjärkombinationen $Y=c+aX$ också normalfördelad: $Y\sim \operatorname{N}(c+a\mu, \vert a \vert \sigma )$. Men det är långt ifrån alla fall där vi matematiskt kan bevisa sådana goa resultat. Med simulering kan vi få fram fördelningen för *alla* funktioner och även fördelningen för en summa av slumpvariabler, och mer. Den kan vi även göra om fördelningen för $X$ är något annat än normalfördelad. Låt oss testa direkt i en övning!
 
 #### 💪 Uppgift 3.1
 
-Din vän och du ska beställa hem mat. Ni har olika smak och du vill beställa från restaurang X, din vän vill beställa från restaurang Y. Ni vill såklart gärna äta maten samtidigt och lovar varandra att vänta med att äta tills båda fått maten. Låt $X \sim \mathrm{Expon}(\lambda = 2)$ vara väntetiden i timmar tills restaurang X levererar mat hem till dig, och $Y \sim \mathrm{Expon}(\lambda = 4)$ är väntetiden för restaurang Y. Antag att $X$ och $Y$ är oberoende slumpvariabler. Slumpvariabeln $Z=60(X-Y)$ mäter då hur många minuter du måste vänta på maten efter att din vän redan fått maten, dvs hur länge din artiga vän måste vänta innan hen kan börja äta. Om $Z$ är negativ har du alltså fått maten före din vän. Här ser man direkt att $Z=60(X-Y)$ inte kan vara exponentialfördelad, $Z$ kan ju vara negativ! Använd simulering för att simulera från fördelningen för $Z$ och rita upp ett histogram för att representera täthetsfunktionen (använd argumentet `freq = FALSE` för att få andelar inom varje bin). Använd simuleringen för att uppskatta sannolikheten att du får maten efter din vän. \[Hint1: Prova att skriva `Z>0` i Console. Hint2: R hanterar TRUE som 1 och FALSE som 0, så t ex `sum(c(TRUE, FALSE, TRUE))` blir 2 i R\].
+Din vän och du ska beställa hem mat. Ni har olika smak och du vill beställa från restaurang X, din vän vill beställa från restaurang Y. Ni vill såklart gärna äta maten samtidigt och lovar varandra att vänta med att äta tills båda fått maten. Låt $X \sim \mathrm{Expon}(\lambda = 2)$ vara väntetiden i timmar tills restaurang X levererar mat hem till dig, och $Y \sim \mathrm{Expon}(\lambda = 4)$ är väntetiden för restaurang Y. Antag att $X$ och $Y$ är oberoende slumpvariabler. Slumpvariabeln $Z=60(X-Y)$ mäter då hur många minuter du måste vänta på maten efter att din vän redan fått maten, dvs hur länge din artiga vän måste vänta innan hen kan börja äta. Om $Z$ är negativ har du alltså fått maten före din vän. Här ser man direkt att $Z=60(X-Y)$ inte kan vara exponentialfördelad, $Z$ kan ju vara negativ! Använd simulering för att simulera från fördelningen för $Z$ och rita upp ett histogram för att representera täthetsfunktionen (använd argumentet `freq = FALSE` för att få *andelar* inom varje bin). Använd simuleringen för att uppskatta sannolikheten att du får maten efter din vän. \[Hint1: Prova att skriva `Z>0` i Console. Hint2: R hanterar TRUE som 1 och FALSE som 0, så t ex `sum(c(TRUE, FALSE, TRUE))` blir 2 i R\].
 
 ```{r}
 # Write your code here
@@ -272,7 +276,7 @@ Din vän och du ska beställa hem mat. Ni har olika smak och du vill beställa f
 
 #### 💪 Uppgift 3.2
 
-Uppskatta variansen för $Z$ genom simulering. Verifiera att uppskattningen är hyfsat nära den teoretiska variansen för för $Z$. \[Hint: F14 gav oss formler för variansen av en summa och en differens av oberoende variabler och F16 har egenskaper för exponentialfördelade variabler, t ex deras varians.\]
+Uppskatta variansen för $Z$ genom simulering. Verifiera att uppskattningen är hyfsat nära den teoretiska variansen för $Z$. \[Hint: F13 gav oss formler för variansen av en summa och en differens av oberoende variabler och F15 har egenskaper för exponentialfördelade variabler, t ex deras varians.\]
 
 ```{r}
 # Write your code here
@@ -291,7 +295,7 @@ visits_per_hour = c(0, 1,  6,  0,  1,  0,  1,  0,  3,  0,  0,  0,  0,  2,  2,
                     0,  1,  9,  1,  1,  0,  1,  0,  0)
 ```
 
-Antag att *antalet besök per timme* kan modelleras som oberoende Poissonfördelade variabler med parameter $\lambda$. Vi vill nu bestämma det bästa värdet på $\lambda$ genom att använda data. En vanlig **skattning** av $\lambda$ i en Poissonfördelning är medelvärdet $\bar x$ av data (det är t ex den skattning man får med den s k **maximum likelihoodmetoden**).
+Antag att *antalet besök per timme* kan modelleras som oberoende Poissonfördelade variabler med parameter $\lambda$. Vi vill nu bestämma det bästa värdet på $\lambda$ genom att använda data, dvs vi vill skatta (estimera) modellparametern $\lambda$. En vanlig **skattning** av $\lambda$ i en Poissonfördelning är medelvärdet $\bar x$ av stickprovet, dvs medelvärdet av variabeln `visits_per_hour` (det är t ex den skattning som är optimal enligt den s k **maximum likelihoodmetoden**).
 
 #### 💪 Uppgift 4.1
 
@@ -309,10 +313,10 @@ Företaget som driver webbsidan vill veta sannolikheten att de får fler än 5 b
 # Write your code here
 ```
 
-#### 💪 Uppgift 4.2
+#### 💪 Uppgift 4.3
 
 \
-Undersök om Poissonfördelningen verkar anpassa dessa data bra. Du kan t ex undersöka om det teoretiska väntevärdet och variansen i den skattade Poissonmodellen ligger hyfsat nära medelvärdet och stickprovsvariansen i data. Du kan också kolla hur sannolikt det faktiskt är att observera 9 st besök under en timme (som vi ju ser i data mellan kl 17-18) i den skattade Poissonmodellen.
+Undersök om Poissonfördelningen verkar anpassa dessa data bra. Du kan t ex undersöka om det teoretiska väntevärdet och variansen i den skattade Poissonmodellen från Uppgift 4.1 ligger hyfsat nära medelvärdet och stickprovsvariansen i data. Du kan också kolla hur sannolikt det faktiskt är att observera 9 st besök under en timme (som vi ju ser i data mellan kl 17-18) i den skattade Poissonmodellen.
 
 ```{r}
 # Write your code here

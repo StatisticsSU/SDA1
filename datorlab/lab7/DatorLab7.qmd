@@ -46,7 +46,7 @@ library(sda123)
 
 ## Introduktion
 
-> I den här datorlabben kommer ni analysera olika datamaterial med regression. Det första datamaterialet om reklam är verkligt. I Uppgift 3 ska ni analysera datamaterial som är simulerade av mig, från olika populationsmodeller som jag har valt. Det blir ett intressant laboratorium, där ni kan utforska olika aspekter av regression i en kontrollerad miljö. Och även få veta den underliggande populationsmodellen efter att ni gjort labben!
+> I den här datorlabben kommer ni analysera olika datamaterial med regression. Det första datamaterialet om reklam är verkligt. I Uppgift 3 ska ni analysera datamaterial som är simulerade av mig, från olika populationsmodeller som jag har valt. Det blir ett intressant laboratorium, där ni kan utforska olika aspekter av regression i en kontrollerad miljö. Och även få veta den underliggande populationsmodellen efter att ni gjort labben! *The truth will reveal itself!*
 
 ::: callout-important
 ## Skapa mapp för labben
@@ -83,7 +83,7 @@ och tolka skattningen av intercept och lutningskoefficient. Vilken skattning av 
 
 #### 💪 Uppgift 1.2
 
-Testa om variabeln tv är en signifikant förklarande variabel på 5% signifikansnivå. Ställ upp noll- och alternativhypotes, teststatistiska med fördelning under nollhypotesen. Utför testet med hjälp av formelsamlingen och formulera din slutsats. Du får använda information från R, men du ska ställa upp formeln för teststatistikan och beräkna med den formeln.
+Testa om variabeln `tv` är en signifikant förklarande variabel på 5% signifikansnivå. Ställ upp noll- och alternativhypotes, teststatistiska med fördelning under nollhypotesen. Utför testet med hjälp av formelsamlingen och formulera din slutsats. Du får använda information från R, men du ska ställa upp formeln för teststatistikan och beräkna med den formeln.
 
 #### 💪 Uppgift 1.3
 

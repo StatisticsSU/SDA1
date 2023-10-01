@@ -3296,7 +3296,7 @@ Standardisering
 \begin_deeper
 \begin_layout Itemize
 Om 
-\begin_inset Formula $X\sim N(\mu,\sigma^{2})$
+\begin_inset Formula $X\sim N(\mu,\sigma)$
 \end_inset
 
  så gäller att 
@@ -3342,7 +3342,7 @@ Z=\frac{X\textcolor{orange}{-\mu}}{\textcolor{blue}{\sigma}}
 
 \begin_layout Itemize
 Beräkna sannolikheter för 
-\begin_inset Formula $X\sim N(\mu,\sigma^{2})$
+\begin_inset Formula $X\sim N(\mu,\sigma)$
 \end_inset
 
  från standard normal
@@ -3360,7 +3360,7 @@ P(X\leq x)=P(X-\mu\leq x-\mu)=P\left(\frac{X-\mu}{\sigma}\leq\frac{x-\mu}{\sigma
 
 \begin_layout Itemize
 Exempel: 
-\begin_inset Formula $X\sim N(2,3^{2})$
+\begin_inset Formula $X\sim N(2,3)$
 \end_inset
 
 , vad är sannolikheten att 
