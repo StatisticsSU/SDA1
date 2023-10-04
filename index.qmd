@@ -32,7 +32,7 @@ Kursens schema finns på [TimeEdit](https://cloud.timeedit.net/su/web/stud1/s.ht
 ### Formel- och tabellsamlingar
 
 -   [Formel- och tabellsamling](/formel_tabell_samlingar/formel_tabell_SDA1.pdf) innehåller de flesta av kursens formler och tabeller och kommer att delas ut under salstentamen.
--   [Tabellsamling](/formel_tabell_samlingar/tabellsamling.qmd) är en webb-version av tabellerna i [Formel- och tabellsamling](/formel_tabell_samlingar/formel_tabell_SDA1.pdf).
+-   [Tabellsamling](/formel_tabell_samlingar/tabellsamling.qmd) är en webb-version av tabellsamlingen.
 
 ### Interaktivt material
 

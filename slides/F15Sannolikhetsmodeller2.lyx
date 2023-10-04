@@ -2528,7 +2528,7 @@ Varför student-
 \end_inset
 
  är oberoende data från 
-\begin_inset Formula $N(\mu,\sigma^{2})$
+\begin_inset Formula $N(\mu,\sigma)$
 \end_inset
 
 .
@@ -2675,7 +2675,7 @@ Student-
 \end_inset
 
  i en normalpopulation.
- F18.
+ F17.
 \begin_inset VSpace medskip
 \end_inset
 

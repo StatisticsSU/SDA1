@@ -1018,7 +1018,7 @@ status open
 \begin_inset CommandInset href
 LatexCommand href
 name "\\includegraphics[width=0.65\\textwidth]{../observable/figs/finitepop_widget.png}"
-target "https://statisticssu.github.io/SDA1/observable/binomialfordelningen.html"
+target "https://statisticssu.github.io/SDA1/observable/sampling_finite_pop.html"
 literal "true"
 
 \end_inset
@@ -1248,7 +1248,7 @@ Eftersom
 \begin_inset Formula $\hat{p}=\frac{1}{n}Y$
 \end_inset
 
-, så [F14 - skalning:
+, så [F13 - skalning:
 \size footnotesize
  
 \begin_inset Formula $E(aX)=aE(X)$
@@ -1268,7 +1268,7 @@ E(\hat{p})=\frac{1}{n}E(Y)=\frac{1}{n}np=p
 
 
 \size default
-och [F14 - skalning: 
+och [F13 - skalning: 
 \size footnotesize
 
 \begin_inset Formula $SD(aX)=\vert a\vert SD(X)$
