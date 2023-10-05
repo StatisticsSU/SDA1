@@ -1174,6 +1174,13 @@ om stickprovet är max 10% av populationen
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
 \begin_layout Frame
 \begin_inset Argument 4
 status open
@@ -1183,6 +1190,141 @@ status open
 \series bold
 \color orange
 Samplingfördelningen för en andel
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+\color blue
+En andel är egentligen ett medelvärde
+\series default
+\color inherit
+ av binära variabler
+\begin_inset Formula 
+\[
+X_{i}=\begin{cases}
+1 & \text{ om person }i\text{ röstar på S}\\
+0 & \text{ om person }i\text{ inte röstar på S}
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color blue
+Populationsparameter
+\series default
+\color inherit
+ med 
+\begin_inset Formula $N$
+\end_inset
+
+ personer i populationen:
+\begin_inset Formula 
+\[
+p=\frac{\sum_{i=1}^{N}x_{i}}{N}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color blue
+Modell
+\series default
+\color inherit
+: 
+\begin_inset Formula $X_{i}\overset{\mathrm{iid}}{\sim}\mathrm{Bernoulli}(p)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\overset{\mathrm{iid}}{\sim}$
+\end_inset
+
+ betyder 'independent and identically distributed'.
+ 
+\series bold
+\color blue
+
+\begin_inset Newline newline
+\end_inset
+
+Oberoende och likafördelade
+\series default
+\color inherit
+.
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color blue
+Sampling utan återläggning
+\series default
+\color inherit
+ 
+\begin_inset Formula $\Longrightarrow$
+\end_inset
+
+ egentligen inte oberoende med samma sannolikhet 
+\begin_inset Formula $p$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+Oberoende Bernoulli ändå OK modell, 
+\series bold
+\color blue
+om stickprovet är max 10% av populationen
+\series default
+\color inherit
+.
+ Korrektion ändlig population.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Konsekvens av att vi bortser från Exempel
 \end_layout
 
 \end_inset
@@ -1244,6 +1386,7 @@ E\left(Y\right) & =np\qquad\text{och }\qquad SD\left(Y\right)=\sqrt{npq}
 \end_layout
 
 \begin_layout Itemize
+Eftersom 
 \begin_inset Formula $\hat{p}=\frac{1}{n}Y$
 \end_inset
 
@@ -1255,10 +1398,6 @@ E\left(Y\right) & =np\qquad\text{och }\qquad SD\left(Y\right)=\sqrt{npq}
 
 
 \size default
- där 
-\begin_inset Formula $a=\frac{1}{n}$
-\end_inset
-
 ]
 \size footnotesize
 
