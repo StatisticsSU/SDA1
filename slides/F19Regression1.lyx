@@ -1571,6 +1571,19 @@ status open
 \series bold
 \color orange
 Residualanalys lifespan - sda123-paketet
+\begin_inset space \hspace{}
+\length 2cm
+\end_inset
+
+
+\begin_inset Graphics
+	filename /home/mv/Dropbox/Teaching/SDA1/misc/hexagons/figs/sda123icon.png
+	lyxscale 5
+	scale 2
+
+\end_inset
+
+
 \end_layout
 
 \end_inset

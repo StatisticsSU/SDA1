@@ -1303,12 +1303,12 @@ status open
 \color orange
 Plot av prediktionsintervall 
 \begin_inset space \hspace{}
-\length 5cm
+\length 5.25cm
 \end_inset
 
 
 \begin_inset Graphics
-	filename /home/mv/Dropbox/Teaching/SDA1/misc/hexagons/figs/sda123iconimage_new.png
+	filename /home/mv/Dropbox/Teaching/SDA1/misc/hexagons/figs/sda123icon.png
 	lyxscale 5
 	scale 2
 
@@ -1735,12 +1735,12 @@ status open
 \color orange
 Simulera data med sda123 paketet 
 \begin_inset space \hspace{}
-\length 3.2cm
+\length 3.4cm
 \end_inset
 
 
 \begin_inset Graphics
-	filename /home/mv/Dropbox/Teaching/SDA1/misc/hexagons/figs/sda123iconimage_new.png
+	filename /home/mv/Dropbox/Teaching/SDA1/misc/hexagons/figs/sda123icon.png
 	lyxscale 5
 	scale 2
 
@@ -1783,16 +1783,17 @@ status open
 
 \series bold
 \color orange
-Skatta från simulerat data 
+Skatta på simulerat datamaterial 
 \begin_inset space \hspace{}
-\length 5.15cm
+\length 3.85cm
 \end_inset
 
 
 \begin_inset Graphics
-	filename /home/mv/Dropbox/Teaching/SDA1/misc/hexagons/figs/sda123iconimage_new.png
+	filename /home/mv/Dropbox/Teaching/SDA1/misc/hexagons/figs/sda123icon.png
 	lyxscale 5
 	scale 2
+	rotateOrigin rightBaseline
 
 \end_inset
 
