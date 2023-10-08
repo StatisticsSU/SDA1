@@ -950,11 +950,7 @@ z_{\mathrm{crit}}=z_{0.025}=1.96
 \end_layout
 
 \begin_layout Itemize
-Förkastar 
-\begin_inset Formula $H_{0}$
-\end_inset
-
- om
+Förkastar om
 \series bold
 \color blue
  
@@ -978,11 +974,7 @@ eller
 \end_layout
 
 \begin_layout Itemize
-Förkastar 
-\begin_inset Formula $H_{0}$
-\end_inset
-
- om
+Förkastar om
 \series bold
 \color blue
  
@@ -992,15 +984,22 @@ Förkastar
 
 \series default
 \color inherit
-.
  
-\end_layout
+\begin_inset VSpace smallskip
+\end_inset
 
-\begin_layout Itemize
 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\Longrightarrow$
+\end_inset
+
+ 
 \series bold
 \color blue
-Förkastar
+förkastar
 \series default
 \color inherit
  
@@ -1015,10 +1014,11 @@ Förkastar
 \end_layout
 
 \begin_layout Itemize
+Vi använder absolutbeloppet 
 \begin_inset Formula $\left|z_{\mathrm{obs}}\right|$
 \end_inset
 
- eftersom förkastar i båda svansarna.
+ eftersom vi förkastar i båda svansarna.
  
 \series bold
 \color blue
@@ -1248,7 +1248,7 @@ pnorm(-2.214)
 )
 \begin_inset Formula 
 \[
-P\left(Z\leq-2.214\right)\approx0.013
+P\left(Z\leq z_{\mathrm{obs}}\right)=P\left(Z\leq-2.214\right)\approx0.013
 \]
 
 \end_inset
@@ -1492,11 +1492,7 @@ p-värde
 \begin_inset Formula $\Rightarrow$
 \end_inset
 
- kan inte förkasta 
-\begin_inset Formula $H_{0}$
-\end_inset
-
- på 5% signifikansnivå.
+ kan inte förkasta nollhypotesen på 5% signifikansnivå.
 \end_layout
 
 \end_deeper
@@ -1542,7 +1538,7 @@ s=\sqrt{\frac{\sum_{i=1}^{n}(x_{i}-\bar{x})^{2}}{n-1}}
 \end_layout
 
 \begin_layout Itemize
-Internethastighetsdata:
+Internetdata:
 \begin_inset Formula 
 \[
 s=\sqrt{\frac{(15.77-15.998)^{2}+\ldots+(21.09-15.998)^{2}}{4}}=5.2147
@@ -1814,7 +1810,7 @@ ensidigt test
  med hypoteser
 \begin_inset Formula 
 \begin{align*}
-H_{0}: & \mu=20\hspace{1em}\hspace{1em}\hspace{1em}\hspace{1em}\hspace{1em}\hspace{1em}\hspace{1em}H_{0}:\mu=\mu_{0}\\
+H_{0}: & \mu\geq20\hspace{1em}\hspace{1em}\hspace{1em}\hspace{1em}\hspace{1em}\hspace{1em}\hspace{1em}H_{0}:\mu\geq\mu_{0}\\
 H_{A}: & \mu<20\hspace{1em}\hspace{1em}\hspace{1em}\hspace{1em}\hspace{1em}\hspace{1em}\hspace{1em}H_{A}:\mu<\mu_{0}
 \end{align*}
 
@@ -1948,42 +1944,6 @@ t_{\textcolor{orange}{0.05},4}=2.132
 \end_inset
 
 
-\end_layout
-
-\begin_layout Itemize
-
-\series bold
-\color blue
-Ensidigt test
-\series default
-\color inherit
- med 
-\begin_inset Formula $H_{A}:\mu<20$
-\end_inset
-
- 
-\begin_inset Formula $\Rightarrow$
-\end_inset
-
- 
-\series bold
-\color blue
-förkastar vid litet 
-\begin_inset Formula $t_{\mathrm{obs}}$
-\end_inset
-
-
-\series default
-\color inherit
- (vänstersvansen), dvs om 
-\begin_inset Formula $t_{\mathrm{obs}}<-2.132$
-\end_inset
-
-.
-\begin_inset VSpace medskip
-\end_inset
-
- 
 \end_layout
 
 \begin_layout Itemize

@@ -1301,7 +1301,20 @@ status open
 
 \series bold
 \color orange
-Plot av prediktionsintervall sda123-paketet
+Plot av prediktionsintervall 
+\begin_inset space \hspace{}
+\length 5cm
+\end_inset
+
+
+\begin_inset Graphics
+	filename /home/mv/Dropbox/Teaching/SDA1/misc/hexagons/figs/sda123iconimage_new.png
+	lyxscale 5
+	scale 2
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -1720,7 +1733,20 @@ status open
 
 \series bold
 \color orange
-Simulera data med sda123 paketet
+Simulera data med sda123 paketet 
+\begin_inset space \hspace{}
+\length 3.2cm
+\end_inset
+
+
+\begin_inset Graphics
+	filename /home/mv/Dropbox/Teaching/SDA1/misc/hexagons/figs/sda123iconimage_new.png
+	lyxscale 5
+	scale 2
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -1757,7 +1783,20 @@ status open
 
 \series bold
 \color orange
-Skatta från simulerat data med sda123 paketet
+Skatta från simulerat data 
+\begin_inset space \hspace{}
+\length 5.15cm
+\end_inset
+
+
+\begin_inset Graphics
+	filename /home/mv/Dropbox/Teaching/SDA1/misc/hexagons/figs/sda123iconimage_new.png
+	lyxscale 5
+	scale 2
+
+\end_inset
+
+
 \end_layout
 
 \end_inset

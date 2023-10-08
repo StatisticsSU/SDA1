@@ -1126,6 +1126,10 @@ Y_{i}=\beta_{0}+\beta_{1}x_{i}+\varepsilon_{i},\quad\varepsilon_{i}\sim N(0,\sig
 \end_inset
 
 
+\begin_inset VSpace smallskip
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
@@ -1148,6 +1152,10 @@ Stickprov/datamaterial
 \end_inset
 
 
+\begin_inset VSpace smallskip
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
@@ -1163,10 +1171,6 @@ I regression antar vi att
 \color inherit
 .
  
-\begin_inset VSpace medskip
-\end_inset
-
-
 \end_layout
 
 \end_deeper
@@ -1202,16 +1206,38 @@ Residualerna
 \end_layout
 
 \begin_deeper
+\begin_layout Itemize
+
+\series bold
+\color blue
+Residualer
+\series default
+\color inherit
+:
+\begin_inset Formula 
+\[
+e_{i}=y_{i}-\hat{y}_{i}
+\]
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 \align center
 \begin_inset Graphics
 	filename figs/epsilon_vs_residual.pdf
 	lyxscale 80
-	scale 140
+	scale 110
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Itemize
+Mer om detta på SDA2.
 \end_layout
 
 \end_deeper
