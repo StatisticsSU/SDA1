@@ -66,7 +66,7 @@ Population &#x2022; Stickprov &#x2022; Samplingfördelning för en andel &#x2022
 Läs: SDM Kapitel 17 \| [Slides](/slides/F17KI4mean.pdf)\
 Interaktivt: [stora talens lag](/observable/storatalenslag.qmd) | [centrala gränsvärdessatsen](/observable/cgs.qmd)\
 Extramaterial: [Notebook - stora talens lag](https://observablehq.com/@mattiasvillani/stora-talens-lag) \| [Notebook - centrala gränsvärdessatsen](https://observablehq.com/@mattiasvillani/cgs)\
-Kod: [konfidensintervall laxar](/code/confidence_intervals_salmon.R)
+Kod: [konfidensintervall laxar](/code/confidence_intervals_salmon.R) | [simulering för att undersöka bias](/code/estimatesnormalmodel.R)
 <details><summary>innehåll</summary>
 Samplingfördelning för ett väntevärde - känd varians &#x2022; Samplingfördelning för ett väntevärde - okänd varians &#x2022; Konfidensintervall för ett väntevärde &#x2022; Stora talens lag &#x2022; Centrala gränsvärdessatsen
 </details>
