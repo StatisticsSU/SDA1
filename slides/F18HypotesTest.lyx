@@ -275,7 +275,7 @@ status open
 
 \series bold
 \color blue
-Hypotesttest för en andel
+Hypotestest för en andel
 \color inherit
 
 \begin_inset VSpace bigskip
@@ -288,7 +288,7 @@ Hypotesttest för en andel
 
 \series bold
 \color blue
-Hypotesttest för ett väntevärde
+Hypotestest för ett väntevärde
 \end_layout
 
 \end_deeper
@@ -625,8 +625,8 @@ inte
  lika bra som gamla.
 \begin_inset Formula 
 \begin{align*}
-H_{0}: & p=0.15\hspace{1em}\hspace{1em}\hspace{1em}\hspace{1em}\hspace{1em}\hspace{1em}\hspace{1em}H_{0}:p=p_{0}\\
-H_{A}: & p\neq0.15\hspace{1em}\hspace{1em}\hspace{1em}\hspace{1em}\hspace{1em}\hspace{1em}\hspace{1em}H_{A}:p\neq p_{0}
+H_{0}: & \:p=0.15\hspace{1em}\hspace{1em}\hspace{1em}\hspace{1em}\hspace{1em}\hspace{1em}\hspace{1em}H_{0}:p=p_{0}\\
+H_{A}: & \:p\neq0.15\hspace{1em}\hspace{1em}\hspace{1em}\hspace{1em}\hspace{1em}\hspace{1em}\hspace{1em}H_{A}:p\neq p_{0}
 \end{align*}
 
 \end_inset
@@ -639,7 +639,13 @@ Hur sannolikt är
 \begin_inset Formula $\hat{p}=0.0875$
 \end_inset
 
- i stickprov om 
+ i stickprov 
+\series bold
+\color orange
+om
+\series default
+\color inherit
+ 
 \begin_inset Formula $p=0.15$
 \end_inset
 
@@ -997,24 +1003,6 @@ Förkastar
 \end_layout
 
 \begin_layout Itemize
-
-\series bold
-\color blue
-Förkastar
-\series default
-\color inherit
- 
-\begin_inset Formula $H_{0}$
-\end_inset
-
- på 5% signifikansnivå.
-\begin_inset VSpace smallskip
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
 \begin_inset Formula $\left|z_{\mathrm{obs}}\right|$
 \end_inset
 
@@ -1026,6 +1014,20 @@ Dubbelsidigt test
 \series default
 \color inherit
 .
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color blue
+Förkastar
+\series default
+\color inherit
+ 
+\begin_inset Formula $H_{0}$
+\end_inset
+
+ på 5% signifikansnivå.
 \end_layout
 
 \end_deeper
@@ -1593,7 +1595,7 @@ status open
 
 \series bold
 \color orange
-Hypotesttest för ett väntevärde - skattad varians
+Hypotestest för ett väntevärde - skattad varians
 \end_layout
 
 \end_inset
@@ -1724,7 +1726,7 @@ status open
 
 \series bold
 \color orange
-Hypotesttest för ett väntevärde - skattad varians
+Hypotestest för ett väntevärde - skattad varians
 \end_layout
 
 \end_inset
@@ -1795,7 +1797,7 @@ status open
 
 \series bold
 \color orange
-Ensidigt hypotesttest för ett väntevärde
+Ensidigt hypotestest för ett väntevärde
 \end_layout
 
 \end_inset
@@ -1925,7 +1927,7 @@ status open
 
 \series bold
 \color orange
-Ensidigt hypotesttest för ett väntevärde
+Ensidigt hypotestest för ett väntevärde
 \end_layout
 
 \end_inset
@@ -2034,7 +2036,7 @@ status open
 
 \series bold
 \color orange
-Hypotesttest - fatta principen bakom!
+Hypotestest - fatta principen bakom!
 \end_layout
 
 \end_inset
