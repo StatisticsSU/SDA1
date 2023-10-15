@@ -31,7 +31,7 @@ Betingad sannolikhet &#x2022; Multiplikationsregeln &#x2022; Oberoende händelse
 </details>
 
 **Föreläsning 13 - Slumpvariabler och deras egenskaper.**\
-Läs: SDM Kapitel 14 \| [Slides](/slides/F13Slumpvariabler.pdf)\
+Läs: SDM Kapitel 14 \| [Slides](/slides/F13Slumpvariabler.pdf) | [Kalkylark om diskret simultanfördelning och kovarians](/misc/DiskretSimultanfördelningKovarians.xlsx) | [Google docs version (view only) om diskret simultanfördelning och kovarians](https://docs.google.com/spreadsheets/d/1gMmUHFH0NydQABfvEu8YuDN8jQgmze6iiZ_WY_q4_jg/edit?usp=sharing)\
 Interaktivt: [normalfördelningen](/observable/normalfordelningen.qmd)
 <details><summary>innehåll</summary>
 Slumpvariabler &#x2022; Sannolikhetsfördelning &#x2022; Väntevärde &#x2022; Varians &#x2022; Standardavvikelse &#x2022; Normalfördelning &#x2022; Slumpvariabler &#x2022; Linjärkombinationer &#x2022; Standardisering &#x2022; Kovarians &#x2022; Korrelation &#x2022; Varians av summa av slumpvariabler
