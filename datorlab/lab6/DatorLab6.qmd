@@ -138,9 +138,6 @@ $$
 \hat p \pm z_{\alpha/2}\cdot\sqrt{\frac{pq}{n}}
 $$
 
-Använd konfidensintervallen för Januari och Februari 2023 för att förklara Novus påstående (vad gäller S):
-
-*I den senaste undersökningen från SVT/Novus (*Februari 2023) *är ingen förändring statistiskt säkerställd.*
 
 #### 💪 Uppgift 1.2
 
