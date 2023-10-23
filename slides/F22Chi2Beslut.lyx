@@ -372,7 +372,7 @@ status open
 \begin_layout Plain Layout
 \align left
 
-\size tiny
+\size scriptsize
 \begin_inset Tabular
 <lyxtabular version="3" rows="4" columns="5">
 <features tabularvalignment="middle">
@@ -387,7 +387,7 @@ status open
 
 \begin_layout Plain Layout
 
-\size footnotesize
+\size scriptsize
 Korttyp
 \end_layout
 
@@ -398,8 +398,8 @@ Korttyp
 
 \begin_layout Plain Layout
 
-\size footnotesize
-Historiskt
+\size scriptsize
+Innan
 \end_layout
 
 \end_inset
@@ -409,8 +409,8 @@ Historiskt
 
 \begin_layout Plain Layout
 
-\size footnotesize
-Efter kampanj
+\size scriptsize
+Efter
 \end_layout
 
 \end_inset
@@ -420,8 +420,8 @@ Efter kampanj
 
 \begin_layout Plain Layout
 
-\size footnotesize
-Observerat antal
+\size scriptsize
+Stickprov efter
 \end_layout
 
 \end_inset
@@ -431,8 +431,8 @@ Observerat antal
 
 \begin_layout Plain Layout
 
-\size footnotesize
-Förväntat antal
+\size scriptsize
+Förväntat om ingen effekt av kampanj
 \end_layout
 
 \end_inset
@@ -444,7 +444,7 @@ Förväntat antal
 
 \begin_layout Plain Layout
 
-\size footnotesize
+\size scriptsize
 Silver
 \end_layout
 
@@ -455,7 +455,7 @@ Silver
 
 \begin_layout Plain Layout
 
-\size footnotesize
+\size scriptsize
 \begin_inset Formula $60\%$
 \end_inset
 
@@ -469,7 +469,7 @@ Silver
 
 \begin_layout Plain Layout
 
-\size footnotesize
+\size scriptsize
 \begin_inset Formula $55\%$
 \end_inset
 
@@ -483,7 +483,7 @@ Silver
 
 \begin_layout Plain Layout
 
-\size footnotesize
+\size scriptsize
 \begin_inset Formula $111$
 \end_inset
 
@@ -497,7 +497,7 @@ Silver
 
 \begin_layout Plain Layout
 
-\size footnotesize
+\size scriptsize
 \begin_inset Formula $200\cdot0.6=120$
 \end_inset
 
@@ -513,7 +513,7 @@ Silver
 
 \begin_layout Plain Layout
 
-\size footnotesize
+\size scriptsize
 Gold 
 \end_layout
 
@@ -524,7 +524,7 @@ Gold
 
 \begin_layout Plain Layout
 
-\size footnotesize
+\size scriptsize
 \begin_inset Formula $30\%$
 \end_inset
 
@@ -538,7 +538,7 @@ Gold
 
 \begin_layout Plain Layout
 
-\size footnotesize
+\size scriptsize
 \begin_inset Formula $29.5\%$
 \end_inset
 
@@ -552,7 +552,7 @@ Gold
 
 \begin_layout Plain Layout
 
-\size footnotesize
+\size scriptsize
 \begin_inset Formula $59$
 \end_inset
 
@@ -566,7 +566,7 @@ Gold
 
 \begin_layout Plain Layout
 
-\size footnotesize
+\size scriptsize
 \begin_inset Formula $200\cdot0.3=60$
 \end_inset
 
@@ -582,7 +582,7 @@ Gold
 
 \begin_layout Plain Layout
 
-\size footnotesize
+\size scriptsize
 Platinum
 \end_layout
 
@@ -593,7 +593,7 @@ Platinum
 
 \begin_layout Plain Layout
 
-\size footnotesize
+\size scriptsize
 \begin_inset Formula $10\%$
 \end_inset
 
@@ -607,7 +607,7 @@ Platinum
 
 \begin_layout Plain Layout
 
-\size footnotesize
+\size scriptsize
 \begin_inset Formula $15\%$
 \end_inset
 
@@ -621,7 +621,7 @@ Platinum
 
 \begin_layout Plain Layout
 
-\size footnotesize
+\size scriptsize
 \begin_inset Formula $30$
 \end_inset
 
@@ -635,7 +635,7 @@ Platinum
 
 \begin_layout Plain Layout
 
-\size footnotesize
+\size scriptsize
 \begin_inset Formula $200\cdot0.1=20$
 \end_inset
 
@@ -702,7 +702,473 @@ Räknedata
 \end_layout
 
 \begin_layout Itemize
-Hypotestest:
+Hypoteser
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $H_{0}$
+\end_inset
+
+: räknedata följer fördelning med sannolikhet 
+\begin_inset Formula $p_{k}$
+\end_inset
+
+ i cell 
+\begin_inset Formula $k$
+\end_inset
+
+.
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $H_{A}$
+\end_inset
+
+: räknedata följer annan fördelning.
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Totalt antal i hela tabellen: 
+\begin_inset Formula $n$
+\end_inset
+
+
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color blue
+Förväntat antal
+\series default
+\color inherit
+ i cell 
+\begin_inset Formula $k$
+\end_inset
+
+:
+\series bold
+\color blue
+ 
+\begin_inset Formula $\mathrm{Exp}_{k}=n\cdot p_{k}$
+\end_inset
+
+
+\series default
+\color inherit
+.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Exempel: 
+\series bold
+\color blue
+
+\begin_inset Formula $\mathrm{Exp}_{\mathrm{silver}}=200\cdot0.6=120$
+\end_inset
+
+
+\series default
+\color inherit
+
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+\color blue
+Observerat antal
+\series default
+\color inherit
+ i cell 
+\begin_inset Formula $k$
+\end_inset
+
+: 
+\series bold
+\color blue
+
+\begin_inset Formula $\mathrm{Obs}_{k}$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Exempel: 
+\series bold
+\color blue
+
+\begin_inset Formula $\mathrm{Obs}_{\mathrm{silver}}=111$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\align left
+
+\size scriptsize
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "50col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\align left
+
+\size scriptsize
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="5">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top">
+<column alignment="right" valignment="top">
+<column alignment="right" valignment="top">
+<column alignment="right" valignment="top">
+<column alignment="right" valignment="top">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Korttyp
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Innan
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Efter
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Stickprov efter
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Förväntat om ingen effekt av kampanj
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Silver
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\begin_inset Formula $60\%$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\begin_inset Formula $55\%$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\begin_inset Formula $111$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\begin_inset Formula $200\cdot0.6=120$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Gold
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\begin_inset Formula $30\%$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\begin_inset Formula $29.5\%$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\begin_inset Formula $59$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\begin_inset Formula $200\cdot0.3=60$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Platinum
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\begin_inset Formula $10\%$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\begin_inset Formula $15\%$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\begin_inset Formula $30$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\begin_inset Formula $200\cdot0.1=20$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Chi2-test
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Hypoteser
 \begin_inset VSpace smallskip
 \end_inset
 
@@ -734,6 +1200,10 @@ Hypotestest:
 \end_inset
 
 : räknedata följer annan fördelning.
+\begin_inset VSpace bigskip
+\end_inset
+
+
 \begin_inset VSpace smallskip
 \end_inset
 
@@ -742,62 +1212,12 @@ Hypotestest:
 
 \end_deeper
 \begin_layout Itemize
-Totalt antal i hela tabellen: 
-\begin_inset Formula $n$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Itemize
-
-\series bold
-\color blue
-Förväntat antal
-\series default
-\color inherit
- i cell 
-\begin_inset Formula $k$
-\end_inset
-
-:
-\series bold
-\color blue
- 
-\begin_inset Formula $\mathrm{Exp}_{k}=n\cdot p_{k}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-
-\series bold
-\color blue
-Observerat antal
-\series default
-\color inherit
- i cell 
-\begin_inset Formula $k$
-\end_inset
-
-: 
-\series bold
-\color blue
-
-\begin_inset Formula $\mathrm{Obs}_{k}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
 Chi2 (
 \begin_inset Formula $\chi^{2}$
 \end_inset
 
 ) test för tabell med 
-\begin_inset Formula $N$
+\begin_inset Formula $K$
 \end_inset
 
  celler - 
@@ -812,6 +1232,10 @@ teststatistika
 \chi^{2}=\sum_{k=1}^{K}\frac{(\mathrm{Obs}_{k}-\mathrm{Exp}_{k})^{2}}{\mathrm{Exp}_{k}}=\sum_{\text{all cells}}\frac{(\mathrm{Obs}-\mathrm{Exp})^{2}}{\mathrm{Exp}}
 \]
 
+\end_inset
+
+
+\begin_inset VSpace smallskip
 \end_inset
 
 
@@ -990,7 +1414,7 @@ Kritiskt värde på signifikansnivå 5% från
 \end_inset
 
 -tabell: 
-\begin_inset Formula $5.991$
+\begin_inset Formula $\chi_{crit}^{2}=5.991$
 \end_inset
 
 .
@@ -1018,6 +1442,355 @@ Eftersom
 
 \begin_layout Itemize
 Finns inte stöd för att kampanjen har ändrat fördelningen över olika kortklasser.
+\end_layout
+
+\begin_layout Standard
+\align left
+
+\size scriptsize
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "50col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\align left
+
+\size scriptsize
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="5">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top">
+<column alignment="right" valignment="top">
+<column alignment="right" valignment="top">
+<column alignment="right" valignment="top">
+<column alignment="right" valignment="top">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Korttyp
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Innan
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Efter
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Stickprov efter
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Förväntat om ingen effekt av kampanj
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Silver
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\begin_inset Formula $60\%$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\begin_inset Formula $55\%$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\begin_inset Formula $111$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\begin_inset Formula $200\cdot0.6=120$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Gold
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\begin_inset Formula $30\%$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\begin_inset Formula $29.5\%$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\begin_inset Formula $59$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\begin_inset Formula $200\cdot0.3=60$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Platinum
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\begin_inset Formula $10\%$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\begin_inset Formula $15\%$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\begin_inset Formula $30$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\begin_inset Formula $200\cdot0.1=20$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Chi2-tabell
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename /home/mv/Dropbox/Teaching/SDA1/formel_tabell_samlingar/Chi2Screen.png
+	lyxscale 30
+	scale 30
+	BoundingBox 0bp 1000bp 1033bp 1553bp
+	clip
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper

@@ -1,0 +1,7 @@
+---
+title: "Hypotestest för ett väntevärde"
+format: html
+---
+
+<iframe width="100%" height="1070" frameborder="0"
+  src="https://observablehq.com/embed/@mattiasvillani/hypothesis-test-mean?cells=hypotext%2Ctobstext%2Ctcrittext%2Cpvaluetext%2Cpconclusion%2Cviewof+inputs%2Cviewof+toggles%2Cplt"></iframe>
