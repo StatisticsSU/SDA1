@@ -74,7 +74,7 @@ Samplingfördelning för ett väntevärde - känd varians &#x2022; Samplingförd
 
 **Föreläsning 18 - Hypotestest.**\
 Läs: SDM Kapitel 18 (ej *Random matters* på sid 579) \| [Slides](/slides/F18HypotesTest.pdf)\
-Interaktivt: [hypotestest - väntevärde](/observable/hypotestest_mean.qmd)
+Interaktivt: [hypotestest väntevärde](/observable/hypothesis_test_mean.qmd) | [ensidigt test för internethastighet](/observable/hypotestest_mean.qmd)
 <details><summary>innehåll</summary>
 Hypotestest för ett väntevärde &#x2022; Hypotestest för en andel &#x2022; Hypoteser och nollfördelning &#x2022; Kritiska värden &#x2022; p-värde
 </details>
