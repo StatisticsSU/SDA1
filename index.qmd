@@ -27,7 +27,7 @@ Kursen består av föreläsningar, räkneövningar och datorlaborationer. Se res
 
 ### Schema
 
-Kursens schema finns på [TimeEdit](https://cloud.timeedit.net/su/web/stud1/s.html?tab=3&object=cevt_39921_HT2023&startDate=20230729&endDate=20240127&type=courseevent&h=t). Ett tips är att välja *Prenumerera* i övre högra hörnet på TimeEdit och sen klistra in länken i ditt kalenderprogram på mobilen.
+Kursens schema finns på [TimeEdit](https://cloud.timeedit.net/su/web/stud1/ri15786Q059Z05Q685635710yZ066W7318Y66Q0Q0.html). Ett tips är att välja *Prenumerera* i övre högra hörnet på TimeEdit och sen klistra in länken i ditt kalenderprogram på mobilen.
 
 ### Formel- och tabellsamlingar
 
@@ -40,18 +40,21 @@ På vissa delar av kursen använder vi interaktivt material för att underlätta
 
 ### Lärare
 
-::: {layout="[ [1,1],[1,1] ]"}
-<img src="/misc/VillaniLowRes.jpg" width="35%"/>\
-[Mattias Villani](https://mattiasvillani.com)<br>Kursansvarig och Föreläsare<br>Professor
+::: {layout="[ [1,1],[1,1], [1, 1] ]"}
+<img src="/misc/Oscar.jpeg" width="35%"/>\
+[Oscar Oelrich](https://www.su.se/english/profiles/ooelr-1.342298#)<br>Kursansvarig och Föreläsare<br>
 
 <img src="/misc/karlsigfrid.png" width="35%"/>\
 [Karl Sigfrid](https://www.su.se/profiles/kasi3175-1.513541)<br>Föreläsare<br>Doktorand
 
 <img src="/misc/female.png" width="35%"/>\
-[Mona Sfaxi](https://www.su.se/profiles/mosf7202-1.616028)<br>Övningar, Datorövningar och Jour<br>Masterexamen i Statistik
+[Mona Sfaxi](https://www.su.se/profiles/mosf7202-1.616028)<br>Övningar och Jour<br>Masterexamen i Statistik
 
 <img src="/misc/sofia.jpeg" width="35%"/>\
 [Sofia Edlund](https://www.su.se/profiles/soed8022-1.660492)<br>Datorövningar<br>Masterstudent i Statistik
+
+<img src="/misc/female.png" width="35%"/>\
+[Sebastian Hedberg](https://www.google.com)<br>Datorövningar<br>Masterstudent i Statistik
 :::
 
 
