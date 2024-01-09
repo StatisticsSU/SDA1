@@ -53,7 +53,7 @@ På vissa delar av kursen använder vi interaktivt material för att underlätta
 <img src="/misc/sofia.jpeg" width="35%"/>\
 [Sofia Edlund](https://www.su.se/profiles/soed8022-1.660492)<br>Datorövningar<br>Masterstudent i Statistik
 
-<img src="/misc/female.png" width="35%"/>\
+<img src="/misc/male.png" width="35%"/>\
 [Sebastian Hedberg](https://www.google.com)<br>Datorövningar<br>Masterstudent i Statistik
 :::
 
