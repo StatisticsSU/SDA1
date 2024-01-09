@@ -41,7 +41,7 @@ På vissa delar av kursen använder vi interaktivt material för att underlätta
 ### Lärare
 
 ::: {layout="[ [1,1],[1,1], [1, 1] ]"}
-<img src="/misc/Oscar.jpeg" width="35%"/>\
+<img src="/misc/oscar.jpeg" width="35%"/>\
 [Oscar Oelrich](https://www.su.se/english/profiles/ooelr-1.342298#)<br>Kursansvarig och Föreläsare<br>
 
 <img src="/misc/karlsigfrid.png" width="35%"/>\
