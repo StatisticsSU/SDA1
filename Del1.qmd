@@ -15,7 +15,7 @@ Under vissa föreläsningar länkar vi till `Extramaterial`. Det är material so
 ### **Föreläsningar**
 
 **Föreläsning 1 - Introduktion.**\
-Läs: SDM Kapitel 1 | [Slides](/slides/F1Intro.pdf)
+Läs: SDM Kapitel 1 | [Slides - Motivation](/slides/IntroLectureVillani.pdf)
 
 **Föreläsning 2 - Hantera och beskriva data.**\
 Läs: SDM Kapitel 2 | [Slides](/slides/part1_ht23/lecture2_embedded.html)\
