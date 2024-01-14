@@ -15,63 +15,67 @@ Under vissa föreläsningar länkar vi till `Extramaterial`. Det är material so
 ### **Föreläsningar**
 
 **Föreläsning 1 - Introduktion.**\
-Läs: SDM Kapitel 1 | [Slides - Motivation](/slides/IntroLectureVillani.pdf)
+Läs: SDM Kapitel 1 | [Slides, del 1](/slides/F1Intro.pdf) | [Slides, del 2](/slides/part1/lecture1b_vt24_embedded.html)\
+Testa dina kunskaper: [Algebra](https://statisticstutor.eu.pythonanywhere.com/static/output/exercises/algebra_basic.html) | [Summor och produkter](https://statisticstutor.eu.pythonanywhere.com/static/output/exercises/notation_sum_prod.html)
 
 **Föreläsning 2 - Hantera och beskriva data.**\
-Läs: SDM Kapitel 2 | [Slides](/slides/part1_ht23/lecture2_embedded.html)\
+Läs: SDM Kapitel 2 | [Slides](/slides/part1/lecture2_embedded.html)\
 Interaktivt: [widget - histogram](/observable/histogram.qmd)\
+Testa dina kunskaper: [Centralvärden](https://statisticstutor.eu.pythonanywhere.com/static/output/exercises/mean_median_mode.html) | [Kvartiler](https://statisticstutor.eu.pythonanywhere.com/static/output/exercises/quartiles_iqr.html) | [Varians](https://statisticstutor.eu.pythonanywhere.com/static/output/exercises/sample_variance.html) | [Standardavvikelse](https://statisticstutor.eu.pythonanywhere.com/static/output/exercises/standard_deviation.html)\
 <details><summary>innehåll</summary>
 Variabeltyper &#x2022; Frekvenstabeller &#x2022; Fördelningar &#x2022; Outliers &#x2022; Centralmått &#x2022; Spridningsmått &#x2022; Percentiler
 </details>
 
 **Föreläsning 3 - Samband mellan kategoriska variabler.**\
-Läs: SDM Kapitel 3 | [Slides](/slides/part1_ht23/lecture3_embedded.html)\
+Läs: SDM Kapitel 3 | [Slides](/slides/part1/lecture3_embedded.html)\
+Testa dina kunskaper: [Marginalfördelningar](https://statisticstutor.eu.pythonanywhere.com/static/output/exercises/marginal_distribution_proportions.html) | [Betingade fördelningar](https://statisticstutor.eu.pythonanywhere.com/static/output/exercises/conditional_proportion.html)\
 <details><summary>innehåll</summary>
 Korstabeller &#x2022; Betingade fördelningar av kategoriska variabler &#x2022; Test av hypotes om oberoende genom simulering &#x2022; Samband och kausalitet
 </details>
 
 **Föreläsning 4 - Jämföra fördelningar. Tidsserier. Transformationer.**\
-Läs: SDM Kapitel 4 | [Slides](/slides/part1_ht23/lecture4_embedded.html)\
+Läs: SDM Kapitel 4 | [Slides](/slides/part1/lecture4_embedded.html)\
 <details><summary>innehåll</summary>
 Numeriska variabler betingade på kategoriska variabler &#x2022; Grafisk representation av tidsserier &#x2022; Transformering med logaritmer
 </details>
 
 **Föreläsning 5 - Standardiserade variabler och normalfördelningen.**\
-Läs: SDM Kapitel 5 | [Slides](/slides/part1_ht23/lecture5_embedded.html)\
-Extramaterial: [Hantera dataset med dplyr](/slides/part1_ht23/dplyr_demo.html)\
+Läs: SDM Kapitel 5 | [Slides](/slides/part1/lecture5_embedded.html)\
+Extramaterial: [Hantera dataset med dplyr](/slides/part1/dplyr_demo.html)\
+Testa dina kunskaper: [Z-värden](https://statisticstutor.eu.pythonanywhere.com/static/output/exercises/calculate_zscore.html) | [Normalfördelningstabellen](https://statisticstutor.eu.pythonanywhere.com/static/output/exercises/read_ztable.html)\
 <details><summary>innehåll</summary>
 Standardiserade variabler &#x2022; Normalfördelningen &#x2022; Beräkningar med normalfördelningen &#x2022; Normalfördelningsantagandet
 </details>
 
 **Föreläsning 6 - Samband mellan numeriska variabler. Korrelation.**\
-Läs: SDM Kapitel 6 | [Slides](/slides/part1_ht23/lecture6_embedded.html)\
+Läs: SDM Kapitel 6 | [Slides](/slides/part1/lecture6_embedded.html)\
 <details><summary>innehåll</summary>
 Spridningsdiagram &#x2022; Korrelationskoefficienten &#x2022; Korrelation och kausalitet
 </details>
 
 **Föreläsning 7 - Enkel linjär regression.**\
-Läs: SDM Kapitel 7 | [Slides](/slides/part1_ht23/lecture7_embedded.html)\
+Läs: SDM Kapitel 7 | [Slides](/slides/part1/lecture7_embedded.html)\
 Extramaterial: [widget - linjär regression utan population](/observable/linreg_simple_estimates.qmd) | [widget - linjär regression med population](/observable/linreg_simple.qmd)
 <details><summary>innehåll</summary>
 Den enkla linjära regressionsmodellen &#x2022; Tolkning av regressionskoefficienter &#x2022; Prediktion &#x2022; Minsta kvadratmetoden &#x2022; Signifikans &#x2022; Modellantaganden och residualanalys &#x2022; R-kvadrat &#x2022; Analys av variansen
 </details>
 
 **Föreläsning 8 - Transformationer. Multipel linjär regression.**\
-Läs: SDM Kapitel 8, 9.1-9-4 | [Slides](/slides/part1_ht23/lecture8_embedded.html)\
+Läs: SDM Kapitel 8, 9.1-9-4 | [Slides](/slides/part1/lecture8_embedded.html)\
 Extramaterial: [widget - icke-linjär regression](/observable/ickelinregression.qmd)\
 <details><summary>innehåll</summary>
 Transformation av variabler för regression &#x2022; Multipel linjär regression &#x2022; Adjusted R-squared
 </details>
 
 **Föreläsning 9 - Dummyvariabler i regressionsmodeller. Modellval.**\
-Läs: SDM 9.5  | [Slides](/slides/part1_ht23/lecture9_embedded.html)\ 
+Läs: SDM 9.5  | [Slides](/slides/part1/lecture9_embedded.html)\ 
 <details><summary>innehåll</summary>
 Dummyvariabler &#x2022; Modellval &#x2022; Överanpassning och underanpassning &#x2022; Träningsdata och testdata &#x2022; Korsvalidering
 </details>
 
 
 **Föreläsning 10 - Stickprov och populationer. Observationsstudier och experiment.**\
-Läs: SDM kapitel 10.1-10.3 och 11.1-11.2 | [Slides](/slides/part1_ht23/lecture10_embedded.html)\ 
+Läs: SDM kapitel 10.1-10.3 och 11.1-11.2 | [Slides](/slides/part1/lecture10_embedded.html)\ 
 <details><summary>innehåll</summary>
 Inferens &#x2022; Populationer och stickprov &#x2022; Bias &#x2022; Slumpvisa variationer &#x2022; Simple random sampling &#x2022; Populationsparametrar och statistika &#x2022; Observationsstudier &#x2022; Experiment
 </details>
