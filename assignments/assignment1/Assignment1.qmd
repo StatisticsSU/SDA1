@@ -70,7 +70,6 @@ Följande variabler finns i datasetet `boston_census_data.Rdata` ([ladda ner](ht
 -   `lower_stat_pct`: Procentandel med låg socioekonomisk status i termer av utbildning eller arbete.
 -   `dist_fenway_park`: Avstånd till stadion Fenway Park.
 
-
 Inlämningsuppgiften ska lämnas in i form av ett html-dokument genererat av Quarto. **Kontrollera att ni inte får några felmeddelande när du genererar HTML-dokumentet. Läs sedan igenom HTML-dokumentet noggrant innan ni lämnar in det.** Använd tydliga figurer och namnge axlarna med tydliga variabelnamn. Glöm inte att skriva era namn i början av dokumentet, där det nu står Namn 1, Namn 2 och Namn 3.
 :::
 
@@ -82,38 +81,35 @@ Inlämningsuppgiften ska lämnas in i form av ett html-dokument genererat av Qua
 
 ## 0. Ladda in data
 
-#### 💪 Uppgift 0.1
+### 💪 Uppgift 0.1
 
 Ladda in datasetet `Boston_census_data` med följande kod.
 
-::: {.callout-note appearance="minimal"}
-# Uppgift 0.1 - Svar
+#### Uppgift 0.1 - Svar
 
 ```{r}
 # Write your code here
 load(file = url("https://github.com/StatisticsSU/SDA1/blob/main/assignments/assignment1/Boston_census_data.RData?raw=true")) 
 ```
-:::
 
 ## 1. Kriminalitet i Boston
 
 I detta avsnitt ska ni analysera kriminaliteten i Boston med hjälp av variabeln `crime_rate`.
 
-#### 💪 Uppgift 1.1
+### 💪 Uppgift 1.1
 
 Vad kan man generellt säga om kriminaliteten i Boston 1970? Använd lämpliga figurer och mått för att ge en beskrivning.
 
-::: {.callout-note appearance="minimal"}
-# Uppgift 1.1 - Svar
+#### Uppgift 1.1 - Svar
 
-Skriv svaret här. Vid behov skrivs matematiska symboler inom dollartecken, till exempel $\overline{y} = \cfrac{\sum^{n}_{i=1} y_i}{n}$. Koden skrivs i R-rutan nedanför.
+Skriv svaret här. Vid behov skrivs matematiska symboler inom dollartecken, till exempel $\overline{y} = \cfrac{\sum^{n}_{i=1} y_i}{n}$. Koden skrivs i den grå R-rutan nedanför.
 
 ```{r}
 # Write your code here
 ```
-:::
 
-#### 💪 Uppgift 1.2
+
+### 💪 Uppgift 1.2
 
 Distrikten tillhör olika stadsdelar som anges i den kategoriska variabeln `town`? Det finns 88 olika sådana stadsdelar (towns).
 
@@ -123,17 +119,16 @@ Distrikten tillhör olika stadsdelar som anges i den kategoriska variabeln `town
 Innan ni påbörjar analysen, skapa en ny data frame som enbart innehåller de stadsdelar som ni vill jämföra. Det kan göras till exempel med funktionen `filter()`.
 :::
 
-::: {.callout-note appearance="minimal"}
-# Uppgift 1.2 - Svar
+#### Uppgift 1.2 - Svar
 
-Skriv svaret här.
+Skriv textsvaret här.
 
 ```{r}
 # Write your code here
 ```
-:::
 
-#### 💪 Uppgift 1.3
+
+### 💪 Uppgift 1.3
 
 Vilka två variabler i datasetet `Boston_census_data` korrelerar mest med brottslighet? Beskriv sambandet mellan brottslighet och var och en av dessa två variabler.
 
@@ -141,33 +136,31 @@ Vilka två variabler i datasetet `Boston_census_data` korrelerar mest med brotts
 Kom ihåg att korrelation mäter det linjära sambandet mellan *numeriska variabler*.
 :::
 
-::: {.callout-note appearance="minimal"}
-# Uppgift 1.3 - Svar
+#### Uppgift 1.3 - Svar
 
-Skriv svaret här.
+Skriv textsvaret här.
 
 ```{r}
 # Write your code here
 ```
-:::
+
 
 ## 2. Fastighetsskatt i Boston
 
 I detta avsnitt ska ni analysera fastighetsskatten i Boston med hjälp av variabeln `tax_rate`.
 
-#### 💪 Uppgift 2.1
+### 💪 Uppgift 2.1
 
 Vad kan man generellt säga om fastighetsskatten i distrikten? Använd lämpliga figurer och mått för att beskriva fördelningen.
 
-::: {.callout-note appearance="minimal"}
-# Uppgift 2.1 - Svar
+#### Uppgift 2.1 - Svar
 
-Skriv svaret här.
+Skriv textsvaret här.
 
 ```{r}
 # Write your code here
 ```
-:::
+
 
 #### 💪 Uppgift 2.2
 
@@ -187,31 +180,29 @@ Boston_census_data$cat_tax <- cut(Boston_census_data$tax_rate,
 
 Finns det ett samband mellan vilken skattekategori ett distrikt tillhör och dess angränsning till Charles River? Förklara med hjälp av lämplig tabell och figur.
 
-::: {.callout-note appearance="minimal"}
-# Uppgift 2.2 - Svar
+#### Uppgift 2.2 - Svar
 
-Skriv svaret här.
+Skriv textsvaret här.
 
 ```{r}
 # Write your code here
 ```
-:::
 
-#### 💪 Uppgift 2.3
+
+### 💪 Uppgift 2.3
 
 Hur många procent av alla distrikt i vår data ligger i angränsning till Charles River *och* tillhör en hög skattekategori? Hur stor andel av distrikten med hög skatt ligger *inte* i angränsning till Charles River?
 
-::: {.callout-note appearance="minimal"}
-# Uppgift 2.3 - Svar
+#### Uppgift 2.3 - Svar
 
-Skriv svaret här.
+Skriv textsvaret här.
 
 ```{r}
 # Write your code here
 ```
-:::
 
-#### 💪 Uppgift 2.4
+
+### 💪 Uppgift 2.4
 
 Vilka två variabler i datasetet `Boston_census_data` korrelerar starkast med `tax_rate`? Beskriv det parvisa sambandet mellan `tax_rate` och var och en av dessa två variabler. Vad kan vi säga om kausalitet för vart och ett av sambanden?
 
@@ -219,15 +210,14 @@ Vilka två variabler i datasetet `Boston_census_data` korrelerar starkast med `t
 Kom ihåg att korrelation är ett mått på linjära samband mellan *numeriska variabler*.
 :::
 
-::: {.callout-note appearance="minimal"}
-# Uppgift 2.4 - Svar
+#### Uppgift 2.4 - Svar
 
-Skriv svaret här.
+Skriv textsvaret här.
 
 ```{r}
 # Write your code here
 ```
-:::
+
 
 ## 3. Avstånd till Fenway park
 
@@ -247,96 +237,88 @@ Boston_map <- leaflet() %>%
 Boston_map # Show interactive map
 ```
 
-#### 💪 Uppgift 3.1
+### 💪 Uppgift 3.1
 
 Vilket distrikt i vår data har längst respektive kortast avstånd till Fenway park? Markera ut dessa distrikt i en interaktiv karta tillsammans med Fenway park.
 
-::: {.callout-note appearance="minimal"}
-# Uppgift 3.1 - Svar
+#### Uppgift 3.1 - Svar
 
-Skriv svaret här.
+Skriv textsvaret här.
 
 ```{r}
 # Write your code here
 ```
-:::
 
-#### 💪 Uppgift 3.2
+### 💪 Uppgift 3.2
 
 Finns det ett samband mellan `dist_fenway_park` och `crime_rate`?
 
-::: {.callout-note appearance="minimal"}
-# Uppgift 3.3 - Svar
+#### Uppgift 3.2 - Svar
 
-Skriv svaret här.
+Skriv textsvaret här.
 
 ```{r}
 # Write your code here
 ```
-:::
+
 
 ## 4. Enkel linjär regression
 
 I detta avsnitt ska ni anpassa och tolka enkla linjära regressionsmodeller.
 
-#### 💪 Uppgift 4.1
+### 💪 Uppgift 4.1
 
 Anpassa en linjär regression med responsvariabeln `NOx` och den förklarande variabeln `employ_dist`. Rita den anpassade regressionslinjen tillsammans med data i en lämplig figur. Beskriv resultaten och tolka modellen. Utför en modellvalidering via en residualanalys och kommentera modellens lämplighet. Om modellen inte anses lämplig, vilka antaganden har inte varit uppfyllda?
 
-::: {.callout-note appearance="minimal"}
-# Uppgift 4.1 - Svar
+#### Uppgift 4.1 - Svar
 
-Skriv svaret här.
+Skriv textsvaret här.
 
 ```{r}
 # Write your code here
 ```
-:::
 
-#### 💪 Uppgift 4.2
+
+### 💪 Uppgift 4.2
 
 Använd modellen i Uppgift 4.1 för att prediktera koncentration av kväveoxider för observation 10, där `employ_dist`=10.5857. Beräkna vad residualen blir för denna observation.
 
-::: {.callout-note appearance="minimal"}
-# Uppgift 4.2 - Svar
+#### Uppgift 4.2 - Svar
 
-Skriv svaret här.
+Skriv textsvaret här.
 
 ```{r}
 # Write your code here
 ```
-:::
 
-#### 💪 Uppgift 4.3
+
+### 💪 Uppgift 4.3
 
 Transformera variablerna i Uppgift 4.1 (avgör själv vilken eller vilka av de två som behöver transformeras). Ett förslag är att använda Tukeys cirkel för att hitta lämpliga transformationer. Anpassa en ny linjär regression med de transformerade variablerna. Utför en modellvalidering (efter transformation) via en residualanalys och kommentera modellens lämplighet jämfört med modellen i Uppgift 4.1.
 
+#### Uppgift 4.3 - Svar
 
-::: {.callout-note appearance="minimal"}
-# Uppgift 4.3 - Svar
-
-Skriv svaret här.
+Skriv textsvaret här.
 
 ```{r}
 # Write your code here
 ```
-:::
 
-#### 💪 Uppgift 4.4
+
+### 💪 Uppgift 4.4
 
 Plotta den anpassade regressionen från 4.3 i icke-transformerad skala tillsammans med observationerna (också i icke-transformerad skala) i en lämplig figur.
 
-::: {.callout-note appearance="minimal"}
-# Uppgift 4.4 - Svar
+#### Uppgift 4.4 - Svar
 
-Skriv svaret här.
+Skriv textsvaret här.
 
 ```{r}
 # Write your code here
 ```
-:::
 
-#### 💪 Uppgift 4.5
+
+### 💪 Uppgift 4.5
 
 Använd modellen i Uppgift 4.3 för att prediktera koncentration av kväveoxider i icke-transformerad skala för observation 10, där `employ_dist`=10.5857. Beräkna vad residualen blir för denna observation. Kommentera resultaten jämfört med Uppgift 4.2.
 
@@ -344,36 +326,33 @@ Använd modellen i Uppgift 4.3 för att prediktera koncentration av kväveoxider
 Tänk på att ta hänsyn till eventuella transformationer!
 :::
 
-::: {.callout-note appearance="minimal"}
-# Uppgift 4.5 - Svar
+#### Uppgift 4.5 - Svar
 
-Skriv svaret här.
+Skriv textsvaret här.
 
 ```{r}
 # Write your code here
 ```
-:::
+
 
 ## 5. Multipel linjär regression
 
 I detta avsnitt ska ni studera multipel linjära regression.
 
-#### 💪 Uppgift 5.1
+### 💪 Uppgift 5.1
 
 Anpassa en linjär regression med responsvariabel logaritmerad `median_home_value` samt förklarande variabler `lower_stat_pct` och dummy-variabeln `borders_charles`. Tolka koefficienten för `borders_charles`.
 
-::: {.callout-note appearance="minimal"}
-# Uppgift 5.1 - Svar
+#### Uppgift 5.1 - Svar
 
-Skriv svaret här.
+Skriv textsvaret här.
 
 ```{r}
 # Write your code here
 ```
-:::
 
 
-#### 💪 Uppgift 5.2
+### 💪 Uppgift 5.2
 
 Ni ska nu utforma en modell som predikterar medianhuspriset `median_home_value`. Ni får endast använda följande förklaringsvariabler:
 
@@ -391,8 +370,8 @@ När ni utvärderar olika modeller kan ni förslagsvis börja med att jämföra 
 
 I det andra steget ska ni utvärdera hur väl modellerna predikterar data som *inte* använts för att anpassa modellen. Ni kan välja *en av två alternativa metoder*:
 
-1. Dela in ert dataset i träningsdata och testdata. Anpassa modellen med hjälp av träningsdata, och utvärdera sedan på testdata. Ni kan exempelvis använda de första 350 observationerna som träningsdata och de sista 130 observationerna som testdata.
-2. Använd korsvalidering. Det är en något mer krävande metod, men också något bättre. Ni kan exempelvis göra korsvalidering med 4 folds (4-fold cross validation). Dela då upp ert dataset i fyra delar (del 1: observationer 1-120, del 2: observationer 121-240, del 3: observationer 241-360, del 4: observationer 361-480).
+1.  Dela in ert dataset i träningsdata och testdata. Anpassa modellen med hjälp av träningsdata, och utvärdera sedan på testdata. Ni kan exempelvis använda de första 350 observationerna som träningsdata och de sista 130 observationerna som testdata.
+2.  Använd korsvalidering. Det är en något mer krävande metod, men också något bättre. Ni kan exempelvis göra korsvalidering med 4 folds (4-fold cross validation). Dela då upp ert dataset i fyra delar (del 1: observationer 1-120, del 2: observationer 121-240, del 3: observationer 241-360, del 4: observationer 361-480).
 
 *Sortera inte observationerna i `Boston_census_data` slumpmässigt. Ordningen är redan slumpmässig.*
 
@@ -400,39 +379,33 @@ I det andra steget ska ni utvärdera hur väl modellerna predikterar data som *i
 Tänk på att ta hänsyn till eventuell transformation av responsvariabeln. Om ni exempelvis har valt transformationen $\log(y)$ är modellens prediktion av responsvariabeln $\widehat{\log(y)}$. Ni måste då transformera den till $\hat y$ i responsvariabelns originalskala med formeln $\hat{y}=\exp\left(\widehat{\log(y)}\right)$. Sedan kan ni räkna ut residualen $y - \hat y$.
 :::
 
-::: {.callout-note appearance="minimal"}
+#### Uppgift 5.2 - Svar
 
-# Uppgift 5.2 - Svar
-
-Skriv svaret här.
+Skriv textsvaret här.
 
 ```{r}
 # Write your code here
 ```
-:::
 
-#### 💪 Uppgift 5.3
+
+### 💪 Uppgift 5.3
 
 Gör en residualanalys av den valda modellen i Uppgift 5.2.
 
-::: {.callout-note appearance="minimal"}
+#### Uppgift 5.3 - Svar
 
-# Uppgift 5.3 - Svar
-
-Skriv svaret här.
+Skriv textsvaret här.
 
 ```{r}
 # Write your code here
 ```
-:::
 
-#### 💪 Uppgift 5.4
+
+### 💪 Uppgift 5.4
 
 Använd modellen i Uppgift 5.2 för att prediktera medianhuspriset för observationerna i datasetet `Boston_districts_to_predict` ([ladda ner](https://github.com/StatisticsSU/SDA1/blob/main/assignments/assignment1/Boston_districts_to_predict.RData?raw=true)).
 
-::: {.callout-note appearance="minimal"}
-
-# Uppgift 5.4 - Ladda hem data för prediktion
+#### Uppgift 5.4 - Ladda hem data för prediktion
 
 Ladda in dataseten `Boston_districts_to_predict` med följande kod.
 
@@ -440,7 +413,6 @@ Ladda in dataseten `Boston_districts_to_predict` med följande kod.
 # Write your code here
 load(file = url("https://github.com/StatisticsSU/SDA1/blob/main/assignments/assignment1/Boston_districts_to_predict.RData?raw=true")) 
 ```
-:::
 
 
 Det här datasetet har endast de förklarande variablerna, dvs inte responsvariabeln. När vi rättar era inlämningsuppgifter kommer vi att jämföra era prediktioner med de faktiska medianpriserna (som vi har tillgång till).
@@ -451,12 +423,11 @@ Skriv ut dina prediktioner så att vi enkelt kan se dem när vi rättar.
 Tänk på att ta hänsyn till eventuella transformationer av förklaringsvariablerna!
 :::
 
-::: {.callout-note appearance="minimal"}
-# Uppgift 5.4 - Svar
+#### Uppgift 5.4 - Svar
 
-Skriv svaret här.
+Skriv textsvaret här.
 
 ```{r}
 # Write your code here
 ```
-:::
+
