@@ -76,16 +76,16 @@ En **kategorisk variabel** är en variabel vars utfall är kategorier. En katego
 Först ska vi installera och ladda paketen `openxlsx` för att läsa in data från Excelfil och `mosaic` för dataanalys.
 
 ```{r}
-#install.packages("openxlsx") # Kommentera bort denna rad om redan har openxlsx installerat från Lab 1
+#install.packages("openxlsx") # Kommentera bort denna rad om du redan har openxlsx installerat från Lab 1
 #install.packages("mosaic") # Kommentera bort denna rad efter att du kört Quarto-filen första gången
-suppressMessages(library(openxlsx))
-suppressMessages(library(mosaic))
+library(openxlsx)
+library(mosaic)
 ```
 
 ::: callout-tip
 ## Snyggare utskrifter genom att undvika paket-meddelanden
 
-Många paket är 'pratiga' och skriver ut en massa meddelanden när man laddar in dem med `library`. Genom att skriva `suppressMessages(library(openxlsx))` slipper vi få en massa meddelanden utskrivna i vår rapport.
+Många paket är 'pratiga' och skriver ut en massa meddelanden och ibland varningar när man laddar in dem med `library` men oftast orsakar det inga problem. Om paketen inte fungerar som det ska kan det dock vara värt att titta igenom meddelanden som skrivits ut vid aktivering av paketen.
 :::
 
 Vi kan nu läsa in datamaterialet som finns i fliken `Titanic` i den Excelfil `Chapter_3.xls` ni laddade ner ovan:
