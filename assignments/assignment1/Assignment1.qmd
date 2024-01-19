@@ -108,7 +108,6 @@ Skriv svaret här. Vid behov skrivs matematiska symboler inom dollartecken, till
 # Write your code here
 ```
 
-
 ### 💪 Uppgift 1.2
 
 Distrikten tillhör olika stadsdelar som anges i den kategoriska variabeln `town`? Det finns 88 olika sådana stadsdelar (towns).
@@ -127,7 +126,6 @@ Skriv textsvaret här.
 # Write your code here
 ```
 
-
 ### 💪 Uppgift 1.3
 
 Vilka två variabler i datasetet `Boston_census_data` korrelerar mest med brottslighet? Beskriv sambandet mellan brottslighet och var och en av dessa två variabler.
@@ -144,7 +142,6 @@ Skriv textsvaret här.
 # Write your code here
 ```
 
-
 ## 2. Fastighetsskatt i Boston
 
 I detta avsnitt ska ni analysera fastighetsskatten i Boston med hjälp av variabeln `tax_rate`.
@@ -160,7 +157,6 @@ Skriv textsvaret här.
 ```{r}
 # Write your code here
 ```
-
 
 #### 💪 Uppgift 2.2
 
@@ -188,7 +184,6 @@ Skriv textsvaret här.
 # Write your code here
 ```
 
-
 ### 💪 Uppgift 2.3
 
 Hur många procent av alla distrikt i vår data ligger i angränsning till Charles River *och* tillhör en hög skattekategori? Hur stor andel av distrikten med hög skatt ligger *inte* i angränsning till Charles River?
@@ -200,7 +195,6 @@ Skriv textsvaret här.
 ```{r}
 # Write your code here
 ```
-
 
 ### 💪 Uppgift 2.4
 
@@ -217,7 +211,6 @@ Skriv textsvaret här.
 ```{r}
 # Write your code here
 ```
-
 
 ## 3. Avstånd till Fenway park
 
@@ -261,7 +254,6 @@ Skriv textsvaret här.
 # Write your code here
 ```
 
-
 ## 4. Enkel linjär regression
 
 I detta avsnitt ska ni anpassa och tolka enkla linjära regressionsmodeller.
@@ -278,7 +270,6 @@ Skriv textsvaret här.
 # Write your code here
 ```
 
-
 ### 💪 Uppgift 4.2
 
 Använd modellen i Uppgift 4.1 för att prediktera koncentration av kväveoxider för observation 10, där `employ_dist`=10.5857. Beräkna vad residualen blir för denna observation.
@@ -290,7 +281,6 @@ Skriv textsvaret här.
 ```{r}
 # Write your code here
 ```
-
 
 ### 💪 Uppgift 4.3
 
@@ -304,7 +294,6 @@ Skriv textsvaret här.
 # Write your code here
 ```
 
-
 ### 💪 Uppgift 4.4
 
 Plotta den anpassade regressionen från 4.3 i icke-transformerad skala tillsammans med observationerna (också i icke-transformerad skala) i en lämplig figur.
@@ -316,7 +305,6 @@ Skriv textsvaret här.
 ```{r}
 # Write your code here
 ```
-
 
 ### 💪 Uppgift 4.5
 
@@ -334,7 +322,6 @@ Skriv textsvaret här.
 # Write your code here
 ```
 
-
 ## 5. Multipel linjär regression
 
 I detta avsnitt ska ni studera multipel linjära regression.
@@ -350,7 +337,6 @@ Skriv textsvaret här.
 ```{r}
 # Write your code here
 ```
-
 
 ### 💪 Uppgift 5.2
 
@@ -387,7 +373,6 @@ Skriv textsvaret här.
 # Write your code here
 ```
 
-
 ### 💪 Uppgift 5.3
 
 Gör en residualanalys av den valda modellen i Uppgift 5.2.
@@ -399,7 +384,6 @@ Skriv textsvaret här.
 ```{r}
 # Write your code here
 ```
-
 
 ### 💪 Uppgift 5.4
 
@@ -413,7 +397,6 @@ Ladda in dataseten `Boston_districts_to_predict` med följande kod.
 # Write your code here
 load(file = url("https://github.com/StatisticsSU/SDA1/blob/main/assignments/assignment1/Boston_districts_to_predict.RData?raw=true")) 
 ```
-
 
 Det här datasetet har endast de förklarande variablerna, dvs inte responsvariabeln. När vi rättar era inlämningsuppgifter kommer vi att jämföra era prediktioner med de faktiska medianpriserna (som vi har tillgång till).
 
@@ -430,4 +413,3 @@ Skriv textsvaret här.
 ```{r}
 # Write your code here
 ```
-
