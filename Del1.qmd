@@ -119,7 +119,7 @@ Uppgifter: [html](/datorlab/lab4/DatorLab4.qmd) | <a href="https://github.com/St
 ### **Inlämningsuppgift**
 
 **Inlämningsuppgift 1.**\
-Kommer efter labb 2.
+[html](assignments/assignment1/Assignment1.qmd) | <a href="https://github.com/StatisticsSU/SDA1/raw/main/assignments/assignment1/Assignment1.qmd" download>quarto</a>
 <!--
 Uppgifter: [html](/assignments/assignment1/Assignment1.html) | <a href="https://raw.githubusercontent.com/StatisticsSU/SDA1/main/assignments/assignment1/Assignment1.qmd" download>quarto</a> 
 -->
