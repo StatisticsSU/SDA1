@@ -35,7 +35,7 @@ Den här labben förutsätter att följande paket finns installerade:
 
 -   `dplyr`
 
-Paket kan installeras via kommandot `install.packages('packagename')`, där `'packagename'` är namnet på paketet, t.ex `'mosaic'`.
+Paket kan installeras via kommandot `install.packages('packagename')`, där `'packagename'` är namnet på paketet, t.ex `'mosaic'`. Därefter behöver paketen också aktiveras med funktionen library()
 :::
 
 ## Introduktion
@@ -44,7 +44,14 @@ Paket kan installeras via kommandot `install.packages('packagename')`, där `'pa
 
 #### 💪 Uppgift 0.1
 
-Se till att paketen ovan är installerade innan du fortsätter med resten.
+Se till att paketen ovan är installerade och aktiverade innan du fortsätter med resten.
+
+```{r}
+library(openxlsx)
+library(mosaic)
+library(vcd)
+library(dplyr)
+```
 
 #### 💪 Uppgift 0.2
 
@@ -121,7 +128,6 @@ head(SmartPhones) # Prints first few observations
 Låt oss börja med att skapa en korstabell. En korstabell är en tabell som innehåller frekvensen för varje utfall av variablerna. Notera att om vi har två kategoriska variabler, säg $x$ och $y$, så är utfallen alla parvisa kombinationer av utfallen av de respektive variablerna.
 
 ```{r}
-suppressMessages(library(mosaic))
 tally(~ brand + age.group, data = SmartPhones)
 ```
 
@@ -336,7 +342,6 @@ Om vi, för varje grupp vi betingar på, istället vill ha staplarna bredvid var
 Vi har gått igenom mosaicplot på Föreläsning 4. Notera att namnet på plotten inte har med `mosaic`-paketet att göra. En mosaicplot är en stacked barchart, men innehåller också information om marginalfördelningen på variabeln man betingar på. Vi kan använda funktionen `mosaic()` från `vcd`-paketet. Viktigt att notera att variabeln vi betingar på hamnar på y-axeln, till skillnad från x-axeln som mosaicplottarna i boken.
 
 ```{r}
-suppressMessages(library(vcd))
 t <- tally(~ age.group | brand, data = SmartPhones, format = "prop")
 vcd::mosaic(~ age.group | brand, data = SmartPhones)
 ```
@@ -346,7 +351,6 @@ Notera att vi anropar funktionen via `vcd::mosaic()` istället för `mosaic()`, 
 Variabeln smartphonepreferens har för många utfall (kategorier), vilket gör mosaicplotten oläslig. Tyvärr har inte funktionen argumentet `las` vi använde oss av för att rotera texten i `bargraph()`. För enkelhetens skull, låt oss definiera en ny dataframe där vi endast behåller repondenter som har svarat iPhone, Samsung, LG eller Sony och illustrera mosaicplotten med dessa nya data. Här är ett exempel där tidyverse löser uppgiften på ett mer elegant sätt än base R med funktionen `filter()`.
 
 ```{r}
-suppressMessages(library(dplyr))
 SmartPhones_new <- filter(SmartPhones, brand == "iPhone" |brand == "Samsung"|brand == "LG" | brand == "Sony")
 ```
 
@@ -377,7 +381,6 @@ Denna uppgift bör göras först efter att man gjort klart resten av labben. Upp
 Ni kan tillämpa det ni har lärt er i Avsnitt 3 på ett nytt datamaterial. Vi föreslår att ni analyserar sambandet mellan `Survived` och `Class` i Titanic datasetet. I [Lab 2](https://statisticssu.github.io/SDA1/datorlab/lab2/DatorLab2.html) analyserade ni variablerna var för sig. Er uppgift nu är att studera om det föreligger ett samband mellan `Survived` och `Class` och hur detta samband ser ut.
 
 ```{r}
-suppressMessages(library(openxlsx)) # 
 titanic <- read.xlsx("https://github.com/StatisticsSU/SDA1/raw/main/datorlab/lab2/Chapter_3.xlsx", sheet = "Titanic")
 
 # Write your code here
@@ -527,7 +530,7 @@ Ibland kan det vara bra att kunna hämta ut en variabel från en dataframe. Anta
 
 #### 💪 Uppgift 5.3
 
-Plotta tidsserien för tillgången `CITCRP`. Hur drabbades `CITCRP` av Black Monday jämfört med marknadsportföljen? Skriv ut return för `CITCRP` och jämför med Uppgift 5.2. 
+Plotta tidsserien för tillgången `CITCRP`. Hur drabbades `CITCRP` av Black Monday jämfört med marknadsportföljen? Skriv ut return för `CITCRP` och jämför med Uppgift 5.2.
 
 ```{r}
 # Write your code here
