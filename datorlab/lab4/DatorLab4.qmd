@@ -14,7 +14,7 @@ language:
   title-block-author-single: " "
 toc-title-document: "Innehåll"
 crossref-fig-title: "Figur"
-theme: Superhero
+theme: lumen
 title-block-banner-color: Primary
 title-block-published: "Publicerad"
 callout-warning-caption: "Varning"
@@ -32,6 +32,12 @@ Den här labben förutsätter att följande paket finns installerade:
 
 Paket kan installeras via kommandot `install.packages('packagename')`, där `'packagename'` är namnet på paketet, t.ex `'mosaic'`.
 :::
+
+```{r}
+library(mosaic)
+library(corrplot)
+```
+
 
 ## Introduktion
 
@@ -107,7 +113,7 @@ I Lab 3 introducerades datasetet `CAPM_data.RData`, som innehåller tidsserier �
 Låt oss räkna korrelationen mellan två tillgångar, till exempel `IBM` och `CITCRP` med hjälp av funktionen `cor()` i `mosaic`-paketet.
 
 ```{r}
-suppressMessages(library(mosaic))
+
 load(file = url("https://github.com/StatisticsSU/SDA1/blob/main/datorlab/lab3/CAPM_data.RData?raw=true"))
 cor(IBM ~ CITCRP, data = CAPM)
 ```
@@ -165,7 +171,6 @@ Använd `cor()` med formula-syntax för att beräkna korrelationen mellan `DELTA
 Informationen i en korrelationsmatris kan vara svår att utläsa pga alltför många siffror. En korrelationsplot illustrerar korrelationerna med färgskalor och är mycket enklare att utläsa. Funktionen `corrplot()` från `corrplot`-paketet tar en korrelationsmatris som argument för att skapa plotten. Vi skapade korrelationsmatrisen ovan (`correlation_matrix_CAPM`).
 
 ```{r}
-suppressMessages(library(corrplot))
 corrplot(correlation_matrix_CAPM)
 ```
 
