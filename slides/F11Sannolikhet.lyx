@@ -6,8 +6,6 @@
 \origin unavailable
 \textclass beamer
 \begin_preamble
-
-% you can play with different themes and color themes to find your favorite combination.
 \mode<presentation> {
   \usetheme{Luebeck}
   \usecolortheme{beaver}
@@ -15,8 +13,8 @@
 }
 
 \usepackage[many]{tcolorbox}
-\usepackage{graphicx} % for including images
-\usepackage{pgf} % for logo
+\usepackage{graphicx}
+\usepackage{pgf}
 \usepackage{colortbl}
 \usepackage{emoji}
 \usepackage{tabularx}
@@ -24,20 +22,7 @@
 \usepackage{array}
 \tcbuselibrary{skins}
 
-\date{} % Date, can be changed to a custom date
-
-\titlegraphic{
-\vspace{-0.6cm}
-\includegraphics[width=1.5cm]{/misc/LogoBlueJustRing.jpg}\break
-
-\tiny
-\vspace{1cm}
-\href{https://mattiasvillani.com}{\includegraphics[width=0.33cm]{/misc/web.png} mattiasvillani.com}\hspace*{1cm}~
-\href{https://twitter.com/matvil}{\includegraphics[width=0.3cm]{/misc/twitter.jpg} @matvil}\hspace*{1cm}~
-\href{https://fosstodon.org/@matvil}{\includegraphics[width=0.3cm]{/misc/mastodon.pdf} @matvil}\hspace*{1cm}~
-\href{https://github.com/mattiasvillani}{\includegraphics[width=0.3cm]{/misc/github.png} mattiasvillani}~
-}
-
+\date{}
 
 \definecolor{blue}{RGB}{38, 122, 181}
 \definecolor{orange}{RGB}{255, 128, 0}
@@ -192,7 +177,7 @@ Föreläsning 11 - Osäkerhet och Sannolikhet
 \begin_layout Author
 
 \series bold
-Mattias Villani
+Oscar Oelrich
 \series default
  
 \begin_inset Newline newline
@@ -200,14 +185,6 @@ Mattias Villani
 
 
 \begin_inset VSpace 0.2cm
-\end_inset
-
-
-\begin_inset Graphics
-	filename misc/Beard Man Emoji.png
-	lyxscale 10
-	scale 2
-
 \end_inset
 
 
@@ -237,7 +214,7 @@ Statistiska institutionen
 
 Stockholms universitet
 \begin_inset Argument 1
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Stockholms universitet
@@ -333,61 +310,6 @@ Sannolikhetsberäkningar
 \series bold
 \color blue
 Kombinatorik
-\end_layout
-
-\end_deeper
-\begin_layout Standard
-\begin_inset Separator parbreak
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-
-\series bold
-\color orange
-\begin_inset Quotes eld
-\end_inset
-
-Inga fler tärningar och kulor i urnor!
-\begin_inset Quotes erd
-\end_inset
-
-
-\series default
-\color inherit
- 
-\begin_inset Graphics
-	filename figs/man-facepalming.png
-	lyxscale 50
-	scale 25
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-\align center
-\begin_inset Graphics
-	filename figs/twitter_rolling_dice.png
-	lyxscale 50
-	scale 19
-
-\end_inset
-
-
 \end_layout
 
 \end_deeper
@@ -952,66 +874,6 @@ Kasta två tärningar, summera antal prickar.
 
 \end_layout
 
-\begin_layout Itemize
-Napoli - Juventus: 
-\size larger
-{
-\size default
-
-\begin_inset Graphics
-	filename figs/SSCN.pdf
-	lyxscale 10
-	scale 2
-
-\end_inset
-
-, 
-\begin_inset Graphics
-	filename figs/juve.pdf
-	lyxscale 10
-	scale 4
-
-\end_inset
-
-, Oavgjort
-\size larger
-}
-\size default
-.
-\end_layout
-
-\begin_layout Itemize
-Napoli - Juventus: 
-\size larger
-{
-\size default
-
-\begin_inset Graphics
-	filename figs/SSCN.pdf
-	lyxscale 10
-	scale 2
-
-\end_inset
-
-, 
-\begin_inset Graphics
-	filename figs/juve.pdf
-	lyxscale 10
-	scale 4
-
-\end_inset
-
-, Oavgjort,
-\size larger
- 
-\size default
-Inställd match
-\size larger
-}
-\size default
-.
-\end_layout
-
 \end_deeper
 \begin_layout Standard
 \begin_inset Separator parbreak
@@ -1348,7 +1210,7 @@ status open
 \align center
 \begin_inset CommandInset href
 LatexCommand href
-name "\\includegraphics[width=0.9\\textwidth]{../observable/figs/slantsingling.png}"
+name "\\includegraphics[width=0.9\\textwidth]{figs/slantsingling.png}"
 target "https://statisticssu.github.io/SDA1/observable/storatalenslag_bernoulli.html"
 literal "true"
 
@@ -1378,7 +1240,7 @@ status open
 
 \series bold
 \color orange
-Venn diagram
+Venndiagram
 \end_layout
 
 \end_inset
@@ -1415,7 +1277,7 @@ status open
 
 \series bold
 \color orange
-Venn diagram
+Venndiagram
 \end_layout
 
 \end_inset
@@ -1452,7 +1314,7 @@ status open
 
 \series bold
 \color orange
-Händelse - Venn diagram
+Händelse - Venndiagram
 \end_layout
 
 \end_inset
@@ -1465,7 +1327,7 @@ Händelse - Venn diagram
 Praktiskt att visualisera händelser i ett 
 \series bold
 \color blue
-Venn diagram
+Venndiagram
 \series default
 \color inherit
 .
@@ -1570,7 +1432,7 @@ status open
 
 \series bold
 \color orange
-Venn diagram - summa sju prickar och samma
+Venndiagram - summa sju prickar och samma
 \end_layout
 
 \end_inset
@@ -1636,7 +1498,7 @@ status open
 
 \series bold
 \color orange
-Venn diagram - summa tio prickar och samma
+Venndiagram - summa tio prickar och samma
 \end_layout
 
 \end_inset
@@ -2100,7 +1962,7 @@ Mjukvarubuggar
 \begin_inset Formula $\mathbf{A}^{c}$
 \end_inset
 
- = {åtminstone en bugg} = {1 bugg, 2 buggar, ...}
+ = {minst en bugg} = {1 bugg, 2 buggar, ...}
 \end_layout
 
 \end_deeper
@@ -2572,6 +2434,13 @@ status open
 
 
 \backslash
+footnotesize
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
 begin{tcolorbox}[colback=verylightgray]
 \end_layout
 
@@ -2660,6 +2529,13 @@ end{enumerate}
 
 \backslash
 end{tcolorbox}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+normalsize
 \end_layout
 
 \end_inset
@@ -2893,7 +2769,7 @@ end{tcolorbox}
 \begin_layout Itemize
 
 \size small
-\begin_inset Formula $P(\left\{ \text{åtminstone en bugg i koden}\right\} )=1-P(\text{\left\{  \text{ingen bugg i koden}\right\}  })$
+\begin_inset Formula $P(\left\{ \text{minst en bugg i koden}\right\} )=1-P(\text{\left\{  \text{ingen bugg i koden}\right\}  })$
 \end_inset
 
 .
@@ -3443,9 +3319,9 @@ P(\text{ingen lagg hela veckan)}=(1-0.01)^{7}=0.99^{7}\approx0.932.
 \begin_layout Itemize
 Sannolikheten att dra två klöver 
 \begin_inset Graphics
-	filename figs/flaticons/clubs.svg
+	filename figs/flaticons/clubs.pdf
 	lyxscale 10
-	scale 2.5
+	scale 25
 
 \end_inset
 
@@ -3488,9 +3364,9 @@ P(\text{2:a kortet klöver \textbf{givet} 1:a kortet \textbf{inte} klöver)}=\fr
 
 
 \begin_inset Graphics
-	filename figs/flaticons/clubs.svg
+	filename figs/flaticons/clubs.pdf
 	lyxscale 10
-	scale 2.5
+	scale 25
 
 \end_inset
 
@@ -3530,9 +3406,9 @@ P(\text{2:a kortet klöver \textbf{givet} 1:a kortet \textbf{inte} klöver)}=\fr
 
 
 \begin_inset Graphics
-	filename figs/flaticons/clubs.svg
+	filename figs/flaticons/clubs.pdf
 	lyxscale 10
-	scale 2.5
+	scale 25
 
 \end_inset
 
@@ -4021,7 +3897,7 @@ Utan återläggning, med hänsyn till ordning
 
 \begin_layout Frame
 \begin_inset Argument 4
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -4053,6 +3929,40 @@ Utan återläggning, utan hänsyn till ordning
 \begin_inset Separator parbreak
 \end_inset
 
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Credits
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+Dessa slides skapades för kursen statistik och dataanalys 1 av Mattias Villani
+ HT 2023, och har modifierats av Oscar Oelrich för statistik och dataanalys
+ 1 VT 2024.
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Frame
 
 \end_layout
 
