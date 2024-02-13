@@ -23,19 +23,6 @@
 
 \date{} % Date, can be changed to a custom date
 
-\titlegraphic{
-\vspace{-0.6cm}
-\includegraphics[width=1.5cm]{/misc/LogoBlueJustRing.jpg}\break
-
-\tiny
-\vspace{1cm}
-\href{https://mattiasvillani.com}{\includegraphics[width=0.33cm]{/misc/web.png} mattiasvillani.com}\hspace*{1cm}~
-\href{https://twitter.com/matvil}{\includegraphics[width=0.3cm]{/misc/twitter.jpg} @matvil}\hspace*{1cm}~
-\href{https://fosstodon.org/@matvil}{\includegraphics[width=0.3cm]{/misc/mastodon.pdf} @matvil}\hspace*{1cm}~
-\href{https://github.com/mattiasvillani}{\includegraphics[width=0.3cm]{/misc/github.png} mattiasvillani}~
-}
-
-
 \definecolor{blue}{RGB}{38, 122, 181}
 \definecolor{orange}{RGB}{255, 128, 0}
 \definecolor{lorange}{RGB}{255, 178, 102}
@@ -172,7 +159,7 @@ Föreläsning 13 - Slumpvariabler
 \begin_layout Author
 
 \series bold
-Mattias Villani
+Oscar Oelrich
 \series default
  
 \begin_inset Newline newline
@@ -180,14 +167,6 @@ Mattias Villani
 
 
 \begin_inset VSpace 0.2cm
-\end_inset
-
-
-\begin_inset Graphics
-	filename misc/Beard Man Emoji.png
-	lyxscale 10
-	scale 2
-
 \end_inset
 
 
@@ -728,7 +707,7 @@ Diskret slumpvariabel
 \align center
 \begin_inset Graphics
 	filename figs/discrete_dist.svg
-	scale 27
+	scale 270
 
 \end_inset
 
@@ -772,7 +751,7 @@ Kontinuerlig slumpvariabel
 \align center
 \begin_inset Graphics
 	filename figs/standard_normal.svg
-	scale 27
+	scale 270
 
 \end_inset
 
@@ -2545,7 +2524,7 @@ status open
 \align center
 \begin_inset CommandInset href
 LatexCommand href
-name "\\includegraphics[width=0.7\\textwidth]{../observable/figs/normal_widget.png}"
+name "\\includegraphics[width=0.7\\textwidth]{figs/normal_widget.png}"
 target "https://statisticssu.github.io/SDA1/observable/normalfordelningen.html"
 literal "true"
 
@@ -2655,7 +2634,7 @@ IQR
 \begin_inset Graphics
 	filename figs/normal_median_IQR.svg
 	lyxscale 30
-	scale 23
+	scale 230
 
 \end_inset
 
@@ -2663,7 +2642,7 @@ IQR
 \begin_inset Graphics
 	filename figs/expon_median_IQR.svg
 	lyxscale 30
-	scale 23
+	scale 230
 
 \end_inset
 
@@ -2671,7 +2650,7 @@ IQR
 \begin_inset Graphics
 	filename figs/chi2_median_IQR.svg
 	lyxscale 30
-	scale 23
+	scale 230
 
 \end_inset
 
@@ -4271,8 +4250,8 @@ Varianser
 
 \begin_inset Formula 
 \begin{align*}
-V(X) & =\sum_{\text{alla x}}(x-E(X))^{2}\cdot P(x)=(0-0.98){}^{2}\cdot0.32+(1-0.98)^{2}\cdot0.38+(2-0.98)^{2}\cdot0.30=0.620\\
-V(Y) & =\sum_{\text{alla y}}(y-E(Y))^{2}\cdot P(y)=(0-0.82)^{2}\cdot0.40+(1-0.82)^{2}\cdot0.38+(2-0.82)^{2}\cdot0.22=0.588
+V(X) & =\sum_{\text{alla x}}(x-E(X))^{2}\cdot P(x)=(0-0.98){}^{2}\cdot0.32+(1-0.98)^{2}\cdot0.38+(2-0.98)^{2}\cdot0.30=0.62\\
+V(Y) & =\sum_{\text{alla y}}(y-E(Y))^{2}\cdot P(y)=(0-0.82)^{2}\cdot0.40+(1-0.82)^{2}\cdot0.38+(2-0.82)^{2}\cdot0.22=0.59
 \end{align*}
 
 \end_inset
@@ -4370,7 +4349,7 @@ Korrelation
 
 \begin_inset Formula 
 \[
-Corr(X,Y)=\frac{Cov(X,Y)}{SD(X)\cdot SD(Y)}=\frac{0.326}{\sqrt{0.62}\sqrt{0.588}}=0.541
+Corr(X,Y)=\frac{Cov(X,Y)}{SD(X)\cdot SD(Y)}=\frac{0.326}{\sqrt{0.62}\sqrt{0.588}}=0.54
 \]
 
 \end_inset
@@ -4712,6 +4691,28 @@ Säker aktieportfölj: välj aktier var priser tenderar att röra sig i olika
 \end_inset
 
 
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Credits
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+Dessa slides skapades för kursen statistik och dataanalys 1 av Mattias Villani
+ HT 2023, och har modifierats av Oscar Oelrich för statistik och dataanalys
+ 1 VT 2024.
 \end_layout
 
 \end_body
