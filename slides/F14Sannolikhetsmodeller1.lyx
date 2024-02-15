@@ -930,17 +930,10 @@ Lyckas = ham
 
 \begin_deeper
 \begin_layout Itemize
-\begin_inset Formula $P(\text{ham})=p=0.1$
+\begin_inset Formula $P(\text{ham})=p=0.1,P(\text{spam})=q=1-0.1=0.9.$
 \end_inset
 
 
-\end_layout
-
-\begin_layout Itemize
-\begin_inset Formula $P(\text{spam})=q=1-0.1=0.9$
-\end_inset
-
-.
 \end_layout
 
 \end_deeper
@@ -2881,8 +2874,6 @@ status open
 \begin_layout Plain Layout
 
 
-\backslash
-boldblue{Kombinationer och permutationer} 
 \backslash
 begin{tcolorbox}[width=0.87
 \backslash

@@ -39,19 +39,6 @@ coltitle=black,center title}}
 
 \date{} % Date, can be changed to a custom date
 
-\titlegraphic{
-\vspace{-0.6cm}
-\includegraphics[width=1.5cm]{/misc/LogoBlueJustRing.jpg}\break
-
-
-\tiny
-\vspace{1cm}
-\href{https://mattiasvillani.com}{\includegraphics[width=0.33cm]{/misc/web.png} mattiasvillani.com}\hspace*{1cm}~
-\href{https://twitter.com/matvil}{\includegraphics[width=0.3cm]{/misc/twitter.jpg} @matvil}\hspace*{1cm}~
-\href{https://fosstodon.org/@matvil}{\includegraphics[width=0.3cm]{/misc/mastodon.pdf} @matvil}\hspace*{1cm}~
-\href{https://github.com/mattiasvillani}{\includegraphics[width=0.3cm]{/misc/github.png} mattiasvillani}~
-}
-
 \definecolor{blue}{RGB}{38, 122, 181}
 \definecolor{orange}{RGB}{255, 128, 0}
 \definecolor{lorange}{RGB}{255, 178, 102}
@@ -190,7 +177,7 @@ Föreläsning 15 - Sannolikhetsmodeller II
 \begin_layout Author
 
 \series bold
-Mattias Villani
+Oscar Oelrich
 \series default
  
 \begin_inset Newline newline
@@ -198,14 +185,6 @@ Mattias Villani
 
 
 \begin_inset VSpace 0.2cm
-\end_inset
-
-
-\begin_inset Graphics
-	filename misc/Beard Man Emoji.png
-	lyxscale 10
-	scale 2
-
 \end_inset
 
 
@@ -297,17 +276,6 @@ Normalfördelning
 \series bold
 \color blue
 Poissonfördelning
-\begin_inset VSpace bigskip
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-
-\series bold
-\color blue
-Exponentialfördelning
 \begin_inset VSpace bigskip
 \end_inset
 
@@ -519,7 +487,7 @@ status open
 \align center
 \begin_inset CommandInset href
 LatexCommand href
-name "\\includegraphics[width=0.7\\textwidth]{../observable/figs/uniform_widget.png}"
+name "\\includegraphics[width=0.7\\textwidth]{figs/uniform_widget.png}"
 target "https://statisticssu.github.io/SDA1/observable/uniformfordelning.html"
 literal "true"
 
@@ -976,7 +944,7 @@ status open
 \align center
 \begin_inset CommandInset href
 LatexCommand href
-name "\\includegraphics[width=0.7\\textwidth]{../observable/figs/normal_widget.png}"
+name "\\includegraphics[width=0.7\\textwidth]{figs/normal_widget.png}"
 target "https://statisticssu.github.io/SDA1/observable/normalfordelningen.html"
 literal "true"
 
@@ -1380,7 +1348,7 @@ status open
 \align center
 \begin_inset CommandInset href
 LatexCommand href
-name "\\includegraphics[width=0.65\\textwidth]{../observable/figs/poisson_widget.png}"
+name "\\includegraphics[width=0.65\\textwidth]{figs/poisson_widget.png}"
 target "https://statisticssu.github.io/SDA1/observable/poissonfordelningen.html"
 literal "true"
 
@@ -1739,7 +1707,7 @@ status open
 \align center
 \begin_inset CommandInset href
 LatexCommand href
-name "\\includegraphics[width=0.65\\textwidth]{../observable/figs/ml_poisson_widget.png}"
+name "\\includegraphics[width=0.65\\textwidth]{figs/ml_poisson_widget.png}"
 target "https://statisticssu.github.io/SDA1/observable/ml_poisson.html"
 literal "true"
 
@@ -1751,593 +1719,6 @@ literal "true"
 \end_inset
 
 
-\end_layout
-
-\end_deeper
-\begin_layout Standard
-\begin_inset Separator parbreak
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-
-\series bold
-\color orange
-Exponentialfördelning
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Om 
-\begin_inset Formula $X\sim\mathrm{Expon}(\lambda)$
-\end_inset
-
- så är 
-\series bold
-\color blue
-täthetsfunktionen
-\series default
-\color inherit
-
-\begin_inset Formula 
-\[
-f(x)=\lambda e^{-\lambda x},\text{ för }x>0
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-
-\series bold
-\color blue
-Väntevärde
-\series default
-\color inherit
- och 
-\series bold
-\color blue
-varians
-\series default
-\color inherit
-
-\begin_inset Formula 
-\[
-E(X)=\frac{1}{\lambda}\text{ och }Var(X)=\frac{1}{\lambda^{2}}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-
-\series bold
-\color blue
-Exponentialfördelning
-\series default
-\color inherit
- vanlig modell för 
-\series bold
-\color blue
-väntetider
-\series default
-\color inherit
-.
- 
-\begin_inset VSpace smallskip
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Tid mellan samtal till stödlinje.
-\begin_inset VSpace smallskip
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-Tid mellan mjukvarureleaser.
-\begin_inset VSpace smallskip
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\begin_layout Itemize
-Exponential och Poisson-fördelningen hänger ihop:
-\begin_inset VSpace smallskip
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Om 
-\series bold
-\color blue
-antalet samtal 
-\series default
-\color inherit
-till stödlinje per timme är 
-\series bold
-\color blue
-
-\begin_inset Formula $\mathrm{Poisson}(\lambda=6)$
-\end_inset
-
-
-\series default
-\color inherit
- så förväntar vi oss 
-\begin_inset Formula $\lambda=6$
-\end_inset
-
- st samtal i timmen.
-\begin_inset VSpace smallskip
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-Då är 
-\series bold
-\color orange
-tiden mellan samtal
-\series default
-\color inherit
- 
-\begin_inset Formula ${\color{orange}\mathrm{Expon}(\lambda=6)}$
-\end_inset
-
- och vi förväntar oss 
-\begin_inset Formula $1/\lambda=1/6$
-\end_inset
-
- timmar (10 minuter) mellan samtal.
-\end_layout
-
-\end_deeper
-\end_deeper
-\begin_layout Standard
-\begin_inset Separator parbreak
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-
-\series bold
-\color orange
-Exponentialfördelning
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-\begin_inset Box Boxed
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "100col%"
-special "none"
-height "1in"
-height_special "totalheight"
-thickness "1pt"
-separation "1pt"
-shadowsize "4pt"
-framecolor "orange"
-backgroundcolor "white"
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset CommandInset href
-LatexCommand href
-name "\\includegraphics[width=0.7\\textwidth]{../observable/figs/expon_widget.png}"
-target "https://statisticssu.github.io/SDA1/observable/exponentialfordelningen.html"
-literal "true"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\begin_layout Standard
-\begin_inset Separator parbreak
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-
-\series bold
-\color orange
-Exponentialfördelning i R
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-\begin_inset Formula $X\sim\mathrm{Expon}(\lambda=3)$
-\end_inset
-
-.
- Parametern 
-\begin_inset Formula $\lambda$
-\end_inset
-
- kallas 
-\family typewriter
-rate
-\family default
- i R.
- 
-\end_layout
-
-\begin_layout Standard
-\align center
-
-\size small
-\begin_inset Box Boxed
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-use_makebox 0
-width "98col%"
-special "none"
-height "1in"
-height_special "totalheight"
-thickness "1pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "orange"
-backgroundcolor "white"
-status open
-
-\begin_layout Plain Layout
-\begin_inset Tabular
-<lyxtabular version="3" rows="5" columns="4">
-<features tabularvalignment="middle">
-<column alignment="left" valignment="top">
-<column alignment="center" valignment="top">
-<column alignment="left" valignment="top">
-<column alignment="left" valignment="top">
-<row>
-<cell alignment="left" valignment="top" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Beräkning
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" bottomline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-R kommando
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Kommentar
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\family typewriter
-\begin_inset Formula $f(0.5)$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\family typewriter
-dexp(x = 0.5, rate = 3)
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $f(x)$
-\end_inset
-
- vid 
-\begin_inset Formula $x=0.5$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\family typewriter
-\begin_inset Formula $P(X\leq0.5)$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\family typewriter
-pexp(q = 0.5, rate = 3)
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Kvantil
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\family typewriter
-qexp(p = 0.5, rate = 3)
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Medianen
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-10 slumptal
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\family typewriter
-rexp(n = 10, rate = 3)
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset VSpace bigskip
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-
-\series bold
-\color blue
-Täthetsfunktion
-\series default
-\color inherit
- heter 
-\series bold
-\color orange
-d
-\color blue
-ensity function
-\series default
-\color inherit
- på engelska.
- 
-\begin_inset Newline newline
-\end_inset
-
-Därav namnet 
-\family typewriter
-\color orange
-d
-\color inherit
-exp
-\family default
-.
-\begin_inset VSpace bigskip
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-Se programkoden 
-\bar under
-\color blue
-
-\begin_inset CommandInset href
-LatexCommand href
-name "exponential.R"
-target "https://statisticssu.github.io/SDA1/code/exponential.R"
-literal "false"
-
-\end_inset
-
-
-\bar default
-\color inherit
- på kurssidan.
 \end_layout
 
 \end_deeper
@@ -2480,7 +1861,7 @@ status open
 \align center
 \begin_inset CommandInset href
 LatexCommand href
-name "\\includegraphics[width=0.4\\textwidth]{../observable/figs/studentt_widget.png}"
+name "\\includegraphics[width=0.4\\textwidth]{figs/studentt_widget.png}"
 target "https://statisticssu.github.io/SDA1/observable/studentt.html"
 literal "true"
 
@@ -2818,7 +2199,7 @@ status open
 \align center
 \begin_inset CommandInset href
 LatexCommand href
-name "\\includegraphics[width=0.6\\textwidth]{../observable/figs/student_allman_widget.png}"
+name "\\includegraphics[width=0.6\\textwidth]{figs/student_allman_widget.png}"
 target "https://statisticssu.github.io/SDA1/observable/studentt_allman.html"
 literal "true"
 
@@ -2838,6 +2219,28 @@ literal "true"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Credits
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+Dessa slides skapades för kursen statistik och dataanalys 1 av Mattias Villani
+ HT 2023, och har modifierats av Oscar Oelrich för statistik och dataanalys
+ 1 VT 2024.
 \end_layout
 
 \end_body

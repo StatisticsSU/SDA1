@@ -38,7 +38,7 @@ Interaktivt: [normalfördelningen](/observable/normalfordelningen.qmd)
 Slumpvariabler &#x2022; Sannolikhetsfördelning &#x2022; Väntevärde &#x2022; Varians &#x2022; Standardavvikelse &#x2022; Normalfördelning &#x2022; Slumpvariabler &#x2022; Linjärkombinationer &#x2022; Standardisering &#x2022; Kovarians &#x2022; Korrelation &#x2022; Varians av summa av slumpvariabler
 </details>
 
-**Föreläsning 14 - Sannolikhetsmodeller I**\
+**Föreläsning 14 - Sannolikhetsmodeller I.**\
 Läs: SDM Kapitel 15.1, 15.2, 15.3, 15.6 \| [Slides](/slides/F14Sannolikhetsmodeller1.pdf)\
 Interaktivt: [bernoullifördelning](/observable/bernoullifordelningen.qmd) | [geometrisk fördelning](/observable/geometriskfordelning.qmd) | [binomialfördelningen](/observable/binomialfordelningen.qmd) | [likformig](/observable/uniformfordelning.qmd) | [normalfördelning](/observable/normalfordelningen.qmd)\
 Kod: [geometric.R](/code/geometric.R)
@@ -46,7 +46,7 @@ Kod: [geometric.R](/code/geometric.R)
 Bernoulliförsök &#x2022; Geometrisk fördelning &#x2022;  Binomialfördelning &#x2022; Normalapproximation av binomial
 </details>
 
-**Föreläsning 15 - Sannolikhetsmodeller II**\
+**Föreläsning 15 - Sannolikhetsmodeller II.**\
 Läs: SDM Kapitel 5.3, 14.4, 15.7 \| [Slides](/slides/F15Sannolikhetsmodeller2.pdf)\
 Studiematerial: [Vilken fördelning? Bara SDA1](/misc/WhichDistribution2UseOnlySDA1.pdf) | [Vilken fördelning? SDA1-3](/misc/WhichDistribution2Use.pdf)\
 Interaktivt: [Poissonfördelningen](/observable/poissonfordelningen.qmd) \| [maximum likelihood - Poisson](/observable/ml_poisson.qmd) \| [exponential](/observable/exponentialfordelningen.qmd) \| [student-t](/observable/studentt.qmd) \| [allmän student-t](/observable/studentt_allman.qmd)\
@@ -79,7 +79,7 @@ Interaktivt: [hypotestest väntevärde](/observable/hypothesis_test_mean.qmd) | 
 Hypotestest för ett väntevärde &#x2022; Hypotestest för en andel &#x2022; Hypoteser och nollfördelning &#x2022; Kritiska värden &#x2022; p-värde
 </details>
 
-**Föreläsning 19 - Inferens i linjär regression - populationsmodell och samplingfördelning**\
+**Föreläsning 19 - Inferens i linjär regression - populationsmodell och samplingfördelning.**\
 Läs: SDM Kapitel 23.1-23.3 \| [Slides](/slides/F19Regression1.pdf)\
 Kod: [regression lifespan data](/code/lifespan_regression.R)\
 Interaktivt: [samplingfördelning regression](/observable/linreg_simple_sampling_dist.qmd)\
@@ -89,7 +89,7 @@ Extramaterial: [kod för residualanalys på simulerad regressionsdata](code/resi
 Linjär regression som sannolikhetsmodell &#x2022; Regressionsmodellens antaganden &#x2022; Residualanalys &#x2022; Samplingfördelningen för minsta-kvadrat-skattningen &#x2022; Standardfel
 </details>
 
-**Föreläsning 20 - Inferens i linjär regression - konfidensintervall, hypotestest och prediktionsintervall**\
+**Föreläsning 20 - Inferens i linjär regression - konfidensintervall, hypotestest och prediktionsintervall.**\
 Läs: SDM Kapitel 23.3-23.6 \| [Slides](/slides/F20Regression2.pdf)\
 Kod: [simulera från populationsmodellen i enkel regression](/code/simulera_reg_data.R)
 <details><summary>innehåll</summary>
@@ -112,7 +112,7 @@ Interaktivt: [chi2-fördelningen](/observable/chi2fordelningen.qmd)
 Chi2-test för goodness of fit &#x2022; Beslut under osäkerhet  &#x2022; Nyttobegreppet &#x2022; Beslutstabeller &#x2022; Maximera förväntad nytta
 </details>
 
-**Föreläsning 23 - Räkning av gammal tenta**\
+**Föreläsning 23 - Räkning av gammal tenta.**\
 
 **Videoföreläsning - Bayesiansk inferens.**\
 Läs: [Video på Athena om Bayesiansk inferens](https://athena.itslearning.com/ContentArea/ContentArea.aspx?LocationID=18157&LocationType=1&ElementID=2278308) | [Slides](/slides/FVideoBayesianskStatistik.pdf)\
@@ -138,7 +138,7 @@ Uppgifter: SDM 14.1, 14.3, 14.9a, 14.11, 14.13, 14.21, 14.26, 14.33, 14.36, 14.4
 Uppgifter: SDM 15.1, 15.3, 15.5, 15.18, 15.19, 15.21, 15.28, 15.29, 15.31, 15.41, 15.45.
 
 **Övning 11 - Sannolikhetsmodeller II.**\
-Uppgifter: SDM 15.7, 15.11, 15.12, 15.49, 15.59, 15.60, 15.61, 15.62.
+Uppgifter: SDM 15.7, 15.49, 15.59, 15.60.
 
 **Övning 12 - Konfidensintervall.**\
 Uppgifter: SDM 16.2, 16.3, 16.5, 16.7, 16.14, 16.16, 16.27a-c), 16.31, 17.23, 17.29, 17.31, 17.56.
