@@ -50,7 +50,6 @@ Bernoulliförsök &#x2022; Geometrisk fördelning &#x2022;  Binomialfördelning 
 Läs: SDM Kapitel 5.3, 14.4, 15.7 \| [Slides](/slides/F15Sannolikhetsmodeller2.pdf)\
 Studiematerial: [Vilken fördelning? Bara SDA1](/misc/WhichDistribution2UseOnlySDA1.pdf) | [Vilken fördelning? SDA1-3](/misc/WhichDistribution2Use.pdf)\
 Interaktivt: [Poissonfördelningen](/observable/poissonfordelningen.qmd) \| [maximum likelihood - Poisson](/observable/ml_poisson.qmd) \| [exponential](/observable/exponentialfordelningen.qmd) \| [student-t](/observable/studentt.qmd) \| [allmän student-t](/observable/studentt_allman.qmd)\
-Kod: [exponential.R](/code/exponential.R)\
 Extramaterial: [Notebook - maximum likelihood för Poisson](https://observablehq.com/@mattiasvillani/maximum-likelihood-poissonmodellen) | [Notebook - student-t](https://observablehq.com/@mattiasvillani/student-t) | <br> [widgets med 30+ fördelningar](https://observablehq.com/collection/@mattiasvillani/distributions)
 <details><summary>innehåll</summary>
 Likformig fördelning &#x2022; Normalfördelning &#x2022; Poissonfördelning &#x2022; Exponentialfördelning &#x2022; Student-t fördelning &#x2022; Punktskattning
