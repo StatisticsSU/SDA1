@@ -1309,7 +1309,9 @@ ldots,X_n
 \backslash
 overset{iid}{
 \backslash
-sim} N(0,
+sim} N(
+\backslash
+mu,
 \backslash
 sigma)$, med 
 \backslash
