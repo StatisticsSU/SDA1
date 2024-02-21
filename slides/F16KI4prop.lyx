@@ -39,20 +39,6 @@ coltitle=black,center title}}
 
 \date{} % Date, can be changed to a custom date
 
-\titlegraphic{
-\vspace{-0.6cm}
-\includegraphics[width=1.5cm]{/misc/LogoBlueJustRing.jpg}\break
-
-
-\tiny
-\vspace{1cm}
-\href{https://mattiasvillani.com}{\includegraphics[width=0.33cm]{/misc/web.png} mattiasvillani.com}\hspace*{1cm}~
-\href{https://twitter.com/matvil}{\includegraphics[width=0.3cm]{/misc/twitter.jpg} @matvil}\hspace*{1cm}~
-\href{https://fosstodon.org/@matvil}{\includegraphics[width=0.3cm]{/misc/mastodon.pdf} @matvil}\hspace*{1cm}~
-\href{https://github.com/mattiasvillani}{\includegraphics[width=0.3cm]{/misc/github.png} mattiasvillani}~
-}
-
-
 \definecolor{blue}{RGB}{38, 122, 181}
 \definecolor{orange}{RGB}{255, 128, 0}
 \definecolor{lorange}{RGB}{255, 178, 102}
@@ -191,7 +177,7 @@ Föreläsning 16 - Samplingfördelning och konfidensintervall för en andel
 \begin_layout Author
 
 \series bold
-Mattias Villani
+Oscar Oelrich
 \series default
  
 \begin_inset Newline newline
@@ -199,14 +185,6 @@ Mattias Villani
 
 
 \begin_inset VSpace 0.2cm
-\end_inset
-
-
-\begin_inset Graphics
-	filename misc/Beard Man Emoji.png
-	lyxscale 10
-	scale 2
-
 \end_inset
 
 
@@ -314,28 +292,6 @@ Samplingfördelningen
 \series bold
 \color orange
 andel
-\series default
-\color inherit
-.
-\series bold
-
-\begin_inset VSpace bigskip
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-
-\series bold
-\color blue
-Samplingfördelningen
-\series default
-\color inherit
- för 
-\series bold
-\color orange
-medelvärdet
 \series default
 \color inherit
 .
@@ -1017,7 +973,7 @@ status open
 \align center
 \begin_inset CommandInset href
 LatexCommand href
-name "\\includegraphics[width=0.65\\textwidth]{../observable/figs/finitepop_widget.png}"
+name "\\includegraphics[width=0.65\\textwidth]{figs/finitepop_widget.png}"
 target "https://statisticssu.github.io/SDA1/observable/sampling_finite_pop.html"
 literal "true"
 
@@ -1668,7 +1624,7 @@ status open
 \align center
 \begin_inset CommandInset href
 LatexCommand href
-name "\\includegraphics[width=0.65\\textwidth]{../observable/figs/stora_talens_normalapprox_andel_widget.png}"
+name "\\includegraphics[width=0.65\\textwidth]{figs/stora_talens_normalapprox_andel_widget.png}"
 target "https://statisticssu.github.io/SDA1/observable/storatalenslag_bernoulli_normalapprox.html"
 literal "true"
 
@@ -2658,7 +2614,7 @@ status open
 \align center
 \begin_inset CommandInset href
 LatexCommand href
-name "\\includegraphics[width=0.65\\textwidth]{../observable/figs/konfidens_andel_widget.png}"
+name "\\includegraphics[width=0.65\\textwidth]{figs/konfidens_andel_widget.png}"
 target "https://statisticssu.github.io/SDA1/observable/konfidensintervall_andel.html"
 literal "true"
 
@@ -3035,7 +2991,33 @@ Socialdemokraternas väljarandel
 \begin_inset Separator parbreak
 \end_inset
 
- 
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Credits
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Frame
+Dessa slides skapades för kursen statistik och dataanalys 1 av Mattias Villani
+ HT 2023, och har modifierats av Oscar Oelrich för statistik och dataanalys
+ 1 VT 2024.
 \end_layout
 
 \end_body
