@@ -39,19 +39,6 @@ coltitle=black,center title}}
 
 \date{} % Date, can be changed to a custom date
 
-\titlegraphic{
-\vspace{-0.6cm}
-\includegraphics[width=1.5cm]{/misc/LogoBlueJustRing.jpg}\break
-
-
-\tiny
-\vspace{1cm}
-\href{https://mattiasvillani.com}{\includegraphics[width=0.33cm]{/misc/web.png} mattiasvillani.com}\hspace*{1cm}~
-\href{https://twitter.com/matvil}{\includegraphics[width=0.3cm]{/misc/twitter.jpg} @matvil}\hspace*{1cm}~
-\href{https://fosstodon.org/@matvil}{\includegraphics[width=0.3cm]{/misc/mastodon.pdf} @matvil}\hspace*{1cm}~
-\href{https://github.com/mattiasvillani}{\includegraphics[width=0.3cm]{/misc/github.png} mattiasvillani}~
-}
-
 
 \definecolor{blue}{RGB}{38, 122, 181}
 \definecolor{orange}{RGB}{255, 128, 0}
@@ -192,7 +179,7 @@ rdelning
 \begin_layout Author
 
 \series bold
-Mattias Villani
+Oscar Oelrich
 \series default
  
 \begin_inset Newline newline
@@ -200,14 +187,6 @@ Mattias Villani
 
 
 \begin_inset VSpace 0.2cm
-\end_inset
-
-
-\begin_inset Graphics
-	filename misc/Beard Man Emoji.png
-	lyxscale 10
-	scale 2
-
 \end_inset
 
 
@@ -349,7 +328,7 @@ Samband - hälsovårdsbudget och livslängd
 \begin_layout Standard
 \align center
 \begin_inset Graphics
-	filename ../../Regression/Slides/figs/healthdata_text.pdf
+	filename figs/healthdata_text.pdf
 	lyxscale 30
 	scale 40
 
@@ -408,7 +387,7 @@ Regression - hälsovårdsbudget och livslängd
 \begin_layout Standard
 \align center
 \begin_inset Graphics
-	filename ../../Regression/Slides/figs/healthdata_text_fit.pdf
+	filename figs/healthdata_text_fit.pdf
 	lyxscale 30
 	scale 40
 
@@ -560,7 +539,7 @@ Inflytelserika observationer
 \begin_layout Standard
 \align center
 \begin_inset Graphics
-	filename ../../Regression/Slides/figs/healthdata_text_fit_USA.pdf
+	filename figs/healthdata_text_fit_USA.pdf
 	lyxscale 30
 	scale 36
 
@@ -609,7 +588,7 @@ status open
 
 \series bold
 \color orange
-Minsta-kvadrat-metoden
+Minsta kvadrat-metoden
 \end_layout
 
 \end_inset
@@ -668,7 +647,7 @@ e_{i}=y_{i}-\hat{y}_{i}
 
 \series bold
 \color blue
-Minsta-kvadrat-skattning
+Minsta kvadrat-skattning
 \series default
 \color inherit
 : välj 
@@ -693,7 +672,7 @@ SSE=\sum_{i=1}^{n}e_{i}^{2}=\sum_{i=1}^{n}\left(y_{i}-\hat{y}_{i}\right)^{2}=\su
 \begin_layout Standard
 \align center
 \begin_inset Graphics
-	filename ../../Regression/Slides/figs/LeastSquaresPluto1.png
+	filename figs/LeastSquaresPluto1.png
 	lyxscale 20
 	scale 12
 	BoundingBox 0bp 620bp 909bp 1502bp
@@ -707,7 +686,7 @@ SSE=\sum_{i=1}^{n}e_{i}^{2}=\sum_{i=1}^{n}\left(y_{i}-\hat{y}_{i}\right)^{2}=\su
 
 
 \begin_inset Graphics
-	filename ../../Regression/Slides/figs/LeastSquaresPluto3.png
+	filename figs/LeastSquaresPluto3.png
 	lyxscale 20
 	scale 12
 	BoundingBox 0bp 620bp 905bp 1493bp
@@ -1576,14 +1555,6 @@ Residualanalys lifespan - sda123-paketet
 \end_inset
 
 
-\begin_inset Graphics
-	filename /home/mv/Dropbox/Teaching/SDA1/misc/hexagons/figs/sda123icon.png
-	lyxscale 5
-	scale 2
-
-\end_inset
-
-
 \end_layout
 
 \end_inset
@@ -1828,7 +1799,7 @@ status open
 
 \series bold
 \color orange
-Minsta-kvadrat-skattningar är väntevärdesriktiga
+Minsta kvadrat-skattningar är väntevärdesriktiga
 \end_layout
 
 \end_inset
@@ -1838,7 +1809,7 @@ Minsta-kvadrat-skattningar är väntevärdesriktiga
 
 \begin_deeper
 \begin_layout Itemize
-Minsta-kvadrat-estimatorerna:
+Minsta kvadrat-estimatorerna:
 \begin_inset Formula 
 \[
 b_{1}=\frac{s_{xy}}{s_{x}^{2}}
@@ -2115,7 +2086,7 @@ status open
 \align center
 \begin_inset CommandInset href
 LatexCommand href
-name "\\includegraphics[width=0.6\\textwidth]{../observable/figs/sampdist_regression_widget.png}"
+name "\\includegraphics[width=0.6\\textwidth]{figs/sampdist_regression_widget.png}"
 target "https://statisticssu.github.io/SDA1/observable/linreg_simple_sampling_dist.html"
 literal "true"
 
@@ -2135,6 +2106,28 @@ literal "true"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Credits
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+Dessa slides skapades för kursen statistik och dataanalys 1 av Mattias Villani
+ HT 2023, och har modifierats av Oscar Oelrich för statistik och dataanalys
+ 1 VT 2024.
 \end_layout
 
 \end_body
