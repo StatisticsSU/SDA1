@@ -39,20 +39,6 @@ coltitle=black,center title}}
 
 \date{} % Date, can be changed to a custom date
 
-\titlegraphic{
-\vspace{-0.6cm}
-\includegraphics[width=1.5cm]{/misc/LogoBlueJustRing.jpg}\break
-
-
-\tiny
-\vspace{1cm}
-\href{https://mattiasvillani.com}{\includegraphics[width=0.33cm]{/misc/web.png} mattiasvillani.com}\hspace*{1cm}~
-\href{https://twitter.com/matvil}{\includegraphics[width=0.3cm]{/misc/twitter.jpg} @matvil}\hspace*{1cm}~
-\href{https://fosstodon.org/@matvil}{\includegraphics[width=0.3cm]{/misc/mastodon.pdf} @matvil}\hspace*{1cm}~
-\href{https://github.com/mattiasvillani}{\includegraphics[width=0.3cm]{/misc/github.png} mattiasvillani}~
-}
-
-
 \definecolor{blue}{RGB}{38, 122, 181}
 \definecolor{orange}{RGB}{255, 128, 0}
 \definecolor{lorange}{RGB}{255, 178, 102}
@@ -192,7 +178,7 @@ Föreläsning 20 - Inferens i linjär regression - konfidensintervall, hypoteste
 \begin_layout Author
 
 \series bold
-Mattias Villani
+Oscar Oelrich
 \series default
  
 \begin_inset Newline newline
@@ -200,14 +186,6 @@ Mattias Villani
 
 
 \begin_inset VSpace 0.2cm
-\end_inset
-
-
-\begin_inset Graphics
-	filename misc/Beard Man Emoji.png
-	lyxscale 10
-	scale 2
-
 \end_inset
 
 
@@ -532,7 +510,7 @@ status open
 \align center
 \begin_inset CommandInset href
 LatexCommand href
-name "\\includegraphics[width=0.6\\textwidth]{../observable/figs/sampdist_regression_widget.png}"
+name "\\includegraphics[width=0.6\\textwidth]{figs/sampdist_regression_widget.png}"
 target "https://statisticssu.github.io/SDA1/observable/linreg_simple_sampling_dist.html"
 literal "true"
 
@@ -1307,14 +1285,6 @@ Plot av prediktionsintervall
 \end_inset
 
 
-\begin_inset Graphics
-	filename /home/mv/Dropbox/Teaching/SDA1/misc/hexagons/figs/sda123icon.png
-	lyxscale 5
-	scale 2
-
-\end_inset
-
-
 \end_layout
 
 \end_inset
@@ -1739,14 +1709,6 @@ Simulera data med sda123 paketet
 \end_inset
 
 
-\begin_inset Graphics
-	filename /home/mv/Dropbox/Teaching/SDA1/misc/hexagons/figs/sda123icon.png
-	lyxscale 5
-	scale 2
-
-\end_inset
-
-
 \end_layout
 
 \end_inset
@@ -1789,15 +1751,6 @@ Skatta på simulerat datamaterial
 \end_inset
 
 
-\begin_inset Graphics
-	filename /home/mv/Dropbox/Teaching/SDA1/misc/hexagons/figs/sda123icon.png
-	lyxscale 5
-	scale 2
-	rotateOrigin rightBaseline
-
-\end_inset
-
-
 \end_layout
 
 \end_inset
@@ -1824,6 +1777,28 @@ Skatta på simulerat datamaterial
 \end_inset
 
 
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+Credits
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+Dessa slides skapades för kursen statistik och dataanalys 1 av Mattias Villani
+ HT 2023, och har modifierats av Oscar Oelrich för statistik och dataanalys
+ 1 VT 2024.
 \end_layout
 
 \end_body
