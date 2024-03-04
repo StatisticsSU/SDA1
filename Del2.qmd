@@ -104,11 +104,11 @@ Interaktivt: [hypotestest fel typ I och II](/observable/hypotestest_typ1och2.qmd
 Fel av typ I och II vid hypotestest &#x2022; Hypotestest för att jämföra väntevärden i oberoende grupper  &#x2022; Hypotestest för att jämföra väntevärden för parade data
 </details>
 
-**Föreläsning 22 - $\chi^2$ goodness-of-fit test. Optimala beslut under osäkerhet.**\
-Läs: SDM 22.1 | [Slides](slides/F22Chi2Beslut.pdf)\
+**Föreläsning 22 - $\chi^2$ goodness-of-fit test och oberoende. Optimala beslut under osäkerhet.**\
+Läs: SDM 22.1, 22.4 | [Slides](slides/F22Chi2Beslut.pdf)\
 Interaktivt: [chi2-fördelningen](/observable/chi2fordelningen.qmd)
 <details><summary>innehåll</summary>
-Chi2-test för goodness of fit &#x2022; Beslut under osäkerhet  &#x2022; Nyttobegreppet &#x2022; Beslutstabeller &#x2022; Maximera förväntad nytta
+Chi2-test för goodness of fit &#x2022; Chi2-test för oberoende &#x2022; Beslut under osäkerhet  &#x2022; Nyttobegreppet &#x2022; Beslutstabeller &#x2022; Maximera förväntad nytta
 </details>
 
 **Föreläsning 23 - Räkning av gammal tenta.**\
@@ -149,7 +149,7 @@ Uppgifter: SDM 18.1, 18.4, 18.5, 18.8, 18.10, 18.14, 18.16, 18.23, 18.27, 18.45,
 Uppgifter: SDM 23.1, 23.3, 23.5, 23.7, 23.9, 23.13, 23.15, 23.17.
 
 **Övning 15 - Jämföra grupper och chi2-test.**\
-Uppgifter: SDM 20.11, 20.13, 20.15, 20.62, 21.19, 21.21, 22.1, 22.3. I uppgift 20.15 och 20.62c, verifiera att antalet frihetsgrader stämmer med hjälp av formeln.
+Uppgifter: SDM 20.11, 20.13, 20.15, 20.62, 21.19, 21.21, 22.1, 22.3, 22.9, 22.10, 22.33. I uppgift 20.15 och 20.62c, verifiera att antalet frihetsgrader stämmer med hjälp av formeln.
 
 ### **Datorlaborationer**
 
