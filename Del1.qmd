@@ -35,6 +35,7 @@ Korstabeller &#x2022; Betingade fördelningar av kategoriska variabler &#x2022; 
 
 **Föreläsning 4 - Jämföra fördelningar. Tidsserier. Transformationer.**\
 Läs: SDM Kapitel 4 | [Slides](/slides/part1/lecture4_embedded.html)\
+Testa dina kunskaper: [the Data Game](https://karlsigfrid.github.io/statisticstutor/output/login/mainpage.html)
 <details><summary>innehåll</summary>
 Numeriska variabler betingade på kategoriska variabler &#x2022; Grafisk representation av tidsserier &#x2022; Transformering med logaritmer
 </details>
