@@ -16,19 +16,19 @@ Under vissa föreläsningar länkar vi till `Extramaterial`. Det är material so
 
 **Föreläsning 1 - Introduktion.**\
 Läs: SDM Kapitel 1 | [Slides, del 1](/slides/IntroLectureVillani.pdf) | [Slides, del 2](/slides/part1/lecture1b_vt24_embedded.html)\
-Testa dina kunskaper: [Algebra](https://statisticstutor.eu.pythonanywhere.com/static/output/exercises/algebra_basic.html) | [Summor och produkter](https://statisticstutor.eu.pythonanywhere.com/static/output/exercises/notation_sum_prod.html)
+Testa dina kunskaper: [Algebra](https://karlsigfrid.github.io/statisticstutor/output/exercises/algebra_basic.html) | [Summor och produkter](https://karlsigfrid.github.io/statisticstutor/output/exercises/notation_sum_prod.html)
 
 **Föreläsning 2 - Hantera och beskriva data.**\
 Läs: SDM Kapitel 2 | [Slides](/slides/part1/lecture2_embedded.html)\
 Interaktivt: [widget - histogram](/observable/histogram.qmd)\
-Testa dina kunskaper: [Centralvärden](https://statisticstutor.eu.pythonanywhere.com/static/output/exercises/mean_median_mode.html) | [Kvartiler](https://statisticstutor.eu.pythonanywhere.com/static/output/exercises/quartiles_iqr.html) | [Varians](https://statisticstutor.eu.pythonanywhere.com/static/output/exercises/sample_variance.html) | [Standardavvikelse](https://statisticstutor.eu.pythonanywhere.com/static/output/exercises/standard_deviation.html)\
+Testa dina kunskaper: [Centralvärden](https://karlsigfrid.github.io/statisticstutor/output/exercises/mean_median_mode.html) | [Kvartiler](https://karlsigfrid.github.io/statisticstutor/output/exercises/quartiles_iqr.html) | [Varians](https://karlsigfrid.github.io/statisticstutor/output/exercises/sample_variance.html) | [Standardavvikelse](https://karlsigfrid.github.io/statisticstutor/output/exercises/standard_deviation.html)\
 <details><summary>innehåll</summary>
 Variabeltyper &#x2022; Frekvenstabeller &#x2022; Fördelningar &#x2022; Outliers &#x2022; Centralmått &#x2022; Spridningsmått &#x2022; Percentiler
 </details>
 
 **Föreläsning 3 - Samband mellan kategoriska variabler.**\
 Läs: SDM Kapitel 3 | [Slides](/slides/part1/lecture3_embedded.html)\
-Testa dina kunskaper: [Marginalfördelningar](https://statisticstutor.eu.pythonanywhere.com/static/output/exercises/marginal_distribution_proportions.html) | [Betingade fördelningar](https://statisticstutor.eu.pythonanywhere.com/static/output/exercises/conditional_proportion.html)\
+Testa dina kunskaper: [Marginalfördelningar](https://karlsigfrid.github.io/statisticstutor/output/exercises/marginal_distribution_proportions.html) | [Betingade fördelningar](https://karlsigfrid.github.io/statisticstutor/output/exercises/conditional_proportion.html)\
 <details><summary>innehåll</summary>
 Korstabeller &#x2022; Betingade fördelningar av kategoriska variabler &#x2022; Test av hypotes om oberoende genom simulering &#x2022; Samband och kausalitet
 </details>
@@ -42,7 +42,7 @@ Numeriska variabler betingade på kategoriska variabler &#x2022; Grafisk represe
 **Föreläsning 5 - Standardiserade variabler och normalfördelningen.**\
 Läs: SDM Kapitel 5 | [Slides](/slides/part1/lecture5_embedded.html)\
 Extramaterial: [Hantera dataset med dplyr](/slides/part1/dplyr_demo.html)\
-Testa dina kunskaper: [Z-värden](https://statisticstutor.eu.pythonanywhere.com/static/output/exercises/calculate_zscore.html) | [Normalfördelningstabellen](https://statisticstutor.eu.pythonanywhere.com/static/output/exercises/read_ztable.html)\
+Testa dina kunskaper: [Z-värden, övning 1](https://karlsigfrid.github.io/statisticstutor/output/exercises/calculate_zscore.html) | [Z-värden, övning 2](https://karlsigfrid.github.io/statisticstutor/output/exercises/calculate_zscore2.html) | [Normalfördelningen](https://karlsigfrid.github.io/statisticstutor/output/exercises/normal_68_95.html) |  [Normalfördelningstabellen, övning 1](https://karlsigfrid.github.io/statisticstutor/output/exercises/ztable_part1.html) |  [Normalfördelningstabellen, övning 2](https://karlsigfrid.github.io/statisticstutor/output/exercises/ztable_part1.html)\
 <details><summary>innehåll</summary>
 Standardiserade variabler &#x2022; Normalfördelningen &#x2022; Beräkningar med normalfördelningen &#x2022; Normalfördelningsantagandet
 </details>
