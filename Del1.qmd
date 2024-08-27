@@ -86,7 +86,7 @@ Inferens &#x2022; Populationer och stickprov &#x2022; Bias &#x2022; Slumpvisa va
 Övningarna i kursboken [Stats: Data and Models (SDM)](https://nordics.pearson.com/products/stats-data-and-models-5th-global-edition-e-book?variant=42945920630933) hänvisas till med kapitelnummer följt av övningsnummer.
 
 **Övning 1 - Beskrivande statistik.**\
-Uppgifter: SDM 2.1, 2.2, 2.6, 2.7, 2.11, 2.15, 2.16, 2.17, 2.20, 2.21, 2.24. 
+Uppgifter: SDM 2.1, 2.2, 2.6, 2.7, 2.11, 2.15, 2.16, 2.17, 2.20, 2.21, 2.24, [Extra övningar](/exercises/session1_extra_exercises.pdf). 
 
 **Övning 2 - Samband mellan kategoriska variabler. Transformationer.**\
 Uppgifter:  SDM 3.1, 3.3, 3.5, 3.6, 3.7, 3.9, 3.25, 3.39, 3.41, 4.1, 4.3, 4.14, 4.17, 4.45.
