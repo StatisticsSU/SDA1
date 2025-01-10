@@ -120,7 +120,7 @@ Uppgifter: [html](/datorlab/lab4/DatorLab4.qmd) | <a href="https://github.com/St
 ### **Inlämningsuppgift**
 
 **Inlämningsuppgift 1.**\
-[html](assignments/assignment1/Assignment1.qmd) | <a href="https://github.com/StatisticsSU/SDA1/raw/main/assignments/assignment1/Assignment1.qmd" download>quarto</a>
+[html](assignments/assignment1/Assignment1.qmd) | <a href="https://github.com/StatisticsSU/SDA1/raw/main/assignments/assignment1/Assignment1.qmd" download>quarto</a> | <a href="https://github.com/StatisticsSU/SDA1/raw/main/docs/assignments/assignment1/inlämningsuppgift1_mer_info.pdf" download>Mer info</a>
 <!--
 Uppgifter: [html](/assignments/assignment1/Assignment1.html) | <a href="https://raw.githubusercontent.com/StatisticsSU/SDA1/main/assignments/assignment1/Assignment1.qmd" download>quarto</a> 
 -->
