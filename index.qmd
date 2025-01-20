@@ -42,7 +42,7 @@ På vissa delar av kursen använder vi interaktivt material för att underlätta
 
 ::: {layout="[ [1,1],[1,1], [1, 1] ]"}
 <img src="/misc/male.png" width="35%"/>\
-[Oskar Gustafsson](https://www.su.se/english/profiles/ooelr-1.342298#)<br>Kursansvarig och föreläsningar del 2<br>
+[Oskar Gustafsson](https://www.su.se/profiles/osgu4809-1.252072)<br>Kursansvarig och föreläsningar del 2<br>
 
 <img src="/misc/karlsigfrid.png" width="35%"/>\
 [Karl Sigfrid](https://www.su.se/profiles/kasi3175-1.513541)<br>Föreläsningar och övningar del 1<br>
@@ -54,10 +54,10 @@ På vissa delar av kursen använder vi interaktivt material för att underlätta
 [Fredrik Stenkvist](https://www.su.se/profiles/frst7343-1.746864)<br>Datorövningar samt övningar del 2<br>
 
 <img src="/misc/female.png" width="35%"/>\
-[Ester Lagerlöf](https://www.su.se/profiles/afred-1.219056)<br>Räkneövningar<br>
+[Ester Lagerlöf](https://www.su.se/profiles/esla2049-1.787983)<br>Räkneövningar<br>
 
 <img src="/misc/female.png" width="35%"/>\
-[Maria Bennis](https://www.su.se/profiles/frst7343-1.746864)<br>Räkneövningar<br>
+[Maria Bennis](https://www.su.se/profiles/mabe5705-1.787981)<br>Räkneövningar<br>
 :::
 
 
