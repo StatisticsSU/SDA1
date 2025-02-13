@@ -301,8 +301,7 @@ Covid:
 
 \begin_deeper
 \begin_layout Itemize
-A = {positivt hemtest}.
- B = {har covid}.
+A = {positivt hemtest}, B = {har covid}.
 \begin_inset VSpace medskip
 \end_inset
 
@@ -339,13 +338,13 @@ Tecknet
 
 \begin_layout Itemize
 Sannolikheten för att 
-\begin_inset Formula $A$
+\begin_inset Formula $B$
 \end_inset
 
  inträffar 
 \series bold
 \color orange
-givet att B har inträffat
+givet att A har inträffat
 \series default
 \color inherit
 .
@@ -741,7 +740,7 @@ status open
 
 \series bold
 \color orange
-Korstabell och mosaic-plott
+Korstabell och mosaic-plot
 \end_layout
 
 \end_inset
