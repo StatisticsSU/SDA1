@@ -80,7 +80,7 @@ coltitle=black,center title}}
 \use_microtype true
 \use_dash_ligatures true
 \graphics default
-\default_output_format default
+\default_output_format pdf5
 \output_sync 0
 \bibtex_command default
 \index_command default
@@ -355,7 +355,7 @@ Sannolikhetslära
 \begin_layout Itemize
 Sannolikheten för en kärnkraftsolycka 
 \begin_inset Graphics
-	filename figs/flaticons/radiation.pdf
+	filename figs/flaticons/radiation.png
 	lyxscale 10
 	scale 3
 
@@ -372,7 +372,7 @@ Sannolikheten för en kärnkraftsolycka
 Sannolikheten att två personer har identiska DNA.
  
 \begin_inset Graphics
-	filename figs/flaticons/dna.pdf
+	filename figs/flaticons/dna.png
 	lyxscale 10
 	scale 3
 
@@ -389,7 +389,7 @@ Sannolikheten att två personer har identiska DNA.
 Sannolikheten att träffa den rätta på dejtingapp.
  
 \begin_inset Graphics
-	filename figs/flaticons/romeo-and-juliet.pdf
+	filename figs/flaticons/romeo-and-juliet.png
 	lyxscale 10
 	scale 3
 
@@ -517,7 +517,7 @@ status open
 
 
 \begin_inset Graphics
-	filename figs/flaticons/right-arrow.png
+	filename revealjs_slides/figs/flaticons/right-arrow.png
 	lyxscale 10
 	scale 6
 
@@ -588,7 +588,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename figs/flaticons/interest.pdf
+	filename figs/flaticons/interest.png
 	lyxscale 10
 	scale 4.5
 
@@ -1964,7 +1964,7 @@ status open
 
 
 \begin_inset Graphics
-	filename figs/flaticons/dicered.svg
+	filename revealjs_slides/figs/flaticons/dicered.svg
 	lyxscale 5
 	scale 3
 
@@ -1980,7 +1980,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename figs/flaticons/grocery.svg
+	filename revealjs_slides/figs/flaticons/grocery.svg
 	lyxscale 5
 	scale 7
 
@@ -3273,7 +3273,7 @@ P(\text{ingen lagg hela veckan)}=(1-0.01)^{7}=0.99^{7}\approx0.932.
 \begin_layout Itemize
 Sannolikheten att dra två klöver 
 \begin_inset Graphics
-	filename figs/flaticons/clubs.pdf
+	filename figs/flaticons/club.png
 	lyxscale 10
 	scale 25
 
@@ -3318,7 +3318,7 @@ P(\text{2:a kortet klöver \textbf{givet} 1:a kortet \textbf{inte} klöver)}=\fr
 
 
 \begin_inset Graphics
-	filename figs/flaticons/clubs.pdf
+	filename figs/flaticons/club.png
 	lyxscale 10
 	scale 25
 
@@ -3360,7 +3360,7 @@ P(\text{2:a kortet klöver \textbf{givet} 1:a kortet \textbf{inte} klöver)}=\fr
 
 
 \begin_inset Graphics
-	filename figs/flaticons/clubs.pdf
+	filename figs/flaticons/club.png
 	lyxscale 10
 	scale 25
 
