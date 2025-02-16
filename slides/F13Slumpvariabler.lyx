@@ -707,7 +707,7 @@ Diskret slumpvariabel
 \align center
 \begin_inset Graphics
 	filename figs/discrete_dist.svg
-	scale 270
+	scale 26
 
 \end_inset
 
@@ -751,7 +751,7 @@ Kontinuerlig slumpvariabel
 \align center
 \begin_inset Graphics
 	filename figs/standard_normal.svg
-	scale 270
+	scale 26
 
 \end_inset
 
