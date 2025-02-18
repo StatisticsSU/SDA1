@@ -3264,10 +3264,6 @@ P(\text{ingen lagg hela veckan)}=(1-0.01)^{7}=0.99^{7}\approx0.932.
 \end_inset
 
 
-\begin_inset VSpace smallskip
-\end_inset
-
-
 \end_layout
 
 \begin_layout Itemize
@@ -3275,7 +3271,7 @@ Sannolikheten att dra två klöver
 \begin_inset Graphics
 	filename figs/flaticons/club.png
 	lyxscale 10
-	scale 25
+	scale 20
 
 \end_inset
 
@@ -3320,7 +3316,7 @@ P(\text{2:a kortet klöver \textbf{givet} 1:a kortet \textbf{inte} klöver)}=\fr
 \begin_inset Graphics
 	filename figs/flaticons/club.png
 	lyxscale 10
-	scale 25
+	scale 20
 
 \end_inset
 
@@ -3362,7 +3358,7 @@ P(\text{2:a kortet klöver \textbf{givet} 1:a kortet \textbf{inte} klöver)}=\fr
 \begin_inset Graphics
 	filename figs/flaticons/club.png
 	lyxscale 10
-	scale 25
+	scale 20
 
 \end_inset
 
