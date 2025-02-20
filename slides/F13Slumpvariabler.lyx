@@ -983,30 +983,7 @@ Vi använder ofta grekiska bokstaven
 \begin_inset Newline newline
 \end_inset
 
-Grekiska bokstaven för 
-\emph on
-m
-\emph default
-, m som i 
-\series bold
-\color blue
-mean
-\series default
-\color inherit
-.
- 
-\begin_inset Quotes eld
-\end_inset
 
-
-\color orange
-lilla my
-\color inherit
-
-\begin_inset Quotes erd
-\end_inset
-
-.
 \begin_inset VSpace medskip
 \end_inset
 
@@ -2634,7 +2611,7 @@ IQR
 \begin_inset Graphics
 	filename figs/normal_median_IQR.svg
 	lyxscale 30
-	scale 230
+	scale 15
 
 \end_inset
 
@@ -2642,7 +2619,7 @@ IQR
 \begin_inset Graphics
 	filename figs/expon_median_IQR.svg
 	lyxscale 30
-	scale 230
+	scale 15
 
 \end_inset
 
@@ -2650,7 +2627,7 @@ IQR
 \begin_inset Graphics
 	filename figs/chi2_median_IQR.svg
 	lyxscale 30
-	scale 230
+	scale 15
 
 \end_inset
 
