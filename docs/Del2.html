@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.353">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>SDA1 - Del II - Sannolikhetsmodeller och Inferens, 7.5 hp</title>
+<title>Del II - Sannolikhetsmodeller och Inferens, 7.5 hp – SDA1</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -48,7 +48,13 @@ ul.task-list li input[type="checkbox"] {
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -57,13 +63,42 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -72,9 +107,9 @@ ul.task-list li input[type="checkbox"] {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a href="./index.html" class="navbar-brand navbar-brand-logo">
     <img src="./misc/SU_logo_small.png" alt="" class="navbar-logo">
     </a>
@@ -83,32 +118,32 @@ ul.task-list li input[type="checkbox"] {
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html" rel="" target="">
- <span class="menu-text">Översikt</span></a>
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Översikt</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./Del1.html" rel="" target="">
- <span class="menu-text">Del 1 - Dataanalys och regression</span></a>
+    <a class="nav-link" href="./Del1.html"> 
+<span class="menu-text">Del 1 - Dataanalys och regression</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./Del2.html" rel="" target="" aria-current="page">
- <span class="menu-text">Del 2 - Sannolikhetsmodeller och inferens</span></a>
+    <a class="nav-link active" href="./Del2.html" aria-current="page"> 
+<span class="menu-text">Del 2 - Sannolikhetsmodeller och inferens</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./R.html" rel="" target="">
- <span class="menu-text">R</span></a>
+    <a class="nav-link" href="./R.html"> 
+<span class="menu-text">R</span></a>
   </li>  
 </ul>
-            <div class="quarto-navbar-tools ms-auto">
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
-          </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -146,7 +181,9 @@ ul.task-list li input[type="checkbox"] {
   </div>
   
 
+
 </header>
+
 
 <p><img src="./misc/statspicai4.png" alt="Flashy time series image" class="center" width="100%"></p>
 <blockquote class="blockquote">
@@ -157,7 +194,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="föreläsningar" class="level3">
 <h3 class="anchored" data-anchor-id="föreläsningar"><strong>Föreläsningar</strong></h3>
 <strong>Föreläsning 11 - Osäkerhet och Sannolikhet.</strong><br>
-Läs: SDM Kapitel 12 och 13 | <a href="./slides/F11Sannolikhet.pdf">Slides</a><br>
+Läs: SDM Kapitel 12 och 13 | <a href=".\slides/F11Sannolikhet.pdf">Slides</a><br>
 Interaktivt: <a href="./observable/storatalenslag_bernoulli.html">slantsingling</a><br>
 Extramaterial: <a href="https://youtu.be/0m5bg2hpHNw">TedTalk om sannolikheter</a>
 <details>
@@ -167,7 +204,7 @@ innehåll
 Sannolikhetstolkningar • Händelser • Union • Snitt • Sannolikhetsberäkningar • Venn diagram • Kombinatorik
 </details>
 <strong>Föreläsning 12 - Betingade sannolikheter och Bayes sats.</strong><br>
-Läs: SDM Kapitel 13 | <a href="./slides/F12BetingadeSlhBayesSats.pdf">Slides</a><br>
+Läs: SDM Kapitel 13 | <a href=".\slides/F12BetingadeSlhBayesSats.pdf">Slides</a><br>
 Interaktivt: <a href="./observable/bayestheorem.html">bayessats</a><br>
 Extramaterial: <a href="https://www.varsity.co.uk/science/21149">artikel om Bayes sats och snabbtest för Covid-19</a>
 <details>
@@ -177,8 +214,7 @@ innehåll
 Betingad sannolikhet • Multiplikationsregeln • Oberoende händelser • Disjunkta händelser • Bayes sats • Lagen om total sannolikhet
 </details>
 <strong>Föreläsning 13 - Slumpvariabler och deras egenskaper.</strong><br>
-Läs: SDM Kapitel 14 | <a href="./slides/F13Slumpvariabler.pdf">Slides</a> | <a href="./misc/DiskretSimultanfördelningKovarians.xlsx">Kalkylark om diskret simultanfördelning och kovarians</a> | <a href="https://docs.google.com/spreadsheets/d/1gMmUHFH0NydQABfvEu8YuDN8jQgmze6iiZ_WY_q4_jg/edit?usp=sharing">Google docs version (view only) om diskret simultanfördelning och kovarians</a><br>
-Video på Athena: <a href="https://athena.itslearning.com/ContentArea/ContentArea.aspx?LocationID=22647&amp;LocationType=1">Kovarians</a><br>
+Läs: SDM Kapitel 14 | <a href=".\slides/F13Slumpvariabler.pdf">Slides</a> | <a href=".\misc/DiskretSimultanfördelningKovarians.xlsx">Kalkylark om diskret simultanfördelning och kovarians</a> | <a href="https://docs.google.com/spreadsheets/d/1gMmUHFH0NydQABfvEu8YuDN8jQgmze6iiZ_WY_q4_jg/edit?usp=sharing">Google docs version (view only) om diskret simultanfördelning och kovarians</a><br>
 Interaktivt: <a href="./observable/normalfordelningen.html">normalfördelningen</a>
 <details>
 <summary>
@@ -187,9 +223,9 @@ innehåll
 Slumpvariabler • Sannolikhetsfördelning • Väntevärde • Varians • Standardavvikelse • Normalfördelning • Slumpvariabler • Linjärkombinationer • Standardisering • Kovarians • Korrelation • Varians av summa av slumpvariabler
 </details>
 <strong>Föreläsning 14 - Sannolikhetsmodeller I.</strong><br>
-Läs: SDM Kapitel 15.1, 15.2, 15.3, 15.6 | <a href="./slides/F14Sannolikhetsmodeller1.pdf">Slides</a><br>
+Läs: SDM Kapitel 15.1, 15.2, 15.3, 15.6 | <a href=".\slides/F14Sannolikhetsmodeller1.pdf">Slides</a><br>
 Interaktivt: <a href="./observable/bernoullifordelningen.html">bernoullifördelning</a> | <a href="./observable/geometriskfordelning.html">geometrisk fördelning</a> | <a href="./observable/binomialfordelningen.html">binomialfördelningen</a> | <a href="./observable/uniformfordelning.html">likformig</a> | <a href="./observable/normalfordelningen.html">normalfördelning</a><br>
-Kod: <a href="./code/geometric.R">geometric.R</a>
+Kod: <a href=".\code/geometric.R">geometric.R</a>
 <details>
 <summary>
 innehåll
@@ -197,8 +233,8 @@ innehåll
 Bernoulliförsök • Geometrisk fördelning • Binomialfördelning • Normalapproximation av binomial
 </details>
 <strong>Föreläsning 15 - Sannolikhetsmodeller II.</strong><br>
-Läs: SDM Kapitel 5.3, 14.4, 15.4, 15.7 (endast uniform) | <a href="./slides/F15Sannolikhetsmodeller2.pdf">Slides</a><br>
-Studiematerial: <a href="./misc/WhichDistribution2UseOnlySDA1.pdf">Vilken fördelning? Bara SDA1</a> | <a href="./misc/WhichDistribution2Use.pdf">Vilken fördelning? SDA1-3</a><br>
+Läs: SDM Kapitel 5.3, 14.4, 15.4, 15.7 (endast uniform) | <a href=".\slides/F15Sannolikhetsmodeller2.pdf">Slides</a><br>
+Studiematerial: <a href=".\misc/WhichDistribution2UseOnlySDA1.pdf">Vilken fördelning? Bara SDA1</a> | <a href=".\misc/WhichDistribution2Use.pdf">Vilken fördelning? SDA1-3</a><br>
 Interaktivt: <a href="./observable/poissonfordelningen.html">Poissonfördelningen</a> | <a href="./observable/ml_poisson.html">maximum likelihood - Poisson</a> | <a href="./observable/exponentialfordelningen.html">exponential</a> | <a href="./observable/studentt.html">student-t</a> | <a href="./observable/studentt_allman.html">allmän student-t</a><br>
 Extramaterial: <a href="https://observablehq.com/@mattiasvillani/maximum-likelihood-poissonmodellen">Notebook - maximum likelihood för Poisson</a> | <a href="https://observablehq.com/@mattiasvillani/student-t">Notebook - student-t</a> | <br> <a href="https://observablehq.com/collection/@mattiasvillani/distributions">widgets med 30+ fördelningar</a>
 <details>
@@ -208,7 +244,7 @@ innehåll
 Likformig fördelning • Normalfördelning • Poissonfördelning • Exponentialfördelning • Student-t fördelning • Punktskattning
 </details>
 <strong>Föreläsning 16 - Samplingfördelningar och konfidensintervall för en andel.</strong><br>
-Läs: SDM Kapitel 16.1-16.5 | <a href="./slides/F16KI4prop.pdf">Slides</a><br>
+Läs: SDM Kapitel 16.1-16.5 | <a href=".\slides/F16KI4prop.pdf">Slides</a><br>
 Interaktivt: <a href="./observable/sampling_finite_pop.html">samplingfördelning - liten ändlig population</a> | <a href="./observable/storatalenslag_bernoulli_normalapprox.html">stora talens lag - normalapproximation för en andel</a> | <a href="./observable/sampling_prop_finite_pop.html">samplingfördelning för andel - ändlig population</a> | <a href="./observable/konfidensintervall_andel.html">konfidensintervall för en andel</a>
 <details>
 <summary>
@@ -217,10 +253,10 @@ innehåll
 Population • Stickprov • Samplingfördelning för en andel • Väntevärdesriktighet • Bias och varians • Konfidensintervall för en andel
 </details>
 <strong>Föreläsning 17 - Konfidensintervall för ett väntevärde. Stora talens lag. Centrala gränsvärdessatsen.</strong><br>
-Läs: SDM Kapitel 17 | <a href="./slides/F17KI4mean.pdf">Slides</a><br>
+Läs: SDM Kapitel 17 | <a href=".\slides/F17KI4mean.pdf">Slides</a><br>
 Interaktivt: <a href="./observable/storatalenslag.html">stora talens lag</a> | <a href="./observable/cgs.html">centrala gränsvärdessatsen</a><br>
 Extramaterial: <a href="https://observablehq.com/@mattiasvillani/stora-talens-lag">Notebook - stora talens lag</a> | <a href="https://observablehq.com/@mattiasvillani/cgs">Notebook - centrala gränsvärdessatsen</a><br>
-Kod: <a href="./code/confidence_intervals_salmon.R">konfidensintervall laxar</a> | <a href="./code/estimatesnormalmodel.R">simulering för att undersöka bias</a>
+Kod: <a href=".\code/confidence_intervals_salmon.R">konfidensintervall laxar</a> | <a href=".\code/estimatesnormalmodel.R">simulering för att undersöka bias</a>
 <details>
 <summary>
 innehåll
@@ -228,7 +264,7 @@ innehåll
 Samplingfördelning för ett väntevärde - känd varians • Samplingfördelning för ett väntevärde - okänd varians • Konfidensintervall för ett väntevärde • Stora talens lag • Centrala gränsvärdessatsen
 </details>
 <strong>Föreläsning 18 - Hypotestest.</strong><br>
-Läs: SDM Kapitel 18 (ej <em>Random matters</em> på sid 579) | <a href="./slides/F18HypotesTest.pdf">Slides</a><br>
+Läs: SDM Kapitel 18 (ej <em>Random matters</em> på sid 579) | <a href=".\slides/F18HypotesTest.pdf">Slides</a><br>
 Interaktivt: <a href="./observable/hypothesis_test_mean.html">hypotestest väntevärde</a> | <a href="./observable/hypotestest_mean.html">ensidigt test för internethastighet</a>
 <details>
 <summary>
@@ -237,8 +273,8 @@ innehåll
 Hypotestest för ett väntevärde • Hypotestest för en andel • Hypoteser och nollfördelning • Kritiska värden • p-värde
 </details>
 <strong>Föreläsning 19 - Inferens i linjär regression - populationsmodell och samplingfördelning.</strong><br>
-Läs: SDM Kapitel 23.1-23.3 | <a href="./slides/F19Regression1.pdf">Slides</a><br>
-Kod: <a href="./code/lifespan_regression.R">regression lifespan data</a><br>
+Läs: SDM Kapitel 23.1-23.3 | <a href=".\slides/F19Regression1.pdf">Slides</a><br>
+Kod: <a href=".\code/lifespan_regression.R">regression lifespan data</a><br>
 Interaktivt: <a href="./observable/linreg_simple_sampling_dist.html">samplingfördelning regression</a><br>
 Video på Athena: <a href="https://athena.itslearning.com/ContentArea/ContentArea.aspx?LocationID=20190&amp;LocationType=1">simulera från regression i R</a><br>
 Extramaterial: <a href="code/residualanalys_simulerade_data.R">kod för residualanalys på simulerad regressionsdata</a>
@@ -249,8 +285,8 @@ innehåll
 Linjär regression som sannolikhetsmodell • Regressionsmodellens antaganden • Residualanalys • Samplingfördelningen för minsta-kvadrat-skattningen • Standardfel
 </details>
 <strong>Föreläsning 20 - Inferens i linjär regression - konfidensintervall, hypotestest och prediktionsintervall.</strong><br>
-Läs: SDM Kapitel 23.3-23.6 | <a href="./slides/F20Regression2.pdf">Slides</a><br>
-Kod: <a href="./code/simulera_reg_data.R">simulera från populationsmodellen i enkel regression</a>
+Läs: SDM Kapitel 23.3-23.6 | <a href=".\slides/F20Regression2.pdf">Slides</a><br>
+Kod: <a href=".\code/simulera_reg_data.R">simulera från populationsmodellen i enkel regression</a>
 <details>
 <summary>
 innehåll
@@ -258,7 +294,7 @@ innehåll
 Konfidensintervall linjär regression • Hypotestest linjär regression • Prediktionsintervall
 </details>
 <strong>Föreläsning 21 - Hypotestest och jämföra grupper.</strong><br>
-Läs: SDM Kapitel 19, 20.4-20.5, 21.1-21.3 | <a href="./slides/F21ComparePop.pdf">Slides</a><br>
+Läs: SDM Kapitel 19, 20.4-20.5, 21.1-21.3 | <a href=".\slides/F21ComparePop.pdf">Slides</a><br>
 Kod: <a href="code/confidence_intervals_salmon_twopop.R">oberoende grupper - laxar</a> | <a href="code/paired_two_pop_online_insurance.R">parade grupper - online försäkringar</a><br>
 Videos på Athena: <a href="https://athena.itslearning.com/ContentArea/ContentArea.aspx?LocationID=20190&amp;LocationType=1">Fel av typ I och II</a> | <a href="https://athena.itslearning.com/ContentArea/ContentArea.aspx?LocationID=20190&amp;LocationType=1">Jämföra två populationer</a><br>
 Interaktivt: <a href="./observable/hypotestest_typ1och2.html">hypotestest fel typ I och II</a>
@@ -280,7 +316,7 @@ Chi2-test för goodness of fit • Chi2-test för oberoende • Beslut under os�
 <p><strong>Föreläsning 23 - Räkning av gammal tenta.</strong><br>
 </p>
 <strong>Videoföreläsning - Bayesiansk inferens.</strong><br>
-Läs: <a href="https://athena.itslearning.com/ContentArea/ContentArea.aspx?LocationID=18157&amp;LocationType=1&amp;ElementID=2278308">Video på Athena om Bayesiansk inferens</a> | <a href="./slides/FVideoBayesianskStatistik.pdf">Slides</a><br>
+Läs: <a href="https://athena.itslearning.com/ContentArea/ContentArea.aspx?LocationID=18157&amp;LocationType=1&amp;ElementID=2278308">Video på Athena om Bayesiansk inferens</a> | <a href=".\slides/FVideoBayesianskStatistik.pdf">Slides</a><br>
 Extramaterial: <a href="https://observablehq.com/@mattiasvillani/bayes-iid-gaussian-known-var">notebook - bayesiansk inferens för väntevärde i normalmodellen</a>
 <details>
 <summary>
@@ -372,6 +408,33 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
   }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
   const toggleColorMode = (alternate) => {
     // Switch the stylesheets
     const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
@@ -438,13 +501,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return localAlternateSentinel;
     }
   }
-  let localAlternateSentinel = 'default';
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
   // Dark / light mode switch
   window.quartoToggleColorScheme = () => {
     // Read the current dark / light value 
     let toAlternate = !hasAlternateSentinel();
     toggleColorMode(toAlternate);
     setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
   };
   // Ensure there is a toggle, if there isn't float one in the top right
   if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
@@ -479,18 +544,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -522,11 +576,50 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
-  function tippyHover(el, contentFn) {
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -536,8 +629,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -549,7 +651,130 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -593,6 +818,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -618,6 +844,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -683,7 +935,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-left">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
-    <a class="nav-link" href="https://www.su.se/statistiska-institutionen/">Statistiska institutionen - Stockholms universitet</a>
+    <a class="nav-link" href="https://www.su.se/statistiska-institutionen/">
+<p>Statistiska institutionen - Stockholms universitet</p>
+</a>
   </li>  
 </ul>
     </div>   
@@ -706,6 +960,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
+
 
 
 
