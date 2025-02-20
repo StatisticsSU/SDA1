@@ -27,7 +27,7 @@ Kursen består av föreläsningar, räkneövningar och datorlaborationer. Se res
 
 ### Schema
 
-Kursens schema finns på [TimeEdit](https://cloud.timeedit.net/su/web/stud1/ri10784Q056Z54Q685635750yZ066W7319Y66Q0Q0.html). Ett tips är att välja *Prenumerera* i övre högra hörnet på TimeEdit och sen klistra in länken i ditt kalenderprogram på mobilen.
+Kursens schema finns på [TimeEdit](https://cloud.timeedit.net/su/web/stud1/s.html?tab=3&type=courseevent&h=t&object=cevt_39044_VT2025&startdate=20241221&enddate=20250621&l=sv). Ett tips är att välja *Prenumerera* i övre högra hörnet på TimeEdit och sen klistra in länken i ditt kalenderprogram på mobilen.
 
 ### Formel- och tabellsamlingar
 
