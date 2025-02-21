@@ -570,17 +570,14 @@ Likformig fördelning, exempel
 \begin_layout Itemize
 Jag sitter på mitt kontor med en studsboll som jag kastar så hårt jag kan
  i väggen.
- Antag att bollen hamnar någonstans mellan längst till vänster och längst
- till höger med samma sannolikhet.
+ Låt oss anta att bollen hamnar någonstans mellan längst till vänster och
+ längst till höger med samma sannolikhet.
  Antag också att mitt kontor är 4 meter långt.
-\begin_inset VSpace medskip
-\end_inset
-
-
 \end_layout
 
 \begin_layout Itemize
-Bollens slutposition kan antas likformigt fördelad mellan 
+Bollens slutposition efter att ha studsat runt kan antas likformigt fördelad
+ mellan 
 \begin_inset Formula $0$
 \end_inset
 
@@ -589,10 +586,6 @@ Bollens slutposition kan antas likformigt fördelad mellan
 \end_inset
 
  (längst till höger).
-\begin_inset VSpace medskip
-\end_inset
-
-
 \end_layout
 
 \begin_layout Itemize
@@ -610,10 +603,6 @@ Hur långt från den vänstra väggen kommer bollen i genomsnitt att hamna och
 \end_inset
 
  meter.
-\begin_inset VSpace medskip
-\end_inset
-
-
 \end_layout
 
 \end_deeper
@@ -622,12 +611,11 @@ Slh att bollen hamnar som mest
 \begin_inset Formula $1$
 \end_inset
 
- meter från väggen? (CDF) 
-\begin_inset Formula $P(X\leq1)=\frac{1-a}{b-a}=\frac{1}{4}$
+ meter från väggen? 
+\begin_inset Formula $f(1)$
 \end_inset
 
-.
- Visa bild på tavlan! 
+
 \end_layout
 
 \end_deeper
