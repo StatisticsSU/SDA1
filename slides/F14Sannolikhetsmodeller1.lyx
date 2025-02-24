@@ -1800,8 +1800,8 @@ Experimentet resulterade i:
 
 \begin_inset Formula 
 \[
-\begin{aligned}\text{Slumpvariabel: } & X=\sum_{i=1}^{^{n}}Y_{i}\text{antalet vita bilar}.\\
-\text{Utfall}: & x=\sum_{i=1}^{^{n}}y_{i}=2\text{ vita bilar}.
+\begin{aligned}\text{Slumpvariabel: } & X=\sum_{i=1}^{^{n}}Y_{i}\text{ antalet vita bilar}.\\
+\text{Utfall: } & x=\sum_{i=1}^{^{n}}y_{i}=2\text{ vita bilar}.
 \end{aligned}
 \]
 
@@ -3138,11 +3138,11 @@ Vad är väntevärde och varians för antal bilar?
 
 \begin_layout Itemize
 Bara att använda formelbladet! 
-\begin_inset Formula $E(X)=np=5\times0.3=1,5$
+\begin_inset Formula $E(X)=np=5\times0.3=1.5$
 \end_inset
 
  och 
-\begin_inset Formula $V(X)=npq=5*0.3*0.7=1,05$
+\begin_inset Formula $V(X)=npq=5*0.3*0.7=1.05$
 \end_inset
 
 

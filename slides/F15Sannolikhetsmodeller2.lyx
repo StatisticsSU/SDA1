@@ -570,9 +570,8 @@ Likformig fördelning, exempel
 \begin_layout Itemize
 Jag sitter på mitt kontor med en studsboll som jag kastar så hårt jag kan
  i väggen.
- Antag att bollen hamnar någonstans mellan längst till vänster och längst
- till höger med samma sannolikhet.
- Antag också att mitt kontor är 4 meter långt.
+ Bollen hamnar någonstans mellan längst till vänster och längst till höger
+ med samma sannolikhet, och kontoret är 4 meter långt.
 \begin_inset VSpace medskip
 \end_inset
 
@@ -622,7 +621,7 @@ Slh att bollen hamnar som mest
 \begin_inset Formula $1$
 \end_inset
 
- meter från väggen? (CDF) 
+ meter från vänster vägg? (CDF) 
 \begin_inset Formula $P(X\leq1)=\frac{1-a}{b-a}=\frac{1}{4}$
 \end_inset
 
