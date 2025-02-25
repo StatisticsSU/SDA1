@@ -80,7 +80,7 @@ coltitle=black,center title}}
 \use_microtype false
 \use_dash_ligatures true
 \graphics default
-\default_output_format default
+\default_output_format pdf5
 \output_sync 0
 \bibtex_command default
 \index_command default
@@ -177,7 +177,7 @@ Föreläsning 16 - Samplingfördelning och konfidensintervall för en andel
 \begin_layout Author
 
 \series bold
-Oscar Oelrich
+Oskar Gustafsson
 \series default
  
 \begin_inset Newline newline
@@ -3016,8 +3016,8 @@ Credits
 
 \begin_layout Frame
 Dessa slides skapades för kursen statistik och dataanalys 1 av Mattias Villani
- HT 2023, och har modifierats av Oscar Oelrich för statistik och dataanalys
- 1 VT 2024.
+ HT 2023, och har modifierats av Oscar Oelrich VT 2024, och Oskar Gustafsson
+ för VT 2025.
 \end_layout
 
 \end_body
