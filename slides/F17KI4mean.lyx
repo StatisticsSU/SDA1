@@ -80,7 +80,7 @@ coltitle=black,center title}}
 \use_microtype false
 \use_dash_ligatures true
 \graphics default
-\default_output_format default
+\default_output_format pdf5
 \output_sync 0
 \bibtex_command default
 \index_command default
@@ -600,7 +600,7 @@ Varians/Standardavvikelse
 
 \begin_inset Formula 
 \begin{align*}
-Var(\bar{X}) & =Var\Big(\frac{1}{n}\sum_{i=1}^{n}X_{i}\Big)\overset{\mathrm{skalning}}{=}\left(\frac{1}{n}\right)^{2}Var\Big(\sum_{i=1}^{n}X_{i}\Big)\overset{\mathrm{summa}}{=}\frac{1}{n^{2}}\Big(\sum_{i=1}^{n}Var(X_{i})\Big)\\
+Var(\bar{X}) & =Var\Big(\frac{1}{n}\sum_{i=1}^{n}X_{i}\Big)\overset{\mathrm{skalning}}{=}\left(\frac{1}{n}\right)^{2}Var\Big(\sum_{i=1}^{n}X_{i}\Big)\overset{\mathrm{\text{summa, iid}}}{=}\frac{1}{n^{2}}\Big(\sum_{i=1}^{n}Var(X_{i})\Big)\\
  & \overset{\mathrm{modell}}{=}\frac{1}{n^{2}}\Big(\sum_{i=1}^{n}\sigma^{2}\Big)\overset{\mathrm{samma}\mathrm{\,termer}}{=}\frac{1}{n^{2}}\left(n\sigma^{2}\right)=\frac{\sigma^{2}}{n}
 \end{align*}
 
@@ -1594,7 +1594,7 @@ Normalfördelad population?
 \begin_inset Graphics
 	filename figs/SalmonEasternCanadaHist.pdf
 	lyxscale 40
-	scale 25
+	scale 20
 
 \end_inset
 
@@ -1602,7 +1602,7 @@ Normalfördelad population?
 \begin_inset Graphics
 	filename figs/SalmonEasternCanadaBoxplot.pdf
 	lyxscale 40
-	scale 25
+	scale 20
 
 \end_inset
 
