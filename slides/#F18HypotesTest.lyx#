@@ -2160,7 +2160,7 @@ Hypotestest andel
  Teststatistiska
 \begin_inset Formula 
 \[
-Z=\frac{\hat{p}-p_{0}}{SD(\hat{p})}=\frac{\hat{p}-p_{0}}{\sqrt{\frac{p_{0}q_{0}}{n}}}
+Z=\frac{\hat{p}-p_{0}}{SE(\hat{p})}=\frac{\hat{p}-p_{0}}{\sqrt{\frac{\hat{p}\hat{q}}{n}}}
 \]
 
 \end_inset
