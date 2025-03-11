@@ -81,7 +81,7 @@ coltitle=black,center title}}
 \use_microtype false
 \use_dash_ligatures true
 \graphics default
-\default_output_format default
+\default_output_format pdf5
 \output_sync 0
 \bibtex_command default
 \index_command default
@@ -178,7 +178,7 @@ Föreläsning 21 - Hypotestest och jämföra grupper
 \begin_layout Author
 
 \series bold
-Oscar Oelrich
+Oskar Gustafsson
 \series default
  
 \begin_inset Newline newline
@@ -682,6 +682,156 @@ status open
 
 \series bold
 \color orange
+Multipla test
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+\color blue
+Vid hypotestest på signifikansnivån 
+\begin_inset Formula $\alpha=0.05$
+\end_inset
+
+:
+\series default
+\color inherit
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\size small
+Vi förkastar 
+\begin_inset Formula $H_{0}$
+\end_inset
+
+ när 
+\begin_inset Formula $H_{0}$
+\end_inset
+
+ är sann (typ I fel) i snitt var 20:e gång.
+\size default
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\size small
+Det är alltså inte helt ovanligt.
+\size default
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+\color blue
+Om vi gör två oberoende hypotestest där 
+\begin_inset Formula $H_{0}$
+\end_inset
+
+ är sann?
+\series default
+\color inherit
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\size small
+Sannolikheten att det första inte förkastas (inget typ I fel) blir 
+\begin_inset Formula $P(\text{"inte fel"})=1-0.05=0.95$
+\end_inset
+
+.
+\size default
+
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Testar vi 2 gånger får vi
+\begin_inset Newline newline
+\end_inset
+
+
+\size footnotesize
+
+\begin_inset Formula $\begin{aligned}{\scriptstyle P(\text{"inte fel på första" och "inte fel på andra"})} & =\\
+{\scriptstyle P(\text{"inte fel på första"})}\times{\scriptstyle P(\text{"inte fel på andra"})} & =\\
+{\scriptstyle (1-0.05)^{2}=0.9025}
+\end{aligned}
+$
+\end_inset
+
+
+\size default
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+\color blue
+Signifikansnivån ändras när vi utför fler test!
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Detta bör man justera för, men inte på den här kursen.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
 Jämföra grupper - bekämpningsmedel i lax
 \begin_inset space \hspace{}
 \length 0.1cm
@@ -810,7 +960,7 @@ Grupp 2: Norge med
 \begin_inset Graphics
 	filename figs/SalmonNorwayHist.pdf
 	lyxscale 20
-	scale 26
+	scale 21
 
 \end_inset
 
@@ -818,7 +968,7 @@ Grupp 2: Norge med
 \begin_inset Graphics
 	filename figs/SalmonNorwayBoxplot.pdf
 	lyxscale 20
-	scale 26
+	scale 21
 
 \end_inset
 
@@ -1100,7 +1250,7 @@ Jämföra grupper - bekämpningsmedel i lax
 \begin_inset Graphics
 	filename figs/salmon_two_sample_t.png
 	lyxscale 50
-	scale 30
+	scale 20
 
 \end_inset
 
@@ -1252,7 +1402,11 @@ mäter samma
  personer
 \series default
 \color inherit
- vid två tillfällen:
+ (eller enheter) vid två tillfällen:
+\begin_inset VSpace medskip
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
@@ -1262,6 +1416,10 @@ Mätningar vid tidpunkt 1:
 
 .
  
+\begin_inset VSpace medskip
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
@@ -1270,6 +1428,10 @@ Mätningar vid tidpunkt 2:
 \end_inset
 
 .
+\begin_inset VSpace medskip
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
@@ -1280,6 +1442,10 @@ Beroende
 \series default
 \color inherit
  stickprov, med lika många observationer.
+\begin_inset VSpace medskip
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
@@ -1295,6 +1461,10 @@ differenser
 
 .
  
+\begin_inset VSpace medskip
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
@@ -1304,9 +1474,39 @@ differenser
 Differenserna ska vara oberoende
 \series default
 \color inherit
- mellan personer.
+ mellan mellan dom olika enheterna, men beroende mellan mätningarna hos
+ samma person tillåts.
+\begin_inset Newline newline
+\end_inset
+
+
 \end_layout
 
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator parbreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+\color orange
+K.i och hypotestest för parade grupper
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_deeper
 \begin_layout Itemize
 
 \series bold
@@ -1335,7 +1535,7 @@ SE(\bar{d})=\frac{s_{d}}{\sqrt{n}}
 
 \begin_inset Formula 
 \[
-\bar{d}\pm t_{0.025},n-1\cdot\frac{s_{d}}{\sqrt{n}}
+\bar{d}\pm t_{0.025,n-1}\cdot\frac{s_{d}}{\sqrt{n}}
 \]
 
 \end_inset
@@ -2175,6 +2375,9 @@ status open
 status open
 
 \begin_layout Plain Layout
+
+\series bold
+\color orange
 Credits
 \end_layout
 
@@ -2185,8 +2388,8 @@ Credits
 
 \begin_layout Frame
 Dessa slides skapades för kursen statistik och dataanalys 1 av Mattias Villani
- HT 2023, och har modifierats av Oscar Oelrich för statistik och dataanalys
- 1 VT 2024.
+ HT 2023, och har modifierats av Oscar Oelrich VT 2024, och Oskar Gustafsson
+ för VT 2025.
 \end_layout
 
 \begin_layout Frame
