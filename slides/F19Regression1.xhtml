@@ -1,0 +1,1827 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 plus MathML 2.0//EN" "http://www.w3.org/Math/DTD/mathml2/xhtml-math11-f.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="GENERATOR" content="LyX 2.3.6.1" />
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+<title>LyX Document</title>
+<style type='text/css'>
+/* Layout-provided Styles */
+div.title {
+font-weight: bold;
+font-size: xx-large;
+margin-bottom: 1ex;
+text-align: center;
+
+}
+div.plain_layout {
+text-align: left;
+
+}
+div.subtitle {
+font-weight: bold;
+font-size: large;
+margin-bottom: 1ex;
+text-align: center;
+
+}
+div.author {
+font-size: x-large;
+margin-top: 1.3ex;
+margin-bottom: 0.7ex;
+text-align: center;
+
+}
+div.institute {
+font-size: large;
+margin-top: 0.9ex;
+margin-bottom: 0.5ex;
+text-align: center;
+
+}
+div.standard {
+text-align: left;
+
+}
+div.frame {
+margin-top: 1ex;
+margin-bottom: 1ex;
+margin-left: 2ex;
+text-align: left;
+
+}
+span.frame_label {
+font-family: serif;
+font-size: x-large;
+
+}
+div.itemize {
+margin-top: 0.7ex;
+margin-bottom: 0.7ex;
+margin-left: 3ex;
+text-align: left;
+
+}
+div.enumerate {
+margin-top: 0.7ex;
+margin-bottom: 0.7ex;
+margin-left: 3ex;
+text-align: left;
+
+}
+div.subsubsection_ {
+font-family: serif;
+font-weight: bold;
+font-size: large;
+margin-top: 2ex;
+margin-bottom: 0.25ex;
+text-align: left;
+
+}
+div.Boxed {
+	border: solid thick black;
+	padding: 0.5ex;
+}
+
+
+</style>
+</head>
+<body dir="auto">
+<div class="title" id='magicparlabel-1'><span style='font-family:sans-serif;'>Statistik och Dataanalys I</span></div>
+<div class="subtitle" id='magicparlabel-10'><span style='font-family:sans-serif;'>Föreläsning 19 - Inferens i linjär regression - populationsmodell och samplingfördelning</span></div>
+<div class="author" id='magicparlabel-11'><b><span style='font-family:sans-serif;'>Oskar Gustafsson</span></b>
+<span style='font-family:sans-serif;'><br />
+
+<div style='height:0.2cm'></div><div style='height:1em'></div></span></div>
+<div class="institute" id='magicparlabel-16'><span style='font-family:sans-serif;'>Statistiska institutionen
+<br />
+
+Stockholms universitet</span></div>
+
+<div class="standard" id='magicparlabel-21'><span style='font-family:sans-serif;'><br />
+
+</span></div>
+
+<div class="frame" id='magicparlabel-22'><div class="frame_item"><span class="frame_label">Frame</span>
+<span style='font-family:sans-serif;'><!-- Output Error: Closing tag `div' when other tags are open, namely: -->
+<!-- Output Error: span -->
+</span></div>
+
+<div class="itemize" id='magicparlabel-27'><div class="itemize_item"><span class="itemize_label">•</span>
+<b><span style='font-family:sans-serif;'>Inferens i enkel linjär regression<div style='height:5ex'></div></span></b></div>
+<div class="itemize_item"><span class="itemize_label">•</span>
+<b><span style='font-family:sans-serif;'>Regression som sannolikhetsmodell<div style='height:5ex'></div></span></b></div>
+<div class="itemize_item"><span class="itemize_label">•</span>
+<b><span style='font-family:sans-serif;'>Samplingfördelning regression<div style='height:5ex'></div></span></b></div>
+</div>
+</div>
+
+<div class="standard" id='magicparlabel-30'><span style='font-family:sans-serif;'><br />
+
+</span></div>
+
+<div class="frame" id='magicparlabel-31'><div class="frame_item"><span class="frame_label">Frame</span>
+<span style='font-family:sans-serif;'> </span></div>
+<div class="standard" style='text-align: center;' id='magicparlabel-36'><span style='font-family:sans-serif;'><img style='width:40%;' src='1C__Users_oskarg_Box_Sync_Undervisning_SDA1_VT2025_SDA1_slides_figs_healthdata_text.png' alt='image: 1C__Users_oskarg_Box_Sync_Undervisning_SDA1_VT2025_SDA1_slides_figs_healthdata_text.png' />
+</span></div>
+
+
+</div>
+
+<div class="standard" id='magicparlabel-42'><span style='font-family:sans-serif;'><br />
+
+</span></div>
+
+<div class="frame" id='magicparlabel-43'><div class="frame_item"><span class="frame_label">Frame</span>
+<span style='font-family:sans-serif;'><!-- Output Error: Closing tag `div' when other tags are open, namely: -->
+<!-- Output Error: span -->
+</span></div>
+<div class="standard" style='text-align: center;' id='magicparlabel-48'><span style='font-family:sans-serif;'><img style='width:40%;' src='2C__Users_oskarg_Box_Sync_Undervisning_SDA1_VT2025_SDA1_slides_figs_healthdata_text_fit.png' alt='image: 2C__Users_oskarg_Box_Sync_Undervisning_SDA1_VT2025_SDA1_slides_figs_healthdata_text_fit.png' />
+</span></div>
+</div>
+
+<div class="standard" id='magicparlabel-49'><span style='font-family:sans-serif;'><br />
+
+</span></div>
+
+<div class="frame" id='magicparlabel-50'><div class="frame_item"><span class="frame_label">Frame</span>
+<span style='font-family:sans-serif;'><!-- Output Error: Closing tag `div' when other tags are open, namely: -->
+<!-- Output Error: span -->
+</span></div>
+
+<div class="itemize" id='magicparlabel-55'><div class="itemize_item"><span class="itemize_label">•</span>
+<span style='font-family:sans-serif;'>Skattad regressionslinje hälsobudget (<math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi>x</mi>
+ </mrow></math>) <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mo> &rarr; </mo>
+ </mrow></math> livslängd (<math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi>y</mi>
+ </mrow></math>)<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+ <mtable>
+  <mtr>
+   <mtd>
+    <mstyle mathvariant='normal'>
+     <mrow><mi>l</mi><mi>i</mi><mi>f</mi><mi>e</mi><mi>s</mi><mi>p</mi><mi>a</mi><mi>n</mi>
+     </mrow>
+    </mstyle>
+   </mtd>
+   <mtd>
+    <mrow><mo>=</mo><mn>76.035</mn><mo>+</mo><mn>1.03757</mn><mo> &sdot; </mo>
+     <mstyle mathvariant='normal'>
+      <mstyle mathvariant='normal'>
+       <mrow><mi>s</mi><mi>p</mi><mi>e</mi><mi>n</mi><mi>d</mi><mi>i</mi><mi>n</mi><mi>g</mi>
+       </mrow>
+      </mstyle>
+     </mstyle>
+    </mrow>
+   </mtd>
+  </mtr>
+  <mtr>
+   <mtd><mrow/>
+   </mtd>
+   <mtd><mrow/>
+   </mtd>
+  </mtr>
+  <mtr>
+   <mtd>
+    <mover>
+     <mrow><mi>y</mi>
+     </mrow><mo stretchy="true">&circ;</mo>
+    </mover>
+   </mtd>
+   <mtd>
+    <mrow><mo>=</mo><munder accent='false'>
+     <munder>
+      <mrow><mn>76.035</mn>
+      </mrow><mo stretchy="true">&UnderBrace;</mo>
+     </munder>
+     <msub>
+      <mrow><mi>b</mi>
+      </mrow>
+      <mrow><mn>0</mn>
+      </mrow>
+     </msub></munder><mo>+</mo><munder accent='false'>
+     <munder>
+      <mrow><mn>1.038</mn>
+      </mrow><mo stretchy="true">&UnderBrace;</mo>
+     </munder>
+     <msub>
+      <mrow><mi>b</mi>
+      </mrow>
+      <mrow><mn>1</mn>
+      </mrow>
+     </msub></munder><mo> &sdot; </mo><mi>x</mi>
+    </mrow>
+   </mtd>
+  </mtr>
+ </mtable></math><div style='height:1ex'></div></span></div>
+<div class="itemize_item"><span class="itemize_label">•</span>
+<span style='font-family:sans-serif;'>Tolkning <b>intercept <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <msub>
+   <mrow><mi>b</mi>
+   </mrow>
+   <mrow><mn>0</mn>
+   </mrow>
+  </msub>
+ </mrow></math></b>: <b>genomsnittlig</b> livslängd är ca <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mn>76</mn>
+ </mrow></math> år om <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <mstyle mathvariant='normal'>
+    <mrow><mi>s</mi><mi>p</mi><mi>e</mi><mi>n</mi><mi>d</mi><mi>i</mi><mi>n</mi><mi>g</mi>
+    </mrow>
+   </mstyle><mo>=</mo><mn>0</mn>
+  </mrow>
+ </mrow></math>.<div style='height:5ex'></div></span></div>
+<div class="itemize_item"><span class="itemize_label">•</span>
+<span style='font-family:sans-serif;'>Tolkning <b>lutning <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <msub>
+   <mrow><mi>b</mi>
+   </mrow>
+   <mrow><mn>1</mn>
+   </mrow>
+  </msub>
+ </mrow></math></b>: <b>genomsnittlig</b> livslängd ökar med <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mn>1.038</mn>
+ </mrow></math> år om </span><span style='font-family:monospace;'>spending</span><span style='font-family:sans-serif;'> ökar med 1 (tusen US dollar per capita).</span></div>
+</div>
+</div>
+
+<div class="standard" id='magicparlabel-58'><span style='font-family:sans-serif;'><br />
+
+</span></div>
+
+<div class="frame" id='magicparlabel-59'><div class="frame_item"><span class="frame_label">Frame</span>
+<span style='font-family:sans-serif;'><!-- Output Error: Closing tag `div' when other tags are open, namely: -->
+<!-- Output Error: span -->
+</span></div>
+<div class="standard" style='text-align: center;' id='magicparlabel-64'><span style='font-family:sans-serif;'><img style='width:36%;' src='3C__Users_oskarg_Box_Sync_Undervisning_SDA1_VT2025_SDA1_slides_figs_healthdata_text_fit_USA.png' alt='image: 3C__Users_oskarg_Box_Sync_Undervisning_SDA1_VT2025_SDA1_slides_figs_healthdata_text_fit_USA.png' />
+</span></div>
+
+<div class="itemize" id='magicparlabel-65'><div class="itemize_item"><span class="itemize_label">•</span>
+<span style='font-family:sans-serif;'>Med USA<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <mstyle mathvariant='normal'>
+    <mrow><mi>l</mi><mi>i</mi><mi>f</mi><mi>e</mi><mi>s</mi><mi>p</mi><mi>a</mi><mi>n</mi>
+    </mrow>
+   </mstyle><mo>=</mo><mn>76.035</mn><mo>+</mo><mn>1.038</mn><mo> &sdot; </mo>
+   <mstyle mathvariant='normal'>
+    <mstyle mathvariant='normal'>
+     <mrow><mi>s</mi><mi>p</mi><mi>e</mi><mi>n</mi><mi>d</mi><mi>i</mi><mi>n</mi><mi>g</mi>
+     </mrow>
+    </mstyle>
+   </mstyle>
+  </mrow>
+ </mrow></math></span></div>
+<div class="itemize_item"><span class="itemize_label">•</span>
+<span style='font-family:sans-serif;'>Utan USA<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <mstyle mathvariant='normal'>
+    <mrow><mi>l</mi><mi>i</mi><mi>f</mi><mi>e</mi><mi>s</mi><mi>p</mi><mi>a</mi><mi>n</mi>
+    </mrow>
+   </mstyle><mo>=</mo><mn>74.164</mn><mo>+</mo><mn>1.763</mn><mo> &sdot; </mo>
+   <mstyle mathvariant='normal'>
+    <mstyle mathvariant='normal'>
+     <mrow><mi>s</mi><mi>p</mi><mi>e</mi><mi>n</mi><mi>d</mi><mi>i</mi><mi>n</mi><mi>g</mi>
+     </mrow>
+    </mstyle>
+   </mstyle>
+  </mrow>
+ </mrow></math></span></div>
+</div>
+</div>
+
+<div class="standard" id='magicparlabel-67'><span style='font-family:sans-serif;'><br />
+
+</span></div>
+
+<div class="frame" id='magicparlabel-68'><div class="frame_item"><span class="frame_label">Frame</span>
+<span style='font-family:sans-serif;'><!-- Output Error: Closing tag `div' when other tags are open, namely: -->
+<!-- Output Error: span -->
+</span></div>
+
+<div class="itemize" id='magicparlabel-73'><div class="itemize_item"><span class="itemize_label">•</span>
+<b><span style='font-family:sans-serif;'>Anpassat värde</span></b><span style='font-family:sans-serif;'>/<b>prediktion</b> för <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi>i</mi>
+ </mrow></math>:te observationen<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow>
+     <mover>
+      <mrow><mi>y</mi>
+      </mrow><mo stretchy="true">&circ;</mo>
+     </mover>
+    </mrow>
+    <mrow><mi>i</mi>
+    </mrow>
+   </msub><mo>=</mo>
+   <msub>
+    <mrow><mi>b</mi>
+    </mrow>
+    <mrow><mn>0</mn>
+    </mrow>
+   </msub><mo>+</mo>
+   <msub>
+    <mrow><mi>b</mi>
+    </mrow>
+    <mrow><mn>1</mn>
+    </mrow>
+   </msub>
+   <msub>
+    <mrow><mi>x</mi>
+    </mrow>
+    <mrow><mi>i</mi>
+    </mrow>
+   </msub>
+  </mrow>
+ </mrow></math></span></div>
+<div class="itemize_item"><span class="itemize_label">•</span>
+<b><span style='font-family:sans-serif;'>Residual</span></b><span style='font-family:sans-serif;'><math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mi>e</mi>
+    </mrow>
+    <mrow><mi>i</mi>
+    </mrow>
+   </msub><mo>=</mo>
+   <msub>
+    <mrow><mi>y</mi>
+    </mrow>
+    <mrow><mi>i</mi>
+    </mrow>
+   </msub><mo>-</mo>
+   <msub>
+    <mrow>
+     <mover>
+      <mrow><mi>y</mi>
+      </mrow><mo stretchy="true">&circ;</mo>
+     </mover>
+    </mrow>
+    <mrow><mi>i</mi>
+    </mrow>
+   </msub>
+  </mrow>
+ </mrow></math></span></div>
+<div class="itemize_item"><span class="itemize_label">•</span>
+<b><span style='font-family:sans-serif;'>Minsta kvadrat-skattning</span></b><span style='font-family:sans-serif;'>: välj <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <msub>
+   <mrow><mi>b</mi>
+   </mrow>
+   <mrow><mn>0</mn>
+   </mrow>
+  </msub>
+ </mrow></math> och <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <msub>
+   <mrow><mi>b</mi>
+   </mrow>
+   <mrow><mn>1</mn>
+   </mrow>
+  </msub>
+ </mrow></math> som minimerar<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mi>S</mi><mi>S</mi><mi>E</mi><mo>=</mo>
+   <msubsup>
+    <mrow><mo> &sum; </mo>
+    </mrow>
+    <mrow>
+     <mrow><mi>i</mi><mo>=</mo><mn>1</mn>
+     </mrow>
+    </mrow>
+    <mrow><mi>n</mi>
+    </mrow>
+   </msubsup>
+   <msubsup>
+    <mrow><mi>e</mi>
+    </mrow>
+    <mrow><mi>i</mi>
+    </mrow>
+    <mrow><mn>2</mn>
+    </mrow>
+   </msubsup><mo>=</mo>
+   <msubsup>
+    <mrow><mo> &sum; </mo>
+    </mrow>
+    <mrow>
+     <mrow><mi>i</mi><mo>=</mo><mn>1</mn>
+     </mrow>
+    </mrow>
+    <mrow><mi>n</mi>
+    </mrow>
+   </msubsup>
+   <msup>
+    <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+     <mrow>
+      <msub>
+       <mrow><mi>y</mi>
+       </mrow>
+       <mrow><mi>i</mi>
+       </mrow>
+      </msub><mo>-</mo>
+      <msub>
+       <mrow>
+        <mover>
+         <mrow><mi>y</mi>
+         </mrow><mo stretchy="true">&circ;</mo>
+        </mover>
+       </mrow>
+       <mrow><mi>i</mi>
+       </mrow>
+      </msub>
+     </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+    </mrow>
+    <mrow><mn>2</mn>
+    </mrow>
+   </msup><mo>=</mo>
+   <msubsup>
+    <mrow><mo> &sum; </mo>
+    </mrow>
+    <mrow>
+     <mrow><mi>i</mi><mo>=</mo><mn>1</mn>
+     </mrow>
+    </mrow>
+    <mrow><mi>n</mi>
+    </mrow>
+   </msubsup>
+   <msup>
+    <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+     <mrow>
+      <msub>
+       <mrow><mi>y</mi>
+       </mrow>
+       <mrow><mi>i</mi>
+       </mrow>
+      </msub><mo>-</mo>
+      <msub>
+       <mrow><mi>b</mi>
+       </mrow>
+       <mrow><mn>0</mn>
+       </mrow>
+      </msub><mo>-</mo>
+      <msub>
+       <mrow><mi>b</mi>
+       </mrow>
+       <mrow><mn>1</mn>
+       </mrow>
+      </msub>
+      <msub>
+       <mrow><mi>x</mi>
+       </mrow>
+       <mrow><mi>i</mi>
+       </mrow>
+      </msub>
+     </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+    </mrow>
+    <mrow><mn>2</mn>
+    </mrow>
+   </msup>
+  </mrow>
+ </mrow></math></span></div>
+</div>
+<div class="standard" style='text-align: center;' id='magicparlabel-76'><span style='font-family:sans-serif;'><img style='width:12%;' src='4C__Users_oskarg_Box_Sync_Undervisning_SDA1_VT2025_SDA1_slides_figs_LeastSquaresPluto1.png' alt='image: 4C__Users_oskarg_Box_Sync_Undervisning_SDA1_VT2025_SDA1_slides_figs_LeastSquaresPluto1.png' />
+&emsp;&emsp;<img style='width:12%;' src='5C__Users_oskarg_Box_Sync_Undervisning_SDA1_VT2025_SDA1_slides_figs_LeastSquaresPluto3.png' alt='image: 5C__Users_oskarg_Box_Sync_Undervisning_SDA1_VT2025_SDA1_slides_figs_LeastSquaresPluto3.png' />
+
+<br />
+
+</span></div>
+</div>
+
+<div class="standard" id='magicparlabel-77'><span style='font-family:sans-serif;'><br />
+
+</span></div>
+
+<div class="frame" id='magicparlabel-78'><div class="frame_item"><span class="frame_label">Frame</span>
+<span style='font-family:sans-serif;'><!-- Output Error: Closing tag `div' when other tags are open, namely: -->
+<!-- Output Error: span -->
+</span></div>
+<div class="standard" style='text-align: center;' id='magicparlabel-83'><span style='font-family:sans-serif;'><img style='width:35%;' src='6C__Users_oskarg_Box_Sync_Undervisning_SDA1_VT2025_SDA1_slides_figs_regression_in_R.png' alt='image: 6C__Users_oskarg_Box_Sync_Undervisning_SDA1_VT2025_SDA1_slides_figs_regression_in_R.png' />
+</span></div>
+</div>
+
+<div class="standard" style='text-align: left;' id='magicparlabel-84'><span style='font-family:sans-serif;'><br />
+
+</span></div>
+
+<div class="frame" id='magicparlabel-85'><div class="frame_item"><span class="frame_label">Frame</span>
+<span style='font-family:sans-serif;'><!-- Output Error: Closing tag `div' when other tags are open, namely: -->
+<!-- Output Error: span -->
+</span></div>
+
+<div class="itemize" id='magicparlabel-90'><div class="itemize_item"><span class="itemize_label">•</span>
+<b><span style='font-family:sans-serif;'>Residualvariansen </span></b><span style='font-family:sans-serif;'>- hur bra regressionslinjen passar data:<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msubsup>
+    <mrow><mi>s</mi>
+    </mrow>
+    <mrow><mi>e</mi>
+    </mrow>
+    <mrow><mn>2</mn>
+    </mrow>
+   </msubsup><mo>=</mo>
+   <mfrac>
+    <mrow>
+     <mrow>
+      <msubsup>
+       <mrow><mo> &sum; </mo>
+       </mrow>
+       <mrow>
+        <mrow><mi>i</mi><mo>=</mo><mn>1</mn>
+        </mrow>
+       </mrow>
+       <mrow><mi>n</mi>
+       </mrow>
+      </msubsup><mo>(</mo>
+      <msub>
+       <mrow><mi>y</mi>
+       </mrow>
+       <mrow><mi>i</mi>
+       </mrow>
+      </msub><mo>-</mo>
+      <msub>
+       <mrow>
+        <mover>
+         <mrow><mi>y</mi>
+         </mrow><mo stretchy="true">&circ;</mo>
+        </mover>
+       </mrow>
+       <mrow><mi>i</mi>
+       </mrow>
+      </msub>
+      <msup>
+       <mrow><mo>)</mo>
+       </mrow>
+       <mrow><mn>2</mn>
+       </mrow>
+      </msup>
+     </mrow>
+    </mrow>
+    <mrow>
+     <mrow><mi>n</mi><mo>-</mo><mn>2</mn>
+     </mrow>
+    </mrow>
+   </mfrac>
+  </mrow>
+ </mrow></math></span></div>
+<div class="itemize_item"><span class="itemize_label">•</span>
+<span style='font-family:sans-serif;'>Kom ihåg: stickprovsvariansen delar med <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mi>n</mi><mo>-</mo><mn>1</mn>
+  </mrow>
+ </mrow></math> eftersom vi måste beräkna <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mover>
+   <mrow><mi>y</mi>
+   </mrow><mo stretchy="true">&OverBar;</mo>
+  </mover>
+ </mrow></math> först:<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msubsup>
+    <mrow><mi>s</mi>
+    </mrow>
+    <mrow><mi>y</mi>
+    </mrow>
+    <mrow><mn>2</mn>
+    </mrow>
+   </msubsup><mo>=</mo>
+   <mfrac>
+    <mrow>
+     <mrow>
+      <msubsup>
+       <mrow><mo> &sum; </mo>
+       </mrow>
+       <mrow>
+        <mrow><mi>i</mi><mo>=</mo><mn>1</mn>
+        </mrow>
+       </mrow>
+       <mrow><mi>n</mi>
+       </mrow>
+      </msubsup><mo>(</mo>
+      <msub>
+       <mrow><mi>y</mi>
+       </mrow>
+       <mrow><mi>i</mi>
+       </mrow>
+      </msub><mo>-</mo>
+      <mover>
+       <mrow><mi>y</mi>
+       </mrow><mo stretchy="true">&OverBar;</mo>
+      </mover>
+      <msup>
+       <mrow><mo>)</mo>
+       </mrow>
+       <mrow><mn>2</mn>
+       </mrow>
+      </msup>
+     </mrow>
+    </mrow>
+    <mrow>
+     <mrow><mi>n</mi><mo>-</mo><mn>1</mn>
+     </mrow>
+    </mrow>
+   </mfrac>
+  </mrow>
+ </mrow></math></span></div>
+<div class="itemize_item"><span class="itemize_label">•</span>
+<span style='font-family:sans-serif;'>Residualvariansen delar med <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mi>n</mi><mo>-</mo><mn>2</mn>
+  </mrow>
+ </mrow></math> eftersom vi måste beräkna både <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <msub>
+   <mrow><mi>b</mi>
+   </mrow>
+   <mrow><mn>0</mn>
+   </mrow>
+  </msub>
+ </mrow></math> och <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <msub>
+   <mrow><mi>b</mi>
+   </mrow>
+   <mrow><mn>1</mn>
+   </mrow>
+  </msub>
+ </mrow></math> först. <b>Väntevärdesriktig</b>. <div style='height:5ex'></div></span></div>
+<div class="itemize_item"><span class="itemize_label">•</span>
+<b><span style='font-family:sans-serif;'>Residualstandardavvikelsen</span></b><span style='font-family:sans-serif;'> (</span><span style='font-family:monospace;'><span style='font-size:x-small;'>residual standard error</span><span style='font-family:sans-serif;'> i R</span>)<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mi>s</mi>
+    </mrow>
+    <mrow><mi>e</mi>
+    </mrow>
+   </msub><mo>=</mo>
+   <msqrt>
+    <msubsup>
+     <mrow><mi>s</mi>
+     </mrow>
+     <mrow><mi>e</mi>
+     </mrow>
+     <mrow><mn>2</mn>
+     </mrow>
+    </msubsup>
+   </msqrt>
+  </mrow>
+ </mrow></math></span></div>
+<div class="itemize_item"><span class="itemize_label">•</span>
+<span style='font-family:sans-serif;'>Hälsobudgetdata<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msubsup>
+    <mrow><mi>s</mi>
+    </mrow>
+    <mrow><mi>e</mi>
+    </mrow>
+    <mrow><mn>2</mn>
+    </mrow>
+   </msubsup><mo>=</mo>
+   <mfrac>
+    <mrow><mn>76.056</mn>
+    </mrow>
+    <mrow>
+     <mrow><mn>29</mn><mo>-</mo><mn>2</mn>
+     </mrow>
+    </mrow>
+   </mfrac><mo> &ap; </mo><mn>2.817</mn><mspace width="20px" /><mspace width="20px" /><mspace width="20px" />
+   <msub>
+    <mrow><mi>s</mi>
+    </mrow>
+    <mrow><mi>e</mi>
+    </mrow>
+   </msub><mo>=</mo>
+   <msqrt><mn>2.817</mn>
+   </msqrt><mo> &ap; </mo><mn>1.678</mn>
+   <mstyle mathvariant='normal'>
+    <mstyle mathvariant='normal'>
+     <mrow>&nbsp;<mi>å</mi><mi>r</mi>
+     </mrow>
+    </mstyle>
+   </mstyle>
+  </mrow>
+ </mrow></math></span></div>
+</div>
+</div>
+
+<div class="standard" style='text-align: left;' id='magicparlabel-95'><span style='font-family:sans-serif;'><br />
+
+</span></div>
+
+<div class="frame" id='magicparlabel-96'><div class="frame_item"><span class="frame_label">Frame</span>
+<span style='font-family:sans-serif;'><!-- Output Error: Closing tag `div' when other tags are open, namely: -->
+<!-- Output Error: span -->
+</span></div>
+
+<div class="itemize" id='magicparlabel-101'><div class="itemize_item"><span class="itemize_label">•</span>
+<b><span style='font-family:sans-serif;'>Populationsmodell</span></b><span style='font-family:sans-serif;'> för enkel regression:<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mi>Y</mi><mo>=</mo>
+   <msub>
+    <mrow><mi> &beta; </mi>
+    </mrow>
+    <mrow><mn>0</mn>
+    </mrow>
+   </msub><mo>+</mo>
+   <msub>
+    <mrow><mi> &beta; </mi>
+    </mrow>
+    <mrow><mn>1</mn>
+    </mrow>
+   </msub><mi>x</mi><mo>+</mo><mi> &epsiv; </mi><mo>,</mo><mspace width="20px" /><mi> &epsiv; </mi><mo> &sim; </mo><mi>N</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+   <mrow><mn>0</mn><mo>,</mo>
+    <msubsup>
+     <mrow><mi> &sigma; </mi>
+     </mrow>
+     <mrow><mi> &epsiv; </mi>
+     </mrow>
+     <mrow><mn>2</mn>
+     </mrow>
+    </msubsup>
+   </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+  </mrow>
+ </mrow></math></span></div>
+<div class="itemize_item"><span class="itemize_label">•</span>
+<span style='font-family:sans-serif;'><math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <msub>
+   <mrow><mi> &beta; </mi>
+   </mrow>
+   <mrow><mn>0</mn>
+   </mrow>
+  </msub>
+ </mrow></math> är interceptet i populationen/modellen.<div style='height:1ex'></div></span></div>
+<div class="itemize_item"><span class="itemize_label">•</span>
+<span style='font-family:sans-serif;'><math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <msub>
+   <mrow><mi> &beta; </mi>
+   </mrow>
+   <mrow><mn>1</mn>
+   </mrow>
+  </msub>
+ </mrow></math> är lutningen på regressionslinjen i populationen.<div style='height:1ex'></div></span></div>
+<div class="itemize_item"><span class="itemize_label">•</span>
+<b><span style='font-family:sans-serif;'>Regressionlinjen</span></b><span style='font-family:sans-serif;'> i populationen är ett <b>betingat väntevärde</b>:<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mi>E</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+   <mrow><mi>Y</mi><mi> &verbar; </mi><mi>x</mi>
+   </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo>=</mo>
+   <msub>
+    <mrow><mi> &beta; </mi>
+    </mrow>
+    <mrow><mn>0</mn>
+    </mrow>
+   </msub><mo>+</mo>
+   <msub>
+    <mrow><mi> &beta; </mi>
+    </mrow>
+    <mrow><mn>1</mn>
+    </mrow>
+   </msub><mi>x</mi>
+  </mrow>
+ </mrow></math></span></div>
+<div class="itemize_item"><span class="itemize_label">•</span>
+<span style='font-family:sans-serif;'><math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <msub>
+   <mrow><mi> &beta; </mi>
+   </mrow>
+   <mrow><mn>1</mn>
+   </mrow>
+  </msub>
+ </mrow></math> : hur <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi>Y</mi>
+ </mrow></math> förändras <b>i genomsnitt</b> när <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi>x</mi>
+ </mrow></math> ökar med en enhet.<div style='height:1ex'></div></span></div>
+<div class="itemize_item"><span class="itemize_label">•</span>
+<span style='font-family:sans-serif;'>&ldquo;i genomsnitt&rdquo; = (betingat) väntevärde.<div style='height:1ex'></div></span></div>
+<div class="itemize_item"><span class="itemize_label">•</span>
+<span style='font-family:sans-serif;'>Responsvariabeln <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi>y</mi>
+ </mrow></math> kommer avvika från populationens regressionslinje med en <b>slumpmässig &ldquo;felterm&rdquo; <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi> &epsiv; </mi>
+ </mrow></math></b>.<div style='height:1ex'></div></span></div>
+</div>
+</div>
+
+<div class="standard" id='magicparlabel-108'><span style='font-family:sans-serif;'><br />
+
+</span></div>
+
+<div class="frame" id='magicparlabel-109'><div class="frame_item"><span class="frame_label">Frame</span>
+<span style='font-family:sans-serif;'><!-- Output Error: Closing tag `div' when other tags are open, namely: -->
+<!-- Output Error: span -->
+</span></div>
+<div class="standard" style='text-align: center;' id='magicparlabel-114'><span style='font-family:sans-serif;'><img style='width:45%;' src='7C__Users_oskarg_Box_Sync_Undervisning_SDA1_VT2025_SDA1_slides_figs_regdensities.png' alt='image: 7C__Users_oskarg_Box_Sync_Undervisning_SDA1_VT2025_SDA1_slides_figs_regdensities.png' />
+</span></div>
+</div>
+
+<div class="standard" id='magicparlabel-115'><span style='font-family:sans-serif;'><br />
+
+</span></div>
+
+<div class="frame" id='magicparlabel-116'><div class="frame_item"><span class="frame_label">Frame</span>
+<span style='font-family:sans-serif;'><!-- Output Error: Closing tag `div' when other tags are open, namely: -->
+<!-- Output Error: span -->
+</span></div>
+
+<div class="itemize" id='magicparlabel-121'><div class="itemize_item"><span class="itemize_label">•</span>
+<b><span style='font-family:sans-serif;'>Populationsmodell</span></b><span style='font-family:sans-serif;'> för hela stickprovet:<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mi>Y</mi>
+    </mrow>
+    <mrow><mi>i</mi>
+    </mrow>
+   </msub><mo>=</mo>
+   <msub>
+    <mrow><mi> &beta; </mi>
+    </mrow>
+    <mrow><mn>0</mn>
+    </mrow>
+   </msub><mo>+</mo>
+   <msub>
+    <mrow><mi> &beta; </mi>
+    </mrow>
+    <mrow><mn>1</mn>
+    </mrow>
+   </msub>
+   <msub>
+    <mrow><mi>x</mi>
+    </mrow>
+    <mrow><mi>i</mi>
+    </mrow>
+   </msub><mo>+</mo>
+   <msub>
+    <mrow><mi> &epsiv; </mi>
+    </mrow>
+    <mrow><mi>i</mi>
+    </mrow>
+   </msub><mo>,</mo><mspace width="20px" />
+   <msub>
+    <mrow><mi> &epsiv; </mi>
+    </mrow>
+    <mrow><mi>i</mi>
+    </mrow>
+   </msub><mo> &sim; </mo><mi>N</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+   <mrow><mn>0</mn><mo>,</mo>
+    <msub>
+     <mrow><mi> &sigma; </mi>
+     </mrow>
+     <mrow><mi> &epsiv; </mi>
+     </mrow>
+    </msub>
+   </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+  </mrow>
+ </mrow></math><div style='height:1ex'></div></span></div>
+<div class="itemize_item"><span class="itemize_label">•</span>
+<b><span style='font-family:sans-serif;'>Stickprov/datamaterial</span></b><span style='font-family:sans-serif;'> med <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi>n</mi>
+ </mrow></math> observationspar <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+   <mrow>
+    <msub>
+     <mrow><mi>y</mi>
+     </mrow>
+     <mrow><mn>1</mn>
+     </mrow>
+    </msub><mo>,</mo>
+    <msub>
+     <mrow><mi>x</mi>
+     </mrow>
+     <mrow><mn>1</mn>
+     </mrow>
+    </msub>
+   </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo>,</mo>
+   <mi>&hellip;
+   </mi><mo>,</mo><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+   <mrow>
+    <msub>
+     <mrow><mi>y</mi>
+     </mrow>
+     <mrow><mi>n</mi>
+     </mrow>
+    </msub><mo>,</mo>
+    <msub>
+     <mrow><mi>x</mi>
+     </mrow>
+     <mrow><mi>n</mi>
+     </mrow>
+    </msub>
+   </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+  </mrow>
+ </mrow></math><div style='height:1ex'></div></span></div>
+<div class="itemize_item"><span class="itemize_label">•</span>
+<span style='font-family:sans-serif;'>I regression antar vi att <b><math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi>x</mi>
+ </mrow></math>-variabeln inte är slumpmässig</b>. </span></div>
+</div>
+</div>
+
+<div class="standard" id='magicparlabel-124'><span style='font-family:sans-serif;'><br />
+
+</span></div>
+
+<div class="frame" id='magicparlabel-125'><div class="frame_item"><span class="frame_label">Frame</span>
+<span style='font-family:sans-serif;'><!-- Output Error: Closing tag `div' when other tags are open, namely: -->
+<!-- Output Error: span -->
+</span></div>
+
+<div class="itemize" id='magicparlabel-130'><div class="itemize_item"><span class="itemize_label">•</span>
+<b><span style='font-family:sans-serif;'>Residualer</span></b><span style='font-family:sans-serif;'>:<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mi>e</mi>
+    </mrow>
+    <mrow><mi>i</mi>
+    </mrow>
+   </msub><mo>=</mo>
+   <msub>
+    <mrow><mi>y</mi>
+    </mrow>
+    <mrow><mi>i</mi>
+    </mrow>
+   </msub><mo>-</mo>
+   <msub>
+    <mrow>
+     <mover>
+      <mrow><mi>y</mi>
+      </mrow><mo stretchy="true">&circ;</mo>
+     </mover>
+    </mrow>
+    <mrow><mi>i</mi>
+    </mrow>
+   </msub>
+  </mrow>
+ </mrow></math></span></div>
+</div>
+<div class="standard" style='text-align: center;' id='magicparlabel-131'><span style='font-family:sans-serif;'><img style='width:110%;' src='8C__Users_oskarg_Box_Sync_Undervisning_SDA1_VT2025_SDA1_slides_figs_epsilon_vs_residual.png' alt='image: 8C__Users_oskarg_Box_Sync_Undervisning_SDA1_VT2025_SDA1_slides_figs_epsilon_vs_residual.png' />
+</span></div>
+
+<div class="itemize" id='magicparlabel-132'><div class="itemize_item"><span class="itemize_label">•</span>
+<span style='font-family:sans-serif;'>Mer om detta på SDA2.</span></div>
+</div>
+</div>
+
+<div class="standard" id='magicparlabel-133'><span style='font-family:sans-serif;'><br />
+
+</span></div>
+
+<div class="frame" id='magicparlabel-134'><div class="frame_item"><span class="frame_label">Frame</span>
+<span style='font-family:sans-serif;'><!-- Output Error: Closing tag `div' when other tags are open, namely: -->
+<!-- Output Error: span -->
+</span></div>
+
+<div class="enumerate" id='magicparlabel-139'><div class="enumerate_item"><span class="enumerate_label">1.</span>
+<span style='font-family:sans-serif;'>Sambandet mellan <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi>y</mi>
+ </mrow></math> och <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi>x</mi>
+ </mrow></math> är <b>linjärt</b><math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mi>E</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+   <mrow><mi>Y</mi><mi> &verbar; </mi><mi>x</mi>
+   </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo>=</mo>
+   <msub>
+    <mrow><mi> &beta; </mi>
+    </mrow>
+    <mrow><mn>0</mn>
+    </mrow>
+   </msub><mo>+</mo>
+   <msub>
+    <mrow><mi> &beta; </mi>
+    </mrow>
+    <mrow><mn>1</mn>
+    </mrow>
+   </msub><mi>x</mi>
+  </mrow>
+ </mrow></math></span></div>
+<div class="enumerate_item"><span class="enumerate_label">2.</span>
+<b><span style='font-family:sans-serif;'>Feltermerna</span></b><span style='font-family:sans-serif;'> <b><math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <msub>
+   <mrow><mi> &epsiv; </mi>
+   </mrow>
+   <mrow><mi>i</mi>
+   </mrow>
+  </msub>
+ </mrow></math> är oberoende</b> <div style='height:5ex'></div><div style='height:5ex'></div></span></div>
+<div class="enumerate_item"><span class="enumerate_label">3.</span>
+<span style='font-family:sans-serif;'>Feltermerna har <b>samma standardavvikelse</b> (homoskedastisk)<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mi>S</mi><mi>D</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+   <msub>
+    <mrow><mi> &epsiv; </mi>
+    </mrow>
+    <mrow><mi>i</mi>
+    </mrow>
+   </msub>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo>=</mo>
+   <msub>
+    <mrow><mi> &sigma; </mi>
+    </mrow>
+    <mrow><mi> &epsiv; </mi>
+    </mrow>
+   </msub>
+  </mrow>
+ </mrow></math></span></div>
+<div class="enumerate_item"><span class="enumerate_label">4.</span>
+<b><span style='font-family:sans-serif;'>Feltermerna är normalfördelade</span></b><span style='font-family:sans-serif;'><math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mi> &epsiv; </mi>
+    </mrow>
+    <mrow><mn>1</mn>
+    </mrow>
+   </msub><mo>,</mo>
+   <mi>&hellip;
+   </mi><mo>,</mo>
+   <msub>
+    <mrow><mi> &epsiv; </mi>
+    </mrow>
+    <mrow><mi>n</mi>
+    </mrow>
+   </msub><mover accent='false'><mo> &sim; </mo>
+   <mstyle mathvariant='normal'>
+    <mrow><mi>o</mi><mi>b</mi><mi>e</mi><mi>r</mi>
+    </mrow>
+   </mstyle></mover><mi>N</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+   <mrow><mn>0</mn><mo>,</mo>
+    <msub>
+     <mrow><mi> &sigma; </mi>
+     </mrow>
+     <mrow><mi> &epsiv; </mi>
+     </mrow>
+    </msub>
+   </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+  </mrow>
+ </mrow></math></span></div>
+</div>
+</div>
+
+<div class="standard" id='magicparlabel-143'><span style='font-family:sans-serif;'><br />
+
+</span></div>
+
+<div class="frame" id='magicparlabel-144'><div class="frame_item"><span class="frame_label">Frame</span>
+<span style='font-family:sans-serif;'><!-- Output Error: Closing tag `div' when other tags are open, namely: -->
+<!-- Output Error: span -->
+</span></div>
+
+<div class="itemize" id='magicparlabel-149'><div class="itemize_item"><span class="itemize_label">•</span>
+<b><span style='font-family:sans-serif;'>Residualer</span></b><span style='font-family:sans-serif;'>:<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mi>e</mi>
+    </mrow>
+    <mrow><mi>i</mi>
+    </mrow>
+   </msub><mo>=</mo>
+   <msub>
+    <mrow><mi>y</mi>
+    </mrow>
+    <mrow><mi>i</mi>
+    </mrow>
+   </msub><mo>-</mo>
+   <msub>
+    <mrow>
+     <mover>
+      <mrow><mi>y</mi>
+      </mrow><mo stretchy="true">&circ;</mo>
+     </mover>
+    </mrow>
+    <mrow><mi>i</mi>
+    </mrow>
+   </msub>
+  </mrow>
+ </mrow></math></span></div>
+</div>
+
+<div class="enumerate" id='magicparlabel-150'><div class="enumerate_item"><span class="enumerate_label">1.</span>
+<b><span style='font-family:sans-serif;'>Linjärt samband?</span></b><span style='font-family:sans-serif;'> 
+<br />
+
+<div style='height:1ex'></div>Plotta <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <msub>
+   <mrow><mi>y</mi>
+   </mrow>
+   <mrow><mi>i</mi>
+   </mrow>
+  </msub>
+ </mrow></math> mot <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <msub>
+   <mrow><mi>x</mi>
+   </mrow>
+   <mrow><mi>i</mi>
+   </mrow>
+  </msub>
+ </mrow></math>. Ser linjärt ut? 
+<br />
+
+Plotta <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <msub>
+   <mrow><mi>e</mi>
+   </mrow>
+   <mrow><mi>i</mi>
+   </mrow>
+  </msub>
+ </mrow></math> mot <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <msub>
+   <mrow><mi>x</mi>
+   </mrow>
+   <mrow><mi>i</mi>
+   </mrow>
+  </msub>
+ </mrow></math>. Konstant, eller mönster kvar?<div style='height:5ex'></div></span></div>
+<div class="enumerate_item"><span class="enumerate_label">2.</span>
+<b><span style='font-family:sans-serif;'>Oberoende <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi> &epsiv; </mi>
+ </mrow></math>?</span></b><span style='font-family:sans-serif;'> 
+<br />
+
+<div style='height:1ex'></div>Plotta residualer <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <msub>
+   <mrow><mi>e</mi>
+   </mrow>
+   <mrow><mi>i</mi>
+   </mrow>
+  </msub>
+ </mrow></math> mot anpassade värden <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <msub>
+   <mrow>
+    <mover>
+     <mrow><mi>y</mi>
+     </mrow><mo stretchy="true">&circ;</mo>
+    </mover>
+   </mrow>
+   <mrow><mi>i</mi>
+   </mrow>
+  </msub>
+ </mrow></math>. 
+<br />
+
+Tidsserier: plotta <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <msub>
+   <mrow><mi>e</mi>
+   </mrow>
+   <mrow><mi>i</mi>
+   </mrow>
+  </msub>
+ </mrow></math> mot tid (observationsnummer).<div style='height:5ex'></div></span></div>
+<div class="enumerate_item"><span class="enumerate_label">3.</span>
+<b><span style='font-family:sans-serif;'>Homoskedastiska <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi> &epsiv; </mi>
+ </mrow></math>?</span></b><span style='font-family:sans-serif;'> 
+<br />
+
+<div style='height:1ex'></div>Plotta residualer <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <msub>
+   <mrow><mi>e</mi>
+   </mrow>
+   <mrow><mi>i</mi>
+   </mrow>
+  </msub>
+ </mrow></math> mot <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <msub>
+   <mrow><mi>x</mi>
+   </mrow>
+   <mrow><mi>i</mi>
+   </mrow>
+  </msub>
+ </mrow></math>. Liknande spridning för alla <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <msub>
+   <mrow><mi>x</mi>
+   </mrow>
+   <mrow><mi>i</mi>
+   </mrow>
+  </msub>
+ </mrow></math>?<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mi>S</mi><mi>D</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+   <msub>
+    <mrow><mi> &epsiv; </mi>
+    </mrow>
+    <mrow><mi>i</mi>
+    </mrow>
+   </msub>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo>=</mo>
+   <msub>
+    <mrow><mi> &sigma; </mi>
+    </mrow>
+    <mrow><mi> &epsiv; </mi>
+    </mrow>
+   </msub>
+  </mrow>
+ </mrow></math></span></div>
+<div class="enumerate_item"><span class="enumerate_label">4.</span>
+<b><span style='font-family:sans-serif;'>Normalfördelade <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi> &epsiv; </mi>
+ </mrow></math>?</span></b><span style='font-family:sans-serif;'> 
+<br />
+
+<div style='height:1ex'></div>Histogram, boxplot, QQ-plot för residualer <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <msub>
+   <mrow><mi>e</mi>
+   </mrow>
+   <mrow><mi>i</mi>
+   </mrow>
+  </msub>
+ </mrow></math>.</span></div>
+</div>
+</div>
+
+<div class="standard" id='magicparlabel-154'><span style='font-family:sans-serif;'><br />
+
+</span></div>
+
+<div class="frame" id='magicparlabel-155'><div class="frame_item"><span class="frame_label">Frame</span>
+<span style='font-family:sans-serif;'><!-- Output Error: Closing tag `div' when other tags are open, namely: -->
+<!-- Output Error: span -->
+</span></div>
+<div class="standard" style='text-align: center;' id='magicparlabel-160'><span style='font-family:sans-serif;'><img style='width:30%;' src='9C__Users_oskarg_Box_Sync_Undervisning_SDA1_VT2025_SDA1_slides_figs_lifespan_reg_residual.png' alt='image: 9C__Users_oskarg_Box_Sync_Undervisning_SDA1_VT2025_SDA1_slides_figs_lifespan_reg_residual.png' />
+</span></div>
+
+<div class="standard" style='text-align: center;' id='magicparlabel-161'><span style='font-family:sans-serif;'><img style='width:23%;' src='10C__Users_oskarg_Box_Sync_Undervisning_SDA1_VT2025_SDA1_slides_figs_lifespan_reg_residual.png' alt='image: 10C__Users_oskarg_Box_Sync_Undervisning_SDA1_VT2025_SDA1_slides_figs_lifespan_reg_residual.png' />
+</span></div>
+</div>
+
+<div class="standard" id='magicparlabel-162'><span style='font-family:sans-serif;'><br />
+
+</span></div>
+
+<div class="frame" id='magicparlabel-163'><div class="frame_item"><span class="frame_label">Frame</span>
+<span style='font-family:sans-serif;'><!-- Output Error: Closing tag `div' when other tags are open, namely: -->
+<!-- Output Error: span -->
+</span></div>
+<div class="standard" style='text-align: center;' id='magicparlabel-168'><span style='font-family:sans-serif;'><img style='width:35%;' src='11C__Users_oskarg_Box_Sync_Undervisning_SDA1_VT2025_SDA1_slides_figs_Residuals_AllGood.png' alt='image: 11C__Users_oskarg_Box_Sync_Undervisning_SDA1_VT2025_SDA1_slides_figs_Residuals_AllGood.png' />
+</span></div>
+</div>
+
+<div class="standard" id='magicparlabel-169'><span style='font-family:sans-serif;'><br />
+
+</span></div>
+
+<div class="frame" id='magicparlabel-170'><div class="frame_item"><span class="frame_label">Frame</span>
+<span style='font-family:sans-serif;'><!-- Output Error: Closing tag `div' when other tags are open, namely: -->
+<!-- Output Error: span -->
+</span></div>
+<div class="standard" style='text-align: center;' id='magicparlabel-175'><span style='font-family:sans-serif;'><img style='width:35%;' src='12C__Users_oskarg_Box_Sync_Undervisning_SDA1_VT2025_SDA1_slides_figs_Residuals_NormalHetero.png' alt='image: 12C__Users_oskarg_Box_Sync_Undervisning_SDA1_VT2025_SDA1_slides_figs_Residuals_NormalHetero.png' />
+</span></div>
+</div>
+
+<div class="standard" id='magicparlabel-176'><span style='font-family:sans-serif;'><br />
+
+</span></div>
+
+<div class="frame" id='magicparlabel-177'><div class="frame_item"><span class="frame_label">Frame</span>
+<span style='font-family:sans-serif;'><!-- Output Error: Closing tag `div' when other tags are open, namely: -->
+<!-- Output Error: span -->
+</span></div>
+<div class="standard" style='text-align: center;' id='magicparlabel-182'><span style='font-family:sans-serif;'><img style='width:35%;' src='13C__Users_oskarg_Box_Sync_Undervisning_SDA1_VT2025_SDA1_slides_figs_Residuals_Studentt4_Homo.png' alt='image: 13C__Users_oskarg_Box_Sync_Undervisning_SDA1_VT2025_SDA1_slides_figs_Residuals_Studentt4_Homo.png' />
+</span></div>
+</div>
+
+<div class="standard" id='magicparlabel-183'><span style='font-family:sans-serif;'><br />
+
+</span></div>
+
+<div class="frame" id='magicparlabel-184'><div class="frame_item"><span class="frame_label">Frame</span>
+<span style='font-family:sans-serif;'><!-- Output Error: Closing tag `div' when other tags are open, namely: -->
+<!-- Output Error: span -->
+</span></div>
+<div class="standard" style='text-align: center;' id='magicparlabel-189'><span style='font-family:sans-serif;'><img style='width:35%;' src='14C__Users_oskarg_Box_Sync_Undervisning_SDA1_VT2025_SDA1_slides_figs_Residual_Studentt4_Hetero.png' alt='image: 14C__Users_oskarg_Box_Sync_Undervisning_SDA1_VT2025_SDA1_slides_figs_Residual_Studentt4_Hetero.png' />
+</span></div>
+</div>
+
+<div class="standard" id='magicparlabel-190'><span style='font-family:sans-serif;'><br />
+
+</span></div>
+
+<div class="frame" id='magicparlabel-191'><div class="frame_item"><span class="frame_label">Frame</span>
+<span style='font-family:sans-serif;'><!-- Output Error: Closing tag `div' when other tags are open, namely: -->
+<!-- Output Error: span -->
+</span></div>
+<div class="standard" style='text-align: center;' id='magicparlabel-196'><span style='font-family:sans-serif;'><img style='width:35%;' src='15C__Users_oskarg_Box_Sync_Undervisning_SDA1_VT2025_SDA1_slides_figs_Residuals_Autocorrelated.png' alt='image: 15C__Users_oskarg_Box_Sync_Undervisning_SDA1_VT2025_SDA1_slides_figs_Residuals_Autocorrelated.png' />
+</span></div>
+</div>
+
+<div class="standard" id='magicparlabel-197'><span style='font-family:sans-serif;'><br />
+
+</span></div>
+
+<div class="frame" id='magicparlabel-198'><div class="frame_item"><span class="frame_label">Frame</span>
+<span style='font-family:sans-serif;'><!-- Output Error: Closing tag `div' when other tags are open, namely: -->
+<!-- Output Error: span -->
+</span></div>
+
+<div class="itemize" id='magicparlabel-203'><div class="itemize_item"><span class="itemize_label">•</span>
+<span style='font-family:sans-serif;'>Minsta kvadrat-estimatorerna:<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mi>b</mi>
+    </mrow>
+    <mrow><mn>1</mn>
+    </mrow>
+   </msub><mo>=</mo>
+   <mfrac>
+    <mrow>
+     <msub>
+      <mrow><mi>s</mi>
+      </mrow>
+      <mrow>
+       <mrow><mi>x</mi><mi>y</mi>
+       </mrow>
+      </mrow>
+     </msub>
+    </mrow>
+    <mrow>
+     <msubsup>
+      <mrow><mi>s</mi>
+      </mrow>
+      <mrow><mi>x</mi>
+      </mrow>
+      <mrow><mn>2</mn>
+      </mrow>
+     </msubsup>
+    </mrow>
+   </mfrac>
+  </mrow>
+ </mrow></math><div style='height:3ex'></div><math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mi>b</mi>
+    </mrow>
+    <mrow><mn>0</mn>
+    </mrow>
+   </msub><mo>=</mo>
+   <mover>
+    <mrow><mi>y</mi>
+    </mrow><mo stretchy="true">&OverBar;</mo>
+   </mover><mo>-</mo>
+   <msub>
+    <mrow><mi>b</mi>
+    </mrow>
+    <mrow><mn>1</mn>
+    </mrow>
+   </msub>
+   <mover>
+    <mrow><mi>x</mi>
+    </mrow><mo stretchy="true">&OverBar;</mo>
+   </mover>
+  </mrow>
+ </mrow></math><div style='height:3ex'></div></span></div>
+</div>
+<div class="standard" id='magicparlabel-204'><span style='font-family:sans-serif;'><math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msubsup>
+    <mrow><mi>s</mi>
+    </mrow>
+    <mrow><mi>e</mi>
+    </mrow>
+    <mrow><mn>2</mn>
+    </mrow>
+   </msubsup><mo>=</mo>
+   <mfrac>
+    <mrow>
+     <mrow>
+      <msubsup>
+       <mrow><mo> &sum; </mo>
+       </mrow>
+       <mrow>
+        <mrow><mi>i</mi><mo>=</mo><mn>1</mn>
+        </mrow>
+       </mrow>
+       <mrow><mi>n</mi>
+       </mrow>
+      </msubsup><mo>(</mo>
+      <msub>
+       <mrow><mi>y</mi>
+       </mrow>
+       <mrow><mi>i</mi>
+       </mrow>
+      </msub><mo>-</mo>
+      <msub>
+       <mrow>
+        <mover>
+         <mrow><mi>y</mi>
+         </mrow><mo stretchy="true">&circ;</mo>
+        </mover>
+       </mrow>
+       <mrow><mi>i</mi>
+       </mrow>
+      </msub>
+      <msup>
+       <mrow><mo>)</mo>
+       </mrow>
+       <mrow><mn>2</mn>
+       </mrow>
+      </msup>
+     </mrow>
+    </mrow>
+    <mrow>
+     <mrow><mi>n</mi><mo>-</mo><mn>2</mn>
+     </mrow>
+    </mrow>
+   </mfrac>
+  </mrow>
+ </mrow></math><div style='height:3ex'></div></span></div>
+
+<div class="itemize" id='magicparlabel-205'><div class="itemize_item"><span class="itemize_label">•</span>
+<b><span style='font-family:sans-serif;'>Väntevärdesriktiga</span></b><span style='font-family:sans-serif;'><math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+ <mtable>
+  <mtr>
+   <mtd>
+    <mrow><mi>E</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+     <msub>
+      <mrow><mi>b</mi>
+      </mrow>
+      <mrow><mn>0</mn>
+      </mrow>
+     </msub>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+    </mrow>
+   </mtd>
+   <mtd>
+    <mrow><mo>=</mo>
+     <msub>
+      <mrow><mi> &beta; </mi>
+      </mrow>
+      <mrow><mn>0</mn>
+      </mrow>
+     </msub>
+    </mrow>
+   </mtd>
+  </mtr>
+  <mtr>
+   <mtd>
+    <mrow><mi>E</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+     <msub>
+      <mrow><mi>b</mi>
+      </mrow>
+      <mrow><mn>1</mn>
+      </mrow>
+     </msub>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+    </mrow>
+   </mtd>
+   <mtd>
+    <mrow><mo>=</mo>
+     <msub>
+      <mrow><mi> &beta; </mi>
+      </mrow>
+      <mrow><mn>1</mn>
+      </mrow>
+     </msub>
+    </mrow>
+   </mtd>
+  </mtr>
+  <mtr>
+   <mtd>
+    <mrow><mi>E</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+     <msubsup>
+      <mrow><mi>s</mi>
+      </mrow>
+      <mrow><mi>e</mi>
+      </mrow>
+      <mrow><mn>2</mn>
+      </mrow>
+     </msubsup>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+    </mrow>
+   </mtd>
+   <mtd>
+    <mrow><mo>=</mo>
+     <msubsup>
+      <mrow><mi> &sigma; </mi>
+      </mrow>
+      <mrow><mi> &epsiv; </mi>
+      </mrow>
+      <mrow><mn>2</mn>
+      </mrow>
+     </msubsup>
+    </mrow>
+   </mtd>
+  </mtr>
+ </mtable></math></span></div>
+</div>
+</div>
+
+<div class="standard" id='magicparlabel-206'><span style='font-family:sans-serif;'><br />
+
+</span></div>
+
+<div class="frame" id='magicparlabel-207'><div class="frame_item"><span class="frame_label">Frame</span>
+<span style='font-family:sans-serif;'><!-- Output Error: Closing tag `div' when other tags are open, namely: -->
+<!-- Output Error: span -->
+</span></div>
+
+<div class="itemize" id='magicparlabel-212'><div class="itemize_item"><span class="itemize_label">•</span>
+<span style='font-family:sans-serif;'>Estimatorn för lutningskoefficienten<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mi>b</mi>
+    </mrow>
+    <mrow><mn>1</mn>
+    </mrow>
+   </msub><mo>=</mo>
+   <mfrac>
+    <mrow>
+     <msub>
+      <mrow><mi>s</mi>
+      </mrow>
+      <mrow>
+       <mrow><mi>x</mi><mi>y</mi>
+       </mrow>
+      </mrow>
+     </msub>
+    </mrow>
+    <mrow>
+     <msubsup>
+      <mrow><mi>s</mi>
+      </mrow>
+      <mrow><mi>x</mi>
+      </mrow>
+      <mrow><mn>2</mn>
+      </mrow>
+     </msubsup>
+    </mrow>
+   </mfrac>
+  </mrow>
+ </mrow></math></span></div>
+<div class="itemize_item"><span class="itemize_label">•</span>
+<span style='font-family:sans-serif;'>Hur <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <msub>
+   <mrow><mi>b</mi>
+   </mrow>
+   <mrow><mn>1</mn>
+   </mrow>
+  </msub>
+ </mrow></math> varierar mellan olika stickprov:<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mi> &sigma; </mi>
+    </mrow>
+    <mrow>
+     <msub>
+      <mrow><mi>b</mi>
+      </mrow>
+      <mrow><mn>1</mn>
+      </mrow>
+     </msub>
+    </mrow>
+   </msub><mo>=</mo><mi>S</mi><mi>D</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+   <msub>
+    <mrow><mi>b</mi>
+    </mrow>
+    <mrow><mn>1</mn>
+    </mrow>
+   </msub>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo>=</mo>
+   <mfrac>
+    <mrow>
+     <msub>
+      <mrow><mi> &sigma; </mi>
+      </mrow>
+      <mrow><mi> &epsiv; </mi>
+      </mrow>
+     </msub>
+    </mrow>
+    <mrow>
+     <mrow>
+      <msqrt>
+       <mrow><mi>n</mi><mo>-</mo><mn>1</mn>
+       </mrow>
+      </msqrt>
+      <msub>
+       <mrow><mi>s</mi>
+       </mrow>
+       <mrow><mi>x</mi>
+       </mrow>
+      </msub>
+     </mrow>
+    </mrow>
+   </mfrac>
+  </mrow>
+ </mrow></math></span></div>
+<div class="itemize_item"><span class="itemize_label">•</span>
+<span style='font-family:sans-serif;'><math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <msub>
+   <mrow><mi> &sigma; </mi>
+   </mrow>
+   <mrow>
+    <msub>
+     <mrow><mi>b</mi>
+     </mrow>
+     <mrow><mn>1</mn>
+     </mrow>
+    </msub>
+   </mrow>
+  </msub>
+ </mrow></math> skattas med <b>standardfelet</b><math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mi>s</mi>
+    </mrow>
+    <mrow>
+     <msub>
+      <mrow><mi>b</mi>
+      </mrow>
+      <mrow><mn>1</mn>
+      </mrow>
+     </msub>
+    </mrow>
+   </msub><mo>=</mo><mi>S</mi><mi>E</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+   <msub>
+    <mrow><mi>b</mi>
+    </mrow>
+    <mrow><mn>1</mn>
+    </mrow>
+   </msub>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo>=</mo>
+   <mfrac>
+    <mrow>
+     <msub>
+      <mrow><mi>s</mi>
+      </mrow>
+      <mrow><mi>e</mi>
+      </mrow>
+     </msub>
+    </mrow>
+    <mrow>
+     <mrow>
+      <msqrt>
+       <mrow><mi>n</mi><mo>-</mo><mn>1</mn>
+       </mrow>
+      </msqrt>
+      <msub>
+       <mrow><mi>s</mi>
+       </mrow>
+       <mrow><mi>x</mi>
+       </mrow>
+      </msub>
+     </mrow>
+    </mrow>
+   </mfrac>
+  </mrow>
+ </mrow></math></span></div>
+<div class="itemize_item"><span class="itemize_label">•</span>
+<span style='font-family:sans-serif;'>Formel för <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mi>S</mi><mi>E</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+   <msub>
+    <mrow><mi>b</mi>
+    </mrow>
+    <mrow><mn>0</mn>
+    </mrow>
+   </msub>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+  </mrow>
+ </mrow></math> slipper ni på SDA1.<div style='height:1ex'></div></span></div>
+<div class="itemize_item"><span class="itemize_label">•</span>
+<span style='font-family:monospace;'>lifespan</span><span style='font-family:sans-serif;'> data </span><span style='font-family:monospace;'>[sd(spending) = 1.09751</span><span style='font-family:sans-serif;'>6]<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mi>s</mi>
+    </mrow>
+    <mrow>
+     <msub>
+      <mrow><mi>b</mi>
+      </mrow>
+      <mrow><mn>1</mn>
+      </mrow>
+     </msub>
+    </mrow>
+   </msub><mo>=</mo>
+   <mfrac>
+    <mrow><mn>1.678</mn>
+    </mrow>
+    <mrow>
+     <mrow>
+      <msqrt>
+       <mrow><mn>29</mn><mo>-</mo><mn>1</mn>
+       </mrow>
+      </msqrt><mo> &sdot; </mo><mn>1.097516</mn>
+     </mrow>
+    </mrow>
+   </mfrac><mo> &ap; </mo><mn>0.289</mn>
+  </mrow>
+ </mrow></math></span></div>
+</div>
+</div>
+
+<div class="standard" id='magicparlabel-221'><span style='font-family:sans-serif;'><br />
+
+</span></div>
+
+<div class="frame" id='magicparlabel-222'><div class="frame_item"><span class="frame_label">Frame</span>
+<span style='font-family:sans-serif;'><!-- Output Error: Closing tag `div' when other tags are open, namely: -->
+<!-- Output Error: span -->
+</span></div>
+<div class="standard" style='text-align: center;' id='magicparlabel-227'><span style='font-family:sans-serif;'><img style='width:55%;' src='16C__Users_oskarg_Box_Sync_Undervisning_SDA1_VT2025_SDA1_slides_figs_lifespan_reg_sterr.png' alt='image: 16C__Users_oskarg_Box_Sync_Undervisning_SDA1_VT2025_SDA1_slides_figs_lifespan_reg_sterr.png' />
+</span></div>
+</div>
+
+<div class="standard" id='magicparlabel-228'><span style='font-family:sans-serif;'><br />
+
+</span></div>
+
+<div class="frame" id='magicparlabel-229'><div class="frame_item"><span class="frame_label">Frame</span>
+<span style='font-family:sans-serif;'><!-- Output Error: Closing tag `div' when other tags are open, namely: -->
+<!-- Output Error: span -->
+</span></div>
+<div class="standard" style='text-align: center;' id='magicparlabel-234'><span style='font-family:sans-serif;'><div class='Boxed'><div class="plain_layout" style='text-align: center;' id='magicparlabel-238'><span style='font-family:sans-serif;'><a href="https://statisticssu.github.io/SDA1/observable/linreg_simple_sampling_dist.html">\includegraphics[width=0.6\textwidth]{figs/sampdist_regression_widget.png}</a></span></div>
+</div></span></div>
+</div>
+
+<div class="standard" id='magicparlabel-239'><span style='font-family:sans-serif;'><br />
+
+</span></div>
+
+<div class="frame" id='magicparlabel-240'><div class="frame_item"><span class="frame_label">Frame</span>
+<span style='font-family:sans-serif;'><!-- Output Error: Closing tag `div' when other tags are open, namely: -->
+<!-- Output Error: span -->
+</span></div>
+</div>
+<div class="subsubsection_" id='magicparlabel-245'>Dessa slides skapades för kursen statistik och dataanalys 1 av Mattias Villani HT 2023, och har modifierats av Oscar Oelrich VT 2024, och Oskar Gustafsson för VT 2025.</div>
+</body>
+</html>

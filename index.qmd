@@ -27,7 +27,7 @@ Kursen består av föreläsningar, räkneövningar och datorlaborationer. Se res
 
 ### Schema
 
-Kursens schema finns på [TimeEdit](https://cloud.timeedit.net/su/web/stud1/s.html?tab=3&type=courseevent&h=t&object=cevt_39044_VT2025&startdate=20241221&enddate=20250621&l=sv). Ett tips är att välja *Prenumerera* i övre högra hörnet på TimeEdit och sen klistra in länken i ditt kalenderprogram på mobilen.
+Kursens schema finns på [TimeEdit](https://cloud.timeedit.net/su/web/stud1/s.html?sid=3&type=courseevent&h=t&object=cevt_39017_HT2025&startdate=20250802&enddate=20260417&l=sv&h2=2). Ett tips är att välja *Prenumerera* i övre högra hörnet på TimeEdit och sen klistra in länken i ditt kalenderprogram på mobilen.
 
 ### Formel- och tabellsamlingar
 
@@ -42,22 +42,16 @@ På vissa delar av kursen använder vi interaktivt material för att underlätta
 
 ::: {layout="[ [1,1],[1,1], [1, 1] ]"}
 <img src="/misc/male.png" width="35%"/>\
-[Oskar Gustafsson](https://www.su.se/profiles/osgu4809-1.252072)<br>Kursansvarig och föreläsningar del 2<br>
-
-<img src="/misc/karlsigfrid.png" width="35%"/>\
-[Karl Sigfrid](https://www.su.se/profiles/kasi3175-1.513541)<br>Föreläsningar och övningar del 1<br>
-
-<img src="/misc/andersf.jpg" width="35%"/>\
-[Anders Fredriksson](https://www.su.se/profiles/afred-1.219056)<br>Datorövningar<br>
-
-<img src="/misc/male.png" width="35%"/>\
-[Fredrik Stenkvist](https://www.su.se/profiles/frst7343-1.746864)<br>Datorövningar samt övningar del 2<br>
+[Oskar Gustafsson](https://www.su.se/profiles/osgu4809-1.252072)<br>Kursansvarig och föreläsare<br>
 
 <img src="/misc/ester.jpg" width="35%"/>\
-[Ester Lagerlöf](https://www.su.se/profiles/esla2049-1.787983)<br>Räkneövningar<br>
+[Ester Lagerlöf](https://www.su.se/profiles/esla2049-1.787983)<br>Räkneövningar, datorövningar och jour<br>
 
 <img src="/misc/female.png" width="35%"/>\
-[Maria Bennis](https://www.su.se/profiles/mabe5705-1.787981)<br>Räkneövningar<br>
+[Maria Bennis](https://www.su.se/profiles/mabe5705-1.787981)<br>Räkneövningar, datorövningar och jour<br>
+
+<img src="/misc/female.png" width="35%"/>\
+[Mina Poshtvar](https://www.su.se/profiles/mipo1373-1.830070)<br>Datorövningar<br>
 :::
 
 

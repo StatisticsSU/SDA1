@@ -2,13 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.6.42">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Mattias Villani">
 
-<title>SDA1 - Introduction to Quarto</title>
+<title>Introduction to Quarto – SDA1</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,7 +23,7 @@ ul.task-list li input[type="checkbox"] {
 }
 /* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -34,7 +34,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -71,19 +71,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-b53751a350365c71b6c909e95f209ed1.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-31a69106845bb5235818fe7426cf0c4d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-de8a9553950fd18f334eda414d03b9ca.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -92,6 +98,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
@@ -100,8 +107,35 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script type="module" src="../../site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
 <link href="../../site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../styles.css">
 </head>
@@ -110,9 +144,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a href="../../index.html" class="navbar-brand navbar-brand-logo">
     <img src="../../misc/SU_logo_small.png" alt="" class="navbar-logo">
     </a>
@@ -121,32 +155,32 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html" rel="" target="">
- <span class="menu-text">Översikt</span></a>
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">Översikt</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../Del1.html" rel="" target="">
- <span class="menu-text">Del 1 - Dataanalys och regression</span></a>
+    <a class="nav-link" href="../../Del1.html"> 
+<span class="menu-text">Del 1 - Dataanalys och regression</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../Del2.html" rel="" target="">
- <span class="menu-text">Del 2 - Sannolikhetsmodeller och inferens</span></a>
+    <a class="nav-link" href="../../Del2.html"> 
+<span class="menu-text">Del 2 - Sannolikhetsmodeller och inferens</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../R.html" rel="" target="">
- <span class="menu-text">R</span></a>
+    <a class="nav-link" href="../../R.html"> 
+<span class="menu-text">R</span></a>
   </li>  
 </ul>
-            <div class="quarto-navbar-tools ms-auto">
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
-          </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -194,7 +228,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
   
 
+
 </header>
+
 
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">1. Introduction</h2>
@@ -213,25 +249,25 @@ Quarto documents (with file ending .qmd) can easily be turned into pdf format, h
 <p>At the top of a quarto document is the so called YAML, which tells the Quarto engine how the document should be formatted. This is the YAML for this document:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="yaml.png" class="img-fluid figure-img"></p>
+<p><img src="yaml.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
 </figure>
 </div>
 <p>which basically only gives the title and author information, everything else is using default settings. This will print (<strong>render</strong>) the document to html by default. To view the rendered file, just click the <code>Render</code> button at the top of the editor (only shown when you have a Quarto file in the editor):</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="quarto_menu_bar.png" class="img-fluid figure-img"></p>
+<p><img src="quarto_menu_bar.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
 </figure>
 </div>
 <p>The produced html file can be view in your web browser or inside RStudio in the <code>Viewer</code> tab in the bottom right window (typically). You may need to change the settings for it to show up in the <code>Viewer</code> tab. Click the settings-wheel at the top of the editor and make sure that <em>Preview in</em> <em>Viewer Pane</em> is selected:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="settingsmarkdown.png" class="img-fluid figure-img" width="347"></p>
+<p><img src="settingsmarkdown.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="347"></p>
 </figure>
 </div>
 <p>If I instead wanted to render to pdf I would use the YAML:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="yaml_pdf.png" class="img-fluid figure-img"></p>
+<p><img src="yaml_pdf.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
 </figure>
 </div>
 </section>
@@ -254,7 +290,7 @@ Quarto documents (with file ending .qmd) can easily be turned into pdf format, h
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="../../misc/larry.png" class="img-fluid figure-img" width="100"></p>
-<figcaption class="figure-caption">sceptic larry</figcaption>
+<figcaption>sceptic larry</figcaption>
 </figure>
 </div>
 <p>You can leave out the figure text and the width argument and just write: <code>![](/misc/larry.png)</code> .</p>
@@ -264,7 +300,7 @@ Quarto documents (with file ending .qmd) can easily be turned into pdf format, h
 <p><code>| Mike  | 49  | Professor           |</code></p>
 <p><code>| Sarah | 37  | Assistant professor |</code></p>
 <p><code>| Anne  | 26  | PhD student         |</code></p>
-<table class="table">
+<table class="caption-top table">
 <caption>A little table caption.</caption>
 <thead>
 <tr class="header">
@@ -298,7 +334,7 @@ Quarto documents (with file ending .qmd) can easily be turned into pdf format, h
 <p>A Quarto document can have executable code in them. It supports several programming languages, most notably: R, Python and Julia. You just need to add a <strong>code chunk</strong>. A code chunk starts and ends with three so called backticks `. The backtick is typed by <code>Shift</code> and the key to the left of <code>Backspace</code> on a Swedish keyboard. This is a chunk of R code:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="codechunk.png" class="img-fluid figure-img"></p>
+<p><img src="codechunk.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
 </figure>
 </div>
 <p>Note the little green Play-button. By pressing that we can run the code chunk. After running the code in the Quarto-document, the variables (in this case a vector <code>x</code>) will be available in the console, just like for any R code. Here is the end result of that code chunk:</p>
@@ -306,7 +342,11 @@ Quarto documents (with file ending .qmd) can easily be turned into pdf format, h
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">=</span> <span class="fu">rnorm</span>(<span class="dv">100</span>)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(x, <span class="at">type =</span> <span class="st">"l"</span>, <span class="at">xlab =</span> <span class="st">"time"</span>, <span class="at">main =</span> <span class="st">"time series plot"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="Intro2Quarto_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid" width="672"></p>
+<div>
+<figure class="figure">
+<p><img src="Intro2Quarto_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
@@ -319,9 +359,9 @@ Tip
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Quarto supports other popular programming languages in addtion to <img src="../../misc/R.jpeg" class="img-fluid" width="20">.</p>
-<p>A chunk of Python <img src="../../misc/python.png" class="img-fluid" width="20"> code would start with <code>```{python}</code>.</p>
-<p>A Julia <img src="../../misc/julia.png" width="20" height="19"> code chunk starts with <code>```{julia}</code>. <img src="../../misc/hearteyes.png" class="img-fluid" width="20"></p>
+<p>Quarto supports other popular programming languages in addtion to <img src="../..\misc/R.jpeg" class="img-fluid" width="20">.</p>
+<p>A chunk of Python <img src="../..\misc/python.png" class="img-fluid" width="20"> code would start with <code>```{python}</code>.</p>
+<p>A Julia <img src="../..\misc/julia.png" width="20" height="19"> code chunk starts with <code>```{julia}</code>. <img src="../..\misc/hearteyes.png" class="img-fluid" width="20"></p>
 </div>
 </div>
 <p>What if I want to use the code to produce the plot, but not show the code in my report? Easy, I would just add some YAML information at the beginning of the code chunk itself. YAML inside of a code chunk must begin with the two characters <code>#|</code> . Here is how you hide the code:</p>
@@ -340,7 +380,7 @@ Tip
 <p>You can create (<u><strong>F</strong></u><strong>ile</strong>/<strong>New <u>F</u>ile</strong>/<u><strong>Q</strong></u><strong>uarto document…</strong> menu) and write Quarto documents in RStudio. When you open a Quarto document in the editor the menu bar changes to (may look different for you):</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="quarto_menu_bar.png" class="img-fluid figure-img"></p>
+<p><img src="quarto_menu_bar.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
 </figure>
 </div>
 <p>Clicking on the <code>Render</code> button will render the document to html (default) or pdf (if you choose that in the YAML). Pressing the <code>Run</code> button will re-run all the code chunks in the document. You can write your Quarto document as markdown code if you click the <code>Source</code> -button in the extreme left. If you press the <code>Visual</code>-button you will see the document in a similar way to word processors like Word. You can then insert images and table, change font sizes etc by clicking on the menu. I tend to spend most time in Visual mode, but will often go over to Source mode when I want absolute control of what I do.</p>
@@ -445,9 +485,8 @@ But it also possible to make the final html interactive. Below is an an example 
 </section>
 
 </main> <!-- /main -->
-
 <script type="ojs-module-contents">
-{"contents":[{"methodName":"interpret","cellName":"ojs-cell-1","inline":false,"source":"data = FileAttachment(\"palmer-penguins.csv\").csv({ typed: true })\n"},{"methodName":"interpret","cellName":"ojs-cell-2","inline":false,"source":"viewof bill_length_min = Inputs.range(\n  [32, 50], \n  {value: 35, step: 1, label: \"Bill length (min):\"}\n)\nviewof islands = Inputs.checkbox(\n  [\"Torgersen\", \"Biscoe\", \"Dream\"], \n  { value: [\"Torgersen\", \"Biscoe\"], \n    label: \"Islands:\"\n  }\n)\n"},{"methodName":"interpret","cellName":"ojs-cell-3","inline":false,"source":"filtered = data.filter(function(penguin) {\n  return bill_length_min < penguin.bill_length_mm &&\n         islands.includes(penguin.island);\n})\n"},{"methodName":"interpret","cellName":"ojs-cell-4","inline":false,"source":"Plot.rectY(filtered, \n  Plot.binX(\n    {y: \"count\"}, \n    {x: \"body_mass_g\", fill: \"species\", thresholds: 20}\n  ))\n  .plot({\n    facet: {\n      data: filtered,\n      x: \"sex\",\n      y: \"species\",\n      marginRight: 80\n    },\n    marks: [\n      Plot.frame(),\n    ]\n  }\n)\n"},{"methodName":"interpret","cellName":"ojs-cell-5","inline":false,"source":"Inputs.table(filtered)\n"},{"methodName":"interpretQuiet","source":"shinyInput('bill_length_min')"},{"methodName":"interpretQuiet","source":"shinyInput('islands')"}]}
+eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6ImRhdGEgPSBGaWxlQXR0YWNobWVudChcInBhbG1lci1wZW5ndWlucy5jc3ZcIikuY3N2KHsgdHlwZWQ6IHRydWUgfSlcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMiIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InZpZXdvZiBiaWxsX2xlbmd0aF9taW4gPSBJbnB1dHMucmFuZ2UoXG4gIFszMiwgNTBdLCBcbiAge3ZhbHVlOiAzNSwgc3RlcDogMSwgbGFiZWw6IFwiQmlsbCBsZW5ndGggKG1pbik6XCJ9XG4pXG52aWV3b2YgaXNsYW5kcyA9IElucHV0cy5jaGVja2JveChcbiAgW1wiVG9yZ2Vyc2VuXCIsIFwiQmlzY29lXCIsIFwiRHJlYW1cIl0sIFxuICB7IHZhbHVlOiBbXCJUb3JnZXJzZW5cIiwgXCJCaXNjb2VcIl0sIFxuICAgIGxhYmVsOiBcIklzbGFuZHM6XCJcbiAgfVxuKVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0zIiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiZmlsdGVyZWQgPSBkYXRhLmZpbHRlcihmdW5jdGlvbihwZW5ndWluKSB7XG4gIHJldHVybiBiaWxsX2xlbmd0aF9taW4gPCBwZW5ndWluLmJpbGxfbGVuZ3RoX21tICYmXG4gICAgICAgICBpc2xhbmRzLmluY2x1ZGVzKHBlbmd1aW4uaXNsYW5kKTtcbn0pXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTQiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJQbG90LnJlY3RZKGZpbHRlcmVkLCBcbiAgUGxvdC5iaW5YKFxuICAgIHt5OiBcImNvdW50XCJ9LCBcbiAgICB7eDogXCJib2R5X21hc3NfZ1wiLCBmaWxsOiBcInNwZWNpZXNcIiwgdGhyZXNob2xkczogMjB9XG4gICkpXG4gIC5wbG90KHtcbiAgICBmYWNldDoge1xuICAgICAgZGF0YTogZmlsdGVyZWQsXG4gICAgICB4OiBcInNleFwiLFxuICAgICAgeTogXCJzcGVjaWVzXCIsXG4gICAgICBtYXJnaW5SaWdodDogODBcbiAgICB9LFxuICAgIG1hcmtzOiBbXG4gICAgICBQbG90LmZyYW1lKCksXG4gICAgXVxuICB9XG4pXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTUiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJJbnB1dHMudGFibGUoZmlsdGVyZWQpXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6InNoaW55SW5wdXQoJ2JpbGxfbGVuZ3RoX21pbicpIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJzaGlueUlucHV0KCdpc2xhbmRzJykifV19
 </script>
 <script type="module">
 if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
@@ -498,6 +537,33 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       } else {
         el.classList.add('notransition');
       }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
     }
   }
   const toggleColorMode = (alternate) => {
@@ -566,13 +632,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return localAlternateSentinel;
     }
   }
-  let localAlternateSentinel = 'default';
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
   // Dark / light mode switch
   window.quartoToggleColorScheme = () => {
     // Read the current dark / light value 
     let toAlternate = !hasAlternateSentinel();
     toggleColorMode(toAlternate);
     setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
   };
   // Ensure there is a toggle, if there isn't float one in the top right
   if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
@@ -607,18 +675,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -650,11 +707,48 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
-  function tippyHover(el, contentFn) {
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -664,8 +758,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -677,7 +780,129 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -721,6 +946,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -746,6 +972,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -811,7 +1063,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-left">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
-    <a class="nav-link" href="https://www.su.se/statistiska-institutionen/">Statistiska institutionen - Stockholms universitet</a>
+    <a class="nav-link" href="https://www.su.se/statistiska-institutionen/">
+<p>Statistiska institutionen - Stockholms universitet</p>
+</a>
   </li>  
 </ul>
     </div>   
@@ -834,6 +1088,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
+
 
 
 
