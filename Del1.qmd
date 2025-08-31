@@ -15,7 +15,7 @@ Under vissa föreläsningar länkar vi till `Extramaterial`. Det är material so
 ### **Föreläsningar**
 
 **Föreläsning 1 - Introduktion.**\
-Läs: SDM Kapitel 1 | [Slides](/slides/part1/L1Ht25Embedded.html)\
+Läs: SDM Kapitel 1 | [Slides](/slides/part1/L1HT25Embedded.html)\
 Testa dina kunskaper: [Algebra](https://karlsigfrid.github.io/statisticstutor/output/exercises/algebra_basic.html) | [Summor och produkter](https://karlsigfrid.github.io/statisticstutor/output/exercises/notation_sum_prod.html)
 
 **Föreläsning 2 - Hantera och beskriva data.**\
