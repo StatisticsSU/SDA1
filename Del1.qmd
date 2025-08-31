@@ -15,11 +15,11 @@ Under vissa föreläsningar länkar vi till `Extramaterial`. Det är material so
 ### **Föreläsningar**
 
 **Föreläsning 1 - Introduktion.**\
-Läs: SDM Kapitel 1 | [Slides, del 1](/slides/part1/IntroLectureSDA1.pdf) | [Slides, del 2](/slides/part1/lecture1b_vt25_embedded.html)\
+Läs: SDM Kapitel 1 | [Slides](/slides/part1/L1Ht25Embedded.html)\
 Testa dina kunskaper: [Algebra](https://karlsigfrid.github.io/statisticstutor/output/exercises/algebra_basic.html) | [Summor och produkter](https://karlsigfrid.github.io/statisticstutor/output/exercises/notation_sum_prod.html)
 
 **Föreläsning 2 - Hantera och beskriva data.**\
-Läs: SDM Kapitel 2 | [Slides](/slides/part1/lecture2_embedded.html)\
+Läs: SDM Kapitel 2 | [Slides](/slides/part1/L2Embedded.html)\
 Interaktivt: [widget - histogram](/observable/histogram.qmd)\
 Testa dina kunskaper: [Centralvärden](https://karlsigfrid.github.io/statisticstutor/output/exercises/mean_median_mode.html) | [Kvartiler](https://karlsigfrid.github.io/statisticstutor/output/exercises/quartiles_iqr.html) | [Varians](https://karlsigfrid.github.io/statisticstutor/output/exercises/sample_variance.html) | [Standardavvikelse](https://karlsigfrid.github.io/statisticstutor/output/exercises/standard_deviation.html)\
 <details><summary>innehåll</summary>

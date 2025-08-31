@@ -1,0 +1,624 @@
+%% LyX 2.3.6.1 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[english,xcolor=svgnames, handout]{beamer}
+\usepackage{mathpazo}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{luainputenc}
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+\usepackage{babel}
+\usepackage{amstext}
+\usepackage{graphicx}
+\PassOptionsToPackage{normalem}{ulem}
+\usepackage{ulem}
+\ifx\hypersetup\undefined
+  \AtBeginDocument{%
+    \hypersetup{unicode=true}
+  }
+\else
+  \hypersetup{unicode=true}
+\fi
+
+\makeatletter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+%% Because html converters don't know tabularnewline
+\providecommand{\tabularnewline}{\\}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+% this default might be overridden by plain title style
+\newcommand\makebeamertitle{\frame{\maketitle}}%
+% (ERT) argument for the TOC
+\AtBeginDocument{%
+  \let\origtableofcontents=\tableofcontents
+  \def\tableofcontents{\@ifnextchar[{\origtableofcontents}{\gobbletableofcontents}}
+  \def\gobbletableofcontents#1{\origtableofcontents}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+
+% you can play with different themes and color themes to find your favorite combination.
+\mode<presentation> {
+  \usetheme{Luebeck}
+  \usecolortheme{beaver}
+  \beamertemplatenavigationsymbolsempty
+}
+
+
+\usepackage{graphicx} % for including images
+\usepackage{pgf} % for logo
+\usepackage{colortbl}
+
+\date{} % Date, can be changed to a custom date
+
+\titlegraphic{
+\vspace{-0.6cm}
+\includegraphics[width=1.5cm]{/misc/LogoBlueJustRing.jpg}\break
+
+\tiny
+\vspace{1cm}
+\includegraphics[width=0.33cm]{/misc/web.png} \href{https://mattiasvillani.com}{mattiasvillani.com}\hspace*{1cm}~
+\includegraphics[width=0.3cm]{/misc/twitter.jpg} \href{https://twitter.com/matvil}{@matvil}\hspace*{1cm}~
+\includegraphics[width=0.3cm]{/misc/github.png} \href{https://github.com/mattiasvillani}{mattiasvillani}~
+}
+
+
+\definecolor{blue}{RGB}{38, 122, 181}
+\definecolor{orange}{RGB}{255, 128, 0}
+\definecolor{lorange}{RGB}{255, 178, 102}
+\definecolor{llorange}{RGB}{255, 229,204 }
+\definecolor{verylightgray}{RGB}{246, 246, 246}
+
+
+\setbeamertemplate{itemize item}{\color{orange}$\blacksquare$}
+\setbeamertemplate{itemize subitem}{\color{orange}$\blacktriangleright$}
+
+\usepackage{tcolorbox}
+
+\newcommand\blfootnote[1]{%
+  \begingroup
+  \renewcommand\thefootnote{}\footnote{#1}%
+  \addtocounter{footnote}{-1}%
+  \endgroup
+}
+
+\makeatother
+
+\begin{document}
+\title[\textcolor{gray}{ST1101 \hspace{4.45cm}\insertframenumber/\inserttotalframenumber}]{\textcolor{orange}{Statistik och Dataanalys I}}
+\subtitle{\textcolor{orange}{Föreläsning 1 - Introduktion}}
+\author[\textbf{\textcolor{gray}{Statistik och Dataanalys I}}]{\textbf{Mattias Villani} \\
+\vspace{0.2cm}
+\includegraphics[scale=0.02]{\string"misc/Beard Man Emoji\string".png}\vspace{-0.3cm}
+}
+\institute[Stockholms universitet]{Statistiska institutionen\\
+Stockholms universitet}
+
+\makebeamertitle
+
+\begin{frame}{\textbf{\textcolor{orange}{Översikt}}}
+\begin{itemize}
+\item \textbf{\textcolor{blue}{Information om kursen}}\medskip{}
+\item \textbf{\textcolor{blue}{Motivation}}\medskip{}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{\textbf{\textcolor{orange}{Lärare på kursen}}}
+\begin{center}
+\includegraphics[scale=0.23]{figs/Teachers}\medskip{}
+\par\end{center}
+\begin{itemize}
+\item \textbf{\textcolor{blue}{Statistiska institutionen}} - plan 6 i hus
+4 på Campus Albano.\smallskip{}
+\item Mottagningstider: kommer meddelas på Athena.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{\textbf{\textcolor{orange}{Tre dokument}}}
+\begin{itemize}
+\item \textbf{\textcolor{blue}{Kursplan}}\medskip{}
+
+\begin{itemize}
+\item Kursinnehåll, \textbf{\textcolor{blue}{lärandemål}}, övergripande
+villkor som gäller för kursen, juridiskt bindande dokument.\medskip{}
+\item Finns i mappen \emph{Kursinformation} på Athena.\medskip{}
+\end{itemize}
+\item \textbf{\textcolor{blue}{Kursbeskrivning}}\medskip{}
+
+\begin{itemize}
+\item Vad som gäller just den här terminen, allmän info, deadlines, \textbf{\textcolor{blue}{villkor
+för och bedömningskriterier, examination}}, lärare.\medskip{}
+\item Finns i mappen \emph{Kursinformation} på Athena.\medskip{}
+\end{itemize}
+\item \textbf{\textcolor{blue}{Läsanvisningar}}\medskip{}
+
+\begin{itemize}
+\item Vad som kommer att tas upp i undervisningen, avsnitt i kurslitteraturen,
+övningar mm.\medskip{}
+\item \textbf{\textcolor{blue}{Finns på kurshemsidan}}, med länk från mappen
+\emph{Kursinformation} på Athena.
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{\textbf{\textcolor{orange}{Kursens webbsida och Athena}}}
+\begin{itemize}
+\item \textbf{\textcolor{blue}{Kursens webbsida }}\textcolor{blue}{\uline{\href{https://statisticssu.github.io/SDA1/}{https://statisticssu.github.io/SDA1/}}}\medskip{}
+
+\begin{itemize}
+\item \textbf{\textcolor{blue}{Läsanvisningar}} (föreläsningar, övningstal
+etc)\medskip{}
+\item Föreläsningsslides (pdf)\medskip{}
+\item Datorlaborationer\medskip{}
+\item Inlämningsuppgifter\medskip{}
+\item Länk till schema\medskip{}
+\item Med mera ...\medskip{}
+\end{itemize}
+\item Läroplattformen\textbf{\textcolor{blue}{{} Athena}}\medskip{}
+
+\begin{itemize}
+\item Kursinfo inkl formell studieplan\medskip{}
+\item Meddelanden, inkl akuta schemaändringar\medskip{}
+\item Inlämning av inlämningsuppgifter\medskip{}
+\item Chatt\medskip{}
+\item \textbf{Vi räknar med att ni har koll på meddelanden på Athena}. \medskip{}
+\item Tips: ladda ner\textbf{\textcolor{blue}{{} It's learning}} app:en för
+mobil: \includegraphics[scale=0.04]{figs/itslearning_logo}\medskip{}
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{\textbf{\textcolor{orange}{Kursens två delar}}}
+\begin{itemize}
+\item \textbf{\textcolor{blue}{Del 1 - Dataanalys och regression, 7.5 hp}}
+\item Föreläsare: Matias Quiroz \includegraphics[scale=0.011,bb = 0 0 200 100, draft, type=eps]{C:/home/mv/Dropbox/Teaching/SDA1/misc/QuirozPhoto.jpg}\smallskip{}
+
+\begin{itemize}
+\item Beskrivande statistik\smallskip{}
+\item Visualisering\smallskip{}
+\item Regression - deskriptivt\smallskip{}
+\item Prediktion\smallskip{}
+\item Introduktion till R.\medskip{}
+\end{itemize}
+\item \textbf{\textcolor{blue}{Del 2 - Sannolikhetsmodeller och inferens,
+7.5 hp}}
+\item Föreläsare: Mattias Villani \includegraphics[scale=0.005,bb = 0 0 200 100, draft, type=eps]{C:/home/mv/Dropbox/Teaching/SDA1/misc/VillaniLowRes.jpg}\smallskip{}
+
+\begin{itemize}
+\item Sannolikhetslära\smallskip{}
+\item Sannolikhetsmodeller för dataanalys\smallskip{}
+\item Inferens - slutledning från data\smallskip{}
+\item Prediktion\smallskip{}
+\item Beslutsfattande under osäkerhet
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{\textbf{\textcolor{orange}{Examination}}}
+\begin{itemize}
+\item \textbf{\textcolor{blue}{Del 1 - Dataanalys och regression, 7.5 hp}}\medskip{}
+
+\begin{itemize}
+\item \textbf{Inlämningsuppgift, 3 hp}, grupparbete, skriftlig rapport.\medskip{}
+\item \textbf{Skriftlig tentamen, 4.5 hp}.\bigskip{}
+\bigskip{}
+\end{itemize}
+\item \textbf{\textcolor{blue}{Del 2 - Sannolikhetsmodeller och inferens,
+7.5 hp}}\medskip{}
+
+\begin{itemize}
+\item \textbf{Inlämningsuppgift, 1.5 hp}, grupparbete, skriftlig rapport.\medskip{}
+\item \textbf{Skriftlig tentamen, 6 hp}.
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{\textbf{\textcolor{orange}{Kurslitteratur}}}
+
+\noindent %
+\begin{minipage}[t]{0.8\columnwidth}%
+\begin{itemize}
+\item De Veaux, R., Velleman, P. och Bock, D. (2021). \textbf{\textcolor{blue}{Stats:
+Data and Models}}, 5:e upplagan, Pearson Global Edition. 
+\begin{itemize}
+\item Fysisk bok på Akademibokhandeln Frescati eller City, eller online
+på Adlibris och Bokus. 
+\item En digital version finns att köpa eller hyra \textcolor{blue}{\uline{\href{https://nordics.pearson.com/products/stats-data-and-models-5th-global-edition-e-book?variant=42945920630933}{här}}}.
+\bigskip{}
+\end{itemize}
+\item \textbf{\textcolor{blue}{Föreläsningsslides}}. Se under respektive
+föreläsning på kurswebbsidan.\bigskip{}
+\item \textbf{\textcolor{blue}{Ytterligare kompletterande material}} som
+delas ut under kursens gång. Se under respektive föreläsning på kurswebbsidan.
+\end{itemize}
+%
+\end{minipage}\enskip{}%
+\begin{minipage}[t][1\totalheight][b]{0.18\columnwidth}%
+\begin{center}
+\includegraphics[scale=0.17]{figs/SDMcover}
+\par\end{center}%
+\end{minipage}
+
+\bigskip{}
+\end{frame}
+
+\begin{frame}{\textbf{\textcolor{orange}{Inlämningsuppgifterna}}}
+\begin{itemize}
+\item Genomförs som grupparbeten, 3 studenter i varje grupp. \bigskip{}
+\item \textbf{\textcolor{blue}{D1 och D5 obligatoriska}} för gruppindelning.
+Ingen annan obligatorisk närvaro på kursen.\bigskip{}
+\item Två tillfällen (deadlines) för inlämning per inlämningsuppgift: \smallskip{}
+
+\begin{itemize}
+\item Inlämning 1\smallskip{}
+\item Inlämning 2 (andra chans)\bigskip{}
+\end{itemize}
+\item Om en inlämningsuppgift blir underkänd efter inlämning 1 får man chans
+att komplettera och lämna in igen vid inlämning 2.\bigskip{}
+\item Om en inlämningsuppgift blir underkänd efter inlämning 2 ges nästa
+examinationstillfälle nästa termin.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{\textbf{\textcolor{orange}{Inlämningsuppgifterna}}}
+\begin{itemize}
+\item Samarbete inom arbetsgrupp är självklart tillåtet.\bigskip{}
+\item \textbf{\textcolor{blue}{Alla i gruppen ska bidra lika}} mycket till
+rapporten och arbetet som leder upp till rapporten.\bigskip{}
+\item Samarbete mellan grupper är också tillåtet.\bigskip{}
+\item \textbf{\textcolor{red}{Plagiering är inte tillåtet!}} -- automatiskt
+textmatchningsverktyg kommer användas.\bigskip{}
+\item Ge korrekta källor.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{\textbf{\textcolor{orange}{Salstentamen}}}
+\begin{itemize}
+\item Två tillfällen per delkurs, se kursbeskrivningen och schema.\bigskip{}
+\item Upplägg - minst 50 poäng av 100 möjliga för godkänt -- typiskt uppgifter/problem
+där beräkningar och slutsatser ska redovisas skriftligt, även kunskapsfrågor
+kan förekomma.\bigskip{}
+\item Tillåtna hjälpmedel -- \textcolor{blue}{\uline{\href{https://statisticssu.github.io/SDA1/formel_tabell_samlingar/formel_tabell_SDA1.pdf}{Formel- och Tabellsamling}}}
+kommer finnas i tentasalen, tar ni inte med er.\bigskip{}
+\item Miniräknare utan lagrade formler och text, tar ni med er -- \textbf{\textcolor{red}{andra
+hjälpmedel är inte tillåtna}}.\bigskip{}
+\item Om särskilda behov finns (egen lokal, extra tid, språklexikon mm.)
+kontakta studievägledaren i god innan tentan (ca 3 veckor innan).
+\end{itemize}
+\end{frame}
+
+\begin{frame}{\textbf{\textcolor{orange}{Betyg och betygskriterier}}}
+\begin{itemize}
+\item Inlämningsuppgifterna: Godkänd, Underkänd.\bigskip{}
+\item Salstentor: A, B, C, D, E, Fx, F.
+\begin{itemize}
+\item F och Fx är underkända betyg som kräver omtentamen
+\item Går ej att komplettera vid Fx\bigskip{}
+\end{itemize}
+\item Minimikrav för slutbetyg på hela kursen: 
+\begin{itemize}
+\item godkänt på båda inlämningsuppgifterna
+\item minst E på båda tentorna\bigskip{}
+\end{itemize}
+\item Slutbetyg på hela kursen = sammanvägning av betygen på tentorna, se
+Kursbeskrivningen.\bigskip{}
+\item För betygskriterier för respektive prov, se Kursbeskrivningen.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{\textbf{\textcolor{orange}{Kursvärdering och kursutvärdering}}}
+\begin{itemize}
+\item Enkät skickas ut efter kursen.\bigskip{}
+\item Snälla, svara! \includegraphics[scale=0.02]{figs/Praying_Emoji} Vi
+bryr oss \textbf{verkligen} om era åsikter!\bigskip{}
+\item Vi sammanställer en rapport som läggs upp på Athena.\bigskip{}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{\textbf{\textcolor{orange}{SDA1 - en modern kurs}}}
+\begin{itemize}
+\item Fokus på \textbf{\textcolor{blue}{dataanalys i R}} och \textbf{\textcolor{blue}{datorbaserat
+arbetsssätt}}.\medskip{}
+\item \textbf{\textcolor{blue}{Sambandsanalys}} \includegraphics[scale=0.02]{figs/HeartEyes}
+tidigt för motivation.\medskip{}
+\item Större fokus på \textbf{\textcolor{blue}{prediktion}} (även för att
+välja modell).\medskip{}
+\item \textbf{\textcolor{blue}{Sannolikhetslära}} \textbf{\textcolor{blue}{senare}},
+när man insett varför det behövs.\medskip{}
+\item \textbf{\textcolor{blue}{Fokus på grundidéer}}. Färre varianter av
+metoder.\medskip{}
+\end{itemize}
+\begin{center}
+\includegraphics[scale=0.33]{figs/SDA1_filosofi}
+\par\end{center}
+
+\end{frame}
+
+\begin{frame}{\textbf{\textcolor{orange}{Ekonomi}}}
+
+\noindent %
+\begin{minipage}[t]{0.7\columnwidth}%
+\begin{itemize}
+\item \textbf{\textcolor{blue}{Riksbankens räntesättning}}\medskip{}
+
+\begin{itemize}
+\item Riksbankens mål: 2\% inflation per år.\medskip{}
+\item \textbf{\textcolor{blue}{Hur påverkar}} reporäntan inflationen?\medskip{}
+\item \textbf{\textcolor{blue}{Prognoser}} över framtida inflation.
+\end{itemize}
+\end{itemize}
+%
+\end{minipage}\enskip{}%
+\begin{minipage}[t][1\totalheight][b]{0.15\columnwidth}%
+\begin{center}
+\includegraphics[scale=0.17,bb = 0 0 200 100, draft, type=eps]{../../Regression/Slides/figs/inflrepo.pdf}
+\par\end{center}%
+\end{minipage}
+
+\bigskip{}
+
+\noindent %
+\begin{minipage}[t]{0.7\columnwidth}%
+\begin{itemize}
+\item \textbf{\textcolor{blue}{Företagskonkurser}}\smallskip{}
+
+\begin{itemize}
+\item Data på alla svenska aktiebolag\smallskip{}
+
+\begin{itemize}
+\item målvariabel: konkurs/ej konkurs\smallskip{}
+\item orsakssvariabler: vinst, tillgångar, anmärkningar, ålder, makro.\medskip{}
+\end{itemize}
+\item \textbf{\textcolor{blue}{Vilka variabler}} förutsäger en konkurs?\medskip{}
+\item \textbf{\textcolor{blue}{Prediktion}} av ekonomins konkursrisk.
+\end{itemize}
+\end{itemize}
+%
+\end{minipage}\,%
+\begin{minipage}[t][1\totalheight][b]{0.15\columnwidth}%
+\bigskip{}
+\bigskip{}
+
+\begin{center}
+\includegraphics[scale=0.17]{figs/KonkursriskEBITBA_TA}
+\par\end{center}%
+\end{minipage}
+\end{frame}
+
+\begin{frame}{\textbf{\textcolor{orange}{Förseningar i lokaltrafiken}}}
+\begin{itemize}
+\item Mål1: \textbf{\textcolor{blue}{förutsäga förseningar}} för stadsbussar.\medskip{}
+\item Mål2: \textbf{\textcolor{blue}{säkerheten}} i prediktionen:\textcolor{green}{{}
+}\textbf{\textcolor{green}{5 min}}, \textbf{\textcolor{orange}{5 min}},
+\textbf{\textcolor{red}{5 min}}\medskip{}
+\item Data: alla förseningar för alla busslinjer i Sthlm under 1 år.\medskip{}
+\item Mål: förutsäga förseningen för 12.15-bussen till Tegnérgatan.\medskip{}
+\item Förklarande variabler:\medskip{}
+
+\begin{itemize}
+\item försening för 12.15-bussen vid hållplatser innan Tegnérgatan.\smallskip{}
+\item förseningar för tidigare bussar vid hållplats Tegnérgatan.\smallskip{}
+\item tid på dagen\smallskip{}
+\item rusningstid?
+\end{itemize}
+\end{itemize}
+\begin{center}
+\includegraphics[scale=0.19,bb = 0 0 200 100, draft, type=eps]{../../Regression/Slides/figs/slroutemap.pdf}\includegraphics[scale=0.13,bb = 0 0 200 100, draft, type=eps]{../../Regression/Slides/figs/plot_sample_week_y.pdf}
+\par\end{center}
+
+\end{frame}
+
+\begin{frame}{\textbf{\textcolor{orange}{Nätverksdata}}}
+
+\noindent %
+\begin{minipage}[t]{0.8\columnwidth}%
+\begin{itemize}
+\item Socialt \textbf{\textcolor{blue}{nätverk}}: individer och deras \textbf{\textcolor{blue}{relationer}}.
+\item \textbf{\textcolor{blue}{Data}}: \textbf{\textcolor{blue}{noder}}
+(personer) och \textbf{\textcolor{blue}{länkar}} (relationer).\smallskip{}
+\\
+\hspace{2cm}\includegraphics[scale=0.15]{figs/AdjMatrixFriends}
+\end{itemize}
+%
+\end{minipage}\quad{}%
+\noindent\begin{minipage}[t][1\totalheight][b]{0.1\columnwidth}%
+\begin{center}
+\includegraphics[scale=0.22]{figs/simplenetwork}
+\par\end{center}%
+\end{minipage}
+
+\medskip{}
+
+\begin{minipage}[t]{0.8\columnwidth}%
+\begin{itemize}
+\item Sociala nätverk (Twitter, Facebook etc)\medskip{}
+\item Kriminella nätverk\smallskip{}
+
+\begin{itemize}
+\item {\small{}Noder: personer.}\smallskip{}
+\item {\small{}Länkar: har gjort brott tillsammans?}\medskip{}
+\end{itemize}
+\item Kulturella nätverk\smallskip{}
+
+\begin{itemize}
+\item {\small{}Noder: Skådespelare.}\smallskip{}
+\item {\small{}Länkar: Spelat i samma pjäs eller film.}{\small\par}
+\end{itemize}
+\end{itemize}
+%
+\end{minipage}\quad{}%
+\noindent\begin{minipage}[t][1\totalheight][b]{0.1\columnwidth}%
+\begin{center}
+\includegraphics[scale=0.12]{figs/network_hector}
+\par\end{center}
+\begin{center}
+\includegraphics[scale=0.05,bb = 0 0 200 100, draft, type=eps]{figs/flaticons/organized-crime.svg}
+\par\end{center}
+\begin{center}
+\includegraphics[scale=0.05,bb = 0 0 200 100, draft, type=eps]{figs/flaticons/drama.svg}
+\par\end{center}%
+\end{minipage}
+\end{frame}
+
+\begin{frame}{\textbf{\textcolor{orange}{Amerikansk flygplanstrafik}}}
+\begin{itemize}
+\item \textbf{\textcolor{blue}{Noder}}: flygplatser. \textbf{\textcolor{blue}{Länkar}}:
+flygrutter.
+\item \textbf{\textcolor{blue}{Dynamiska nätverk}} vars länkar förändras
+över tid.
+\item \textbf{\textcolor{blue}{Multipla lager}}: en graf för varje flygbolag.
+\item Data: 80 flygplatser för 4 flygbolag över 10 års tid.
+\item Delmål: \textbf{\textcolor{blue}{förutsäga nätverkets utveckling}}.
+\end{itemize}
+\noindent \begin{center}
+\includegraphics[scale=0.15]{figs/airlines_hector}
+\par\end{center}
+
+\end{frame}
+
+\begin{frame}{\textbf{\textcolor{orange}{Var i hjärnan skapas vårt språk?}}}
+\begin{itemize}
+\item Person i MR scanner \textbf{\textcolor{blue}{pratar}}-\textbf{\textcolor{blue}{knyter
+handen}}-\textbf{\textcolor{blue}{pratar}} osv.
+\end{itemize}
+\begin{center}
+\begin{tabular}{cc}
+\includegraphics[scale=0.12,bb = 0 0 200 100, draft, type=eps]{../../Regression/Slides/figs/MR_skanner_aarhusSmaller.jpg} & \includegraphics[scale=0.43,bb = 0 0 200 100, draft, type=eps]{../../Regression/Slides/figs/CFS-brain-scan-basal-ganglia-fMRI.png}\tabularnewline
+\textcolor{darkgray}{\tiny{}Lars Kruse, AU Kommunikation, CC license} & \textcolor{blue}{\tiny{}\uline{\href{https://journals.plos.org/plosone/article/figures?id=10.1371/journal.pone.0098156}{Source}}}{\tiny{},
+CC license}\tabularnewline
+\end{tabular}
+\par\end{center}
+\begin{itemize}
+\item \textbf{\textcolor{blue}{Mäter}} mängden syresatt blod på tusentals
+ställen i hjärnan. 
+\end{itemize}
+\begin{center}
+\begin{tabular}{c}
+\includegraphics[scale=0.13,bb = 0 0 200 100, draft, type=eps]{../../Regression/Slides/figs/sidenBrain.png}\tabularnewline
+\end{tabular}
+\par\end{center}
+\begin{itemize}
+\item \textbf{\textcolor{blue}{Vilka hjärnregioner aktiveras}} när man pratar?
+Språkcentra.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{\textbf{\textcolor{orange}{Optimala kunskapsprov och intelligens}}}
+\begin{itemize}
+\item Mäta elevers kunskaper: Nationella prov, PISA etc.
+\item \textbf{\textcolor{blue}{Statistisk modell}}:
+\[
+\text{Provsvar (data) }\Longrightarrow\text{elevens sanna kunskapsnivå (inferens)}
+\]
+\item \textbf{\textcolor{blue}{Designa optimala prov}} för att mäta kunskapsnivå.
+\item \textbf{\textcolor{blue}{Adaptiva prov}}: vid datorbaserade prov kan
+man välja optimal fråga för varje student baserat på tidigare svar
+under provet. 
+\item Pågående \textcolor{blue}{\uline{\href{https://www.su.se/forskning/forskningsprojekt/optimal-kalibrering-av-uppgifter-i-datorbaserade-kunskapsprov?open-collapse-boxes=research-project-members}{forskningsprojekt}}}
+vid statistiska institutionen.\medskip{}
+\item \textbf{\textcolor{blue}{Psykologi}}: vad är \textbf{\textcolor{blue}{intelligens}},
+och hur mäter man det? \\
+En eller fler-dimensionellt? \textbf{\textcolor{blue}{Statistisk faktoranalys}}.
+\end{itemize}
+\begin{center}
+\includegraphics[scale=0.09,bb = 0 0 200 100, draft, type=eps]{figs/flaticons/artificial-intelligence.svg}\qquad{}\includegraphics[scale=0.09,bb = 0 0 200 100, draft, type=eps]{figs/flaticons/exam.svg}\qquad{}\includegraphics[scale=0.07,bb = 0 0 200 100, draft, type=eps]{figs/flaticons/einstein.svg}
+\par\end{center}
+
+\end{frame}
+
+\begin{frame}{\textbf{\textcolor{orange}{Statistiker får jobb som data scientists}}}
+\begin{center}
+\includegraphics[scale=0.29]{figs/andreeaTaylor}\includegraphics[scale=0.338]{figs/ankargren}\includegraphics[scale=0.292]{figs/qurat}
+\par\end{center}
+
+\begin{center}
+\includegraphics[scale=0.304]{figs/emeliewahlstrom}\includegraphics[scale=0.3]{figs/parfait}\includegraphics[scale=0.28]{figs/LeifLinkedIn}
+\par\end{center}
+
+\end{frame}
+
+\begin{frame}{\textbf{\textcolor{orange}{Artificiell intelligens och maskininlärning}}}
+\begin{center}
+\includegraphics[scale=0.07]{figs/SelfDrivingCar}\includegraphics[scale=0.099]{figs/Tracking}
+\par\end{center}
+
+\begin{center}
+\includegraphics[scale=0.048]{figs/roombaMeeting}\includegraphics[scale=0.0443]{figs/Siri}\includegraphics[scale=0.058]{figs/doctorIpad}
+\par\end{center}
+\begin{itemize}
+\item Statistik är grunden för modern AI.
+\end{itemize}
+\begin{center}
+\includegraphics[scale=0.25]{figs/StatisticsPrereq4ML}
+\par\end{center}
+\begin{itemize}
+\item \textbf{\textcolor{blue}{\uline{\href{https://www.deeplearningbook.org/contents/prob.html}{Deep Learning Book}}}}:
+Kapitel 3:{\scriptsize{} }\\
+{\scriptsize{}Sannolikheter, slumpvariabler, sannolikhetsfördelningar,
+väntevärde, varians, kovarians, korrelation, regression, Bayes sats,
+Normalfördelning, osv.}{\scriptsize\par}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{\textbf{\textcolor{orange}{Bilder, text och ljud är data}}}
+\begin{itemize}
+\item Mål: få en maskin att känna igen handskrivna siffor.
+\item Data: 60000 handskrivna siffror mellan 0-9.
+\item Varje bild har 28 x 28 pixlar med värde mellan 0 och 255:
+\end{itemize}
+\begin{center}
+0 = svart\hspace{1cm}128 = \textcolor{gray}{mellangrå}\hspace{1cm}255
+= \textcolor{white}{vit}
+\par\end{center}
+
+\begin{center}
+\includegraphics[scale=0.07]{figs/mnistOneWithRedVoxel}\includegraphics[scale=0.07]{figs/mnistZeroWithRedVoxel}
+\par\end{center}
+\begin{itemize}
+\item \textbf{\textcolor{blue}{Statistisk prognosmodell}} som ger \emph{sannolikhet}s\emph{fördelningar}:
+\end{itemize}
+\begin{center}
+\includegraphics[scale=0.045]{figs/MnistTest7} $\;$\includegraphics[scale=0.06,bb = 0 0 200 100, draft, type=eps]{figs/flaticons/right-arrow.png}
+$\;$\includegraphics[scale=0.25]{figs/mnist_pred7}
+\par\end{center}
+\begin{itemize}
+\item Djupa neurala nätverk (\textbf{\textcolor{blue}{deep learning}}) bygger
+på statistik.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{\textbf{\textcolor{orange}{Statistik - a love story }}\includegraphics[scale=0.02]{figs/HeartEyes}}
+\begin{itemize}
+\item \textbf{\textcolor{blue}{Data/information}} finns numera \textbf{\textcolor{blue}{överallt}}.
+\\
+Internet, smartphones, sensorer, betalkort, läsplattor
+\item \textbf{\textcolor{blue}{Data är det nya guldet}}. Facebook, Google
+etc lever på datainsamling och analys av data.
+\item Statistiker arbetar inom alla fält. Frihet att byta fält. 
+\end{itemize}
+\begin{center}
+\includegraphics[scale=0.06,bb = 0 0 200 100, draft, type=eps]{figs/flaticons/money.png}
+\includegraphics[scale=0.06,bb = 0 0 200 100, draft, type=eps]{figs/flaticons/right-arrow.png}
+\includegraphics[scale=0.06,bb = 0 0 200 100, draft, type=eps]{figs/flaticons/brainstorm.png}
+\includegraphics[scale=0.06,bb = 0 0 200 100, draft, type=eps]{figs/flaticons/right-arrow.png}
+\includegraphics[scale=0.06,bb = 0 0 200 100, draft, type=eps]{figs/flaticons/robot.png}
+\includegraphics[scale=0.06,bb = 0 0 200 100, draft, type=eps]{figs/flaticons/right-arrow.png}
+\includegraphics[scale=0.06,bb = 0 0 200 100, draft, type=eps]{figs/flaticons/bus.png}
+\par\end{center}
+\begin{itemize}
+\item Annat ämne + \textbf{\textcolor{blue}{mycket statistik gör dig unik}}.
+\item \textbf{\textcolor{blue}{Empiriska bevis inom vetenskap }}avgörs av
+statistik. 
+\begin{itemize}
+\item Är Covid-vaccin effektiva? 
+\item Fungerar kognitiv beteendeterapi? 
+\item Har inkomstskillnaderna i Sverige ökat?
+\end{itemize}
+\item Statistik $\Longrightarrow$ informerad medborgare. \textbf{\textcolor{blue}{Förstå
+och tolka data}}. \textbf{\textcolor{blue}{Kritiskt ifrågasätta}}
+data. \textbf{\textcolor{blue}{Samla in}} bättre data. 
+\end{itemize}
+\end{frame}
+
+
+\end{document}

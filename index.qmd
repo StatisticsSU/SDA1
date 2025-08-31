@@ -41,7 +41,7 @@ På vissa delar av kursen använder vi interaktivt material för att underlätta
 ### Lärare
 
 ::: {layout="[ [1,1],[1,1], [1, 1] ]"}
-<img src="/misc/male.png" width="35%"/>\
+<img src="/misc/oskar.jpg" width="35%"/>\
 [Oskar Gustafsson](https://www.su.se/profiles/osgu4809-1.252072)<br>Kursansvarig och föreläsare<br>
 
 <img src="/misc/ester.jpg" width="35%"/>\
