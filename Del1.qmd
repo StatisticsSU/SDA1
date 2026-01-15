@@ -19,7 +19,7 @@ Läs: SDM Kapitel 1 | [Slides](/slides/part1/F1.html)\
 Testa dina kunskaper: [Algebra](https://karlsigfrid.github.io/statisticstutor/output/exercises/algebra_basic.html) | [Summor och produkter](https://karlsigfrid.github.io/statisticstutor/output/exercises/notation_sum_prod.html)
 
 **Föreläsning 2 - Hantera och beskriva data.**\
-Läs: SDM Kapitel 2 | [Slides](/slides/part1/L2Embedded.html)\
+Läs: SDM Kapitel 2 | [Slides](/slides/part1/F2.html)\
 Interaktivt: [widget - histogram](/observable/histogram.qmd)\
 Testa dina kunskaper: [Centralvärden](https://karlsigfrid.github.io/statisticstutor/output/exercises/mean_median_mode.html) | [Kvartiler](https://karlsigfrid.github.io/statisticstutor/output/exercises/quartiles_iqr.html) | [Varians](https://karlsigfrid.github.io/statisticstutor/output/exercises/sample_variance.html) | [Standardavvikelse](https://karlsigfrid.github.io/statisticstutor/output/exercises/standard_deviation.html)\
 <details><summary>innehåll</summary>
@@ -27,7 +27,7 @@ Variabeltyper &#x2022; Frekvenstabeller &#x2022; Fördelningar &#x2022; Outliers
 </details>
 
 **Föreläsning 3 - Samband mellan kategoriska variabler.**\
-Läs: SDM Kapitel 3 | [Slides](/slides/part1/lecture3_embedded.html)\
+Läs: SDM Kapitel 3 | [Slides](/slides/part1/F3.html)\
 Testa dina kunskaper: [Marginalfördelningar](https://karlsigfrid.github.io/statisticstutor/output/exercises/marginal_distribution_proportions.html) | [Betingade fördelningar](https://karlsigfrid.github.io/statisticstutor/output/exercises/conditional_proportion.html)\
 <details><summary>innehåll</summary>
 Korstabeller &#x2022; Betingade fördelningar av kategoriska variabler &#x2022; Test av hypotes om oberoende genom simulering &#x2022; Samband och kausalitet
