@@ -34,14 +34,14 @@ Korstabeller &#x2022; Betingade fördelningar av kategoriska variabler &#x2022; 
 </details>
 
 **Föreläsning 4 - Jämföra fördelningar. Tidsserier. Transformationer.**\
-Läs: SDM Kapitel 4 | [Slides](/slides/part1/lecture4_embedded.html)\
+Läs: SDM Kapitel 4 | [Slides](/slides/part1/F4.html)\
 Testa dina kunskaper: [the Data Game](https://karlsigfrid.github.io/statisticstutor/output/login/mainpage.html)
 <details><summary>innehåll</summary>
 Numeriska variabler betingade på kategoriska variabler &#x2022; Grafisk representation av tidsserier &#x2022; Transformering med logaritmer
 </details>
 
 **Föreläsning 5 - Standardiserade variabler och normalfördelningen.**\
-Läs: SDM Kapitel 5 | [Slides](/slides/part1/lecture5_embedded.html)\
+Läs: SDM Kapitel 5 | [Slides](/slides/part1/F5.html)\
 Extramaterial: [Hantera dataset med dplyr](/slides/part1/dplyr_demo.html)\
 Testa dina kunskaper: [Z-värden, övning 1](https://karlsigfrid.github.io/statisticstutor/output/exercises/calculate_zscore.html) | [Z-värden, övning 2](https://karlsigfrid.github.io/statisticstutor/output/exercises/calculate_zscore2.html) | [Normalfördelningen](https://karlsigfrid.github.io/statisticstutor/output/exercises/normal_68_95.html) |  [Normalfördelningstabellen, övning 1](https://karlsigfrid.github.io/statisticstutor/output/exercises/ztable_part1.html) |  [Normalfördelningstabellen, övning 2](https://karlsigfrid.github.io/statisticstutor/output/exercises/ztable_part1.html)\
 <details><summary>innehåll</summary>
@@ -49,7 +49,7 @@ Standardiserade variabler &#x2022; Normalfördelningen &#x2022; Beräkningar med
 </details>
 
 **Föreläsning 6 - Samband mellan numeriska variabler. Korrelation.**\
-Läs: SDM Kapitel 6 | [Slides](/slides/part1/lecture6_embedded.html)\
+Läs: SDM Kapitel 6 | [Slides](/slides/part1/F6.html)\
 <details><summary>innehåll</summary>
 Spridningsdiagram &#x2022; Korrelationskoefficienten &#x2022; Korrelation och kausalitet
 </details>
