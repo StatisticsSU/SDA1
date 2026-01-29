@@ -41,15 +41,24 @@ På vissa delar av kursen använder vi interaktivt material för att underlätta
 ### Lärare
 
 ::: {layout="[ [1,1],[1,1], [1, 1] ]"}
-<img src="/misc/oskar.jpg" width="35%"/>\
-[Oskar Gustafsson](https://www.su.se/profiles/osgu4809-1.252072)<br>Kursansvarig och föreläsare<br>
-
-<img src="/misc/ester.jpg" width="35%"/>\
-[Ester Lagerlöf](https://www.su.se/profiles/esla2049-1.787983)<br>Räkneövningar, datorövningar och jour<br>
+<img src="/misc/profilbild-bjermo.jpg" width="35%"/>\
+[Jonas Bjermo](https://www.su.se/profiles/osgu4809-1.252072)<br>Kursansvarig och föreläsare<br>
 
 <img src="/misc/male.png" width="35%"/>\
-[Ulf Högnäs](https://www.su.se/profiles/ulh3291-1.365684)<br>Räkneövningar och jour<br>
+[Valentin Zulj](https://www.su.se/profiles/ulh3291-1.365684)<br>Föreläsare<br>
 
 <img src="/misc/female.png" width="35%"/>\
-[Mina Poshtvar](https://www.su.se/profiles/mipo1373-1.830070)<br>Datorövningar<br>
+[Alice Luthander](https://www.su.se/profiles/esla2049-1.787983)<br>Räkneövningar och jour<br>
+
+<img src="/misc/female.png" width="35%"/>\
+[Maria Bennis](https://www.su.se/profiles/esla2049-1.787983)<br>Räkneövningar och jour<br>
+
+<img src="/misc/female.png" width="35%"/>\
+[Shi Ting Roberta Hu](https://www.su.se/profiles/ulh3291-1.365684)<br>Datorövningar och inlämningsuppgifter<br>
+
+<img src="/misc/male.png" width="35%"/>\
+[William Gustafsson](https://www.su.se/profiles/ulh3291-1.365684)<br>Datorövningar och inlämningsuppgifter<br>
+
+<img src="/misc/female.png" width="35%"/>\
+[Mina Poshtvar](https://www.su.se/profiles/mipo1373-1.830070)<br>Datorövningar och inlämningsuppgifter<br>
 :::
