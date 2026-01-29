@@ -62,7 +62,7 @@ Den enkla linjära regressionsmodellen &#x2022; Tolkning av regressionskoefficie
 </details>
 
 **Föreläsning 8 - Transformationer. Multipel linjär regression.**\
-Läs: SDM Kapitel 8, 9.1-9-4 | [Slides](/slides/part1/lecture8_embedded.html)\
+Läs: SDM Kapitel 8, 9.1-9-4 | [Slides](/slides/part1/F8.html)\
 Extramaterial: [widget - icke-linjär regression](/observable/ickelinregression.qmd)\
 <details><summary>innehåll</summary>
 Transformation av variabler för regression &#x2022; Multipel linjär regression &#x2022; Adjusted R-squared
