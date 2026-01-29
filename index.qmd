@@ -27,7 +27,7 @@ Kursen består av föreläsningar, räkneövningar och datorlaborationer. Se res
 
 ### Schema
 
-Kursens schema finns på [TimeEdit](https://cloud.timeedit.net/su/web/stud1/s.html?sid=3&type=courseevent&h=t&object=cevt_39017_HT2025&startdate=20250802&enddate=20260417&l=sv&h2=2). Ett tips är att välja *Prenumerera* i övre högra hörnet på TimeEdit och sen klistra in länken i ditt kalenderprogram på mobilen.
+Kursens schema finns på [TimeEdit](https://cloud.timeedit.net/su/web/stud1/s.html?sid=8&object=cevt_39046_VT2026&type=courseevent&h=t&startdate=20251220&enddate=20260620&l=sv). Ett tips är att välja *Prenumerera* i övre högra hörnet på TimeEdit och sen klistra in länken i ditt kalenderprogram på mobilen.
 
 ### Formel- och tabellsamlingar
 
@@ -40,11 +40,11 @@ På vissa delar av kursen använder vi interaktivt material för att underlätta
 
 ### Lärare
 
-::: {layout="[ [1,1],[1,1], [1, 1] ]"}
+::: {layout="[ [1,1],[1,1],[1,1] ]"}
 <img src="/misc/profilbild-bjermo.jpg" width="35%"/>\
 [Jonas Bjermo](https://www.su.se/profiles/osgu4809-1.252072)<br>Kursansvarig och föreläsare<br>
 
-<img src="/misc/male.png" width="35%"/>\
+<img src="/misc/valentin.jpg" width="35%"/>\
 [Valentin Zulj](https://www.su.se/profiles/ulh3291-1.365684)<br>Föreläsare<br>
 
 <img src="/misc/female.png" width="35%"/>\
