@@ -69,7 +69,7 @@ Transformation av variabler för regression &#x2022; Multipel linjär regression
 </details>
 
 **Föreläsning 9 - Dummyvariabler i regressionsmodeller. Modellval.**\
-Läs: SDM 9.5  | [Slides](/slides/part1/lecture9_embedded.html)\ 
+Läs: SDM 9.5  | [Slides](/slides/part1/F9.html)\ 
 <details><summary>innehåll</summary>
 Dummyvariabler &#x2022; Modellval &#x2022; Överanpassning och underanpassning &#x2022; Träningsdata och testdata &#x2022; Korsvalidering
 </details>
