@@ -42,22 +42,22 @@ På vissa delar av kursen använder vi interaktivt material för att underlätta
 
 ::: {layout="[ [1,1],[1,1],[1,1] ]"}
 <img src="/misc/profilbild-bjermo.jpg" width="35%"/>\
-[Jonas Bjermo](https://www.su.se/profiles/osgu4809-1.252072)<br>Kursansvarig och föreläsare<br>
+[Jonas Bjermo](https://www.su.se/profiles/j/jobj4957)<br>Kursansvarig och föreläsare<br>
 
 <img src="/misc/valentin.jpg" width="35%"/>\
-[Valentin Zulj](https://www.su.se/profiles/ulh3291-1.365684)<br>Föreläsare<br>
+[Valentin Zulj](https://www.su.se/profiles/v/vazu9327)<br>Föreläsare<br>
 
 <img src="/misc/female.png" width="35%"/>\
-[Alice Luthander](https://www.su.se/profiles/esla2049-1.787983)<br>Räkneövningar och jour<br>
+[Alice Luthander](https://www.su.se/profiles/a/almi7871)<br>Räkneövningar och jour<br>
 
 <img src="/misc/female.png" width="35%"/>\
-[Maria Bennis](https://www.su.se/profiles/esla2049-1.787983)<br>Räkneövningar och jour<br>
+[Maria Bennis](https://www.su.se/profiles/m/mabe5705)<br>Räkneövningar och jour<br>
 
 <img src="/misc/female.png" width="35%"/>\
-[Shi Ting Roberta Hu](https://www.su.se/profiles/ulh3291-1.365684)<br>Datorövningar och inlämningsuppgifter<br>
+[Shi Ting Roberta Hu](https://www.su.se/profiles/s/shhu1135)<br>Datorövningar och inlämningsuppgifter<br>
 
 <img src="/misc/male.png" width="35%"/>\
-[William Gustafsson](https://www.su.se/profiles/ulh3291-1.365684)<br>Datorövningar och inlämningsuppgifter<br>
+[William Gustafsson](https://www.su.se/profiles/w/wigu0246)<br>Datorövningar och inlämningsuppgifter<br>
 
 <img src="/misc/female.png" width="35%"/>\
 [Mina Poshtvar](https://www.su.se/profiles/mipo1373-1.830070)<br>Datorövningar och inlämningsuppgifter<br>

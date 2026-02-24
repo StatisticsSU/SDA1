@@ -16,3 +16,4 @@ docs/stealourcourse.html
 *.lyx~
 .~lock*
 .$*
+**/*.quarto_ipynb
