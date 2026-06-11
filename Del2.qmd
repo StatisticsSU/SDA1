@@ -13,23 +13,6 @@ Under vissa föreläsningar länkar vi till `Extramaterial`. Det är material so
 
 ### **Föreläsningar**
 
-**Föreläsning 11 - Osäkerhet och Sannolikhet.**\
-Läs: SDM Kapitel 12 och 13 \| [Slides](/slides/F11Sannolikhet.pdf)\
-Interaktivt: [slantsingling](/observable/storatalenslag_bernoulli.qmd)\
-Extramaterial: [TedTalk om sannolikheter](
-https://youtu.be/0m5bg2hpHNw)
-<details><summary>innehåll</summary>
-Sannolikhetstolkningar &#x2022; Händelser &#x2022; Union &#x2022; Snitt &#x2022; Sannolikhetsberäkningar &#x2022; Venn diagram &#x2022; Kombinatorik
-</details>
-
-**Föreläsning 12 - Betingade sannolikheter och Bayes sats.**\
-Läs: SDM Kapitel 13 \| [Slides](/slides/F12BetingadeSlhBayesSats.pdf)\
-Interaktivt: [bayessats](/observable/bayestheorem.qmd)\
-Extramaterial: [artikel om Bayes sats och snabbtest för Covid-19](https://www.varsity.co.uk/science/21149)
-<details><summary>innehåll</summary>
-Betingad sannolikhet &#x2022; Multiplikationsregeln &#x2022; Oberoende händelser &#x2022; Disjunkta händelser &#x2022; Bayes sats &#x2022; Lagen om total sannolikhet 
-</details>
-
 **Föreläsning 13 - Slumpvariabler och deras egenskaper.**\
 Läs: SDM Kapitel 14 \| [Slides](/slides/F13Slumpvariabler.pdf) | [Kalkylark om diskret simultanfördelning och kovarians](/misc/DiskretSimultanfördelningKovarians.xlsx) | [Google docs version (view only) om diskret simultanfördelning och kovarians](https://docs.google.com/spreadsheets/d/1gMmUHFH0NydQABfvEu8YuDN8jQgmze6iiZ_WY_q4_jg/edit?usp=sharing)\
 Interaktivt: [normalfördelningen](/observable/normalfordelningen.qmd)
@@ -122,12 +105,6 @@ Subjektiva sannolikheter &#x2022; Uppdatera apriorikunskap med data
 ### **Räkneövningar**
 
 Övningarna i kursboken [Stats: Data and Models (SDM)](https://nordics.pearson.com/products/stats-data-and-models-5th-global-edition-e-book?variant=42945920630933) hänvisas till med kapitelnummer följt av övningsnummer.
-
-**Övning 7 - Sannolikheter för händelser. Kombinatorik.**\
-Uppgifter: SDM 12.2, 12.5, 12.7, 12.9, 12.12, 12.16, 12.21, 12.27, 12.29, 12.31, 12.34, 12.36, 12.39, 12.41, 12.49, 12.52.
-
-**Övning 8 - Oberoende händelser. Betingning och Bayes sats.**\
-Uppgifter: SDM 13.1, 13.5, 13.7, 13.10, 13.12, 13.14, 13.18, 13.21, 13.24, 13.31, 13.47, 13.49.
 
 **Övning 9 - Slumpvariabler, väntevärde och standardavvikelse.**\
 Uppgifter: SDM 14.1, 14.3, 14.9a, 14.11, 14.13, 14.21, 14.26, 14.33, 14.36, 14.43, 14.54.

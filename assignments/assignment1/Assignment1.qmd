@@ -70,7 +70,35 @@ Följande variabler finns i datasetet `boston_census_data.Rdata` ([ladda ner](ht
 -   `lower_stat_pct`: Procentandel med låg socioekonomisk status i termer av utbildning eller arbete.
 -   `dist_fenway_park`: Avstånd till stadion Fenway Park.
 
-Inlämningsuppgiften ska lämnas in i form av ett html-dokument genererat av Quarto. **Kontrollera att ni inte får några felmeddelande när du genererar HTML-dokumentet. Läs sedan igenom HTML-dokumentet noggrant innan ni lämnar in det.** Använd tydliga figurer och namnge axlarna med tydliga variabelnamn. Glöm inte att skriva era namn i början av dokumentet, där det nu står Namn 1, Namn 2 och Namn 3.
+### Inlämning av uppgiften
+
+Lämna in uppgiften genom att gå in på kurssidan på Canvas, och klicka på `Uppgifter` i vänsterspalten. Välj sedan `Inlämningsuppgift 1` i listan, och ladda upp era filer. Notera att **bara en** av gruppmedlemmarna behöver lämna in uppgiften i Canvas, och att varje grupp måste lämna in två olika filer:
+
+1.  Ett html-dokument som är genererat med hjälp av Quarto, här ska alla era svar gå att läsa utan problem (dvs tabeller, figurer, tolkningar, analyser etc), och
+
+2.  Den quarto-fil som avnänts för att generera html-dokumentet.
+
+De grupper som inte lämnat in båda dessa filer kommer automatiskt att få komplettering.
+
+**Deadline för inlämning finns angiven i kursbeskrivningen och på Canvas**
+
+
+
+**Checklista inför inlämning:**
+
+- [ ] Skriv era namn i början av dokumentet, där det nu står Namn 1, Namn 2 och Namn 3. Om någon av medlemmarna i gruppen inte har gått att nå, eller inte har deltagit i arbetet med uppgiften, ska denna person inte skrivas in som medförfattare. Inlämningen får bara representera de gruppmedlemmar som aktivt deltagit i arbetet med **hela** rapporten.
+
+- [ ] Kontrollera att ni inte får några felmeddelanden när ni genererar HTML-dokumentet -- ni kan göra detta genom att starta om R/RStudio helt och hållet, och försöka rendera om html-filen utan att läsa in några paket som inte redan finns inskrivna i quarto-filen. Om rättande lärare inte kan köra qmd-filen utan problem kommer den berörda gruppen få komplettera.
+
+- [ ] Kontrollera att HTML-filen är korrekt renderad (formateringen håller, figurer syns etc.). Om html-filen inte är korrekt renderad kommer den berörda få komplettera, oavsett om övriga uppgifter är korrekt genomförda.
+
+- [ ] Kontrollera att alla figurer har en beskrivande figurtext/titel placerad ovanför figuren. Axlarna ska vara namngivna med både variabelnamn och enhet (om lämpligt). Se även till att kommentera och resonera kring era figurer och resultat i löpande text. Denna text ska inte ligga i kod-chunks. Kommentarer i kod-chunks ska endast användas för att förklara koden, inte för att diskutera output eller resultat. 
+
+- [ ] Kontrollera namnen på filerna som ska lämnas in. Dessa får inte innehålla bokstäverna å, ä, ö, specialtecken eller mellanslag. 
+
+
+
+
 :::
 
 [^1]: Totalundersökningen trunkerade medianhusvärdet till 50K för de censusdistrikten som låg över. Vi har tagit bort dessa censusdistrikt. Vi har också tagit bort variabler som är irrelevanta.
