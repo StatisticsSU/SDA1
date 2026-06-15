@@ -13,8 +13,8 @@ Du lär dig att utföra dataanalyser i praktiken, bl a genom datorlaborationer o
 
 Kursen består av två delar:
 
--   [Dataanalys och regression, 7.5 hp.](Del1.qmd) I det här momentet ingår insamling, bearbetning, visualisering och sammanfattning av data i programspråket R. En stor del av momentet behandlar sambands- och regressionsanalys som utmynnar i metoder för prediktion.
--   [Sannolikhetsmodeller och inferens, 7.5 hp.](Del2.qmd) I kursens andra momentet behandlas sannolikheter, slumpvariabler och sannolikhetsfördelningar. En central del i momentet är inferens, dvs. statistiska metoder för att dra slutsatser om olika fenomen från data. Kursen avslutas med en introduktion till beslutsfattade under osäkerhet.
+-   [Dataanalys och regression, 7.5 hp.](Del1.qmd) I det här momentet ingår insamling, bearbetning, visualisering och sammanfattning av data i programspråket R. En stor del av momentet behandlar sambands- och regressionsanalys som utmynnar i metoder för prediktion. En första del om sannolikheter ingår också. 
+-   [Sannolikhetsmodeller och inferens, 7.5 hp.](Del2.qmd) I kursens andra momentet behandlas slumpvariabler och sannolikhetsfördelningar. En central del i momentet är inferens, dvs. statistiska metoder för att dra slutsatser om olika fenomen från data. Kursen avslutas med en introduktion till beslutsfattade under osäkerhet.
 
 ### Kurslitteratur
 
@@ -41,23 +41,17 @@ På vissa delar av kursen använder vi interaktivt material för att underlätta
 ### Lärare
 
 ::: {layout="[ [1,1],[1,1],[1,1] ]"}
-<img src="/misc/profilbild-bjermo.jpg" width="35%"/>\
-[Jonas Bjermo](https://www.su.se/profiles/j/jobj4957)<br>Kursansvarig och föreläsare<br>
+<img src="/misc/male.png" width="35%"/>\
+[Tobias Rydén](https://www.su.se/profiles/j/jobj4957)<br>Kursansvarig och föreläsare<br>
 
 <img src="/misc/valentin.jpg" width="35%"/>\
 [Valentin Zulj](https://www.su.se/profiles/v/vazu9327)<br>Föreläsare<br>
 
 <img src="/misc/female.png" width="35%"/>\
-[Alice Luthander](https://www.su.se/profiles/a/almi7871)<br>Räkneövningar och jour<br>
-
-<img src="/misc/female.png" width="35%"/>\
-[Maria Bennis](https://www.su.se/profiles/m/mabe5705)<br>Räkneövningar och jour<br>
+[Julia Hjärthner Langenius](https://www.su.se/profiles/a/almi7871)<br>Räkneövningar och jour<br>
 
 <img src="/misc/female.png" width="35%"/>\
 [Shi Ting Roberta Hu](https://www.su.se/profiles/s/shhu1135)<br>Datorövningar och inlämningsuppgifter<br>
-
-<img src="/misc/male.png" width="35%"/>\
-[William Gustafsson](https://www.su.se/profiles/w/wigu0246)<br>Datorövningar och inlämningsuppgifter<br>
 
 <img src="/misc/female.png" width="35%"/>\
 [Mina Poshtvar](https://www.su.se/profiles/mipo1373-1.830070)<br>Datorövningar och inlämningsuppgifter<br>
