@@ -38,6 +38,24 @@ Kursens schema finns på [TimeEdit](https://cloud.timeedit.net/su/web/stud1/s.ht
 
 På vissa delar av kursen använder vi interaktivt material för att underlätta lärandet. De interaktiva applikationerna kommer vara länkade från föreläsningsslides och under respektive föreläsning. En sida med alla applikationer finns [här](interaktiv.qmd).
 
+### Repetition av matematik
+
+Till dig som blivit antagen till kursen Statistik och dataanalys I (ST1101) höstterminen 2026, antingen genom kandidatprogrammet Statistik och dataanalys, som del av kurspaketet Statistik I, eller som enskild kurs.
+
+Välkommen! Kursen handlar förstås om statistik, men matematik är ett verktyg som används genomgående i kursen. För att vara väl förberedd inför kursen och för att kunna fokusera på det statistiska innehållet fullt ut, rekommenderar vi att du före kursstart repeterar delar av innehållet i gymnasiekurserna matematik 1-3b (eller motsvarande).
+
+De delar som är speciellt relevanta är 
+-- algebra: räkning med och förenkling av uttryck med parenteser; kvadreringsregler; konjugatregeln; räkning med potensuttryck
+-- polynomfunktioner, potensfunktioner och exponentialfunktioner
+-- räkning med uttryck med olikheter
+
+Titta också på notation med summationstecken ("Sigma"), se t ex https://sv.wikipedia.org/wiki/Summa under "Summasymbolen".
+
+Gymnasiekurserna innehåller också litet om sannolikhetsteori och statistik; repetera gärna även detta.
+
+Ej viktigt för denna kurs är geometri, samt linjär optimering.
+
+
 ### Lärare
 
 ::: {layout="[ [1,1],[1,1],[1,1] ]"}
