@@ -376,6 +376,7 @@ Här är hela koden i ett stycke:
 
 ```{r}
 #| echo: true
+#| eval: false
 setwd('/home/mv/Dropbox/Teaching/SDA1/datorlab/lab1') # I have a Linux computer and my data is in this path
 library(openxlsx)                         
 stockdata = read.xlsx('stock.xlsx', sheet = 1)
