@@ -41,7 +41,7 @@ Numeriska variabler betingade på kategoriska variabler &#x2022; Grafisk represe
 </details>
 
 **Föreläsning 5 - Standardiserade variabler och normalfördelningen.**\
-Läs: SDM Kapitel 5 | [Slides](/slides/part1/F5.html)\
+Läs: SDM Kapitel 5 | [Slides](/slides/part1/F5.pdf)\
 Extramaterial: [Hantera dataset med dplyr](/slides/part1/dplyr_demo.html)\
 Testa dina kunskaper: [Z-värden, övning 1](https://karlsigfrid.github.io/statisticstutor/output/exercises/calculate_zscore.html) | [Z-värden, övning 2](https://karlsigfrid.github.io/statisticstutor/output/exercises/calculate_zscore2.html) | [Normalfördelningen](https://karlsigfrid.github.io/statisticstutor/output/exercises/normal_68_95.html) |  [Normalfördelningstabellen, övning 1](https://karlsigfrid.github.io/statisticstutor/output/exercises/ztable_part1.html) |  [Normalfördelningstabellen, övning 2](https://karlsigfrid.github.io/statisticstutor/output/exercises/ztable_part1.html)\
 <details><summary>innehåll</summary>
