@@ -27,7 +27,7 @@ Kursen består av föreläsningar, räkneövningar och datorlaborationer. Se res
 
 ### Schema
 
-Kursens schema finns på [TimeEdit](https://cloud.timeedit.net/su/web/stud1/s.html?sid=8&object=cevt_39046_VT2026&type=courseevent&h=t&startdate=20251220&enddate=20260620&l=sv). Ett tips är att välja *Prenumerera* i övre högra hörnet på TimeEdit och sen klistra in länken i ditt kalenderprogram på mobilen.
+Kursens schema finns på [TimeEdit](https://cloud.timeedit.net/su/web/stud1/s.html?sid=3&type=courseevent&h=t&object=cevt_39014_HT2026&startdate=20260801&enddate=20270131&l=sv&h2=2). Ett tips är att välja *Prenumerera* i övre högra hörnet på TimeEdit och sen klistra in länken i ditt kalenderprogram på mobilen.
 
 ### Formel- och tabellsamlingar
 
@@ -60,13 +60,13 @@ Ej viktigt för denna kurs är geometri, samt linjär optimering.
 
 ::: {layout="[ [1,1],[1,1],[1,1] ]"}
 <img src="/misc/male.png" width="35%"/>\
-[Tobias Rydén](https://www.su.se/profiles/j/jobj4957)<br>Kursansvarig och föreläsare<br>
+[Tobias Rydén](https://www.su.se/profiles/t/tory3708)<br>Kursansvarig och föreläsare<br>
 
 <img src="/misc/valentin.jpg" width="35%"/>\
 [Valentin Zulj](https://www.su.se/profiles/v/vazu9327)<br>Föreläsare<br>
 
 <img src="/misc/female.png" width="35%"/>\
-[Julia Hjärthner Langenius](https://www.su.se/profiles/a/almi7871)<br>Räkneövningar och jour<br>
+[Julia Hjärthner Langenius](https://www.su.se/profiles/j/jula3177)<br>Räkneövningar och jour<br>
 
 <img src="/misc/female.png" width="35%"/>\
 [Shi Ting Roberta Hu](https://www.su.se/profiles/s/shhu1135)<br>Datorövningar och inlämningsuppgifter<br>
