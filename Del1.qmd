@@ -81,15 +81,16 @@ Läs: SDM kapitel 10.1-10.3 och 11.1-11.2 | [Slides](/slides/part1/F10.pdf)\
 Inferens &#x2022; Populationer och stickprov &#x2022; Bias &#x2022; Slumpvisa variationer &#x2022; Simple random sampling &#x2022; Populationsparametrar och statistika &#x2022; Observationsstudier &#x2022; Experiment
 </details>
 
-**Föreläsning 11 - Osäkerhet och Sannolikhet.**\
-Läs: SDM Kapitel 12 och 13 \| [Slides](/slides/F11Sannolikhet.pdf)\
-Interaktivt: [slantsingling](/observable/storatalenslag_bernoulli.qmd)\
-Extramaterial: [TedTalk om sannolikheter](
-https://youtu.be/0m5bg2hpHNw)
+**Föreläsningar 11 och 12 - Osäkerhet och Sannolikhet.**\
+Läs: SDM Kapitel 12 och 13 \| [Slides](/slides/part1/F11_12.pdf)\
+Interaktivt: [slantsingling](/observable/storatalenslag_bernoulli.qmd), [bayessats](/observable/bayestheorem.qmd)\
+Extramaterial: [TedTalk om sannolikheter](https://youtu.be/0m5bg2hpHNw), [artikel om Bayes sats och snabbtest för Covid-19](https://www.varsity.co.uk/science/21149)
 <details><summary>innehåll</summary>
 Sannolikhetstolkningar &#x2022; Händelser &#x2022; Union &#x2022; Snitt &#x2022; Sannolikhetsberäkningar &#x2022; Venn diagram &#x2022; Kombinatorik
+Betingad sannolikhet &#x2022; Multiplikationsregeln &#x2022; Oberoende händelser &#x2022; Disjunkta händelser &#x2022; Bayes sats &#x2022; Lagen om total sannolikhet 
 </details>
 
+<!--
 **Föreläsning 12 - Betingade sannolikheter och Bayes sats.**\
 Läs: SDM Kapitel 13 \| [Slides](/slides/F12BetingadeSlhBayesSats.pdf)\
 Interaktivt: [bayessats](/observable/bayestheorem.qmd)\
@@ -97,6 +98,7 @@ Extramaterial: [artikel om Bayes sats och snabbtest för Covid-19](https://www.v
 <details><summary>innehåll</summary>
 Betingad sannolikhet &#x2022; Multiplikationsregeln &#x2022; Oberoende händelser &#x2022; Disjunkta händelser &#x2022; Bayes sats &#x2022; Lagen om total sannolikhet 
 </details>
+-->
 
 ### **Räkneövningar**
 
