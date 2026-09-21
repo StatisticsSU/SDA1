@@ -21,17 +21,17 @@ Slumpvariabler &#x2022; Sannolikhetsfördelning &#x2022; Väntevärde &#x2022; V
 </details>
 
 **Föreläsning 14 - Sannolikhetsmodeller I.**\
-Läs: SDM Kapitel 15.1, 15.2, 15.3, 15.6 \| [Slides](/slides/F14Sannolikhetsmodeller1.pdf)\
-Interaktivt: [bernoullifördelning](/observable/bernoullifordelningen.qmd) | [geometrisk fördelning](/observable/geometriskfordelning.qmd) | [binomialfördelningen](/observable/binomialfordelningen.qmd) | [likformig](/observable/uniformfordelning.qmd) | [normalfördelning](/observable/normalfordelningen.qmd)\
+Läs: SDM Kapitel 15.1, 15.2, 15.3, 15.4 \| [Slides](/slides/F14Sannolikhetsmodeller1.pdf)\
+Interaktivt: [bernoullifördelning](/observable/bernoullifordelningen.qmd) | [geometrisk fördelning](/observable/geometriskfordelning.qmd) | [binomialfördelningen](/observable/binomialfordelningen.qmd) |  [normalfördelning](/observable/normalfordelningen.qmd)\
 Kod: [geometric.R](/code/geometric.R)
 <details><summary>innehåll</summary>
 Bernoulliförsök &#x2022; Geometrisk fördelning &#x2022;  Binomialfördelning &#x2022; Normalapproximation av binomial
 </details>
 
 **Föreläsning 15 - Sannolikhetsmodeller II.**\
-Läs: SDM Kapitel 5.3, 14.4, 15.4, 15.7 (endast uniform) \| [Slides](/slides/F15Sannolikhetsmodeller2.pdf)\
+Läs: SDM Kapitel 5.3, 14.4, 15.6, 15.7 (läs exponentialfördelningen kursivt) \| [Slides](/slides/F15Sannolikhetsmodeller2.pdf)\
 Studiematerial: [Vilken fördelning? Bara SDA1](/misc/WhichDistribution2UseOnlySDA1.pdf) | [Vilken fördelning? SDA1-3](/misc/WhichDistribution2Use.pdf)\
-Interaktivt: [Poissonfördelningen](/observable/poissonfordelningen.qmd) \| [maximum likelihood - Poisson](/observable/ml_poisson.qmd) \| [exponential](/observable/exponentialfordelningen.qmd) \| [student-t](/observable/studentt.qmd) \| [allmän student-t](/observable/studentt_allman.qmd)\
+Interaktivt: [Poissonfördelningen](/observable/poissonfordelningen.qmd) \| [maximum likelihood - Poisson](/observable/ml_poisson.qmd) \| [likformig](/observable/uniformfordelning.qmd) \| [exponential](/observable/exponentialfordelningen.qmd) \| [student-t](/observable/studentt.qmd) \| [allmän student-t](/observable/studentt_allman.qmd)\
 Extramaterial: [Notebook - maximum likelihood för Poisson](https://observablehq.com/@mattiasvillani/maximum-likelihood-poissonmodellen) | [Notebook - student-t](https://observablehq.com/@mattiasvillani/student-t) | <br> [widgets med 30+ fördelningar](https://observablehq.com/collection/@mattiasvillani/distributions)
 <details><summary>innehåll</summary>
 Likformig fördelning &#x2022; Normalfördelning &#x2022; Poissonfördelning &#x2022; Exponentialfördelning &#x2022; Student-t fördelning &#x2022; Punktskattning
