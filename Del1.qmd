@@ -84,7 +84,7 @@ Inferens &#x2022; Populationer och stickprov &#x2022; Bias &#x2022; Slumpvisa va
 **Föreläsningar 11 och 12 - Osäkerhet och Sannolikhet.**\
 Läs: SDM Kapitel 12 och 13 \| [Slides](/slides/part1/F11_12.pdf)\
 Interaktivt: [slantsingling](/observable/storatalenslag_bernoulli.qmd) | [bayessats](/observable/bayestheorem.qmd)\
-Extramaterial: [TedTalk om sannolikheter](https://youtu.be/0m5bg2hpHNw) | [artikel om Bayes sats och snabbtest för Covid-19](https://www.varsity.co.uk/science/21149)
+Extramaterial: [TedTalk om sannolikheter](https://youtu.be/0m5bg2hpHNw) | [artikel om Bayes sats och snabbtest för Covid-19](https://www.varsity.co.uk/science/21149) | [övningar i kombinatorik](/misc/kombinatorik.pdf)
 <details><summary>innehåll</summary>
 Sannolikhetstolkningar &#x2022; Händelser &#x2022; Union &#x2022; Snitt &#x2022; Sannolikhetsberäkningar &#x2022; Venn diagram &#x2022; Kombinatorik
 Betingad sannolikhet &#x2022; Multiplikationsregeln &#x2022; Oberoende händelser &#x2022; Disjunkta händelser &#x2022; Bayes sats &#x2022; Lagen om total sannolikhet 
